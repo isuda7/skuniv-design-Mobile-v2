@@ -14,7 +14,7 @@ const LearningOverview = () => {
 
     return (
         <div className='sub_wrapper has_floating gap_none'>
-            <AppbarBasic title='샤싣' className='theme_dark'>
+            <AppbarBasic className='theme_dark'>
                 <Button type='button' icon className='learnActive is_active'><span className='blind'>학습과정</span></Button>
                 <Button type='button' icon className='wish'><span className='blind'>찜하기</span></Button>
                 <Button type='button' icon className='more'><span className='blind'>찜하기</span></Button>
