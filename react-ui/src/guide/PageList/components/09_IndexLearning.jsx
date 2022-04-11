@@ -16,9 +16,9 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningOverview' target='reactFrame' />
 				</Table.Cell>
-				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'>조찬기</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell></Table.Cell>
 			</Table.Row>

@@ -55,6 +55,9 @@ import LayoutMain from './layouts/LayoutMain/';
 // Myhome
 import Main from './views/Myhome/Main/';
 
+// 학습창
+import LearningOverview from './views/Learning/LearningOverview'
+
 // Sub
 // import Sample from './views/Sample/';
 
@@ -119,6 +122,9 @@ const Router = () => {
                     <Route path='/guide/Prototype/Template04' element={<Template04 />} />
                     <Route path='/guide/Prototype/TempFullPopup' element={<TempFullPopup />} />
                     <Route path='/guide/Prototype/TempBottomsheet' element={<TempBottomsheet />} />
+
+                    {/* Learning */}
+                    <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
                 </Route>
             </Routes>
         </HashRouter>
