@@ -4,7 +4,7 @@ import './style.scss';
 
 const AppbarBasic = (props) => {
 	return (
-        <header className='header header_basic'>
+        <header className={'header header_basic' + (props.className?' '+props.className:'')}>
 			<div className='header_left'>
 				<Button type='button' icon className='history'><span className='blind'>뒤로</span></Button>
 				{(typeof props.title === 'string') && <h1><strong>{props.title}</strong></h1>}

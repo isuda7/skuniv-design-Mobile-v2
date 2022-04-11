@@ -13,9 +13,13 @@ const LearningOverview = () => {
     const StickyRef = useRef();
 
     return (
-        <div className='sub_wrapper has_floating'>
-            <AppbarBasic title='Page Heading 1' />
-            <main role="main" className='container'>
+        <div className='sub_wrapper has_floating gap_none'>
+            <AppbarBasic title='샤싣' className='theme_dark'>
+                <Button type='button' icon className='learnActive is_active'><span className='blind'>학습과정</span></Button>
+                <Button type='button' icon className='wish'><span className='blind'>찜하기</span></Button>
+                <Button type='button' icon className='more'><span className='blind'>찜하기</span></Button>
+            </AppbarBasic>
+            <main role="main" className='container learning_container'>
                 <div className='content_head'>
                     <LearningHead />
                     <Sticky ref={StickyRef} offset={52}>
@@ -26,9 +30,8 @@ const LearningOverview = () => {
                             <button type='button' className={'nav_item' + (tabParam1 === 3 ? ' is_active' : '')} onClick={() => setTabParam1(3)}>리뷰</button>
                         </Nav>
                     </Sticky>
-
                 </div>
-                { tabParam1===0 &&
+                {tabParam1 === 0 &&
                     <>
                         <div className='content_body'>
                             <Section01 />
@@ -40,17 +43,17 @@ const LearningOverview = () => {
                         </div>
                     </>
                 }
-                { tabParam1===1 &&
+                {tabParam1 === 1 &&
                     <div></div>
                 }
-                { tabParam1===2 &&
+                {tabParam1 === 2 &&
                     <div></div>
                 }
-                { tabParam1===3 &&
+                {tabParam1 === 3 &&
                     <div></div>
                 }
             </main>
-            <Button type='button' icon className='top' onClick={()=>{window.scrollTo(0,0)}}><span className='blind'>Scroll to top</span></Button>
+            <Button type='button' icon className='top' onClick={() => { window.scrollTo(0, 0) }}><span className='blind'>Scroll to top</span></Button>
         </div>
     )
 }

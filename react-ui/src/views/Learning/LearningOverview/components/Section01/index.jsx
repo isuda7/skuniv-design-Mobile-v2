@@ -1,16 +1,18 @@
 import React from 'react';
+import { Board } from '../../../../../components';
 import './style.css';
 
 const Section01 = () => {
     return (
-        <section className='sec'>
-            <div className='sec_head'>
-                <h3 className='sec_tit'>Section Heading 3</h3>
+        <Board>
+            <div className='board_head'>
+                <div className='board_count'>
+                    <span className='total'>총</span>
+                    <em className='count'>0</em>
+                    <span className='unit'>개 강의 구성</span>
+                </div>
             </div>
-            <div className='sec_body'>
-                Section Body
-            </div>
-        </section>
+        </Board>
     )
 }
 

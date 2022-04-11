@@ -80,11 +80,18 @@
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
 		}
 	}
+	&.gap_none {
+		.header {
+			background-color: transparent;
+		}
+		.container {
+			padding-top:0;
+		}
+	}
 }
 
-
-// Cube Wrapper
-.theme_black {
+// 전체 또는 특정 대상 모든 요소에 적용 가능해야 함.
+.theme_dark {
 	background-color: #000;
 	color:#fff;
 }

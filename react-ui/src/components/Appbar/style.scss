@@ -69,6 +69,23 @@
 				background-color: #eee;
 			}
 		}
+		&.learnActive {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+			&.is_active::before {
+				background-color: $ColorPrimary;
+			}
+		}
+		&.wish {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+		}
 	}
 	&_profile {
 		.avata_area {
