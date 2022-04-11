@@ -381,4 +381,120 @@
 			}
 		}
 	}
+	&.cube {
+		border-bottom: 1px solid #F2F3F5;
+		.item_inner {
+			padding:2rem 0;
+			&::after {
+				content:'';
+				display:block;
+				width:0.6rem;
+				height:1.3rem;
+				margin-left:2rem;
+				background-color: #ddd;
+			}
+		}
+		.item_thumb {
+			flex:none;
+			width:3.4rem;
+			height:3.4rem;
+			margin-right:1.2rem;
+			.ui.label.played {
+				position:relative;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				padding:0;
+				width:100%;
+				height:100%;
+				border-radius: 50%;
+				background-color: #eee;
+				&::after {
+					content:'';
+					display:block;
+				}
+			}
+		}
+		.item_body {
+			flex:0 1 auto;
+			width:100%;
+			overflow: hidden;
+			.title {
+				@include FontBody14;
+			}
+			.sub_txt {
+				margin-top:0.4rem;
+				display:flex;
+				align-items: center;
+				.split {
+					@include SplitBar;
+				}
+			}
+		}
+
+		// Case Type
+		&.video {
+			.item_thumb .ui.label.played::after {
+				width:1.6rem;
+				height:1.8rem;
+				background-color: #666;
+			}
+			&.is_state3 .item_thumb .ui.label.played::after {
+				background-color: #000;
+			}
+		}
+		&.test {
+			.item_thumb .ui.label.played::after {
+				width:1.6rem;
+				height:1.8rem;
+				background-color: #666;
+			}
+			&.is_state3 .item_thumb .ui.label.played::after {
+				background-color: #000;
+			}
+		}
+		&.report {
+			.item_thumb .ui.label.played::after {
+				width:1.6rem;
+				height:1.8rem;
+				background-color: #666;
+			}
+			&.is_state3 .item_thumb .ui.label.played::after {
+				background-color: #000;
+			}
+		}
+		&.survay {
+			.item_thumb .ui.label.played::after {
+				width:1.6rem;
+				height:1.8rem;
+				background-color: #666;
+			}
+			&.is_state3 .item_thumb .ui.label.played::after {
+				background-color: #000;
+			}
+		}
+
+		// Case Disabled
+		&.is_disabled {
+			.item_inner {
+				pointer-events: none;
+				&::after {
+					display:none;
+				}
+			}
+
+		}
+
+		// Case Repley
+		&.is_repley .item_inner::before {
+			 content:'';
+			 display:block;
+			 width:1.6rem;
+			 height:1.6rem;
+			 background-color: #ddd;
+			 margin-bottom:1.6rem;
+			 margin-right:0.8rem;
+		}
+
+	}
 }

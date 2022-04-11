@@ -57,6 +57,7 @@ import Main from './views/Myhome/Main/';
 
 // 학습창
 import LearningOverview from './views/Learning/LearningOverview'
+import LearningContent from './views/Learning/LearningContent'
 
 // Sub
 // import Sample from './views/Sample/';
@@ -124,6 +125,7 @@ const Router = () => {
                     <Route path='/guide/Prototype/TempBottomsheet' element={<TempBottomsheet />} />
 
                     {/* Learning */}
+                    <Route path='/Learning/LearningContent' element={<LearningContent />} />
                     <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
                 </Route>
             </Routes>

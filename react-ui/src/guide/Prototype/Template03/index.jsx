@@ -27,7 +27,7 @@ const Template03 = () => {
                 </div>
                 <div className='content_foot'>
                     <div className='page_action'>
-                        <Button type='button' className='primary'>버튼</Button>
+                        <Button type='button' className='base primary'>버튼</Button>
                     </div>
                 </div>
             </main>

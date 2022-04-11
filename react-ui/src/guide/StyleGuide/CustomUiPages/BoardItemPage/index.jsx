@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Icon, Label } from 'semantic-ui-react'
 import {
+    BoardItem,
     BoardItemBadge,
     BoardItemCommunity1,
     BoardItemCommunity2,
@@ -15,6 +16,7 @@ import Community_01 from "../../../../assets/images/demo/thumb-community01.png";
 import Teacher_01 from "../../../../assets/images/demo/thumb-community01.png";
 import Playlist_01 from "../../../../assets/images/demo/thumb-community01.png";
 import Thumb_01 from '../../../../assets/images/demo/thumb-01.png';
+import { Link } from 'react-router-dom';
 
 const BoardItemPage = () => {
     return (
@@ -242,6 +244,81 @@ const BoardItemPage = () => {
                     chkName='playlist1'
                     chkId='playlist11'
                 />
+            </div>
+
+            <h3 className='g_h3'>큐브리스트</h3>
+            <h4 className='g_h4'>큐브</h4>
+            <div className='preview'>
+                <BoardItem className='cube video is_state3'>
+                    <Link to='' className='item_inner'>
+                        <div className='item_thumb'>
+                            <Label className='played per0'><span className='blind'>Cube</span></Label>
+                        </div>
+                        <div className='item_body'>
+                            <p className='title'><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
+                            <div className='sub_txt'>Video<i className='split'></i>3m</div>
+                        </div>
+                    </Link>
+                </BoardItem>
+
+                <BoardItem className='cube video is_state2'>
+                    <Link to='' className='item_inner'>
+                        <div className='item_thumb'>
+                            <Label className='played per50'><span className='blind'>Cube</span></Label>
+                        </div>
+                        <div className='item_body'>
+                            <p className='title'><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
+                            <div className='sub_txt'>Video<i className='split'></i>3m</div>
+                        </div>
+                    </Link>
+                </BoardItem>
+
+                <BoardItem className='cube video is_state3'>
+                    <Link to='' className='item_inner'>
+                        <div className='item_thumb'>
+                            <Label className='played per100'><span className='blind'>Cube</span></Label>
+                        </div>
+                        <div className='item_body'>
+                            <p className='title'><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
+                            <div className='sub_txt'>Video<i className='split'></i>3m</div>
+                        </div>
+                    </Link>
+                </BoardItem>
+                <h4 className='g_h4'>Text/Report/Survay</h4>
+                <div className='preview'>
+                    <BoardItem className='cube test is_state1'>
+                        <Link to='' className='item_inner'>
+                            <div className='item_thumb'>
+                                <Label className='played per0'><span className='blind'>Test</span></Label>
+                            </div>
+                            <div className='item_body'>
+                                <p className='title'><strong>Test</strong></p>
+                            </div>
+                        </Link>
+                    </BoardItem>
+                    <BoardItem className='cube report is_state2'>
+                        <Link to='' className='item_inner'>
+                            <div className='item_thumb'>
+                                <Label className='played per50'><span className='blind'>Report</span></Label>
+                            </div>
+                            <div className='item_body'>
+                                <p className='title'><strong>Report : 왜 혁신 리더의 Diary인가?</strong></p>
+                                <div className='sub_txt'>Report</div>
+                            </div>
+                        </Link>
+                    </BoardItem>
+                    <BoardItem className='cube survay is_state3'>
+                        <Link to='' className='item_inner'>
+                            <div className='item_thumb'>
+                                <Label className='played per0'><span className='blind'>Survay</span></Label>
+                            </div>
+                            <div className='item_body'>
+                                <p className='title'><strong>Survay : 왜 혁신 리더의 Diary인가?</strong></p>
+                                <div className='sub_txt'>Report<i className='split'></i>검수중</div>
+                            </div>
+                        </Link>
+                    </BoardItem>
+                </div>
             </div>
         </section>
     )

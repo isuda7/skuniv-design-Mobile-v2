@@ -6,9 +6,9 @@ import { LearningHead } from '../conponents';
 import { Section01 } from './components';
 import './style.scss';
 
-const LearningOverview = () => {
+const LearningContent = () => {
     // Tab Variables
-    const [tabParam1, setTabParam1] = useState(1);
+    const [tabParam1, setTabParam1] = useState(0);
 
     // Sticky Variables
     const StickyRef = useRef();
@@ -35,13 +35,6 @@ const LearningOverview = () => {
                 {tabParam1 === 0 &&
                     <>
                         <div className='content_body'>
-                            <Link to='/Learning/LearningContent'>Content</Link>
-                        </div>
-                    </>
-                }
-                {tabParam1 === 1 &&
-                    <>
-                        <div className='content_body'>
                             <Section01 />
                         </div>
                         <div className='content_foot'>
@@ -51,15 +44,26 @@ const LearningOverview = () => {
                         </div>
                     </>
                 }
+                {tabParam1 === 1 &&
+                    <>
+                        <div className='content_body'>
+                            <Link to='/Learning/LearningOverview'>Overview</Link>
+                        </div>
+                    </>
+                }
                 {tabParam1 === 2 &&
-                    <div></div>
+                    <div>
+                        {/* <Link to='/Learning/LearningOverview'>Overview</Link> */}
+                    </div>
                 }
                 {tabParam1 === 3 &&
-                    <div></div>
+                    <div>
+                        {/* <Link to='/Learning/LearningOverview'>Overview</Link> */}
+                    </div>
                 }
             </main>
             <Button type='button' icon className='top' onClick={() => { window.scrollTo(0, 0) }}><span className='blind'>Scroll to top</span></Button>
         </div>
     )
 }
-export default LearningOverview
+export default LearningContent
