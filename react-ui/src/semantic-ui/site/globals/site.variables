@@ -1,0 +1,53 @@
+/*******************************************
+     User Global Variables
+     _variables.scss 파일과 동일해야 함.
+********************************************/
+
+// Gaps
+@GapSideBase: 2.0rem;
+@GapGridBase: 0.8rem;
+
+// Sizes
+@HeightAppBar: 5.2rem;
+@RadiusBase: 8px;
+
+// Color Grey
+@ColorBody: #000000;
+@ColorSubTxt: #75777B;
+@ColorBtnTxt: #75777B;
+
+// Color Identity
+@ColorPrimary: #FF664D;
+@ColorPrimaryDark: #E55C45;
+@ColorPrimaryLight : #FFA394;
+@ColorSecondary: #38B1AD;
+@ColorSecondaryDark: #329f9c;
+
+// Color Items
+@ColorCateAi: #9f3fc5;
+@ColorCateDt: #613fc6;
+@ColorCateHappinesst: #ff9600;
+@ColorCateSV: #ee712c;
+@ColorCateDesign: #d72d2f;
+@ColorCateGlobal: #38b84c;
+@ColorCateLeadership: #2987cd;
+@ColorCateManagement: #28b4ac;
+@ColorCateSemicond: #4b6bcc;
+@ColorCateGreen: #009abd;
+@ColorCateBM: #bd38a5;
+@ColorCateSkacademy: #ea6957;
+
+// Color States
+@ColorNegative: #FF3C3C;
+@ColorCaution: #FFD850;
+@ColorPositive: #38B1AD;
+
+// Elements Forms
+@FormBasicHeight: 4rem;
+@FormBasicBorder: #e3e4e5;
+@FormBasicRadius: 0.4rem;
+@FormBasicText: #A4A6AA;
+@FormBasicFontSize: 1.4rem;
+@FormBasicPadding: 1.5rem;
+@FormBasicValue: #000000;
+@FormBasicDisable: #E3E4E5;

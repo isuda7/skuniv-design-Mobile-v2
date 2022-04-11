@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------------
+	파일이름 : 메인 레이아웃
+	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+-------------------------------------------------------------------*/
+@import '../../assets/scss/variables';
+
+
+// Default
+.main_wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header,
+    .footer {
+        flex: none;
+    }
+    .container {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        .content_body {
+            flex: 1 0 auto;
+        }
+        .content_head,
+        .content_foot {
+            flex: none;
+        }
+    }
+}
+
+// Styles
+.main_wrapper {
+    // Header
+    .header {
+        position: fixed;
+        left: 0;
+        top: calc(0 + var(--safeTop));
+        width: 100%;
+    }
+
+    // Container
+    .container {
+        width: 100%;
+        margin: 0;
+        padding-top: calc($HeightAppBar + var(--safeTop));
+        padding-bottom: var(--safeBottom);
+        line-height: 1.5;
+        .content_body {
+            padding-left: $GapSideBase;
+            padding-right: $GapSideBase;
+        }
+    }
+}

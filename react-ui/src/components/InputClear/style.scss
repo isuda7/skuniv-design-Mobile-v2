@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+
+
+/* Input Group - Input Clear */
+.input_clear {
+    position:relative;
+}
+.input_clear .button.clear,
+.input_clear .button.search {
+    position:absolute;
+    top:0;
+    right:0;
+    height:$FormBasicHeight;
+    width:$FormBasicHeight;
+    padding:0;
+}
+.input_clear.has_search .button.clear {
+    position:absolute;
+    top:0;
+    right:$FormBasicHeight;
+    height:$FormBasicHeight;
+    width:$FormBasicHeight;
+}

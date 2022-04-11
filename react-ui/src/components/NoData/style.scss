@@ -1,0 +1,14 @@
+@import '../../assets/scss/variables';
+
+
+// Styles
+.no_data {
+	text-align: center;
+	@include FontBody14;
+	.img {
+		display:block;
+	}
+	.img + .msg {
+		margin-top:10px;
+	}
+}

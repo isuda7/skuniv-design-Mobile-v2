@@ -1,0 +1,16 @@
+// ---------------------------------------------------------
+//	주제 : Theme Dark
+//	분류 : Layout, Components
+// ---------------------------------------------------------
+
+.theme_dark {
+	color:#fff;
+
+	// Layout
+	.header {
+		background-color: #000;
+		h1 strong {
+			color:inherit;
+		}
+	}
+}

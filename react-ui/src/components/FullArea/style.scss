@@ -1,0 +1,19 @@
+@import '../../assets/scss/variables';
+
+/* Area */
+.full_area {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	padding:1.8rem $GapSideBase;
+	display:flex;
+	flex-direction: column;
+	.flex_area {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex:1 0 auto;
+	}
+}

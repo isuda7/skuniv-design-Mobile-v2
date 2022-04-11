@@ -1,0 +1,93 @@
+@import '../../assets/scss/variables';
+
+
+.header {
+	height: $HeightAppBar;
+	padding: 0 $GapSideBase;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	.header_left {
+		display:flex;
+		align-items: center;
+		flex:0 1 auto;
+		overflow: hidden;
+		width:100%;
+	}
+	.header_right {
+		display:flex;
+		align-items: center;
+		flex:none;
+	}
+	h1 {
+		flex:0 1 auto;
+		overflow: hidden;
+		display:block;
+		strong {
+			@include FontTitle18;
+			@include Ellipsis1;
+		}
+	}
+	.ui.button {
+		flex:none;
+		width:4rem;
+		height:4rem;
+		&.history {
+			margin-right:1.0rem;
+			&::before {
+				width:1rem;
+				height:2rem;
+				background-color: #eee;
+			}
+		}
+		&.alim {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+		}
+		&.more {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+		}
+		&.search {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+		}
+		&.study {
+			&::before {
+				width:2rem;
+				height:1.7rem;
+				background-color: #eee;
+			}
+		}
+	}
+	&_profile {
+		.avata_area {
+            display:flex;
+            align-items: center;
+			.avata {
+				width:3.2rem;
+				height:3.2rem;
+				margin-right:0.8rem;
+			}
+        }
+	}
+	&_titles {
+		h1 {
+			span {
+				@include FontBody12;
+				color:$ColorSubTxt;
+			}
+		}
+
+	}
+}

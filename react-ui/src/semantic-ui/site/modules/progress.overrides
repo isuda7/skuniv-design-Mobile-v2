@@ -1,0 +1,13 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/* Style1 */
+.ui.progress.style1,
+.ui.progress.style1 .bar {
+    border-radius:0;
+}
+.ui.progress.style1 .bar {
+    height:0.4rem;
+    background-color:@ColorPrimary;
+}
