@@ -1,0 +1,42 @@
+@import '../../../../assets/scss/variables';
+
+.learning_head_badge {
+	height:7rem;
+	background-color: #000;
+	color:#fff;
+	.badge_inner {
+		display:flex;
+		align-items: center;
+		width:100%;
+		height:inherit;
+		padding:0 $GapSideBase;
+		.badge_thumb {
+			width:4rem;
+			height:4rem;
+			margin-right:1.2rem;
+			flex:none;
+		}
+		.badge_body {
+			width:100%;
+			flex:0 1 auto;
+			color:#fff;
+			overflow: hidden;
+			.sub_txt {
+				@include FontBody13;
+			}
+			.title {
+				flex:0 1 auto;
+				@include FontTitle13;
+				@include Ellipsis1;
+			}
+		}
+		&::after {
+			content:'';
+			display:block;
+			width:0.6rem;
+			height:1.3rem;
+			background-color: #ddd;
+			margin-left:2rem;
+		}
+	}
+}

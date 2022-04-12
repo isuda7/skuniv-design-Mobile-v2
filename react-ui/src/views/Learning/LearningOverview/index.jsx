@@ -17,7 +17,7 @@ const LearningOverview = () => {
             <AppbarBasic className='theme_dark'>
                 <Button type='button' icon className='learnActive is_active'><span className='blind'>학습과정</span></Button>
                 <Button type='button' icon className='wish'><span className='blind'>찜하기</span></Button>
-                <Button type='button' icon className='more'><span className='blind'>찜하기</span></Button>
+                <Button type='button' icon className='more'><span className='blind'>더보기</span></Button>
             </AppbarBasic>
             <main role="main" className='container learning_container'>
                 <div className='content_head'>
