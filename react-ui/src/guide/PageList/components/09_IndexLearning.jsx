@@ -11,12 +11,12 @@ const IndexLearning = () => {
 				</Table.Cell>
 			</Table.Row>
 			<Table.Row verticalAlign='top'>
-				<Table.Cell>학습과정 - Conponents</Table.Cell>
+				<Table.Cell>학습과정 - Components</Table.Cell>
 				<Table.Cell textAlign='center'>
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/LearningConponents' target='reactFrame' />
+					<Link to='/Learning/LearningComponents' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
