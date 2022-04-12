@@ -34,7 +34,7 @@ const GuideSemantic = () => {
 				<Table.Cell>Buttons, Icons, Labels, Badges, Diviers</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/guide/ElementsPageGroup' target='reactFrame' />
+					<Link to='/guide/ElementPageGroup' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'>조찬기</Table.Cell>
 				<Table.Cell textAlign='center'>22-04-08</Table.Cell>

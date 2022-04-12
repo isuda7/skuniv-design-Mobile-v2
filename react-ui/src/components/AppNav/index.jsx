@@ -36,10 +36,10 @@ const AppNav = () => {
 					<nav className='gnb'>
 						<ul className='gnb-dep1'>
 							<li className='gnb-dep1-item'>
-								<NavLink to='/main/mainIndex' className='gnb-dep1-link'>Editorials</NavLink>
+								<NavLink to='/main/mainIndex2' className='gnb-dep1-link'>Reviews</NavLink>
 							</li>
 							<li className='gnb-dep1-item'>
-								<NavLink to='/main/mainIndex2' className='gnb-dep1-link'>Reviews</NavLink>
+								<NavLink to='/main/mainIndex' className='gnb-dep1-link'>Editorials</NavLink>
 							</li>
 							<li className='gnb-dep1-item'>
 								<NavLink to='/main/mainIndex3' className='gnb-dep1-link'>Upcoming Events</NavLink>

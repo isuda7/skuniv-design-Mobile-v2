@@ -37,7 +37,6 @@ const Gnb = (props) => {
                     <a href='#IndexMore'>더보기</a>
                     <a href='#IndexSearch'>알림/검색</a>
                     <a href='#IndexLearning'>학습과정</a>
-                    <a href='#IndexLearning'>학습과정</a>
                 </nav>
             }
             {

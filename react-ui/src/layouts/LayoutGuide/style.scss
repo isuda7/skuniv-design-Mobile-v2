@@ -27,6 +27,9 @@
 .g_cont {
     /* max-width: 120.0rem; */
     padding: 0 2.0rem 2.0rem;
+    .g_sec > p {
+        line-height: 1.5;
+    }
 }
 
 .g_cont .g_tit:before {

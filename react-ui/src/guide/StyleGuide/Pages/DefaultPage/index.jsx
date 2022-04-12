@@ -160,7 +160,7 @@ class DefaultPage extends Component {
                         </ul>
                         <h4 className='g_h4'>Icon Text</h4>
                         <ul>
-                            <li className='g_info'>Label 안에 Icon 사용함</li>
+                            <li className='g_info'>Icon대신 button::before, button::after에 적용</li>
                         </ul>
                         <h4 className='g_h4'>Segment</h4>
                         <ul>
@@ -233,7 +233,7 @@ class DefaultPage extends Component {
                         </ul>
                         <h4 className='g_h4'>속성 선언순서</h4>
                         <ul className='g_info_list'>
-                            <li className='g_info'>필수속성 : href, src, type 등 반드시 선언하는 속성</li>
+                            <li className='g_info'>필수속성 : to, href, src, type 등 반드시 선언하는 속성</li>
                             <li className='g_info'>중요속성 : name, id, title, alt, target 등 값이 고정되는 속성</li>
                             <li className='g_info'>상태속성 : aria-, class, checked 등 꾸미거나 자주 변하는 속성</li>
                             <li className='g_info'>중요도의 우선순위 분류이며 순서대로 권장한다.</li>
