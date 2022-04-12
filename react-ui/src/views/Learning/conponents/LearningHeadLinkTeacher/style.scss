@@ -1,55 +1,51 @@
 @import '../../../../assets/scss/variables';
 
-.learning_head_badge {
-	height:7rem;
+.learning_head_teacher {
 	background-color: #000;
 	color:#fff;
-	.badge_inner {
+	.teacher_inner {
 		display:flex;
 		align-items: center;
 		width:100%;
 		height:inherit;
-		padding:1.5rem 2.4rem 1.5rem 1.4rem;
-		.badge_thumb {
+		padding:1.6rem 2.4rem 1.6rem 2rem;
+		.teacher_thumb {
 			position: relative;
 			display:flex;
 			justify-content: center;
-			width:5rem;
-			height:4rem;
+			width:5.2rem;
+			height:5.2rem;
 			margin-right:1.2rem;
 			flex:none;
-			.thumb {
-				flex:none;
-				position: relative;
-				width:4rem;
-				z-index: 10;
-			}
-			.thumb + .thumb {
-				margin-left:-3rem;
-				z-index: 9;
-			}
 		}
-		.badge_body {
+		.teacher_body {
 			width:100%;
 			flex:0 1 auto;
 			color:#fff;
-			overflow: hidden;
-			.sub_txt {
-				@include FontBody13;
-				color:#fff;
-			}
+			// overflow: hidden;
 			.title {
-				display:flex;
+				position: relative;
+				display:inline-flex;
 				flex:0 1 auto;
 				strong {
 					flex:0 1 auto;
-					@include FontTitle13;
+					@include FontTitle14;
 					@include Ellipsis1;
 				}
-				.other {
-					flex:none;
-					@include FontBody13;
+				.ui.label {
+					position:absolute;
+					top:50%;
+					left:calc(100% +  0.4rem);
+					transform: translateY(-50%);
+					padding:0.3rem 1rem;
+					white-space: nowrap;
+					background-color: #75777B;
+					color:#fff;
 				}
+			}
+			.sub_txt {
+				margin-top:0.4rem;
+				@include FontBody14;
 			}
 		}
 		&::after {

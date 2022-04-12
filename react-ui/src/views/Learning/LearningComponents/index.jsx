@@ -1,20 +1,14 @@
-import React, { Fragment, useRef, useState } from 'react';
-import { Button, Sticky } from 'semantic-ui-react';
-import { AppbarBasic, Nav, Thumb } from '../../../components';
-import { LearningHead, LearningHeadLinkBadge } from '../conponents';
-import { Section01 } from './components';
+import React from 'react';
+import { Button, Label } from 'semantic-ui-react';
+import { AppbarBasic, Board, Thumb } from '../../../components';
+import { CubeAccordion, CubeItem, CubeOverview, CubeReferences, LearningHead, LearningHeadLinkBadge, LearningHeadLinkTeacher } from '../conponents';
 import { Link } from 'react-router-dom';
+import Teacher_01 from "../../../assets/images/demo/thumb-community01.png";
 import Badge_01 from '../../../assets/images/demo/thumb-badge01.png';
 
 import './style.scss';
 
 const LearningComponents = () => {
-    // Tab Variables
-    const [tabParam1, setTabParam1] = useState(1);
-
-    // Sticky Variables
-    const StickyRef = useRef();
-
     return (
         <div className='sub_wrapper has_floating gap_none'>
             <AppbarBasic className='theme_dark'>
@@ -23,7 +17,7 @@ const LearningComponents = () => {
                 <Button type='button' icon className='more'><span className='blind'>찜하기</span></Button>
             </AppbarBasic>
             <main role="main" className='container learning_container'>
-                <div className='content_head'>
+                <div className='content_head theme_dark'>
                     <LearningHead />
                     <LearningHeadLinkBadge>
                         <Link to='' className='badge_inner'>
@@ -53,34 +47,129 @@ const LearningComponents = () => {
                             </div>
                         </Link>
                     </LearningHeadLinkBadge>
-
-
-                    <Sticky ref={StickyRef} offset={52}>
-                        <Nav className='style2'>
-                            <button type='button' className={'nav_item' + (tabParam1 === 0 ? ' is_active' : '')} onClick={() => setTabParam1(0)}>콘텐츠</button>
-                            <button type='button' className={'nav_item' + (tabParam1 === 1 ? ' is_active' : '')} onClick={() => setTabParam1(1)}>개요</button>
-                            <button type='button' className={'nav_item' + (tabParam1 === 2 ? ' is_active' : '')} onClick={() => setTabParam1(2)}>관련과정</button>
-                            <button type='button' className={'nav_item' + (tabParam1 === 3 ? ' is_active' : '')} onClick={() => setTabParam1(3)}>리뷰</button>
-                        </Nav>
-                    </Sticky>
+                    <LearningHeadLinkTeacher>
+                        <Link to='' className='teacher_inner'>
+                            <div className='teacher_thumb'>
+                                <Thumb src={Teacher_01} alt='' />
+                            </div>
+                            <div className='teacher_body'>
+                                <div className='title'><strong>조승빈</strong></div>
+                                <div className='sub_txt'>컨크루언트 애자일</div>
+                            </div>
+                        </Link>
+                    </LearningHeadLinkTeacher>
+                    <LearningHeadLinkTeacher>
+                        <Link to='' className='teacher_inner'>
+                            <div className='teacher_thumb'>
+                                <Thumb src={Teacher_01} alt='' />
+                            </div>
+                            <div className='teacher_body'>
+                                <div className='title'><strong>조승빈</strong><Label as={'em'}>대표</Label></div>
+                                <div className='sub_txt'>컨크루언트 애자일</div>
+                            </div>
+                        </Link>
+                    </LearningHeadLinkTeacher>
                 </div>
-                {tabParam1 === 0 &&
-                    <Fragment></Fragment>
-                }
-                {tabParam1 === 1 &&
-                    <Fragment>
-                        <div className='content_body'>
-                            <Section01 />
+                <div className='content_body'>
+                    <Board className='cube_list_sec'>
+                        <div className='board_list'>
+                            <CubeItem className='video is_state1'>
+                                <Link to='' className='item_inner'>
+                                    <div className='item_thumb'>
+                                        <Label className='played per0'><span className='blind'>Cube</span></Label>
+                                    </div>
+                                    <div className='item_body'>
+                                        <p className='title'><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
+                                        <div className='sub_txt'>Video<i className='split'></i>3m</div>
+                                    </div>
+                                </Link>
+                            </CubeItem>
+                            <CubeItem className='survay is_state2 is_disabled'>
+                                <Link to='' className='item_inner'>
+                                    <div className='item_thumb'>
+                                        <Label className='played per50'><span className='blind'>Survay</span></Label>
+                                    </div>
+                                    <div className='item_body'>
+                                        <p className='title'><strong>큐브유형(Test/Report/Survay)</strong></p>
+                                    </div>
+                                </Link>
+                            </CubeItem>
+                            <CubeItem className='survay is_state3 is_repley'>
+                                <Link to='' className='item_inner'>
+                                    <div className='item_thumb'>
+                                        <Label className='played per100'><span className='blind'>Survay</span></Label>
+                                    </div>
+                                    <div className='item_body'>
+                                        <p className='title'><strong>Survay : 왜 혁신 리더의 Diary인가?</strong></p>
+                                        <div className='sub_txt'>Survay<i className='split'></i>참여완료</div>
+                                    </div>
+                                </Link>
+                            </CubeItem>
                         </div>
-                    </Fragment>
-                }
-                {tabParam1 === 2 &&
-                    <Fragment></Fragment>
-                }
-                {tabParam1 === 3 &&
-                    <Fragment></Fragment>
-                }
-            </main>
+                    </Board>
+
+                    <CubeAccordion />
+
+                    <Board className='cube_list_sec gap_sec'>
+                        <div className='sec_head'>
+                            <h2 className='heading2'>마무리</h2>
+                        </div>
+                        <div className='sec_body'>
+                            <CubeItem className='survay is_state3 '>
+                                <Link to='' className='item_inner'>
+                                    <div className='item_thumb'>
+                                        <Label className='played per100'><span className='blind'>Survay</span></Label>
+                                    </div>
+                                    <div className='item_body'>
+                                        <p className='title'><strong>Survay</strong></p>
+                                        <div className='sub_txt'>학습 진행 후 Survey 참여 가능</div>
+                                    </div>
+                                </Link>
+                            </CubeItem>
+                        </div>
+                    </Board>
+
+                    <CubeOverview
+                        count='11,247'
+                        part='Intermediate'
+                        contact='조현희(SK이노베이션)'
+                    />
+                    <br />
+                    <CubeOverview
+                        count='11,247'
+                        part='Intermediate'
+                        contact='이름 두 줄 이상일 경우, 문의하기 버튼이 밑줄에 맞춰집니다.'
+                    />
+                    <br/>
+                    <CubeReferences>
+                        <div className="references_body">
+                            {/* CSS로 여러줄의 중간 말줄임은 불가합니다. */}
+                            <p className="title">[보충학습자료] 꿀잼반도체 1. 인류 최고의 발명품 트랜지스인류 최명품 트랜지명품 트랜지스....pdf</p>
+                            <p className="bytes">249KB</p>
+                        </div>
+                        <div className="references_util">
+                            <Button type='button' icon className="file_down"><span className='blind'>다운로드</span></Button>
+                        </div>
+                    </CubeReferences>
+                    <br/>
+                    <CubeReferences>
+                        <div className="references_body">
+                            {/* CSS로 여러줄의 중간 말줄임은 불가합니다. */}
+                            <p className="title">[보충학습자료] 꿀잼반도체 1. 트랜지...pdf</p>
+                            <p className="bytes">249KB</p>
+                        </div>
+                        <div className="references_util">
+                            <Button type='button' icon className="file_link"><span className='blind'>새창열기</span></Button>
+                            <Button type='button' icon className="file_down"><span className='blind'>다운로드</span></Button>
+                        </div>
+                    </CubeReferences>
+                </div>
+                <div className='content_foot'>
+                    <div className='page_action'>
+                        <Button type='button' className='base primary'>학습 이어하기</Button>
+                    </div>
+                </div>
+             </main>
             <Button type='button' icon className='top' onClick={() => { window.scrollTo(0, 0) }}><span className='blind'>Scroll to top</span></Button>
         </div>
     )

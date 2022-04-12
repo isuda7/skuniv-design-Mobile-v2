@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Label } from 'semantic-ui-react';
-import { Board, BoardItem } from '../../../../../components';
+import { Board } from '../../../../../components';
+import { CubeItem } from '../../../conponents';
 import './style.scss';
 
 const Section01 = () => {
@@ -16,7 +17,7 @@ const Section01 = () => {
             </div>
 
             <div className='board_list'>
-                {/* [BoardItem Cases]
+                {/* [CubeItem Cases]
                     공통: cube
 
                     진행전: is_state1
@@ -31,7 +32,7 @@ const Section01 = () => {
                     화살표 없는 경우: is_disabled
                     리플인 경우: is_repley
                 */}
-                <BoardItem className='cube video is_state1'>
+                <CubeItem className='video is_state1'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per0'><span className='blind'>Cube</span></Label>
@@ -41,9 +42,9 @@ const Section01 = () => {
                             <div className='sub_txt'>Video<i className='split'></i>3m</div>
                         </div>
                     </Link>
-                </BoardItem>
+                </CubeItem>
 
-                <BoardItem className='cube video is_state2'>
+                <CubeItem className='video is_state2'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per50'><span className='blind'>Cube</span></Label>
@@ -53,9 +54,9 @@ const Section01 = () => {
                             <div className='sub_txt'>Video<i className='split'></i>3m</div>
                         </div>
                     </Link>
-                </BoardItem>
+                </CubeItem>
 
-                <BoardItem className='cube video is_state3'>
+                <CubeItem className='video is_state3'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per100'><span className='blind'>Cube</span></Label>
@@ -65,8 +66,8 @@ const Section01 = () => {
                             <div className='sub_txt'>Video<i className='split'></i>3m</div>
                         </div>
                     </Link>
-                </BoardItem>
-                <BoardItem className='cube test is_state1 is_disabled'>
+                </CubeItem>
+                <CubeItem className='test is_state1 is_disabled'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per0'><span className='blind'>Test</span></Label>
@@ -75,8 +76,8 @@ const Section01 = () => {
                             <p className='title'><strong>Test</strong></p>
                         </div>
                     </Link>
-                </BoardItem>
-                <BoardItem className='cube test is_state1'>
+                </CubeItem>
+                <CubeItem className='test is_state1'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per0'><span className='blind'>Test</span></Label>
@@ -85,8 +86,8 @@ const Section01 = () => {
                             <p className='title'><strong>Test</strong></p>
                         </div>
                     </Link>
-                </BoardItem>
-                <BoardItem className='cube report is_state2'>
+                </CubeItem>
+                <CubeItem className='report is_state2'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per50'><span className='blind'>Report</span></Label>
@@ -96,8 +97,8 @@ const Section01 = () => {
                             <div className='sub_txt'>Report</div>
                         </div>
                     </Link>
-                </BoardItem>
-                <BoardItem className='cube survay is_state1 is_disabled'>
+                </CubeItem>
+                <CubeItem className='survay is_state1 is_disabled'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per0'><span className='blind'>Survay</span></Label>
@@ -107,8 +108,8 @@ const Section01 = () => {
                             <div className='sub_txt'>학습 진행 후 Survey 참여 가능</div>
                         </div>
                     </Link>
-                </BoardItem>
-                <BoardItem className='cube survay is_state3'>
+                </CubeItem>
+                <CubeItem className='survay is_state3'>
                     <Link to='' className='item_inner'>
                         <div className='item_thumb'>
                             <Label className='played per100'><span className='blind'>Survay</span></Label>
@@ -118,7 +119,7 @@ const Section01 = () => {
                             <div className='sub_txt'>Survay<i className='split'></i>참여완료</div>
                         </div>
                     </Link>
-                </BoardItem>
+                </CubeItem>
             </div>
         </Board>
     )

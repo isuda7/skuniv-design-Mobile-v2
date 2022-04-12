@@ -62,7 +62,10 @@
 			width: auto;
 			height: inherit;
 			border-bottom: 2px solid transparent;
+			color:#A4A6AA;
+			font-weight: 700;
 			&.is_active {
+				color:#000;
 				border-bottom-color :#333;
 			}
 		}

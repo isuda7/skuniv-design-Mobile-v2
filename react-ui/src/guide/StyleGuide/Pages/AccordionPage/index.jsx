@@ -8,12 +8,12 @@ class AccordionPage extends Component {
       const { index } = titleProps
       const { activeIndex } = this.state
       const newIndex = activeIndex === index ? -1 : index
-  
+
       this.setState({ activeIndex: newIndex })
     }
     render() {
         const { activeIndex } = this.state
-        
+
         return (
             <section className='g_sec'>
                 <h2 className='g_h2'>Accodions</h2>
