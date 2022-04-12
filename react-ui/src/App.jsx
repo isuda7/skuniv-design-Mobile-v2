@@ -61,9 +61,34 @@ import LearningOverview from './views/Learning/LearningOverview'
 import LearningOverviewTeacherIntroduce from './views/Learning/LearningOverviewTeacherIntroduce'
 import LearningOverviewTeacherLecture from './views/Learning/LearningOverviewTeacherLecture'
 import LearningContents from './views/Learning/LearningContents'
+import LearningContentsOverview from './views/Learning/LearningContentsOverview'
+import LearningContentsComment from './views/Learning/LearningContentsComment'
+import LearningContentsNote from './views/Learning/LearningContentsNote'
+import LearningContentsVideoOverview from './views/Learning/LearningContentsVideoOverview'
+import LearningContentsVideoScript from './views/Learning/LearningContentsVideoScript'
+import LearningContentsVideoComment from './views/Learning/LearningContentsVideoComment'
+import LearningContentsVideoNote from './views/Learning/LearningContentsVideoNote'
+import LearningContentsVideoList from './views/Learning/LearningContentsVideoList'
+import LearningContentsVideoPlayer from './views/Learning/LearningContentsVideoPlayer'
+import LearningContentsAudioOverview from './views/Learning/LearningContentsAudioOverview'
+import LearningContentsAudioComment from './views/Learning/LearningContentsAudioComment'
+import LearningContentsAudioNote from './views/Learning/LearningContentsAudioNote'
+import LearningContentsElearningOverview from './views/Learning/LearningContentsElearningOverview'
+import LearningContentsElearningNo from './views/Learning/LearningContentsElearningNo'
+import LearningContentsElearningComment from './views/Learning/LearningContentsElearningComment'
+import LearningContentsElearningNote from './views/Learning/LearningContentsElearningNote'
+import LearningContentsElearningRequest from './views/Learning/LearningContentsElearningRequest'
+import LearningContentsElearningStudy from './views/Learning/LearningContentsElearningStudy'
+import LearningContentsClassroomOverview from './views/Learning/LearningContentsClassroomOverview'
+import LearningContentsClassroomNo from './views/Learning/LearningContentsClassroomNo'
+import LearningContentsClassroomComment from './views/Learning/LearningContentsClassroomComment'
+import LearningContentsClassroomNote from './views/Learning/LearningContentsClassroomNote'
+import LearningContentsClassroomRequest from './views/Learning/LearningContentsClassroomRequest'
 import LearningCurriculum from './views/Learning/LearningCurriculum'
 import LearningReview from './views/Learning/LearningReview'
 import LearningActivity from './views/Learning/LearningActivity'
+import LearningPlaylist from './views/Learning/LearningPlaylist'
+import LearningContinue from './views/Learning/LearningContinue'
 
 // Sub
 // import Sample from './views/Sample/';
@@ -133,12 +158,37 @@ const Router = () => {
                     {/* Learning */}
                     <Route path='/Learning/LearningConponents' element={<LearningConponents />} />
                     <Route path='/Learning/LearningContents' element={<LearningContents />} />
+                    <Route path='/Learning/LearningContentsOverview' element={<LearningContentsOverview />} />
+                    <Route path='/Learning/LearningContentsComment' element={<LearningContentsComment />} />
+                    <Route path='/Learning/LearningContentsNote' element={<LearningContentsNote />} />
+                    <Route path='/Learning/LearningContentsVideoOverview' element={<LearningContentsVideoOverview />} />
+                    <Route path='/Learning/LearningContentsVideoScript' element={<LearningContentsVideoScript />} />
+                    <Route path='/Learning/LearningContentsVideoComment' element={<LearningContentsVideoComment />} />
+                    <Route path='/Learning/LearningContentsVideoNote' element={<LearningContentsVideoNote />} />
+                    <Route path='/Learning/LearningContentsVideoList' element={<LearningContentsVideoList />} />
+                    <Route path='/Learning/LearningContentsVideoPlayer' element={<LearningContentsVideoPlayer />} />
+                    <Route path='/Learning/LearningContentsAudioOverview' element={<LearningContentsAudioOverview />} />
+                    <Route path='/Learning/LearningContentsAudioComment' element={<LearningContentsAudioComment />} />
+                    <Route path='/Learning/LearningContentsAudioNote' element={<LearningContentsAudioNote />} />
+                    <Route path='/Learning/LearningContentsElearningOverview' element={<LearningContentsElearningOverview />} />
+                    <Route path='/Learning/LearningContentsElearningNo' element={<LearningContentsElearningNo />} />
+                    <Route path='/Learning/LearningContentsElearningComment' element={<LearningContentsElearningComment />} />
+                    <Route path='/Learning/LearningContentsElearningNote' element={<LearningContentsElearningNote />} />
+                    <Route path='/Learning/LearningContentsElearningRequest' element={<LearningContentsElearningRequest />} />
+                    <Route path='/Learning/LearningContentsElearningStudy' element={<LearningContentsElearningStudy />} />
+                    <Route path='/Learning/LearningContentsClassroomOverview' element={<LearningContentsClassroomOverview />} />
+                    <Route path='/Learning/LearningContentsClassroomNo' element={<LearningContentsClassroomNo />} />
+                    <Route path='/Learning/LearningContentsClassroomComment' element={<LearningContentsClassroomComment />} />
+                    <Route path='/Learning/LearningContentsClassroomNote' element={<LearningContentsClassroomNote />} />
+                    <Route path='/Learning/LearningContentsClassroomRequest' element={<LearningContentsClassroomRequest />} />
                     <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
                     <Route path='/Learning/LearningOverviewTeacherIntroduce' element={<LearningOverviewTeacherIntroduce />} />
                     <Route path='/Learning/LearningOverviewTeacherLecture' element={<LearningOverviewTeacherLecture />} />
                     <Route path='/Learning/LearningCurriculum' element={<LearningCurriculum />} />
                     <Route path='/Learning/LearningReview' element={<LearningReview />} />
                     <Route path='/Learning/LearningActivity' element={<LearningActivity />} />
+                    <Route path='/Learning/LearningPlaylist' element={<LearningPlaylist />} />
+                    <Route path='/Learning/LearningContinue' element={<LearningContinue />} />
                 </Route>
             </Routes>
         </HashRouter>

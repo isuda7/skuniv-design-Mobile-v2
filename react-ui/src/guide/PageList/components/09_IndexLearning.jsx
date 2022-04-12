@@ -112,7 +112,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningPlaylist' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -124,7 +124,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/LearningContent' target='reactFrame' />
+					<Link to='/Learning/LearningContents' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -143,12 +143,60 @@ const IndexLearning = () => {
 				<Table.Cell></Table.Cell>
 			</Table.Row>
 			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents (학습이어하기 유무)</Table.Cell>
+				<Table.Cell textAlign='center'>
+					{/* (<span>AL-MA-10</span>) */}
+				</Table.Cell>
+				<Table.Cell className='link-address'>
+					<Link to='/Learning/LearningContinue' target='reactFrame' />
+				</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell></Table.Cell>
+			</Table.Row>
+			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - [강의 공통] Overview</Table.Cell>
+				<Table.Cell textAlign='center'>
+					{/* (<span>AL-MA-10</span>) */}
+				</Table.Cell>
+				<Table.Cell className='link-address'>
+					<Link to='/Learning/LearningContentsOverview' target='reactFrame' />
+				</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell></Table.Cell>
+			</Table.Row>
+			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - [강의 공통] Comment</Table.Cell>
+				<Table.Cell textAlign='center'>
+					{/* (<span>AL-MA-10</span>) */}
+				</Table.Cell>
+				<Table.Cell className='link-address'>
+					<Link to='/Learning/LearningContentsComment' target='reactFrame' />
+				</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell></Table.Cell>
+			</Table.Row>
+			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - [강의 공통] Note</Table.Cell>
+				<Table.Cell textAlign='center'>
+					{/* (<span>AL-MA-10</span>) */}
+				</Table.Cell>
+				<Table.Cell className='link-address'>
+					<Link to='/Learning/LearningContentsNote' target='reactFrame' />
+				</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell></Table.Cell>
+			</Table.Row>
+			<Table.Row verticalAlign='top'>
 				<Table.Cell>학습과정(카드) - Contents 챕터 - [강의 유형] Video - Overview</Table.Cell>
 				<Table.Cell textAlign='center'>
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoOverview' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -160,7 +208,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoScript' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -172,7 +220,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoComment' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -184,7 +232,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoNote' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -196,7 +244,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoList' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -208,7 +256,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsVideoPlayer' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -220,7 +268,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsAudioOverview' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -232,7 +280,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsAudioComment' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -244,7 +292,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsAudioNote' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -256,7 +304,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsElearningOverview' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -268,7 +316,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsElearningNo' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -280,7 +328,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsElearningComment' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -292,7 +340,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsElearningNote' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -304,7 +352,19 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsElearningRequest' target='reactFrame' />
+				</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
+				<Table.Cell></Table.Cell>
+			</Table.Row>
+			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - [강의 유형] E-learning - 학습하기 (외부사이트)</Table.Cell>
+				<Table.Cell textAlign='center'>
+					{/* (<span>AL-MA-10</span>) */}
+				</Table.Cell>
+				<Table.Cell className='link-address'>
+					<Link to='/Learning/LearningContentsElearningStudy' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -316,7 +376,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsClassroomOverview' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -328,7 +388,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsClassroomNo' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -340,7 +400,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsClassroomComment' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -352,7 +412,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsClassroomNote' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -364,7 +424,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningContentsClassroomRequest' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
