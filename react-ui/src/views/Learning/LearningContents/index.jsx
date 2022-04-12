@@ -6,7 +6,7 @@ import { LearningHead } from '../conponents';
 import { Section01 } from './components';
 import './style.scss';
 
-const LearningContent = () => {
+const LearningContents = () => {
     // Tab Variables
     const [tabParam1, setTabParam1] = useState(0);
 
@@ -66,4 +66,4 @@ const LearningContent = () => {
         </div>
     )
 }
-export default LearningContent
+export default LearningContents
