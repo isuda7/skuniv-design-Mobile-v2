@@ -57,6 +57,8 @@ import Main from './views/Myhome/Main/';
 
 // 학습창
 import LearningOverview from './views/Learning/LearningOverview'
+import LearningOverviewTeacherIntroduce from './views/Learning/LearningOverviewTeacherIntroduce'
+import LearningOverviewTeacherLecture from './views/Learning/LearningOverviewTeacherLecture'
 import LearningContent from './views/Learning/LearningContent'
 
 // Sub
@@ -127,6 +129,8 @@ const Router = () => {
                     {/* Learning */}
                     <Route path='/Learning/LearningContent' element={<LearningContent />} />
                     <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
+                    <Route path='/Learning/LearningOverviewTeacherIntroduce' element={<LearningOverviewTeacherIntroduce />} />
+                    <Route path='/Learning/LearningOverviewTeacherLecture' element={<LearningOverviewTeacherLecture />} />
                 </Route>
             </Routes>
         </HashRouter>

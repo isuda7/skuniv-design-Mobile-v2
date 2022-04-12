@@ -40,7 +40,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningOverviewTeacherIntroduce' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
@@ -52,7 +52,7 @@ const IndexLearning = () => {
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
 				<Table.Cell className='link-address'>
-					<Link to='/Learning/' target='reactFrame' />
+					<Link to='/Learning/LearningOverviewTeacherLecture' target='reactFrame' />
 				</Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
