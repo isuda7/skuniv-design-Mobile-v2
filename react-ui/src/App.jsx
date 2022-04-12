@@ -61,7 +61,7 @@ import LearningOverview from './views/Learning/LearningOverview'
 import LearningOverviewTeacherIntroduce from './views/Learning/LearningOverviewTeacherIntroduce'
 import LearningOverviewTeacherLecture from './views/Learning/LearningOverviewTeacherLecture'
 import LearningContents from './views/Learning/LearningContents'
-import LearningOverviewCurriculum from './views/Learning/LearningOverviewCurriculum'
+import LearningCurriculum from './views/Learning/LearningCurriculum'
 
 // Sub
 // import Sample from './views/Sample/';
@@ -134,7 +134,7 @@ const Router = () => {
                     <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
                     <Route path='/Learning/LearningOverviewTeacherIntroduce' element={<LearningOverviewTeacherIntroduce />} />
                     <Route path='/Learning/LearningOverviewTeacherLecture' element={<LearningOverviewTeacherLecture />} />
-                    <Route path='/Learning/LearningOverviewCurriculum' element={<LearningOverviewCurriculum />} />
+                    <Route path='/Learning/LearningCurriculum' element={<LearningCurriculum />} />
                 </Route>
             </Routes>
         </HashRouter>
