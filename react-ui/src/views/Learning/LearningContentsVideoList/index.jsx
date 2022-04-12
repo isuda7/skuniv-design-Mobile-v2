@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Sticky } from 'semantic-ui-react';
 import { AppbarBasic, Nav } from '../../../components';
-import { LearningHead } from '../conponents';
+import { LearningHead } from '../components';
 import { Section01 } from './components';
 import './style.scss';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Label } from 'semantic-ui-react';
 import { Board } from '../../../../../components';
-import { CubeItem } from '../../../conponents';
+import { CubeItem } from '../../../components';
 import './style.scss';
 
 const Section01 = () => {

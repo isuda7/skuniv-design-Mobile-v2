@@ -288,7 +288,7 @@ class DefaultPage extends Component {
                         <h4 className='g_h4'>Components</h4>
                         <ul>
                             <li className='g_info'>프레임웍 컴포넌트 : Semantic-UI</li>
-                            <li className='g_info'>전역공통 컴포넌트 : /src/conponents/ (하단버튼, 검색형인풋, NoData 등)</li>
+                            <li className='g_info'>전역공통 컴포넌트 : /src/components/ (하단버튼, 검색형인풋, NoData 등)</li>
                             <li className='g_info'>지역공통 컴포넌트 : /src/views/메뉴별/components/ (메뉴별 공통 컨텐츠)</li>
                             <li className='g_info'>페이지별 컴포넌트 : 페이지폴더 내에 섹션단위로 컨텐츠별 컴포넌트 제작</li>
                         </ul>

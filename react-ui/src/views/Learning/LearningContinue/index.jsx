@@ -1,7 +1,7 @@
 import React, { Fragment, useRef, useState } from 'react';
 import { Button, Sticky } from 'semantic-ui-react';
 import { AppbarBasic, Nav } from '../../../components';
-import { LearningHead } from '../conponents';
+import { LearningHead } from '../components';
 import { Section01 } from './components';
 import './style.scss';
 
