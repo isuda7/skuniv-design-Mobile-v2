@@ -18,7 +18,7 @@ const IndexLearning = () => {
 				<Table.Cell className='link-address'>
 					<Link to='/Learning/LearningOverview' target='reactFrame' />
 				</Table.Cell>
-				<Table.Cell textAlign='center'>조찬기</Table.Cell>
+				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell></Table.Cell>
 			</Table.Row>
@@ -106,8 +106,8 @@ const IndexLearning = () => {
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell></Table.Cell>
 			</Table.Row>
-			<Table.Row verticalAlign='top'>
-				<Table.Cell>학습과정(카드) - Contents (학습 이어하기 유/무)</Table.Cell>
+ 			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - 단일과정</Table.Cell>
 				<Table.Cell textAlign='center'>
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
@@ -118,8 +118,8 @@ const IndexLearning = () => {
 				<Table.Cell textAlign='center'></Table.Cell>
 				<Table.Cell></Table.Cell>
 			</Table.Row>
-			<Table.Row verticalAlign='top'>
-				<Table.Cell>학습과정(카드) - Contents 챕터</Table.Cell>
+ 			<Table.Row verticalAlign='top'>
+				<Table.Cell>학습과정(카드) - Contents 챕터 - 묶음과정</Table.Cell>
 				<Table.Cell textAlign='center'>
 					{/* (<span>AL-MA-10</span>) */}
 				</Table.Cell>
