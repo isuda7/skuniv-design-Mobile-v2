@@ -56,10 +56,11 @@ import LayoutMain from './layouts/LayoutMain/';
 import Main from './views/Myhome/Main/';
 
 // 학습창
+import LearningConponents from './views/Learning/LearningComponents'
 import LearningOverview from './views/Learning/LearningOverview'
 import LearningOverviewTeacherIntroduce from './views/Learning/LearningOverviewTeacherIntroduce'
 import LearningOverviewTeacherLecture from './views/Learning/LearningOverviewTeacherLecture'
-import LearningContent from './views/Learning/LearningContent'
+import LearningContent from './views/Learning/LearningContents'
 
 // Sub
 // import Sample from './views/Sample/';
@@ -127,7 +128,8 @@ const Router = () => {
                     <Route path='/guide/Prototype/TempBottomsheet' element={<TempBottomsheet />} />
 
                     {/* Learning */}
-                    <Route path='/Learning/LearningContent' element={<LearningContent />} />
+                    <Route path='/Learning/LearningConponents' element={<LearningConponents />} />
+                    <Route path='/Learning/LearningContents' element={<LearningContents />} />
                     <Route path='/Learning/LearningOverview' element={<LearningOverview />} />
                     <Route path='/Learning/LearningOverviewTeacherIntroduce' element={<LearningOverviewTeacherIntroduce />} />
                     <Route path='/Learning/LearningOverviewTeacherLecture' element={<LearningOverviewTeacherLecture />} />

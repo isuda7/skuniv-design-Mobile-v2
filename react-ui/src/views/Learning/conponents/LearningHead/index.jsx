@@ -1,8 +1,5 @@
 import React from 'react';
 import { Label } from 'semantic-ui-react';
-import { Thumb } from '../../../../components';
-import { Link } from 'react-router-dom';
-import Badge_01 from '../../../../assets/images/demo/thumb-badge01.png';
 import './style.scss';
 
 const LearningHead = () => {
@@ -20,17 +17,6 @@ const LearningHead = () => {
 						<Label className='rate normal'>4.0</Label>
 					</div>
 				</div>
-			</div>
-			<div className='badge_path'>
-				<Link to='' className='badge_inner'>
-					<div className='badge_thumb'>
-						<Thumb src={Badge_01} alt='' />
-					</div>
-					<div className='badge_body'>
-						<div className='sub_txt'>획득 가능 뱃지</div>
-						<p className='title'><strong>Scenario Planning : Essential Scenario Planning : Essential Scenario Planning : Essential</strong></p>
-					</div>
-				</Link>
 			</div>
 		</div>
     )
