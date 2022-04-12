@@ -60,7 +60,7 @@ import LearningConponents from './views/Learning/LearningComponents'
 import LearningOverview from './views/Learning/LearningOverview'
 import LearningOverviewTeacherIntroduce from './views/Learning/LearningOverviewTeacherIntroduce'
 import LearningOverviewTeacherLecture from './views/Learning/LearningOverviewTeacherLecture'
-import LearningContent from './views/Learning/LearningContents'
+import LearningContents from './views/Learning/LearningContents'
 
 // Sub
 // import Sample from './views/Sample/';
