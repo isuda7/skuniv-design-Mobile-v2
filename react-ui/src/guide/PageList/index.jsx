@@ -7,7 +7,7 @@ import './style.scss';
 const PageList = () => {
     return (
         <div className='ia_wrap'>
-            <iframe src='#/Myhome/Main' frameBorder='0' height='760px' title='Prevoew' name='_reactFrame'></iframe>
+            <iframe src='#/Myhome/Main' frameBorder='0' height='760px' title='Prevoew' name='reactFrame'></iframe>
             <div className='ia_container'>
                 <Gnb index="0" />
                 <Table celled structured selectable unstackable>
