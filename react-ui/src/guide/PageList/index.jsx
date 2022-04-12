@@ -12,9 +12,9 @@ const PageList = () => {
                 <Gnb index="0" />
                 <Table celled structured selectable unstackable>
                     <colgroup>
-                        <col width='25%'/>
+                        <col width='30%'/>
                         <col width='160px'/>
-                        <col width='25%'/>
+                        <col width='20%'/>
                         <col width='120px'/>
                         <col width='120px'/>
                         <col width=''/>
