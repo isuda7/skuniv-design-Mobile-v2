@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Label } from 'semantic-ui-react';
 import { AppbarBasic, Board, Thumb } from '../../../components';
-import { CubeAccordion, CubeInfoList, CubeItem, CubeOverview, CubeReferences, LearningHead, LearningHeadLinkBadge, LearningHeadLinkTeacher } from '../components';
+import { CubeAccordion, CubeaccordionNo, CubeInfoList, CubeItem, CubeOverview, CubeReferences, LearningHead, LearningHeadLinkBadge, LearningHeadLinkTeacher } from '../components';
 import { Link } from 'react-router-dom';
 import Teacher_01 from "../../../assets/images/demo/thumb-community01.png";
 import Badge_01 from '../../../assets/images/demo/thumb-badge01.png';
@@ -181,6 +181,8 @@ const LearningComponents = () => {
                             <span className='date'>2021.12.02 ~ 2022.03.04</span>
                         </p>
                     </CubeInfoList>
+                    <br />
+                    <CubeaccordionNo />
                 </div>
                 <div className='content_foot'>
                     <div className='page_action'>
