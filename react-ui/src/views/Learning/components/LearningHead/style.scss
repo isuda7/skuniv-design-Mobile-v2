@@ -2,22 +2,22 @@
 
 .learning_head {
 	position:relative;
-	height:19.8rem;
 	background-color: #ddd;
 	&::before {
 		content:'';
 		display:block;
-		height:19.8rem;
+		position: absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width:100%;
 	}
 	.overay_area {
 		display:flex;
 		justify-content: center;
-		position:absolute;
-		left:0;
-		top:0;
+		position:relative;
 		width:100%;
-		height:19.8rem;
-		padding:5.6rem $GapSideBase 0;
+		padding:calc($HeightAppBar + 0.4rem) $GapSideBase 3.2rem;
 		background-color: rgba(17, 17, 17, 0.75);
 		.title_area {
 			text-align: center;
@@ -27,8 +27,11 @@
 				color:inherit;
 			}
 			.title {
-				@include FontTitle20;
+				@include FontTitle22;
 				color:inherit;
+				&.line1 { @include FontTitle22; }
+				&.line2  { @include FontTitle20; }
+				&.line3 { @include FontTitle18; }
 			}
 		}
 		.info_area {
@@ -36,7 +39,7 @@
 			justify-content: center;
 			align-items: center;
 			color:#fff;
-			margin-top:2.2rem;
+			margin-top:2rem;
 			.ui.label {
 				&::before {
 					margin-right:0.4rem;

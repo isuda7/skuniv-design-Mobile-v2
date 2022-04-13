@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Label } from 'semantic-ui-react';
 import './style.scss';
 
 const LearningHead = () => {
+	useEffect(()=>{
+		// 타이틀 라인수만큼 스타일 구분하기
+		const TitleEl = document.querySelector('.overay_area .title');
+		const TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+		const TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+		const Remain = TitleHeight / TitleLineHeight;
+		TitleEl.classList.add('line'+Remain);
+	},[])
     return (
 		<div className='learning_head'>
 			<div className='overay_area'>
