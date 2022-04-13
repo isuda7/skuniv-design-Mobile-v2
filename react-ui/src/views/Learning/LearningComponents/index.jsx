@@ -165,13 +165,13 @@ const LearningComponents = () => {
                     </CubeReferences>
                     <br />
                     <CubeInfoList>
-                        <Label>차시</Label>
+                        <Label className='no'>차시</Label>
                         <p className='item'>정보1</p>
                         <p className='item'>정보2</p>
                     </CubeInfoList>
                     <br />
                     <CubeInfoList>
-                        <Label>차시</Label>
+                        <Label className='no'>차시</Label>
                         <p className='item'>
                             <strong className='title'>수강신청기간</strong>
                             <span className='date'>2021.12.02 ~ 2022.03.04</span>
