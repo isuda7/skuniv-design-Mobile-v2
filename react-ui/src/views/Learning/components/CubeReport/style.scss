@@ -1,0 +1,66 @@
+@import '../../../../assets/scss/variables';
+
+// Layout
+.cube_report {
+	margin-bottom: 0.3rem;
+	display: flex;
+	.report_icon {
+		width:30%;
+		.report_unsubmission {
+			padding:0.2rem 0.5rem;
+			margin-bottom:0.5rem;
+			background: rgba(255, 255, 255, 0.2);
+			font-weight: 400;
+			@include FontBody13;
+		}
+		.report_submission {
+			padding:0.2rem 0.5rem;
+			margin-bottom:0.5rem;
+			background: rgba(255, 102, 77, 0.2);
+			color:$ColorPrimary;
+			font-weight: 400;
+			@include FontBody13;
+		}
+	}
+	.unsubmission_date {
+		width:70%;
+		text-align: right;
+		color:$ColorPrimary;
+		@include FontBody12;
+	}
+	.submission_date {
+		width:70%;
+		text-align: right;
+		@include FontBody12;
+		color:$ColorSubTxt;
+	}
+}
+.info_list {
+	display:block;
+	padding:2rem 2rem;
+	border:1px solid #44464A;
+	background-color: #000000;
+	border-radius: $RadiusBase;
+	color:#fff;
+	.report_txt {
+		@include Ellipsis4
+	}
+	.attach {
+		display: flex;
+		@include FontBody12;
+		color:$ColorSubTxt;
+		.attach_icon {
+			padding-top:0.3rem;
+			&::after {
+				content:'';
+				width:1.2rem;
+				height:1.2rem;
+				background-color: #555;
+				display:block;
+			}
+		}
+		.attach_file {
+			margin:0 2rem 0 0.3rem;
+		}
+	}
+}
