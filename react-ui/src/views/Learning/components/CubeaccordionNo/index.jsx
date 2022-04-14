@@ -20,6 +20,10 @@ class CubeaccordionNo extends Component {
 
 		return (
 			<Accordion className="cubeaccordion_no">
+				<div className="cube_sort">
+					<span className="sort_no">차수</span>
+					<span className="sort_date">학습기간</span>
+				</div>
 				<Accordion.Title
 					active={activeIndex === 0}
 					index={0}
@@ -137,6 +141,10 @@ class CubeaccordionNo extends Component {
 					</div>
 				</Accordion.Content>
 				<br />
+				<div className="cube_sort">
+					<span className="sort_no">차수</span>
+					<span className="sort_date">학습기간</span>
+				</div>
 				<Accordion.Title
 					active={activeIndex === 0}
 					index={0}

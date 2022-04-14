@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Label } from 'semantic-ui-react';
 import { AppbarBasic, Board, Thumb } from '../../../components';
-import { CubeAccordion, CubeaccordionNo, CubeInfoList, CubeItem, CubeOverview, CubeReferences, LearningHead, LearningHeadLinkBadge, LearningHeadLinkTeacher } from '../components';
+import { CubeAccordion, CubeaccordionNo, CubeInfoList, CubeReport, CubeMycommentinfo, CubeItem, CubeOverview, CubeReferences, LearningHead, LearningHeadLinkBadge, LearningHeadLinkTeacher } from '../components';
 import { Link } from 'react-router-dom';
 import Teacher_01 from "../../../assets/images/demo/thumb-community01.png";
 import Badge_01 from '../../../assets/images/demo/thumb-badge01.png';
@@ -138,13 +138,13 @@ const LearningComponents = () => {
                     <CubeOverview
                         count='11,247'
                         part='Intermediate'
-                        contact='이름 두 줄 이상일 경우, 문의하기 버튼이 밑줄에 맞춰집니다.'
+                        contact='이름 두 줄 이상일 경우,  버튼이 밑줄에 맞춰집니다.'
                     />
                     <br/>
                     <CubeReferences>
                         <div className="references_body">
                             {/* CSS로 여러줄의 중간 말줄임은 불가합니다. */}
-                            <p className="title">[보충학습자료] 꿀잼반도체 1. 인류 최고의 발명품 트랜지스인류 최명품 트랜지명품 트랜지스....pdf</p>
+                            <p className="title">[] 꿀잼반도체 1. 인류 최고의 발명품 트랜지스인류 최명품 트랜지명품 트랜지스....pdf</p>
                             <p className="bytes">249KB</p>
                         </div>
                         <div className="references_util">
@@ -181,6 +181,56 @@ const LearningComponents = () => {
                             <span className='date'>2021.12.02 ~ 2022.03.04</span>
                         </p>
                     </CubeInfoList>
+                    <br />
+                    <div className="cube_report">
+                        <div className="report_icon">
+                            <Label className='report_unsubmission'>미제출</Label>
+                        </div>
+                        <p className="unsubmission_date">2022.03.02 13:00 저장</p>
+                    </div>
+                    <CubeReport>
+                        <p className="report_txt">
+                            네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다.
+                        </p>
+                        <div className="attach">
+                            {/* CSS로 여러줄의 중간 말줄임은 불가합니다. */}
+                            <span className="attach_icon"></span>
+                            <p className="attach_file">첨부파일</p>
+                            <p className="attach_filename">
+                                <p className="item">
+                                    [보충학습자료] 꿀잼반도체1.인공지....pdf
+                                </p>
+                                <p className="item">
+                                    [보충학습자료] 꿀잼반도체1..pdf
+                                </p>
+                            </p>
+                        </div>
+                    </CubeReport>
+                    <br />
+                    <div className="cube_report">
+                        <div className="report_icon">
+                            <Label className='report_submission'>제출</Label>
+                        </div>
+                        <p className="submission_date">2022.03.02 13:00 저장</p>
+                    </div>
+                    <CubeReport>
+                        <p className="report_txt">
+                            네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다. 네 줄까지 보입니다.
+                        </p>
+                        <div className="attach">
+                            {/* CSS로 여러줄의 중간 말줄임은 불가합니다. */}
+                            <span className="attach_icon"></span>
+                            <p className="attach_file">첨부파일</p>
+                            <p className="attach_filename">
+                                <p className="item">
+                                    [보충학습자료] 꿀잼반도체1.인공지....pdf
+                                </p>
+                                <p className="item">
+                                    [보충학습자료] 꿀잼반도체1..pdf
+                                </p>
+                            </p>
+                        </div>
+                    </CubeReport>
                     <br />
                     <CubeaccordionNo />
                 </div>

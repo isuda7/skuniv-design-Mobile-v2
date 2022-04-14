@@ -16,6 +16,20 @@
 		margin:0;
 		padding:0;
 	}
+	.cube_sort {
+		display: flex;
+		.sort_no {
+			width:9rem;
+			margin-left:2rem;
+		}
+		.sort_no, .sort_date {
+			display:block;
+			@include FontBody12;
+			color:$ColorSubTxt;
+			margin-bottom:0.6rem;
+		}
+
+	}
 }
 // Styles Title
 .cube_expand2 {
