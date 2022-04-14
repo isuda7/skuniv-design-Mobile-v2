@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @import '../../../assets/scss/Default/variables';
 
 /* guide 레이아웃 스타일 */
@@ -130,7 +129,7 @@
     }
 }
 .g_desc {
-    margin:15px 0 5px;
+    margin:1.5rem 0 0.5rem;
     line-height: 1.5;
 }
 .g_desc:first-child {
