@@ -1,4 +1,35 @@
+//나의 코멘트
 .my_commentinfo {
-    border-radius: 8px;
+    border-radius: $RadiusBase;
     background-color: $ColorBody;
+    color:#fff;
+    @include FontBody13;
+    padding:2rem;
+    display: flex;
+    .left {
+        width:50%;
+        display: flex;
+        .icon {
+            border-radius: $RadiusIcon;
+            padding:0.25rem 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .txt {
+            margin:0.2rem 0 0 1rem;
+        }
+    }
+    .right {
+        width:50%;
+        text-align: right;
+        @include FontBody14;
+        .count_my {
+            font-weight: 800;
+            color:#ff664d;
+        }
+    }
+}
+
+//관련url
+.link_url {
+    
 }
