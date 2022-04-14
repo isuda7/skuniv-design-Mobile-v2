@@ -1,0 +1,144 @@
+// Default
+.tab {
+	position: relative;
+	flex:none;
+	.tab_list {
+		position: relative;
+		display: flex;
+		align-items: center;
+		.tab_item {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			display: block;
+			padding: 1rem;
+			text-align: center;
+		}
+	}
+	// Cases
+	&.sticky {
+		position: sticky;
+		top:$HeightAppBar;
+		background-color:#fff;
+		z-index: 50;
+	}
+	&.wide {
+		.tab_list {
+			.tab_item {
+				flex:1 1 auto;
+				width: 100%;
+			}
+		}
+	}
+	&.is_scrolled {
+		.tab_list {
+            flex-wrap:nowrap;
+			overflow-x:auto;
+            .tab_item {
+                flex:none;
+            }
+		}
+		.tab_next {
+			position: absolute;
+			right:0;
+			top:0;
+			z-index:10;
+			height: calc(4.8rem - 0.2rem);
+			.btn.ico.next {
+				height:inherit;
+				width:4rem;
+				background-image: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+			}
+		}
+		& ::-webkit-scrollbar {
+			display:none;
+		}
+    }
+}
+
+.tab_panel {
+	padding: 1rem;
+}
+
+// Styles
+.tab.style1 {
+	.tab_list::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border: 1px solid #ccc;
+		border-radius: 0.4rem;
+	}
+
+	.tab_item {
+		padding: 1rem;
+		color: #666;
+		border-radius: 0.4rem;
+		@include FontBody14;
+
+		&.is_active {
+			color: #fff;
+			background-color: $ColorPrimary;
+		}
+	}
+}
+
+.tab.style2 {
+	.tab_list {
+		height: 4.8rem;
+		padding:0 $GapSideBase;
+		.tab_item {
+			flex:none;
+			width: auto;
+			height: inherit;
+			border-bottom: 2px solid transparent;
+			color:#A4A6AA;
+			font-weight: 700;
+			&.is_active {
+				color:inherit;
+				border-bottom-color :#333;
+			}
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: #ccc;
+	}
+}
+.theme_dark {
+	.tab.style2 .tab_list .tab_item {
+		&.is_active {
+			border-bottom-color :#fff;
+		}
+
+	}
+}
+
+.tab.style3 {
+	.tab_list {
+		margin: -0.4rem;
+		.tab_item {
+			flex:none;
+			width: auto;
+			height: inherit;
+			border: 1px solid #ccc;
+			padding: 1rem 1.6rem;
+			border-radius: 3rem;
+			margin: 0.4rem;
+
+			&.is_active {
+				border-color: $ColorPrimary;
+			}
+		}
+	}
+}

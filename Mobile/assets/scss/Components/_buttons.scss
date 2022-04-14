@@ -1,0 +1,198 @@
+// Default
+.btn {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    flex:none;
+    margin:0;
+    padding:1.0rem;
+    color:inherit;
+    font-size:inherit;
+    box-sizing: inherit;
+    letter-spacing: inherit;
+    transition:all 0.2s ease;
+    &:hover,
+    &:active,
+    &:focus {
+        color:inherit;
+    }
+}
+.btn.ico {
+    margin:0;
+    padding:0.5rem;
+    &::before {
+        content:'';
+        display:block;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+    }
+}
+
+// Style Type
+.btn.basic {
+    color:$ColorBtnTxt;
+    border:1px solid #E3E4E5;
+    background-color:#fff;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color:#F8F8FA;
+    }
+    &:disabled {
+        color:#E3E4E5;
+        background-color:#fff;
+    }
+    &.primary {
+        color:#fff;
+        border-color:$ColorPrimary;
+        background-color:$ColorPrimary;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color:$ColorPrimaryDark;
+        }
+        &:disabled {
+            border-color:#E3E4E5;
+            background-color:#E3E4E5;
+        }
+    }
+}
+
+.btn.select {
+    padding:0.9ren 3.6rem 0.9rem 1.6rem;
+    border:1px solid $FormBasicBorder;
+    color:$FormBasicText;
+    &.is_disabled {
+        color:$FormBasicDisable;
+    }
+    &.is_valued {
+        color:$FormBasicValue;
+    }
+}
+
+.btn.text {
+    font-size:1.4rem;
+    line-height:2.2rem;
+    padding:0.6rem 1rem;
+    background-color:transparent;
+    color:$ColorBtnTxt;
+    font-weight:400;
+    &:focus,
+    &:hover,
+    &:active {
+        opacity:0.75;
+    }
+    &:disabled {
+        opacity:0.5;
+    }
+    &.info {
+        color:#A4A6AA;
+    }
+    &.primary {
+        background-color:transparent;
+        color:$ColorPrimary;
+    }
+    &.arw_expand::after {
+        content:'';
+        position:relative;
+        top:1px;
+        display:inline-block;
+        width:1.0rem;
+        height:0.5rem;
+        margin-left:0.4rem;
+        background-color:#ddd;
+    }
+    &.arw_link::after {
+        content:'';
+        position:relative;
+        top:1px;
+        display:inline-block;
+        width:0.5rem;
+        height:1.0rem;
+        margin-left:0.4rem;
+        background-color:#ddd;
+    }
+}
+
+.btn.pill {
+    font-size:1.4rem;
+    line-height:1.8rem;
+    padding:1.1rem 1.6rem;
+    height:4rem;
+    border:1px solid $ColorSecondary;
+    border-radius:2rem;
+    color:$ColorSecondary;
+    font-weight:700;
+    &:focus,
+    &:hover,
+    &:active {
+        background-color:#F8F8FA;;
+    }
+    &.secondary {
+        background-color:$ColorSecondary;
+        color:#fff;
+        &:focus,
+        &:hover,
+        &:active {
+            border-color:$ColorSecondaryDark;
+            background-color:$ColorSecondaryDark;
+        }
+    }
+}
+
+// Top Scroll
+.btn.top::before {
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    background-color:#eee;
+}
+
+// Page Action
+.page_action {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+	display: flex;
+	padding: 2.4rem $GapSideBase 2rem;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 22.92%);
+    .btn {
+        flex: 1 1 auto;
+        height: 5.2rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        border-radius: 0.4rem;
+    }
+    .btn + .btn {
+        margin-left: 0.6rem;
+    }
+}
+.theme_dark {
+    .page_action {
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 22.92%);
+    }
+}
+
+// List Action
+.list_action {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid #F2F3F5;
+    .btn.text {
+        flex: 1 1 auto;
+        padding: 1.2rem 0;
+        font-size: 1.4rem;
+        &:focus,
+        &:hover,
+        &:active {
+            opacity:1;
+            background-color:#F8F8FA;
+        }
+        .keyword {
+            color:$ColorSecondary;
+        }
+    }
+}

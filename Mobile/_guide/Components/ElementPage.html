@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
+    <!-- Guide Common -->
+    <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
+    <!-- Guide IA -->
+    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+            <section class="g_sec">
+                <h2 class="g_h2">buttons</h2>
+                <p class="g_info">공통 스타일은 유형을 구분한다.</p>
+                <p class="g_info">상세 스타일은 컨텐츠로 구분한다.</p>
+                <p class="g_info">옵션 스타일은 강조만 구분한다.<br/>(Primary, Secondary, Light)</p>
+                <h3 class="g_h3">Types</h3>
+                <h4 class="g_h4">Basic Type</h4>
+                <div class="g_preview">
+                    <button type="button" class="btn basic">button</button>
+                    <button type="button" class="btn basic primary">button</button>
+                    <br />
+                    <button type="button" class='btn basic' disabled>button</button>
+                    <button type="button" class='btn basic primary' disabled>button</button>
+                </div>
+                <h4 class="g_h4">Select Type</h4>
+                <div class="g_preview">
+                    <button type="button" class="btn select">button</button>
+                    <button type="button" class="btn select is_valued">button</button>
+                    <br />
+                    <button type="button" class='select' disabled>button</button>
+                    <button type="button" class='select is_valued' disabled>button</button>
+                </div>
+                <h4 class="g_h4">Text Type</h4>
+                <div class="g_preview">
+                    <button type="button" class="btn text">취소</button>
+                    <button type="button" class="btn text primary">확인</button>
+                    <br />
+                    <button type="button" class="btn text" disabled>취소</button>
+                    <button type="button" class="btn text primary" disabled>확인</button>
+                    <br />
+                    <button type="button" class="btn text light">더보기</button>
+                    <button type="button" class="btn text light" disabled>더보기</button>
+                    <br />
+                    <button type="button" class="btn text arw_expand">더보기</button>
+                    <button type="button" class="btn text arw_expand" disabled>더보기</button>
+                    <br />
+                    <button type="button" class="btn text arw_link">전체보기</button>
+                    <button type="button" class='btn text arw_link' disabled>전체보기</button>
+                </div>
+                <h4 class="g_h4">Pill Type</h4>
+                <div class="g_preview">
+                    <button type="button" class="btn pill">전체보기</button>
+                    <button type="button" class="btn pill secondary">전체보기</button>
+                    <br />
+                    <button type="button" class="btn pill" disabled>전체보기</button>
+                    <button type="button" class="btn pill secondary" disabled>전체보기</button>
+                </div>
+                <h3 class="g_h3">Content</h3>
+                <h4 class="g_h4">List Action</h4>
+                <div class="g_preview">
+                    <div class="list_action">
+                        <button type="button" class="btn text arw_expand">더보기</button>
+                    </div>
+                    <div class="list_action">
+                        <button type="button" class="btn text arw_link">전체보기</button>
+                    </div>
+                    <div class="list_action">
+                        <button type="button" class="btn text arw_link"><em class="keyword">‘과정’</em>&nbsp; 검색 결과 전체보기
+                            (132)</button>
+                    </div>
+                </div>
+                <h4 class="g_h4">Page Action</h4>
+                <div class="g_preview">
+                    <div class="out_sec' style='background:#eee">
+                        <!-- 실제 페이지는 content_foot 영역에 들어감 -->
+                        <div class="page_action">
+                            <button type="button" class="btn base primary">Primary</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="out_sec' style='background:#eee">
+                        <div class="page_action">
+                            <button type="button" class="btn base">Default</button>
+                            <button type="button" class="btn base primary">Primary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="g_h2">Icon buttons</h2>
+                <h3 class="g_h3">Layout</h3>
+                <div class="g_preview">
+                    <button type="button" class="btn ico top'><span class='blind">Scroll to top</span></button>
+                </div>
+
+                <h2 class="g_h2">Labels</h2>
+                <h3 class="g_h3">Text + Image</h3>
+                <div class="g_preview">
+                    <span class="label rate_count">4.8</span>
+                </div>
+
+                <h2 class="g_h2">Divider</h2>
+                <h3 class="g_h3">Section Divider</h3>
+                <div class="g_preview">
+                    <div class="divider style1"></div>
+                    <br />
+                    <div class="divider style1 out_sec"></div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</body>
+
+</html>

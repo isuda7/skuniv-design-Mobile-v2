@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
+    <!-- Guide Common -->
+    <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
+    <!-- Guide IA -->
+    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+
+            <section class="g_sec">
+                <h2 class="g_h2">Appbars</h2>
+                <p class="g_info">가이드에서는 is_active를 적용하고</p>
+                <p class="g_info">페이지에서는 is_active를 적용하지 않는다.</p>
+                <h3 class="g_h3">Basic</h3>
+                <div class="preview">
+                    <div class="out_sec">
+                        <header class="header basic">
+                            <div class="header_left">
+                                <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                                <h1><span class="blind">Appbar Title 숨김처리입니다.</span></h1>
+                            </div>
+                        </header>
+
+                        <div class="divider style1"></div>
+
+                        <header class="header basic">
+                            <div class="header_left">
+                                <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                                <h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
+                            </div>
+                        </header>
+
+                        <div class="divider style1"></div>
+
+                        <header class="header basic">
+                            <div class="header_left">
+                                <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                                <h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
+                            </div>
+                            <div class="header_right">
+                                <div class="tooltip left bottom transition is_active">
+                                    <button type="button" class="btn ico more"><span class="blind">더보기</span></button>
+                                    <div class="tooltip_body">
+                                        더보기 목록
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="divider style1"></div>
+
+                        <header class="header basic">
+                            <div class="header_left">
+                                <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                                <h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
+                            </div>
+                            <div class="header_right">
+                                <div class="tooltip left bottom transition is_active">
+                                    <button type="button" class="btn ico study"><span class="blind">학습목록</span></button>
+                                    <div class="tooltip_body">
+                                        더보기 목록
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+                <h3 class="g_h3">Profile</h3>
+                <div class="preview out_sec">
+                    <div class="header profile">
+                        <a href="javascript:void(0)" class="avata_area">
+                            <span class="avata"><Image src="/Mobile/assets/img/demo/avata-profile-80-01.png" alt={props.title + " Profile Avata"} /></span>
+                            <h1><strong>신사임당</strong><span class="blind"> 마이 홈</span></h1>
+                        </a>
+                        <div class="header_right">
+                            <div class="tooltip left bottom transition is_active">
+                                <button type="button" class="btn ico alim"><span class="blind">알림</span></button>
+                                <div class="tooltip_body">
+                                    더보기 목록
+                                </div>
+                            </div>
+                            <button type="button" class="btn ico search"><span class="blind">검색</span></button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="g_h3">Multi Titles</h3>
+                <div class="preview out_sec">
+                    <header class="header basic">
+                        <div class="header_left">
+                            <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                            <h1>
+                                <strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong>
+                                <span>Sub Title</span>
+                            </h1>
+                        </div>
+                        <div class="header_right">
+                            <div class="tooltip left bottom transition is_active">
+                                <button type="button" class="btn ico alim"><span class="blind">알림</span></button>
+                                <div class="tooltip_body">
+                                    더보기 목록
+                                </div>
+                            </div>
+                            <button type="button" class="btn ico search"><span class="blind">검색</span></button>
+                        </div>
+                    </header>
+                </div>
+                <h2 class="g_h2">Theme Dark</h2>
+                <h3 class="g_h3">Demo</h3>
+                <div class="preview out_sec theme_dark">
+                    <header class="header basic">
+                        <div class="header_left">
+                            <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+                            <h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
+                        </div>
+                        <div class="header_right">
+                            <div class="tooltip left bottom transition is_active">
+                                <button type="button" class="btn ico study"><span class="blind">학습목록</span></button>
+                                <div class="tooltip_body">
+                                    더보기 목록
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

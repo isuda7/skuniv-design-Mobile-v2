@@ -1,9 +1,0 @@
-/*******************************
-         Site Overrides
-*******************************/
-/* Default */
-.ui.form,
-.ui.form .field > label {
-    font-size:inherit;
-    line-height:inherit;
-}
