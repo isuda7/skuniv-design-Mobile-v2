@@ -29,10 +29,12 @@
     }
 }
 
-//관련url dark
+//관련url
 .link_wrap {
     .sub_title {
         color:#75777B;
+        font-weight: 700;
+        margin-bottom:0.5rem;
     }
     .link_url {
         border-radius: $RadiusBase;
@@ -64,6 +66,18 @@
         }   
     }
 }
+.theme_dark {
+    .link_wrap {
+        .sub_title {
+            color:#75777B;
+        }
+        .link_url {
+            background-color: #151617;
+            color:#F8F8FA;
+        }
+    }
+}
+
 //관련url white
 .link_urlw {
     border-radius: $RadiusBase;
@@ -118,16 +132,17 @@
         padding-left:4rem;
         .post_main {
             border-radius: 0 8px 8px 8px;
-            background-color: $ColorBody;
+            background-color: #000;
             color:#F8F8FA;
             @include FontBody14;
             padding:2rem;
             .post_txt {
+                position: relative;
                 .txt {
-                    @include Ellipsis1;
+                    @include Ellipsis7;
                 }
                 .more {
-
+                    padding:0;
                 }
             }
             .btn {
@@ -148,6 +163,21 @@
                 .right {
                     .like {
 
+                    }
+                }
+            }
+        }
+    }
+}
+.theme_dark {
+    .post {
+        .post_padding {
+            .post_main {
+                background-color: #000;
+                color:#F8F8FA;
+                .post_txt {
+                   .btn.more {
+                       color:#A4A6AA;
                     }
                 }
             }
