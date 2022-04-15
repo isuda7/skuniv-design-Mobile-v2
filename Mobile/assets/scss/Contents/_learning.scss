@@ -336,31 +336,7 @@
     }
 }
 
-// 학습리스트 펼치기
-.cube_expand {
-	display:flex;
-	align-items: center;
-	position: relative;
-	padding:2rem;
-	background-color: #F8F8FA;
-	.expand_body {
-		flex:0 1 auto;
-		width:100%;
-		overflow: hidden;
-		.title {
-			padding:0;
-			@include FontTitle16;
-			@include Ellipsis1;
-		}
-		.sub_txt {
-			margin-top:0.4rem;
-			em {
-				color:$ColorPrimary;
-			}
-		}
-	}
-}
-
+// 학습리스트 아코디언
 .cube_acco {
 	width:auto;
 	max-width:none;
@@ -382,6 +358,29 @@
 	}
 	.acco_content {
 		padding:0 $GapSideBase;
+	}
+	.cube_expand {
+		display:flex;
+		align-items: center;
+		position: relative;
+		padding:2rem 4.6rem 2rem 2rem;
+		background-color: #F8F8FA;
+		.expand_body {
+			flex:0 1 auto;
+			width:100%;
+			overflow: hidden;
+			.title {
+				padding:0;
+				@include FontTitle16;
+				@include Ellipsis1;
+			}
+			.sub_txt {
+				margin-top:0.4rem;
+				em {
+					color:$ColorPrimary;
+				}
+			}
+		}
 	}
 }
 
@@ -466,6 +465,167 @@
 			font-weight: 700;
 		}
 	}
+}
+
+// Cube Report
+.cube_report {
+	.report_toolbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom:0.8rem;
+		.date {
+			@include FontBody12;
+			color:$ColorBtnTxt;
+		}
+		.label.style1:not(.primary) + .date {
+			color:$ColorPrimary;
+		}
+	}
+	.report_body {
+		display:block;
+		padding:2rem 2rem;
+		border:1px solid #44464A;
+		background-color: #000000;
+		border-radius: $RadiusBase;
+		color:#fff;
+	}
+	.report_title {
+		.title {
+			@include Ellipsis4;
+		}
+	}
+	.report_attach {
+		margin-top:1.2rem;
+		display: flex;
+		@include FontBody12;
+		.attach_title {
+			flex:none;
+			margin-right:0.8rem;
+			.title {
+				color:#A4A6AA;
+				&::before {
+					content:'';
+					display:block;
+					width:1.2rem;
+					height:1.2rem;
+					background-color: #555;
+				}
+			}
+		}
+		.attach_files {
+			flex:0 1 auto;
+			overflow: hidden;
+			color:$ColorSubTxt;
+			.item {
+				display:flex;
+				strong {
+					flex:0 1 auto;
+					@include Ellipsis1;
+				}
+				span {
+					display:block;
+					flex:none;
+				}
+			}
+		}
+	}
+}
+
+// 차수목록 아코디언
+.degree_list {
+	.degree_sort {
+		display:flex;
+		align-items: center;
+		width:100%;
+		padding: 0 2rem;
+		color:$ColorBtnTxt;
+		margin-bottom:0.6rem;
+		.title {
+			flex:none;
+			display:block;
+			width:7.7rem;
+			margin-right:0.8rem;
+		}
+		.date {
+			display:block;
+			width:100%;
+			flex:1 1 auto;
+		}
+	}
+
+	.degree_acco {
+		background-color: #000;
+		.acco_title {
+			border-bottom:1px solid #25272B;
+			&::after {
+				content:'';
+				display:block;
+				position: absolute;
+				right:1.3rem;
+				top:calc(50% - 0.2rem);
+				width:1rem;
+				height:0.5rem;
+				background-color: #ccc;
+			}
+		}
+		.degree_expand,
+		.degree_item {
+			display:flex;
+			align-items: center;
+			width:100%;
+			.title {
+				flex:none;
+				display:block;
+				width:7.7rem;
+				color:#fff;
+				margin-right:0.8rem;
+			}
+			.date {
+				display:block;
+				width:100%;
+				flex:1 1 auto;
+				color:#A4A6AA;
+			}
+			& + .degree_item {
+				margin-top:0.4rem;
+			}
+		}
+		.degree_expand {
+			position: relative;
+			height:4.6rem;
+			padding:0 4.6rem 0 2rem;
+			font-weight: 400;
+		}
+		.degree_body {
+			padding:1.6rem 2rem;
+			background-color: #25272B;
+		}
+	}
+	// Cases
+	&.has_check {
+		.degree_sort {
+			padding-left:0.4rem;
+			.title {
+				width:3.1rem;
+				text-align: center;
+				margin-left:4rem;
+				margin-right:3rem;
+			}
+		}
+		.degree_expand {
+			padding-left:0.4rem;
+		}
+		.radio {
+			margin-right:2rem;
+		}
+		.radio + .title {
+			width:3.1rem;
+			margin-right:3rem;
+			text-align: center;
+		}
+	}
+
 }
 
 ///////////////////////////////////////////////////
