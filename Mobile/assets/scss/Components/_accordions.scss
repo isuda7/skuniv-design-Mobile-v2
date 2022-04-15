@@ -1,0 +1,13 @@
+.accordion {
+    &_title {
+        &.is_active::after {
+            transform: rotate(180deg);
+        }
+    }
+    &_content {
+        display:none;
+        &.is_active {
+            display:block;
+        }
+    }
+}

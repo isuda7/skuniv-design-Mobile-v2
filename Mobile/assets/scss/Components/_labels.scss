@@ -5,7 +5,18 @@
     align-items:center;
 }
 
-// Styles
+.label.style1 {
+    min-width:3.6rem;
+    height:2.2rem;
+    padding:0 0.6rem 0.1rem 0.6rem;
+    background-color: #44464A;
+    border-radius: $RadiusIcon;
+    @include FontBody13;
+    font-weight:400;
+}
+
+
+// Contents
 .label.rate_count {
     padding:0;
     background-color: transparent;
