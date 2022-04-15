@@ -31,5 +31,33 @@
 
 //관련url
 .link_url {
-    
+    border-radius: $RadiusBase;
+    background-color: $ColorBody;
+    color:#fff;
+    @include FontBody13;
+    padding:2rem;
+    .anchor {
+        display: block;
+        .link_layout {
+            display: flex;
+            .thumb_img {
+                width:5.2rem;
+                height:5.2rem;
+                background-color:#eee;
+                margin-right:1.2rem;
+                flex: none;
+            }
+            .txt {
+                .title {
+                    @include Ellipsis2;
+                }
+                .url {
+                    display: block;
+                    @include Ellipsis1;
+                    @include FontBody12;
+                    color:$ColorSubTxt;
+                }
+            }
+        }   
+    }
 }

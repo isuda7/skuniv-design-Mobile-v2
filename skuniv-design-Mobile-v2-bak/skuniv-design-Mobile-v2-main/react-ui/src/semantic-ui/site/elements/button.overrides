@@ -1,0 +1,207 @@
+/*******************************
+         Site Overrides
+*******************************/
+/* Default */
+.ui.button {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    flex:none;
+    margin:0;
+    padding:1.0rem;
+    color:inherit;
+    font-size:inherit;
+    box-sizing: inherit;
+    letter-spacing: inherit;
+    transition:all 0.2s ease;
+}
+.ui.button:hover,
+.ui.button:active,
+.ui.button:focus {
+    color:inherit;
+}
+.ui.button.icon {
+    margin:0;
+    padding:0.5rem;
+}
+.ui.button.icon::before {
+    content:'';
+    display:block;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:100% 100%;
+}
+
+/*
+    Style Type
+*/
+/* Style Base */
+.ui.button.base {
+    color:@ColorBtnTxt;
+    border:1px solid #E3E4E5;
+    background-color:#fff;
+}
+.ui.button.base:hover,
+.ui.button.base:focus,
+.ui.button.base:active {
+    background-color:#F8F8FA;
+}
+.ui.button.base:disabled {
+    color:#E3E4E5;
+    background-color:#fff;
+}
+.ui.button.base.primary {
+    color:#fff;
+    border-color:@ColorPrimary;
+    background-color:@ColorPrimary;
+}
+.ui.button.base.primary:hover,
+.ui.button.base.primary:focus,
+.ui.button.base.primary:active {
+    background-color:@ColorPrimaryDark;
+}
+.ui.button.base.primary:disabled {
+    border-color:#E3E4E5;
+    background-color:#E3E4E5;
+}
+
+/* Style Select */
+.ui.button.select {
+    padding:0.9ren 3.6rem 0.9rem 1.6rem;
+    border:1px solid @FormBasicBorder;
+    color:@FormBasicText;
+}
+.ui.button.select.is_disabled {
+    color:@FormBasicDisable;
+}
+.ui.button.select.is_valued {
+    color:@FormBasicValue;
+}
+
+/* Style Text */
+.ui.button.text {
+    font-size:1.4rem;
+    line-height:2.2rem;
+    padding:0.6rem 1rem;
+    background-color:transparent;
+    color:@ColorBtnTxt;
+    font-weight:400;
+}
+.ui.button.text:focus,
+.ui.button.text:hover,
+.ui.button.text:active {
+    opacity:0.75;
+}
+.ui.button.text:disabled {
+    opacity:0.5;
+}
+.ui.button.text.info {
+    color:#A4A6AA;
+}
+.ui.button.text.primary {
+    background-color:transparent;
+    color:@ColorPrimary;
+}
+.ui.button.text.arrow_expend::after {
+    content:'';
+    position:relative;
+    top:1px;
+    display:inline-block;
+    width:1.0rem;
+    height:0.5rem;
+    margin-left:0.4rem;
+    background-color:#ddd;
+}
+.ui.button.text.arrow_link::after {
+    content:'';
+    position:relative;
+    top:1px;
+    display:inline-block;
+    width:0.5rem;
+    height:1.0rem;
+    margin-left:0.4rem;
+    background-color:#ddd;
+}
+
+/* Style Pill */
+.ui.button.pill {
+    font-size:1.4rem;
+    line-height:1.8rem;
+    padding:1.1rem 1.6rem;
+    height:4rem;
+    border:1px solid @ColorSecondary;
+    border-radius:2rem;
+    color:@ColorSecondary;
+    font-weight:700;
+}
+.ui.button.pill:focus,
+.ui.button.pill:hover,
+.ui.button.pill:active {
+    background-color:#F8F8FA;;
+}
+.ui.button.pill.secondary {
+    background-color:@ColorSecondary;
+    color:#fff;
+}
+.ui.button.pill.secondary:focus,
+.ui.button.pill.secondary:hover,
+.ui.button.pill.secondary:active {
+    border-color:@ColorSecondaryDark;
+    background-color:@ColorSecondaryDark;
+}
+
+/*
+    Layout
+*/
+.ui.button.top::before {
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    background-color:#eee;
+}
+
+/*
+    Content
+*/
+/* Style PageAction */
+.page_action {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+	display: flex;
+	padding: 2.4rem @GapSideBase 2rem;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 22.92%);
+}
+.page_action .ui.button {
+    flex: 1 1 auto;
+    height: 5.2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 0.4rem;
+}
+.page_action .ui.button + .ui.button {
+	margin-left: 0.6rem;
+}
+
+/* Style ListAction */
+.list_action {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid #F2F3F5;
+}
+.list_action .ui.button {
+    flex: 1 1 auto;
+	padding: 1.2rem 0;
+    font-size: 1.4rem;
+}
+.list_action .ui.button.text:focus,
+.list_action .ui.button.text:hover,
+.list_action .ui.button.text:active {
+    opacity:1;
+    background-color:#F8F8FA;
+}
+.list_action .ui.button .keyword {
+    color:@ColorSecondary;
+}

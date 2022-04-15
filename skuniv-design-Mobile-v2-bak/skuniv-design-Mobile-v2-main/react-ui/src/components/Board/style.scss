@@ -1,0 +1,61 @@
+@import '../../assets/scss/variables';
+
+// Board
+.board_sec {
+	display:flex;
+	flex-direction: column;
+	flex:1 0 auto;
+	.board_head {
+		flex:none;
+	}
+	.board_body {
+		position: relative;
+		flex:1 0 auto;
+	}
+}
+
+// Board Head
+.board_head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height:4rem;
+	.board_count {
+		display: flex;
+		align-items: center;
+		color:$ColorSubTxt;
+		.total {
+			margin-right:0.4rem;
+		}
+		.count {
+			color:$ColorPrimary;
+		}
+	}
+	.board_util {
+		display: flex;
+		align-items: center;
+	}
+
+	// Buttons
+	.ui.button.icon.filter {
+		padding:0.5rem;
+	}
+	.ui.button.icon.filter::before {
+		content:'';
+		width:2rem;
+		height:2rem;
+		background-color:#ddd;
+	}
+	.ui.button.icon.playlistAdd {
+		padding:0.5rem;
+	}
+	.ui.button.icon.playlistAdd::before {
+		content:'';
+		width:2rem;
+		height:2rem;
+		background-color:#ddd;
+	}
+}
+
+// Board List
+

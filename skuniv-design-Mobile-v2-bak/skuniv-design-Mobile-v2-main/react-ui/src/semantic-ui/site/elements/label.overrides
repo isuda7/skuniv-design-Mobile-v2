@@ -1,0 +1,55 @@
+/*******************************
+         Site Overrides
+*******************************/
+/* Default */
+.ui.label {
+    display:inline-flex;
+    align-items:center;
+    margin:0;
+    text-align:center;
+    color:#fff;
+    font-size:1.4rem;
+    line-height:2.2rem;
+}
+.ui.label.normal {
+    padding:0;
+    background:transparent;
+    color:inherit;
+    font-weight:inherit;
+}
+
+/* Sub Text */
+.ui.label.sub_txt {
+    color: @ColorSubTxt;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+}
+
+/* Rate Count */
+.ui.label.rate_count {
+    padding:0;
+    background-color: transparent;
+    color:inherit;
+    font-weight:400;
+}
+.ui.label.rate_count .rate {
+    width:1.6rem;
+    height:1.6rem;
+    background-color: #ddd;
+    margin-right:0.5rem;
+}
+.ui.label.date {
+    padding:0;
+    background-color: transparent;
+    color:@ColorSubTxt;
+    font-weight:400;
+}
+.ui.label.date .icon.date {
+    width:1.4rem;
+    height:1.4rem;
+    background-color:#ddd;
+    margin-right:0.4rem;
+}

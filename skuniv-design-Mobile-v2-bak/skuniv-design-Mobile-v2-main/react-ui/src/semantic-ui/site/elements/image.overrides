@@ -1,0 +1,20 @@
+/*******************************
+         Site Overrides
+*******************************/
+/* Default */
+img.ui.image {
+    flex:none;
+    display:inline;
+}
+
+/* Avatas (Span) */
+.avata {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    vertical-align: middle;
+    width:8.0rem; /* Demo Size */
+    height:8.0rem; /* Demo Size */
+}
