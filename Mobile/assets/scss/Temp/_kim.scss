@@ -96,6 +96,9 @@
                 }
             .user_id {
                 @include FontBody13;
+                font-weight: 700;
+                color:#fff;
+                height:3.2rem;
             }
             .write_time {
                 @include FontBody13;
