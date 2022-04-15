@@ -1,8 +1,8 @@
 //나의 코멘트
 .my_commentinfo {
     border-radius: $RadiusBase;
-    background-color: $ColorBody;
-    color:#fff;
+    background-color: #151617;
+    color:#F8F8FA;
     @include FontBody13;
     padding:2rem;
     display: flex;
@@ -30,41 +30,45 @@
 }
 
 //관련url dark
-.link_url {
-    border-radius: $RadiusBase;
-    background-color: $ColorBody;
-    color:#fff;
-    @include FontBody13;
-    padding:2rem;
-    .link_body {
-        display: flex;
-        .link_thumb {
-            width:5.2rem;
-            height:5.2rem;
-            background-color:#eee;
-            margin-right:1.2rem;
-            flex: none;
-        }
-        .link_title {
-            flex:0 1 auto;
-            overflow: hidden;
-            .title {
-                @include Ellipsis2;
+.link_wrap {
+    .sub_title {
+        color:#75777B;
+    }
+    .link_url {
+        border-radius: $RadiusBase;
+        background-color: #151617;
+        color:#F8F8FA;
+        @include FontBody13;
+        padding:2rem;
+        .link_body {
+            display: flex;
+            .link_thumb {
+                width:5.2rem;
+                height:5.2rem;
+                background-color:#eee;
+                margin-right:1.2rem;
+                flex: none;
             }
-            .url {
-                @include Ellipsis1;
-                @include FontBody10;
-                color:$ColorSubTxt;
+            .link_title {
+                flex:0 1 auto;
+                overflow: hidden;
+                .title {
+                    @include Ellipsis2;
+                }
+                .url {
+                    @include Ellipsis1;
+                    @include FontBody10;
+                    color:$ColorSubTxt;
+                }
             }
-        }
-    }   
+        }   
+    }
 }
-
 //관련url white
 .link_urlw {
     border-radius: $RadiusBase;
     background-color: #fff;
-    color:$ColorBody;
+    color:#33353C;
     @include FontBody13;
     padding:2rem;
     .link_title {
@@ -76,7 +80,7 @@
         .url {
             @include Ellipsis1;
             @include FontBody10;
-            color:$ColorSubTxt;
+            color:#A4A6AA;
         }
     }
 }
@@ -85,27 +89,29 @@
 .post {
     .post_head {
         .left {
+            width:70%;
             display: flex;
             .thumb {
                 border-radius: 50%;
                 width:3.2rem;
                 height:3.2rem;
                 background-color:#eee;
-                margin-right:1.2rem;
                 flex: none;
                 }
             .user_id {
                 @include FontBody13;
                 font-weight: 700;
                 color:#fff;
-                height:3.2rem;
+                margin: 0.3rem 0.8rem 0
             }
             .write_time {
                 @include FontBody13;
+                color: $ColorSubTxt;
+                margin-top:0.3rem;
             }
         }
         .right {
-
+            width:30%;
         }
     }
     .post_padding {
@@ -113,17 +119,24 @@
         .post_main {
             border-radius: 0 8px 8px 8px;
             background-color: $ColorBody;
-            color:#fff;
-            @include FontBody13;
+            color:#F8F8FA;
+            @include FontBody14;
             padding:2rem;
             .post_txt {
+                .txt {
+                    @include Ellipsis1;
+                }
                 .more {
 
                 }
             }
             .btn {
+                padding:0;
                 .left {
+                    display: flex;
+                    
                     .comment {
+                        
                         .no {
 
                         }
