@@ -29,35 +29,112 @@
     }
 }
 
-//관련url
+//관련url dark
 .link_url {
     border-radius: $RadiusBase;
     background-color: $ColorBody;
     color:#fff;
     @include FontBody13;
     padding:2rem;
-    .anchor {
-        display: block;
-        .link_layout {
+    .link_body {
+        display: flex;
+        .link_thumb {
+            width:5.2rem;
+            height:5.2rem;
+            background-color:#eee;
+            margin-right:1.2rem;
+            flex: none;
+        }
+        .link_title {
+            flex:0 1 auto;
+            overflow: hidden;
+            .title {
+                @include Ellipsis2;
+            }
+            .url {
+                @include Ellipsis1;
+                @include FontBody10;
+                color:$ColorSubTxt;
+            }
+        }
+    }   
+}
+
+//관련url white
+.link_urlw {
+    border-radius: $RadiusBase;
+    background-color: #fff;
+    color:$ColorBody;
+    @include FontBody13;
+    padding:2rem;
+    .link_title {
+        flex:0 1 auto;
+        overflow: hidden;
+        .title {
+            @include Ellipsis1;
+        }
+        .url {
+            @include Ellipsis1;
+            @include FontBody10;
+            color:$ColorSubTxt;
+        }
+    }
+}
+
+//게시물
+.post {
+    .post_head {
+        .left {
             display: flex;
-            .thumb_img {
-                width:5.2rem;
-                height:5.2rem;
+            .thumb {
+                border-radius: 50%;
+                width:3.2rem;
+                height:3.2rem;
                 background-color:#eee;
                 margin-right:1.2rem;
                 flex: none;
-            }
-            .txt {
-                .title {
-                    @include Ellipsis2;
                 }
-                .url {
-                    display: block;
-                    @include Ellipsis1;
-                    @include FontBody12;
-                    color:$ColorSubTxt;
+            .user_id {
+                @include FontBody13;
+            }
+            .write_time {
+                @include FontBody13;
+            }
+        }
+        .right {
+
+        }
+    }
+    .post_padding {
+        padding-left:4rem;
+        .post_main {
+            border-radius: 0 8px 8px 8px;
+            background-color: $ColorBody;
+            color:#fff;
+            @include FontBody13;
+            padding:2rem;
+            .post_txt {
+                .more {
+
                 }
             }
-        }   
+            .btn {
+                .left {
+                    .comment {
+                        .no {
+
+                        }
+                    }
+                    .comment_write {
+
+                    }
+                }
+                .right {
+                    .like {
+
+                    }
+                }
+            }
+        }
     }
 }

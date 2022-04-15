@@ -211,7 +211,7 @@ const LearningComponents = () => {
                         <div className="report_icon">
                             <Label className='report_submission'>제출</Label>
                         </div>
-                        <p className="submission_date">2022.03.02 13:00 저장</p>
+                        <p className="submission_date">2022.03.02 13:00 제출완료</p>
                     </div>
                     <CubeReport>
                         <p className="report_txt">
