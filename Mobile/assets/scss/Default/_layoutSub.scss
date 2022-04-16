@@ -48,19 +48,16 @@
 			padding-left: $GapSideBase;
 			padding-right: $GapSideBase;
 		}
-		.content_foot {
-			height:9.6rem;
-		}
-	}
-	.footer {
-		height:$HeightAppNav;
 	}
 	.btn.ico.top {
+		visibility: hidden;
 		position: fixed;
 		right:2rem;
 		bottom:2rem;
 		padding:0;
 		z-index: 200;
+		opacity: 0;
+		pointer-events: none;
 	}
 	&.has_floating {
 		.btn.ico.top {
@@ -75,6 +72,11 @@
 	&.is_scrolled {
 		.header {
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
+		}
+		.btn.ico.top {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 	&.gap_none {

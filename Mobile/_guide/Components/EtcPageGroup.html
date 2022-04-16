@@ -28,13 +28,13 @@
                 <h3 class="g_h3">Default</h3>
                 <div class="g_preview">
                     <!-- 일반 아바타 -->
-                    일반 아바타 : <span class="avata size_36"><Image src="/Mobile/assets/img/demo/avata-profile-80-01.png" alt='Profile Avata' /></span>
+                    일반 아바타 : <span class="avata" style="background-image:url('/Mobile/assets/img/demo/avata-profile-80-01.png')"></span>
                     <br />
                     <!-- 링크 아바타 -->
-                    링크 아바타 : <a href="#" class="avata size_36"><Image src="/Mobile/assets/img/demo/avata-profile-80-02.png" alt='Profile Avata' /></a>
+                    링크 아바타 : <a href="#" class="avata" style="background-image:url('/Mobile/assets/img/demo/avata-profile-80-02.png')"></a>
                     <br />
                     <!-- 버튼 아바타 -->
-                    버튼 아바타 : <button type="button" class="btn avata size_36"><Image src="/Mobile/assets/img/demo/pic_profile_default.png" alt='Profile Avata' /></button>
+                    버튼 아바타 : <button type="button" class="avata" style="background-image:url('/Mobile/assets/img/demo/pic_profile_default.png');"></button>
                 </div>
                 <h3 class="g_h3">Sizes</h3>
                 <div class="g_preview">
@@ -48,19 +48,19 @@
 				<div class="g_preview">
 					<p class="g_para">비율 다르면 채워지도록 (가로 비율이 큼)</p>
 					<div style="width:20rem; height:16rem; background: #ccc">
-						<span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')" alt=''></span>
+						<span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')" alt=""></span>
 					</div>
 					<br />
 					<p class="g_para">비율 다르면 채워지도록 (세로 비율이 큼)</p>
 					<div style="width:20rem; height:16rem; background: #ccc">
-						<span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-02.png')" alt=''></span>
+						<span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-02.png')" alt=""></span>
 					</div>
 				</div>
 				<h4 class="g_h4">Ribons</h4>
 				<div class="g_preview">
 					<div style="width:20rem; height:16rem; background: gray">
-						<span class="thumb" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')" alt=''>
-							<button type="button" class='btn ico ribon'>
+						<span class="thumb" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')" alt="">
+							<button type="button" class="btn ico ribon">
 								<span class="blind">찜하기</span>
 							</button>
 						</span>
@@ -75,8 +75,8 @@
                 <h2 class="g_h2">No Data</h2>
                 <h3 class="g_h3">Styles</h3>
                 <div class="g_preview">
-                    <div class='no_data'>
-                        <span class='img'>
+                    <div class="no_data">
+                        <span class="img">
                             <img src="/Mobile/assets/img/demo/confirm.png" alt="" />
                         </span>
                         <p class="msg">
@@ -84,20 +84,17 @@
                         </p>
                     </div>
                 </div>
-                <h3 class="g_h3">Full Area</h3>
+                <h3 class="g_h3">Flex Area</h3>
                 <div class="preview">
-                    <div style="position:relative; height:400px; background-color:#ddd;">
-                        <!-- 전체영역 > 플렉스영역 > 컨텐츠영역 -->
-                        <div class='full_area'>
-                            <div class='flex_area'>
-                                <div class='no_data'>
-                                    <span class='img'>
-                                        <img src="/Mobile/assets/img/demo/confirm.png" alt="" />
-                                    </span>
-                                    <p class="msg">
-                                        <strong class="tit">검색된 결과가 없습니다.</strong>
-                                    </p>
-                                </div>
+                    <div style="display:flex; flex-direction: column;position:relative; height:400px; background-color:#ddd;">
+                        <div class="flex_area centered">
+                            <div class="no_data">
+                                <span class="img">
+                                    <img src="/Mobile/assets/img/demo/confirm.png" alt="" />
+                                </span>
+                                <p class="msg">
+                                    <strong class="tit">검색된 결과가 없습니다.</strong>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -107,7 +104,7 @@
                 <h3 class="g_h3">Styles</h3>
 				<div class="g_preview">
 					<div class="result_data">
-						<span class='img'>
+						<span class="img">
 							<img src="/Mobile/assets/img/demo/confirm.png" alt="" />
 						</span>
 						<p class="msg">

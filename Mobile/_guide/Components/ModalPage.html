@@ -22,22 +22,22 @@
         // Alert
         function ModalAlertOpen(id){
             // addClass 이후 Transition
-            $(id).addClass('is_visible');
-            $('body').addClass('is_dimed');
+            $(id).addClass("is_visible");
+            $("body").addClass("is_dimed");
 
-            var ModalAlert = $(id).find('.modal_alert');
-            var ModalDimmer = $(id).find('.dimmer');
+            var ModalAlert = $(id).find(".modal_alert");
+            var ModalDimmer = $(id).find(".dimmer");
             AlertAni = gsap.fromTo(ModalAlert, {opacity: 0, scale:0.75}, {opacity: 1, scale:1, duration: 0.2});
             ModalAni = gsap.fromTo(ModalDimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
         }
         function ModalAlertClose(id){
-            var ModalAlert = $(id).find('.modal_alert');
-            var ModalDimmer = $(id).find('.dimmer');
+            var ModalAlert = $(id).find(".modal_alert");
+            var ModalDimmer = $(id).find(".dimmer");
             AlertAni = gsap.fromTo(ModalAlert, {opacity: 1, scale:1}, {opacity: 0, scale:0.75, duration: 0.2});
             ModalAni = gsap.fromTo(ModalDimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
                 // Transition 이후 removeClass처리
-                $(id).removeClass('is_visible');
-                $('body').removeClass('is_dimed');
+                $(id).removeClass("is_visible");
+                $("body").removeClass("is_dimed");
             }});
         }
     </script>
@@ -115,7 +115,7 @@
                 modal_foot
             </div>
             <div class="modal_close">
-                <button type="button" class='btn ico close' onclick="ModalAlertClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <button type="button" class="btn ico close" onclick="ModalAlertClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>

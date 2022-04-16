@@ -1,210 +1,225 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
-    <!-- Guide Common -->
-    <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
-    <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-    <!-- Guide IA -->
-    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
-    <title>mySUNI Design Mobile V2</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
+	<link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+	<script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
+	<title>mySUNI Design Mobile V2</title>
 </head>
+
 <body>
-<div class="sub_wrapper has_appnav">
-	<!-- Header -->
-    <header class="header basic">
-        <div class="header_left">
-            <button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
-            <h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
-        </div>
-        <div class="header_right">
-            <div class="tooltip left bottom transition">
-                <button type="button" class="btn ico more"><span class="blind">더보기</span></button>
-                <div class="tooltip_body">
-                    더보기 목록
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- // Header -->
+	<div class="sub_wrapper has_appnav">
+		<!-- Header -->
+		<header class="header basic">
+			<div class="header_left">
+				<button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
+				<h1><strong>Appbar Title 이 길어지면 말줄임으로 점점점 표시됩니다.</strong></h1>
+			</div>
+			<div class="header_right">
+				<div class="tooltip left bottom transition">
+					<button type="button" class="btn ico more"><span class="blind">더보기</span></button>
+					<div class="tooltip_body">
+						더보기 목록
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
 
-	<!-- Container -->
-    <main role="main" class="container">
-        <div class="tab style2 sticky">
-            <div class="tab_list">
-                <button type="button" class="tab_item is_active">Tab 1</button>
-                <button type="button" class="tab_item">Tab 2</button>
-                <button type="button" class="tab_item">Tab 3</button>
-            </div>
-        </div>
-        <div class='content_body'>
-            <div class="board_sec">
-                <!-- Board Toolbar -->
-                <div class="board_toolbar">
-                    <div class="board_count">
-                        <span class="total">총</span>
-                        <em class="count">11</em>
-                        <span class="unit">개</span>
-                    </div>
-                    <div class="board_util">
-                        <button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
-                    </div>
-                </div>
-                <!-- // Board Toolbar -->
-                <!-- Board List -->
-                <div class="board_list learning_list out_sec">
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning has_check">
-                        <div class="item_check">
-                            <div class="checkbox basic">
-                                <input type="checkbox" name="learningCheck" id="learningCheck1" tabindex="0" class="hidden" />
-                                <label for="learningCheck1"></label>
-                            </div>
-                        </div>
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item learning">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="thumb" aria-hidden="true" style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- // Board List -->
-            </div>
-        </div>
-    </main>
-    <!-- // Container -->
+		<!-- Container -->
+		<main role="main" class="container">
+			<div class="tab style2 sticky">
+				<div class="tab_list">
+					<button type="button" class="tab_item is_active">Tab 1</button>
+					<button type="button" class="tab_item">Tab 2</button>
+					<button type="button" class="tab_item">Tab 3</button>
+				</div>
+			</div>
+			<div class="content_body">
+				<!-- Board Toolbar -->
+				<div class="board_toolbar">
+					<div class="board_count">
+						<span class="total">총</span>
+						<em class="count">11</em>
+						<span class="unit">개</span>
+					</div>
+					<div class="board_util">
+						<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
+					</div>
+				</div>
+				<!-- // Board Toolbar -->
+				<!-- Board List -->
+				<div class="board_list learning_list out_sec">
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning has_check">
+						<div class="item_check">
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheck1" tabindex="0"
+									class="hidden" />
+								<label for="learningCheck1"></label>
+							</div>
+						</div>
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="item learning">
+						<a href="javascript:void(0)" class="item_body">
+							<div class="item_thumb">
+								<span class="thumb" aria-hidden="true"
+									style="background-image:url('/Mobile/assets/img/demo/thumb-01.png')"></span>
+							</div>
+							<div class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지
+										들어가요.</strong></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // Board List -->
+			</div>
+		</main>
+		<!-- // Container -->
 
-	<!-- Footer -->
-	<footer class="footer">
-		<nav class="navigation">
-			<button class="nav_item drower"><Icon name="bars" /><span class="blind">전체메뉴</span></button>
-			<button class="nav_item">추천</button>
-			<button class="nav_item">마이서니</button>
-			<button class="nav_item">커뮤니티</button>
-			<button class="nav_item">더보기</button>
-		</nav>
-	</footer>
-	<!-- // Footer -->
+		<!-- Footer -->
+		<footer class="footer">
+			<script>$('.footer').load('/Mobile/_guide/Prototype/Appnav.html');</script>
+		</footer>
+		<!-- // Footer -->
 
-	<button type='button' class='btn ico top' onClick="window.scrollTo(0,0)"><span class='blind'>Scroll to top</span></button>
-</div>
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+	</div>
 </body>
+
 </html>

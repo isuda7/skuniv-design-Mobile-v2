@@ -1,7 +1,8 @@
 // Styles
 .header {
-	height: $HeightAppBar;
+	height: calc($HeightAppBar + var(--safeTop));
 	padding: 0 $GapSideBase;
+    padding-top:var(--safeTop);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

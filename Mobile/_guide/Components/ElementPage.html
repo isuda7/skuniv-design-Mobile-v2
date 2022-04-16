@@ -31,25 +31,22 @@
                 <h3 class="g_h3">Types</h3>
                 <h4 class="g_h4">Basic Type</h4>
                 <div class="g_preview">
-                    <button type="button" class="btn basic">button</button>
-                    <button type="button" class="btn basic primary">button</button>
-                    <br />
-                    <button type="button" class='btn basic' disabled>button</button>
-                    <button type="button" class='btn basic primary' disabled>button</button>
+                    <button type="button" class="btn basic">Basic</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                    <button type="button" class="btn basic" disabled>Basic</button>
+                    <button type="button" class="btn basic primary" disabled>Primary</button>
                 </div>
                 <h4 class="g_h4">Select Type</h4>
                 <div class="g_preview">
-                    <button type="button" class="btn select">button</button>
-                    <button type="button" class="btn select is_valued">button</button>
-                    <br />
-                    <button type="button" class='select' disabled>button</button>
-                    <button type="button" class='select is_valued' disabled>button</button>
+                    <button type="button" class="btn select">Select</button>
+                    <button type="button" class="btn select is_valued">Valued</button>
+                    <button type="button" class="btn select" disabled>Disabled</button>
+                    <button type="button" class="btn select is_valued" disabled>Valued</button>
                 </div>
                 <h4 class="g_h4">Text Type</h4>
                 <div class="g_preview">
                     <button type="button" class="btn text">취소</button>
                     <button type="button" class="btn text primary">확인</button>
-                    <br />
                     <button type="button" class="btn text" disabled>취소</button>
                     <button type="button" class="btn text primary" disabled>확인</button>
                     <br />
@@ -60,16 +57,14 @@
                     <button type="button" class="btn text arw_expand" disabled>더보기</button>
                     <br />
                     <button type="button" class="btn text arw_link">전체보기</button>
-                    <button type="button" class='btn text arw_link' disabled>전체보기</button>
+                    <button type="button" class="btn text arw_link" disabled>전체보기</button>
                 </div>
                 <h4 class="g_h4">Pill Type</h4>
                 <div class="g_preview">
                     <button type="button" class="btn pill">전체보기</button>
                     <button type="button" class="btn pill secondary">전체보기</button>
-                    <br />
-                    <button type="button" class="btn pill" disabled>전체보기</button>
-                    <button type="button" class="btn pill secondary" disabled>전체보기</button>
                 </div>
+
                 <h3 class="g_h3">Content</h3>
                 <h4 class="g_h4">List Action</h4>
                 <div class="g_preview">
@@ -85,26 +80,48 @@
                     </div>
                 </div>
                 <h4 class="g_h4">Page Action</h4>
+                <p>페이지에서는 page_floating 을 적용한다.</p>
+                   <div class="g_preview">
+                    <div class="out_sec">
+                        <div class="page_action">
+                            <button type="button" class="btn basic primary">Primary</button>
+                        </div>
+                        <div class="page_action">
+                            <button type="button" class="btn basic">Default</button>
+                            <button type="button" class="btn basic primary">Primary</button>
+                        </div>
+                    </div>
+                    <!-- 페이지에서는 page_floating 로 감싸야 함
+                    <div class="page_floating">
+                        <div class="page_action">
+                            <button type="button" class="btn basic">Default</button>
+                            <button type="button" class="btn basic primary">Primary</button>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <h4 class="g_h4">Page Expand</h4>
+                <p>페이지에서는 page_floating 을 적용한다.</p>
                 <div class="g_preview">
-                    <div class="out_sec' style='background:#eee">
-                        <!-- 실제 페이지는 content_foot 영역에 들어감 -->
-                        <div class="page_action">
-                            <button type="button" class="btn base primary">Primary</button>
+                    <div class="out_sec">
+                        <div class="page_expand">
+                            <button type="button" class="btn expand">더보기</button>
                         </div>
                     </div>
-                    <br />
-                    <div class="out_sec' style='background:#eee">
+                    <!-- 페이지에서는 page_floating 로 감싸야 함
+                    <div class="page_floating">
                         <div class="page_action">
-                            <button type="button" class="btn base">Default</button>
-                            <button type="button" class="btn base primary">Primary</button>
+                            <button type="button" class="btn basic">Default</button>
+                            <button type="button" class="btn basic primary">Primary</button>
                         </div>
                     </div>
+                    -->
                 </div>
 
                 <h2 class="g_h2">Icon buttons</h2>
                 <h3 class="g_h3">Layout</h3>
                 <div class="g_preview">
-                    <button type="button" class="btn ico top'><span class='blind">Scroll to top</span></button>
+                    <button type="button" class="btn ico top"><span class="blind">Scroll to top</span></button>
                 </div>
 
                 <h2 class="g_h2">Labels</h2>
@@ -121,7 +138,6 @@
                     <div class="divider style1 out_sec"></div>
                 </div>
             </section>
-
         </div>
     </div>
 </body>

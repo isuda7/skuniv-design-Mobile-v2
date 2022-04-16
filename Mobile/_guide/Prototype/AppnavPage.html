@@ -7,11 +7,9 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
-    <!-- Guide Common -->
     <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
     <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-    <!-- Guide IA -->
-    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
     <title>mySUNI Design Mobile V2</title>
 </head>
 <body>
@@ -19,11 +17,11 @@
 	<!-- Header -->
     <div class="header profile">
         <a href="javascript:void(0)" class="avata_area">
-            <span class="avata"><Image src="/Mobile/assets/img/demo/avata-profile-80-01.png" alt={props.title + " Profile Avata"} /></span>
+            <span class="avata" style="background-image:url('/Mobile/assets/img/demo/avata-profile-80-01.png')"></span>
             <h1><strong>신사임당</strong><span class="blind"> 마이 홈</span></h1>
         </a>
         <div class="header_right">
-            <div class="tooltip left bottom transition is_active">
+            <div class="tooltip left bottom transition">
                 <button type="button" class="btn ico alim"><span class="blind">알림</span></button>
                 <div class="tooltip_body">
                     더보기 목록
@@ -37,7 +35,7 @@
 	<!-- Container -->
 	<main role="main" class="container">
 		<div class="content_body">
-			content_body
+			<!-- content_body -->
 		</div>
 	</main>
 	<!-- // Container -->
@@ -45,39 +43,42 @@
 	<!-- Footer -->
 	<footer class="footer">
 		<nav class="navigation">
-			<button class="nav_item drower"><Icon name="bars" /><span class="blind">전체메뉴</span></button>
-			<Button class="nav_item">추천</Button>
-			<Button class="nav_item">마이서니</Button>
-			<Button class="nav_item">커뮤니티</Button>
-			<Button class="nav_item">더보기</Button>
+			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome is_active">마이홈</a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more">더보기</a>
+		</nav>
+		<nav class="navigation">
+			<a href="/Mobile/Category/" class="item item_category is_active">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome">마이홈</a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more">더보기</a>
+		</nav>
+		<nav class="navigation">
+			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom is_active">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome">마이홈</a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more">더보기</a>
+		</nav>
+		<nav class="navigation">
+			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome">마이홈</a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity is_active">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more">더보기</a>
+		</nav>
+		<nav class="navigation">
+			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome">마이홈</a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more is_active">더보기</a>
 		</nav>
 	</footer>
 	<!-- // Footer -->
-
-	<!-- Aside Navigation -->
-	<aside class="aside" aria-hidden="false">
-		<div class="aside_head">
-			<h1 class="aside_logo">SUNI</h1>
-			<button type="button" class="logout"><span class="blind">Logout</span></button>
-		</div>
-		<div class="aside_body">
-			<nav class="gnb">
-				<ul class="gnb-dep1">
-					<li class="gnb-dep1-item">
-						<NavLink to="/main/mainIndex2" class="gnb-dep1-link">Reviews</NavLink>
-					</li>
-					<li class="gnb-dep1-item">
-						<NavLink to="/main/mainIndex" class="gnb-dep1-link">Editorials</NavLink>
-					</li>
-					<li class="gnb-dep1-item">
-						<NavLink to="/main/mainIndex3" class="gnb-dep1-link">Upcoming Events</NavLink>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<button type="button" class="btn ico close"><span class="blind">닫기</span></ㅠutton>
-	</aside>
-	<!-- Aside Navigation -->
 </div>
 </body>
 </html>

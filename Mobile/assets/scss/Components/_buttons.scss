@@ -21,7 +21,7 @@
     margin:0;
     padding:0.5rem;
     &::before {
-        content:'';
+        content:"";
         display:block;
         background-repeat:no-repeat;
         background-position:center center;
@@ -34,6 +34,7 @@
     color:$ColorSubTxt;
     border:1px solid #E3E4E5;
     background-color:#fff;
+    border-radius: $RadiusSmall;
     &:hover,
     &:focus,
     &:active {
@@ -63,7 +64,7 @@
     padding:0.9ren 3.6rem 0.9rem 1.6rem;
     border:1px solid $FormBasicBorder;
     color:$FormBasicText;
-    &.is_disabled {
+    &.disabled {
         color:$FormBasicDisable;
     }
     &.is_valued {
@@ -94,7 +95,7 @@
         color:$ColorPrimary;
     }
     &.arw_expand::after {
-        content:'';
+        content:"";
         position:relative;
         top:1px;
         display:inline-block;
@@ -104,7 +105,7 @@
         background-color:#ddd;
     }
     &.arw_link::after {
-        content:'';
+        content:"";
         position:relative;
         top:1px;
         display:inline-block;
@@ -129,6 +130,9 @@
     &:active {
         background-color:#F8F8FA;;
     }
+    &:disabled {
+        opacity: 0.8;
+    }
     &.secondary {
         background-color:$ColorSecondary;
         color:#fff;
@@ -137,6 +141,9 @@
         &:active {
             border-color:$ColorSecondaryDark;
             background-color:$ColorSecondaryDark;
+        }
+        &:disabled {
+            opacity: 0.8;
         }
     }
 }
@@ -149,13 +156,20 @@
     background-color:#eee;
 }
 
+// Page Floating
+.page_floating {
+    height:9.6rem;
+    .page_action {
+        position:fixed;
+        left:0;
+        bottom:0;
+    }
+}
+
 // Page Action
 .page_action {
-    position:fixed;
-    left:0;
-    bottom:0;
+    display: flex;
     width:100%;
-	display: flex;
 	padding: 2.4rem $GapSideBase 2rem;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 22.92%);
     .btn {
@@ -194,5 +208,43 @@
         .keyword {
             color:$ColorSecondary;
         }
+    }
+}
+
+// Page Expand
+.page_expand {
+    display:none;
+    position:fixed;
+    bottom:var(--safeBottom);
+    left:0;
+    width:100%;
+    &::before {
+        content:'';
+        display:block;
+        height:4.5rem;
+        background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #000000 100%);
+    }
+    &::after {
+        content:'';
+        display: block;
+        height:3.5rem;
+        background-color: #000000;
+    }
+    .btn.expand {
+        position: absolute;
+        left:0;
+        bottom:0;
+        width:100%;
+        padding:2.1rem 0;
+        &:before {
+            content:'';
+            display:block;
+            width:1.3rem;
+            height:0.6rem;
+            background-color: #fff;
+        }
+    }
+    &.is_active {
+        display:block;
     }
 }

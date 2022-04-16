@@ -63,7 +63,7 @@
 // Styles
 .tab.style1 {
 	.tab_list::before {
-		content: '';
+		content: "";
 		display: block;
 		position: absolute;
 		left: 0;
@@ -105,7 +105,7 @@
 		}
 	}
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -116,11 +116,15 @@
 	}
 }
 .theme_dark {
-	.tab.style2 .tab_list .tab_item {
-		&.is_active {
-			border-bottom-color :#fff;
+	.tab.style2 {
+		&.sticky {
+			background-color: #000;
 		}
-
+		.tab_list .tab_item {
+			&.is_active {
+				border-bottom-color :#fff;
+			}
+		}
 	}
 }
 

@@ -18,6 +18,7 @@
 	justify-content: space-between;
 	align-items: center;
 	height:4rem;
+	margin-top:0.8rem;
 	.board_count {
 		display: flex;
 		align-items: center;
@@ -39,7 +40,7 @@
 		padding:0.5rem;
 	}
 	.ui.button.icon.filter::before {
-		content:'';
+		content:"";
 		width:2rem;
 		height:2rem;
 		background-color:#ddd;
@@ -48,7 +49,7 @@
 		padding:0.5rem;
 	}
 	.ui.button.icon.playlistAdd::before {
-		content:'';
+		content:"";
 		width:2rem;
 		height:2rem;
 		background-color:#ddd;
@@ -275,7 +276,7 @@
 					align-items: center;
 					flex: none;
 					&::before {
-						content: '';
+						content: "";
 						display: block;
 						width: 1px;
 						height: 1rem;
@@ -299,7 +300,7 @@
 			.ui.rating {
 				margin: 0;
 				.icon {
-					content: '';
+					content: "";
 					width: 2.2rem;
 					height: 2.2rem;
 					display: block;
@@ -405,7 +406,7 @@
                 padding:0;
             }
             &.learning::before {
-                content:'';
+                content:"";
                 width:2.0rem;
                 height:2.0rem;
                 background-color:#333;
@@ -414,7 +415,7 @@
                 padding:0.5rem;
             }
             &.del::before {
-                content:'';
+                content:"";
                 width:2rem;
                 height:2rem;
                 background-color:#ddd;
@@ -423,7 +424,7 @@
                 padding:0.5rem;
             }
             &.drop::before {
-                content:'';
+                content:"";
                 width:2rem;
                 height:2rem;
                 background-color:#ddd;
@@ -432,7 +433,7 @@
                 padding:0;
             }
             &.feel::before {
-                content:'';
+                content:"";
                 width:2rem;
                 height:2rem;
                 background-color:#ddd;

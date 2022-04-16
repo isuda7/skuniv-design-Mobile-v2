@@ -7,12 +7,14 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
-    <!-- Guide Common -->
     <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
     <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-    <!-- Guide IA -->
-    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            window.scrollTo(0, 240);
+        })
+    </script>
 </head>
 <body>
 <div class="sub_wrapper has_floating is_scrolled">
@@ -27,30 +29,39 @@
 
 	<!-- Container -->
     <main role="main" class="container">
-        <div class='content_body'>
-            <div style="height:25rem; background-color: #ddd;">
-                <div class="in_sec">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    Scroll 되었을때 sub_wrapper.is_scrolled
-                </div>
+        <div class="content_body">
+            <div style="height:25rem; background-color: #ddd;">1</div>
+            <div style="height:25rem; background-color: #ccc;">
+                2. 페이지 구성 클래스<br/>
+                - 하단 .appnav 있을 시: .has_appnav 추가<br/>
+                - 하단 .page_floating 있을 시: .has_floating 추가<br/>
+                <br/>
+                .main_wrapper,<br/>
+                .sub_wrapper 요소에 클래스 추가
             </div>
-            <div style="height:25rem; background-color: #ccc;"></div>
-            <div style="height:25rem; background-color: #ddd;"></div>
-            <div style="height:25rem; background-color: #ccc;"></div>
-        </div>
-        <div class='content_foot'>
-            <div class='page_action'>
-                <button type='button' class='btn basic'>버튼</button>
-                <button type='button' class='btn basic primary'>버튼</button>
+            <div style="height:25rem; background-color: #ddd;">
+                3. 페이지 상태 클래스<br/>
+                - 스크롤 시: is_scrolled 추가<br/>
+                - 상태클래스는 가이드에만 적용되며, 페이지는 스크립트에 의해 적용된다.<br/>
+                <br/>
+                .main_wrapper,<br/>
+                .sub_wrapper 요소에 클래스 추가
+            </div>
+            <div style="height:25rem; background-color: #ccc;">
+                4. 스크롤 상태 가이드 템플릿
+            </div>
+
+            <div class="page_floating">
+                <div class="page_action">
+                    <button type="button" class="btn basic">버튼</button>
+                    <button type="button" class="btn basic primary">버튼</button>
+                </div>
             </div>
         </div>
     </main>
     <!-- // Container -->
 
-	<button type='button' class='btn ico top' onClick="window.scrollTo(0,0)"><span class='blind'>Scroll to top</span></button>
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 </body>
 </html>

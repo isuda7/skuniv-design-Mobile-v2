@@ -7,15 +7,12 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
-    <!-- Guide Common -->
     <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
     <script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-    <!-- Guide IA -->
-    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
 </head>
 <body>
-<div class="sub_wrapper theme_dark">
+<div class="sub_wrapper theme_dark has_floating">
 	<!-- Header -->
     <header class="header basic">
         <div class="header_left">
@@ -36,8 +33,6 @@
 
 	<!-- Container -->
     <main role="main" class="container">
-        <div class='content_head'>
-        </div>
         <div class="tab style2 sticky">
             <div class="tab_list">
                 <button type="button" class="tab_item is_active">Tab 1</button>
@@ -45,19 +40,20 @@
                 <button type="button" class="tab_item">Tab 3</button>
             </div>
         </div>
-        <div class='content_body'>
-            content_body
-        </div>
-        <div class='content_foot'>
-            <div class='page_action'>
-                <button type='button' class='btn basic'>버튼</button>
-                <button type='button' class='btn basic primary'>버튼</button>
+        <div class="content_body">
+            <div style="height:25rem; background-color: #333;"></div>
+            <div style="height:25rem; background-color: #222;"></div>
+            <div style="height:25rem; background-color: #333;"></div>
+            <div style="height:25rem; background-color: #222;"></div>
+
+            <div class="page_expand is_active">
+                <button type="button" class="btn expand"><span class="blind">더보기</span></button>
             </div>
         </div>
     </main>
     <!-- // Container -->
 
-    <button type='button' class='btn ico top' onClick="window.scrollTo(0,0)"><span class='blind'>Scroll to top</span></button>
+    <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 	position:relative;
 	background-color: #ddd;
 	&::before {
-		content:'';
+		content:"";
 		display:block;
 		position: absolute;
 		left:0;
@@ -111,7 +111,7 @@
 			}
 		}
 		&::after {
-			content:'';
+			content:"";
 			display:block;
 			width:0.6rem;
 			height:1.3rem;
@@ -172,7 +172,7 @@
 			}
 		}
 		&::after {
-			content:'';
+			content:"";
 			display:block;
 			width:0.6rem;
 			height:1.3rem;
@@ -233,7 +233,7 @@
     .item_body {
         padding:2rem 0;
         &::after {
-            content:'';
+            content:"";
             display:block;
             width:0.6rem;
             height:1.3rem;
@@ -257,7 +257,7 @@
             border-radius: 50%;
             background-color: #eee;
             &::after {
-                content:'';
+                content:"";
                 display:block;
             }
         }
@@ -334,7 +334,7 @@
 
     // Case Repley
     &.is_repley .item_inner::before {
-         content:'';
+         content:"";
          display:block;
          width:1.6rem;
          height:1.6rem;
@@ -351,7 +351,7 @@
 	margin-left:-$GapSideBase;
 	margin-right:-$GapSideBase;
 	.acco_title::after {
-		content:'';
+		content:"";
 		display:block;
 		position:absolute;
 		right:2rem;
@@ -406,7 +406,7 @@
 			position:relative;
 			padding-left:2.4rem;
 			&::before {
-				content:'';
+				content:"";
 				position:absolute;
 				left:0;
 				top:0.2rem;
@@ -538,7 +538,7 @@
 			.title {
 				color:#A4A6AA;
 				&::before {
-					content:'';
+					content:"";
 					display:block;
 					width:1.2rem;
 					height:1.2rem;
@@ -599,7 +599,7 @@
 		.acco_title {
 			border-bottom:1px solid #25272B;
 			&::after {
-				content:'';
+				content:"";
 				display:block;
 				position: absolute;
 				right:1.3rem;
@@ -711,6 +711,7 @@
         border-radius: $RadiusLarge;
         @include FontBody13;
         padding:2rem;
+		color:#33353C;
         .link_body {
             display: flex;
             .link_thumb {
@@ -729,6 +730,7 @@
                 .url {
                     @include Ellipsis1;
                     @include FontBody10;
+					color:#A4A6AA;
                 }
             }
         }
@@ -753,41 +755,18 @@
     }
 }
 
-//관련url white
-.link_urlw {
-    border-radius: $RadiusLarge;
-    background-color: #fff;
-    color:#33353C;
-    @include FontBody13;
-    padding:2rem;
-    .link_title {
-        flex:0 1 auto;
-        overflow: hidden;
-        .title {
-            @include Ellipsis1;
-        }
-        .url {
-            @include Ellipsis1;
-            @include FontBody10;
-            color:#A4A6AA;
-        }
-    }
-}
-
 //게시물
-.post {
+.post_sec {
     .post_head {
 		display: flex;
         .left {
             width:70%;
             display: flex;
-            .thumb {
-                border-radius: 50%;
+            .avata {
                 width:3.2rem;
                 height:3.2rem;
-                background-color:#eee;
                 flex: none;
-                }
+            }
             .user_id {
                 @include FontBody13;
                 font-weight: 700;
@@ -799,7 +778,7 @@
 				display: flex;
                 margin-top:0.3rem;
 				&::after {
-					content:'';
+					content:"";
 					position: relative;
 					top:calc(50% - 0.9rem);
 					left:0.8rem;
@@ -815,7 +794,7 @@
 				padding:0 0.8rem 0 0;
 				float:right;
 				&::after {
-					content:'';
+					content:"";
 					display:block;
 					width:2rem;
 					height:2rem;
@@ -866,7 +845,7 @@
 						margin-left:3rem;
 						display: flex;
 						&::before {
-							content:'';
+							content:"";
 							position: relative;
 							top:calc(50% - 1.5rem);
 							width: 2rem;
