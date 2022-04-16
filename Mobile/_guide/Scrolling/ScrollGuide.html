@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
+    <!-- Guide Common -->
+    <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/assets/js/jquery.min.js"></script>
+    <script src="/Mobile/assets/js/ui.common.js"></script>
+    <!-- Guide IA -->
+    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+            <section class="g_sec">
+                <h2 class="g_h2">Scrolling</h2>
+                <h3 class="g_h3">Default</h3>
+                <div class="g_preview">
+					<p class="g_info">한 번의 스크롤 이벤트로 모든 상태를 구분/관리 한다.</p>
+                    <p class="g_info">스티키, 그림자, 올림, 내림, Top버튼 등을 관리 한다.</p>
+					<br />
+                    <p class="g_info">스크롤 구분 클래스는 body에 추가한다. (script)</p>
+                    <p class="g_info">페이지 구분 클래스는 wrapper에 추가한다. (html)</p>
+					<br />
+                    <p class="g_info">참조 : /assets/js/ui.common.js</p>
+                </div>
+                <h3 class="g_h3">스크롤 구분</h3>
+                <h4 class="g_h4">상태</h4>
+                <div class="g_preview">
+                    <p class="g_info">스크롤된 상태: is_scrolld</p>
+                </div>
+                <h4 class="g_h4">위치</h4>
+                <div class="g_preview">
+					<p class="g_info">스크롤 최상위: is_scroll_first</p>
+                    <p class="g_info">스크롤 마지막: is_scroll_last</p>
+                </div>
+				<h4 class="g_h4">방향</h4>
+                <div class="g_preview">
+					<p class="g_info">스크롤 올림: is_scroll_up</p>
+                    <p class="g_info">스크롤 내림: is_scroll_down</p>
+                </div>
+                <h3 class="g_h3">페이지 구분</h3>
+                <div class="g_preview">
+					<p class="g_info">Sticky 있을 시: has_sticky 추가</p>
+					<p class="g_info">AppNav 있을 시: has_appnav 추가</p>
+					<p class="g_info">Floating 있을 시: has_floating 추가</p>
+				</div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

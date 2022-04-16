@@ -37,9 +37,14 @@
     color: #ac0c3c;
 }
 
+.g_cont .g_para {
+    line-height: 1.8;
+}
+
 .g_cont .g_info {
+    position: relative;
     margin: 0 0 0.5rem;
-    padding-left: 2.0rem;
+    padding-left: 1.4rem;
     color: #000;
     line-height: 1.5;
     .g_info_list {
@@ -48,21 +53,19 @@
             color:#777;
         }
     }
-}
-.g_cont .g_para {
-    line-height: 1.8;
-}
-.g_cont .g_info:before {
-    content: "";
-    position: relative;
-    display: inline-block;
-    width:0.4rem;
-    height:0.4rem;
-    top:-0.2rem;
-    background-color: #777;
-    margin-right: 1.0rem;
-    color: #777;
-    border-radius: 50%;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top:0.8rem;
+        display: inline-block;
+        width:0.4rem;
+        height:0.4rem;
+        background-color: #777;
+        margin-right: 1.0rem;
+        color: #777;
+        border-radius: 50%;
+    }
 }
 .g_cont .g_info_grid {
     display:flex;

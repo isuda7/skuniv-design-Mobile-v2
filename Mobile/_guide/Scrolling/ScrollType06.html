@@ -12,16 +12,33 @@
 	<script src="/Mobile/assets/js/jquery.min.js"></script>
 	<script src="/Mobile/assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top -  $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// Appbar 보여줄 시점에 Active
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
 </head>
 
 <body>
-	<div class="sub_wrapper has_floating">
+	<div class="sub_wrapper has_floating ">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
 				<div class="appbar_left">
 					<button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
-					<h1><strong>Appbar Title</strong></h1>
+					<h1 class="transition"><strong>Citizen Data Scientist (No-Code) 1982</strong></h1>
 				</div>
 			</div>
 		</header>
@@ -30,16 +47,22 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<div class="content_body">
+				<br/>
+				<br/>
+				<br/>
+				<span class="appbar_title">Citizen Data Scientist (No-Code) 1982</span>
+				<br/>
 				<div style="height:25rem; background-color: #ddd;"></div>
 				<div style="height:25rem; background-color: #ccc;"></div>
 				<div style="height:25rem; background-color: #ddd;"></div>
 				<div style="height:25rem; background-color: #ccc;"></div>
-
-				<div class="page_floating">
-					<div class="page_action">
-						<button type="button" class="btn basic">버튼</button>
-						<button type="button" class="btn basic primary">버튼</button>
-					</div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+			</div>
+			<div class="page_floating">
+				<div class="page_action">
+					<button type="button" class="btn basic">버튼</button>
+					<button type="button" class="btn basic primary">버튼</button>
 				</div>
 			</div>
 		</main>

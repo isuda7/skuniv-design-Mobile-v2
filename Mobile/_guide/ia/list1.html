@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<title>Project 현황판</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Guide Common -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
-<link href="/Mobile/assets/css/index.css" rel="stylesheet" />
-<script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-<!-- Guide IA -->
-<link href="/Mobile/_guide/assets/css/ia.css" rel="stylesheet" />
-<script>
-	function linkReplace(){
-		$(".link-address a").each(function(){
-			var href = "/Mobile/HTML/" + $(this).data("href") + ".html";
-			$(this).attr("href", href);
 
-		})
-	}
-</script>
+<head>
+	<meta charset="UTF-8" />
+	<title>Project 현황판</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Guide Common -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
+	<link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/assets/js/jquery.min.js"></script>
+    <script src="/Mobile/assets/js/ui.common.js"></script>
+	<!-- Guide IA -->
+	<link href="/Mobile/_guide/assets/css/ia.css" rel="stylesheet" />
+	<script>
+		function linkReplace() {
+			$(".link-address a").each(function () {
+				var href = "/Mobile/HTML/" + $(this).data("href") + ".html";
+				$(this).attr("href", href);
+
+			})
+		}
+	</script>
 </head>
+
 <body>
 	<div class="ia_wrap">
-		<iframe src="/Mobile/html/Myhome/index.html" frameBorder="0" height="760px" title="Prevoew" name="reactFrame"></iframe>
+		<iframe src="/Mobile/html/Myhome/index.html" frameBorder="0" height="760px" title="Prevoew"
+			name="reactFrame"></iframe>
 		<div class="ia_container">
 			<div class="g_gnb_area">
 				<nav class="g_gnb">
@@ -30,27 +34,27 @@
 					<a href="./index.html" class="ui button">Guide</a>
 				</nav>
 				<nav class="g_menu">
-                    <a href="#IndexLogin">로그인</a>
-                    <a href="#IndexOnboard">온보딩</a>
-                    <a href="#IndexMyHome">MyHome</a>
-                    <a href="#IndexCategory">학습전체</a>
-                    <a href="#IndexRecom">커뮤니티</a>
-                    <a href="#IndexComunity">추천</a>
-                    <a href="#IndexMore">더보기</a>
-                    <a href="#IndexSearch">알림/검색</a>
-                    <a href="#IndexLearning">학습과정</a>
+					<a href="#IndexLogin">로그인</a>
+					<a href="#IndexOnboard">온보딩</a>
+					<a href="#IndexMyHome">MyHome</a>
+					<a href="#IndexCategory">학습전체</a>
+					<a href="#IndexRecom">커뮤니티</a>
+					<a href="#IndexComunity">추천</a>
+					<a href="#IndexMore">더보기</a>
+					<a href="#IndexSearch">알림/검색</a>
+					<a href="#IndexLearning">학습과정</a>
 				</nav>
 			</div>
 
 			<table class="ui celled selectable structured unstackable table" id="iaTable">
 				<colgroup>
-					<col width="30%"/>
-					<col width="160px"/>
-					<col width="20%"/>
-					<col width="120px"/>
-					<col width="120px"/>
-					<col width=""/>
-					<col/>
+					<col width="30%" />
+					<col width="160px" />
+					<col width="20%" />
+					<col width="120px" />
+					<col width="120px" />
+					<col width="" />
+					<col />
 				</colgroup>
 				<thead>
 					<tr>
@@ -65,51 +69,88 @@
 
 				<!-- 로그인 -->
 				<tbody id="IndexLogin">
-					<script>$("#IndexLogin").load("pages/01_IndexLogin.html");</script>
+					<script>
+						$("#IndexLogin").load("pages/01_IndexLogin.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 온보드 -->
 				<tbody id="IndexOnboard">
-					<script>$("#IndexOnboard").load("pages/02_IndexOnboard.html");</script>
+					<script>
+						$("#IndexOnboard").load("pages/02_IndexOnboard.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 마이홈 -->
 				<tbody id="IndexMyHome">
-					<script>$("#IndexMyHome").load("pages/03_IndexMyHome.html");</script>
+					<script>
+						$("#IndexMyHome").load("pages/03_IndexMyHome.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 학습전체 -->
 				<tbody id="IndexCategory">
-					<script>$("#IndexCategory").load("pages/04_<IndexCategory.html");</script>
+					<script>
+						$("#IndexCategory").load("pages/04_<IndexCategory.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 학습전체 -->
 				<tbody id="IndexRecom">
-					<script>$("#IndexRecom").load("pages/05_IndexRecom.html");</script>
+					<script>
+						$("#IndexRecom").load("pages/05_IndexRecom.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 커뮤니티 -->
 				<tbody id="IndexComunity">
-					<script>$("#IndexComunity").load("pages/06_IndexCommunity.html");</script>
+					<script>
+						$("#IndexComunity").load("pages/06_IndexCommunity.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 더보기 -->
 				<tbody id="IndexMore">
-					<script>$("#IndexMore").load("pages/07_IndexMore.html");</script>
+					<script>
+						$("#IndexMore").load("pages/07_IndexMore.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 검색 -->
 				<tbody id="IndexSearch">
-					<script>$("#IndexSearch").load("pages/08_IndexSearch.html");</script>
+					<script>
+						$("#IndexSearch").load("pages/08_IndexSearch.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- 학습 -->
 				<tbody id="IndexLearning">
-					<script>$("#IndexLearning").load("pages/09_IndexLearning.html", function(){ linkReplace() });</script>
+					<script>
+						$("#IndexLearning").load("pages/09_IndexLearning.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 			</table>
 		</div>
 	</div>
 
 </body>
+
 </html>

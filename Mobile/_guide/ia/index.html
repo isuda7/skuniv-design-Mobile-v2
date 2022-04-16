@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<title>Project 현황판</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Guide Common -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
-<link href="/Mobile/assets/css/index.css" rel="stylesheet" />
-<script src="/Mobile/_guide/assets/js/jquery.min.js"></script>
-<!-- Guide IA -->
-<link href="/Mobile/_guide/assets/css/ia.css" rel="stylesheet" />
-<script>
-	function linkReplace(){
-		$(".link-address a").each(function(){
-			var href = "/Mobile/_guide/" + $(this).data("href") + ".html";
-			$(this).attr("href", href);
 
-		})
-	}
-</script>
+<head>
+	<meta charset="UTF-8" />
+	<title>Project 현황판</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Guide Common -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
+	<link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/assets/js/jquery.min.js"></script>
+    <script src="/Mobile/assets/js/ui.common.js"></script>
+	<!-- Guide IA -->
+	<link href="/Mobile/_guide/assets/css/ia.css" rel="stylesheet" />
+	<script>
+		function linkReplace() {
+			$(".link-address a").each(function () {
+				var href = "/Mobile/_guide/" + $(this).data("href") + ".html";
+				$(this).attr("href", href);
+
+			})
+		}
+	</script>
 </head>
+
 <body>
 	<div class="ia_wrap">
-		<iframe src="/Mobile/_guide/Components/ElementPage.html" frameBorder="0" height="760px" title="Prevoew" name="reactFrame"></iframe>
+		<iframe src="/Mobile/_guide/Components/ElementPage.html" frameBorder="0" height="760px" title="Prevoew"
+			name="reactFrame"></iframe>
 		<div class="ia_container">
 			<div class="g_gnb_area">
 				<nav class="g_gnb">
@@ -33,17 +37,18 @@
 					<a href="#GuideSample">작성예시</a>
 					<a href="#GuideComponents">Components</a>
 					<a href="#GuidePrototype">Prototypes</a>
+					<a href="#GuideScrolling">Scrolling</a>
 				</nav>
 			</div>
 			<table class="ui celled selectable structured unstackable table" id="iaTable">
 				<colgroup>
-					<col width="30%"/>
-					<col width="160px"/>
-					<col width="20%"/>
-					<col width="120px"/>
-					<col width="120px"/>
-					<col width=""/>
-					<col/>
+					<col width="30%" />
+					<col width="160px" />
+					<col width="20%" />
+					<col width="120px" />
+					<col width="120px" />
+					<col width="" />
+					<col />
 				</colgroup>
 				<thead>
 					<tr>
@@ -58,17 +63,38 @@
 
 				<!-- Samples -->
 				<tbody id="GuideSample">
-					<script>$("#GuideSample").load("pages/GuideSample.html");</script>
+					<script>
+						$("#GuideSample").load("pages/GuideSample.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- GuideBasic -->
 				<tbody id="GuideComponents">
-					<script>$("#GuideComponents").load("pages/GuideComponents.html");</script>
+					<script>
+						$("#GuideComponents").load("pages/GuideComponents.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 				<!-- Prototype -->
 				<tbody id="GuidePrototype">
-					<script>$("#GuidePrototype").load("pages/GuidePrototype.html", function(){ linkReplace() });</script>
+					<script>
+						$("#GuidePrototype").load("pages/GuidePrototype.html", function () {
+							linkReplace()
+						});
+					</script>
+				</tbody>
+
+				<!-- Prototype -->
+				<tbody id="GuideScrolling">
+					<script>
+						$("#GuideScrolling").load("pages/GuideScrolling.html", function () {
+							linkReplace()
+						});
+					</script>
 				</tbody>
 
 			</table>
@@ -76,4 +102,5 @@
 	</div>
 
 </body>
+
 </html>

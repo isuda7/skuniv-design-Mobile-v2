@@ -15,35 +15,53 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_floating">
+	<div class="submain_wrapper has_appnav">
 		<!-- Header -->
-		<header class="header">
+		<div class="header">
 			<div class="appbar basic">
 				<div class="appbar_left">
-					<button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
-					<h1><strong>Appbar Title</strong></h1>
+					<h1><strong>학습전체</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<div class="tooltip left bottom transition">
+						<button type="button" class="btn ico alim"><span class="blind">알림</span></button>
+						<div class="tooltip_body">
+							더보기 목록
+						</div>
+					</div>
+					<button type="button" class="btn ico search"><span class="blind">검색</span></button>
 				</div>
 			</div>
-		</header>
+		</div>
 		<!-- // Header -->
 
 		<!-- Container -->
 		<main role="main" class="container">
 			<div class="content_body">
+                <div class="tab style1">
+                    <div class="tab_list">
+                        <a href="javascript:(0)" class="tab_item is_active">Category</a>
+                        <a href="javascript:(0)" class="tab_item">Certification</a>
+                    </div>
+                </div>
+				<br />
 				<div style="height:25rem; background-color: #ddd;"></div>
 				<div style="height:25rem; background-color: #ccc;"></div>
 				<div style="height:25rem; background-color: #ddd;"></div>
 				<div style="height:25rem; background-color: #ccc;"></div>
-
-				<div class="page_floating">
-					<div class="page_action">
-						<button type="button" class="btn basic">버튼</button>
-						<button type="button" class="btn basic primary">버튼</button>
-					</div>
-				</div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
 			</div>
 		</main>
 		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<script>
+				$('.footer').load('/Mobile/_guide/Prototype/Appnav.html');
+			</script>
+		</footer>
+		<!-- // Footer -->
 
 		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
 			<span class="blind">Scroll to top</span>
