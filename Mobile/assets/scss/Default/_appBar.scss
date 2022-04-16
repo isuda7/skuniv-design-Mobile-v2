@@ -1,14 +1,17 @@
 // Default
-.header {
-    position: relative;
-    z-index: 100;
-    height: calc($HeightAppBar + var(--safeTop));
-    .appbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width:100%;
-        transition: transform 0.2s ease;
+.main_wrapper,
+.submain_wrapper,
+.sub_wrapper {
+    .header {
+        position: relative;
+        z-index: 100;
+        height: calc($HeightAppBar + var(--safeTop));
+        .appbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: transform 0.2s ease;
+        }
     }
 }
 
@@ -127,47 +130,49 @@
     }
 }
 
-.is_scrolled .appbar {
-    box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.1);
-}
-
 // Scroll Type1 - Main Appbar
-.appbar.profile {
-    background-color:$ColorSecondary;
-    h1 {
-        color:#fff;
-    }
-    &:not(.is_white) {
-        box-shadow:none !important;
-    }
-    &.is_white {
-        background-color: #fff;
-        transform: translateY(0);
+.main_wrapper {
+    .appbar.profile {
+        background-color:$ColorSecondary;
         h1 {
-            color:#000;
+            color:#fff;
+        }
+        &:not(.is_white) {
+            box-shadow:none !important;
+        }
+        &.is_white {
+            background-color: #fff;
+            transform: translateY(0);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
+            h1 {
+                color:#000;
+            }
         }
     }
 }
 .is_scroll_down {
-    .appbar.profile {
-        transform: translateY(-100%);
-        box-shadow: none;
+    .main_wrapper {
+        .appbar.profile {
+            transform: translateY(-100%);
+            box-shadow: none;
+        }
     }
 }
 
 // Scroll Type2 - Submain Appbar
 .is_scroll_down {
     .submain_wrapper:not(.has_sticky) {
-        .appbar.basic {
+        .appbar {
             transform: translateY(-100%);
             box-shadow: none;
         }
     }
 }
 .is_scroll_up {
-    .submain_wrapper {
-        .appbar.basic {
+    .submain_wrapper:not(.has_sticky) {
+        .appbar {
             transform: translateY(0);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
         }
     }
 }
@@ -175,9 +180,8 @@
 // Scroll Type3 - Submain Appbar + Tab
 .is_scrolled {
     .submain_wrapper.has_sticky {
-        .appbar.basic {
+        .appbar {
             position: absolute;
-            // transform: translateY(-100%);
             box-shadow: none;
         }
         .sticky {
@@ -189,15 +193,19 @@
 }
 
 // Scroll Type4 - Sub Appbar Title
-.sub_wrapper {
-    .appbar.basic {
-        position: fixed;
+.is_scrolled {
+    .sub_wrapper {
+        .appbar {
+            position: fixed;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
+        }
     }
 }
 
-// Scroll Type5 - Sub Appbar Title + Tab
+// Scroll Type5 - Sub Appbar Title + Sticky
+// Scroll Type7 - Sub Appbar Title + Sticky
 .sub_wrapper.has_sticky {
-    .appbar.basic {
+    .appbar{
         box-shadow: none;
     }
     .sticky {
@@ -209,7 +217,7 @@
 
 // Scroll Type6 - Sub Appbar Title Transition
 .sub_wrapper {
-    .appbar.basic {
+    .appbar {
         .transition {
             opacity: 0;
             transition: all 0.2s ease;

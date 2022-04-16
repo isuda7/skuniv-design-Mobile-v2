@@ -17,10 +17,10 @@
 			$(window).scroll(function(){
 				var $appbar = $('.appbar');
 				var $appbarTitle = $('.appbar_title');
-				var appbarTitleShow = $appbarTitle.offset().top -  $appbar.outerHeight();
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
 				var scrollTop = $(window).scrollTop();
 
-				// Appbar 보여줄 시점에 Active
+				// appbar_title이 appbar밑으로 절반이상 사라질때
 				if (scrollTop > appbarTitleShow) {
 					$appbar.addClass('is_transition');
 				} else {
