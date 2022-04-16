@@ -1,0 +1,352 @@
+// Default
+.card {
+	position: relative;
+	// Vertical Layout
+	&.ver {
+		.card_inner {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			border-radius: $RadiusLarge;
+			background-color: #fff;
+		}
+		.card_thumb {
+			flex: none;
+		}
+		.card_body {
+			flex: 1 1 auto;
+		}
+		.card_foot {
+			flex: none;
+		}
+	}
+	&.hor {
+		.card_inner {
+			display:flex;
+			align-items: center;
+			background-color: #fff;
+		}
+		.card_thumb {
+			flex:none;
+		}
+		.card_body {
+			flex:1 1 auto;
+		}
+	}
+	.sub_txt {
+		@include FontBody14;
+		color:$ColorSubTxt;
+	}
+	.ui.button.icon {
+		&.file {
+			padding:0;
+		}
+		&.file::before {
+			content:'';
+			width:2rem;
+			height:2rem;
+			background-color:#ddd;
+		}
+	}
+
+}
+// Styles
+.card {
+	&.basic {
+		&.playlist {
+			& + .playlist {
+				margin-top:0.8rem;
+			}
+			.card_inner {
+				display: block;
+				padding: 1.6rem;
+				border-radius: $RadiusLarge;
+				@include Shadow2;
+			}
+			.card_head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom:0.8rem;
+			}
+			.card_body {
+				.title {
+					color: #000;
+					@include FontBody14;
+					@include Ellipsis2;
+				}
+			}
+			.card_foot {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 1.2rem;
+				width:100%;
+				@include FontBody13;
+				.profile {
+					display: flex;
+					align-items: center;
+					flex:0 1 auto;
+					overflow: hidden;
+					// width: calc(100% - 5rem);
+					.avata {
+						flex: none;
+						width: 2rem;
+						height: 2rem;
+						margin-right: 0.4rem;
+					}
+					.name {
+						flex: 0 1 auto;
+						display: block;
+						@include Ellipsis1;
+					}
+				}
+				.count {
+					display:flex;
+					align-items: center;
+					flex:none;
+					margin-left:0.8rem;
+					color: $ColorSubTxt;
+					&::before {
+						content:'';
+						display:block;
+						width:1px;
+						height:1.2rem;
+						background-color: #F2F3F5;
+						margin-right:0.8rem;
+					}
+				}
+			}
+			&.type1 {
+				.card_head {
+					position:absolute;
+					left:1.6rem;
+					top:0.8rem;
+					width:calc(100% - 3.2rem);
+				}
+				.card_body {
+					padding-top:3rem;
+				}
+			}
+			&.type2 {
+				.card_head {
+					.make {
+						color:$ColorPlaylistMake;
+					}
+					.buy {
+						color:$ColorPlaylistBuy;
+					}
+					.recom {
+						color:$ColorPlaylistRecom;
+					}
+				}
+			}
+		}
+	}
+	&.ver {
+		// 학습카드
+		&.learning {
+			width: 15.6rem;
+			height: 23rem;
+			background-color: #fff;
+			border-radius: $RadiusLarge;
+			@include Shadow4;
+			.card_inner {
+				height:100%;
+			}
+			.card_thumb {
+				width: 100%;
+				height: 9rem;
+			}
+			.card_body {
+				padding: 1rem;
+				.sub_txt {
+					+.title {
+						margin-top: 0.4rem;
+					}
+				}
+				.title {
+					height: 6rem;
+					font-size: 1.6rem;
+					line-height: 2rem;
+					color: #000;
+					@include Ellipsis3;
+				}
+			}
+			.card_foot {
+				position: absolute;
+				left:0;
+				bottom:0;
+				width:100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 1rem 1rem 1rem;
+			}
+		}
+		// 플레이리스트카드
+		&.playlist {
+			width: 15.6rem;
+			.thumb {
+				width: inherit;
+				height: 15.6rem;
+				border-radius: 50%;
+				.avata_name {
+					position: relative;
+					z-index: 10;
+					padding: 0 2rem;
+					.avata {
+						display: block;
+						margin: auto;
+						width: 4.8rem;
+						height: 4.8rem;
+					}
+					.name {
+						font-size: 1.2rem;
+						line-height: 1.8rem;
+						color: #fff;
+						text-align: center;
+						@include Ellipsis2;
+					}
+				}
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+			.card_body {
+				margin-top: 0.4rem;
+				.title {
+					text-align: center;
+					font-size: 1.6rem;
+					line-height: 2rem;
+					@include Ellipsis2;
+				}
+			}
+		}
+		// 토픽카드
+		&.topic {
+			.card_inner {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				width: 15.6rem;
+				height: 20.0rem;
+				overflow: hidden;
+				border-radius: $RadiusLarge;
+				color: #fff;
+				padding: 1.6rem 1rem;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 1;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+			.card_thumb {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+				width:100%;
+				height:100%;
+			}
+			.card_body {
+				position: relative;
+				display: flex;
+				flex: 1 0 auto;
+				z-index: 10;
+				.title {
+					height: 6rem;
+					font-size: 1.6rem;
+					line-height: 2rem;
+					color: inherit;
+					@include Ellipsis3;
+				}
+			}
+			.card_foot {
+				position: relative;
+				z-index: 10;
+				font-size: 1.6rem;
+			}
+		}
+	}
+	&.hor {
+		&.badge {
+			border-radius: $RadiusLarge;
+			@include Shadow2;
+			& + .card.badge {
+				margin-top:0.8rem;
+			}
+			.card_inner {
+				padding:1.8rem 2rem;
+			}
+			.card_thumb {
+				width:8rem;
+				height:8rem;
+				margin-right:1.3rem;
+			}
+			.card_body {
+				.title {
+					@include FontBody16;
+					@include Ellipsis2;
+				}
+				.total_count {
+					margin-top:0.4rem;
+					color:#A4A6AA;
+				}
+			}
+		}
+		&.mybadge {
+			border-radius: $RadiusLarge;
+			@include Shadow2;
+			& + .card.badge {
+				margin-top:0.8rem;
+			}
+			.card_inner {
+				flex-wrap:wrap;
+				padding:1.8rem 2rem;
+			}
+			.card_thumb {
+				width:9rem;
+				height:9rem;
+				margin-right:1.3rem;
+			}
+			.card_body {
+				width:calc(100% - 10.3rem);
+				.title {
+					@include FontBody16;
+					@include Ellipsis2;
+				}
+				.date {
+					margin-top:0.4rem;
+					color:#A4A6AA;
+				}
+			}
+			.card_foot {
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				width:100%;
+				height:4.8rem;
+				border-top:1px solid #F2F3F5;
+				.ui.button.text {
+					height:100%;
+					width:100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,197 @@
+// Default
+.modal_wrap {
+    display:none;
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 1100;
+    @include FontBody14;
+    &.is_visible {
+        display:flex;
+    }
+}
+.modal {
+    position: relative;
+    z-index: 1001;
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+    .modal_header {
+        width:100%;
+        flex:none;
+    }
+    .modal_container {
+        width:100%;
+        flex:1 1 auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .modal_footer {
+        width:100%;
+        flex:none;
+    }
+}
+
+.is_dimed {
+	overflow: hidden;
+    touch-action:none;
+}
+.dimmer {
+    position:fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.75);
+    opacity: 0;
+    touch-action: none;
+}
+
+// Alert/Confirm
+.modal_wrap {
+    .modal_alert {
+        // Styles
+        width:28rem;
+        border-radius:$RadiusLarge;
+        padding:20px;
+
+        .modal_header {
+            padding:0 !important;
+            margin-bottom:8px;
+            border-bottom:0;
+            font-size:1.6rem;
+            font-weight:700;
+            line-height:2rem;
+            letter-spacing: -0.2px;
+        }
+        .modal_content {
+            padding:0 !important;
+            .msg {
+                color:#44464A;
+                letter-spacing: -0.2px;
+
+            }
+        }
+        .modal_footer {
+            display:flex;
+            justify-content:flex-end;
+            margin-top:14px;
+            margin-right:-1rem;
+            margin-bottom:-0.6rem;
+            .btn {
+                padding:1rem 1.6rem;
+            }
+        }
+    }
+}
+
+// ButtomSheet
+.modal_wrap {
+    .modal_bottomsheet {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height: 100%;
+        max-height:64rem;
+        margin-top:auto;
+        padding-top:$HeightAppBar;
+        border-radius:$RadiusLarge $RadiusLarge 0 0;
+        .modal_header {
+            position:absolute;
+            left:0;
+            top:0;
+            display:flex;
+            width:100%;
+            justify-content:space-between;
+            align-items:center;
+            height:$HeightAppBar;
+            flex: none;
+            padding:0 $GapSideBase;
+            padding-left:52px;
+            .modal_tit {
+                font-size:1.8rem;
+                line-height:2.4rem;
+                font-weight:700;
+            }
+        }
+        .modal_content {
+            flex:0 1 auto;
+            height:100%;
+            overflow:auto;
+            padding:1rem $GapSideBase;
+        }
+        .modal_footer {
+            flex:none;
+            padding:0 $GapSideBase;
+        }
+        .modal_close {
+            position:absolute;
+            left:$GapSideBase;
+            top:0;
+            display:flex;
+            align-items:center;
+            height:$HeightAppBar;
+            margin-left:-1rem;
+            .modal_close .btn.close {
+                width:4rem;
+                height:4rem;
+            }
+        }
+    }
+}
+
+// Fullpopup
+.modal_fullpopup {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    border-radius:0;
+    box-shadow:none;
+    padding-top:$HeightAppBar;
+    .modal_header {
+        position:absolute;
+        left:0;
+        top:0;
+        display:flex;
+        width:100%;
+        justify-content:space-between;
+        align-items:center;
+        height:$HeightAppBar;
+        flex: none;
+        padding:0 $GapSideBase;
+        padding-left:52px;
+        .modal_tit {
+            font-size:1.8rem;
+            line-height:2.4rem;
+            font-weight:700;
+        }
+    }
+    .modal_content {
+        flex:0 1 auto;
+        height:100%;
+        overflow:auto;
+        padding:1rem $GapSideBase;
+    }
+    .modal_footer {
+        flex:none;
+        padding:0;
+    }
+    .modal_close {
+        position:absolute;
+        left:$GapSideBase;
+        top:0;
+        display:flex;
+        align-items:center;
+        height:$HeightAppBar;
+        margin-left:-1rem;
+        .btn.close {
+            width:4rem;
+            height:4rem;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// Default
+.label {
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.label.style1 {
+    min-width:3.6rem;
+    height:2.2rem;
+    padding:0 0.6rem 0.1rem 0.6rem;
+    background-color: #F2F3F5;
+    border-radius: $RadiusSmall;
+    @include FontBody13;
+    font-weight:400;
+    color:#fff;
+      &.primary {
+        background: rgba(255, 102, 77, 0.2);
+        color:$ColorPrimary;
+    }
+}
+.theme_dark .label.style1 {
+    background-color: rgba(255,255,255,0.2);
+    &.primary {
+        background: rgba(255, 102, 77, 0.2);
+        color:$ColorPrimary;
+    }
+}
+
+// Contents
+.label.rate_count {
+    padding:0;
+    background-color: transparent;
+    color:inherit;
+    font-weight:400;
+    &::before {
+        content:'';
+        display:block;
+        width:1.6rem;
+        height:1.6rem;
+        background-color: #ddd;
+        margin-right:0.5rem;
+    }
+}
+.label.date {
+    padding:0;
+    background-color: transparent;
+    color:$ColorSubTxt;
+    font-weight:400;
+    &::before {
+        content:'';
+        display:block;
+        width:1.4rem;
+        height:1.4rem;
+        background-color:#ddd;
+        margin-right:0.4rem;
+
+    }
+}
