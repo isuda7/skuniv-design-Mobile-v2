@@ -58,62 +58,6 @@ input.basic {
     line-height: 1.5;
 }
 
-/* InputGroup Stylss */
-.input_group {
-    position:relative;
-    input {
-        height:$FormBasicHeight;
-    }
-    // Cases
-    &.clear {
-        input {
-            width:100%;
-            background-color: #eee;
-            padding-right:$FormBasicHeight;
-        }
-        .btn.clear {
-            visibility:hidden;
-            position:absolute;
-            top:0;
-            right:0;
-            height:$FormBasicHeight;
-            width:$FormBasicHeight;
-            padding:0;
-            &::before {
-                content:"";
-                display:block;
-                width:2rem;
-                height:2rem;
-                background-color: #666;
-            }
-        }
-        &.is_valued {
-            .btn.clear {
-                visibility:visible;
-            }
-        }
-    }
-    &.srch {
-        input {
-            padding-left:$FormBasicHeight;
-        }
-        .btn.srch {
-            position:absolute;
-            top:0;
-            left:0;
-            height:$FormBasicHeight;
-            width:$FormBasicHeight;
-            &::before {
-                content:"";
-                display:block;
-                width:2rem;
-                height:2rem;
-                background-color: #666;
-            }
-        }
-    }
-}
-
 /* Textarea */
 textarea.basic {
     width:100%;
@@ -227,5 +171,105 @@ textarea.basic {
     }
     input:checked ~ label:after {
         left:1.7rem;
+    }
+}
+
+// Range
+.multi_range {
+    position: relative;
+    padding-top:2.6rem;
+    .slider {
+        position: relative;
+        z-index: 1;
+        height: 0.4rem;
+        margin: 0 1.2rem;
+        >.track {
+            position: absolute;
+            z-index: 1;
+            left: -1.2rem;
+            right: -1.2rem;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+
+        >.range {
+            position: absolute;
+            z-index: 2;
+            left: 0%;
+            right: 0%;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: $ColorPrimary;
+        }
+
+        >.thumb {
+            position: absolute;
+            z-index: 3;
+            width: 2.4rem;
+            height: 2.4rem;
+            border:1px solid #F2F3F5;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.02), 0px 1px 10px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.06);;
+            &.left {
+                left: 0%;
+                transform: translate(-1.2rem, -1.2rem);
+            }
+
+            &.right {
+                right: 0%;
+                transform: translate(1.2rem, -1.2rem);
+            }
+        }
+
+    }
+    .labels {
+        display:flex;
+        justify-content: space-between;
+        margin-top:1.2rem;
+        padding:0 1.2rem;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width:1px;
+            @include FontBody12;
+            color:#A4A6AA;
+            white-space: nowrap;
+            &:first-child {
+                transform: translateX(-1.2rem);
+                justify-content: flex-start;
+            }
+            &:last-child {
+                transform: translateX(1.2rem);
+                justify-content: flex-end;
+            }
+        }
+    }
+    input[type="range"] {
+        position: absolute;
+        /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+        pointer-events: none;
+        -webkit-appearance: none;
+        z-index: 2;
+        height: 0.4rem;
+        width: 100%;
+        opacity: 0;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* 겹쳐진 두 thumb를 모두 활성화 */
+        pointer-events: all;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0;
+        border: 0 none;
+        background-color: red;
+        cursor: pointer;
+        /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+        -webkit-appearance: none;
     }
 }

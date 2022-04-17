@@ -23,6 +23,7 @@
 			})
 		})
 	</script>
+
 </head>
 
 <body class="is_dimmed">
@@ -36,12 +37,12 @@
 		<div style="height:25rem; background-color: #ccc;"></div>
 	</div>
 
-    <!-- Modal FullPopup -->
-    <div class="modal_wrap is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup">
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_visible">
+        <div class="modal modal_bottomsheet">
             <div class="modal_header">
-				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">ModalFullpopup</h3>
+				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalButtomSheet</h3>
             </div>
             <div class="modal_content">
 				<div style="height:25rem; background-color: #ddd;"></div>
@@ -53,15 +54,13 @@
             </div>
             <div class="modal_footer">
                 <div class="page_action">
-                    <button type="button" class="btn basic">Default</button>
                     <button type="button" class="btn basic primary">Primary</button>
                 </div>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
     </div>
-    <!-- // Modal FullPopup -->
-
+    <!-- // Modal Bottomsheet -->
 </body>
 
 </html>

@@ -15,13 +15,13 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_floating has_sticky">
+	<div class="sub_wrapper has_floating">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
 				<div class="appbar_left">
 					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-					<h1><strong>Notice</strong></h1>
+					<h1><strong>Appbar Title</strong></h1>
 				</div>
 			</div>
 		</header>
@@ -30,24 +30,37 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<div class="content_body">
-				<div class="tab style2 out_sec sticky">
-					<div class="tab_list">
-						<button type="button" class="tab_item is_active">Tab 1</button>
-						<button type="button" class="tab_item">Tab 2</button>
-						<button type="button" class="tab_item">Tab 3</button>
+				<!-- Board Toolbar -->
+				<div class="board_toolbar">
+					<div class="board_count">
+						<span class="total">총</span>
+						<em class="count">0</em>
+						<span class="unit">개</span>
+					</div>
+					<div class="board_util">
+						<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
 					</div>
 				</div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-			</div>
-			<div class="page_floating">
-				<div class="page_action">
-					<button type="button" class="btn basic">버튼</button>
-					<button type="button" class="btn basic primary">버튼</button>
+				<!-- // Board Toolbar -->
+
+				<!-- No Data -->
+				<div class="flex_area centered">
+					<div class="no_data">
+						<span class="img">
+							<img src="/Mobile/assets/img/demo/confirm.png" alt="" />
+						</span>
+						<p class="msg">
+							<strong class="tit">검색된 결과가 없습니다.</strong>
+						</p>
+					</div>
+				</div>
+				<!-- // No Data -->
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic">버튼</button>
+						<button type="button" class="btn basic primary">버튼</button>
+					</div>
 				</div>
 			</div>
 		</main>

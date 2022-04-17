@@ -18,27 +18,75 @@
     <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
-        // Transition은 Callback에 의해서 display:none 적용 되어야 하는 구현 편의상 스크립트로 효과 처리합니다.
+        // 인터렉션은 display:none 과 공존할 수 없습니다.
+        // 인터렉션이 끝난 시점의 Callback 으로 display:none을 적용하기 위해 처리합니다.
+        // Open : "Modal Visible, Body 스크롤 막기" >>> "Modal 인터렉션, Dimmer 인터렉션"
+        // Close : "Modal 인터렉션, Dimmer 인터렉션" >>> "Modal hidden,  Body 스크롤 해제"
+        // React GSAP 사용 하는 것을 추천합니다.
 
         // Alert
         function ModalAlertOpen(id){
             // addClass 이후 Transition
             $(id).addClass("is_visible");
-            $("body").addClass("is_dimed");
+            $("body").addClass("is_dimmed");
 
-            var ModalAlert = $(id).find(".modal_alert");
-            var ModalDimmer = $(id).find(".dimmer");
-            AlertAni = gsap.fromTo(ModalAlert, {opacity: 0, scale:0.75}, {opacity: 1, scale:1, duration: 0.2});
-            ModalAni = gsap.fromTo(ModalDimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
+            var Modal = $(id).find(".modal_alert");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {opacity: 0, scale:0.75}, {opacity: 1, scale:1, duration: 0.2});
+            gsap.fromTo(Dimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
         }
         function ModalAlertClose(id){
-            var ModalAlert = $(id).find(".modal_alert");
-            var ModalDimmer = $(id).find(".dimmer");
-            AlertAni = gsap.fromTo(ModalAlert, {opacity: 1, scale:1}, {opacity: 0, scale:0.75, duration: 0.2});
-            ModalAni = gsap.fromTo(ModalDimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
+            var Modal = $(id).find(".modal_alert");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {opacity: 1, scale:1}, {opacity: 0, scale:0.75, duration: 0.2});
+            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
                 // Transition 이후 removeClass처리
                 $(id).removeClass("is_visible");
-                $("body").removeClass("is_dimed");
+                $("body").removeClass("is_dimmed");
+            }});
+        }
+
+        // BottomSheet
+        function ModalBSOpen(id){
+            // addClass 이후 Transition
+            $(id).addClass("is_visible");
+            $("body").addClass("is_dimmed");
+
+            var Modal = $(id).find(".modal_bottomsheet");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {y:'100%'}, {y:'0', duration: 0.2});
+            gsap.fromTo(Dimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
+        }
+        function ModalBSClose(id){
+            var Modal = $(id).find(".modal_bottomsheet");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {y:'0'}, {y:'100%', duration: 0.2});
+            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
+                // Transition 이후 removeClass처리
+                $(id).removeClass("is_visible");
+                $("body").removeClass("is_dimmed");
+            }});
+        }
+
+        // ModalFPOpen
+        function ModalFPOpen(id){
+            // addClass 이후 Transition
+            $(id).addClass("is_visible");
+            $("body").addClass("is_dimmed");
+
+            var Modal = $(id).find(".modal_fullpopup");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {opacity:0}, {opacity: 1, duration: 0});
+            gsap.fromTo(Dimmer, {opacity:0}, {opacity: 1, duration: 0});
+        }
+        function ModalFPClose(id){
+            var Modal = $(id).find(".modal_fullpopup");
+            var Dimmer = $(id).find(".dimmer");
+            gsap.fromTo(Modal, {opacity:1}, {opacity:0, duration: 0});
+            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0, onComplete:()=> {
+                // Transition 이후 removeClass처리
+                $(id).removeClass("is_visible");
+                $("body").removeClass("is_dimmed");
             }});
         }
     </script>
@@ -58,11 +106,11 @@
                 </div>
                 <h2 class="g_h2">Modal Bottomsheet</h2>
                 <div class="g_preview">
-                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalButtomSheet')">Open ButtomSheet</button>
+                    <button type="button" class="btn basic primary" onclick="ModalBSOpen('#ModalButtomSheet')">Open ButtomSheet</button>
                 </div>
                 <h2 class="g_h2">Modal Fullpopup</h2>
                 <div class="g_preview">
-                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalFullpopup')">Open Fullpopup</button>
+                    <button type="button" class="btn basic primary" onclick="ModalFPOpen('#ModalFullpopup')">Open Fullpopup</button>
                 </div>
             </section>
         </div>
@@ -110,18 +158,63 @@
                 <h3 class="modal_tit">ModalButtomSheet</h3>
             </div>
             <div class="modal_content">
-                modal_body
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
             </div>
             <div class="modal_footer">
-                modal_foot
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
             </div>
             <div class="modal_close">
-                <button type="button" class="btn ico close" onclick="ModalAlertClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
     </div>
-    <!-- // Modal Confirm -->
+    <!-- // Modal Bottomsheet -->
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap" id="ModalFullpopup">
+        <div class="modal modal_fullpopup">
+            <div class="modal_header">
+                <h3 class="modal_tit">ModalFullpopup</h3>
+            </div>
+            <div class="modal_sticky">
+				<div class="tab style2">
+					<div class="tab_list">
+						<button type="button" class="tab_item is_active">Tab 1</button>
+						<button type="button" class="tab_item">Tab 2</button>
+						<button type="button" class="tab_item">Tab 3</button>
+					</div>
+				</div>
+            </div>
+            <div class="modal_content">
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
+            </div>
+            <div class="modal_close">
+                <button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
 </body>
 
 </html>

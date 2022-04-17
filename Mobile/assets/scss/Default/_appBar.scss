@@ -1,16 +1,36 @@
 // Default
-.main_wrapper,
-.submain_wrapper,
-.sub_wrapper {
-    .header {
-        position: relative;
-        z-index: 100;
-        height: calc($HeightAppBar + var(--safeTop));
+.header {
+    position: relative;
+    width:100%;
+    z-index: 100;
+    height: calc($HeightAppBar + var(--safeTop));
+}
+.appbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+.sticky {
+    z-index:90;
+    background-color: #Fff;
+}
+.theme_dark {
+    .appbar,
+    .sticky {
+        background-color: #000;
+    }
+}
+.gap_none {
+    .appbar {
+        position: absolute;
+        background-color: transparent;
+    }
+    .header.theme_dark {
+        position: absolute;
+        background-color: transparent;
         .appbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            transition: transform 0.2s ease;
+            background-color: transparent;
         }
     }
 }
@@ -74,7 +94,7 @@
         flex:none;
         width:4rem;
         height:4rem;
-        &.history {
+        &.back {
             margin-right:1.0rem;
             &::before {
                 width:1rem;
@@ -96,7 +116,7 @@
                 background-color: #eee;
             }
         }
-        &.search {
+        &.srch {
             &::before {
                 width:2rem;
                 height:1.7rem;
@@ -160,6 +180,13 @@
 }
 
 // Scroll Type2 - Submain Appbar
+.is_scrolled {
+    .submain_wrapper:not(.has_sticky) {
+        .appbar {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
+        }
+    }
+}
 .is_scroll_down {
     .submain_wrapper:not(.has_sticky) {
         .appbar {
@@ -172,7 +199,6 @@
     .submain_wrapper:not(.has_sticky) {
         .appbar {
             transform: translateY(0);
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
         }
     }
 }
@@ -187,14 +213,13 @@
         .sticky {
             position: sticky;
             top:var(--safeTop);
-            background-color: #fff;
         }
     }
 }
 
 // Scroll Type4 - Sub Appbar Title
 .is_scrolled {
-    .sub_wrapper {
+    .sub_wrapper:not(.gap_none) {
         .appbar {
             position: fixed;
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.02), 0px 2px 1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.06);
@@ -202,16 +227,15 @@
     }
 }
 
-// Scroll Type5 - Sub Appbar Title + Sticky
-// Scroll Type7 - Sub Appbar Title + Sticky
+// Scroll Type5 - Sub Appbar Title + Sticky(Tab)
+// Scroll Type7 - Sub Appbar Title + Sticky(Search)
 .sub_wrapper.has_sticky {
     .appbar{
-        box-shadow: none;
+        box-shadow: none !important;
     }
     .sticky {
         position: sticky;
         top:calc($HeightAppBar + var(--safeTop));
-        background-color: #fff;
     }
 }
 

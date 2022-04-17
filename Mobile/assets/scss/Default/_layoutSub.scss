@@ -57,15 +57,17 @@
 			bottom:9.6rem;
 		}
 	}
+	&.has_expand {
+		.btn.ico.top {
+			bottom:9.6rem;
+		}
+	}
 	&.has_appnav {
 		.btn.ico.top {
 			bottom:$HeightAppNav + 2rem;
 		}
 	}
 	&.gap_none {
-		.header {
-			background-color: transparent;
-		}
 		.container {
 			padding-top:0;
 		}

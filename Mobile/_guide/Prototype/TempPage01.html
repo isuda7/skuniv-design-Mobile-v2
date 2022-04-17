@@ -15,32 +15,33 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_floating">
+	<div class="main_wrapper">
 		<!-- Header -->
-		<header class="header">
-			<div class="appbar basic">
+		<div class="header">
+			<div class="appbar profile">
 				<div class="appbar_left">
-					<button type="button" class="btn ico history"><span class="blind">뒤로</span></button>
-					<h1><strong>Appbar Title</strong></h1>
+					<a href="javascript:void(0)" class="avata_area">
+						<span class="avata" style="background-image:url('/Mobile/assets/img/demo/avata-profile-80-01.png')"></span>
+						<h1><strong>신사임당 님</strong><span class="blind"> 마이 홈</span></h1>
+					</a>
+				</div>
+				<div class="appbar_right">
+					<div class="tooltip left bottom transition">
+						<button type="button" class="btn ico alim"><span class="blind">알림</span></button>
+						<div class="tooltip_body">
+							더보기 목록
+						</div>
+					</div>
+					<button type="button" class="btn ico srch"><span class="blind">검색</span></button>
 				</div>
 			</div>
-		</header>
+		</div>
 		<!-- // Header -->
 
 		<!-- Container -->
 		<main role="main" class="container">
 			<div class="content_body">
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-
-				<div class="page_floating">
-					<div class="page_action">
-						<button type="button" class="btn basic">버튼</button>
-						<button type="button" class="btn basic primary">버튼</button>
-					</div>
-				</div>
+				content_body
 			</div>
 		</main>
 		<!-- // Container -->
@@ -48,6 +49,14 @@
 		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
 			<span class="blind">Scroll to top</span>
 		</button>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<script>
+				$('.footer').load('/Mobile/_guide/Prototype/Appnav.html');
+			</script>
+		</footer>
+		<!-- // Footer -->
 	</div>
 </body>
 
