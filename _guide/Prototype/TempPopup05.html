@@ -37,17 +37,72 @@
 
     <!-- Modal Bottomsheet -->
     <div class="modal_wrap is_visible">
-        <div class="modal modal_bottomsheet">
+        <div class="modal modal_bottomsheet modal_select">
             <div class="modal_header">
-				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">교육유형</h3>
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+				<!-- <button type="button" class="btn ico back"><span class="blind">닫기</span></button> -->
+                <h3 class="modal_tit">카테고리 선택</h3>
             </div>
             <div class="modal_content">
-            </div>
-            <div class="modal_footer">
-                <div class="page_action">
-                    <button type="button" class="btn basic primary">선택(2)</button>
-                </div>
+				<h4 class="select_tit">카테고리 선택</h4>
+				<ul class="select_list">
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" />
+							<label for="selectlist1"><span>전체</span></label>
+						</div>
+						<div class="checkbox rating all">
+							<input type="checkbox" name="rating" id="rating1" tabindex="0" class="hidden"/>
+							<label for="rating1"><em class="txt">all</em><span class="blind">관심등록</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+							<label for="selectlist2"><span>Item1</span></label>
+						</div>
+						<div class="checkbox rating">
+							<input type="checkbox" name="rating" id="rating2" tabindex="0" class="hidden"  checked />
+							<label for="rating2"><span class="blind">관심등록</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist3" tabindex="0" class="hidden" />
+							<label for="selectlist3"><span>Item2</span></label>
+						</div>
+						<div class="checkbox rating">
+							<input type="checkbox" name="rating" id="rating3" tabindex="0" class="hidden" />
+							<label for="rating3"><span class="blind">관심등록</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist4" tabindex="0" class="hidden" />
+							<label for="selectlist4"><span>Item3</span></label>
+						</div>
+						<button type="button" class="btn arw_link"><span class="blind">페이지 이동</span></button>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist5" tabindex="0" class="hidden" />
+							<label for="selectlist5"><span>Item4</span></label>
+						</div>
+						<button type="button" class="btn arw_link"><span class="blind">페이지 이동</span></button>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist6" tabindex="0" class="hidden" />
+							<label for="selectlist6"><span>Item5</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="radio option">
+							<input type="radio" name="selectlist" id="selectlist7" tabindex="0" class="hidden" />
+							<label for="selectlist7"><span>Item6</span></label>
+						</div>
+					</li>
+				</ul>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>

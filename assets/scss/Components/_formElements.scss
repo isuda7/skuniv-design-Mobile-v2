@@ -79,7 +79,7 @@ textarea.basic {
         height:2rem;
         width:2rem;
         left:0;
-        top:0;
+        top:1px;
     }
     label {
         padding-left:2.0rem;
@@ -108,7 +108,7 @@ textarea.basic {
     min-height:2.0rem;
     input,
     label:before {
-        top:0rem;
+        top:1px;
         left:0rem;
         width:2.0rem;
         height:2.0rem;
