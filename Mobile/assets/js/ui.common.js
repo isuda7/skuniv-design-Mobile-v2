@@ -117,7 +117,16 @@ function RangeMultiple(){
 	inputRight.addEventListener("input", setRightValue);
 }
 
+function tooltip() {
+	$('.tooltip > .btn').each(function(){
+		$(this).on('click', function(){
+			$(this).parent('.tooltip').toggleClass('is_active');
+		})
+	})
+}
+
 /* Ready */
 $(function(){
 	setStatusInit(); // 상태 설정
+	tooltip(); // 툴팁 공통 샘플
 });

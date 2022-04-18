@@ -1,0 +1,97 @@
+// 학습창 공통
+.learning_container {
+    .content_body {
+        padding-top:1.6rem;
+        padding-bottom:4rem;
+    }
+    .content_body.gap_clear {
+        padding-top:0;
+        padding-bottom:0;
+    }
+}
+
+// 학습큐브영상
+.learning_cubeplay {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height:20.2rem;
+    img {
+        width:100%;
+    }
+    progress {
+        position: absolute;
+        left:0;
+        bottom:0;
+        height:0.4rem;
+        width:100%;
+        border-radius: 0;
+        &::-webkit-progress-bar {
+            background-color: rgba(164, 166, 170, 0.5 );
+        }
+        &::-webkit-progress-value {
+            background-color: $ColorPrimary;
+        }
+    }
+}
+
+// 학습과정제목
+.learning_subject {
+    .title_area {
+        .appbar_title {
+            margin-top:1rem;
+            color:#000;
+        }
+    }
+    .info_area {
+        display:flex;
+        margin-top:0.8rem;
+        color:$ColorSubTxt;
+        .label {
+            &::before {
+                content:'';
+                margin-right:0.4rem;
+                background-color: $ColorSubTxt;
+            }
+            &.video {
+                &::before {
+                    width:1.2rem;
+                    height:1.2rem;
+                }
+            }
+            &.time {
+                &::before {
+                    width:2rem;
+                    height:2rem;
+                }
+            }
+            & + .label {
+                margin-left:1.6rem;
+            }
+        }
+    }
+}
+.theme_dark {
+    .learning_subject {
+        .title_area {
+            .appbar_title {
+                color:#fff;
+            }
+        }
+    }
+}
+
+// 태그정보
+.tag_list {
+    overflow: hidden;
+    .chip_group {
+        display:flex;
+        flex-wrap:wrap;
+        margin:-0.5rem;
+        .chip {
+            margin:0.5rem;
+        }
+    }
+}
