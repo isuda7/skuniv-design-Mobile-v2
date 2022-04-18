@@ -1,0 +1,21 @@
+//Overview
+.overview_subscript {
+    margin-top: 2rem;
+    padding-bottom:1.5rem;
+    position: relative;
+    .overview_txt {
+        @include Ellipsis3;
+    }
+    .btn_more {
+        padding:0;
+        color:#a4a6aa;
+    }
+    &.is_expanded {
+        .txt {
+            display:block;
+            overflow: visible;
+        }
+    }
+}
+
+//

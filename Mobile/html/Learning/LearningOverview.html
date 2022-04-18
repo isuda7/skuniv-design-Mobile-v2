@@ -6,13 +6,13 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" href="/Mobile/favicon.ico" />
     <!-- Guide Common -->
-    <link href="../../assets/css/index.css" rel="stylesheet" />
-    <script src="../../assets/js/jquery.min.js"></script>
-    <script src="../../assets/js/ui.common.js"></script>
+    <link href="/Mobile/assets/css/index.css" rel="stylesheet" />
+    <script src="/Mobile/assets/js/jquery.min.js"></script>
+    <script src="/Mobile/assets/js/ui.common.js"></script>
     <!-- Guide IA -->
-    <link href="../assets/css/guide.css" rel="stylesheet" />
+    <link href="/Mobile/_guide/assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
         function learningThumb(){
@@ -28,12 +28,10 @@
 <body>
 <div class="sub_wrapper has_floating gap_none">
 	<!-- Header -->
-    <header class="header">
-        <div class="appbar basic">
-            <div class="appbar_left">
-                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
-            </div>
+    <header class="header basic">
+        <div class="appbar_left">
+            <!--<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+            <h1><strong></strong></h1>-->
         </div>
     </header>
     <!-- // Header -->
@@ -89,64 +87,34 @@
                 </div>
             </div>
             <!-- // 학습과정 탭 -->
-            <!-- 보드 카운트 -->
-            <div class="g_preview">
-                <div class="board_toolbar">
-                    <div class="board_count">
-                        <span class="total">총</span>
-                        <em class="count">0</em>
-                        <span class="unit">개</span>
-                    </div>
-                </div>
+            <!-- 과정 Overview -->
+            <div class="cube_overview">
+                <ul>
+                    <li class="item_complete">20명 이수</li>
+                    <li class="item_part">Intermediate</li>
+                    <li class="item_contact">이름 두 줄 이상일 경우, 버튼이 밑줄에 맞춰집니다.</li>
+                </ul>
+                <button type="button" class="btn text arw_link">문의하기</button>
             </div>
-            <!-- // 보드 카운트 -->
-            <!-- 큐브리스트 -->
-            <div class="board_sec">
-                <div class="board_list">
-                    <div class="cube_item video is_state1">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per0"><span class="blind">Cube</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Video<i class="split"></i>3m</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cube_item video is_state1">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per0"><span class="blind">Cube</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Video<i class="split"></i>3m</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cube_item report is_state3 is_repley">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per100"><span class="blind">Survay</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Survay : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Survay<i class="split"></i>참여완료</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cube_item video is_state1">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per0"><span class="blind">Cube</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Video<i class="split"></i>3m</div>
-                            </div>
-                        </a>
-                    </div>
+            <!-- // 과정 Overview -->
+            <!-- 과정 Overview 텍스트 -->
+                <div class="overview_subscript">
+                    <!-- CSS 중간말줄임 표현불가 -->
+                    <p class="overview_txt">
+                        최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니
+                        <button type="button" class="btn_more">...더 보기</button>
+                    </p>
+                </div>
+            <!-- // 과정 Overview 텍스트 -->
+            <!-- 선수과정 -->
+                선수과정
+            <!--  // 선수과정 -->
+            <!-- Cube Section -->
+            <div class="learning_sec">
+                <div class="sec_head">
+                    <h2 class="heading2">관련 Category</h2>
+                </div>
+                <div class="sec_body mar_t0">
                     <div class="cube_item survay is_state2">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
@@ -159,14 +127,7 @@
                     </div>
                 </div>
             </div>
-            <!-- // 큐브리스트 -->
-            <!-- 버튼-->
-            <div class="page_floating">
-                <div class="page_action">
-                    <button type="button" class="btn basic primary">학습 이어하기</button>
-                </div>
-            </div>
-            <!-- // 버튼-->
+             <!-- // Cube Section -->
         </div>
     </main>
     <!-- // Container -->
