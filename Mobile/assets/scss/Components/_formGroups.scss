@@ -29,6 +29,7 @@
         input {
             width:100%;
             background-color: #eee;
+            padding-left: $FormBasicPadding;
             padding-right:$FormBasicHeight;
         }
         .btn.clear {

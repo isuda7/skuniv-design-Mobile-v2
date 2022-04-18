@@ -17,7 +17,15 @@
 			$(".link-address a").each(function () {
 				var href = "/Mobile/_guide/" + $(this).data("href") + ".html";
 				$(this).attr("href", href);
-
+			})
+			$('.g_menu a').each(function(){
+				$(this).click(function(){
+					var target = $(this).attr('href');
+					let posTop = $(target).offset().top - 82;
+					window.scrollTo(0, posTop);
+					console.log(posTop);
+					return false;
+				})
 			})
 		}
 	</script>

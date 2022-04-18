@@ -4,6 +4,10 @@
 ///////////////////////////////////////////////////
 // Learning Section
 .learning_sec {
+	margin-top:3rem;
+	&:first-child {
+		margin-top:0;
+	}
 	.sec_head + .sec_body {
 		margin-top:1.6rem;
 	}

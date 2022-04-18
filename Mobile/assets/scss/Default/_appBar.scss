@@ -3,7 +3,7 @@
     position: relative;
     width:100%;
     z-index: 100;
-    height: calc($HeightAppBar + var(--safeTop));
+    height: calc(5.2rem + var(--safeTop));
 }
 .appbar {
     position: fixed;
@@ -149,6 +149,12 @@
         }
     }
 }
+.theme_dark {
+    .appbar {
+        background-color: #000;
+        color:#000;
+    }
+}
 
 // Scroll Type1 - Main Appbar
 .main_wrapper {
@@ -235,7 +241,7 @@
     }
     .sticky {
         position: sticky;
-        top:calc($HeightAppBar + var(--safeTop));
+        top:calc(5.2rem + var(--safeTop));
     }
 }
 

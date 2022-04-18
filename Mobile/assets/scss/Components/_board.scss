@@ -36,19 +36,19 @@
 	}
 
 	// Buttons
-	.ui.button.icon.filter {
+	.btn.ico.filter {
 		padding:0.5rem;
 	}
-	.ui.button.icon.filter::before {
+	.btn.ico.filter::before {
 		content:"";
 		width:2rem;
 		height:2rem;
 		background-color:#ddd;
 	}
-	.ui.button.icon.playlistAdd {
+	.btn.ico.playlistAdd {
 		padding:0.5rem;
 	}
-	.ui.button.icon.playlistAdd::before {
+	.btn.ico.playlistAdd::before {
 		content:"";
 		width:2rem;
 		height:2rem;
