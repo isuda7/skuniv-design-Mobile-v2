@@ -2,6 +2,22 @@
 ///////////////////////////////////////////////////
 // Components
 ///////////////////////////////////////////////////
+// Learning Section
+.learning_sec {
+	.sec_head + .sec_body {
+		margin-top:1.6rem;
+	}
+	.heading3 {
+		margin-top:1.6rem;
+		&:first-child {
+			margin-top:0;
+		}
+	}
+	.heading3 +	.sec_cont {
+		margin-top:0.4rem;
+		padding-left:0.7rem;
+	}
+}
 
 // 학습과정 썸네일
 .learning_thumb {

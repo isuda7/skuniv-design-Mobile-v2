@@ -31,6 +31,33 @@
 .heading2 {
 	@include FontTitle16;
 }
+.heading3 {
+	position: relative;
+	padding-left:0.7rem;
+	@include FontTitle14;
+	color:#1C1D1F;
+	&::before {
+		content:'';
+		position: absolute;
+		left:0;
+		top:0.9rem;
+		width:0.3rem;
+		height:0.3rem;
+		border-radius: 50%;
+		background-color: #1C1D1F;
+	}
+}
+.theme_dark {
+	.heading2 {
+		color:#fff;
+	}
+	.heading3 {
+		color:#F8F8FA;
+		&::before {
+			background-color:#F8F8FA;
+		}
+	}
+}
 
 // Content
 .sub_txt {
