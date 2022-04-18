@@ -30,8 +30,8 @@
 	<!-- Header -->
     <header class="header basic">
         <div class="appbar_left">
-            <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-            <h1><strong>Appbar Title</strong></h1>
+            <!--<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+            <h1><strong></strong></h1>-->
         </div>
     </header>
     <!-- // Header -->
@@ -87,18 +87,17 @@
                 </div>
             </div>
             <!-- // 학습과정 탭 -->
-            <!-- 큐브리스트 -->
-            <div class="board_sec">
-                <div class="board_list">
-                    <div class="g_preview">
-                        <div class="board_toolbar">
-                            <div class="board_count">
-                                <span class="total">총</span>
-                                <em class="count">0</em>
-                                <span class="unit">개</span>
-                            </div>
+            <!-- 큐브리스트 아코디언 -->
+            <div class="acco cube_acco">
+                <a href="javascript:void(0)" class="acco_title is_active">
+                    <div class="cube_expand">
+                        <div class="expand_body">
+                            <p class="title"><strong>혁신 리더의 다이어리 (Leader’s Diaryddd) 두줄이 되면 한줄처리</strong></p>
+                            <div class="sub_txt">총 <em>1개</em> 강의 구성</div>
                         </div>
                     </div>
+                </a>
+                <div class="acco_content is_active">
                     <div class="cube_item video is_state1">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
@@ -110,18 +109,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="cube_item video is_state1">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per0"><span class="blind">Cube</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Video<i class="split"></i>3m</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cube_item video is_state3 is_repley">
+                    <div class="cube_item report is_state3 is_repley">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="cube_circle played per100"><span class="blind">Survay</span></span>
@@ -132,17 +120,16 @@
                             </div>
                         </a>
                     </div>
-                    <div class="cube_item video is_state1">
-                        <a href="javascript:void(0)" class="item_body">
-                            <div class="item_thumb">
-                                <span class="cube_circle played per0"><span class="blind">Cube</span></span>
-                            </div>
-                            <div class="item_title">
-                                <p class="title"><strong>Cube : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <div class="sub_txt">Video<i class="split"></i>3m</div>
-                            </div>
-                        </a>
+                </div>
+                <a href="javascript:void(0)" class="acco_title">
+                    <div class="cube_expand">
+                        <div class="expand_body">
+                            <p class="title"><strong>혁신 리더의 다이어리 (Leader’s Diaryddd) 두줄이 되면 한줄처리</strong></p>
+                            <div class="sub_txt">총 <em>1개</em> 강의 구성</div>
+                        </div>
                     </div>
+                </a>
+                <div class="acco_content">
                     <div class="cube_item survay is_state2">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
@@ -155,7 +142,27 @@
                     </div>
                 </div>
             </div>
-            <!-- // 큐브리스트 -->
+            <!-- // 큐브리스트 아코디언 -->
+            <!-- Cube Section -->
+            <div class="learning_sec">
+                <div class="sec_head">
+                    <h2 class="heading2">마무리</h2>
+                </div>
+                <div class="sec_body mar_t0">
+                    <div class="cube_item survay is_state2">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="cube_circle played per50"><span class="blind">Survay</span></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="title"><strong>큐브유형(Test/Report/Survay)</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- // Cube Section -->
+
             <!-- 버튼-->
             <div class="page_floating">
                 <div class="page_action">
