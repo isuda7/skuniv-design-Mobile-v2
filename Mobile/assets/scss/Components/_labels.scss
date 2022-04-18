@@ -28,20 +28,6 @@
 }
 
 // Contents
-.label.rate_count {
-    padding:0;
-    background-color: transparent;
-    color:inherit;
-    font-weight:400;
-    &::before {
-        content:"";
-        display:block;
-        width:1.6rem;
-        height:1.6rem;
-        background-color: #ddd;
-        margin-right:0.5rem;
-    }
-}
 .label.date {
     padding:0;
     background-color: transparent;

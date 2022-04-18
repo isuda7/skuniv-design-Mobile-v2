@@ -17,10 +17,10 @@
         bottom:100%;
     }
     &.left .tooltip_body {
-        right:100%;
+        right:0;
     }
     &.right .tooltip_body {
-        left:100%;
+        left:0;
     }
     // Transition
     &.transition {

@@ -82,3 +82,16 @@
         }
     }
 }
+
+// 태그정보
+.tag_list {
+    overflow: hidden;
+    .chip_group {
+        display:flex;
+        flex-wrap:wrap;
+        margin:-0.5rem;
+        .chip {
+            margin:0.5rem;
+        }
+    }
+}

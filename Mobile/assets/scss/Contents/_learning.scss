@@ -353,7 +353,7 @@
     }
 
     // Case Repley
-    &.is_repley .item_inner::before {
+    &.is_repley .item_body::before {
          content:"";
          display:block;
          width:1.6rem;
