@@ -816,9 +816,9 @@
                 .txt {
                     @include Ellipsis7;
                 }
-                .more {
-                    padding:0;
-                }
+				.more {
+					padding:0;
+				}
 				&.is_expanded {
 					.txt {
 						display:block;
@@ -877,7 +877,7 @@
     }
 }
 .theme_dark {
-    .post {
+    .post_sec {
         .post_body {
 			.post_head {
 				.left {
