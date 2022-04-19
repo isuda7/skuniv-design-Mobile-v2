@@ -30,7 +30,6 @@
         background-color: transparent;
     }
     .header.theme_dark {
-        position: absolute;
         background-color: transparent;
         .appbar {
             background-color: transparent;
@@ -265,5 +264,12 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+// Scroll Type7 - Sub Appbar Sticky + Gapnone
+.sub_wrapper.has_sticky.gap_none {
+    .sticky {
+        top:0;
     }
 }

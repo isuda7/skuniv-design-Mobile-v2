@@ -355,4 +355,91 @@
 			}
 		}
 	}
+	// Cases
+	&.has_check {
+		.item_body {
+			width:calc(100% - 3.2rem);
+		}
+	}
+}
+
+// ETC
+.card.community {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	padding: 1.6rem;
+	border: 1px solid #f2f3f5;
+	border-radius: $RadiusLarge;
+	.item_check {
+		width:3.2rem;
+		flex:none;
+	}
+	.item_body {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		width:100%;
+		align-items: center;
+		.item_thumb {
+			width: 5.2rem;
+			height: 5.2rem;
+			margin-right: 1.2rem;
+			flex: none;
+		}
+		.item_title {
+			flex: 0 1 auto;
+			width: calc(100% - 6.4rem);
+			flex: none;
+			padding-right: 4.6rem;
+			.sub_txt {
+				color: #000;
+				&+.title {
+					margin-top: 0.2rem;
+				}
+			}
+			.title {
+				font-size: 1.6rem;
+				line-height: 2rem;
+				font-weight: 700;
+				color: #000;
+				@include Ellipsis2;
+			}
+		}
+	}
+	.item_util {
+		position: absolute;
+		top: 3.2rem;
+		right: 2rem;
+		z-index: 10;
+		margin-left:1.2rem;
+		.checkbox.rating {
+			margin: 0;
+			.icon {
+				content: "";
+				width: 2.2rem;
+				height: 2.2rem;
+				display: block;
+				background-color: #ddd;
+				&.active {
+					background-color: $ColorPrimary;
+				}
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	.item_foot {
+		flex: none;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		display: block;
+		margin-top: 1.6rem;
+		@include FontBody14;
+		color: $ColorSubTxt;
+	}
 }

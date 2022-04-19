@@ -25,7 +25,7 @@
 }
 
 //찜하기
-.pick {
+.page_action.pick {
     display: block;
     .pick_btn {
         display:flex;
@@ -34,10 +34,10 @@
         color:#fff ;
         background-color: #44464a;
         margin-bottom:2rem;
-        @include Shadow3
+        @include Shadow3;
         .pick_txt {
             width:70%;
-            @include FontBody14
+            @include FontBody14;
         }
         .pick_more {
             width:30%;
@@ -48,7 +48,7 @@
                 height:inherit;
                 padding:inherit;
                 float: right;
-                @include FontBody14
+                @include FontBody14;
             }
         }
     }
@@ -62,7 +62,7 @@
 //찜하기 더보기
 .pick_morepage {
     .pick_moretxt {
-        @include FontBody16
+        @include FontBody16;
         display: block;
         padding:1.5rem 0;
         width:100%;
@@ -83,20 +83,6 @@
     .add_newpl {
         .addnewpl_btn {
             color:#ff664d;
-        }
-    }
-}
-
-//뱃지 복수
-.badgelist_white {
-    background-color: #fff;
-    border-bottom:1px solid #f2f3f5;
-    .badge_inner {
-        .badge_body {
-            color:#000;
-            .badge_title {
-                @include Ellipsis1;
-            }
         }
     }
 }
