@@ -70,3 +70,19 @@
         font-weight: 700;
     }
 }
+
+//플레이리스트 추가
+.filter_body {
+    .filter_list {
+        .checkbox {
+            .playlist_txt {
+                @include Ellipsis1;
+            }
+        }
+    }
+    .add_newpl {
+        .addnewpl_btn {
+            color:#ff664d;
+        }
+    }
+}
