@@ -86,3 +86,17 @@
         }
     }
 }
+
+//뱃지 복수
+.badgelist_white {
+    background-color: #fff;
+    border-bottom:1px solid #f2f3f5;
+    .badge_inner {
+        .badge_body {
+            color:#000;
+            .badge_title {
+                @include Ellipsis1;
+            }
+        }
+    }
+}
