@@ -45,7 +45,7 @@
                 display: block;
                 color:#ffa394;
                 font-weight: 400;
-                height:inherit;W
+                height:inherit;
                 padding:inherit;
                 float: right;
                 @include FontBody14
@@ -56,5 +56,17 @@
         .btn {
             width:100%;
         }
+    }
+}
+
+//찜하기 더보기
+.pick_morepage {
+    .pick_moretxt {
+        @include FontBody16
+        display: block;
+        padding:1.5rem 0;
+        width:100%;
+        text-align: left;
+        font-weight: 700;
     }
 }
