@@ -21,5 +21,40 @@
 //태그
 .chip.action {
     background-color:#f2f3f5;
-    border-color:#f2f3f5;
+    border:0;
+}
+
+//찜하기
+.pick {
+    display: block;
+    .pick_btn {
+        display:flex;
+        padding:1.8rem 2rem;
+        border-radius: $RadiusLarge;
+        color:#fff ;
+        background-color: #44464a;
+        margin-bottom:2rem;
+        @include Shadow3
+        .pick_txt {
+            width:70%;
+            @include FontBody14
+        }
+        .pick_more {
+            width:30%;
+            .btn_more {
+                display: block;
+                color:#ffa394;
+                font-weight: 400;
+                height:inherit;W
+                padding:inherit;
+                float: right;
+                @include FontBody14
+            }
+        }
+    }
+    .floating_btn {
+        .btn {
+            width:100%;
+        }
+    }
 }
