@@ -10,32 +10,6 @@
     }
 }
 
-// 학습큐브영상
-.learning_cubeplay {
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height:20.2rem;
-    img {
-        width:100%;
-    }
-    progress {
-        position: absolute;
-        left:0;
-        bottom:0;
-        height:0.4rem;
-        width:100%;
-        border-radius: 0;
-        &::-webkit-progress-bar {
-            background-color: rgba(164, 166, 170, 0.5 );
-        }
-        &::-webkit-progress-value {
-            background-color: $ColorPrimary;
-        }
-    }
-}
 
 // 학습과정제목
 .learning_subject {
