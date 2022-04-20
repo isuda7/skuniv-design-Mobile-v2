@@ -1,0 +1,25 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="ql9n1em34c" d="M0 0h16v16H0z"/>
+        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14z" id="2pxadlprra"/>
+        <path d="M8 15c1.657 0 3-3.134 3-7S9.657 1 8 1 5 4.134 5 8s1.343 7 3 7z" id="ft22pdvllb"/>
+        <mask id="8ofhcpepde" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="14" fill="#fff">
+            <use xlink:href="#2pxadlprra"/>
+        </mask>
+        <mask id="pws5xwgi9f" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="14" fill="#fff">
+            <use xlink:href="#ft22pdvllb"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="tsps1kbzyd" fill="#fff">
+            <use xlink:href="#ql9n1em34c"/>
+        </mask>
+        <g stroke-dasharray="0,0" mask="url(#tsps1kbzyd)" stroke="#FFF" stroke-width="2">
+            <use mask="url(#8ofhcpepde)" xlink:href="#2pxadlprra"/>
+        </g>
+        <g stroke-dasharray="0,0" mask="url(#tsps1kbzyd)" stroke="#FFF" stroke-width="2">
+            <use mask="url(#pws5xwgi9f)" xlink:href="#ft22pdvllb"/>
+        </g>
+        <path d="M1 7.5h14v1H1v-1z" fill="#FFF" mask="url(#tsps1kbzyd)"/>
+    </g>
+</svg>

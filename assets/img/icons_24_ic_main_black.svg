@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E1418C6E-90A1-F3A8-8F9F-FF3CD92CD929</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1452.000000, -1347.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-24-/-Black" transform="translate(40.000000, 40.000000)">
+                        <g id="Icons-/-24-/-ic_main_black" transform="translate(396.000000, 44.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-24-/-ic_main_black-(Background/Mask)"></g>
+                            <path d="M3.5,11.2342882 L3.5,20.5 L20.5,20.5 L20.5,11.1278877 L12.003293,3.74220228 L3.5,11.2342882 Z M12,1.5 C12.289958,1.5 12.5877199,1.60024387 12.8278008,1.80893201 L22.0710449,9.84353828 C22.3387089,10.0762033 22.5,10.4163103 22.5,10.782589 L22.5,21.252018 C22.5,21.6080036 22.3490601,21.9249516 22.1195068,22.1466599 C21.890564,22.3677769 21.5787964,22.5 21.2432423,22.5 L2.75675678,22.5 C2.421202,22.5 2.10943523,22.3677769 1.88049394,22.1466599 C1.65094191,21.9249535 1.5,21.6080055 1.5,21.252018 L1.5,10.3308887 L11.1721992,1.80893201 C11.4122801,1.60024387 11.710042,1.5 12,1.5 Z" id="Path-2-Copy-(Stroke)" fill="#000000" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

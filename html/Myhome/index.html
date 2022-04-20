@@ -11,11 +11,28 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.header');
+				var appbarShow = 284;
+				var scrollTop = $(window).scrollTop();
+
+				// Appbar 보여줄 시점에 Active
+				if (scrollTop > appbarShow) {
+					$appbar.removeClass('theme_secondary');
+				} else {
+					$appbar.addClass('theme_secondary');
+				}
+			})
+		})
+	</script>
+
 </head>
 <body>
 <div class="main_wrapper">
 	<!-- Header -->
-	<div class="header">
+	<div class="header theme_secondary">
 		<div class="appbar profile">
 			<a href="javascript:void(0)" class="avata_area">
 				<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>

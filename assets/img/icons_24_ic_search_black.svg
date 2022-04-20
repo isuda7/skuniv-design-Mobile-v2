@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0D971260-6616-F665-CBF5-202CD966E08F</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+        <path d="M11.5000002,20.4999998 C6.5294384,20.4999998 2.5000002,16.4705638 2.5000002,11.4999998 C2.5000002,6.52943801 6.5294384,2.4999998 11.5000002,2.4999998 C16.4705642,2.4999998 20.5000002,6.52943801 20.5000002,11.4999998 C20.5000002,16.4705638 16.4705642,20.4999998 11.5000002,20.4999998 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="18" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1144.000000, -1347.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-24-/-Black" transform="translate(40.000000, 40.000000)">
+                        <g id="Icons-/-24-/-ic_search_black" transform="translate(88.000000, 44.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-24-/-ic_search_black-(Background/Mask)"></g>
+                            <g id="Oval" stroke-dasharray="0,0" mask="url(#mask-2)" transform="translate(11.500000, 11.500000) rotate(-0.000001) translate(-11.500000, -11.500000) " stroke="#000000" stroke-width="4">
+                                <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                            </g>
+                            <line x1="21.4980469" y1="21.4975586" x2="17.4980469" y2="17.4975586" id="Path-5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-dasharray="0,0" mask="url(#mask-2)" transform="translate(19.498047, 19.497559) rotate(-0.000001) translate(-19.498047, -19.497559) "></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

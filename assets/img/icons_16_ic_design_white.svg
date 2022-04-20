@@ -1,0 +1,22 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="zmrfqirrjb" d="M0 0h16v16H0z"/>
+        <path id="ggkgz3iisa" d="M1.5 2h13v10h-13z"/>
+        <mask id="9e8ih8fp4d" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="13" height="10" fill="#fff">
+            <use xlink:href="#ggkgz3iisa"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="wk4pf9qzkc" fill="#fff">
+            <use xlink:href="#zmrfqirrjb"/>
+        </mask>
+        <path d="M1 11h14a.5.5 0 1 1 0 1H1a.5.5 0 1 1 0-1z" fill="#FFF" mask="url(#wk4pf9qzkc)"/>
+        <g stroke-dasharray="0,0" mask="url(#wk4pf9qzkc)" stroke="#FFF" stroke-width="2">
+            <use mask="url(#9e8ih8fp4d)" xlink:href="#ggkgz3iisa"/>
+        </g>
+        <path d="M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0z" fill="#FFF" mask="url(#wk4pf9qzkc)"/>
+        <g mask="url(#wk4pf9qzkc)" fill="#FFF">
+            <path d="M5.433 11.335a.5.5 0 0 1 .183.683l-2 3.464a.5.5 0 1 1-.866-.5l2-3.464a.5.5 0 0 1 .683-.183zM10.116 11.335a.5.5 0 0 0-.183.683l2 3.464a.5.5 0 1 0 .866-.5l-2-3.464a.5.5 0 0 0-.683-.183z"/>
+        </g>
+    </g>
+</svg>

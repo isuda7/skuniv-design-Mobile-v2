@@ -15,15 +15,15 @@
 	<script>
 		$(function(){
 			$(window).scroll(function(){
-				var $appbar = $('.appbar');
+				var $appbar = $('.header');
 				var appbarShow = 284;
 				var scrollTop = $(window).scrollTop();
 
 				// Appbar 보여줄 시점에 Active
 				if (scrollTop > appbarShow) {
-					$appbar.addClass('is_white');
+					$appbar.removeClass('theme_secondary');
 				} else {
-					$appbar.removeClass('is_white');
+					$appbar.addClass('theme_secondary');
 				}
 			})
 		})
@@ -33,7 +33,7 @@
 <body>
 	<div class="main_wrapper has_appnav">
 		<!-- Header -->
-		<div class="header">
+		<div class="header theme_secondary">
 			<div class="appbar profile">
 				<a href="javascript:void(0)" class="avata_area">
 					<span class="avata"
@@ -73,10 +73,6 @@
 			</script>
 		</footer>
 		<!-- // Footer -->
-
-		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
-			<span class="blind">Scroll to top</span>
-		</button>
 	</div>
 </body>
 

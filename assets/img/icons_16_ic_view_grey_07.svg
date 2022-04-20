@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3D18E384-36F7-927E-5288-9B182545B08A</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1164.000000, -877.000000)">
+            <g id="16dp" transform="translate(62.000000, 729.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Group-5836" transform="translate(40.000000, 39.999999)">
+                        <g id="Icons-/-16-/-ic_view_grey07" transform="translate(108.000000, 108.000001)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="like16/Icons/16/ic_view_grey07-(Background/Mask)"></g>
+                            <path d="M0.26675199,8.95274115 C1.09316598,10.2686725 3.80617094,14 7.99937201,14 C12.1925735,14 14.9055777,10.268672 15.7319918,8.95274115 C15.9079733,8.67251873 15.9079733,8.32748127 15.7319918,8.04725885 C14.9055777,6.73132753 12.1925735,3 7.99937201,3 C3.80617094,3 1.09316574,6.73132801 0.266751871,8.04725885 C0.0907701105,8.32748127 0.0907702595,8.67251873 0.26675199,8.95274115 Z M9.99938965,8.5 C9.99938965,7.39543056 9.10395908,6.5 7.99938965,6.5 C6.89482021,6.5 5.99938965,7.39543056 5.99938965,8.5 C5.99938965,9.60456944 6.89482021,10.5 7.99938965,10.5 C9.10395908,10.5 9.99938965,9.60456944 9.99938965,8.5 Z" id="Subtract" fill="#44464A" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

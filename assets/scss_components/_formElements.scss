@@ -1,0 +1,277 @@
+/* Default */
+input {
+    font-family:inherit;
+    line-height:1.5;
+}
+textarea {
+    font-family:inherit;
+    line-height:1.5;
+}
+.radio,
+.toggle,
+.checkbox {
+    position:relative;
+    display:inline-flex;
+    font-size:inherit;
+    line-height:inherit;
+}
+.radio input,
+.toggle input,
+.checkbox input {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0 !important;
+    outline: none;
+}
+.radio label,
+.toggle label,
+.checkbox label {
+    position:relative;
+    display:inline-block;
+}
+.radio label::before,
+.radio label::after,
+.toggle label::before,
+.toggle label::after,
+.checkbox label::before,
+.checkbox label::after {
+    content:"";
+    display:block;
+    position:absolute;
+}
+
+/* Input */
+input.basic {
+    flex:1 1 auto;
+    width:100%;
+    height:$FormBasicHeight;
+}
+input.basic {
+    width:100%;
+    height:100%;
+    padding:0.6rem $FormBasicPadding;
+    border:1px solid $FormBasicBorder;
+    border-radius:$FormBasicRadius;
+    font-size:1.4rem;
+    line-height: 1.5;
+}
+
+/* Textarea */
+textarea.basic {
+    width:100%;
+    min-height:$FormBasicHeight;
+    padding:0.6rem $FormBasicPadding;
+    border:1px solid $FormBasicBorder;
+    border-radius:$FormBasicRadius;
+    font-size:1.4rem;
+}
+
+/* Checkbox */
+.checkbox.basic {
+    font-size:1.4rem;
+    line-height:2.2rem;
+    min-height:2.0rem;
+    input,
+    label:before,
+    label:after {
+        height:2rem;
+        width:2rem;
+        left:0;
+        top:1px;
+    }
+    label {
+        padding-left:2.0rem;
+    }
+    label > span {
+        display:block;
+        padding-left:0.8rem;
+    }
+    label:before {
+        border:1px solid $FormBasicBorder;
+        border-radius:0.4rem;
+    }
+    input:checked + label:before {
+        border:0;
+        background-color: $ColorPrimary;
+    }
+    input:checked + label:after {
+        color:#fff;
+        background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 1.6rem 1.6rem;
+
+    }
+}
+
+/* Radio */
+.radio.basic {
+    font-size:1.4rem;
+    line-height:2.2rem;
+    min-height:2.0rem;
+    input,
+    label:before {
+        top:1px;
+        left:0rem;
+        width:2.0rem;
+        height:2.0rem;
+    }
+    label {
+        padding-left:2.0rem;
+    }
+    label > span {
+        display:block;
+        padding-left:0.8rem;
+    }
+    label:before {
+        border-radius:50%;
+        border:1px solid $FormBasicBorder;
+        transition:all 0.05s ease;
+    }
+    label:after {
+        transform:scale(0);
+        top:0.5rem;
+        left:0.4rem;
+        width:1.2rem;
+        height:1.2rem;
+        border-radius:50%;
+        transition:all 0.1s ease;
+    }
+    input:checked ~ label:before {
+        border-color:$ColorPrimary !important;
+    }
+    input:checked ~ label:after {
+        transform:scale(1);
+        background-color:$ColorPrimary !important;
+    }
+}
+
+/* Toggle */
+.toggle.basic {
+    width:4.0rem;
+    min-height:2.4rem;
+    label {
+        width:100%;
+    }
+    label::before {
+        width:100%;
+        height:2.4rem;
+        background-color:#CBCDCF;
+        border-radius:2rem;
+    }
+    label::after {
+        top:0.1rem;
+        left:0.1rem;
+        width:2.2rem;
+        height:2.2rem;
+        box-shadow:none;
+        background:#fff;
+        border-radius:50%;
+        transition:left 0.1s ease;
+    }
+    input:checked ~ label:before {
+        background-color:$ColorPrimary !important;
+    }
+    input:checked ~ label:after {
+        left:1.7rem;
+    }
+}
+
+// Range
+.multi_range {
+    position: relative;
+    padding-top:2.6rem;
+    .slider {
+        position: relative;
+        z-index: 1;
+        height: 0.4rem;
+        margin: 0 1.2rem;
+        >.track {
+            position: absolute;
+            z-index: 1;
+            left: -1.2rem;
+            right: -1.2rem;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+
+        >.range {
+            position: absolute;
+            z-index: 2;
+            left: 0%;
+            right: 0%;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: $ColorPrimary;
+        }
+
+        >.thumb {
+            position: absolute;
+            z-index: 3;
+            width: 2.4rem;
+            height: 2.4rem;
+            border:1px solid #F2F3F5;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.02), 0px 1px 10px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.06);;
+            &.left {
+                left: 0%;
+                transform: translate(-1.2rem, -1.2rem);
+            }
+
+            &.right {
+                right: 0%;
+                transform: translate(1.2rem, -1.2rem);
+            }
+        }
+
+    }
+    .labels {
+        display:flex;
+        justify-content: space-between;
+        margin-top:1.2rem;
+        padding:0 1.2rem;
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width:1px;
+            @include FontBody12;
+            color:#A4A6AA;
+            white-space: nowrap;
+            &:first-child {
+                transform: translateX(-1.2rem);
+                justify-content: flex-start;
+            }
+            &:last-child {
+                transform: translateX(1.2rem);
+                justify-content: flex-end;
+            }
+        }
+    }
+    input[type="range"] {
+        position: absolute;
+        /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+        pointer-events: none;
+        -webkit-appearance: none;
+        z-index: 2;
+        height: 0.4rem;
+        width: 100%;
+        opacity: 0;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* 겹쳐진 두 thumb를 모두 활성화 */
+        pointer-events: all;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0;
+        border: 0 none;
+        background-color: red;
+        cursor: pointer;
+        /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+        -webkit-appearance: none;
+    }
+}
