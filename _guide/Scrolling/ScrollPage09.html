@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        function learningThumb(){
+            // 타이틀 라인수만큼 스타일 구분하기
+            var TitleEl = document.querySelector(".overay_area .title");
+            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+            var Remain = TitleHeight / TitleLineHeight;
+            TitleEl.classList.add("line"+Remain);
+        }
+        $(function(){
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+        })
+    </script>
+</head>
+<body>
+<div class="sub_wrapper has_sticky gap_none">
+	<!-- Header -->
+    <header class="header theme_dark">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1 class="transition"><strong>Boundaryless Collaboration, 세상에서 협업이 제일 쉬웠어요</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico learning"><span class="blind">학습</span></button>
+                <button type="button" class="btn ico bookmark"><span class="blind">북마크</span></button>
+                <button type="button" class="btn ico more"><span class="blind">더 보기</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container">
+        <div class="content_head theme_dark">
+            <!-- 학습과정 썸네일 -->
+            <div class="learning_thumb">
+                <div class="overay_area">
+                    <div class="overay_inner">
+                        <div class="title_area">
+                            <em class="sub_txt">Leadership</em>
+                            <p class="title appbar_title"><strong>Boundaryless Collaboration, 세상에서 협업이 제일 쉬웠어요</strong></p>
+                        </div>
+                        <div class="info_area">
+                            <span class="label time">1h 6m</span>
+                            <span class="label interm">Intermediate</span>
+                            <span class="label rate">4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>learningThumb() // 타이틀 라인수만큼 스타일 구분하기</script>
+            <!-- // 학습과정 썸네일 -->
+
+            <!-- 학습과정 관련배지 -->
+            <div class="learning_badge">
+                <a href="javascript:void(0)" class="badge_body">
+                    <div class="badge_thumb">
+                        <span class="thumb"><img src="../../assets/img/demo/thumb-badge01.png" alt=""></span>
+                    </div>
+                    <div class="badge_title">
+                        <div class="sub_txt">획득 가능 뱃지</div>
+                        <div class="title">
+                            <strong>Scenario Planning : Essential Scenario Planning : Essential Scenario Planning : Essential</strong>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- // 학습과정 관련배지 -->
+        </div>
+        <div class="content_body">
+            <div class="out_sec sticky">
+                <div class="tab style2">
+                    <div class="tab_list">
+                        <button type="button" class="tab_item is_active">Tab 1</button>
+                        <button type="button" class="tab_item">Tab 2</button>
+                        <button type="button" class="tab_item">Tab 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_panel">
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+            </div>
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>
