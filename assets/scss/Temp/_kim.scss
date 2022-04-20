@@ -1,4 +1,7 @@
 //Overview
+.overview_page {
+    margin-bottom:5.23rem;
+}
 .overview_subscript {
     margin-top: 2rem;
     padding-bottom:1.5rem;
@@ -11,7 +14,7 @@
         color:#a4a6aa;
     }
     &.is_expanded {
-        .txt {
+        .overview_txt {
             display:block;
             overflow: visible;
         }
@@ -132,25 +135,31 @@
 		width:100%;
 		height:inherit;
 		padding:1.5rem 0 1.5rem 0;
-		.course_label {
-			position: relative;
-			justify-content: center;
-			margin-right:1.2rem;
-			flex:none;
-            .elective {
-                color:#75777B;
-            }
-		}
 		.course_body {
-			width:100%;
+            display:flex;
+            width:100%;
 			flex:0 1 auto;
 			color:#fff;
 			overflow: hidden;
-			.course_title {
+            .label.style1 {
+                margin-right:1.2rem;
+            }
+            .elective {
+                color:#75777B;
+            }
+			.title {
 				@include FontBody13;
                 @include Ellipsis1;
 				color:#000;
 			}
+            .state {
+                flex:none;
+                margin-left:1.2rem;
+                &.primary {
+                    @include FontBody14;
+                    color:$ColorPrimary;
+                }
+            }
 		}
 		&::after {
 			content:"";
