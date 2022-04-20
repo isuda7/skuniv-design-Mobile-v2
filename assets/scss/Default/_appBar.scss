@@ -269,7 +269,13 @@
 
 // Scroll Type7 - Sub Appbar Sticky + Gapnone
 .sub_wrapper.has_sticky.gap_none {
-    .sticky {
+    .header,
+    .content_head {
+        position: fixed;
         top:0;
+        left:0;
+    }
+    .sticky {
+        top:20.2rem;
     }
 }

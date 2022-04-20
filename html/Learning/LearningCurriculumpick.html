@@ -11,8 +11,6 @@
     <link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
-    <!-- Guide IA -->
-    <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
         function learningThumb(){
@@ -22,7 +20,12 @@
             var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
             var Remain = TitleHeight / TitleLineHeight;
             TitleEl.classList.add("line"+Remain);
-        }
+
+            // 가변 스티키 적용
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+       }
     </script>
 </head>
 <body>

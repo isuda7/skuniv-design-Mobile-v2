@@ -14,6 +14,8 @@
 		flex-direction: column;
 		.content_head {
 			flex: none;
+			width:100%;
+			z-index:50;
 		}
 		.content_body {
 			position: relative;

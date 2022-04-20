@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -11,101 +12,92 @@
     <link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
-    <!-- Guide IA -->
-    <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
-		$(function(){
-			$('.modal_content').scroll(function(){
-				if ($(this).scrollTop() > 0) {
-					$(this).closest('.modal').addClass('is_scrolled');
-				} else {
-					$(this).closest('.modal').removeClass('is_scrolled');
-				}
-			})
-		})
-	</script>
+        $(function () {
+            $('.modal_content').scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(this).closest('.modal').addClass('is_scrolled');
+                } else {
+                    $(this).closest('.modal').removeClass('is_scrolled');
+                }
+            })
+        })
+    </script>
 </head>
-<body>
-<div class="sub_wrapper gap_none">
-	<!-- Header -->
-    <header class="header">
-        <div class="appbar basic">
-            <div class="appbar_left">
-                <button type="button" class="btn ico back blind"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
-            </div>
-        </div>
-    </header>
-    <!-- // Header -->
 
-    <!-- Container -->
-    <main role="main" class="container">
-        <div class="content_body">
-            <!-- Modal Bottomsheet -->
-            <div class="modal_wrap is_visible">
-                <div class="modal modal_bottomsheet modal_select">
-                    <div class="modal_header">
-                        <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
-                        <h3 class="modal_tit blind">선수과정</h3>
-                    </div>
-                    <div class="modal_content">
-                        <!-- No Data -->
-                        <div class="flex_area centered">
-                            <div class="no_data course_data">
-                                <p class="advance_img"></p>
-                                <p class="msg">해당 과정은 필수 선수과정이 존재합니다.</p>
-                                <p class="msg">아래 과정을 이수한 후 수강하실 수 있습니다.</p>
-                            </div>
-                        </div>
-                        <!-- // No Data -->
-                        <h4 class="select_tit course_tit">선수과정</h4>
-                        <!-- 선수과정 필수 -->
-                        <div class="course_learning">
-                            <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
-                                <div class="course_label">
-                                    <span class="label style1 primary">필수</span>
-                                </div>
-                                <div class="course_body">
-                                    <span class="course_title">Scenario Planning : Essential Scenario Planning : Essential Scenario Planning : Essential</span>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //선수과정 필수 -->
-                        <!-- 선수과정 선택 -->
-                        <div class="course_learning">
-                            <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
-                                <div class="course_label">
-                                    <span class="label style1 elective">선택</span>
-                                </div>
-                                <div class="course_body">
-                                    <span class="course_title">Scenario Planning : Essential Scenario Planning : Essential Scenario Planning : Essential</span>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //선수과정 선택 -->
-                        <!-- 선수과정 선택 -->
-                        <div class="course_learning">
-                            <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
-                                <div class="course_label">
-                                    <span class="label style1 elective">선택</span>
-                                </div>
-                                <div class="course_body">
-                                    <span class="course_title">Scenario Planning</span>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //선수과정 선택 -->
+<body>
+    <div class="sub_wrapper gap_none">
+        <!-- 스크롤 테스트용 -->
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+    </div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_visible">
+        <div class="modal modal_bottomsheet modal_select">
+            <div class="modal_header">
+                <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit blind">선수과정</h3>
+            </div>
+            <div class="modal_content">
+                <!-- No Data -->
+                <div class="flex_area centered">
+                    <div class="no_data course_data">
+                        <p class="advance_img"></p>
+                        <p class="msg">해당 과정은 필수 선수과정이 존재합니다.</p>
+                        <p class="msg">아래 과정을 이수한 후 수강하실 수 있습니다.</p>
                     </div>
                 </div>
-                <div class="dimmer" aria-hidden="true"></div>
+                <!-- // No Data -->
+                <h4 class="select_tit course_tit">선수과정</h4>
+                <!-- 선수과정 필수 -->
+                <div class="course_learning">
+                    <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
+                        <div class="course_label">
+                            <span class="label style1 primary">필수</span>
+                        </div>
+                        <div class="course_body">
+                            <span class="course_title">Scenario Planning : Essential Scenario Planning : Essential
+                                Scenario Planning : Essential</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- //선수과정 필수 -->
+                <!-- 선수과정 선택 -->
+                <div class="course_learning">
+                    <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
+                        <div class="course_label">
+                            <span class="label style1 elective">선택</span>
+                        </div>
+                        <div class="course_body">
+                            <span class="course_title">Scenario Planning : Essential Scenario Planning : Essential
+                                Scenario Planning : Essential</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- //선수과정 선택 -->
+                <!-- 선수과정 선택 -->
+                <div class="course_learning">
+                    <a href="javascript:void(0)" class="course_inner pad_l0 pad_r0">
+                        <div class="course_label">
+                            <span class="label style1 elective">선택</span>
+                        </div>
+                        <div class="course_body">
+                            <span class="course_title">Scenario Planning</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- //선수과정 선택 -->
             </div>
-            <!-- // Modal Bottomsheet -->
         </div>
-    </main>
-    <!-- // Container -->
-
-	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
-</div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
 </body>
+
 </html>

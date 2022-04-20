@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -11,96 +12,91 @@
     <link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
-    <!-- Guide IA -->
-    <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
-		$(function(){
-			$('.modal_content').scroll(function(){
-				if ($(this).scrollTop() > 0) {
-					$(this).closest('.modal').addClass('is_scrolled');
-				} else {
-					$(this).closest('.modal').removeClass('is_scrolled');
-				}
-			})
-		})
-	</script>
+        $(function () {
+            $('.modal_content').scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(this).closest('.modal').addClass('is_scrolled');
+                } else {
+                    $(this).closest('.modal').removeClass('is_scrolled');
+                }
+            })
+        })
+    </script>
 </head>
-<body>
-<div class="sub_wrapper gap_none">
-	<!-- Header -->
-    <header class="header">
-        <div class="appbar basic">
-            <div class="appbar_left">
-                <button type="button" class="btn ico back blind"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
-            </div>
-        </div>
-    </header>
-    <!-- // Header -->
 
-    <!-- Container -->
-    <main role="main" class="container">
-        <div class="content_body">
-            <!-- Modal Bottomsheet -->
-            <div class="modal_wrap is_visible">
-                <div class="modal modal_bottomsheet modal_filter">
-                    <div class="modal_header">
-                        <button type="button" class="btn ico back"><span class="blind">닫기</span></button>
-                        <h3 class="modal_tit">플레이리스트 추가</h3>
-                    </div>
-                    <div class="modal_content">
-                        <!-- Category -->
-                        <div class="filter_sec pad_t0">
-                            <h4 class="heading2 blind">Category</h4>
-                            <div class="filter_body mar_t0">
-                                <ul class="filter_list">
-                                    <li>
-                                        <div class="checkbox basic">
-                                            <input type="checkbox" name="checklist" id="checklist1" tabindex="0" class="hidden" />
-                                            <label for="checklist1"><span class="playlist_txt">집중력을 높이는 플레이리스트</span></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkbox basic">
-                                            <input type="checkbox" name="checklist" id="checklist2" tabindex="0" class="hidden" />
-                                            <label for="checklist2"><span class="playlist_txt">타이틀은 1행만 표시되고 나머지는 말줄임표로 표시됩니다.</span></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkbox basic">
-                                            <input type="checkbox" name="checklist" id="checklist3" tabindex="0" class="hidden" />
-                                            <label for="checklist3"><span class="playlist_txt">checkbox</span></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkbox basic">
-                                            <input type="checkbox" name="checklist" id="checklist4" tabindex="0" class="hidden" />
-                                            <label for="checklist4"><span class="playlist_txt">checkbox</span></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn text primary add_newpl">&#43;&nbsp;새로운 플레이리스트 만들기</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- // Category -->
-                    </div>
-                    <div class="modal_footer">
-                        <div class="page_action">
-                            <button type="button" class="btn basic primary">완료</button>
-                        </div>
+<body>
+    <div class="sub_wrapper gap_none">
+        <!-- 스크롤 테스트용 -->
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+        <div style="height:25rem; background-color: #ddd;"></div>
+        <div style="height:25rem; background-color: #ccc;"></div>
+    </div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_visible">
+        <div class="modal modal_bottomsheet modal_filter">
+            <div class="modal_header">
+                <button type="button" class="btn ico back"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">플레이리스트 추가</h3>
+            </div>
+            <div class="modal_content">
+                <!-- Category -->
+                <div class="filter_sec pad_t0">
+                    <h4 class="heading2 blind">Category</h4>
+                    <div class="filter_body mar_t0">
+                        <ul class="filter_list">
+                            <li>
+                                <div class="checkbox basic">
+                                    <input type="checkbox" name="checklist" id="checklist1" tabindex="0"
+                                        class="hidden" />
+                                    <label for="checklist1"><span class="playlist_txt">집중력을 높이는 플레이리스트</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox basic">
+                                    <input type="checkbox" name="checklist" id="checklist2" tabindex="0"
+                                        class="hidden" />
+                                    <label for="checklist2"><span class="playlist_txt">타이틀은 1행만 표시되고 나머지는 말줄임표로
+                                            표시됩니다.</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox basic">
+                                    <input type="checkbox" name="checklist" id="checklist3" tabindex="0"
+                                        class="hidden" />
+                                    <label for="checklist3"><span class="playlist_txt">checkbox</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox basic">
+                                    <input type="checkbox" name="checklist" id="checklist4" tabindex="0"
+                                        class="hidden" />
+                                    <label for="checklist4"><span class="playlist_txt">checkbox</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" class="btn text primary add_newpl">&#43;&nbsp;새로운 플레이리스트
+                                    만들기</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="dimmer" aria-hidden="true"></div>
+                <!-- // Category -->
             </div>
-            <!-- // Modal Bottomsheet -->
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">완료</button>
+                </div>
+            </div>
         </div>
-    </main>
-    <!-- // Container -->
-
-	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
-</div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
 </body>
+
 </html>
