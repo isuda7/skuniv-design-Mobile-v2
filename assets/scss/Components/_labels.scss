@@ -13,7 +13,7 @@
     border-radius: $RadiusSmall;
     @include FontBody13;
     font-weight:400;
-    color:#fff;
+    color:$ColorSubTxt;
       &.primary {
         background: rgba(255, 102, 77, 0.2);
         color:$ColorPrimary;
