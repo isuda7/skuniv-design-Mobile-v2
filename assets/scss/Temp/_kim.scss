@@ -103,44 +103,50 @@
 
 //선수과정 필수 & 선택
 .modal_content {
-    .advance_data {
+    .course_data {
         width:100%;
         color:#75777b;
         margin-bottom:3rem;
-        .advance_img {
+        .advance_img, .elective_img {
             width:4rem;
             height:4rem;
-            background-color:#ccc;
             margin:0 auto 0.8rem;
         }
+        .advance_img {
+            background:#ddd url('');
+        }
+        .elective_img {
+            background:#ddd url('');
+        }
     }
-    .advance_tit {
+    .course_tit {
         height:inherit;
+        font-weight: 700;
     }
 }
-.advance_learning {
+.course_learning {
     border-bottom:1px solid #f2f3f5;
-	.advance_inner {
+	.course_inner {
 		display:flex;
 		align-items: center;
 		width:100%;
 		height:inherit;
 		padding:1.5rem 0 1.5rem 0;
-		.advance_label {
+		.course_label {
 			position: relative;
 			justify-content: center;
 			margin-right:1.2rem;
 			flex:none;
-            .inactive {
+            .elective {
                 color:#75777B;
             }
 		}
-		.advance_body {
+		.course_body {
 			width:100%;
 			flex:0 1 auto;
 			color:#fff;
 			overflow: hidden;
-			.advance_title {
+			.course_title {
 				@include FontBody13;
                 @include Ellipsis1;
 				color:#000;
