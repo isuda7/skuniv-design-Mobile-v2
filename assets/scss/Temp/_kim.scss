@@ -86,3 +86,73 @@
         }
     }
 }
+
+//뱃지 복수
+.badgelist_white {
+    background-color: #fff;
+    border-bottom:1px solid #f2f3f5;
+    .badge_inner {
+        .badge_body {
+            color:#000;
+            .badge_title {
+                @include Ellipsis1;
+            }
+        }
+    }
+}
+
+//선수과정 필수 & 선택
+.modal_content {
+    .advance_data {
+        width:100%;
+        color:#75777b;
+        margin-bottom:3rem;
+        .advance_img {
+            width:4rem;
+            height:4rem;
+            background-color:#ccc;
+            margin:0 auto 0.8rem;
+        }
+    }
+    .advance_tit {
+        height:inherit;
+    }
+}
+.advance_learning {
+    border-bottom:1px solid #f2f3f5;
+	.advance_inner {
+		display:flex;
+		align-items: center;
+		width:100%;
+		height:inherit;
+		padding:1.5rem 0 1.5rem 0;
+		.advance_label {
+			position: relative;
+			justify-content: center;
+			margin-right:1.2rem;
+			flex:none;
+            .inactive {
+                color:#75777B;
+            }
+		}
+		.advance_body {
+			width:100%;
+			flex:0 1 auto;
+			color:#fff;
+			overflow: hidden;
+			.advance_title {
+				@include FontBody13;
+                @include Ellipsis1;
+				color:#000;
+			}
+		}
+		&::after {
+			content:"";
+			display:block;
+			width:0.6rem;
+			height:1.3rem;
+			background-color: #ddd;
+			margin-left:2rem;
+		}
+	}
+}
