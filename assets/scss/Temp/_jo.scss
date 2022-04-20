@@ -1,8 +1,9 @@
 // 학습과정제목
 .learning_subject {
     .title_area {
-        .appbar_title {
+        .title {
             margin-top:1rem;
+            @include FontTitle18;
             color:#000;
         }
     }
@@ -56,3 +57,101 @@
         }
     }
 }
+
+/////////////////////////////////
+// TEST
+/////////////////////////////////
+// 응시하기
+.test_information {
+    margin-top:6.4rem;
+    flex:none;
+    .info {
+        margin-bottom:2.4rem;
+        @include FontTitle14;
+        color:$ColorSubTxt;
+        text-align: center;
+    }
+    .subject_area {
+        text-align: center;
+        border-top:1px solid #e3e4e5;
+        border-bottom:1px solid #e3e4e5;
+        .sub_txt {
+            margin-bottom:0.7rem;
+            @include FontBody13;
+            color: #a4a6aa;
+        }
+        .title {
+            @include FontTitle18;
+        }
+        // 응시전
+        &.is_before {
+            padding:4.8rem 0;
+        }
+        // 응시후
+        &.is_after {
+            padding:2rem 0;
+        }
+        // 응시결과
+        .complete_area {
+            margin:2rem auto;
+            text-align: center;
+            .ico.atare {
+                width:5.2rem;
+                height:6.0rem;
+                background-color: #ddd;
+            }
+            .score {
+                margin-top:2.5rem;
+                @include FontTitle18;
+            }
+        }
+        .desc_area {
+            @include FontBody14;
+            color:$ColorSubTxt;
+            strong {
+                @include FontTitle14;
+                color:#000;
+            }
+        }
+    }
+}
+
+// 이수정보
+.course_define {
+    margin-top:auto;
+    padding-bottom:0.8rem;
+    .label_area {
+        margin-bottom:0.8rem;
+    }
+    .define_area {
+        p + p {
+            margin-top:0.3rem;
+        }
+        .tit {
+            margin-right:0.8rem;
+            @include FontBody14;
+        }
+        .txt {
+            @include FontBody14;
+            color:$ColorSubTxt;
+            .emphasis {
+                color: $ColorPrimary;
+            }
+        }
+    }
+    .desc_area {
+        margin-top:2rem;
+        .desc {
+            position: relative;
+            padding-left:1rem;
+            color:#a4a6aa;
+            &::before {
+                content:'*';
+                position:absolute;
+                left:0;
+                top:0.4rem;
+            }
+        }
+    }
+}
+
