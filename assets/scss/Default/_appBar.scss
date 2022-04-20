@@ -132,7 +132,7 @@
                 background-color: #eee;
             }
         }
-        &.learnActive {
+        &.learning {
             &::before {
                 width:2rem;
                 height:1.7rem;
@@ -142,7 +142,7 @@
                 background-color: $ColorPrimary;
             }
         }
-        &.wish {
+        &.bookmark {
             &::before {
                 width:2rem;
                 height:1.7rem;
