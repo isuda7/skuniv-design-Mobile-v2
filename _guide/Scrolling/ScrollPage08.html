@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            $(function(){
+                // 스티키 레이아웃 설정
+                var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                $('.container').css({'padding-top': breakStickyPos+'rem'});
+                $('.sticky').css({'top': breakStickyPos+'rem'});
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="sub_wrapper has_sticky gap_none theme_dark">
+	<!-- Header -->
+    <header class="header theme_dark">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1 class="transition"><strong>Boundaryless Collaboration, 세상에서 협업이 제일 쉬웠어요</strong></h1>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container">
+        <div class="content_head">
+            <!-- 학습영상 -->
+            <div class="cube_player_sec">
+                <!-- Player영역 -->
+                <div class="cube_player">
+                    <img src="../../assets/img/demo/thumb-01.png" alt="">
+                    <div class="player_timeline">
+                        <input type="range" class="timeline_range" value="0" min="0" max="100" />
+                    </div>
+                </div>
+                <!-- // Player영역 -->
+            </div>
+            <!-- //학습영상 -->
+        </div>
+        <div class="content_body">
+            <div class="out_sec sticky">
+                <div class="tab style2">
+                    <div class="tab_list">
+                        <button type="button" class="tab_item is_active">Tab 1</button>
+                        <button type="button" class="tab_item">Tab 2</button>
+                        <button type="button" class="tab_item">Tab 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_panel">
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+                <div style="height:25rem; background-color: #ddd;"></div>
+                <div style="height:25rem; background-color: #ccc;"></div>
+            </div>
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>
