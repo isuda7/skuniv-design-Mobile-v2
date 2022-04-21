@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_sticky">
+	<div class="sub_wrapper has_sticky has_floating">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
@@ -28,36 +28,42 @@
 		<!-- // Header -->
 
 		<!-- Container -->
-		<main role="main" class="container test_container atareForm_page">
+		<main role="main" class="container test_container atareSurvey_page">
             <input type="range" value="1" min="0" max="9" class="step_range sticky" />
 			<div class="content_body">
                 <div class="step_count">
                     <em class="current">1</em>
-                    <i class="split">/</i>
+                    <b class="split">/</b>
                     <span class="total">9</span>
                 </div>
 
-                <div class="atare_form">
+                <div class="atare_survey">
                     <h2 class="atare_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다.</h2>
                     <div class="radio_group">
-                        <div class="radio block">
+                        <div class="radio survey">
                             <input type="radio" name="radioBlock1" id="radioBlock11" tabindex="0" class="hidden" />
-                            <label for="radioBlock11"><span>Label 1</span></label>
+                            <label for="radioBlock11"><span>고객</span></label>
                         </div>
-                        <div class="radio block">
+                        <div class="radio survey">
                             <input type="radio" name="radioBlock1" id="radioBlock12" tabindex="0" class="hidden" checked />
-                            <label for="radioBlock12"><span>Label 2</span></label>
+                            <label for="radioBlock12"><span>제품</span></label>
                         </div>
-                        <div class="radio block">
+                        <div class="radio survey">
                             <input type="radio" name="radioBlock1" id="radioBlock13" tabindex="0" class="hidden" />
-                            <label for="radioBlock13"><span>Label 3</span></label>
+                            <label for="radioBlock13"><span>서비스</span></label>
                         </div>
-                        <div class="radio block">
+                        <div class="radio survey">
                             <input type="radio" name="radioBlock1" id="radioBlock14" tabindex="0" class="hidden" />
-                            <label for="radioBlock14"><span>Label 4</span></label>
+                            <label for="radioBlock14"><span>하이테크</span></label>
                         </div>
                     </div>
                 </div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">다음</button>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- // Container -->

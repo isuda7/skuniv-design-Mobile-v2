@@ -144,48 +144,6 @@ textarea.basic {
     }
 }
 
-.radio.block {
-    @include FontBody14;
-    height:4.8rem;
-    width:100%;
-    input,
-    label:before {
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-    }
-    label {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        width:100%;
-        padding:0 1.6rem 0 1.6rem;
-        border:1px solid #e3e4e5;
-        border-radius: $RadiusSmall;
-    }
-    label:before {
-        display:none;
-    }
-    label:after {
-        position:static;
-        width:1.6rem;
-        height:1.6rem;
-        margin-left:2rem;
-    }
-    input:checked ~ label {
-        border-color: $ColorPrimary;
-        color:$ColorPrimary;
-        font-weight: 700;
-    }
-    input:checked ~ label:after {
-        background: url('../img/icons_16_ic_check_primary.svg');
-    }
-    input:disabled ~ label {
-        opacity: 0.75;
-    }
-}
-
 /* Toggle */
 .toggle.basic {
     width:4.0rem;

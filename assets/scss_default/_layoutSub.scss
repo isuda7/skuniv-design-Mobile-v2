@@ -29,6 +29,15 @@
 	}
 }
 
+// 페이지 여백 공통화
+.content_body {
+	padding-bottom:4rem;
+}
+.has_floating .content_body {
+	padding-bottom:0.8rem;
+}
+
+
 // Styles
 .sub_wrapper,
 .submain_wrapper {
