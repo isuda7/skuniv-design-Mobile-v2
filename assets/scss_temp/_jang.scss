@@ -1,16 +1,20 @@
 //cube 내 해당과정
 .theme_dark{
+    //큐브내 해당과정
     .card.cube_parents{
         .card_inner{
             border-color: #44464a;
         }        
     }
+    //큐브 오버뷰 스크립트
     .overview_subscript{
         color: #cbcdcf;
     }
+    //classroom 차수정보
     .degree_list .degree_acco{
         border-color: #25272b;
     }
+    //큐브내 overview icon
     .cube_overview ul {
         li::before{
             background-color: inherit;
@@ -102,7 +106,7 @@
         .acco_title::after{
             width : 1.2rem;
             height: 1.2rem;
-            background-image : url('../../assets/img/icons_12_ic_chervron_up_grey_05.svg');
+            background-image : url('../../assets/img/icons_12_ic_chervron_down_grey_05.svg');
             background-color: inherit;
         }
     }
