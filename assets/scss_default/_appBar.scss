@@ -265,6 +265,9 @@
         &.more::before {
             background-image:url('../img/icons_24_ic_more_black.svg');
         }
+        &.cubelist::before {
+            background-image:url('../img/icons_24_ic_cubelist_black.svg');
+        }
         &.srch::before {
             background-image:url('../img/icons_24_ic_search_black.svg');
         }
@@ -314,6 +317,9 @@
             }
             &.more::before {
                 background-image:url('../img/icons_24_ic_more_white.svg');
+            }
+            &.cubelist::before {
+                background-image:url('../img/icons_24_ic_cubelist_white.svg');
             }
             &.srch::before {
                 background-image:url('../img/icons_24_ic_search_white.svg');
