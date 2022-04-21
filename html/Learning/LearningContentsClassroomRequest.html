@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_visible" id="ModalFullpopup">
+        <div class="modal modal_fullpopup theme_dark">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">수강신청</h3>
+            </div>
+            <div class="modal_content">
+                <div class="modal_inner">
+                    <!-- 차수목록 선택 -->
+                    <div class="degree_list has_check">
+                        <div class="degree_sort">
+                            <span class="title">차수</span>
+                            <span class="date">학습기간</span>
+                        </div>
+                        <div class="acco degree_acco">
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco1" tabindex="0" class="hidden" checked />
+                                        <label for="degreeAcco1"></label>
+                                    </div>
+                                    <strong class="title">100</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title is_active">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">99</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content is_active">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">98</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">98</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">97</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">96</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">95</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="acco_title">
+                                <div class="degree_expand">
+                                    <div class="radio basic">
+                                        <input type="radio" name="degreeAcco" id="degreeAcco2" tabindex="0" class="hidden" />
+                                        <label for="degreeAcco2"></label>
+                                    </div>
+                                    <strong class="title">94</strong>
+                                    <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                </div>
+                            </a>
+                            <div class="acco_content">
+                                <div class="degree_body">
+                                    <div class="degree_item">
+                                        <strong class="title">수강신청</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">학습기간</strong>
+                                        <span class="date">2021.12.02 ~ 2022.03.04</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">장소</strong>
+                                        <span class="date">온라인</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">강사</strong>
+                                        <span class="date">이영운</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">정원정보</strong>
+                                        <span class="date">3/60</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">담당자</strong>
+                                        <span class="date">asdf@sk.com</span>
+                                    </div>
+                                    <div class="degree_item">
+                                        <strong class="title">취소패널티</strong>
+                                        <span class="date">없음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 차수목록 선택 -->
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">수강신청 완료</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>
