@@ -46,7 +46,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="swiper-slide slide3 theme_dark">
+					<div class="swiper-slide slide3">
 						<div class="update_item">
 							<h1><a href="/"><img src="../../assets/img/onboard/img_img_s_logo.png" alt="My Suni"></a>
 							</h1>
@@ -100,6 +100,15 @@
 				pagination: {
 					el: ".swiper-pagination",
 				},
+				on : {
+					slideChangeTransitionStart: function(swiper){
+						if (swiper.activeIndex === 2) {
+							swiper.$el.addClass('theme_dark');
+						} else {
+							swiper.$el.removeClass('theme_dark');
+						}
+					}
+				}
 			});
 		</script>
 	</div>
