@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>754DD076-1426-FA2F-2FBC-9075ED339854</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1760.000000, -1347.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-24-/-Black" transform="translate(40.000000, 40.000000)">
+                        <g id="Icons-/-24-/-ic_chervron_up_black" transform="translate(704.000000, 44.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-24-/-ic_chervron_up_black-(Background/Mask)"></g>
+                            <g id="Icon/Line/Chervron_Up" mask="url(#mask-2)" stroke="#000000" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <g transform="translate(3.000000, 8.000000)" id="Path-15-Copy-10">
+                                    <path d="M13,-5 L5,4 L13,13" transform="translate(9.000000, 4.000000) scale(-1, -1) rotate(-90.000000) translate(-9.000000, -4.000000) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="84px" viewBox="0 0 32 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5558A235-4B7C-72F4-94E0-0B70E9AB947F</title>
+    <defs>
+        <rect id="path-1" x="0" y="4" width="32" height="24"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="32" height="24" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="4" width="32" height="24"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="32" height="24" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1392.000000, -1625.000000)">
+            <g id="etc" transform="translate(62.000000, 1585.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Group-5843" transform="translate(30.000000, 40.000000)">
+                        <g id="icons-/-32-/-ic_video_off_on" transform="translate(346.000000, 0.000000)">
+                            <g id="Property-1=32,-Property-2=ic_video_black">
+                                <path d="M0,0 L32,0 L32,32 L0,32 L0,0 Z" id="area"></path>
+                                <use id="Rectangle-4552" stroke="#000000" mask="url(#mask-2)" stroke-width="3" stroke-dasharray="0,0" xlink:href="#path-1"></use>
+                                <path d="M16.4330125,11.7499998 L19.8971141,17.7499998 C20.0351853,17.9891461 19.9532477,18.2949413 19.7141014,18.4330125 C19.6380918,18.4768966 19.5518697,18.4999998 19.4641014,18.4999998 L12.5358982,18.4999998 C12.2597558,18.4999998 12.0358982,18.2761422 12.0358982,17.9999998 C12.0358982,17.9122314 12.0590013,17.8260094 12.1028855,17.7499998 L15.5669871,11.7499998 C15.7050583,11.5108535 16.0108535,11.4289159 16.2499998,11.5669871 C16.3260094,11.6108712 16.3891283,11.6739902 16.4330125,11.7499998 Z" id="Polygon-4" fill="#000000" transform="translate(16.000000, 16.000000) scale(-1, -1) rotate(-90.000003) translate(-16.000000, -16.000000) "></path>
+                            </g>
+                            <g id="Property-1=32,-Property-2=ic_video_primary" transform="translate(0.000000, 52.000000)">
+                                <path d="M0,0 L32,0 L32,32 L0,32 L0,0 Z" id="area"></path>
+                                <g id="Icons-/-32-/-ic_video_primary">
+                                    <path d="M0,0 L32,0 L32,32 L0,32 L0,0 Z" id="Icons-/-32-/-ic_video_primary-(Background)"></path>
+                                    <use id="Rectangle-4552" stroke="#FF664D" mask="url(#mask-4)" stroke-width="3" stroke-dasharray="0,0" xlink:href="#path-3"></use>
+                                    <path d="M16.4330125,11.7499998 L19.8971141,17.7499998 C20.0351853,17.9891461 19.9532477,18.2949413 19.7141014,18.4330125 C19.6380918,18.4768966 19.5518697,18.4999998 19.4641014,18.4999998 L12.5358982,18.4999998 C12.2597558,18.4999998 12.0358982,18.2761422 12.0358982,17.9999998 C12.0358982,17.9122314 12.0590013,17.8260094 12.1028855,17.7499998 L15.5669871,11.7499998 C15.7050583,11.5108535 16.0108535,11.4289159 16.2499998,11.5669871 C16.3260094,11.6108712 16.3891283,11.6739902 16.4330125,11.7499998 Z" id="Polygon-4" fill="#FF664D" transform="translate(16.000000, 16.000000) scale(-1, -1) rotate(-90.000003) translate(-16.000000, -16.000000) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,94 @@
+// Form Controls
+.form_controls {
+	display:flex;
+	align-items: center;
+	&.date {
+		.input_group {
+			flex:1 1 auto;
+			width:100%;
+		}
+		.form_split {
+			flex:none;
+			display:inline-block;
+			text-align: center;
+			width:1.2rem;
+			color:#A4A6AA;
+		}
+	}
+}
+
+// Input Group
+.input_group {
+    position:relative;
+    input {
+        height:$FormBasicHeight;
+    }
+    // Cases
+    &.clear {
+        input {
+            width:100%;
+            padding-left: $FormBasicPadding;
+            padding-right:$FormBasicHeight;
+            background-color: #eee;
+        }
+        .btn.clear {
+            visibility:hidden;
+            position:absolute;
+            top:0;
+            right:0;
+            height:$FormBasicHeight;
+            width:$FormBasicHeight;
+            padding:0;
+            &::before {
+                content:"";
+                display:block;
+                width:2rem;
+                height:2rem;
+                background-image: url('../img/icons_20_ic_clear_grey_04.svg');
+            }
+        }
+        &.is_valued {
+            .btn.clear {
+                visibility:visible;
+            }
+        }
+    }
+    &.srch {
+        input {
+            padding-left:$FormBasicHeight;
+        }
+        .btn.srch {
+            position:absolute;
+            top:0;
+            left:0;
+            height:$FormBasicHeight;
+            width:$FormBasicHeight;
+            &::before {
+                content:"";
+                display:block;
+                width:2rem;
+                height:2rem;
+                background-image: url('../img/icons_20_ic_search_black.svg');
+            }
+        }
+    }
+    &.date {
+        input {
+            padding-right:$FormBasicHeight;
+        }
+        .btn.date {
+            position:absolute;
+            top:0;
+            right:0;
+            height:$FormBasicHeight;
+            width:$FormBasicHeight;
+            &::before {
+                content:"";
+                display:block;
+                width:2rem;
+                height:2rem;
+                background-image: url('../img/icons_20_ic_calendar_grey_05.svg');
+            }
+        }
+    }
+}

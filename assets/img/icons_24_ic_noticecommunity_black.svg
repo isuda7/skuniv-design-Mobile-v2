@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>83E1F333-D3D3-7811-1E0B-CCB3B510ECC1</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+        <path d="M12.0140731,2 C14.6625061,2 17.2024651,3.05352163 19.07519,4.92880244 C20.947915,6.80408351 22,9.3475096 22,11.9995571 C22,14.6516045 20.947915,17.1950317 19.07519,19.0703125 C17.2024651,20.9455922 14.6625061,21.9991141 12.0140731,21.9991141 L3.02673928,21.9991141 C2.82901888,22.0074514 2.63328326,21.956771 2.46437866,21.8535093 C2.295474,21.7502497 2.16101726,21.5990626 2.07807629,21.4191403 C2.00160463,21.2370372 1.98071142,21.0363312 2.01803294,20.8423517 C2.05535447,20.6483701 2.14921841,20.4698062 2.28778079,20.329188 L4.28496631,18.3292768 C2.81782619,16.5478937 2.01941684,14.3085891 2.02814671,11.9995571 C2.02814671,9.3475096 3.0802322,6.80408351 4.95295689,4.92880244 C5.88023588,4.00025784 6.98107592,3.26369582 8.1926243,2.76117105 C9.40417269,2.25864624 10.7027031,2 12.0140731,2 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1320.000000, -1391.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-24-/-Black" transform="translate(40.000000, 40.000000)">
+                        <g id="Icon/24/ic_noticecommunity_black" transform="translate(264.000000, 88.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icon/24/ic_noticecommunity_black-(Background/Mask)"></g>
+                            <g id="Union" stroke-dasharray="0,0" mask="url(#mask-2)" stroke="#000000" stroke-width="3">
+                                <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

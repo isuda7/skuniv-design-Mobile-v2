@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E9C66AE3-CBBB-6DCE-6435-BA5AED1F3249</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1200.000000, -877.000000)">
+            <g id="16dp" transform="translate(62.000000, 729.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Group-5836" transform="translate(40.000000, 39.999999)">
+                        <g id="Icons-/-16-/-ic_comment_grey07" transform="translate(144.000000, 108.000001)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="like16/Icons/16/ic_comment_grey07-(Background/Mask)"></g>
+                            <path d="M0.5,3 L0.5,12 C0.5,12.5522842 0.947715223,13 1.5,13 L6.19999981,13 L8,16 L9.80000019,13 L14.5,13 C15.0522842,13 15.5,12.5522852 15.5,12 L15.5,3 C15.5,2.44771528 15.0522852,2 14.5,2 L1.5,2 C0.947715282,2 0.5,2.44771498 0.5,3 Z M5.5,7.5 C5.5,6.94771528 5.05228472,6.5 4.5,6.5 C3.94771528,6.5 3.5,6.94771528 3.5,7.5 C3.5,8.05228472 3.94771528,8.5 4.5,8.5 C5.05228472,8.5 5.5,8.05228472 5.5,7.5 Z M8,8.5 C7.44771528,8.5 7,8.05228472 7,7.5 C7,6.94771528 7.44771528,6.5 8,6.5 C8.55228424,6.5 9,6.94771528 9,7.5 C9,8.05228472 8.55228424,8.5 8,8.5 Z M11.5,8.5 C10.9477158,8.5 10.5,8.05228472 10.5,7.5 C10.5,6.94771528 10.9477158,6.5 11.5,6.5 C12.0522852,6.5 12.5,6.94771528 12.5,7.5 C12.5,8.05228472 12.0522852,8.5 11.5,8.5 Z" id="Subtract" fill="#44464A" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

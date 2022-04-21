@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9306B155-83CC-81FF-4121-297921EB74F6</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
+        <rect id="path-3" x="0" y="2.5" width="3" height="1"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="1" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="8" y="2.5" width="9" height="1"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9" height="1" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <path d="M5.5,6 C7.15685425,6 8.5,4.65685425 8.5,3 C8.5,1.34314575 7.15685425,0 5.5,0 C3.84314575,0 2.5,1.34314575 2.5,3 C2.5,4.65685425 3.84314575,6 5.5,6 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="14" y="2.5" width="3" height="1"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3" height="1" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="0" y="2.5" width="9" height="1"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9" height="1" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <path d="M11.5,6 C13.1568542,6 14.5,4.65685425 14.5,3 C14.5,1.34314575 13.1568542,0 11.5,0 C9.84314575,0 8.5,1.34314575 8.5,3 C8.5,4.65685425 9.84314575,6 11.5,6 Z" id="path-13"></path>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1490.000000, -982.000000)">
+            <g id="20dp" transform="translate(62.000000, 941.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-20-/-Black" transform="translate(34.000000, 41.000000)">
+                        <g id="Icons-/-20-/-ic_filter_black" transform="translate(440.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-20-/-ic_filter_black-(Background/Mask)"></g>
+                            <g id="Group-5740" mask="url(#mask-2)" stroke-dasharray="0,0">
+                                <g transform="translate(1.500000, 3.000000)">
+                                    <g id="Group-5737">
+                                        <use id="Rectangle-4736" stroke="#000000" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                                        <use id="Rectangle-4737" stroke="#000000" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-5"></use>
+                                        <use id="Ellipse-1035" stroke="#000000" mask="url(#mask-8)" stroke-width="2" xlink:href="#path-7"></use>
+                                    </g>
+                                    <g id="Group-5738" transform="translate(0.000000, 8.000000)">
+                                        <use id="Rectangle-4736" stroke="#000000" mask="url(#mask-10)" stroke-width="2" transform="translate(15.500000, 3.000000) scale(1, -1) rotate(-180.000000) translate(-15.500000, -3.000000) " xlink:href="#path-9"></use>
+                                        <use id="Rectangle-4737" stroke="#000000" mask="url(#mask-12)" stroke-width="2" transform="translate(4.500000, 3.000000) scale(1, -1) rotate(-180.000000) translate(-4.500000, -3.000000) " xlink:href="#path-11"></use>
+                                        <use id="Ellipse-1035" stroke="#000000" mask="url(#mask-14)" stroke-width="2" transform="translate(11.500000, 3.000000) scale(1, -1) rotate(-180.000000) translate(-11.500000, -3.000000) " xlink:href="#path-13"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FC963C84-03C8-E5B5-D393-3528DF3D91B3</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-576.000000, -1303.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="White" transform="translate(122.000000, 0.000000)">
+                    <g id="Icon-/-24-/-White" transform="translate(40.000000, 40.000000)">
+                        <g id="Icons-/-24-/-ic_pip_white" transform="translate(352.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-24-/-ic_pip_white-(Background/Mask)"></g>
+                            <path d="M3,4 L3,20 L21,20 L21,4 L3,4 Z M1,4 L1,20 C1,21.1045704 1.89542997,22 3,22 L21,22 C22.1045685,22 23,21.1045685 23,20 L23,4 C23,2.89543056 22.1045704,2 21,2 L3,2 C1.89543056,2 1,2.89543104 1,4 Z M11.5,13 L18.5,13 C18.7761424,13 19,13.2238576 19,13.5 L19,17.5 C19,17.7761424 18.7761424,18 18.5,18 L11.5,18 C11.2238576,18 11,17.7761424 11,17.5 L11,13.5 C11,13.2238576 11.2238576,13 11.5,13 Z" id="Vector" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

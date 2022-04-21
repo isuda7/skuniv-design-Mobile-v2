@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="f10uzqd4db" d="M0 0h24v24H0z"/>
+        <path d="m12.85 2.366 2.62 4.216a1 1 0 0 0 .61.443l4.82 1.19a1 1 0 0 1 .525 1.616l-3.2 3.796a1 1 0 0 0-.233.716l.358 4.952a1 1 0 0 1-1.374.998l-4.6-1.87a1 1 0 0 0-.753 0l-4.599 1.87a1 1 0 0 1-1.374-.998l.358-4.952a1 1 0 0 0-.233-.716l-3.2-3.796A1 1 0 0 1 3.1 8.215l4.82-1.19a1 1 0 0 0 .61-.443l2.62-4.216a1 1 0 0 1 1.7 0z" id="xli7226lea"/>
+        <mask id="xls4sr5bod" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="22" fill="#fff">
+            <use xlink:href="#xli7226lea"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="nek1ldubic" fill="#fff">
+            <use xlink:href="#f10uzqd4db"/>
+        </mask>
+        <g stroke-dasharray="0,0" mask="url(#nek1ldubic)" stroke="#CBCDCF" stroke-width="3">
+            <use mask="url(#xls4sr5bod)" xlink:href="#xli7226lea"/>
+        </g>
+    </g>
+</svg>

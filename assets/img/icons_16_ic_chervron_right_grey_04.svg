@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>17DB2C2B-1DED-B5E9-78CD-B7B958AA492E</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1200.000000, -769.000000)">
+            <g id="16dp" transform="translate(62.000000, 729.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Group-5836" transform="translate(40.000000, 39.999999)">
+                        <g id="Icons-/-16-/-ic_chervron_right_grey04" transform="translate(144.000000, 0.000001)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-16-/-ic_chervron_right_grey04-(Background/Mask)"></g>
+                            <path d="M11.8840981,2.82010472 L7.15084171,8.5000124 L11.8840981,14.1799202 C12.0608802,14.3920593 12.0322185,14.7073412 11.8200798,14.8841238 C11.6079412,15.0609055 11.2926588,15.0322437 11.1158772,14.8201046 L6.11587694,8.8201046 C5.96135782,8.6346817 5.96135782,8.36534357 6.11587694,8.1799202 L11.1158772,2.17992033 C11.2926588,1.96778192 11.6079412,1.93911984 11.8200798,2.11590188 C12.0322185,2.29268394 12.0608802,2.60796626 11.8840981,2.82010472 Z" id="Path-15-Copy-10-(Stroke)" fill="#CBCDCF" mask="url(#mask-2)" transform="translate(8.999994, 8.500013) scale(1, -1) rotate(-180.000000) translate(-8.999994, -8.500013) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

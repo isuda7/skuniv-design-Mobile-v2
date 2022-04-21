@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CFAC5A5A-4EDA-0436-1C1D-FF939D7BB0E7</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1056.000000, -1303.000000)">
+            <g id="24dp" transform="translate(62.000000, 1263.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icons-/-24-/-ic_arrow_left_white" transform="translate(40.000000, 40.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Icons-/-24-/-ic_arrow_left_white-(Background/Mask)"></g>
+                        <path d="M10.4880934,4.43057114 C10.1735992,4.16100454 9.70012426,4.19742566 9.43055773,4.51192006 L3.43055755,11.5119205 C3.18981415,11.7927876 3.18981415,12.2072401 3.43055755,12.4881077 L9.43055773,19.4881067 C9.70012426,19.8026018 10.1735992,19.8390226 10.4880934,19.5694561 C10.802588,19.2998896 10.8390093,18.8264141 10.5694423,18.51192 L5.63065386,12.75 L21,12.75 C21.4142132,12.75 21.75,12.4142132 21.75,12 C21.75,11.5857863 21.4142132,11.25 21,11.25 L5.63067746,11.25 L10.5694423,5.48810709 C10.8390093,5.17361265 10.802588,4.70013773 10.4880934,4.43057114 Z" id="Union" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

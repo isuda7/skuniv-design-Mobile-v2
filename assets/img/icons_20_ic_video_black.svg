@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E348EBFF-6369-618B-ECD8-25E34CF24612</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid" transform="translate(-1050.000000, -1022.000000)">
+            <g id="20dp" transform="translate(62.000000, 941.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-20-/-Black" transform="translate(34.000000, 41.000000)">
+                        <g id="Frame-5781" transform="translate(0.000000, 40.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Frame-5781-(Background/Mask)"></g>
+                            <path d="M10.3464099,3.60000059 L15.7157682,12.9000006 C15.8262251,13.0913177 15.7606751,13.3359538 15.5693581,13.4464108 C15.5085504,13.4815181 15.4395727,13.5000006 15.369358,13.5000006 L4.63064226,13.5000006 C4.40972836,13.5000006 4.23064226,13.3209145 4.23064226,13.1000006 C4.23064226,13.029786 4.24912476,12.9608083 4.28423209,12.9000006 L9.65358955,3.60000062 C9.7640465,3.40868356 10.0086827,3.3431335 10.1999997,3.45359045 C10.2608074,3.48869778 10.3113025,3.53919292 10.3464099,3.60000059 Z" id="Polygon-39" fill="#000000" mask="url(#mask-2)" transform="translate(10.000000, 10.000000) scale(-1, -1) rotate(-90.000003) translate(-10.000000, -10.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
