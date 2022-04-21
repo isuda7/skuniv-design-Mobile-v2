@@ -11,6 +11,30 @@
     .degree_list .degree_acco{
         border-color: #25272b;
     }
+    .cube_overview ul {
+        li::before{
+            background-color: inherit;
+            background-repeat: no-repeat;
+        }
+        .item_complete::before{
+            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+        }
+        .item_part.basic::before{
+            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+        }
+        .item_part.intermediate::before{
+            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+        }
+        .item_part.advanced::before{
+            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+        }
+        .item_part.expert::before{
+            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+        }
+        .item_contact::before{
+            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+        }
+    }
 }
 .card{
     &.cube_parents{        
@@ -28,16 +52,28 @@
             .thumb {
                 width: 100%;
                 height : 100%;
+                position: relative;
+            }
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background : rgba(0,0,0, 0.5);
             }
             .ribon {
                 position: absolute;
-                right : 0.8rem;
-                top : 0;
-                width : 2.4rem;
-                height : 1.8rem;
+                right: 0.8rem;
+                top: 0;
+                width: 2.4rem;
+                height: 1.8rem;
                 background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
                 background-repeat: no-repeat;
                 background-position: 0 0;
+                z-index: 1;
                 &.is_active {
                     background-position: 0 -4.4rem;
                 }
@@ -71,7 +107,3 @@
         }
     }
 }
-
-//cubelist icon
-//icons_24_ic_cubelist_white
-
