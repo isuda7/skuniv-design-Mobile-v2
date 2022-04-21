@@ -994,6 +994,7 @@
 
 // 학습과정제목
 .learning_subject {
+	padding:2rem;
     .title_area {
         .title {
             margin-top:1rem;
@@ -1009,18 +1010,17 @@
             &::before {
                 content:'';
                 margin-right:0.4rem;
-                background-color: $ColorSubTxt;
             }
             &.video {
                 &::before {
-                    width:1.2rem;
-                    height:1.2rem;
+                    width:1.6rem;
+                    height:1.6rem;
                 }
             }
             &.time {
                 &::before {
-                    width:2rem;
-                    height:2rem;
+                    width:1.6rem;
+                    height:1.6rem;
                 }
             }
             & + .label {
