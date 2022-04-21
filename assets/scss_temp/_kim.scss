@@ -1,3 +1,17 @@
+//학습 공통 타이틀
+.learning_container {
+    .learning_subject {
+        .info_area {
+            .video::before {
+                background-image: url('../../assets/img/icons_16_ic_video_grey_06.svg');
+            }
+            .time::before {
+                background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+            }
+        }
+    }
+}
+
 //Overview
 .overview_page {
     margin-bottom:5.23rem;
@@ -260,6 +274,52 @@
         text-align: center;
         &.arw_link {
             display: inline-block;
+        }
+    }
+}
+
+//큐브공통 오버뷰 페이지
+.contentsoverview_page {
+    background-color:#000;
+    .learning_sec {
+        .sec_body {
+            .board_list {
+                .overview_item {
+                    border:1px solid #44464a;
+                    border-radius: 8px;
+                    padding:1.6rem;
+                    .item_thumb {
+                        position: relative;
+                        width:8rem;
+                        height:5.4rem;
+                        .thumb {
+                            .thumbico {
+                                position: absolute;
+                                top:0;
+                                right:0.5rem;
+                                width:2.4rem;
+                                height:2.4rem;
+                                background-image: url('../../assets/img/icons_24_ic_bookmark_off_on.svg');
+                                background-position-y: top;
+                            }
+                            .is_active {
+                                background-position-y: bottom;
+                            }
+                        }
+                    }
+                    .item_title {
+                        
+                        .sub_txt {
+                            color:#a4a6aa;
+                            @include FontBody12;
+                        }
+                        .title {
+                            @include FontBody12;
+                            color:#f2f3f5;
+                        }
+                    }
+                }
+            }
         }
     }
 }
