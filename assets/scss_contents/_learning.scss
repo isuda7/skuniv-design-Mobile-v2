@@ -862,25 +862,27 @@
 				&::after {
 					content:"";
 					position: relative;
-					top:calc(50% - 0.9rem);
+					top:0.2rem;
 					left:0.8rem;
-					width:1rem;
-					height:1rem;
-					background-color: #ccc;
+					width:1.6rem;
+					height:1.6rem;
+				}
+				&.pin::after{
+					background-image: url('../../assets/img/icons_16_ic_pin_grey_06.svg');
 				}
             }
         }
         .right {
             width:30%;
 			.btn {
-				padding:0 0.8rem 0 0;
+				padding:0;
 				float:right;
 				&::after {
 					content:"";
 					display:block;
 					width:2rem;
 					height:2rem;
-					background-color: #ccc;
+					background-image : url('../../assets/img/icons_20_ic_more_grey_04.svg');
 				}
 			}
         }
@@ -929,11 +931,11 @@
 						&::before {
 							content:"";
 							position: relative;
-							top:calc(50% - 0.5rem);
-							width: 2rem;
-							height:1rem;
+							top:calc(50% - 0.8rem);
+							width: 1.6rem;
+							height:1.6rem;
 							margin-right:0.5rem;
-							background-color: #ccc;
+							background-image: url('../../assets/img/icons_16_ic_reply_grey_05.svg');
 						}
                     }
                 }
@@ -944,10 +946,13 @@
 						display: flex;
 						.like {
 							position:relative;
-							width: 1.5rem;
-							height: 1.5rem;
-							background:url() #eee;
+							width: 1.6rem;
+							height: 1.6rem;
+							background-image: url("../../assets/img/icons_16_ic_like_off_grey_06.svg");
 							margin-top:0.1rem;
+							&.is_active{
+								background-image : url("../../assets/img/icons_16_ic_like_on.svg");
+							}
 						}
 						.like_no {
 							margin-left:0.5rem;
@@ -960,25 +965,31 @@
 }
 .theme_dark {
     .post_sec {
-        .post_body {
-			.post_head {
-				.left {
-					.user_id {
-						color:#fff;
+		.post_head {
+			.left {
+				.user_id {
+					color:#fff;
+				}
+			}
+			.right {
+				.btn::before{
+					background-image: url('../../assets/img/icons_20_ic_more_grey_06.svg');
+				}
+			}
+			}
+		.post_body{
+			.post_main {
+				background-color: #000;
+				color:#F8F8FA;
+				.post_txt {
+					.btn.more {
+						color:#A4A6AA;
 					}
 				}
 			}
-            .post_main {
-                background-color: #000;
-                color:#F8F8FA;
-                .post_txt {
-                   .btn.more {
-                       color:#A4A6AA;
-                    }
-                }
-            }
-        }
-    }
+			
+		}
+	}
 }
 
 // 학습과정제목
