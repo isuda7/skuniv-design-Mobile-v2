@@ -173,6 +173,93 @@
 }
 
 //커리큘럼 보드리스트
-.curriculum_page {
-    margin-bottom: -10rem;
+.curriculum_thumb {
+    position: relative;
+    .curriculum_thumbico {
+        position: absolute;
+        top:0;
+        right:1rem;
+        width:2.4rem;
+        height:2.4rem;
+        background-image: url('../../assets/img/icons_24_ic_bookmark_off_on.svg');
+        background-position-y: top;
+    }
+    .is_active {
+        background-position-y: bottom;
+    }
+}
+
+//학습활동 페이지
+.header_bg {
+    background-color:#fff;
+}
+.learningactivity_header {
+    margin-top: 2rem;
+    padding:2rem;
+    background-color:#fff;
+    .cube_overview {
+        display:block;
+        font-weight: 700;
+        .learning_theme {
+            color:#a4a6aa;
+            @include FontBody12;
+        }
+        .learning_subject {
+            color:#33353c;
+        }
+    }
+}
+.learning_note {
+    width: 100%;
+    .title {
+        padding:1.6rem 0;
+        border-bottom:1px solid #f2f3f5;
+        margin-bottom:2rem;
+        .note_link{
+            &::after {
+                content:"";
+                position:relative;
+                top:1px;
+                display:inline-block;
+                width:1.2rem;
+                height:1.2rem;
+                margin-left:0.2rem;
+                background-image: url('../img/icons_12_ic_chervron_right_black.svg');
+            }
+        }
+        .note_no {
+            @include FontBody12;
+            color:#1c1d1f;
+        }
+    }
+    .note_contents {
+        .note_link {
+            margin-bottom:1rem;
+            color:#ff664d;
+            @include FontBody13;
+        }
+        .link_ico {
+            @include FontBody14;
+            &::after {
+                content:"";
+                position:relative;
+                top:0.2rem;
+                display:inline-block;
+                width:1.6rem;
+                height:1.6rem;
+                margin-left:0.2rem;
+                background-image: url('../img/icons_16_ic_openinnew_primary.svg');
+            }
+        }
+    }
+    .note_contents +  .note_contents {
+        padding-top:2rem;
+    }
+    .learningbtn_more {
+        padding:2rem 0;
+        text-align: center;
+        &.arw_link {
+            display: inline-block;
+        }
+    }
 }

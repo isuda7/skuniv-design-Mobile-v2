@@ -1,11 +1,6 @@
-.cube_overview ul li{
-    letter-spacing: -0.02rem;
-}
-
 //cube 내 해당과정
-
 .theme_dark{
-    .card.cubeParents{
+    .card.cube_parents{
         .card_inner{
             border-color: #44464a;
         }        
@@ -13,14 +8,17 @@
     .overview_subscript{
         color: #cbcdcf;
     }
+    .degree_list .degree_acco{
+        border-color: #25272b;
+    }
 }
 .card{
-    &.cubeParents{        
+    &.cube_parents{        
         .card_inner{            
             padding:1.6rem;
             display: flex;
             align-items: center;
-            border : 0.1rem solid #E3E4E5;
+            border : 0.1rem solid $FormBasicBorder;
             border-radius: 0.8rem;
         }
         .card_thumb {
@@ -59,3 +57,21 @@
         }
     }
 }
+
+//차수정보
+.degree_list{
+    padding-top: 3.2rem;
+    .degree_acco{
+        border-top : 2px solid $FormBasicBorder;
+        .acco_title::after{
+            width : 1.2rem;
+            height: 1.2rem;
+            background-image : url('../../assets/img/icons_12_ic_chervron_up_grey_05.svg');
+            background-color: inherit;
+        }
+    }
+}
+
+//cubelist icon
+//icons_24_ic_cubelist_white
+
