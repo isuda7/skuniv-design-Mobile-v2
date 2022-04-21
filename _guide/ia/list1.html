@@ -15,8 +15,9 @@
 	<script>
 		function linkReplace() {
 			$(".link-address a").each(function () {
-				var href = "../../html/" + $(this).data("href") + ".html";
-				$(this).attr("href", href);
+				var data = $(this).data("href");
+				var href = "../../html/" + data + ".html";
+				$(this).attr("href", href).text(data);
 			})
 			$('.g_menu a').each(function(){
 				$(this).click(function(){

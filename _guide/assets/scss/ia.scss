@@ -102,7 +102,7 @@
 				color: #999;
 			}
 			.link-address a::before {
-				content: attr(data-href);
+				// content: attr(data-href);
 			}
 			.bg_purple{
 				background:rgba(230, 230, 250, 1);
