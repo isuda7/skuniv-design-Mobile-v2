@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////
+// Components
+///////////////////////////////////////////////////
 // 학습과정제목
 .learning_subject {
     .title_area {
@@ -38,7 +41,7 @@
 .theme_dark {
     .learning_subject {
         .title_area {
-            .appbar_title {
+            .title {
                 color:#fff;
             }
         }
@@ -251,6 +254,30 @@
     }
 }
 
+.atare_form {
+    .atare_tit {
+        margin-bottom:3.2rem;
+        @include FontTitle18;
+    }
+    .radio.block + .radio.block {
+        margin-top:0.8rem;
+    }
+}
+
+///////////////////////////////////////////////////
+// Pages
+///////////////////////////////////////////////////
+// AtareForm Page
+.atareForm_page {
+    .content_body {
+        padding-top:2.4rem;
+    }
+    .atare_form {
+        margin-top:1.2rem;
+    }
+}
+
+// Review Page
 .review_page {
     padding-top:2rem;
     padding-bottom:4rem;
