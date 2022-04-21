@@ -1,0 +1,61 @@
+.cube_overview ul li{
+    letter-spacing: -0.02rem;
+}
+
+//cube 내 해당과정
+
+.theme_dark{
+    .card.cubeParents{
+        .card_inner{
+            border-color: #44464a;
+        }        
+    }
+    .overview_subscript{
+        color: #cbcdcf;
+    }
+}
+.card{
+    &.cubeParents{        
+        .card_inner{            
+            padding:1.6rem;
+            display: flex;
+            align-items: center;
+            border : 0.1rem solid #E3E4E5;
+            border-radius: 0.8rem;
+        }
+        .card_thumb {
+            width : 8rem;
+            height: 5.4rem;
+            position: relative;
+            .thumb {
+                width: 100%;
+                height : 100%;
+            }
+            .ribon {
+                position: absolute;
+                right : 0.8rem;
+                top : 0;
+                width : 2.4rem;
+                height : 1.8rem;
+                background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                &.is_active {
+                    background-position: 0 -4.4rem;
+                }
+            }
+        }
+        .card_body {
+            width : calc(100% - 9.2rem);
+            margin-left : auto;
+            .title{
+                @include FontBody12;
+                @include Ellipsis2;
+            }
+        }
+        .sub_txt {
+            @include FontBody12;
+            @include Ellipsis1;
+        }
+    }
+}

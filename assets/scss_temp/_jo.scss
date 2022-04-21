@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////
+// Components
+///////////////////////////////////////////////////
 // 학습과정제목
 .learning_subject {
     .title_area {
@@ -38,7 +41,7 @@
 .theme_dark {
     .learning_subject {
         .title_area {
-            .appbar_title {
+            .title {
                 color:#fff;
             }
         }
@@ -95,7 +98,7 @@
         .complete_area {
             margin:2rem auto;
             text-align: center;
-            .ico.atare {
+            .ico.survey {
                 width:5.2rem;
                 height:6.0rem;
                 background-color: #ddd;
@@ -119,7 +122,6 @@
 // 이수정보
 .course_define {
     margin-top:auto;
-    padding-bottom:0.8rem;
     .label_area {
         margin-bottom:0.8rem;
     }
@@ -251,9 +253,183 @@
     }
 }
 
+// 응시하기 설문
+.atare_survey {
+    .atare_tit {
+        margin-bottom:3.2rem;
+        @include FontTitle18;
+    }
+    .radio.survey + .radio.survey {
+        margin-top:0.8rem;
+    }
+    .radio.survey {
+        @include FontBody14;
+        min-height:4.8rem;
+        width:100%;
+        input,
+        label:before {
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        label {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            padding:0.6rem 1.6rem 0.6rem 1.6rem;
+            border:1px solid #e3e4e5;
+            border-radius: $RadiusSmall;
+        }
+        label:before {
+            display:none;
+        }
+        label:after {
+            flex:none;
+            position:static;
+            width:1.6rem;
+            height:1.6rem;
+            margin-left:0.8rem;
+        }
+        input:checked ~ label {
+            border-color: $ColorPrimary;
+            color:$ColorPrimary;
+            font-weight: 700;
+        }
+        input:checked ~ label:after {
+            background: url('../img/icons_16_ic_check_primary.svg');
+        }
+        input:disabled ~ label {
+            opacity: 0.75;
+        }
+    }
+}
+
+// 응시하기 결과
+.atare_result {
+    .atare_tit {
+        @include FontTitle18;
+    }
+    .atare_eval {
+        display:flex;
+        align-items: center;
+        margin-top:0.7rem;
+        .eval {
+            margin-left:0.8rem;
+            color:$ColorSubTxt;
+            .cutline {
+                color:$ColorPrimary;
+            }
+        }
+    }
+
+    // 응시문항들
+    .survey_list {
+        margin-top:2.4rem;
+        .item + .item {
+            margin-top:2.4rem;
+        }
+        .label.survey {
+            min-width:3.6rem;
+            height:2.2rem;
+            padding:0 0.6rem 0.1rem 0.6rem;
+            border-radius: $RadiusSmall;
+            @include FontBody13;
+            color:#fff;
+            &::before {
+                content:'';
+                display:block;
+                width:1.2rem;
+                height:1.2rem;
+                margin-right:0.5rem;
+            }
+            &.x {
+                background:$ColorPrimary;
+                &::before {
+                    background: url('../img/icons_12_ic_delete_white.svg');
+                }
+            }
+            &.o {
+                background:$ColorSecondary;
+                &::before {
+                    background: url('../img/icons_12_ic_circle_white.svg');
+                }
+            }
+        }
+        .title {
+            display:block;
+            margin-top:0.8rem;
+            margin-bottom:1.2rem;
+            @include FontTitle16;
+            font-weight: 400;
+            .score {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .survey_answer {
+        .answer {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            @include FontBody14;
+            min-height:3.2rem;
+            width:100%;
+            padding:0.6rem 1.6rem 0.6rem 1.6rem;
+            border-radius: $RadiusSmall;
+            border:1px solid #e3e4e5;
+            &::after {
+                content:'';
+                flex:none;
+                position:static;
+                width:1.6rem;
+                height:1.6rem;
+                margin-left:0.8rem;
+            }
+            &.x {
+                border:1px solid $ColorPrimary;
+                color: $ColorPrimary;
+                font-weight: 700;
+                &::after {
+                    background: url('../img/icons_16_ic_check_primary.svg');
+                }
+            }
+            &.o {
+                border:1px solid $ColorSecondary;
+                color: $ColorSecondary;
+                font-weight: 700;
+                &::after {
+                    background: url('../img/icons_16_ic_check_secondary.svg');
+                }
+            }
+            & + .answer {
+                margin-top:0.4rem;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////
+// Pages
+///////////////////////////////////////////////////
+// atareSurvey Page
+
+.atareSurvey_page {
+    .content_body {
+        padding-top:2.4rem;
+    }
+    .step_count {
+        margin-bottom:1.2rem;
+    }
+}
+
+// Review Page
 .review_page {
-    padding-top:2rem;
-    padding-bottom:4rem;
+    .content_body {
+        padding-top:2rem;
+    }
     .board_toolbar {
         margin-top:1.6rem;
     }

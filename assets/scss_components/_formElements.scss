@@ -105,8 +105,7 @@ textarea.basic {
 
 /* Radio */
 .radio.basic {
-    font-size:1.4rem;
-    line-height:2.2rem;
+    @include FontBody14;
     min-height:2.0rem;
     input,
     label:before {

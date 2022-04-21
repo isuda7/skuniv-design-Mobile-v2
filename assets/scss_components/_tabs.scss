@@ -53,6 +53,10 @@
 	display:flex;
 	flex-direction: column;
 	flex:1 0 auto;
+	padding-left: $GapSideBase;
+	padding-right: $GapSideBase;
+	margin-left: -$GapSideBase;
+	margin-right: -$GapSideBase;
 }
 .theme_dark .tab_panel {
 	background-color: #151617;
