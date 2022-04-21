@@ -11,6 +11,30 @@
     .degree_list .degree_acco{
         border-color: #25272b;
     }
+    .cube_overview ul {
+        li::before{
+            background-color: inherit;
+            background-repeat: no-repeat;
+        }
+        .item_complete::before{
+            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+        }
+        .item_part.basic::before{
+            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+        }
+        .item_part.intermediate::before{
+            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+        }
+        .item_part.advanced::before{
+            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+        }
+        .item_part.expert::before{
+            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+        }
+        .item_contact::before{
+            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+        }
+    }
 }
 .card{
     &.cube_parents{        
