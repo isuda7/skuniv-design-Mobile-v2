@@ -61,13 +61,13 @@
 .card {
 	&.basic {
 		&.playlist {
-			& + .playlist {
-				margin-top:0.8rem;
-			}
+			margin-top:0.8rem;
 			.card_inner {
 				display: block;
 				padding: 1.6rem;
+				padding-top:4.3rem;
 				border-radius: $RadiusLarge;
+				background-color: #fff;
 				@include Shadow2;
 			}
 			.card_head {
@@ -75,6 +75,19 @@
 				justify-content: space-between;
 				align-items: center;
 				margin-bottom:0.8rem;
+				position:absolute;
+				left:1.6rem;
+				top:1.6rem;
+				width:calc(100%  - 3.2rem);
+				.label.make {
+					color:$ColorPlaylistMake;
+				}
+				.label.buy {
+					color:$ColorPlaylistBuy;
+				}
+				.label.recom {
+					color:$ColorPlaylistRecom;
+				}
 			}
 			.card_body {
 				.title {
@@ -113,7 +126,7 @@
 					align-items: center;
 					flex:none;
 					margin-left:0.8rem;
-					color: $ColorSubTxt;
+					color: #a4a6aa;
 					&::before {
 						content:"";
 						display:block;
@@ -124,28 +137,17 @@
 					}
 				}
 			}
-			&.type1 {
-				.card_head {
-					position:absolute;
-					left:1.6rem;
-					top:0.8rem;
-					width:calc(100% - 3.2rem);
-				}
-				.card_body {
-					padding-top:3rem;
-				}
-			}
-			&.type2 {
-				.card_head {
-					.make {
-						color:$ColorPlaylistMake;
-					}
-					.buy {
-						color:$ColorPlaylistBuy;
-					}
-					.recom {
-						color:$ColorPlaylistRecom;
-					}
+			.btn.text.buy {
+				padding:0;
+				&::before {
+					position: relative;
+					top:1px;
+					content:'';
+					display:block;
+					width:1.6rem;
+					height:1.6rem;
+					margin-right:0.2rem;
+					background-image: url('../img/icons_16_ic_addplaylist_orange.svg');
 				}
 			}
 		}
@@ -446,8 +448,8 @@
 
 // cube내 해당과정
 .card{
-    &.cube_parents{        
-        .card_inner{            
+    &.cube_parents{
+        .card_inner{
             padding:1.6rem;
             display: flex;
             align-items: center;
@@ -509,6 +511,6 @@
     .card.cube_parents{
         .card_inner{
             border-color: #44464a;
-        }        
+        }
     }
 }

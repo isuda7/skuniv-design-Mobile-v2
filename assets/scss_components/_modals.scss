@@ -1,4 +1,6 @@
-// Default
+///////////////////////////////////////////////////
+// Modal Default
+///////////////////////////////////////////////////
 .modal_wrap {
     display:none;
     position: fixed;
@@ -208,6 +210,8 @@
         }
     }
     .modal_content {
+        display:flex;
+        flex-direction: column;
         flex:0 1 auto;
         height:100%;
         overflow:auto;
@@ -477,4 +481,58 @@
 	.modal_content {
 		padding-bottom:3rem;
 	}
+}
+
+///////////////////////////////////////////////////
+// Toast
+///////////////////////////////////////////////////
+// Default
+.toast {
+    position:fixed;
+    left:$GapSideBase;
+    right:$GapSideBase;
+    bottom:$GapSideBase;
+    z-index:300;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:5.4rem;
+    padding:0 $GapSideBase;
+    border-radius: $RadiusLarge;
+    background-color: #44464a;
+    color:#fff ;
+    @include Shadow3;
+    .toast_txt {
+        flex:0 1 auto;
+        @include FontBody14;
+    }
+    .toast_btn {
+        margin-right:-1rem;
+        flex:none;
+        .btn.text.primary {
+            color:$ColorPrimaryLight;
+        }
+    }
+}
+
+// Interaction
+.toast {
+    visibility: hidden;
+    opacity: 0;
+    transform: transitionY(10%);
+    // transition: all 0.2s ease;
+    &.is_active {
+        opacity: 1;
+        transform: transitionY(0%);
+    }
+    &.is_visible {
+        visibility: visible;
+    }
+}
+
+// Has Floating
+.sub_wrapper.has_floating {
+    .toast {
+        bottom:9.4rem;
+    }
 }

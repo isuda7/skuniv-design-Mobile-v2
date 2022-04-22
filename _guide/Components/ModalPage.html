@@ -89,6 +89,26 @@
                 $("body").removeClass("is_dimmed");
             }});
         }
+
+        // ToastOpen
+        function ToastOpen(id){
+            // addClass 이후 Transition
+            $(id).addClass("is_visible");
+            $(id).addClass("is_active");
+
+            gsap.fromTo($(id), {opacity:0, y:'20%'}, {opacity: 1, y:'0%', duration: 0.2, onComplete:()=> {
+                // Open 후에 자동으로 사라지게 할 경우
+                setTimeout(function(){
+                    ToastClose(id);
+                }, 3000);
+            }});
+        }
+        function ToastClose(id){
+            gsap.fromTo($(id), {opacity: 1, y:'0%'}, {opacity:0, y:'20%', duration: 0.2, onComplete:()=> {
+                // Transition 이후 removeClass처리
+                $(id).removeClass("is_visible");
+            }});
+        }
     </script>
 </head>
 
@@ -111,6 +131,11 @@
                 <h2 class="g_h2">Modal Fullpopup</h2>
                 <div class="g_preview">
                     <button type="button" class="btn basic primary" onclick="ModalFPOpen('#ModalFullpopup')">Open Fullpopup</button>
+                </div>
+                <h3 class="g_h3">Toast Popup</h3>
+                <div class="g_preview">
+                    <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast1')">Toast 1</button>
+                    <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast2')">Toast 2</button>
                 </div>
             </section>
         </div>
@@ -184,22 +209,24 @@
                 <button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">ModalFullpopup</h3>
             </div>
-            <div class="modal_sticky">
-				<div class="tab style2">
-					<div class="tab_list">
-						<button type="button" class="tab_item is_active">Tab 1</button>
-						<button type="button" class="tab_item">Tab 2</button>
-						<button type="button" class="tab_item">Tab 3</button>
-					</div>
-				</div>
-            </div>
             <div class="modal_content">
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
+                <div class="modal_sticky">
+                    <div class="tab style2">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item is_active">Tab 1</button>
+                            <button type="button" class="tab_item">Tab 2</button>
+                            <button type="button" class="tab_item">Tab 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_panel">
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                </div>
             </div>
             <div class="modal_footer">
                 <div class="page_action">
@@ -211,6 +238,22 @@
         <div class="dimmer" aria-hidden="true"></div>
     </div>
     <!-- // Modal FullPopup -->
+
+    <!-- Toast -->
+    <div id="Toast1" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+        <div class="toast_btn">
+            <button type="button" class="btn text primary">더 보기</button>
+        </div>
+    </div>
+    <!-- // Toast -->
+
+    <!-- Toast -->
+    <div id="Toast2" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+    </div>
+    <!-- // Toast -->
+
 </body>
 
 </html>

@@ -14,21 +14,18 @@
 ///////////////////////////////////////////////////
 .profile_head {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width:100%;
-    padding-top:2.4rem;
-    padding-bottom:2.0rem;
-
+    padding:2.4rem 1rem 2rem 1rem;
     .avata_area {
         flex:none;
         width:8rem;
         height:8rem;
-        margin-left:1rem;
         margin-right:2rem;
     }
     .title_area {
-        flex:0 1 auto;
-        width:100%;
+        width:calc(100% - 10rem);
         overflow: hidden;
         .title {
             flex:0 1 auto;
@@ -39,6 +36,9 @@
                 flex:0 1 auto;
                 @include FontTitle18;
                 @include Ellipsis1;
+            }
+            .btn {
+                margin-left:0.4rem;
             }
             .btn.ico.change {
                 &::before {
@@ -74,6 +74,11 @@
             }
         }
     }
+    .tag_area {
+        margin-top:2rem;
+    }
+
+    // 편집하기
     .avata_edit {
         position: relative;
         margin:auto;
@@ -137,5 +142,12 @@
         & + p {
             margin-top:2rem;
         }
+    }
+}
+
+.modal_profile {
+    .tab_panel {
+        padding-top:0.4rem;
+        padding-bottom:4rem;
     }
 }
