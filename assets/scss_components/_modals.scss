@@ -31,10 +31,13 @@
         width:100%;
     }
     .modal_sticky {
-        position: relative;
+        position: sticky;
+        top:0;
         z-index: 200;
         flex:none;
-        width:100%;
+        margin-left:-$GapSideBase;
+        margin-right:-$GapSideBase;
+        width:calc(100vw - $GapSideBase - $GapSideBase);
         background-color: #fff;
     }
     .modal_container {
@@ -79,6 +82,9 @@
 
     &.theme_dark {
         background-color: #000;
+        .modal_sticky {
+            background-color: #000;
+        }
         .btn.ico {
             &.close::before {
                 background-image:url('../img/icons_24_ic_close_white.svg');
@@ -174,6 +180,7 @@
     .modal_content {
         flex:0 1 auto;
         height:100%;
+        overflow-x:hidden;
         overflow:auto;
         padding:0 $GapSideBase;
     }
