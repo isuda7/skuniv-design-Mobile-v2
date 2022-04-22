@@ -1003,6 +1003,7 @@
                     .comment_write {
 						margin-left:3rem;
 						display: flex;
+						align-items: center;
 						&::before {
 							content:"";
 							position: relative;
