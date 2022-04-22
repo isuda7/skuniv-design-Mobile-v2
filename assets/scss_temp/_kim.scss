@@ -392,6 +392,35 @@
                 background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
             }
         }
-
+    }
+}
+//플레이어 배속설정
+.modal_videoplayersetspeed {
+    padding-bottom:4rem;
+    .radio.set_speed + .radio.set_speed {
+        margin-top:0.8rem;
+    }
+    .radio.set_speed {
+        @include FontBody16;
+        min-height:4.8rem;
+        width:100%;
+        display: flex;;
+        input, label {
+            align-items: center;
+        }
+        label:after {
+            position:static;
+            width:1.6rem;
+            height:1.6rem;
+            margin-left:0.8rem;
+        }
+        input:checked ~ label {
+            border-color: $ColorPrimary;
+            color:$ColorPrimary;
+            font-weight: 700;
+        }
+        input:checked ~ label:after {
+            background: url('../img/icons_16_ic_check_primary.svg');
+        }
     }
 }
