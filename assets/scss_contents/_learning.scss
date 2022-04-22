@@ -1149,7 +1149,13 @@
 					background-image: url("../../assets/img/icons_16_ic_experiential_grey_06.svg");
 				}
 			}
-			
+			&.task{
+				&::before{
+					width : 1.6rem;
+					height : 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
+				}
+			}
             & + .label {
                 margin-left:1.6rem;
             }
@@ -1164,7 +1170,16 @@
 			@include FontBody12;
 			color :$ColorSubTxt;
 		}
+		.learning_codition{
+			padding-top : 2.4rem;
+			.c_txt {
+				padding-top: 0.4rem;
+				@include FontBody14;
+				color : #cbcdcf;
+			}
+		}
 	}
+	
 
 }
 .theme_dark {

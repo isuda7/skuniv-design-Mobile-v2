@@ -100,3 +100,10 @@
 		padding-top:0;
 	}
 }
+
+.tab_panel .task_board{
+	margin-left : - $GapSideBase;
+	margin-right : - $GapSideBase;
+	padding-left : $GapSideBase;
+	padding-right : $GapSideBase;
+}
