@@ -394,8 +394,8 @@
         }
     }
 }
-//플레이어 배속설정
-.modal_videoplayersetspeed {
+//플레이어 배속설정, 자막설정
+.modal_videoplayersetspeed, .modal_videoplayersetsubtitle {
     padding-bottom:4rem;
     .radio.set_speed + .radio.set_speed {
         margin-top:0.8rem;
