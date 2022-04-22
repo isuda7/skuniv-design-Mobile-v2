@@ -1093,6 +1093,20 @@
                     height:1.6rem;
                 }
             }
+			&.classroom{
+				&::before{
+					width : 1.6rem;
+					height: 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_classroom_grey_06.svg");
+				}
+			}
+			&.elearning{
+				&::before{
+					width : 1.6rem;
+					height: 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_e_learning_grey_06.svg");
+				}
+			}
             & + .label {
                 margin-left:1.6rem;
             }
