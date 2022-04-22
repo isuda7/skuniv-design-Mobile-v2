@@ -371,9 +371,10 @@
 	align-items: center;
 	position: relative;
 	flex-wrap: wrap;
-	padding: 1.6rem;
+	margin-top:0.8rem;
 	border: 1px solid #f2f3f5;
 	border-radius: $RadiusLarge;
+	@include Shadow2;
 	.item_check {
 		width:3.2rem;
 		flex:none;
@@ -384,6 +385,7 @@
 		flex-wrap: wrap;
 		width:100%;
 		align-items: center;
+		padding: 1.6rem;
 		.item_thumb {
 			width: 5.2rem;
 			height: 5.2rem;
@@ -434,15 +436,57 @@
 		}
 	}
 	.item_foot {
-		flex: none;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		display: block;
 		margin-top: 1.6rem;
 		@include FontBody14;
 		color: $ColorSubTxt;
+		overflow: hidden;
+		.desc + .info_area {
+			margin-top: 1.2rem;
+		}
+		.info_area {
+			display: flex;
+			align-items: center;
+			width:100%;
+			overflow: hidden;
+			@include FontBody13;
+			&::before {
+				content:'';
+				position: relative;
+				top:1px;
+				display:flex;
+				width:1.6rem;
+				height:1.6rem;
+				margin:0 0.4rem 0 0;
+				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+			}
+			.username {
+				flex: 0 1 auto;
+				@include Ellipsis1;
+			}
+			.member {
+				display: flex;
+				align-items: center;
+				flex: none;
+				margin-right:1rem;
+				&::before {
+					content: "";
+					display: block;
+					width: 1px;
+					height: 1rem;
+					margin-right: 0.8rem;
+					margin-left: 0.8rem;
+					background-color: #CBCDCF;
+				}
+			}
+			.ico.lock {
+				flex:none;
+				margin-left: auto;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url('../img/icons_16_ic_lock_black.svg');
+			}
+		}
 	}
 }
 

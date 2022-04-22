@@ -38,7 +38,7 @@
 
     <!-- Modal FullPopup -->
     <div class="modal_wrap is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup modal_profile">
+        <div class="modal modal_fullpopup modal_profile has_sticky">
             <div class="modal_header">
 				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">프로필</h3>
@@ -69,28 +69,131 @@
 				</div>
 				<!-- // 프로필 헤더 -->
 
-
 				<div class="modal_sticky">
 					<div class="tab style2">
 						<div class="tab_list">
-							<button type="button" class="tab_item is_active">플레이리스트</button>
-							<button type="button" class="tab_item">커뮤니티</button>
+							<button type="button" class="tab_item">플레이리스트</button>
+							<button type="button" class="tab_item is_active">커뮤니티</button>
 							<button type="button" class="tab_item">피드</button>
 						</div>
 					</div>
 				</div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-            </div>
-            <div class="modal_footer">
-                <div class="page_action">
-                    <button type="button" class="btn basic">Default</button>
-                    <button type="button" class="btn basic primary">Primary</button>
-                </div>
+				<div class="tab_panel bg_grey">
+					<!-- 게시물 상태정보 -->
+                    <div class="board_toolbar">
+						<div class="board_count">
+							<span class="total">총</span>
+                            <em class="count">20</em>
+                            <span class="unit">개</span>
+                        </div>
+                    </div>
+					<!-- // 게시물 상태정보 -->
+
+					<!-- 플레이리스트 -->
+					<div class="card_list">
+						<div class="card community">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="thumb" aria-hidden="true"
+										style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+										alt=""></span>
+								</div>
+								<div class="item_title">
+									<p class="sub_txt">카테고리명</p>
+									<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+											Community</strong></p>
+								</div>
+								<div class="item_foot">
+									<p class="desc">
+										SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+									</p>
+									<div class="info_area">
+										<span class="username">일이삼사오육</span>
+										<span class="member">멤버 000</span>
+										<i class="ico lock"><span class="blind">비밀글</span></i>
+									</div>
+								</div>
+							</a>
+							<div class="item_util">
+								<div class="checkbox rating">
+									<input type="checkbox" name="rating" id="rating1" tabindex="0" class="hidden" />
+									<label for="rating1"><span class="blind">관심등록</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="card community">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="thumb" aria-hidden="true"
+										style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+										alt=""></span>
+								</div>
+								<div class="item_title">
+									<p class="sub_txt">카테고리명</p>
+									<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+											Community</strong></p>
+								</div>
+								<div class="item_foot">
+									<p class="desc">
+										SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+									</p>
+									<div class="info_area">
+										<span class="username">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+										<span class="member">멤버 000</span>
+										<i class="ico lock"><span class="blind">비밀글</span></i>
+									</div>
+								</div>
+							</a>
+							<div class="item_util">
+								<div class="checkbox rating">
+									<input type="checkbox" name="rating" id="rating2" tabindex="0" class="hidden" checked />
+									<label for="rating2"><span class="blind">관심등록</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="card community">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="thumb" aria-hidden="true"
+										style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+										alt=""></span>
+								</div>
+								<div class="item_title">
+									<p class="sub_txt">카테고리명</p>
+									<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+											Community</strong></p>
+								</div>
+								<div class="item_foot">
+									<p class="desc">
+										SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+									</p>
+									<div class="info_area">
+										<span class="username">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+										<span class="member">멤버 000</span>
+										<i class="ico lock"><span class="blind">비밀글</span></i>
+									</div>
+								</div>
+							</a>
+							<div class="item_util">
+								<div class="checkbox rating">
+									<input type="checkbox" name="rating" id="rating3" tabindex="0" class="hidden" />
+									<label for="rating3"><span class="blind">관심등록</span></label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- // 플레이리스트 -->
+				</div>
+
+				<!-- Toast -->
+				<div class="toast is_active is_visible">
+					<p class="toast_txt">플레이리스트를 담았습니다.</p>
+					<div class="toast_btn">
+						<button type="button" class="btn text primary">보러가기</button>
+					</div>
+				</div>
+				<!-- // Toast -->
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
