@@ -308,7 +308,7 @@
                         }
                     }
                     .item_title {
-                        
+
                         .sub_txt {
                             color:#a4a6aa;
                             @include FontBody12;
@@ -334,59 +334,100 @@
         padding-bottom:2rem;
         margin-bottom:0rem;
     }
-    .post_sec + .post_sec {
+    .post + .post {
         margin-top:2rem;
     }
 }
-.comment_menu {
-    padding:1.6rem 2rem;
-    border-top:1px solid #33353c;
-    display: flex;
-    .left{
-        display: flex;
-        width:calc(100% - 6.2rem);
-        .avata {
-            width:3.2rem;
-            height:3.2rem;
+.comment_floating {
+    height:6rem;
+
+    // 코멘트 메세지
+    .comment_alert {
+        position: absolute;
+        left: 0;
+        bottom:100%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        height:4rem;
+        width:100%;
+        padding:0 $GapSideBase;
+        background-color: #44464a;
+        &.is_visible {
+            display:flex;
         }
-        .comment_form {
-            margin:0 1rem 0 2rem;
-            .dark_form {
-                background-color: #000;
-                border:0;
-                height:3.2rem;
-                padding:inherit;
-            }   
-        }
-    }    
-    .right {
-        width: 6.2rem;
-        float:right;
-        .attach {
-            position: relative;
-            top:0.4rem;
-            &::after {
-                content:"";
-                position:relative;
-                display:inline-block;
-                width:2.4rem;
-                height:2.4rem;
-                margin-right:1rem;
-                background-image: url('../img/icons_24_ic_image_grey_05.svg');
-            }
-        }
-        .send {
-            position: relative;
-            top:0.4rem;
-            &::after {
-                content:"";
-                position:relative;
-                display:inline-block;
-                width:2.4rem;
-                height:2.4rem;
-                background-image: url('../img/icons_24_ic_send_inactive_grey_03.svg');
+        .btn.ico.close {
+            width:2rem;
+            height:2rem;
+            padding:0;
+            &::before {
+                width:2rem;
+                height:2rem;
+                background-image:url('../img/icons_20_ic_clear_grey_04.svg');
             }
         }
 
+    }
+
+    // 코멘트 입력
+    .comment_body {
+        position:fixed;
+        left:0;
+        bottom:0;
+        z-index: 100;
+        width:100%;
+        height:inherit;
+        padding:0 2rem;
+        border-top:1px solid #33353c;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        .left{
+            display: flex;
+            width:100%;
+            flex:1 1 auto;
+            .avata {
+                width:3.2rem;
+                height:3.2rem;
+            }
+            .comment_form {
+                margin:0 1rem 0 2rem;
+                .dark_form {
+                    background-color: #000;
+                    border:0;
+                    height:3.2rem;
+                    padding:inherit;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            flex:none;
+            .btn + .btn {
+                margin-left:1rem;
+            }
+            .btn.attach {
+                position: relative;
+                &::after {
+                    content:"";
+                    position:relative;
+                    display:inline-block;
+                    width:2.4rem;
+                    height:2.4rem;
+                    background-image: url('../img/icons_24_ic_image_grey_05.svg');
+                }
+            }
+            .btn.send {
+                &::before {
+                    width:2.4rem;
+                    height:2.4rem;
+                    background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+                }
+                &.is_active::before {
+                    background-image: url('../img/icons_24_ic_send_active.svg');
+                }
+            }
+        }
     }
 }

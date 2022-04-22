@@ -2,9 +2,10 @@
 .tooltip {
     position: relative;
     display:inline-flex;
+    z-index:10;
 
     .tooltip_body {
-        visibility: hidden;
+        display: none;
         position:absolute;
         min-width:10rem;
         min-height:4rem;
@@ -26,13 +27,17 @@
     &.transition {
         .tooltip_body {
             opacity: 0;
-            transition: all 0.2s ease;
+            // transition: all 0.2s ease;
         }
     }
     &.is_active {
         .tooltip_body {
             opacity: 1;
-            visibility: visible;
+        }
+    }
+    &.is_visible {
+        .tooltip_body {
+            display: block;
         }
     }
 }

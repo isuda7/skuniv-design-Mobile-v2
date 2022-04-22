@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        function learningThumb(){
+            // 타이틀 라인수만큼 스타일 구분하기
+            var TitleEl = document.querySelector(".overay_area .title");
+            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+            var Remain = TitleHeight / TitleLineHeight;
+            TitleEl.classList.add("line"+Remain);
+        }
+        $(function(){
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+        });
+    </script>
+</head>
+<body>
+<div class="sub_wrapper theme_dark has_sticky has_comment gap_none">
+	<!-- Header -->
+    <header class="header">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1><strong class="blind">학습과정</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico more"><span class="blind">메뉴</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container learning_container">
+        <div class="content_head">
+            <!-- 학습영상 -->
+            <div class="cube_player_sec">
+                <!-- Player영역 -->
+                <div class="cube_player">
+                    <img src="../../assets/img/demo/thumb-01.png" alt="">
+                    <div class="player_timeline">
+                        <input type="range" class="timeline_range" value="0" min="0" max="100" />
+                    </div>
+                </div>
+                <!-- // Player영역 -->
+            </div>
+            <!-- //학습영상 -->
+        </div>
+        <div class="content_body contents_style is_hidden">
+            <!-- 페이지 컨텐츠 영역 -->
+            <!-- // 페이지 컨텐츠 영역 -->
+        </div>
+        <div class="content_body pad_0">
+            <!-- 코멘트 상세팝업 -->
+            <div class="popup_comment theme_dark">
+                <div class="popup_head">
+                    <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                    <h3 class="popup_tit">코멘트</h3>
+                </div>
+                <div class="popup_body">
+                    <!-- 게시물 본문 -->
+                    <div class="post_detail">
+                        <div class="post">
+                            <div class="post_head">
+                                <div class="left">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+                                    <strong class="user_id">아린(나)</strong>
+                                    <span class="write_time">8분전</span>
+                                </div>
+                            </div>
+                            <div class="post_body">
+                                <div class="post_main">
+                                    <div class="post_txt">
+                                        <!-- CSS 중간말줄임 표현불가 -->
+                                        <p class="txt">
+                                            최대7줄까지 보입니다. 최대7줄까지 보입니다.
+                                            <!-- 7줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
+                                        </p>
+                                    </div>
+                                    <div class="post_btn">
+                                        <div class="left">
+                                            <p class="comment">답글&nbsp;<span class="no">4</span></p>
+                                        </div>
+                                        <div class="right">
+                                            <div class="btn_wrap">
+                                                <button type="button" class="btn ico like"><span class="blind">좋아요</span></button>
+                                                <p class="like_no">25</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 게시물 본문 -->
+                    <!-- 게시물 상세 -->
+                    <div class="post_list">
+                        <div class="flex_area centered">
+                            <div class="no_data">
+                                <p>작성된 답글이 없습니다.</p>
+                                <p>첫 답글을 남겨보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 게시물 상세 -->
+                </div>
+
+                <!-- Toast와 코멘트는 popup_body영역 밖에 있어야 함. -->
+                <!-- Toast -->
+                <div class="toast">
+                    <p class="toast_txt">답글이 삭제되었습니다.</p>
+                </div>
+                <!-- // Toast -->
+
+                <!-- 코멘트 -->
+                <div class="comment_floating">
+                    <div class="comment_body">
+                        <div class="comment_alert">
+                            <p class="txt">아란님에게 답글 남기는 중...</p>
+                            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                        </div>
+                        <div class="left">
+                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+                            <p class="comment_form">
+                                <label for="commentForm" class="tit blind">코멘트 입력</label>
+                                <input type="text" id="commentForm" value="좋은 정보 주셔서 감사" placeholder="이야기를 나눠보세요." class="input basic dark_form"/>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                            <button type="button" class="btn ico send is_active"><span class="blind">보내기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 코멘트 -->
+            </div>
+            <!-- //코멘트 상세팝업 -->
+
+
+        </div>
+    </main>
+    <!-- // Container -->
+
+</div>
+</body>
+</html>

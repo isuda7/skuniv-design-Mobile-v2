@@ -120,7 +120,7 @@ function RangeMultiple(){
 function tooltip() {
 	$('.tooltip > .btn').each(function(){
 		$(this).on('click', function(){
-			$(this).parent('.tooltip').toggleClass('is_active');
+			$(this).parent('.tooltip').toggleClass('is_visible');
 		})
 	})
 }
