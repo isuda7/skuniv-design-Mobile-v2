@@ -339,9 +339,14 @@
     }
 }
 .comment_menu {
+    position: fixed;
+    width:100%;
+    bottom:0;
+    right:0;
     padding:1.6rem 2rem;
     border-top:1px solid #33353c;
     display: flex;
+    background-color: #000;
     .left{
         display: flex;
         width:calc(100% - 6.2rem);
@@ -384,7 +389,7 @@
                 display:inline-block;
                 width:2.4rem;
                 height:2.4rem;
-                background-image: url('../img/icons_24_ic_send_inactive_grey_03.svg');
+                background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
             }
         }
 
