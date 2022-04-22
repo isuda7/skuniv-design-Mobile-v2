@@ -41,6 +41,53 @@
     border:0;
 }
 
+//찜하기
+.page_action.pick {
+    display: block;
+    .pick_btn {
+        display:flex;
+        padding:1.8rem 2rem;
+        border-radius: $RadiusLarge;
+        color:#fff ;
+        background-color: #44464a;
+        margin-bottom:2rem;
+        @include Shadow3;
+        .pick_txt {
+            width:70%;
+            @include FontBody14;
+        }
+        .pick_more {
+            width:30%;
+            .btn_more {
+                display: block;
+                color:#ffa394;
+                font-weight: 400;
+                height:inherit;
+                padding:inherit;
+                float: right;
+                @include FontBody14;
+            }
+        }
+    }
+    .floating_btn {
+        .btn {
+            width:100%;
+        }
+    }
+}
+
+//찜하기 더보기
+.pick_morepage {
+    .pick_moretxt {
+        @include FontBody16;
+        display: block;
+        padding:1.5rem 0;
+        width:100%;
+        text-align: left;
+        font-weight: 700;
+    }
+}
+
 //플레이리스트 추가
 .filter_body {
     .filter_list {
@@ -261,7 +308,7 @@
                         }
                     }
                     .item_title {
-
+                        
                         .sub_txt {
                             color:#a4a6aa;
                             @include FontBody12;
@@ -285,8 +332,61 @@
     }
     .contentcomment_page {
         padding-bottom:2rem;
+        margin-bottom:0rem;
     }
     .post_sec + .post_sec {
         margin-top:2rem;
+    }
+}
+.comment_menu {
+    padding:1.6rem 2rem;
+    border-top:1px solid #33353c;
+    display: flex;
+    .left{
+        display: flex;
+        width:calc(100% - 6.2rem);
+        .avata {
+            width:3.2rem;
+            height:3.2rem;
+        }
+        .comment_form {
+            margin:0 1rem 0 2rem;
+            .dark_form {
+                background-color: #000;
+                border:0;
+                height:3.2rem;
+                padding:inherit;
+            }   
+        }
+    }    
+    .right {
+        width: 6.2rem;
+        float:right;
+        .attach {
+            position: relative;
+            top:0.4rem;
+            &::after {
+                content:"";
+                position:relative;
+                display:inline-block;
+                width:2.4rem;
+                height:2.4rem;
+                margin-right:1rem;
+                background-image: url('../img/icons_24_ic_image_grey_05.svg');
+            }
+        }
+        .send {
+            position: relative;
+            top:0.4rem;
+            &::after {
+                content:"";
+                position:relative;
+                display:inline-block;
+                width:2.4rem;
+                height:2.4rem;
+                background-image: url('../img/icons_24_ic_send_inactive_grey_03.svg');
+            }
+        }
+
     }
 }
