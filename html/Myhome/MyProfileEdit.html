@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>프로필 편집</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+        <main role="main" class="container profile_container profileView_page">
+			<div class="content_body">
+				<div class="profile_head">
+					<div class="avata_edit">
+                        <span class="avata" style="background-image:url('../../assets/img/icon_80_ic_default_profile.svg')"></span>
+                        <button type="button" class="btn ico edit"><span class="blind">편집</span></button>
+                    </div>
+				</div>
+				<div class="divider style1 out_sec"></div>
+
+				<div class="profile_form">
+					<p>
+						<label for="profileForm1" class="tit">이름</label>
+						<input type="text" id="profileForm1" class="input basic" value="세종대왕" disabled />
+					</p>
+					<p>
+						<label for="profileForm2" class="tit">소속</label>
+						<input type="text" id="profileForm2" class="input basic" value="세종대왕" disabled />
+					</p>
+					<p>
+						<label for="profileForm3" class="tit">닉네임<em class="required">*</em></label>
+						<input type="text" id="profileForm3" class="input basic" value="햇님" />
+					</p>
+					<p>
+						<label for="profileForm4" class="tit">자기소개<em class="required">*</em></label>
+                        <textarea id="profileForm4" rows="4" cols="10" class="textarea basic">태그로노출되네요</textarea>
+					</p>
+				</div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">저장</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

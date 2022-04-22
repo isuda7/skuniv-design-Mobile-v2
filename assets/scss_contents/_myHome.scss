@@ -7,6 +7,137 @@
 ///////////////////////////////////////////////////
 // Myhome Page
 ///////////////////////////////////////////////////
-.Myhome {
-    display: block;
+
+
+///////////////////////////////////////////////////
+// My Profile
+///////////////////////////////////////////////////
+.profile_head {
+    display: flex;
+    align-items: center;
+    width:100%;
+    padding-top:2.4rem;
+    padding-bottom:2.0rem;
+
+    .avata_area {
+        flex:none;
+        width:8rem;
+        height:8rem;
+        margin-left:1rem;
+        margin-right:2rem;
+    }
+    .title_area {
+        flex:0 1 auto;
+        width:100%;
+        overflow: hidden;
+        .title {
+            flex:0 1 auto;
+            display:flex;
+            align-items: center;
+            overflow: hidden;
+            .name {
+                flex:0 1 auto;
+                @include FontTitle18;
+                @include Ellipsis1;
+            }
+            .btn.ico.change {
+                &::before {
+                    width:2.4rem;
+                    height:2.4rem;
+                    background-image: url('../img/icons_24_ic_changename_black.svg');
+                }
+            }
+        }
+        .company {
+            margin-top:0.4rem;
+            @include FontBody14;
+            color:$ColorSubTxt;
+        }
+        .follow {
+            display:flex;
+            align-items: center;
+            margin-top:0.4rem;
+            .split {
+                display:block;
+                width:1px;
+                height:1rem;
+                margin:0 1.2rem;
+                background-color: #e3e4e5;
+            }
+            .tit {
+                @include FontBody14;
+            }
+            .count {
+                margin-left:0.4rem;
+                @include FontTitle14;
+                color:$ColorPrimary;
+            }
+        }
+    }
+    .avata_edit {
+        position: relative;
+        margin:auto;
+        width:8rem;
+        height:8rem;
+        .btn.ico.edit {
+            position: absolute;
+            right:0;
+            bottom:0;
+            &::before {
+                width: 2.4rem;
+                height:2.4rem;
+                background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
+            }
+        }
+    }
+}
+
+.profile_view {
+    margin-top:0.5rem;
+    p {
+        display:flex;
+        align-items: center;
+        width: 100%;
+        padding:2rem 0 1rem 0;
+        .tit {
+            flex:none;
+            display:block;
+            width:11rem;
+            margin-bottom:auto;
+            @include FontBody14;
+            color:$ColorSubTxt;
+        }
+        .txt {
+            flex:0 1 auto;
+            display:block;
+            width:100%;
+            margin-bottom:auto;
+            @include FontBody14;
+            color:#000;
+        }
+        & + p {
+            border-top:1px solid #e3e4e5;
+        }
+    }
+}
+
+.profile_form {
+    margin-top:2.4rem;
+    p {
+        width: 100%;
+        .tit {
+            flex:none;
+            display:block;
+            width:11rem;
+            margin-bottom:0.8rem;
+            @include FontBody14;
+            color:$ColorSubTxt;
+        }
+        .textarea.basic {
+            height:11.2rem;
+        }
+        & + p {
+            margin-top:2rem;
+        }
+    }
 }
