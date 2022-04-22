@@ -274,7 +274,7 @@
 			display:block;
 			width:1.6rem;
 			height:1.6rem;
-			background-image : url("../../assets/img/icons_16_ic_chervron_right_grey_05.svg");
+			background-image : url("../img/icons_16_ic_chervron_right_grey_05.svg");
 			margin-left:1.6rem;
 		}
 	}
@@ -520,26 +520,26 @@
         }
         .item_complete{
 			&::before{
-				background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+				background-image: url('../img/icons_16_ic_time_grey_05.svg');
 			}
 			&.done::before{
-				background-image: url('../../assets/img/icons_16_ic_user_grey_05.svg');
+				background-image: url('../img/icons_16_ic_user_grey_05.svg');
 			}
         }
         .item_part.basic::before{
-            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
         }
         .item_part.intermediate::before{
-            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
         }
         .item_part.advanced::before{
-            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
         }
         .item_part.expert::before{
-            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
         }
         .item_contact::before{
-            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
         }
     }
 }
@@ -721,7 +721,7 @@
 				top:calc(50% - 0.2rem);
 				width : 1.2rem;
 				height: 1.2rem;
-				background-image : url('../../assets/img/icons_12_ic_chervron_down_grey_05.svg');
+				background-image : url('../img/icons_12_ic_chervron_down_grey_05.svg');
 				background-color: inherit;
 			}
 		}
@@ -797,22 +797,22 @@
             background-repeat: no-repeat;
         }
         .item_complete::before{
-            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+            background-image: url('../img/icons_16_ic_time_grey_05.svg');
         }
         .item_part.basic::before{
-            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
         }
         .item_part.intermediate::before{
-            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
         }
         .item_part.advanced::before{
-            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
         }
         .item_part.expert::before{
-            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+            background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
         }
         .item_contact::before{
-            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
         }
     }
 
@@ -913,12 +913,19 @@
 }
 
 //게시물
-.post_sec {
+.post {
+	&_list {
+		padding-top:1.2rem;
+	}
+	& + .post {
+		margin-top:2rem;
+	}
     .post_head {
 		display: flex;
         .left {
             width:70%;
             display: flex;
+			align-items: flex-start;
             .avata {
                 width:3.2rem;
                 height:3.2rem;
@@ -927,13 +934,12 @@
             .user_id {
                 @include FontBody13;
                 font-weight: 700;
-                margin: 0.3rem 0.8rem 0
+                margin: 0 0.8rem 0
             }
             .write_time {
                 @include FontBody13;
                 color: #75777B;
 				display: flex;
-                margin-top:0.3rem;
 				&::after {
 					content:"";
 					position: relative;
@@ -943,21 +949,52 @@
 					height:1.6rem;
 				}
 				&.pin::after{
-					background-image: url('../../assets/img/icons_16_ic_pin_grey_06.svg');
+					background-image: url('../img/icons_16_ic_pin_grey_06.svg');
 				}
             }
         }
         .right {
-            width:30%;
-			.btn {
+			flex:none;
+            margin-left:auto;
+			.btn.ico.more {
+				width:3.2rem;
+				height:3.2rem;
 				padding:0;
-				float:right;
-				&::after {
-					content:"";
-					display:block;
+				margin-right:-0.5rem;
+				&::before {
 					width:2rem;
 					height:2rem;
-					background-image : url('../../assets/img/icons_20_ic_more_grey_04.svg');
+					background-image : url('../img/icons_20_ic_more_grey_04.svg');
+				}
+			}
+			.tooltip_body {
+				width:15.2rem;
+				background-color: #fff;
+				border-radius: $RadiusLarge;
+				border:1px solid #f2f3f5;
+				.btn {
+					width:100%;
+					height:4rem;
+					justify-content: flex-start;
+					padding:0 1.2rem 0 1.4rem;
+					color: #44464a;
+					& + .btn {
+						border-top:1px solid #f2f3f5;
+					}
+					&::before {
+						content:'';
+						display:block;
+						width:1.6rem;
+						height:1.6rem;
+						margin-right:0.7rem;
+						background: no-repeat center center / 100% auto;
+					}
+					&.edit::before {
+						background: url('../img/icons_16_ic_edit_grey_07.svg');
+					}
+					&.remove::before {
+						background: url('../img/icons_16_ic_delete_grey_07.svg');
+					}
 				}
 			}
         }
@@ -967,10 +1004,9 @@
         .post_main {
             border-radius: 0 8px 8px 8px;
             @include FontBody14;
-            padding:2rem;
+            padding:1.6rem;
             .post_txt {
-				border-bottom:1px solid #1C1D1F;
-				padding-bottom:1.5rem;
+				margin-bottom:1.5rem;
                 position: relative;
                 .txt {
                     @include Ellipsis7;
@@ -988,12 +1024,14 @@
             .post_btn {
 				width:100%;
                 padding:1.5rem 0 0;
+				border-top:1px solid #1C1D1F;
 				color:#75777B;
 				@include FontBody12;
 				display: flex;
                 .left {
 					width:75%;
                     display: flex;
+					align-items: center;
                     .comment {
                         .no {
 							color:#FF664D;
@@ -1011,25 +1049,26 @@
 							width: 1.6rem;
 							height:1.6rem;
 							margin-right:0.5rem;
-							background-image: url('../../assets/img/icons_16_ic_reply_grey_05.svg');
+							background-image: url('../img/icons_16_ic_reply_grey_05.svg');
 						}
                     }
                 }
                 .right {
 					width:25%;
 					display: flex;
+					margin-left:auto;
 					justify-content: flex-end;
 					.btn_wrap {
 						display: flex;
-						.like {
-							position:relative;
+						align-items: center;
+						.btn.like::before {
 							width: 1.6rem;
 							height: 1.6rem;
-							background-image: url("../../assets/img/icons_16_ic_like_off_grey_06.svg");
-							margin-top:0.1rem;
-							&.is_active{
-								background-image : url("../../assets/img/icons_16_ic_like_on.svg");
-							}
+							background-image: url("../img/icons_16_ic_like_off_grey_06.svg");
+							margin-top:1px;
+						}
+						.btn.like.is_active::before {
+							background-image : url("../img/icons_16_ic_like_on.svg");
 						}
 						.like_no {
 							margin-left:0.5rem;
@@ -1040,8 +1079,53 @@
         }
     }
 }
+
+// 게시물 상세
+.post_detail {
+	.post {
+		padding:1.6rem $GapSideBase 0 $GapSideBase;
+		.post_head {
+			.left .avata {
+				width:2rem;
+				height:2rem;
+			}
+		}
+		.post_body {
+			padding-left:0;
+			.post_main {
+				margin-top:1.2rem;
+				padding:0;
+				.post_btn {
+					display:flex;
+					align-items: center;
+					padding:0;
+					margin-top:3.2rem;
+					height:5rem;
+					.right {
+						.btn.like::before {
+							width: 2.4rem;
+							height: 2.4rem;
+							background-image: url("../img/icons_24_ic_like_off_white.svg");
+							margin-top:1px;
+						}
+						.btn.like.is_active::before {
+							background-image : url("../img/icons_24_ic_like_on_white.svg");
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.popup_comment {
+	.post_list {
+		padding:2rem $GapSideBase;
+		background-color: #151617;
+	}
+}
+
 .theme_dark {
-    .post_sec {
+    .post {
 		.post_head {
 			.left {
 				.user_id {
@@ -1050,7 +1134,7 @@
 			}
 			.right {
 				.btn::before{
-					background-image: url('../../assets/img/icons_20_ic_more_grey_06.svg');
+					background-image: url('../img/icons_20_ic_more_grey_06.svg');
 				}
 			}
 			}
@@ -1064,7 +1148,7 @@
 					}
 				}
 			}
-			
+
 		}
 	}
 }
@@ -1104,49 +1188,49 @@
 				&::before{
 					width : 1.6rem;
 					height: 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_classroom_grey_06.svg");
+					background-image: url("../img/icons_16_ic_classroom_grey_06.svg");
 				}
 			}
 			&.elearning{
 				&::before{
 					width : 1.6rem;
 					height: 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_e_learning_grey_06.svg");
+					background-image: url("../img/icons_16_ic_e_learning_grey_06.svg");
 				}
 			}
 			&.cohort{
 				&::before{
 					width: 1.6rem;
 					height : 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_cohort_grey_06.svg");
+					background-image: url("../img/icons_16_ic_cohort_grey_06.svg");
 				}
 			}
 			&.audio{
 				&::before{
 					width: 1.6rem;
 					height : 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_audio_grey_06.svg");
+					background-image: url("../img/icons_16_ic_audio_grey_06.svg");
 				}
 			}
 			&.webpage{
 				&::before{
 					width : 1.6rem;
 					height : 1.6rem;
-					background-image :url("../../assets/img/icons_16_ic_webpage_grey_06.svg");
+					background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
 				}
 			}
 			&.discussion{
 				&::before{
 					width : 1.6rem;
 					height : 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_discussion_grey_06.svg");
+					background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
 				}
 			}
 			&.experiential{
 				&::before{
 					width : 1.6rem;
 					height : 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_experiential_grey_06.svg");
+					background-image: url("../img/icons_16_ic_experiential_grey_06.svg");
 				}
 			}
 			&.task{
@@ -1164,7 +1248,7 @@
 	//info_area 하단에 url, 첨부 file 등등
 	.learning_attachment {
 		margin-top : 3.2rem;
-		
+
 		.l_guide{
 			padding-top : 1.4rem;
 			@include FontBody12;
@@ -1179,8 +1263,6 @@
 			}
 		}
 	}
-	
-
 }
 .theme_dark {
     .learning_subject {
