@@ -1121,6 +1121,35 @@
 					background-image: url("../../assets/img/icons_16_ic_cohort_grey_06.svg");
 				}
 			}
+			&.audio{
+				&::before{
+					width: 1.6rem;
+					height : 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_audio_grey_06.svg");
+				}
+			}
+			&.webpage{
+				&::before{
+					width : 1.6rem;
+					height : 1.6rem;
+					background-image :url("../../assets/img/icons_16_ic_webpage_grey_06.svg");
+				}
+			}
+			&.discussion{
+				&::before{
+					width : 1.6rem;
+					height : 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_discussion_grey_06.svg");
+				}
+			}
+			&.experiential{
+				&::before{
+					width : 1.6rem;
+					height : 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_experiential_grey_06.svg");
+				}
+			}
+			
             & + .label {
                 margin-left:1.6rem;
             }
