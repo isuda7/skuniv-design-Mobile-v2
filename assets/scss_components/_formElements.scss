@@ -59,6 +59,11 @@ input.basic {
     border-radius:$FormBasicRadius;
     font-size:1.4rem;
     line-height: 1.5;
+    transition: all 0.12s ease;
+    &:focus {
+        border:1px solid #000000;
+        outline: 0;
+    }
     &:disabled {
         color:$ColorSubTxt;
         border:1px solid #f2f3f5;

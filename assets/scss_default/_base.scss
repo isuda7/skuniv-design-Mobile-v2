@@ -61,6 +61,7 @@ button {overflow:hidden; background-color:transparent; cursor:pointer;}
 button::-moz-focus-inner {border:0px; padding:0px;}
 input[type="checkbox"],input[type="radio"],select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
 textarea {resize:none;}
+input, textarea {caret-color:$ColorPrimary;}
 select::-ms-expand {display:none;}
 input::-ms-clear,
 input::-ms-reveal {display:none; width:0; height:0;}
@@ -86,9 +87,7 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .dv-ios input,
 .dv-ios textarea,
 .dv-ios select {-webkit-tap-highlight-color:transparent;}
-body ::-webkit-scrollbar {width:4px;}
-body ::-webkit-scrollbar-track {background-color: rgba(0,0,0,0);}
-body ::-webkit-scrollbar-thumb {border-radius:4px;}
+
 /*-------------------------------------------------------------------
 	iOS safe-area
 -------------------------------------------------------------------*/

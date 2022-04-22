@@ -79,15 +79,13 @@
         margin:auto;
         width:8rem;
         height:8rem;
-        .btn.ico.edit {
+        .ico.edit {
             position: absolute;
             right:0;
             bottom:0;
-            &::before {
-                width: 2.4rem;
-                height:2.4rem;
-                background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
-            }
+            width: 2.4rem;
+            height:2.4rem;
+            background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
         }
     }
 }
