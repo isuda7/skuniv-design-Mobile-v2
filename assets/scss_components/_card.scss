@@ -443,3 +443,72 @@
 		color: $ColorSubTxt;
 	}
 }
+
+// cube내 해당과정
+.card{
+    &.cube_parents{        
+        .card_inner{            
+            padding:1.6rem;
+            display: flex;
+            align-items: center;
+            border : 0.1rem solid $FormBasicBorder;
+            border-radius: 0.8rem;
+        }
+        .card_thumb {
+            width : 8rem;
+            height: 5.4rem;
+            position: relative;
+            .thumb {
+                width: 100%;
+                height : 100%;
+                position: relative;
+            }
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background : rgba(0,0,0, 0.5);
+            }
+            .ribon {
+                position: absolute;
+                right: 0.8rem;
+                top: 0;
+                width: 2.4rem;
+                height: 1.8rem;
+                background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                z-index: 1;
+                &.is_active {
+                    background-position: 0 -4.4rem;
+                }
+            }
+        }
+        .card_body {
+            width : calc(100% - 9.2rem);
+            margin-left : auto;
+            .title{
+                @include FontBody12;
+                @include Ellipsis2;
+            }
+        }
+        .sub_txt {
+            @include FontBody12;
+            @include Ellipsis1;
+        }
+    }
+}
+
+//cube 내 해당과정 - dark
+.theme_dark{
+    //큐브내 해당과정
+    .card.cube_parents{
+        .card_inner{
+            border-color: #44464a;
+        }        
+    }
+}

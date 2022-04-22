@@ -505,12 +505,38 @@
 		padding:0;
 	}
 }
+
 .theme_dark .cube_overview {
 	background-color: #1C1D1F;
 	color:#F8F8FA;
-	ul li::after {
-		background-color: #ddd;
-	}
+    //큐브내 overview icon
+    ul {
+		li::after {
+			background-color: #ddd;
+		}
+        li::before{
+            background-color: inherit;
+            background-repeat: no-repeat;
+        }
+        .item_complete::before{
+            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+        }
+        .item_part.basic::before{
+            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+        }
+        .item_part.intermediate::before{
+            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+        }
+        .item_part.advanced::before{
+            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+        }
+        .item_part.expert::before{
+            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+        }
+        .item_contact::before{
+            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+        }
+    }
 }
 
 // Cube References
@@ -656,6 +682,7 @@
 
 // 차수목록 아코디언
 .degree_list {
+    padding-top: 3.2rem;
 	.degree_sort {
 		display:flex;
 		align-items: center;
@@ -678,6 +705,7 @@
 
 	.degree_acco {
 		background-color: inherit;
+        border-top : 2px solid $FormBasicBorder;
 		.acco_title {
 			border-bottom:1px solid #25272B;
 			&::after {
@@ -686,9 +714,10 @@
 				position: absolute;
 				right:1.3rem;
 				top:calc(50% - 0.2rem);
-				width:1rem;
-				height:0.5rem;
-				background-color: #ccc;
+				width : 1.2rem;
+				height: 1.2rem;
+				background-image : url('../../assets/img/icons_12_ic_chervron_down_grey_05.svg');
+				background-color: inherit;
 			}
 		}
 		.degree_expand,
@@ -749,9 +778,50 @@
 	}
 
 }
-.theme_dark .degree_list .degree_acco .degree_expand .title,
-.theme_dark .degree_list .degree_acco .degree_item .title {
-	color:#F8F8FA;
+
+.theme_dark {
+    //큐브 오버뷰 스크립트
+    .overview_subscript{
+        color: #cbcdcf;
+    }
+
+    //큐브내 overview icon
+    .cube_overview ul {
+        li::before{
+            background-color: inherit;
+            background-repeat: no-repeat;
+        }
+        .item_complete::before{
+            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+        }
+        .item_part.basic::before{
+            background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
+        }
+        .item_part.intermediate::before{
+            background-image: url('../../assets/img/icons_16_ic_level_2_grey_03.svg');
+        }
+        .item_part.advanced::before{
+            background-image: url('../../assets/img/icons_16_ic_level_3_grey_03.svg');
+        }
+        .item_part.expert::before{
+            background-image: url('../../assets/img/icons_16_ic_level_4_grey_03.svg');
+        }
+        .item_contact::before{
+            background-image: url('../../assets/img/icons_16_ic_customer_grey_05.svg');
+        }
+    }
+
+    //classroom 차수정보
+    .degree_list .degree_acco{
+        border-color: #25272b;
+		.degree_expand .title{
+			color:#F8F8FA;
+		}
+		.degree_item .title {
+			color:#F8F8FA;
+		}
+    }
+
 }
 
 //나의 코멘트
