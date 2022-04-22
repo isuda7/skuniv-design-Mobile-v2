@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 @import "../../../assets/scss_default/variables";
-
+html, body {
+	scroll-behavior: auto;
+}
 .ia_wrap {
 	display: flex;
 	min-height: 100%;
@@ -15,25 +17,34 @@
 		flex: none;
 		width: 375px;
 		height: 760px;
+		background-color: #fff;
 	}
 
 	.ia_container {
 		flex: 1 1 auto;
 		width: 100%;
 		// min-width:100rem;
-		padding: 74px 20px 30px;
+		padding: 0px 20px 30px;
 		.g_gnb_area {
-			position:fixed;
+			position: sticky;
 			top:0;
 			z-index:100;
 			width:100%;
+			height:80px;
 			display:flex;
-			align-items: center;
+			align-items: flex-start;
 			background-color: #f6f6f6;
 			padding:20px 0;
 			.g_gnb {
+				flex:none;
 				margin-right:20px;
 				.ui.button {
+					display:inline-flex;
+					justify-content: center;
+					align-items: center;
+					width:80px;
+					height:40px;
+					padding:0;
 					font-weight: 700;
 					margin-right: 6px;
 					background-color: #999;
@@ -45,6 +56,7 @@
 				}
 			}
 			.g_menu {
+				padding-top:10px;
 				a {
 					display:inline-block;
 					padding:6px;
@@ -98,11 +110,8 @@
 				border-bottom: 1px solid #777;
 			}
 
-			.link-address {
-				color: #999;
-			}
-			.link-address a::before {
-				// content: attr(data-href);
+			.link-address a {
+				color: #666;
 			}
 			.bg_purple{
 				background:rgba(230, 230, 250, 1);
@@ -114,10 +123,53 @@
 				background: rgba(0,0,0, 0.1);
 				opacity: 0.6;
 			}
+
+			// th:nth-child(2) {
+			// 	display:none;
+			// }
+			td:nth-child(1) {
+				cursor: pointer;
+			}
 		}
 
 		.text-bold {
 			font-weight: bold;
 		}
+		tr.no_link {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+	&[data-view='2'],
+	&[data-view='3'],
+	&[data-view='4'] {
+		iframe {display:none;}
+	}
+	&[data-view='3'],
+	&[data-view='4'] {
+		iframe {display:none;}
+		th:nth-child(3) {display:none;}
+		td:nth-child(3) {display:none;}
+		col:nth-child(3) {display:none;}
+		th:nth-child(4) {display:none;}
+		td:nth-child(4) {display:none;}
+		col:nth-child(4) {display:none;}
+		th:nth-child(5) {display:none;}
+		td:nth-child(5) {display:none;}
+		col:nth-child(5) {display:none;}
+		.ia_container .g_gnb_area {
+			display:block;
+			height:auto;
+		}
+	}
+	&[data-view='4'] {
+		colgroup {display: none;}
+		tbody {display:block;}
+		tr {display:block;}
+		th:nth-child(1) {display:block;}
+		th:nth-child(2) {display:none;}
+		td:nth-child(1) {display:block; cursor: pointer;}
+		td:nth-child(2) {display:none;}
 	}
 }
+

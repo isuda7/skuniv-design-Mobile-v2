@@ -13,101 +13,57 @@
     <link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
     <!-- Guide IA -->
     <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
-        // 인터렉션은 display:none 과 공존할 수 없습니다.
-        // 인터렉션이 끝난 시점의 Callback 으로 display:none을 적용하기 위해 처리합니다.
-        // Open : "Modal Visible, Body 스크롤 막기" >>> "Modal 인터렉션, Dimmer 인터렉션"
-        // Close : "Modal 인터렉션, Dimmer 인터렉션" >>> "Modal hidden,  Body 스크롤 해제"
-        // React GSAP 사용 하는 것을 추천합니다.
-
         // Alert
         function ModalAlertOpen(id){
-            // addClass 이후 Transition
-            $(id).addClass("is_visible");
+            $(id).addClass("is_visible is_active");
             $("body").addClass("is_dimmed");
-
-            var Modal = $(id).find(".modal_alert");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {opacity: 0, scale:0.75}, {opacity: 1, scale:1, duration: 0.2});
-            gsap.fromTo(Dimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
         }
         function ModalAlertClose(id){
-            var Modal = $(id).find(".modal_alert");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {opacity: 1, scale:1}, {opacity: 0, scale:0.75, duration: 0.2});
-            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
-                // Transition 이후 removeClass처리
-                $(id).removeClass("is_visible");
-                $("body").removeClass("is_dimmed");
-            }});
+            $(id).removeClass("is_active").on('transitionend', function(){
+                if (!$(id).hasClass('is_active')) {
+                    $(id).removeClass("is_visible");
+                    $("body").removeClass("is_dimmed");
+                }
+            })
         }
 
         // BottomSheet
         function ModalBSOpen(id){
-            // addClass 이후 Transition
-            $(id).addClass("is_visible");
+            $(id).addClass("is_visible is_active");
             $("body").addClass("is_dimmed");
-
-            var Modal = $(id).find(".modal_bottomsheet");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {y:'100%'}, {y:'0', duration: 0.2});
-            gsap.fromTo(Dimmer, {opacity: 0}, {opacity: 1, duration: 0.2});
         }
         function ModalBSClose(id){
-            var Modal = $(id).find(".modal_bottomsheet");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {y:'0'}, {y:'100%', duration: 0.2});
-            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0.2, onComplete:()=> {
-                // Transition 이후 removeClass처리
-                $(id).removeClass("is_visible");
-                $("body").removeClass("is_dimmed");
-            }});
+            $(id).removeClass("is_active").on('transitionend', function(){
+                if (!$(id).hasClass('is_active')) {
+                    $(id).removeClass("is_visible");
+                    $("body").removeClass("is_dimmed");
+                }
+            })
         }
 
         // ModalFPOpen
         function ModalFPOpen(id){
-            // addClass 이후 Transition
             $(id).addClass("is_visible");
             $("body").addClass("is_dimmed");
-
-            var Modal = $(id).find(".modal_fullpopup");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {opacity:0}, {opacity: 1, duration: 0});
-            gsap.fromTo(Dimmer, {opacity:0}, {opacity: 1, duration: 0});
         }
         function ModalFPClose(id){
-            var Modal = $(id).find(".modal_fullpopup");
-            var Dimmer = $(id).find(".dimmer");
-            gsap.fromTo(Modal, {opacity:1}, {opacity:0, duration: 0});
-            gsap.fromTo(Dimmer, {opacity: 1, duration: 0.2}, {opacity: 0, duration: 0, onComplete:()=> {
-                // Transition 이후 removeClass처리
-                $(id).removeClass("is_visible");
-                $("body").removeClass("is_dimmed");
-            }});
+            $(id).removeClass("is_visible");
+            $("body").removeClass("is_dimmed");
         }
 
         // ToastOpen
         function ToastOpen(id){
-            // addClass 이후 Transition
-            $(id).addClass("is_visible");
-            $(id).addClass("is_active");
-
-            gsap.fromTo($(id), {opacity:0, y:'20%'}, {opacity: 1, y:'0%', duration: 0.2, onComplete:()=> {
-                // Open 후에 자동으로 사라지게 할 경우
-                setTimeout(function(){
-                    ToastClose(id);
-                }, 3000);
-            }});
+            $(id).addClass("is_visible is_active");
+            setTimeout(function(){ ToastClose(id) }, 3000);
         }
         function ToastClose(id){
-            gsap.fromTo($(id), {opacity: 1, y:'0%'}, {opacity:0, y:'20%', duration: 0.2, onComplete:()=> {
-                // Transition 이후 removeClass처리
-                $(id).removeClass("is_visible");
-            }});
+            $(id).removeClass("is_active").on('transitionend', function(){
+                !$(id).hasClass('is_active') && $(id).removeClass("is_visible");
+            })
         }
     </script>
 </head>

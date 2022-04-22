@@ -6,7 +6,7 @@
 	<title>Project 현황판</title>
 	<meta http-equiv="Expires" content="-1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- Guide Common -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
     <link href="../../assets/css/index.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <!-- Guide IA -->
     <link href="../assets/css/ia.css" rel="stylesheet" />
 	<script>
-		var link = "../../html/";
+		var link = "../";
 		function linkReplace() {
 			$(".link-address a").each(function () {
 				var w = $(window).width();
@@ -79,37 +79,32 @@
 			})
 			PriviewIA();
 		})
+
 	</script>
 </head>
 
 <body>
-	<div class="ia_wrap" data-view="pc">
-		<iframe src="../../html/Myhome/index.html" frameBorder="0" height="760px" title="Prevoew"
+	<div class="ia_wrap">
+		<iframe src="../Components/ElementPage.html" frameBorder="0" height="760px" title="Prevoew"
 			name="previewFrame"></iframe>
 		<div class="ia_container">
 			<div class="g_gnb_area">
 				<nav class="g_gnb">
-					<a href="./index.html" class="ui button is_active">Index</a>
-					<a href="./guide.html" class="ui button">Guide</a>
+					<a href="./index.html" class="ui button">Index</a>
+					<a href="./guide.html" class="ui button is_active">Guide</a>
 				</nav>
 				<nav class="g_menu">
-					<a href="#IndexLogin">로그인</a>
-					<a href="#IndexOnboard">온보딩</a>
-					<a href="#IndexMyHome">MyHome</a>
-					<a href="#IndexCategory">학습전체</a>
-					<a href="#IndexComunity">커뮤니티</a>
-					<a href="#IndexRecom">추천</a>
-					<a href="#IndexMore">더보기</a>
-					<a href="#IndexSearch">알림/검색</a>
-					<a href="#IndexLearning">학습과정</a>
+					<a href="#GuideSample">작성예시</a>
+					<a href="#GuideComponents">Components</a>
+					<a href="#GuidePrototype">Prototypes</a>
+					<a href="#GuideScrolling">Scrolling</a>
 				</nav>
 			</div>
-
 			<table class="ui celled selectable structured unstackable table" id="iaTable">
 				<colgroup>
-					<col width="30%" />
+					<col width="25%" />
 					<!-- <col width="140px" /> -->
-					<col width="30%" />
+					<col width="20%" />
 					<col width="120px" />
 					<col width="120px" />
 					<col width="" />
@@ -126,86 +121,42 @@
 					</tr>
 				</thead>
 
-				<!-- 로그인 -->
-				<tbody id="IndexLogin">
+				<!-- Samples -->
+				<tbody id="GuideSample">
 					<script>
-						$("#IndexLogin").load("pages/01_IndexLogin.html", function () {
+						$("#GuideSample").load("pages/GuideSample.html", function () {
 							linkReplace()
 						});
 					</script>
 				</tbody>
 
-				<!-- 온보드 -->
-				<tbody id="IndexOnboard">
+				<!-- GuideBasic -->
+				<tbody id="GuideComponents">
 					<script>
-						$("#IndexOnboard").load("pages/02_IndexOnboard.html", function () {
+						$("#GuideComponents").load("pages/GuideComponents.html", function () {
 							linkReplace()
 						});
 					</script>
 				</tbody>
 
-				<!-- 마이홈 -->
-				<tbody id="IndexMyHome">
+				<!-- Prototype -->
+				<tbody id="GuidePrototype">
 					<script>
-						$("#IndexMyHome").load("pages/03_IndexMyHome.html", function () {
+						$("#GuidePrototype").load("pages/GuidePrototype.html", function () {
 							linkReplace()
 						});
 					</script>
 				</tbody>
 
-				<!-- 학습전체 -->
-				<tbody id="IndexCategory">
+				<!-- Prototype -->
+				<tbody id="GuideScrolling">
 					<script>
-						$("#IndexCategory").load("pages/04_IndexCategory.html", function () {
+						$("#GuideScrolling").load("pages/GuideScrolling.html", function () {
 							linkReplace()
 						});
 					</script>
 				</tbody>
 
-				<!-- 학습전체 -->
-				<tbody id="IndexRecom">
-					<script>
-						$("#IndexRecom").load("pages/05_IndexRecom.html", function () {
-							linkReplace()
-						});
-					</script>
-				</tbody>
-
-				<!-- 커뮤니티 -->
-				<tbody id="IndexComunity">
-					<script>
-						$("#IndexComunity").load("pages/06_IndexCommunity.html", function () {
-							linkReplace()
-						});
-					</script>
-				</tbody>
-
-				<!-- 더보기 -->
-				<tbody id="IndexMore">
-					<script>
-						$("#IndexMore").load("pages/07_IndexMore.html", function () {
-							linkReplace()
-						});
-					</script>
-				</tbody>
-
-				<!-- 검색 -->
-				<tbody id="IndexSearch">
-					<script>
-						$("#IndexSearch").load("pages/08_IndexSearch.html", function () {
-							linkReplace()
-						});
-					</script>
-				</tbody>
-
-				<!-- 학습 -->
-				<tbody id="IndexLearning">
-					<script>
-						$("#IndexLearning").load("pages/09_IndexLearning.html", function () {
-							linkReplace()
-						});
-					</script>
-				</tbody>
 			</table>
 		</div>
 	</div>

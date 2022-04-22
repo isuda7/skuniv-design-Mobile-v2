@@ -176,3 +176,8 @@ $FormBasicDisable: #E3E4E5;
 	-webkit-line-clamp: 7;
 	-webkit-box-orient: vertical;
 }
+
+// Modal Transition
+@mixin ModalTransition {
+	transition: all 0.2s ease;
+}

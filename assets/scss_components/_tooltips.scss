@@ -5,10 +5,12 @@
     z-index:10;
 
     .tooltip_body {
-        display: none;
+        visibility: hidden;
+        display: block;
         position:absolute;
         min-width:10rem;
         min-height:4rem;
+        pointer-events: none;
     }
     // Direction
     &.bottom .tooltip_body {
@@ -24,11 +26,9 @@
         left:0;
     }
     // Transition
-    &.transition {
-        .tooltip_body {
-            opacity: 0;
-            // transition: all 0.2s ease;
-        }
+    .tooltip_body {
+        opacity: 0;
+        transition: all 0.2s ease;
     }
     &.is_active {
         .tooltip_body {
@@ -37,7 +37,8 @@
     }
     &.is_visible {
         .tooltip_body {
-            display: block;
+            visibility: visible;
+            pointer-events: auto;
         }
     }
 }

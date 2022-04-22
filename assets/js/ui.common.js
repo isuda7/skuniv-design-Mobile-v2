@@ -75,11 +75,6 @@ function setResized(){
 	});
 }
 
-// Set AppNav
-function setAppNav(idx){
-	$('.appnav').children().eq(idx-1).addClass('is_active');
-}
-
 // Range Multiple
 function RangeMultiple(){
 	const inputLeft = document.getElementById("input-left");
@@ -117,16 +112,37 @@ function RangeMultiple(){
 	inputRight.addEventListener("input", setRightValue);
 }
 
-function tooltip() {
-	$('.tooltip > .btn').each(function(){
-		$(this).on('click', function(){
-			$(this).parent('.tooltip').toggleClass('is_visible');
-		})
-	})
+// Tooltip
+var tooltip = {
+	init: function(){
+		if ($('.tooltip').length){
+			$(document).off('click.tooltip').on('click.tooltip', function(e){
+				$('.tooltip').each(function(){
+					var $tooltip = $(this);
+					// visible 툴팁을 클릭하지 않은 경우
+					($tooltip.has(e.target).length === 0 && $tooltip.hasClass('is_visible')) && tooltip.close($tooltip);
+
+					// open 툴팁을 클릭한 경우
+					($tooltip.has(e.target).length > 0 && $tooltip.hasClass('is_visible')) && tooltip.close($tooltip);
+
+					// close 툴팁을 클릭한 경우
+					($tooltip.has(e.target).length > 0 && !$tooltip.hasClass('is_visible')) && tooltip.open($tooltip);
+				})
+			})
+		}
+	},
+	open: function($tooltip){
+		$tooltip.addClass("is_visible is_active");
+	},
+	close: function($tooltip){
+		$tooltip.on('transitionend', function(){
+			(!$tooltip.hasClass('is_active')) && $tooltip.removeClass("is_visible");
+		}).removeClass("is_active");
+	},
 }
 
 /* Ready */
 $(function(){
 	setStatusInit(); // 상태 설정
-	tooltip(); // 툴팁 공통 샘플
+	tooltip.init(); // 툴팁 공통 샘플
 });

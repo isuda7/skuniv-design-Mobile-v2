@@ -374,6 +374,7 @@
 	margin-top:0.8rem;
 	border: 1px solid #f2f3f5;
 	border-radius: $RadiusLarge;
+	background-color: #fff;
 	@include Shadow2;
 	.item_check {
 		width:3.2rem;
@@ -441,6 +442,7 @@
 		@include FontBody14;
 		color: $ColorSubTxt;
 		overflow: hidden;
+		width:100%;
 		.desc + .info_area {
 			margin-top: 1.2rem;
 		}
