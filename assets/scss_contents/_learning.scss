@@ -272,10 +272,10 @@
 		&::after {
 			content:"";
 			display:block;
-			width:0.6rem;
-			height:1.3rem;
-			background-color: #ddd;
-			margin-left:2rem;
+			width:1.6rem;
+			height:1.6rem;
+			background-image : url("../../assets/img/icons_16_ic_chervron_right_grey_05.svg");
+			margin-left:1.6rem;
 		}
 	}
 }
@@ -518,8 +518,13 @@
             background-color: inherit;
             background-repeat: no-repeat;
         }
-        .item_complete::before{
-            background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+        .item_complete{
+			&::before{
+				background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+			}
+			&.done::before{
+				background-image: url('../../assets/img/icons_16_ic_user_grey_05.svg');
+			}
         }
         .item_part.basic::before{
             background-image: url('../../assets/img/icons_16_ic_level_1_grey_03.svg');
@@ -998,6 +1003,7 @@
                     .comment_write {
 						margin-left:3rem;
 						display: flex;
+						align-items: center;
 						&::before {
 							content:"";
 							position: relative;
@@ -1093,11 +1099,43 @@
                     height:1.6rem;
                 }
             }
+			&.classroom{
+				&::before{
+					width : 1.6rem;
+					height: 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_classroom_grey_06.svg");
+				}
+			}
+			&.elearning{
+				&::before{
+					width : 1.6rem;
+					height: 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_e_learning_grey_06.svg");
+				}
+			}
+			&.cohort{
+				&::before{
+					width: 1.6rem;
+					height : 1.6rem;
+					background-image: url("../../assets/img/icons_16_ic_cohort_grey_06.svg");
+				}
+			}
             & + .label {
                 margin-left:1.6rem;
             }
         }
     }
+	//info_area 하단에 url, 첨부 file 등등
+	.learning_attachment {
+		margin-top : 3.2rem;
+		
+		.l_guide{
+			padding-top : 1.4rem;
+			@include FontBody12;
+			color :$ColorSubTxt;
+		}
+	}
+
 }
 .theme_dark {
     .learning_subject {
