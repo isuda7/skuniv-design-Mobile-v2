@@ -38,20 +38,21 @@
 
     <!-- Modal FullPopup -->
     <div class="modal_wrap is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup">
+        <div class="modal modal_fullpopup modal_profile">
             <div class="modal_header">
 				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">ModalFullpopup</h3>
+                <h3 class="modal_tit">프로필</h3>
             </div>
             <div class="modal_content">
+				<!-- 프로필 헤더 -->
 				<div class="profile_head">
 					<div class="avata_area">
-						<span class="avata" style="background-image:url('../../assets/img/avata-profile-100-01.png')"></span>
+						<span class="avata" style="background-image:url('../../assets/img/icon_80_ic_default_profile.svg')"></span>
 					</div>
 					<div class="title_area">
 						<p class="title">
 							<strong class="name">사용자이름이 닉네임이라서 길어지면 님</strong>
-							<button type="button" class="btn ico change"><span class="blind">이름과 닉네임 전환</span></button>
+							<button type="button" class="btn pill">팔로우</button>
 						</p>
 						<div class="company">회사명</div>
 						<div class="follow">
@@ -62,29 +63,126 @@
 							<em class="count">20</em><span class="blind">명</span>
 						</div>
 					</div>
+					<div class="tag_area">
+						#태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요
+					</div>
 				</div>
+				<!-- // 프로필 헤더 -->
 
 				<div class="modal_sticky">
 					<div class="tab style2">
 						<div class="tab_list">
-							<button type="button" class="tab_item is_active">Tab 1</button>
-							<button type="button" class="tab_item">Tab 2</button>
-							<button type="button" class="tab_item">Tab 3</button>
+							<button type="button" class="tab_item is_active">플레이리스트</button>
+							<button type="button" class="tab_item">커뮤니티</button>
+							<button type="button" class="tab_item">피드</button>
 						</div>
 					</div>
 				</div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-            </div>
-            <div class="modal_footer">
-                <div class="page_action">
-                    <button type="button" class="btn basic">Default</button>
-                    <button type="button" class="btn basic primary">Primary</button>
-                </div>
+				<div class="tab_panel bg_grey">
+					<!-- 게시물 상태정보 -->
+                    <div class="board_toolbar">
+						<div class="board_count">
+							<span class="total">총</span>
+                            <em class="count">0</em>
+                            <span class="unit">개</span>
+                        </div>
+                    </div>
+					<!-- // 게시물 상태정보 -->
+
+					<!-- 플레이리스트 -->
+					<div class="card_list">
+						<div class="card basic playlist type1">
+							<div class="card_head">
+								<em class="label make">내가만든</em>
+								<button type="button" class="btn text primary buy">플레이리스트 담기</button>
+							</div>
+							<a href="javasccript:void(0)" class="card_inner">
+								<div class="card_body">
+									<p class="title"><strong>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong></p>
+								</div>
+								<div class="card_foot">
+									<div class="profile">
+										<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+										<p class="name">전혜림가나다라바사아자차카타파하아자차</p>
+									</div>
+									<div class="count">
+										<em>총 3개</em>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="card basic playlist">
+							<a href="javascript:void(0)" class="card_inner">
+								<div class="card_head">
+									<em class="label buy">내가담은</em>
+									<button type="button" class="btn text primary buy">플레이리스트 담기</button>
+								</div>
+								<div class="card_body">
+									<p class="title"><strong>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong></p>
+								</div>
+								<div class="card_foot">
+									<div class="profile">
+										<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+										<p class="name">전혜림가나다라바사아자차카타파하아자차</p>
+									</div>
+									<div class="count">
+										<em>총 3개</em>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="card basic playlist">
+							<a href="javascript:void(0)" class="card_inner">
+								<div class="card_head">
+									<em class="label recom">추천받은</em>
+									<button type="button" class="btn text primary buy">플레이리스트 담기</button>
+								</div>
+								<div class="card_body">
+									<p class="title"><strong>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong></p>
+								</div>
+								<div class="card_foot">
+									<div class="profile">
+										<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+										<p class="name">전혜림가나다라바사아자차카타파하아자차</p>
+									</div>
+									<div class="count">
+										<em>총 3개</em>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="card basic playlist">
+							<a href="javascript:void(0)" class="card_inner">
+								<div class="card_head">
+									<em class="label recom">추천받은</em>
+									<button type="button" class="btn text primary buy">플레이리스트 담기</button>
+								</div>
+								<div class="card_body">
+									<p class="title"><strong>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong></p>
+								</div>
+								<div class="card_foot">
+									<div class="profile">
+										<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"></span>
+										<p class="name">전혜림가나다라바사아자차카타파하아자차</p>
+									</div>
+									<div class="count">
+										<em>총 3개</em>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- // 플레이리스트 -->
+				</div>
+
+				<!-- Toast -->
+				<div class="toast is_active is_visible">
+					<p class="toast_txt">찜한과정에 추가되었습니다.</p>
+					<div class="toast_btn">
+						<button type="button" class="btn text primary">더 보기</button>
+					</div>
+				</div>
+				<!-- // Toast -->
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>

@@ -41,53 +41,6 @@
     border:0;
 }
 
-//찜하기
-.page_action.pick {
-    display: block;
-    .pick_btn {
-        display:flex;
-        padding:1.8rem 2rem;
-        border-radius: $RadiusLarge;
-        color:#fff ;
-        background-color: #44464a;
-        margin-bottom:2rem;
-        @include Shadow3;
-        .pick_txt {
-            width:70%;
-            @include FontBody14;
-        }
-        .pick_more {
-            width:30%;
-            .btn_more {
-                display: block;
-                color:#ffa394;
-                font-weight: 400;
-                height:inherit;
-                padding:inherit;
-                float: right;
-                @include FontBody14;
-            }
-        }
-    }
-    .floating_btn {
-        .btn {
-            width:100%;
-        }
-    }
-}
-
-//찜하기 더보기
-.pick_morepage {
-    .pick_moretxt {
-        @include FontBody16;
-        display: block;
-        padding:1.5rem 0;
-        width:100%;
-        text-align: left;
-        font-weight: 700;
-    }
-}
-
 //플레이리스트 추가
 .filter_body {
     .filter_list {
@@ -308,7 +261,7 @@
                         }
                     }
                     .item_title {
-                        
+
                         .sub_txt {
                             color:#a4a6aa;
                             @include FontBody12;

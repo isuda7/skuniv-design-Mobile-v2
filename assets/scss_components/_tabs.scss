@@ -57,6 +57,9 @@
 	padding-right: $GapSideBase;
 	margin-left: -$GapSideBase;
 	margin-right: -$GapSideBase;
+	&.bg_grey {
+		background:#f8f8fa;
+	}
 }
 .theme_dark .tab_panel {
 	background-color: #151617;
