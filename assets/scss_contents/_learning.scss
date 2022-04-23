@@ -943,18 +943,19 @@
                 @include FontBody13;
                 color: #75777B;
 				display: flex;
-				&::after {
-					content:"";
-					position: relative;
-					top:0.2rem;
-					left:0.8rem;
-					width:1.6rem;
-					height:1.6rem;
-				}
-				&.pin::after{
-					background-image: url('../img/icons_16_ic_pin_grey_06.svg');
-				}
             }
+			.ico.pin {
+				position: relative;
+				top:0.2rem;
+				visibility: hidden;
+				width:1.6rem;
+				height:1.6rem;
+				margin-left:0.7rem;
+				background-image: url('../img/icons_16_ic_pin_grey_06.svg');
+				&.is_visible {
+					visibility: visible;
+				}
+			}
         }
         > .right {
 			flex:none;
@@ -1042,7 +1043,7 @@
                         }
                     }
                     .comment_write {
-						margin-left:3rem;
+						margin-left:2rem;
 						display: flex;
 						align-items: center;
 						&::before {
@@ -1067,11 +1068,11 @@
 						.btn.like::before {
 							width: 1.6rem;
 							height: 1.6rem;
-							background-image: url("../img/icons_16_ic_like_off_grey_06.svg");
+							background-image: url("../img/icons_16_ic_like_grey_07.svg");
 							margin-top:1px;
 						}
 						.btn.like.is_active::before {
-							background-image : url("../img/icons_16_ic_like_on.svg");
+							background-image: url("../img/icons_16_ic_like_on.svg");
 						}
 						.like_no {
 							margin-left:0.5rem;
@@ -1085,29 +1086,31 @@
 
 .theme_dark {
     .post {
-		.post_head {
-			>.left {
-				.user_id {
-					color:#fff;
+		.post_head >.left {
+			.user_id {
+				color:#fff;
+			}
+			.ico.pin {
+				background-image: url('../img/icons_16_ic_pin_grey_05.svg');
+			}
+		}
+		.post_head >.right .btn::before {
+			background-image: url('../img/icons_20_ic_more_grey_06.svg');
+		}
+		.post_body .post_main {
+			background-color: #000;
+			color:#F8F8FA;
+			.post_txt .btn.more {
+				color:#A4A6AA;
+			}
+			.post_btn>.right .btn_wrap .btn.like {
+				&::before {
+					background-image: url("../img/icons_16_ic_like_off_grey_06.svg");
+				}
+				&.is_active::before {
+					background-image: url("../img/icons_16_ic_like_on.svg");
 				}
 			}
-			>.right {
-				.btn::before {
-					background-image: url('../img/icons_20_ic_more_grey_06.svg');
-				}
-			}
-			}
-		.post_body{
-			.post_main {
-				background-color: #000;
-				color:#F8F8FA;
-				.post_txt {
-					.btn.more {
-						color:#A4A6AA;
-					}
-				}
-			}
-
 		}
 	}
 }
@@ -1137,11 +1140,11 @@
 						.btn.like::before {
 							width: 2.4rem;
 							height: 2.4rem;
-							background-image: url("../img/icons_24_ic_like_off_white.svg");
+							background-image: url("../img/icons_24_ic_like_off_on.svg");
 							margin-top:1px;
 						}
 						.btn.like.is_active::before {
-							background-image : url("../img/icons_24_ic_like_on_white.svg");
+							background-position-y: bottom;
 						}
 					}
 				}
@@ -1151,6 +1154,17 @@
     .post + .post {
         margin-top:2rem;
     }
+}
+.theme_dark {
+	.post_detail .post .post_body .post_main .post_btn>.right {
+		.btn.like::before {
+			background-image: url("../img/icons_24_ic_like_off_white.svg");
+		}
+		.btn.like.is_active::before {
+			background-image: url("../img/icons_24_ic_like_off_on.svg");
+			background-position-y: bottom;
+		}
+	}
 }
 
 .coment_empty {
