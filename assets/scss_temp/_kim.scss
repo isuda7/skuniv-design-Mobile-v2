@@ -204,21 +204,6 @@
     }
 }
 
-//큐브공통 코멘트 페이지
-.contents_style {
-    background-color:#151617;
-    .learning_subject {
-        background-color:#000;
-    }
-    .contentcomment_page {
-        padding-bottom:2rem;
-        margin-bottom:0rem;
-    }
-    .post + .post {
-        margin-top:2rem;
-    }
-}
-
 //플레이어 배속설정, 자막설정
 .modal_videoplayersetspeed, .modal_videoplayersetsubtitle {
     padding-bottom:4rem;

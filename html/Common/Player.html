@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+    <!-- Guide IA -->
+    <link href="../../_guide/assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            var isTimeline = null;
+            $('input[type=range]').on('input', function(){
+                var $this = $(this);
+                // Timeline Range
+                var val = $this.val();
+                $this.css(
+                    'background',
+                    'linear-gradient(to right, #ff664d 0%, #ff664d '+ val +'%, rgba(164, 166, 170, 0.5) ' + val + '%, rgba(164, 166, 170, 0.5) 100%)'
+                );
+
+                // Timeline Thumb
+                $this.closest('.cube_player').addClass('is_timeline');
+                $this.closest('.cube_player').find('.timeline_thumb').css('left', val+'%');
+
+                clearTimeout(isTimeline);
+                isTimeline = setTimeout(function(){
+                    $this.closest('.cube_player').removeClass('is_timeline');
+                    console.log('aaa');
+                },500);
+            });
+        })
+
+        // Overwrap
+        function PlayerOvewrap(obj, e){
+            var visibleClass= 'is_visible';
+            var activeClass= 'is_active';
+            var $overWrap = $(obj).find('.player_overwrap');
+
+            if ($overWrap.has(e.target).length === 0) {
+                // 비활성 상태 >> 활성화
+                if ($(obj).hasClass(visibleClass) === false) {
+                    // addClass 이후 Transition
+                    $(obj).addClass(visibleClass).addClass(activeClass);
+                    gsap.fromTo($overWrap, {opacity: 0}, {opacity: 1, duration: 0.2});
+                }
+
+                // 활성화 상태 >> 비활성화
+                else {
+                    $(obj).removeClass(activeClass);
+                    gsap.fromTo($overWrap, {opacity: 1}, {opacity: 0, duration: 0.2, onComplete:()=> {
+                        // Transition 이후 removeClass처리
+                        $(obj).removeClass(visibleClass);
+                    }});
+                }
+            }
+        }
+
+        // Prev Interaction
+        function PlayerPrev(obj){
+            var $plaerSec = $(obj).closest('.cube_player');
+            $plaerSec.addClass('is_preved');
+            setTimeout(function(){
+                $plaerSec.removeClass('is_preved');
+            }, 400)
+        }
+
+        // Next Interaction
+        function PlayerNext(obj){
+            var $plaerSec = $(obj).closest('.cube_player');
+            $plaerSec.addClass('is_nexted');
+            setTimeout(function(){
+                $plaerSec.removeClass('is_nexted');
+            }, 400)
+        }
+
+        // PIP
+        function PlayerPipscreen(obj){
+            var $plaerSec = $(obj).closest('.cube_player');
+            $plaerSec.toggleClass('is_pipscreen');
+        }
+
+        // Fullscreen
+        function PlayerFullscreen(obj){
+            var $plaerSec = $(obj).closest('.cube_player');
+            $plaerSec.toggleClass('is_fullscreen');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+            <section class="g_sec">
+                <h2 class="g_h2">Player</h2>
+                <h3 class="g_h3">Guide</h3>
+                <p class="g_info">addClass : is_visible &gt; is_active</p>
+                <p class="g_info">removeClass : is_active &gt; is_visible</p>
+                <p class="g_info">인터렉션 콜백처리 편의를 위해 GSAP를 사용함.</p>
+                <p class="g_info">Interaction은 Active와 Visible이 공존할 수 없음</p>
+                <h3 class="g_h3">Default (인터렉션 참고)</h3>
+                <div class="g_preview out_sec">
+                    <!-- Cube Player
+                        .is_visible : player_overwrap visible
+                        .is_active : player_overwrap active
+                        .is_preved : prev active
+                        .is_nexted : next active
+                        .is_timeline : timeline thumbnail active
+                        .is_pipscreen : pip mode
+                        .is_fullscreen : fullscreen mode
+                    -->
+                    <div class="cube_player" onclick="PlayerOvewrap(this, event)">
+                        <!-- Controls -->
+                        <div class="player_overwrap">
+                            <div class="player_controls">
+                                <button type="button" class="btn ico prev" onclick="PlayerPrev(this)"><span class="blind">10초 이전</span></button>
+                                <button type="button" class="btn ico start" onclick="PlayerToggle(this)"><span class="blind">재생</span></button>
+                                <button type="button" class="btn ico pause is_visible" onclick="PlayerToggle(this)"><span class="blind">정지</span></button>
+                                <button type="button" class="btn ico next" onclick="PlayerNext(this)"><span class="blind">10초 다음</span></button>
+                            </div>
+                            <div class="play_utils">
+                                <div class="time_area">
+                                    <em class="current">05:00</em><i class="split">&nbsp;/&nbsp;</i><span class="total">15:00</span>
+                                </div>
+                                <div class="option_area">
+                                    <button type="button" class="btn ico caption"><span class="blind">자막보기</span></button>
+                                    <button type="button" class="btn ico speed"><span class="blind">재생속도</span></button>
+                                    <button type="button" class="btn ico screen1" onclick="PlayerPipscreen(this)"><span class="blind">작게보기</span></button>
+                                    <button type="button" class="btn ico screen2" onclick="PlayerFullscreen(this)"><span class="blind">전체보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player_thumb">
+                            <span class="thumb" style="background-image: url('../../assets/img/demo/thumb-01.png');"></span>
+                        </div>
+                        <div class="player_timeline">
+                            <div class="timeline_thumb" style="left:25%">
+                                <div class="thumb" aria-hidden="true"
+									style="background-image:url('../../assets/img/demo/thumb-01.png')">
+                                </div>
+                                <p class="time">5:00</p>
+                            </div>
+                            <input type="range" class="timeline_range" value="25" min="0" max="100"
+                                style="background: linear-gradient(to right, rgb(255, 102, 77) 0%, rgb(255, 102, 77) 25%, rgba(164, 166, 170, 0.5) 25%, rgba(164, 166, 170, 0.5) 100%);"
+                            />
+                        </div>
+                    </div>
+                    <!-- // Cube Player -->
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

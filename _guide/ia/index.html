@@ -93,6 +93,7 @@
 					<a href="./guide.html" class="ui button">Guide</a>
 				</nav>
 				<nav class="g_menu">
+					<a href="#IndexCommon">공통</a>
 					<a href="#IndexLogin">로그인</a>
 					<a href="#IndexOnboard">온보딩</a>
 					<a href="#IndexMyHome">MyHome</a>
@@ -125,6 +126,14 @@
 						<th style="text-align:center">상세내용</th>
 					</tr>
 				</thead>
+				<!-- 로그인 -->
+				<tbody id="IndexCommon">
+					<script>
+						$("#IndexCommon").load("pages/00_IndexCommon.html", function () {
+							linkReplace()
+						});
+					</script>
+				</tbody>
 
 				<!-- 로그인 -->
 				<tbody id="IndexLogin">

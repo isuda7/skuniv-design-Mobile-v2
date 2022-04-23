@@ -405,10 +405,13 @@
     &.is_repley .item_body::before {
          content:"";
          display:block;
+		 flex:none;
+		 position: relative;
+		 top:-0.8rem;
          width:1.6rem;
          height:1.6rem;
-         background-color: #ddd;
-         margin-bottom:1.6rem;
+         border: 2px solid #e3e4e5;
+		 border-width:0 0 2px 2px;
          margin-right:0.8rem;
     }
 }
@@ -425,13 +428,10 @@
 		position:absolute;
 		right:2rem;
 		top:calc(50% - 0.6rem);
-		width:0.6rem;
-		height:1.3rem;
+		width:1.6rem;
+		height:1.6rem;
 		margin-left:1.4rem;
-		background-color: #ccc;
-	}
-	.acco_title.is_active::after {
-		background-color: #666;
+		background: url('../img/icons_12_ic_chervron_down_black.svg') no-repeat center center / 100% auto;
 	}
 	.acco_content {
 		padding:0 $GapSideBase;
@@ -915,7 +915,7 @@
     }
 }
 
-//게시물
+//코멘트
 .post {
 	&_list {
 		padding-top:1.2rem;
@@ -925,7 +925,7 @@
 	}
     .post_head {
 		display: flex;
-        .left {
+        > .left {
             width:70%;
             display: flex;
 			align-items: flex-start;
@@ -956,7 +956,7 @@
 				}
             }
         }
-        .right {
+        > .right {
 			flex:none;
             margin-left:auto;
 			.btn.ico.more {
@@ -1031,7 +1031,7 @@
 				color:#75777B;
 				@include FontBody12;
 				display: flex;
-                .left {
+                >.left {
 					width:75%;
                     display: flex;
 					align-items: center;
@@ -1056,7 +1056,7 @@
 						}
                     }
                 }
-                .right {
+                >.right {
 					width:25%;
 					display: flex;
 					margin-left:auto;
@@ -1083,7 +1083,36 @@
     }
 }
 
-// 게시물 상세
+.theme_dark {
+    .post {
+		.post_head {
+			>.left {
+				.user_id {
+					color:#fff;
+				}
+			}
+			>.right {
+				.btn::before {
+					background-image: url('../img/icons_20_ic_more_grey_06.svg');
+				}
+			}
+			}
+		.post_body{
+			.post_main {
+				background-color: #000;
+				color:#F8F8FA;
+				.post_txt {
+					.btn.more {
+						color:#A4A6AA;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+//코멘트 상세
 .post_detail {
 	.post {
 		padding:1.6rem $GapSideBase 0 $GapSideBase;
@@ -1104,7 +1133,7 @@
 					padding:0;
 					margin-top:3.2rem;
 					height:5rem;
-					.right {
+					>.right {
 						.btn.like::before {
 							width: 2.4rem;
 							height: 2.4rem;
@@ -1119,40 +1148,24 @@
 			}
 		}
 	}
+    .post + .post {
+        margin-top:2rem;
+    }
 }
+
+.coment_empty {
+	.tit {
+		@include FontTitle16;
+	}
+}
+.theme_dark .coment_empty .tit {
+	color:#fff;
+}
+
 .popup_comment {
 	.post_list {
 		padding:2rem $GapSideBase;
 		background-color: #151617;
-	}
-}
-
-.theme_dark {
-    .post {
-		.post_head {
-			.left {
-				.user_id {
-					color:#fff;
-				}
-			}
-			.right {
-				.btn::before {
-					background-image: url('../img/icons_20_ic_more_grey_06.svg');
-				}
-			}
-			}
-		.post_body{
-			.post_main {
-				background-color: #000;
-				color:#F8F8FA;
-				.post_txt {
-					.btn.more {
-						color:#A4A6AA;
-					}
-				}
-			}
-
-		}
 	}
 }
 
