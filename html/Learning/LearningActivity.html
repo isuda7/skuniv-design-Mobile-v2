@@ -21,18 +21,12 @@
             var Remain = TitleHeight / TitleLineHeight;
             TitleEl.classList.add("line"+Remain);
         }
-        $(function(){
-            // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
-        });
     </script>
 </head>
 <body>
-<div class="sub_wrapper has_sticky gap_none">
+<div class="sub_wrapper has_sticky">
 	<!-- Header -->
-    <header class="header header_bg">
+    <header class="header">
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
@@ -44,10 +38,10 @@
 
 	<!-- Container -->
     <main role="main" class="container learning_container">
-        <div class="content_head learningactivity_header">
-            <div class="cube_overview">
-                <p class="learning_theme">Leadership</p>
-                <p class="learning_subject">Boundaryless Collaboration, 세상에서 협업이 제일 쉬웠어요.</p>
+        <div class="content_head in_sec">
+            <div class="activity_overview">
+                <p class="sub_txt">Leadership</p>
+                <p class="title"><strong>Boundaryless Collaboration, 세상에서 협업이 제일 쉬웠어요.</strong></p>
             </div>
         </div>
         <div class="content_body">
@@ -61,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab_panel contents_page">
+            <div class="tab_panel note_page pad_b0">
                 <div class="board_toolbar">
                     <div class="board_count">
                         <span class="total">총</span>
@@ -70,41 +64,43 @@
                     </div>
                 </div>
                 <!-- 학습노트 -->
-                <div class="learning_note">
-                    <div class="title">
-                        <button type="button" class="note_link">글로벌 기업의 Game, Changer, RE100</button>
-                        <p class="note_no">노트<span class="no">4</span></p>
+                <div class="activity_note_list">
+                    <div class="activity_note">
+                        <div class="title">
+                            <button type="button" class="note_tit">글로벌 기업의 Game, Changer, RE100</button>
+                            <span class="note_no">노트<span class="no">4</span></span>
+                        </div>
+                        <div class="note_contents">
+                            <button type="button" class="note_link link_ico">00:03:20</button>
+                            <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
+                        </div>
+                        <div class="note_contents">
+                            <button type="button" class="note_link">학습노트2</button>
+                            <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
+                        </div>
+                        <div class="more_area">
+                            <button type="button" class="btn text arw_link">전체보기</button>
+                        </div>
+                        <div class="divider style1 out_sec"></div>
                     </div>
-                    <div class="note_contents">
-                        <button type="button" class="note_link link_ico">00:03:20</button>
-                        <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
+                    <div class="activity_note">
+                        <div class="title">
+                            <button type="button" class="note_link">글로벌 기업의 Game, Changer, RE100</button>
+                            <span class="note_no">노트<span class="no">4</span></span>
+                        </div>
+                        <div class="note_contents">
+                            <button type="button" class="note_link link_ico">00:03:20</button>
+                            <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
+                        </div>
+                        <div class="note_contents">
+                            <button type="button" class="note_link">학습노트1</button>
+                            <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
+                        </div>
+                        <div class="more_area">
+                            <button type="button" class="btn text arw_link">전체보기</button>
+                        </div>
+                        <div class="divider style1 out_sec"></div>
                     </div>
-                    <div class="note_contents">
-                        <button type="button" class="note_link">학습노트2</button>
-                        <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
-                    </div>
-                    <div class="learningbtn_more">
-                        <button type="button" class="btn text arw_link">전체보기</button>
-                    </div>
-                    <div class="divider style1 out_sec"></div>
-                </div>
-                <div class="learning_note">
-                    <div class="title">
-                        <button type="button" class="note_link">글로벌 기업의 Game, Changer, RE100</button>
-                        <p class="note_no">노트<span class="no">4</span></p>
-                    </div>
-                    <div class="note_contents">
-                        <button type="button" class="note_link link_ico">00:03:20</button>
-                        <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
-                    </div>
-                    <div class="note_contents">
-                        <button type="button" class="note_link">학습노트1</button>
-                        <p class="txt">내 정책 환경하에서 RE100 대응이 가능한지 확인국내 정책 환경하에서 RE100 대응이 가능한...</p>
-                    </div>
-                    <div class="learningbtn_more">
-                        <button type="button" class="btn text arw_link">전체보기</button>
-                    </div>
-                    <div class="divider style1 out_sec"></div>
                 </div>
                 <!-- //학습노트 -->
             </div>

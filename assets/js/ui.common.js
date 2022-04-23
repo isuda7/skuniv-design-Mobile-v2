@@ -119,7 +119,7 @@ var tooltip = {
 			$(document).off('click.tooltip').on('click.tooltip', function(e){
 				$('.tooltip').each(function(){
 					var $tooltip = $(this);
-					// visible 툴팁을 클릭하지 않은 경우
+					// 툴팁을 클릭하지 않은 경우
 					($tooltip.has(e.target).length === 0 && $tooltip.hasClass('is_visible')) && tooltip.close($tooltip);
 
 					// open 툴팁을 클릭한 경우

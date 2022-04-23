@@ -77,18 +77,6 @@
 	}
 }
 
-// 학습과정 관련배치
-.badgelist_white {
-    border-bottom:1px solid #f2f3f5;
-    .badge_body {
-        .badge_title {
-            color:#000;
-            .badge_title {
-                @include Ellipsis1;
-            }
-        }
-    }
-}
 .learning_badge {
 	height:7rem;
 	background-color: #fff;
@@ -124,7 +112,6 @@
 			color:#000;
 			.sub_txt {
 				@include FontBody13;
-				color:#fff;
 			}
 			.title {
 				display:flex;
@@ -157,6 +144,9 @@
 			.badge_title {
 				color:#fff;
 			}
+			.sub_txt {
+				color:#fff;
+			}
 		}
 	}
 }
@@ -170,7 +160,7 @@
 			align-items: center;
 			width:100%;
 			height:inherit;
-			padding:1.4rem 2.8rem 1.5rem 0;
+			padding:1.4rem 0rem 1.5rem 0;
 			.badge_thumb {
 				position: relative;
 				display:flex;
@@ -208,10 +198,10 @@
 			&::after {
 				content:"";
 				display:block;
-				width:0.6rem;
-				height:1.3rem;
-				background-color: #ddd;
-				margin-left:2rem;
+				width:1.6rem;
+				height:1.6rem;
+				margin-left:1.2rem;
+				background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
 			}
 		}
 
@@ -260,7 +250,6 @@
 					position:absolute;
 					top:50%;
 					left:calc(100% +  0.4rem);
-					color:$ColorSubTxt;
 					transform: translateY(-50%);
 				}
 			}
@@ -282,8 +271,7 @@
 .theme_dark .teacher_item {
 	border-bottom:1px solid #25272b;
 	background-color: #151617;
-	.teacher_inner .teacher_body .title strong,
-	.teacher_inner .teacher_body .sub_txt {
+	.teacher_inner .teacher_body .title strong {
 		color:#F8F8FA;
 	}
  }
@@ -494,9 +482,29 @@
 				top:0.4rem;
 				width:1.6rem;
 				height:1.6rem;
-				background-color: #ddd;
 				display:block;
 			}
+		}
+		.item_complete::before {
+			background-image: url('../img/icons_16_ic_user_grey_05.svg');
+		}
+        .item_part.basic::before {
+            background-image: url('../img/icons_16_ic_level_1_grey_05.svg');
+        }
+        .item_part.intermediate::before {
+            background-image: url('../img/icons_16_ic_level_2_grey_05.svg');
+        }
+        .item_part.advanced::before {
+            background-image: url('../img/icons_16_ic_level_3_grey_05.svg');
+        }
+        .item_part.expert::before {
+            background-image: url('../img/icons_16_ic_level_4_grey_05.svg');
+        }
+        .item_contact::before {
+            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
+        }
+		.item_contact::before {
+			background-image: url('../img/icons_16_ic_customer_grey_05.svg');
 		}
 	}
 	.btn.arw_link {
@@ -514,31 +522,31 @@
 		li::after {
 			background-color: #ddd;
 		}
-        li::before{
+        li::before {
             background-color: inherit;
             background-repeat: no-repeat;
         }
         .item_complete{
-			&::before{
+			&::before {
 				background-image: url('../img/icons_16_ic_time_grey_05.svg');
 			}
-			&.done::before{
+			&.done::before {
 				background-image: url('../img/icons_16_ic_user_grey_05.svg');
 			}
         }
-        .item_part.basic::before{
+        .item_part.basic::before {
             background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
         }
-        .item_part.intermediate::before{
+        .item_part.intermediate::before {
             background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
         }
-        .item_part.advanced::before{
+        .item_part.advanced::before {
             background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
         }
-        .item_part.expert::before{
+        .item_part.expert::before {
             background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
         }
-        .item_contact::before{
+        .item_contact::before {
             background-image: url('../img/icons_16_ic_customer_grey_05.svg');
         }
     }
@@ -565,10 +573,10 @@
 		flex-wrap: nowrap;
 		flex:none;
 		margin-left:1.8rem;
-		.btn.ico::before {
-			width:1.7rem;
-			height:1.7rem;
-			background-color: #ddd;
+		.ico.file_down {
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_download_black.svg');
 		}
 	}
 }
@@ -687,7 +695,6 @@
 
 // 차수목록 아코디언
 .degree_list {
-    padding-top: 3.2rem;
 	.degree_sort {
 		display:flex;
 		align-items: center;
@@ -785,37 +792,6 @@
 }
 
 .theme_dark {
-    //큐브 오버뷰 스크립트
-    .overview_subscript{
-        color: #cbcdcf;
-    }
-
-    //큐브내 overview icon
-    .cube_overview ul {
-        li::before{
-            background-color: inherit;
-            background-repeat: no-repeat;
-        }
-        .item_complete::before{
-            background-image: url('../img/icons_16_ic_time_grey_05.svg');
-        }
-        .item_part.basic::before{
-            background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
-        }
-        .item_part.intermediate::before{
-            background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
-        }
-        .item_part.advanced::before{
-            background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
-        }
-        .item_part.expert::before{
-            background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
-        }
-        .item_contact::before{
-            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
-        }
-    }
-
     //classroom 차수정보
     .degree_list .degree_acco{
         border-color: #25272b;
@@ -828,6 +804,33 @@
     }
 
 }
+
+// 개요설명
+.overview_subscript {
+    margin-top: 2rem;
+    position: relative;
+    .overview_txt {
+		color:#44464a;
+        @include Ellipsis3;
+    }
+    .btn_more {
+        padding:0;
+        color:#a4a6aa;
+    }
+    &.is_expanded {
+        .overview_txt {
+            display:block;
+            overflow: visible;
+        }
+    }
+}
+.theme_dark {
+    //큐브 오버뷰 스크립트
+    .overview_txt{
+        color: #cbcdcf;
+    }
+}
+
 
 //나의 코멘트
 .my_commentinfo {
@@ -1133,7 +1136,7 @@
 				}
 			}
 			.right {
-				.btn::before{
+				.btn::before {
 					background-image: url('../img/icons_20_ic_more_grey_06.svg');
 				}
 			}
@@ -1155,7 +1158,8 @@
 
 // 학습과정제목
 .learning_subject {
-	padding:2rem;
+	padding:2rem 0 1.6rem 0;
+
     .title_area {
         .title {
             margin-top:1rem;
@@ -1169,76 +1173,40 @@
         color:$ColorSubTxt;
         .label {
             &::before {
-                content:'';
+				content:'';
+				width : 1.6rem;
+				height: 1.6rem;
                 margin-right:0.4rem;
             }
-            &.video {
-                &::before {
-                    width:1.6rem;
-                    height:1.6rem;
-                }
-            }
-            &.time {
-                &::before {
-                    width:1.6rem;
-                    height:1.6rem;
-                }
-            }
-			&.classroom{
-				&::before{
-					width : 1.6rem;
-					height: 1.6rem;
-					background-image: url("../img/icons_16_ic_classroom_grey_06.svg");
-				}
+			&.video::before {
+				background-image: url('../../assets/img/icons_16_ic_video_grey_06.svg');
 			}
-			&.elearning{
-				&::before{
-					width : 1.6rem;
-					height: 1.6rem;
-					background-image: url("../img/icons_16_ic_e_learning_grey_06.svg");
-				}
+			&.time::before {
+				background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
 			}
-			&.cohort{
-				&::before{
-					width: 1.6rem;
-					height : 1.6rem;
-					background-image: url("../img/icons_16_ic_cohort_grey_06.svg");
-				}
+			&.classroom::before {
+				background-image: url("../img/icons_16_ic_classroom_grey_06.svg");
 			}
-			&.audio{
-				&::before{
-					width: 1.6rem;
-					height : 1.6rem;
-					background-image: url("../img/icons_16_ic_audio_grey_06.svg");
-				}
+			&.elearning::before {
+				background-image: url("../img/icons_16_ic_e_learning_grey_06.svg");
 			}
-			&.webpage{
-				&::before{
-					width : 1.6rem;
-					height : 1.6rem;
-					background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
-				}
+			&.cohort::before {
+				background-image: url("../img/icons_16_ic_cohort_grey_06.svg");
 			}
-			&.discussion{
-				&::before{
-					width : 1.6rem;
-					height : 1.6rem;
-					background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
-				}
+			&.audio::before {
+				background-image: url("../img/icons_16_ic_audio_grey_06.svg");
 			}
-			&.experiential{
-				&::before{
-					width : 1.6rem;
-					height : 1.6rem;
-					background-image: url("../img/icons_16_ic_experiential_grey_06.svg");
-				}
+			&.webpage::before {
+				background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
 			}
-			&.task{
-				&::before{
-					width : 1.6rem;
-					height : 1.6rem;
-					background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
-				}
+			&.discussion::before {
+				background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
+			}
+			&.experiential::before {
+				background-image: url("../img/icons_16_ic_experiential_grey_06.svg");
+			}
+			&.task::before {
+				background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
 			}
             & + .label {
                 margin-left:1.6rem;
@@ -1264,6 +1232,11 @@
 		}
 	}
 }
+.content_head {
+	.learning_subject {
+		padding:0.4rem $GapSideBase 1.6rem $GapSideBase;
+	}
+}
 .theme_dark {
     .learning_subject {
         .title_area {
@@ -1287,6 +1260,97 @@
     }
 }
 
+.comment_floating {
+    height:6rem;
+
+    // 코멘트 메세지
+    .comment_alert {
+        position: absolute;
+        left: 0;
+        bottom:100%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        height:4rem;
+        width:100%;
+        padding:0 $GapSideBase;
+        background-color: #44464a;
+        &.is_visible {
+            display:flex;
+        }
+        .btn.ico.close {
+            width:2rem;
+            height:2rem;
+            padding:0;
+            &::before {
+                width:2rem;
+                height:2rem;
+                background-image:url('../img/icons_20_ic_clear_grey_04.svg');
+            }
+        }
+    }
+    // 코멘트 입력
+    .comment_body {
+        position:fixed;
+        left:0;
+        bottom:0;
+        z-index: 100;
+        width:100%;
+        height:inherit;
+        padding:0 2rem;
+        border-top:1px solid #33353c;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        .left{
+            display: flex;
+            width:100%;
+            flex:1 1 auto;
+            .avata {
+                width:3.2rem;
+                height:3.2rem;
+            }
+            .comment_form {
+                margin:0 1rem 0 2rem;
+                .dark_form {
+                    background-color: #000;
+                    border:0;
+                    height:3.2rem;
+                    padding:inherit;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            flex:none;
+            .btn + .btn {
+                margin-left:1rem;
+            }
+            .btn.attach {
+                position: relative;
+                &::after {
+                    content:"";
+                    position:relative;
+                    display:inline-block;
+                    width:2.4rem;
+                    height:2.4rem;
+                    background-image: url('../img/icons_24_ic_image_grey_05.svg');
+                }
+            }
+            .btn.send {
+                &::before {
+                    width:2.4rem;
+                    height:2.4rem;
+                    background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+                }
+                &.is_active::before {
+                    background-image: url('../img/icons_24_ic_send_active.svg');
+                }
+            }
+        }
+    }
+}
 
 /////////////////////////////////
 // TEST Components
@@ -1473,6 +1537,9 @@
                     color:$ColorSubTxt;
                 }
             }
+			.date {
+				color:$ColorSubTxt;
+			}
         }
         .item_coment {
             margin-top:0.9rem;
@@ -1654,7 +1721,7 @@
 
 // Review Page
 .review_page {
-    .content_body {
+    &.tab_panel {
         padding-top:2rem;
     }
     .board_toolbar {

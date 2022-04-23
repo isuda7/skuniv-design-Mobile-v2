@@ -1,121 +1,12 @@
 //학습 공통 타이틀
 .learning_container {
     .learning_subject {
-        .info_area {
-            .video::before {
-                background-image: url('../../assets/img/icons_16_ic_video_grey_06.svg');
-            }
-            .time::before {
-                background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
-            }
-        }
     }
 }
 
 //Overview
 .overview_page {
     padding-bottom:5.23rem;
-}
-.overview_subscript {
-    margin-top: 2rem;
-    padding-bottom:1.5rem;
-    position: relative;
-    .overview_txt {
-        @include Ellipsis3;
-    }
-    .btn_more {
-        padding:0;
-        color:#a4a6aa;
-    }
-    &.is_expanded {
-        .overview_txt {
-            display:block;
-            overflow: visible;
-        }
-    }
-}
-
-//태그
-.chip.action {
-    background-color:#f2f3f5;
-    border:0;
-}
-
-//찜하기
-.page_action.pick {
-    display: block;
-    .pick_btn {
-        display:flex;
-        padding:1.8rem 2rem;
-        border-radius: $RadiusLarge;
-        color:#fff ;
-        background-color: #44464a;
-        margin-bottom:2rem;
-        @include Shadow3;
-        .pick_txt {
-            width:70%;
-            @include FontBody14;
-        }
-        .pick_more {
-            width:30%;
-            .btn_more {
-                display: block;
-                color:#ffa394;
-                font-weight: 400;
-                height:inherit;
-                padding:inherit;
-                float: right;
-                @include FontBody14;
-            }
-        }
-    }
-    .floating_btn {
-        .btn {
-            width:100%;
-        }
-    }
-}
-
-//찜하기 더보기
-.pick_morepage {
-    .pick_moretxt {
-        @include FontBody16;
-        display: block;
-        padding:1.5rem 0;
-        width:100%;
-        text-align: left;
-        font-weight: 700;
-    }
-}
-
-//플레이리스트 추가
-.filter_body {
-    .filter_list {
-        .checkbox {
-            .playlist_txt {
-                @include Ellipsis1;
-            }
-        }
-    }
-    .add_newpl {
-        .addnewpl_btn {
-            color:#ff664d;
-        }
-    }
-}
-
-//뱃지 복수
-.badgelist_white {
-    background-color: #fff;
-    border-bottom:1px solid #f2f3f5;
-    .badge_inner {
-        .badge_body {
-            color:#000;
-            .badge_title {
-                @include Ellipsis1;
-            }
-        }
-    }
 }
 
 //선수과정 필수 & 선택
@@ -124,21 +15,32 @@
         width:100%;
         color:#75777b;
         margin-bottom:3rem;
-        .advance_img, .elective_img {
+        .ico {
             width:4rem;
             height:4rem;
             margin:0 auto 0.8rem;
-        }
-        .advance_img {
-            background:#ddd url('');
-        }
-        .elective_img {
-            background:#ddd url('');
+            &.advance {
+                background-image: url('../img/icons_40_ic_warning_primary.svg');
+            }
+            &.elective {
+                background-image: url('../img/icons_40_ic_warning_grey_03.svg');
+            }
         }
     }
     .course_tit {
+        @include FontTitle16;
         height:inherit;
         font-weight: 700;
+    }
+}
+.modal_elctivelearning {
+    .modal_content {
+        padding-bottom:0.8rem;
+    }
+}
+.modal_advancelearning {
+    .modal_content {
+        padding-bottom:3.2rem;
     }
 }
 .course_learning {
@@ -151,6 +53,7 @@
 		padding:1.5rem 0 1.5rem 0;
 		.course_body {
             display:flex;
+            align-items: center;
             width:100%;
 			flex:0 1 auto;
 			color:#fff;
@@ -178,57 +81,35 @@
 		&::after {
 			content:"";
 			display:block;
-			width:0.6rem;
-			height:1.3rem;
-			background-color: #ddd;
-			margin-left:2rem;
+			width:1.6rem;
+			height:1.6rem;
+			margin-left:1.2rem;
+			background-image:url('../img/icons_16_ic_chervron_right_grey_05.svg');
 		}
 	}
 }
 
-//커리큘럼 보드리스트
-.curriculum_thumb {
-    position: relative;
-    .curriculum_thumbico {
-        position: absolute;
-        top:0;
-        right:1rem;
-        width:2.4rem;
-        height:2.4rem;
-        background-image: url('../../assets/img/icons_24_ic_bookmark_off_on.svg');
-        background-position-y: top;
+//학습활동 overview
+.activity_overview {
+    margin-top: 1.2rem;
+    padding:1.6rem 2rem;
+    background-color:#f8f8fa;
+    border-radius: $RadiusLarge;
+    .sub_txt {
+        color:#a4a6aa;
     }
-    .is_active {
-        background-position-y: bottom;
+    .title {
+        font-weight: 700;
     }
 }
 
-//학습활동 페이지
-.header_bg {
-    background-color:#fff;
-}
-.learningactivity_header {
-    margin-top: 2rem;
-    padding:2rem;
-    background-color:#fff;
-    .cube_overview {
-        display:block;
-        font-weight: 700;
-        .learning_theme {
-            color:#a4a6aa;
-            @include FontBody12;
-        }
-        .learning_subject {
-            color:#33353c;
-        }
-    }
-}
-.learning_note {
+//학습활동 가이드
+.activity_note {
     width: 100%;
     .title {
         padding:1.6rem 0;
         border-bottom:1px solid #f2f3f5;
-        margin-bottom:2rem;
+        margin-bottom:1.6rem;
         .note_link{
             &::after {
                 content:"";
@@ -242,13 +123,15 @@
             }
         }
         .note_no {
+            display: block;
+            margin-top:0.8rem;
             @include FontBody12;
             color:#1c1d1f;
         }
     }
     .note_contents {
         .note_link {
-            margin-bottom:1rem;
+            margin-bottom:1.2rem;
             color:#ff664d;
             @include FontBody13;
         }
@@ -267,14 +150,11 @@
         }
     }
     .note_contents +  .note_contents {
-        padding-top:2rem;
+        margin-top:1.2rem;
     }
-    .learningbtn_more {
-        padding:2rem 0;
+    .more_area {
+        padding:1.4rem 0;
         text-align: center;
-        &.arw_link {
-            display: inline-block;
-        }
     }
 }
 
@@ -336,97 +216,6 @@
     }
     .post + .post {
         margin-top:2rem;
-    }
-}
-.comment_floating {
-    height:6rem;
-
-    // 코멘트 메세지
-    .comment_alert {
-        position: absolute;
-        left: 0;
-        bottom:100%;
-        display: none;
-        justify-content: space-between;
-        align-items: center;
-        height:4rem;
-        width:100%;
-        padding:0 $GapSideBase;
-        background-color: #44464a;
-        &.is_visible {
-            display:flex;
-        }
-        .btn.ico.close {
-            width:2rem;
-            height:2rem;
-            padding:0;
-            &::before {
-                width:2rem;
-                height:2rem;
-                background-image:url('../img/icons_20_ic_clear_grey_04.svg');
-            }
-        }
-    }
-    // 코멘트 입력
-    .comment_body {
-        position:fixed;
-        left:0;
-        bottom:0;
-        z-index: 100;
-        width:100%;
-        height:inherit;
-        padding:0 2rem;
-        border-top:1px solid #33353c;
-        background-color: #000000;
-        display: flex;
-        align-items: center;
-        .left{
-            display: flex;
-            width:100%;
-            flex:1 1 auto;
-            .avata {
-                width:3.2rem;
-                height:3.2rem;
-            }
-            .comment_form {
-                margin:0 1rem 0 2rem;
-                .dark_form {
-                    background-color: #000;
-                    border:0;
-                    height:3.2rem;
-                    padding:inherit;
-                }
-            }
-        }
-        .right {
-            display: flex;
-            align-items: center;
-            flex:none;
-            .btn + .btn {
-                margin-left:1rem;
-            }
-            .btn.attach {
-                position: relative;
-                &::after {
-                    content:"";
-                    position:relative;
-                    display:inline-block;
-                    width:2.4rem;
-                    height:2.4rem;
-                    background-image: url('../img/icons_24_ic_image_grey_05.svg');
-                }
-            }
-            .btn.send {
-                &::before {
-                    width:2.4rem;
-                    height:2.4rem;
-                    background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
-                }
-                &.is_active::before {
-                    background-image: url('../img/icons_24_ic_send_active.svg');
-                }
-            }
-        }
     }
 }
 

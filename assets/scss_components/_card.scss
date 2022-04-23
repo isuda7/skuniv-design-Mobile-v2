@@ -12,6 +12,7 @@
 			background-color: #fff;
 		}
 		.card_thumb {
+			position: relative;
 			flex: none;
 		}
 		.card_body {
@@ -55,7 +56,6 @@
 			background-image: url('../img/icons_20_ic_cubelist_black.svg');
 		}
 	}
-
 }
 // Styles
 .card {
@@ -363,9 +363,31 @@
 			width:calc(100% - 3.2rem);
 		}
 	}
+	.ribon {
+		position: absolute;
+		right: 0.8rem;
+		top: 0;
+		z-index: 10;
+		width: 2.4rem;
+		height: 2.4rem;
+		border-radius: 0;
+		&::before {
+			width:2.4rem;
+			height:2.4rem;
+			background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
+		}
+		&.is_active {
+			&::before {
+				background-position: center bottom;
+			}
+		}
+	}
 }
 
 // ETC
+.card_list.community {
+	@include Shadow2;
+}
 .card.community {
 	display: flex;
 	align-items: center;
@@ -375,7 +397,6 @@
 	border: 1px solid #f2f3f5;
 	border-radius: $RadiusLarge;
 	background-color: #fff;
-	@include Shadow2;
 	.item_check {
 		width:3.2rem;
 		flex:none;
@@ -503,9 +524,9 @@
             border-radius: 0.8rem;
         }
         .card_thumb {
+            position: relative;
             width : 8rem;
             height: 5.4rem;
-            position: relative;
             .thumb {
                 width: 100%;
                 height : 100%;
@@ -520,20 +541,6 @@
                 bottom: 0;
                 right: 0;
                 background : rgba(0,0,0, 0.5);
-            }
-            .ribon {
-                position: absolute;
-                right: 0.8rem;
-                top: 0;
-                width: 2.4rem;
-                height: 1.8rem;
-                background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                z-index: 1;
-                &.is_active {
-                    background-position: 0 -4.4rem;
-                }
             }
         }
         .card_body {

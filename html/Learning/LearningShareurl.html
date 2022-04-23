@@ -39,8 +39,8 @@
                 <h1><strong class="blind">학습과정</strong></h1>
             </div>
             <div class="appbar_right">
-                <button type="button" class="btn ico learning"><span class="blind">학습</span></button>
-                <button type="button" class="btn ico bookmark"><span class="blind">북마크</span></button>
+                <button type="button" class="btn ico learning is_active"><span class="blind">학습</span></button>
+                <button type="button" class="btn ico bookmark is_active"><span class="blind">북마크</span></button>
                 <button type="button" class="btn ico more"><span class="blind">더 보기</span></button>
             </div>
         </div>
@@ -103,8 +103,8 @@
                 <div class="board_toolbar">
                     <div class="board_count">
                         <span class="total">총</span>
-                        <em class="count">0</em>
-                        <span class="unit">개</span>
+                        <em class="count">3</em>
+                        <span class="unit">개 강의구성</span>
                     </div>
                 </div>
                 <!-- 큐브리스트 -->
@@ -165,15 +165,17 @@
                     </div>
                 </div>
                 <!-- // 큐브리스트 -->
+
+				<!-- Toast -->
+				<div class="toast is_active is_visible">
+					<p class="toast_txt">URL이 복사되었습니다.</p>
+				</div>
+				<!-- // Toast -->
+
                 <!-- 버튼-->
                 <div class="page_floating">
-                    <div class="page_action pick">
-                        <div class="pick_btn">
-                            <p class="pick_txt">URL이 복사되었습니다.</p>
-                        </div>
-                        <div class="floating_btn">
-                            <button type="button" class="btn basic primary">학습 이어하기</button>
-                        </div>
+                    <div class="page_action">
+                        <button type="button" class="btn basic primary">학습 이어하기</button>
                     </div>
                 </div>
                 <!-- // 버튼-->

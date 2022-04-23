@@ -1,9 +1,11 @@
 //task board
-
+.board_toolbar + .task_list_wrap {
+    margin-top:0.7rem;
+}
 .task_board{
     padding-bottom : 1.6rem;
     & + .task_board{
-        padding-top : 1.6rem;
+        padding-top : 2rem;
         border-top : 0.1rem solid #44464a;
     }
     .task_tit {
@@ -11,21 +13,23 @@
         word-break: break-all;
         @include Ellipsis2;
     }
-    .label + .task_tit {padding-top: 0.4rem;}
+    .label + .task_tit {padding-top: 0.8rem;}
 
 }
 .task_info {
-    padding-top: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width:100%;
+    margin-top: 1.6rem;
     @include FontBody14;
     color :#75777b;
     .left{
         display: flex;
         align-items: center;
+        flex:0 1 auto;
+        overflow: hidden;
         span{
-            margin-right : 0.8rem;
             display: inline-block;
         }
         .avata {
@@ -34,13 +38,18 @@
             height : 2rem;
         }
         .user_id{
-            max-width : 30%;
+            margin-right : 0.8rem;
             @include Ellipsis1;
+        }
+        .reg_date {
+            margin-right:2rem;
+            flex:none;
         }
     }
     .right {
         display: flex;
         align-items: center;
+        flex:none;
         .label{
             margin-left: 1.2rem;
             &:first-child{
@@ -74,4 +83,8 @@
             background-image: url("../../assets/img/icons_16_ic_like_grey_04.svg");
         }
     }
+}
+
+.classroom_page .degree_page {
+    padding-top:2rem;
 }

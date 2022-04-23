@@ -236,7 +236,7 @@
         margin-left:0.8rem;
         padding:1rem 0.4rem;
         & + .btn.text {
-            margin-left:1.6rem; 
+            margin-left:1.6rem;
         }
     }
     .btn.ico {
@@ -286,6 +286,12 @@
         &.drawer::before {
             background-image:url('../img/icons_24_ic_menu_black.svg');
         }
+        &.bookmark::before {
+            background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
+        }
+        &.bookmark.is_active::before {
+            background-position-y: bottom;
+        }
     }
 }
 .theme_secondary {
@@ -331,7 +337,7 @@
                 background-position-y: bottom;
             }
             &.bookmark::before {
-                background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
+                background-image:url('../img/icons_24_ic_bookmark_off_white.svg');
                 background-position-y: bottom;
             }
             &.bookmark.is_active::before {

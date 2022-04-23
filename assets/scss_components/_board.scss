@@ -54,9 +54,11 @@
             width:100%;
             align-items: center;
             .item_thumb {
+				position: relative;
                 flex: none;
             }
             .item_title {
+				display:block;
                 flex: 0 1 auto;
             }
         }
@@ -88,6 +90,25 @@
 			width: 10rem;
 			height: 6.8rem;
 			margin-right: 1.2rem;
+			.ribon {
+				position: absolute;
+				right: 0.8rem;
+				top: 0;
+				z-index: 10;
+				width: 2.4rem;
+				height: 2.4rem;
+				border-radius: 0;
+				&::before {
+					width:2.4rem;
+					height:2.4rem;
+					background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
+				}
+				&.is_active {
+					&::before {
+						background-position: center bottom;
+					}
+				}
+			}
 		}
 		.item_title {
 			.sub_txt {
