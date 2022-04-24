@@ -42,3 +42,44 @@
         }
     }
 }
+
+// Styles
+.tooltip.basic {
+    .tooltip_body {
+        width:15.2rem;
+        background-color: #fff;
+        border-radius: $RadiusLarge;
+        border:1px solid #f2f3f5;
+        @include Shadow4;
+        .btn {
+            width:100%;
+            height:4rem;
+            justify-content: flex-start;
+            padding:0 1.2rem 0 1.4rem;
+            color: #44464a;
+            & + .btn {
+                border-top:1px solid #f2f3f5;
+            }
+            &::before {
+                content:'';
+                display:block;
+                width:1.6rem;
+                height:1.6rem;
+                margin-right:0.7rem;
+                background: no-repeat center center / 100% auto;
+            }
+            &.edit::before {
+                background: url('../img/icons_16_ic_edit_grey_07.svg');
+            }
+            &.remove::before {
+                background: url('../img/icons_16_ic_delete_grey_07.svg');
+            }
+        }
+    }
+}
+.theme_dark {
+    .tooltip.basic .tooltip_body {
+        background-color: #fff;
+        border:1px solid #f2f3f5;
+    }
+}
