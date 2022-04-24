@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			// 직접입력에서 패드가 올라올 경우
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<h1 class="transition"><strong>학습자 정보 선택</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container onboard_container currentTask_page">
+			<div class="content_body">
+                <div class="step_bar">
+                    <span class="step_item is_comped"><span class="blind">Step 1</span></span>
+                    <span class="step_item"><span class="blind">Step 2</span></span>
+                    <span class="step_item"><span class="blind">Step 3</span></span>
+                </div>
+
+				<div class="onboard_learning">
+					<div class="onboard_step">
+						<p class="sub_txt appbar_title"><span class="label style1">👀 학습자 정보</span></p>
+						<p class="count">1/4</p>
+					</div>
+					<div class="onboard_title">
+						<h1 class="title">
+							김써니 님의 <br />
+							현재 직무를 선택해주세요.
+						</h1>
+						<p class="explain">수행하고 있는 업무를 기반으로 선택해주세요. </p>
+					</div>
+					<div class="onboard_form">
+						<div class="form_controls">
+							<!-- 선택한 값일 때 is_valued -->
+							<button type="button" class="btn select is_valued">AI Infra 기술개발</button>
+							<p class="txt">의</p>
+						</div>
+						<div class="form_controls">
+							<button type="button" class="btn select">현재 직무</button>
+							<p class="txt">(으)로</p>
+						</div>
+						<div class="form_controls">
+							<p>근무 하고 있어요.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic">이전</button>
+						<button type="button" class="btn basic primary" disabled>다음</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

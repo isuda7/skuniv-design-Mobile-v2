@@ -1,54 +1,46 @@
-// Update Start
-.swiper.update_swiper {
-	position:fixed;
-	left:0;
-	top:0;
-	width:100%;
-	height:100%;
-	background-color: #f8f8fa;
-	transition: background-color 0.5s ease;
-	.swiper-wrapper {
+// 온보드 가입절차
+.onboard_learning {
+	margin-top:4rem;
+	.onboard_step {
 		display:flex;
-		height:100%;
-		box-sizing: border-box;
-		.swiper-slide {
-			position: relative;
-			z-index: 10;
-			display:flex;
-			justify-content: center;
-			flex:none;
-			width:100%;
-			height:100%;
-			&.slide3 {
-				// width:50rem;
+		align-items: center;
+		.count {
+			margin-left:0.4rem;
+			color:#cbcdcf;
+		}
+	}
+	.onboard_title {
+		margin-top:1.2rem;
+		.title {
+			@include FontTitle22;
+		}
+		.explain {
+			margin-top:0.4rem;
+			color:#a4a6aa;
+		}
+	}
+	.onboard_form {
+		> .checkbox.basic {
+			margin-bottom: 1.5rem;
+		}
+		margin-top:3.2rem;
+		.form_controls {
+			color:#a4a6aa;
+			& + .form_controls {
+				margin-top:0.8rem;
+			}
+			.txt {
+				flex:none;
+				width:7.2rem;
+				padding-left:0.8rem;
 			}
 		}
 	}
-	.swiper-pagination {
-		position:absolute;
-		left:0;
-		bottom:10rem;
-		width:100%;
-		display:flex;
-		justify-content: center;
-		align-items: center;
-		&-bullet {
-			opacity: 1;
-			background-color: #e3e4e5;
-			border-radius: 1rem;
-			transition: all 0.2s ease;
-		}
-		&-bullet-active {
-			background-color: $ColorPrimary;
-			width:2rem;
-		}
-	}
-	&.theme_dark {
-		background-color:#25272b;
-	}
 }
 
+// 업데이트 안내
 .update_page {
+	// Items
 	.update_item {
 		position: relative;
 		display:flex;
@@ -84,13 +76,63 @@
 			}
 		}
 	}
-	.swiper-slide-active {
-		.update_item {
-			.overay {
-				opacity: 1;
-				transform: translateY(0);
-				transition: all 0.6s 0.3s ease-out;
+
+	// Swiper
+	.swiper.update_swiper {
+		position:fixed;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background-color:rgb(53, 53, 102)a;
+		transition: background-color 0.5s ease;
+		.swiper-wrapper {
+			display:flex;
+			height:100%;
+			box-sizing: border-box;
+			.swiper-slide {
+				position: relative;
+				z-index: 10;
+				display:flex;
+				justify-content: center;
+				flex:none;
+				width:100%;
+				height:100%;
+				&.slide3 {
+					// width:50rem;
+				}
 			}
+			.swiper-slide-active {
+				.update_item {
+					.overay {
+						opacity: 1;
+						transform: translateY(0);
+						transition: all 0.6s 0.3s ease-out;
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			position:absolute;
+			left:0;
+			bottom:10rem;
+			width:100%;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			&-bullet {
+				opacity: 1;
+				background-color: #e3e4e5;
+				border-radius: 1rem;
+				transition: all 0.2s ease;
+			}
+			&-bullet-active {
+				background-color: $ColorPrimary;
+				width:2rem;
+			}
+		}
+		&.theme_dark {
+			background-color:#25272b;
 		}
 	}
 	.page_action {

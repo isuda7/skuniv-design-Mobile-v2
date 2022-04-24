@@ -12,6 +12,16 @@
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            $(function(){
+                // 스티키 레이아웃 설정
+                var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                $('.container').css({'padding-top': breakStickyPos+'rem'});
+                $('.sticky').css({'top': breakStickyPos+'rem'});
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -21,7 +31,7 @@
 			<div class="appbar basic">
 				<div class="appbar_left">
 					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-					<h1><strong>Notice</strong></h1>
+					<h1><strong class="blind">Appbar Title</strong></h1>
 				</div>
 			</div>
 		</header>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			// 직접입력에서 패드가 올라올 경우
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<h1 class="transition"><strong>선호 학습 방식</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container onboard_container currentTask_page">
+			<div class="content_body">
+                <div class="step_bar">
+                    <span class="step_item is_comped"><span class="blind">Step 1</span></span>
+                    <span class="step_item is_comped"><span class="blind">Step 2</span></span>
+                    <span class="step_item is_comped"><span class="blind">Step 3</span></span>
+                </div>
+
+				<div class="onboard_learning">
+					<div class="onboard_step">
+						<p class="sub_txt appbar_title"><span class="label style1">📝 선호 학습 방식</span></p>
+						<p class="count">2/4</p>
+					</div>
+					<div class="onboard_title">
+						<h1 class="title">
+							어떤 목적으로 교육을 <br/>
+							수강하고 싶으신가요?
+						</h1>
+						<p class="explain">선호하는 유형은 모두 선택해주세요. </p>
+					</div>
+					<div class="onboard_form">
+						<div class="checkbox block">
+							<input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden" checked />
+							<label for="checkbox11"><span>새로운 지식과 트렌드를 배우기 위해</span></label>
+						</div>
+						<div class="checkbox block">
+							<input type="checkbox" name="checkbox1" id="checkbox12" tabindex="0" class="hidden" />
+							<label for="checkbox12"><span>현재 직무의 역량 강화를 위해 </span></label>
+						</div>
+						<div class="checkbox block">
+							<input type="checkbox" name="checkbox1" id="checkbox13" tabindex="0" class="hidden" />
+							<label for="checkbox13"><span>직무 전환을 위한 역량 습득을 위해 </span></label>
+						</div>
+						<div class="checkbox block">
+							<input type="checkbox" name="checkbox1" id="checkbox14" tabindex="0" class="hidden" />
+							<label for="checkbox14"><span>리더로 성장하기 위한 체계적 준비를 위해</span></label>
+						</div>
+						<div class="checkbox block">
+							<input type="checkbox" name="checkbox1" id="checkbox15" tabindex="0" class="hidden" checked />
+							<label for="checkbox15"><span>기타 (직접입력)</span></label>
+							<!-- 직접입력시 is_visible -->
+							<div class="textarea_group is_visible">
+								<textarea cols="30" rows="10" placeholder="입력해주세요." class="basic">입력하고 난 후의 텍스트 내용 입력하고 난 후의 텍스트 내용 입력하고 난 후의 텍스트 내용 입력하고 난 후의 텍스트 내용</textarea>
+								<p class="bytes">0/300</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic">이전</button>
+						<button type="button" class="btn basic primary">완료</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

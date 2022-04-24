@@ -14,12 +14,10 @@
     <title>mySUNI Design Mobile V2</title>
     <script>
         $(function(){
-            $(function(){
-                // 스티키 레이아웃 설정
-                var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-                $('.container').css({'padding-top': breakStickyPos+'rem'});
-                $('.sticky').css({'top': breakStickyPos+'rem'});
-            })
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
         })
     </script>
 </head>

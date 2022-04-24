@@ -41,7 +41,7 @@
         background-color:#F8F8FA;
     }
     &:disabled {
-        color:#f2f3f5;
+        color:#E3E4E5;
         background-color:#fff;
     }
     &.primary {
@@ -54,6 +54,7 @@
             background-color:$ColorPrimaryDark;
         }
         &:disabled {
+            color:#f2f3f5;
             border-color:#E3E4E5;
             background-color:#E3E4E5;
         }
@@ -61,23 +62,33 @@
 }
 
 .btn.select {
-    padding:0.9ren 3.6rem 0.9rem 1.6rem;
+    flex:1 1 auto;
+    justify-content: space-between;
+    height:4.8rem;
+    width:100%;
+    padding:0.9rem 1.6rem 0.9rem 1.6rem;
     border:1px solid $FormBasicBorder;
     color:$FormBasicText;
     border-radius: $RadiusSmall;
-    &.disabled {
-        color:$FormBasicDisable;
-    }
     &.is_valued {
         color:$FormBasicValue;
+    }
+    &.is_valued:disabled,
+    &:disabled {
+        color:#e3e4e5;
+        background-color: #f8f8fa;
+        border-color: #f2f3f5;
+        &::after {
+            opacity: 0.1;
+        }
     }
     &::after {
         content:'';
         display:block;
         width:1.2rem;
         height:1.2rem;
-        margin-left:0.4rem;
-        background-image: url('../img/icons_12_ic_chervron_down_grey_05.svg');
+        margin-left:1.6rem;
+        background-image: url('../img/icons_12_ic_chervron_down_black.svg');
     }
 }
 

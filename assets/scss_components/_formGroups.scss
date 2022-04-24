@@ -19,6 +19,7 @@
 
 // Input Group
 .input_group {
+    flex:1 1 auto;
     position:relative;
     input {
         height:$FormBasicHeight;
@@ -29,7 +30,6 @@
             width:100%;
             padding-left: $FormBasicPadding;
             padding-right:$FormBasicHeight;
-            background-color: #eee;
         }
         .btn.clear {
             visibility:hidden;
@@ -50,6 +50,9 @@
         &.is_valued {
             .btn.clear {
                 visibility:visible;
+            }
+            input:disabled + .btn.clear {
+                visibility:hidden;
             }
         }
     }
@@ -90,5 +93,14 @@
                 background-image: url('../img/icons_20_ic_calendar_grey_05.svg');
             }
         }
+    }
+}
+
+// Textarea Group
+.textarea_group {
+    .bytes {
+        margin-top:0.4rem;
+        text-align: right;
+        color:#a4a6aa;
     }
 }

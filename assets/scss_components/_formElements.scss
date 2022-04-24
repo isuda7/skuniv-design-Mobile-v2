@@ -59,13 +59,15 @@ input.basic {
     border-radius:$FormBasicRadius;
     font-size:1.4rem;
     line-height: 1.5;
+    color: $FormBasicValue;
     transition: all 0.12s ease;
     &:focus {
         border:1px solid #000000;
         outline: 0;
     }
     &:disabled {
-        color:$ColorSubTxt;
+        color:#e3e4e5;
+        background-color: #f8f8fa;
         border:1px solid #f2f3f5;
     }
 }
@@ -79,6 +81,21 @@ textarea.basic {
     border-radius:$FormBasicRadius;
     font-size:1.4rem;
     white-space: normal;
+    &::placeholder {
+        color: #a4a6aa;
+    }
+    &::placeholder {
+        color: #a4a6aa;
+    }
+    &:focus {
+        border:1px solid #000000;
+        outline: 0;
+    }
+    &:disabled {
+        color:#e3e4e5;
+        background-color: #f8f8fa;
+        border:1px solid #f2f3f5;
+    }
 }
 
 // Checkbox
@@ -154,6 +171,72 @@ textarea.basic {
     input:checked ~ label:after {
         transform:scale(1);
         background-color:$ColorPrimary !important;
+    }
+}
+
+.checkbox.block,
+.radio.block {
+    display: block;
+    @include FontBody14;
+    width:100%;
+    & + .radio.block {
+        margin-top:0.8rem;
+    }
+    & + .checkbox.block {
+        margin-top:0.8rem;
+    }
+    input {
+        top:0;
+        left:0;
+        height:4.8rem;
+    }
+    label {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        height:4.8rem;
+        padding:0.6rem 1.6rem 0.6rem 1.6rem;
+        border:1px solid #e3e4e5;
+        border-radius: $RadiusSmall;
+    }
+    label:before {
+        display:none;
+    }
+    label:after {
+        flex:none;
+        position:static;
+        width:1.6rem;
+        height:1.6rem;
+        margin-left:0.8rem;
+    }
+    input:checked ~ label {
+        border-color: $ColorPrimary;
+        color:$ColorPrimary;
+        font-weight: 700;
+    }
+    input:checked ~ label:after {
+        background: url('../img/icons_16_ic_check_primary.svg');
+    }
+    input:disabled ~ label {
+        opacity: 0.75;
+    }
+    .textarea_group,
+    > textarea {
+        display:none;
+    }
+    .textarea_group.is_visible,
+    > textarea.is_visible {
+        display:block;
+        margin-top:0.4rem;
+    }
+    textarea {
+        height:12.8rem;
+    }
+}
+.checkbox.block {
+    input ~ label:after {
+        background: url('../img/icons_16_ic_check_grey_03.svg');
     }
 }
 

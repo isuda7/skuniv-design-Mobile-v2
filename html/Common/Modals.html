@@ -75,20 +75,33 @@
         </header>
         <div class="g_cont">
             <section class="g_sec">
-                <h2 class="g_h2">Modal Alert/Confirm</h2>
+                <h2 class="g_h2">Modal</h2>
+                <h3 class="g_h3">Guide</h3>
+                <p class="g_info">is_visible: 숨김여부 (display, visibility)</p>
+                <p class="g_info">is_active: 인터렉션 (transition, animation)</p>
+                <p class="g_info">Open (addClass): is_visible &gt; is_active</p>
+                <p class="g_info">Close (removeClass): is_active &gt; (transitionend) &gt; is_visible</p>
+                <p class="g_info">Open, Close 인터렉션 테스트 목적으로 스크립트 적용.</p>
+                <p class="g_info">유형별 공통 UI Style </p>
+
+                <h3 class="g_h3">Modal Alert/Confirm</h2>
                 <div class="g_preview">
-                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalAlert')">Open Alert</button>
-                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalConfirm')">Open Confirm</button>
+                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalAlert')">Alert</button>
+                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalConfirm')">Confirm</button>
                 </div>
-                <h2 class="g_h2">Modal Bottomsheet</h2>
+                <h3 class="g_h3">Modal Bottomsheet</h3>
                 <div class="g_preview">
-                    <button type="button" class="btn basic primary" onclick="ModalBSOpen('#ModalButtomSheet')">Open ButtomSheet</button>
+                    <button type="button" class="btn basic primary" onclick="ModalBSOpen('#ModalBottomSheet')">Default BottomSheet</button>
+                    <br/>
+                    <br/>
+                    <button type="button" class="btn select" onclick="ModalBSOpen('#SelectBottomSheet')">Select BottomSheet</button>
                 </div>
-                <h2 class="g_h2">Modal Fullpopup</h2>
+                <h3 class="g_h3">Modal Fullpopup</h3>
                 <div class="g_preview">
-                    <button type="button" class="btn basic primary" onclick="ModalFPOpen('#ModalFullpopup')">Open Fullpopup</button>
+                    <button type="button" class="btn basic primary" onclick="ModalFPOpen('#ModalFullpopup')">Fullpopup Default</button>
                 </div>
-                <h3 class="g_h3">Toast Popup</h3>
+                <h2 class="g_h2">Toast Popup</h2>
+                <h3 class="g_h3">Basic</h3>
                 <div class="g_preview">
                     <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast1')">Toast 1</button>
                     <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast2')">Toast 2</button>
@@ -133,11 +146,11 @@
     <!-- // Modal Confirm -->
 
     <!-- Modal Bottomsheet -->
-    <div class="modal_wrap" id="ModalButtomSheet">
+    <div class="modal_wrap" id="ModalBottomSheet">
         <div class="modal modal_bottomsheet">
             <div class="modal_header">
-                <button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">ModalButtomSheet</h3>
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#ModalBottomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalBottomSheet</h3>
             </div>
             <div class="modal_content">
 				<div style="height:25rem; background-color: #ddd;"></div>
@@ -157,6 +170,64 @@
         <div class="dimmer" aria-hidden="true"></div>
     </div>
     <!-- // Modal Bottomsheet -->
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap" id="SelectBottomSheet">
+        <div class="modal modal_bottomsheet modal_select">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+            </div>
+            <div class="modal_content">
+                <ul class="select_list">
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" />
+                            <label for="selectlist1"><span>전체</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                            <label for="selectlist2"><span>Select Option1</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist3" tabindex="0" class="hidden" />
+                            <label for="selectlist3"><span>Select Option2</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist4" tabindex="0" class="hidden" />
+                            <label for="selectlist4"><span>Select Option3</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist5" tabindex="0" class="hidden" />
+                            <label for="selectlist5"><span>Select Option4</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist6" tabindex="0" class="hidden" />
+                            <label for="selectlist6"><span>Select Option5</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist7" tabindex="0" class="hidden" />
+                            <label for="selectlist7"><span>Select Option6</span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+
 
     <!-- Modal FullPopup -->
     <div class="modal_wrap" id="ModalFullpopup">
