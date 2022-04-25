@@ -19,6 +19,9 @@
 	.board_util {
 		display: flex;
 		align-items: center;
+		.btn.text:last-child {
+			margin-right:-1rem;
+		}
 		.arw_expand:last-child {
 			margin-right:-1rem;
 		}
@@ -98,6 +101,15 @@
 			width: 10rem;
 			height: 6.8rem;
 			margin-right: 1.2rem;
+			.thumb {
+				&::before {
+					content:'';
+					display:block;
+					width:100%;
+					height:100%;
+					background-color: rgba(0,0,0,0.5);
+				}
+			}
 			.ribon {
 				position: absolute;
 				right: 0.8rem;
@@ -207,6 +219,29 @@
 					font-weight: 700;
 					color: $ColorPrimary;
 					margin-right:0.8rem;
+				}
+				.date {
+					color:$ColorSubTxt;
+				}
+			}
+		}
+		// 학습 Type6
+		&.type6 {
+			.item_foot {
+				.date {
+					color: $ColorSubTxt;
+				}
+				.state {
+					font-weight: 700;
+					&.wait {
+						color: $ColorSubTxt;
+					}
+					&.positive {
+						color:$ColorPositive;
+					}
+					&.negative {
+						color:$ColorNegative;
+					}
 				}
 			}
 		}

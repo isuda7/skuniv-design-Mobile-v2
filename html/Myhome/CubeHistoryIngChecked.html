@@ -36,7 +36,7 @@
                             <button type="button" class="tab_item is_active">학습중</button>
                             <button type="button" class="tab_item">학습예정</button>
                             <button type="button" class="tab_item">muSUNI 학습완료</button>
-                            <button type="button" class="tab_item">개인학습</button>
+                            <button type="button" class="tab_item">개인학습 완료</button>
                             <button type="button" class="tab_item">취소/미이수</button>
                         </div>
                         <div class="tab_next">
@@ -48,13 +48,13 @@
 					<!-- Board Toolbar -->
                     <div class="board_toolbar">
 						<div class="board_count">
-							<span class="total">총</span>
-                            <em class="count">11</em>
-                            <span class="unit">개</span>
-                        </div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheckAll" tabindex="0" class="hidden" />
+								<label for="learningCheckAll"><span>전체선택</span></label>
+							</div>
+						</div>
                         <div class="board_util">
-							<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
-                            <button type="button" class="btn ico remove"><span class="blind">Remove</span></button>
+                            <button type="button" class="btn text black">취소</button>
                         </div>
                     </div>
 					<!-- // Board Toolbar -->
