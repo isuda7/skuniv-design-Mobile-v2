@@ -213,6 +213,11 @@
 .theme_dark .cube_references .references_util .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
 
 
+.modal.task_edit{
+    .modal_footer{
+        height : 4.5rem;
+    }
+}
 .modal_header .btn.submit {
     display: inline-block;
     position: absolute;
@@ -224,8 +229,10 @@
     }
 }
 
-
 .modal_content {
+    &.flex_area{
+        flex-direction: column;
+    }
     .edit_tit {
         margin-top : .8rem;
         margin-left: -$GapSideBase;
@@ -239,10 +246,11 @@
         margin-left: -$GapSideBase;
         margin-right: -$GapSideBase;
         padding : 1.2rem 2rem 2rem 2rem;
-        flex : 1 0;
-        display: flex;
         flex-direction: column;
         border-top : .1rem solid $FormBasicBorder;
+        .edit_form_wrap {
+            flex : 1 0 auto;
+        }
         .textarea{
             @include FontBody14;
         }
@@ -315,31 +323,37 @@
 
 .edit_tool_bar {
     padding: 1.2rem 2rem;
-    border-top: .1rem solid $FormBasicBorder;
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
+    border-top: .1rem solid $FormBasicBorder;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     .btn {
         width : 2rem;
         height : 2rem;
-        background-position: 0 0;
-        &.e_font{
+        &::before{
+            width : 2rem;
+            height : 2rem;
+        }
+        &.e_font::before{
             background-image: url("../../assets/img/icons_20_ic_text_size_off_on.svg");
         }
-        &.e_img{
+        &.e_img::before{
             background-image: url("../../assets/img/icons_20_ic_image_off_on.svg");
         }
-        &.e_link{
+        &.e_link::before{
             background-image: url("../../assets/img/icons_20_ic_clip_off_on.svg");
         }
-        &.e_align{
+        &.e_align::before{
             background-image: url("../../assets/img/icons_20_ic_text_align_off_on.svg");
         }
-        &.e_attch{
+        &.e_attch::before{
             background-image: url("../../assets/img/icons_20_ic_file_off_on.svg");
         }
-        &.is_active{
+        &.is_active::before{
             background-position-y: 100%;
         }
         &+.btn{
@@ -349,21 +363,56 @@
 }
 
 .font_tool_bar{
+    padding : 1.2rem $GapSideBase;
     position: fixed;
-    bottom : 5.2rem;
+    bottom : 4.5rem;
     left: 0;
     right : 0;
     display: none;
-    padding : 1.2rem $GapSideBase;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f8fa;
     &.is_active{
-        display: block;
+        display: flex;
     }
     .btn {
         width : 2rem;
         height : 2rem;
         background-position: 0 0;
+        &+.btn{
+            margin-left : 3rem
+        }
         &.e_fontSize{
             padding : 0;
+            width : auto;
+        }
+        &.ico::before{
+            width : 2rem;
+            height : 2rem;
+        }
+        &.e_bolder::before{
+            background-image: url('../../assets/img/icons_20_ic_text_bolder_off_on.svg');
+        }
+        &.e_italic::before{
+            background-image:url('../../assets/img/icons_20_ic_text_italic_off_on.svg');
+        }
+        &.e_underline::before{
+            background-image:url('../../assets/img/icons_20_ic_text_underline_off_on.svg')
+        }
+        &.e_mid_line::before{
+            background-image:url('../../assets/img/icons_20_ic_text_strikethrough_off_on.svg')
+        }
+        &.e_fontAlign::before{
+            background-image:url('../../assets/img/icons_20_ic_text_align_off_on.svg')
+        }
+        &.e_addDot::before{
+            background-image:url('../../assets/img/icons_20_ic_text_dot_off_on.svg')
+        }
+        &.e_addNum::before{
+            background-image:url('../../assets/img/icons_20_ic_text_number_off_on.svg')
+        }
+        &.is_active::before{
+            background-position-y: 100%;
         }
     }
 }

@@ -42,13 +42,13 @@
             <div class="modal_header">
 				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">Task 작성</h3>
-                <button type="button" class="btn submit" disabled><span>등록</span></button>
+                <button type="button" class="btn submit"><span>등록</span></button>
             </div>
-            <div class="modal_content">
+            <div class="modal_content flex_area">
                 <div class="edit_tit">
                     <input type="text" class="input" placeholder="제목을 입력해주세요."/>
                 </div>
-                <div class="edit_contents">
+                <div class="edit_contents flex_area">
                     <div class="acc_file_upload acc">
                         <a href="javascript:voide(0)" class="acc_title is_active">
                             <strong class="tit">첨부파일</strong><strong class="cnt">3</strong>
@@ -86,19 +86,21 @@
 							</div>
                         </div>
                     </div>
-                    <textarea class="textarea full" placeholder="내용을 입력해주세요."></textarea>
+					<div class="edit_form_wrap">
+						<textarea class="textarea full" placeholder="내용을 입력해주세요.">안녕하십니까</textarea>
+					</div>
                 </div>
             </div>
             <div class="modal_footer">
 				<div class="font_tool_bar is_active">
                     <button type="button" class="btn e_fontSize"><span>12pt</span></button>
-                    <button type="button" class="btn ico e_fontWeight"><span class="blind">Bold</span></button>
+                    <button type="button" class="btn ico e_bolder"><span class="blind">Bold</span></button>
                     <button type="button" class="btn ico e_italic"><span class="blind">Italic</span></button>
-                    <button type="button" class="btn ico e_bttm_line"><span class="blind">Deco</span></button>
+                    <button type="button" class="btn ico e_underline"><span class="blind">Deco</span></button>
                     <button type="button" class="btn ico e_mid_line"><span class="blind">line</span></button>
                     <button type="button" class="btn ico e_fontAlign"><span class="blind">Align</span></button>
-                    <button type="button" class="btn ico e_addDot"><span class="blind">Sort</span></button>
-                    <!-- <button type="button" class="btn ico e_addNum"><span class="blind">Sort</span></button> -->
+                    <!-- <button type="button" class="btn ico e_addDot"><span class="blind">Sort</span></button> -->
+                    <button type="button" class="btn ico e_addNum"><span class="blind">Sort</span></button>
 				</div>
                 <div class="edit_tool_bar">
                     <button type="button" class="btn ico e_font is_active"><span class="blind">글자크기</span></button>
