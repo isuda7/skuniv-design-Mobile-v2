@@ -36,11 +36,18 @@
 .no_data {
 	text-align: center;
 	@include FontBody14;
-	.img {
-		display:block;
+	.tit {
+		@include FontTitle16;
 	}
-	.img + .msg {
-		margin-top:10px;
+	.sub_txt {
+		color:$ColorSubTxt;
+	}
+}
+.theme_dark {
+	.no_data {
+		.tit {
+			color:#fff;
+		}
 	}
 }
 

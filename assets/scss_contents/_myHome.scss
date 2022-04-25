@@ -12,6 +12,51 @@
 ///////////////////////////////////////////////////
 // My Profile
 ///////////////////////////////////////////////////
+// Alim Section
+.alim_define {
+    .alim_item {
+        position: relative;
+        padding:2rem $GapSideBase 1.6rem 5.2rem;
+        border-bottom:1px solid #e3e4e5;
+        &::before {
+            content:'';
+            display:block;
+            position: absolute;
+            left:$GapSideBase;
+            width:2.4rem;
+            height:2.4rem;
+        }
+        &.learning::before {
+            background-image: url('../img/icons_24_ic_learning_black.svg');
+        }
+        &.community::before {
+            background-image: url('../img/icons_24_ic_noticecommunity_black.svg');
+        }
+        &.playlist::before {
+            background-image: url('../img/icons_24_ic_playlist_black.svg');
+        }
+        &.notice::before {
+            background-image: url('../img/icons_24_ic_notice_black.svg');
+        }
+    }
+    .alim_title {
+        display:flex;
+        justify-content: space-between;
+        .tit {
+            @include FontTitle14;
+        }
+        .time {
+            @include FontBody12;
+            color:#a4a6aa;
+        }
+
+    }
+    .alim_cont {
+        margin-top:0.8rem;
+    }
+}
+
+// Profile Headr
 .profile_head {
     display: flex;
     flex-wrap: wrap;
@@ -95,6 +140,7 @@
     }
 }
 
+// Profile View
 .profile_view {
     margin-top:0.5rem;
     p {
@@ -124,6 +170,7 @@
     }
 }
 
+// Profile Form
 .profile_form {
     margin-top:2.4rem;
     p {
@@ -145,6 +192,7 @@
     }
 }
 
+// Profile Popup
 .modal_profile {
     .tab_panel {
         padding-top:0.4rem;

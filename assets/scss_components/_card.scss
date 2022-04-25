@@ -385,177 +385,342 @@
 }
 
 // ETC
-.card_list.community {
-	@include Shadow2;
-}
-.card.community {
-	display: flex;
-	align-items: center;
-	position: relative;
-	flex-wrap: wrap;
-	margin-top:0.8rem;
-	border: 1px solid #f2f3f5;
-	border-radius: $RadiusLarge;
-	background-color: #fff;
-	.item_check {
-		width:3.2rem;
-		flex:none;
+.card {
+	// 커뮤니티
+	&_list .card.community {
+		@include Shadow2;
 	}
-	.item_body {
-		position: relative;
+	&.community {
 		display: flex;
-		flex-wrap: wrap;
-		width:100%;
 		align-items: center;
-		padding: 1.6rem;
-		.item_thumb {
-			width: 5.2rem;
-			height: 5.2rem;
-			margin-right: 1.2rem;
-			flex: none;
+		position: relative;
+		flex-wrap: wrap;
+		margin-top:0.8rem;
+		border: 1px solid #f2f3f5;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+		.item_check {
+			width:3.2rem;
+			flex:none;
 		}
-		.item_title {
-			flex: 0 1 auto;
-			width: calc(100% - 6.4rem);
-			flex: none;
-			padding-right: 4.6rem;
-			.sub_txt {
-				color: #000;
-				&+.title {
-					margin-top: 0.2rem;
-				}
-			}
-			.title {
-				font-size: 1.6rem;
-				line-height: 2rem;
-				font-weight: 700;
-				color: #000;
-				@include Ellipsis2;
-			}
-		}
-	}
-	.item_util {
-		position: absolute;
-		top: 3.2rem;
-		right: 2rem;
-		z-index: 10;
-		margin-left:1.2rem;
-		.checkbox.rating {
-			margin: 0;
-			.icon {
-				content: "";
-				width: 2.2rem;
-				height: 2.2rem;
-				display: block;
-				background-color: #ddd;
-				&.active {
-					background-color: $ColorPrimary;
-				}
-				&::before {
-					display: none;
-				}
-			}
-		}
-	}
-	.item_foot {
-		display: block;
-		margin-top: 1.6rem;
-		@include FontBody14;
-		color: $ColorSubTxt;
-		overflow: hidden;
-		width:100%;
-		.desc + .info_area {
-			margin-top: 1.2rem;
-		}
-		.info_area {
+		.item_body {
+			position: relative;
 			display: flex;
-			align-items: center;
+			flex-wrap: wrap;
 			width:100%;
-			overflow: hidden;
-			@include FontBody13;
-			&::before {
-				content:'';
-				position: relative;
-				top:1px;
-				display:flex;
-				width:1.6rem;
-				height:1.6rem;
-				margin:0 0.4rem 0 0;
-				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+			align-items: center;
+			padding: 1.6rem;
+			.item_thumb {
+				width: 5.2rem;
+				height: 5.2rem;
+				margin-right: 1.2rem;
+				flex: none;
 			}
-			.username {
+			.item_title {
 				flex: 0 1 auto;
-				@include Ellipsis1;
+				width: calc(100% - 6.4rem);
+				flex: none;
+				padding-right: 4.6rem;
+				.sub_txt {
+					color: #000;
+					&+.title {
+						margin-top: 0.2rem;
+					}
+				}
+				.title {
+					font-size: 1.6rem;
+					line-height: 2rem;
+					font-weight: 700;
+					color: #000;
+					@include Ellipsis2;
+				}
 			}
-			.member {
+		}
+		.item_util {
+			position: absolute;
+			top: 3.2rem;
+			right: 2rem;
+			z-index: 10;
+			margin-left:1.2rem;
+			.checkbox.rating {
+				margin: 0;
+				.icon {
+					content: "";
+					width: 2.2rem;
+					height: 2.2rem;
+					display: block;
+					background-color: #ddd;
+					&.active {
+						background-color: $ColorPrimary;
+					}
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+		.item_foot {
+			display: block;
+			margin-top: 1.6rem;
+			@include FontBody14;
+			color: $ColorSubTxt;
+			overflow: hidden;
+			width:100%;
+			.desc + .info_area {
+				margin-top: 1.2rem;
+			}
+			.info_area {
 				display: flex;
 				align-items: center;
-				flex: none;
-				margin-right:1rem;
+				width:100%;
+				overflow: hidden;
+				@include FontBody13;
 				&::before {
-					content: "";
-					display: block;
-					width: 1px;
-					height: 1rem;
-					margin-right: 0.8rem;
-					margin-left: 0.8rem;
-					background-color: #CBCDCF;
+					content:'';
+					position: relative;
+					top:1px;
+					display:flex;
+					width:1.6rem;
+					height:1.6rem;
+					margin:0 0.4rem 0 0;
+					background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+				}
+				.username {
+					flex: 0 1 auto;
+					@include Ellipsis1;
+				}
+				.member {
+					display: flex;
+					align-items: center;
+					flex: none;
+					margin-right:1rem;
+					&::before {
+						content: "";
+						display: block;
+						width: 1px;
+						height: 1rem;
+						margin-right: 0.8rem;
+						margin-left: 0.8rem;
+						background-color: #CBCDCF;
+					}
+				}
+				.ico.lock {
+					flex:none;
+					margin-left: auto;
+					width: 1.6rem;
+					height: 1.6rem;
+					background-image: url('../img/icons_16_ic_lock_black.svg');
 				}
 			}
-			.ico.lock {
-				flex:none;
-				margin-left: auto;
-				width: 1.6rem;
-				height: 1.6rem;
-				background-image: url('../img/icons_16_ic_lock_black.svg');
+		}
+	}
+
+	// 피드
+	&_list .card.feed {
+		@include Shadow2;
+	}
+	&.feed {
+		display: flex;
+		align-items: center;
+		position: relative;
+		flex-wrap: wrap;
+		margin-top:0.8rem;
+		border: 1px solid #f2f3f5;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+		.item_check {
+			width:3.2rem;
+			flex:none;
+		}
+		.item_body {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			width:100%;
+			align-items: center;
+			padding: 1.6rem;
+			.item_thumb {
+				width: 5.2rem;
+				height: 5.2rem;
+				margin-right: 1.2rem;
+				flex: none;
+			}
+			.item_title {
+				.sub_txt {
+					color: #000;
+					&+.title {
+						margin-top: 0.4rem;
+					}
+				}
+				.title {
+					font-size: 1.6rem;
+					line-height: 2rem;
+					font-weight: 700;
+					color: #000;
+					@include Ellipsis2;
+				}
+			}
+		}
+		.item_cont {
+			display: block;
+			margin-top: 0.8rem;
+			@include FontBody14;
+			color: $ColorSubTxt;
+			overflow: hidden;
+			width:100%;
+			.desc {
+				color:#000;
+			}
+			.desc + .item_info {
+				margin-top: 1.2rem;
+			}
+			.item_info {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width:100%;
+				margin-top: 1.6rem;
+				@include FontBody14;
+				color :#75777b;
+				> .left{
+					display: flex;
+					align-items: center;
+					flex:0 1 auto;
+					overflow: hidden;
+					span{
+						display: inline-block;
+					}
+					.avata {
+						margin-right : 0.6rem;
+						width :2rem;
+						height : 2rem;
+					}
+					.name{
+						@include Ellipsis1;
+					}
+					.time {
+						display:flex;
+						align-items: center;
+						margin-right:2rem;
+						flex:none;
+						color:#a4a6aa;
+					}
+				}
+				> .right {
+					display: flex;
+					align-items: center;
+					flex:none;
+					.label {
+						&:first-child{
+							margin-left: 0;
+						}
+						&::before{
+							content:'';
+							display:inline-block;
+							margin-right : .4rem;
+							width : 1.6rem;
+							height : 1.6rem;
+						}
+					}
+				}
+				.bar {
+					display:inline-block;
+					width:1px;
+					height:1rem;
+					margin:0 0.8rem;
+					background-color: #f2f3f5;
+				}
+			}
+		}
+		.item_foot {
+			display:flex;
+			width:100%;
+			height:4.8rem;
+			align-items: center;
+			padding:0 1.6rem;
+			border-top:1px solid #f2f3f5;
+			> .left {
+				display:flex;
+				align-items: center;
+				.btn + .btn {
+					margin-left:2rem;
+				}
+			}
+			> .right {
+				margin-left:auto;
+			}
+			.btn.share::before {
+				width:2.4rem;
+				height:2.4rem;
+				background-image: url('../img/icons_24_ic_share_black.svg');
+			}
+			.btn.bookmark::before {
+				width:2.4rem;
+				height:2.4rem;
+				background-image: url('../img/icons_24_ic_bookmark_off_on_2.svg');
+			}
+			.btn.bookmark.is_active::before {
+				background-position-y: bottom;
+			}
+			.btn.like {
+				color:$ColorSubTxt;
+			}
+			.btn.like::before {
+				content:'';
+				display:block;
+				width:2.4rem;
+				height:2.4rem;
+				margin-right:0.4rem;
+				background-image: url('../img/icons_24_ic_like_off_on.svg');
+			}
+			.btn.like.is_active::before {
+				background-position-y: bottom;
 			}
 		}
 	}
 }
 
 // cube내 해당과정
-.card{
-    &.cube_parents{
-        .card_inner{
-            padding:1.6rem;
-            display: flex;
-            align-items: center;
-            border : 0.1rem solid $FormBasicBorder;
-            border-radius: 0.8rem;
-        }
-        .card_thumb {
-            position: relative;
-            width : 8rem;
-            height: 5.4rem;
-            .thumb {
-                width: 100%;
-                height : 100%;
-                position: relative;
-				&::after {
-					content: '';
-					display: inline-block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					background : rgba(0,0,0, 0.5);
-				}
-            }
-        }
-        .card_body {
-            width : calc(100% - 9.2rem);
-            margin-left : auto;
-            .title{
-                @include FontBody12;
-                @include Ellipsis2;
-            }
-        }
-        .sub_txt {
-            @include FontBody12;
-            @include Ellipsis1;
-        }
-    }
+.card.cube_parents{
+	.card_inner{
+		padding:1.6rem;
+		display: flex;
+		align-items: center;
+		border : 0.1rem solid $FormBasicBorder;
+		border-radius: 0.8rem;
+	}
+	.card_thumb {
+		position: relative;
+		width : 8rem;
+		height: 5.4rem;
+		.thumb {
+			width: 100%;
+			height : 100%;
+			position: relative;
+			&::after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background : rgba(0,0,0, 0.5);
+			}
+		}
+	}
+	.card_body {
+		width : calc(100% - 9.2rem);
+		margin-left : auto;
+		.title{
+			@include FontBody12;
+			@include Ellipsis2;
+		}
+	}
+	.sub_txt {
+		@include FontBody12;
+		@include Ellipsis1;
+	}
 }
 
 //cube 내 해당과정 - dark

@@ -38,7 +38,7 @@
 
     <!-- Modal FullPopup -->
     <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup modal_profile">
+        <div class="modal modal_fullpopup modal_profile has_sticky">
             <div class="modal_header">
 				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">프로필</h3>
@@ -79,18 +79,134 @@
 						</div>
 					</div>
 				</div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-				<div style="height:25rem; background-color: #ddd;"></div>
-				<div style="height:25rem; background-color: #ccc;"></div>
-            </div>
-            <div class="modal_footer">
-                <div class="page_action">
-                    <button type="button" class="btn basic">Default</button>
-                    <button type="button" class="btn basic primary">Primary</button>
-                </div>
+
+				<div class="tab_panel feed_page">
+					<!-- 게시물 상태정보 -->
+                    <div class="board_toolbar">
+						<div class="board_count">
+							<span class="total">총</span>
+                            <em class="count">20</em>
+                            <span class="unit">개</span>
+                        </div>
+                    </div>
+					<!-- // 게시물 상태정보 -->
+
+					<!-- 카드리스트 피드 -->
+					<div class="card_list feed">
+						<div class="card feed">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_title">
+									<p class="sub_txt">몸챙김과 행복</p>
+									<p class="title">
+										<strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong>
+									</p>
+								</div>
+								<div class="item_cont">
+									<p class="desc">
+										작년 한때는 메타버스라는 키워드가 정말 많이 보이던 시기가 있었는데, 올해는 비교적 잠잠한 것 같습니다. 머니투데이는 금일자 기사에서...
+									</p>
+									<div class="item_info">
+										<div class="left">
+											<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+											<span class="name">Saoirse Una Ronan</span>
+											<span class="bar"></span>
+											<span class="time">8분 전</span>
+										</div>
+										<div class="right">
+											<span class="label cnt_views">76</span>
+											<span class="bar"></span>
+											<span class="label cnt_cmmt">21</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="item_foot">
+								<div class="left">
+									<button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+									<button type="button" class="btn ico bookmark is_active"><span class="blind">찜하기</span></button>
+								</div>
+								<div class="right">
+									<button type="button" class="btn like is_active"><span class="blind">좋아요</span>24</button>
+								</div>
+							</div>
+						</div>
+						<div class="card feed">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_title">
+									<p class="sub_txt">몸챙김과 행복</p>
+									<p class="title">
+										<strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong>
+									</p>
+								</div>
+								<div class="item_cont">
+									<p class="desc">
+										작년 한때는 메타버스라는 키워드가 정말 많이 보이던 시기가 있었는데, 올해는 비교적 잠잠한 것 같습니다. 머니투데이는 금일자 기사에서...
+									</p>
+									<div class="item_info">
+										<div class="left">
+											<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+											<span class="name">Saoirse Una Ronan</span>
+											<span class="bar"></span>
+											<span class="time">8분 전</span>
+										</div>
+										<div class="right">
+											<span class="label cnt_views">76</span>
+											<span class="bar"></span>
+											<span class="label cnt_cmmt">21</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="item_foot">
+								<div class="left">
+									<button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+									<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+								</div>
+								<div class="right">
+									<button type="button" class="btn like"><span class="blind">좋아요</span>24</button>
+								</div>
+							</div>
+						</div>
+						<div class="card feed">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_title">
+									<p class="sub_txt">몸챙김과 행복</p>
+									<p class="title">
+										<strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong>
+									</p>
+								</div>
+								<div class="item_cont">
+									<p class="desc">
+										작년 한때는 메타버스라는 키워드가 정말 많이 보이던 시기가 있었는데, 올해는 비교적 잠잠한 것 같습니다. 머니투데이는 금일자 기사에서...
+									</p>
+									<div class="item_info">
+										<div class="left">
+											<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+											<span class="name">Saoirse Una Ronan</span>
+											<span class="bar"></span>
+											<span class="time">8분 전</span>
+										</div>
+										<div class="right">
+											<span class="label cnt_views">76</span>
+											<span class="bar"></span>
+											<span class="label cnt_cmmt">21</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="item_foot">
+								<div class="left">
+									<button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+									<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+								</div>
+								<div class="right">
+									<button type="button" class="btn like"><span class="blind">좋아요</span>24</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 카드리스트 피드 -->
+				</div>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
