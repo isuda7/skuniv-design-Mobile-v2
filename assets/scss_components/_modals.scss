@@ -257,6 +257,10 @@
         height:100%;
         overflow:auto;
         padding:0 $GapSideBase;
+        &.flex_content {
+            display:flex;
+            flex-direction: column;
+        }
     }
     .modal_footer {
         flex:none;
