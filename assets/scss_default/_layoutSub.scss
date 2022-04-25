@@ -31,16 +31,16 @@
 
 // 페이지 여백 공통화
 .content_body {
-	padding-bottom:4rem;	
+	padding-bottom:4rem;
 }
 .has_floating .content_body {
 	padding-bottom:0.8rem;
 }
 //tab_panel의 경우 background-color 가 #000이 아님
-.content_body .tab_panel {
-	margin-bottom : -4rem;
-	padding-bottom : 4rem;
-}
+// .content_body .tab_panel {
+// 	margin-bottom : -4rem;
+// 	padding-bottom : 4rem;
+// }
 
 // Styles
 .sub_wrapper,
