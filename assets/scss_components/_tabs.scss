@@ -23,7 +23,7 @@
 			}
 		}
 	}
-	&.is_scrolled {
+	&.has_scroll {
 		.tab_list {
             flex-wrap:nowrap;
 			overflow-x:auto;
@@ -35,12 +35,19 @@
 			position: absolute;
 			right:0;
 			top:0;
-			z-index:10;
-			height: calc(4.8rem - 0.2rem);
+			z-index:20;
+			height: 4.7rem;
 			.btn.ico.next {
 				height:inherit;
 				width:4rem;
-				background-image: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+				background-image: linear-gradient(to left, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+				justify-content: flex-end;
+				padding-right:0.4rem;
+				&::before {
+					width:1.6rem;
+					height:1.6rem;
+					background-image: url('../img/icons_16_ic_chervron_right_grey_04.svg');
+				}
 			}
 		}
 		& ::-webkit-scrollbar {

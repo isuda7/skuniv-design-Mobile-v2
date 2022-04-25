@@ -75,6 +75,27 @@ function setResized(){
 	});
 }
 
+var layoutHasClass = {
+	init: function(){
+		// 페이지
+		($('.container').find('.sticky').length) && this.hasPage('has_sticky'); // 스티키가 있을 때
+		($('.container').find('.page_floating').length) && this.hasPage('has_floating'); // 하당고정 플로팅이 있을 때
+		($('.container').find('.page_expand').length) && this.hasPage('has_expand'); // 하당고정 더보기가 있을 때
+		($('.container').find('.comment_floating').length) && this.hasPage('has_comment'); // 하당고정 코멘트가 있을 때
+
+		// 모달공통(풀팝업, 버틈시트)
+		($('.modal').find('.sticky').length) && this.hasModal('has_sticky'); // 스티키가 있을 때
+		($('.modal').find('.page_floating').length) && this.hasModal('has_floating'); // 하당고정 플로팅이 있을 때
+
+	},
+	hasPage: function(className){
+		$('.container').parent().addClass(className); // main_wrapper, submain_wrapper, sub_wrapper
+	},
+	hasModal: function(className){
+		$('.modal').addClass(className);
+	},
+}
+
 // Range Multiple
 function RangeMultiple(){
 	const inputLeft = document.getElementById("input-left");
@@ -143,6 +164,7 @@ var tooltip = {
 
 /* Ready */
 $(function(){
-	setStatusInit(); // 상태 설정
-	tooltip.init(); // 툴팁 공통 샘플
+	setStatusInit(); // 스크롤 상태 클래스
+	layoutHasClass.init() // 레이아웃 구분 클래스
+	tooltip.init(); // 툴팁 공통
 });
