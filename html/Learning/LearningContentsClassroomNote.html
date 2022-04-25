@@ -12,16 +12,23 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
-        function learningThumb(){
-            // 타이틀 라인수만큼 스타일 구분하기
-            var TitleEl = document.querySelector(".overay_area .title");
-            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
-            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
-            var Remain = TitleHeight / TitleLineHeight;
-            TitleEl.classList.add("line"+Remain);
-        };
-    </script>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+	</script>
 </head>
 <body>
 <div class="sub_wrapper has_sticky has_floating theme_dark">
@@ -41,8 +48,6 @@
 
 	<!-- Container -->
     <main role="main" class="container learning_container classroom_page">
-        <div class="content_head">
-        </div>
         <div class="content_body">
             <!-- 과정제목 -->
             <div class="learning_subject">

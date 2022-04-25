@@ -1155,12 +1155,14 @@
 
 // 학습과정제목
 .learning_subject {
-	padding:2rem 0 1.6rem 0;
+	padding:0.4rem 0 1.6rem 0;
 
     .title_area {
-        .title {
-            margin-top:1rem;
-            @include FontTitle18;
+		.label {
+			margin-bottom:1rem;
+		}
+		.title {
+			@include FontTitle18;
             color:#000;
         }
     }
@@ -1229,11 +1231,12 @@
 		}
 	}
 }
-.content_head {
+.content_head + .content_body {
 	.learning_subject {
-		padding:0.4rem $GapSideBase 1.6rem $GapSideBase;
+		padding-top:2rem;
 	}
 }
+
 .theme_dark {
     .learning_subject {
         .title_area {
