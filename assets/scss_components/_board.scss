@@ -22,6 +22,21 @@
 		.arw_expand:last-child {
 			margin-right:-1rem;
 		}
+		.btn.ico {
+			& + .btn.ico {
+				margin-left:1.6rem;
+			}
+			&::before {
+				width:2rem;
+				height:2rem;
+			}
+			&.filter::before {
+				background-image: url('../img/icons_20_ic_filter_black.svg');
+			}
+			&.remove::before {
+				background-image: url('../img/icons_20_ic_delete_black.svg');
+			}
+		}
 	}
 }
 
@@ -154,6 +169,19 @@
 		// 학습 Type4
 		&.type4 {
 			.item_foot {
+				.date {
+					display:flex;
+					align-items: center;
+					color:$ColorSubTxt;
+					&::before {
+						content:'';
+						display:block;
+						margin-right:0.4rem;
+						width:1.6rem;
+						height:1.6rem;
+						background-image: url('../img/icons_16_ic_time_grey_06.svg');
+					}
+				}
 				.btn.learning {
 					margin-left: 1rem;
 				}
