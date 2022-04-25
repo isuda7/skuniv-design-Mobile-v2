@@ -27,11 +27,11 @@
 					$appbar.removeClass('is_transition');
 				}
 			})
-		})
+		});
 	</script>
 </head>
 <body>
-<div class="sub_wrapper has_sticky theme_dark">
+<div class="sub_wrapper has_sticky has_floating theme_dark">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -74,9 +74,10 @@
                     </div>
                 </div>
             </div>
+            <!-- //학습과정 탭 -->
 
             <div class="tab_panel comment_page">
-                <!-- Comments List -->
+                <!-- 보드 카운트 -->
                 <div class="board_toolbar">
                     <div class="board_count">
                         <span class="total">총</span>
@@ -84,6 +85,9 @@
                         <span class="unit">개</span>
                     </div>
                 </div>
+                <!-- // 보드 카운트 -->
+
+                <!-- 게시물 -->
                 <div class="post_list">
                     <div class="post">
                         <div class="post_head">
@@ -162,30 +166,34 @@
                         </div>
                     </div>
                 </div>
-                <!-- // Note List -->
-            </div>
-            <!-- // 학습과정 탭 -->
+                <!-- // 게시물 -->
 
+                <!-- 코멘트 -->
+                <div class="comment_floating">
+                    <div class="comment_body">
+                        <div class="comment_alert">
+                            <p class="txt">아란님에게 답글 남기는 중...</p>
+                            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                        </div>
+                        <div class="left">
+                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                            <p class="comment_form">
+                                <label for="commentForm" class="tit blind">코멘트 입력</label>
+                                <input type="text" id="commentForm" class="input basic dark_form" placeholder="이야기를 나눠보세요.">
+                            </p>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                            <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 코멘트 -->
+            </div>
         </div>
     </main>
-    <!-- comment 작성 -->
-    <footer class="footer">
-        <div class="comment_menu">
-            <div class="left">
-                <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
-                <p class="comment_form">
-                    <label for="commentForm" class="tit blind">코멘트 입력</label>
-                    <input type="text" id="commentForm" class="input basic dark_form" value="이야기를 나눠보세요.">
-                </p>
-            </div>
-            <div class="right">
-                <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
-                <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
-            </div>
-        </div>
-    </footer>
-    <!-- // comment 작성 -->
     <!-- // Container -->
+
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 </body>
