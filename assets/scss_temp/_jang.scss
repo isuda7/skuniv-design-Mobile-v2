@@ -77,8 +77,138 @@
             background-image: url("../../assets/img/icons_16_ic_comment_grey_04.svg");
         }
     }
+    &.cnt_like{
+        &::before{
+            background-image: url("../../assets/img/icons_16_ic_like_grey_04.svg");
+        }
+    }
 }
 
 .classroom_page .degree_page {
     padding-top:2rem;
 }
+
+
+/* board */
+.board_dt_wrap {
+   padding: 2rem 0 0 ;
+}
+.board_dt_title {
+    border-bottom: 0.1rem solid #1c1d1f;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.board_dt_title {
+    .title_area .title {
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: bold;
+    }
+    .board_dt_info {
+        margin-top: 1.2rem;
+        color: #75777b;
+        @include FontBody14;
+
+        span {
+            display: inline-block;
+            margin-right: 0.8rem;
+            vertical-align: middle;
+        }
+        .avata {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.6rem;
+        }
+        .user_id {
+            max-width: 40%;
+            overflow : hidden;
+            text-overflow : ellipsis;
+            white-space : nowrap;
+        }
+        .reg_date {
+            margin-right: 1.6rem;
+        }
+        .cnt_views {
+            position: relative;
+            margin : 0;
+            padding-left: 2.8rem;
+            background-image : url("../../assets/img/icons_16_ic_view_grey_07.svg");
+            background-repeat: no-repeat;
+            background-position: 0.8rem 50%;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                vertical-align: top;
+                width: .1rem;
+                height: .8rem;
+                background-color: #33353c;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.board_dt_content {
+    .board_ph {
+        color: #f2f3f5;
+        @include FontBody14;
+        word-wrap: break-word;
+    }
+}
+.file_down_area {
+    margin-top: 2.4rem;
+    .area_title {
+        color: #fff;
+        @include FontBody14;
+        .label.download{
+            display: inline-block;
+            padding : 0 .4rem 0 2rem;
+            background-image: url('../../assets/img/icons_16_ic_file_white.svg');
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+        }
+        .cnt { color :$ColorPrimary}
+    }
+    .cube_references{
+        margin-top : 1.2rem;
+    }
+}
+.board_like_area {
+    margin: 3.2rem -2rem 0;
+    padding: 1.6rem 2rem;
+    border-top: .1rem solid #151617;
+    border-bottom: .1rem solid #151617;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn.like {
+        color : $ColorSubTxt;
+    }
+}
+
+.content_body{
+    &.task_commt_page{
+        background-color: #151617;
+    }
+}
+
+.board_comments_wrap {
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    padding: 0 $GapSideBase 3.2rem;
+}
+.theme_dark .board_comments_wrap{
+    background-color: #151617;
+}
+
+.theme_dark .file_down_area .cube_references{
+    background-color:transparent;
+}
+
+.theme_dark .cube_references .references_util .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
