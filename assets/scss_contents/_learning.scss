@@ -814,8 +814,8 @@
         @include Ellipsis3;
     }
     .btn_more {
-        padding:0;
-        color:#a4a6aa;
+        padding:0 0 0 0.4rem;
+        color:#75777b;
     }
     &.is_expanded {
         .overview_txt {
