@@ -535,6 +535,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             position: relative;
             > .title {
+                @include Ellipsis2;
                 @include FontTitle16;
                 margin-bottom:0.6rem;
             }
