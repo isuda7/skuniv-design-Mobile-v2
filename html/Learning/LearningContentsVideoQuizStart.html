@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        function learningThumb(){
+            // 타이틀 라인수만큼 스타일 구분하기
+            var TitleEl = document.querySelector(".overay_area .title");
+            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+            var Remain = TitleHeight / TitleLineHeight;
+            TitleEl.classList.add("line"+Remain);
+        }
+        $(function(){
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+        });
+    </script>
+</head>
+<body>
+<div class="sub_wrapper theme_dark has_sticky gap_none">
+	<!-- Header -->
+    <header class="header">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1><strong class="blind">학습과정</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container learning_container">
+        <div class="content_head">
+            <!-- 학습영상 -->
+            <div class="cube_player_sec">
+                <!-- quiz화면 영역 -->
+                <div class="quiz_box">
+                    <div class="quiz_start">
+                        <h2 class="title">Video QUIZ</h2>
+                        <p class="txt">답안 제출 후 강의 이어보기가 가능합니다.</p>
+                        <button type="button" class="btn basic primary btn_quizstart">퀴즈시작</button>
+                    </div>
+                </div>
+                <!-- // quiz화면 영역 -->
+                <!-- Player영역 -->
+                <div class="cube_player">
+                    <img src="../../assets/img/demo/thumb-01.png" alt="">
+                    <div class="player_timeline">
+                        <input type="range" class="timeline_range" value="0" min="0" max="100" />
+                    </div>
+                </div>
+                <!-- // Player영역 -->
+            </div>
+            <!-- //학습영상 -->
+        </div>
+        <div class="content_body contents_page">
+            <!-- 과정제목 -->
+            <div class="learning_subject">
+                <div class="title_area">
+                    <span class="label style1 primary">학습중</span>
+                    <h1 class="title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
+                </div>
+                <div class="info_area">
+                    <span class="label video">Video</span>
+                    <span class="label time">30m</span>
+                </div>
+            </div>
+            <!-- //과정제목 -->
+            <!-- 학습과정 탭 -->
+            <div class="out_sec sticky">
+                <div class="tab style2">
+                    <div class="tab_list">
+                        <button type="button" class="tab_item is_active">개요</button>
+                        <button type="button" class="tab_item">스크립트</button>
+                        <button type="button" class="tab_item">코멘트</button>
+                        <button type="button" class="tab_item">학습노트</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //학습과정 탭 -->
+            <div class="tab_panel videoquiz_page">
+                <!-- 과정 Overview -->
+                <div class="cube_overview">
+                    <ul>
+                        <li class="item_complete done">11,247명 이수</li>
+                        <li class="item_part basic">basic</li>
+                        <li class="item_part intermediate">Intermediate</li>
+                        <li class="item_part advanced">advanced</li>
+                        <li class="item_part expert">expert</li>
+                        <li class="item_contact">이름 두 줄 이상일 경우, 버튼이 밑줄에 맞춰집니다.</li>
+                    </ul>
+                    <button type="button" class="btn text arw_link">문의하기</button>
+                </div>
+                <!-- // 과정 Overview -->
+
+                <!-- 과정 Overview 텍스트 -->
+                <div class="overview_subscript">
+                    <!-- CSS 중간말줄임 표현불가 -->
+                    <p class="overview_txt">
+                        최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니
+                        <button type="button" class="btn btn_more">...더 보기</button>
+                    </p>
+                </div>
+                <!-- // 과정 Overview 텍스트 -->
+
+                <!-- 해당과정 -->
+                <div class="learning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">해당과정</h2>
+                    </div>
+                    <div class="sec_body">
+                        <div class="card cube_parents">
+                            <div class="card_inner">
+                                <div class="card_thumb">
+                                    <a href="javascript:voide(0)"  class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');"><span class="blind">Thumbnails</span></a>
+                                    <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                                </div>
+                                <a class="card_body">
+                                    <p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
+                                    <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  // 해당과정 -->
+
+                <!-- Cube Section -->
+                <div class="learning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">정보</h2>
+                    </div>
+                    <div class="sec_body">
+                        <h3 class="heading3">학습목표</h2>
+                        <div class="sec_cont">
+                            <p class="sub_txt">
+                                반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
+                            </p>
+                        </div>
+                        <h3 class="heading3">대상</h2>
+                        <div class="sec_cont">
+                            <p class="sub_txt">모든 구성원</p>
+                        </div>
+                        <h3 class="heading3">교육기관 출처</h2>
+                        <div class="sec_cont">
+                            <p class="sub_txt">SK mySUNI</p>
+                        </div>
+                        <h3 class="heading3">이수조건</h2>
+                        <div class="sec_cont">
+                            <p class="sub_txt">진도율 100%</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Cube Section -->
+
+                <!-- 태그 -->
+                <div class="learning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">태그</h2>
+                    </div>
+                    <div class="sec_body">
+                        <div class="tag_list">
+                            <div class="chip_group">
+                                <button type="button" class="chip action">리더</button>
+                                <button type="button" class="chip action">Data</button>
+                                <button type="button" class="chip action">자기개발</button>
+                                <button type="button" class="chip action">리더쉽</button>
+                                <button type="button" class="chip action">리더</button>
+                                <button type="button" class="chip action">Data</button>
+                                <button type="button" class="chip action">자기개발</button>
+                                <button type="button" class="chip action">리더쉽</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //태그 -->
+
+                <!-- 강사 -->
+                <div class="learning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">강사</h2>
+                    </div>
+                    <div class="sec_body mar_t0">
+                        <div class="teacher_list">
+                            <div class="teacher_item">
+                                <a href="javascript:void(0)" class="teacher_inner">
+                                    <div class="teacher_avata">
+                                        <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    </div>
+                                    <div class="teacher_body">
+                                        <div class="title"><strong>조승빈</strong><span class="label style1">대표</span></div>
+                                        <div class="sub_txt">컨크루언트 애자일</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="teacher_item">
+                                <a href="javascript:void(0)" class="teacher_inner">
+                                    <div class="teacher_avata">
+                                        <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    </div>
+                                    <div class="teacher_body">
+                                        <div class="title"><strong>조승빈</strong></div>
+                                        <div class="sub_txt">컨크루언트 애자일</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 강사 -->
+            </div>
+            <!-- // 학습과정 탭 -->
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>
