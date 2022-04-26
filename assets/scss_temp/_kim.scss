@@ -522,13 +522,14 @@
         }
     }
 }
+//플레이어 퀴즈, 다음학습 화면
 .cube_player_sec {
     position: relative;
-    > .quiz_box {
+    > .player_zindex {
         height:0;
         position:relative;
         z-index:29;
-        .quiz_start {
+        .player_box {
             height:20.2rem;
             padding:5.2rem 2rem 2rem 2rem;
             background-color: rgba(0, 0, 0, 0.8);
@@ -537,7 +538,7 @@
                 @include FontTitle16;
                 margin-bottom:0.6rem;
             }
-            .btn_quizstart {
+            .btn_player {
                 position: absolute;
                 bottom:2rem;
                 right:2rem;
