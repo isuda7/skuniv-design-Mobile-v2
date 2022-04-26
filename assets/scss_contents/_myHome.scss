@@ -200,3 +200,19 @@
         background-color:$ColorTabPenelGrey;
     }
 }
+
+// 배지인증서
+.modal_badgeCert {
+    .cert_sec {
+        margin-top:2rem;
+        .cert_body {
+            margin-top:1.2rem;
+            p {
+                color: $ColorSubTxt;
+                & + p {
+                    margin-top:2rem;
+                }
+            }
+        }
+    }
+}

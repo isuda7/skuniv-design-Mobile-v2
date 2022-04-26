@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>전체 학습 이력</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container profile_container alim_page">
+			<div class="content_body">
+                <div class="out_sec sticky">
+                    <div class="tab style2 has_scroll">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item">학습중</button>
+                            <button type="button" class="tab_item">학습예정</button>
+                            <button type="button" class="tab_item is_active">muSUNI 학습완료</button>
+                            <button type="button" class="tab_item">개인학습 완료</button>
+                            <button type="button" class="tab_item">취소/미이수</button>
+                        </div>
+                        <div class="tab_next">
+                            <button type="button" class="btn ico next"><span class="blind">다음</span></button>
+                        </div>
+                    </div>
+                </div>
+				<div class="tab_panel">
+                    <div class="flex_area centered">
+                        <div class="no_data">
+                            <p class="tit">학습 중인 과정이 없습니다.</p><!-- 학습중 문구 -->
+                            <p class="tit">학습 예정중인 과정이 없습니다.</p><!-- 학습예정 문구 -->
+                            <p class="tit">학습 완료한 mySUNI 과정이 없습니다.</p><!-- muSUNI 학습완료 문구 -->
+                            <p class="tit">완료한 개인학습이 없습니다.</p><!-- 개인학습 완료 문구 -->
+                            <p class="tit">취소/미이수된 과정이 없습니다.</p><!-- 취소/미이수 문구 -->
+
+                            <p class="sub_txt">mySUNI 학습을 시작해보세요.</p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
