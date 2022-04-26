@@ -12,7 +12,7 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
+	<script>
 		$(function(){
 			$(window).scroll(function(){
 				var $appbar = $('.appbar');
@@ -28,11 +28,10 @@
 				}
 			})
 		});
-
-    </script>
+	</script>
 </head>
 <body>
-<div class="sub_wrapper theme_dark has_sticky has_floating">
+<div class="sub_wrapper has_sticky theme_dark">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -48,8 +47,38 @@
     <!-- // Header -->
 
 	<!-- Container -->
-    <main role="main" class="container learning_container webpage_page">
-        <div class="content_body web_content">
+    <main role="main" class="container learning_container document_page">
+        <div class="content_head">
+            <!-- documentviewer -->
+            <div class="doc_viewer">
+                <div class="doc_area">
+                    <div class="doc_wrap">
+                        <img src="../../assets/img/demo/thumb-01.png" alt="temp img"/>
+                    </div>
+                    <div class="doc_pagination">
+                        <a href="javascript:void(0)" class="doc_act prev"><span class="blind">prev 이동</span></a>
+                        <div class="pages_num">
+                            <span>23</span>
+                            <span> / </span>
+                            <span>50</span>
+                        </div>
+                        <a href="javascript:void(0)" class="doc_act next"><span class="blind">next 이동</span></a>
+                    </div>
+                </div>
+                <div class="doc_info_area">
+                    <div class="doc_bar_wrap">
+                        <span class="doc_bar" style="width : 46%"></span>
+                    </div>
+                    <div class="doc_link_wrap">
+                        <div class="label_tit link"><span>PDF</span></div>
+                        <div class="doc_cnt"><span>1</span><span>/</span><span>2</span></div>
+                        <div class="doc_name"><a href="javascript:void(0)" class="ach ico">[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- // documentviewer -->
+        </div>
+        <div class="content_body document_content">
             <!-- 과정제목 -->
             <div class="learning_subject">
                 <div class="title_area">
@@ -57,22 +86,38 @@
                     <h1 class="title appbar_title"><strong>[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
                 </div>
                 <div class="info_area">
-                    <span class="label webpage">Webpage</span>
+                    <span class="label document">Document</span>
                     <span class="label time">30m</span>
                 </div>
                 <div class="learning_attachment">
-                    <!-- embedded iframe -->
-                    <div class="emb_sec">
-                        <div class="embedded iframe-area">
-                            <iframe src="https://www.skacademy.com/lsa/cont_root/dt_card/16.asp?p=FB7BDHy0o3b+421UwNZecCnpOK41mxDPh5BQYoIdDfTQTxO0IkakT3+rUboJX4mJ+36S2Pv5mzOU2DOkC5QE1A==" frameborder="0" allowfullscreen></iframe>
+                    <div class="att_title">
+                        <h2 class="sub_title"><strong>첨부파일</strong><strong class="cnt">2</strong></h2>
+                        <button type="button" class="btn down_all">전체 다운로드</button>
+                    </div>
+                    <div class="att_list">
+                        <div class="cube_references">
+                            <div class="references_body">
+                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
+                                <p class="bytes">249KB</p>
+                            </div>
+                            <div class="references_util">
+                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                            </div>
                         </div>
-                        <div class="doc_link_wrap">
-                            <div class="label_tit link"><span>URL</span></div>
-                            <div class="link_wrap"><a href="javascript:void(0)" class="ach ico">https://mysuni.sk.com/suni-main/introduction/Category?subTab=AI&innerTab=AI%20Biz%20Implementation</a></div>
+                        <div class="cube_references">
+                            <div class="references_body">
+                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
+                                <p class="bytes">249KB</p>
+                            </div>
+                            <div class="references_util">
+                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                            </div>
                         </div>
                     </div>
-                    <!-- // embedded iframe -->
-
                 </div>
             </div>
             <!-- //과정제목 -->
@@ -86,16 +131,16 @@
                     </div>
                 </div>
             </div>
-            <!-- //학습과정 탭 -->
+
             <div class="tab_panel overview_page">
                 <!-- 과정 Overview -->
                 <div class="cube_overview">
                     <ul>
                         <li class="item_complete done">11,247명 이수</li>
-                        <!-- <li class="item_part basic">basic</li> -->
+                        <li class="item_part basic">basic</li>
                         <li class="item_part intermediate">Intermediate</li>
-                        <!-- <li class="item_part advanced">advanced</li> -->
-                        <!-- <li class="item_part expert">expert</li> -->
+                        <li class="item_part advanced">advanced</li>
+                        <li class="item_part expert">expert</li>
                         <li class="item_contact">이름 두 줄 이상일 경우, 버튼이 밑줄에 맞춰집니다.</li>
                     </ul>
                     <button type="button" class="btn text arw_link">문의하기</button>
@@ -115,7 +160,7 @@
                 <!-- 해당과정 -->
                 <div class="learning_sec">
                     <div class="sec_head">
-                        <h2 class="heading2">해당과정</h2>
+                        <h2 class="heading2">해당 과정</h2>
                     </div>
                     <div class="sec_body">
                         <div class="card cube_parents">
@@ -132,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <!--  // 해당과정 -->
+                <!-- // 해당과정 -->
 
                 <!-- Cube Section -->
                 <div class="learning_sec">
@@ -140,21 +185,21 @@
                         <h2 class="heading2">정보</h2>
                     </div>
                     <div class="sec_body">
-                        <h3 class="heading3">학습목표</h2>
+                        <h3 class="heading3">학습목표</h3>
                         <div class="sec_cont">
                             <p class="sub_txt">
                                 반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
                             </p>
                         </div>
-                        <h3 class="heading3">대상</h2>
+                        <h3 class="heading3">대상</h3>
                         <div class="sec_cont">
                             <p class="sub_txt">모든 구성원</p>
                         </div>
-                        <h3 class="heading3">교육기관 출처</h2>
+                        <h3 class="heading3">교육기관 출처</h3>
                         <div class="sec_cont">
                             <p class="sub_txt">SK mySUNI</p>
                         </div>
-                        <h3 class="heading3">이수조건</h2>
+                        <h3 class="heading3">이수조건</h3>
                         <div class="sec_cont">
                             <p class="sub_txt">진도율 100%</p>
                         </div>
@@ -217,14 +262,7 @@
                     </div>
                 </div>
                 <!-- // 강사 -->
-                
-                <!-- 버튼-->
-                <div class="page_floating">
-                    <div class="page_action">
-                        <button type="button" class="btn basic primary">학습완료</button>
-                    </div>
-                </div>
-                <!-- // 버튼-->
+
             </div>
             <!-- // 학습과정 탭 -->
         </div>
