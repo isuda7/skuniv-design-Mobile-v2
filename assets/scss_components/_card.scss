@@ -293,11 +293,9 @@
 	}
 	&.hor {
 		&.badge {
+			margin-top:0.8rem;
 			border-radius: $RadiusLarge;
 			@include Shadow2;
-			& + .card.badge {
-				margin-top:0.8rem;
-			}
 			.card_inner {
 				padding:1.8rem 2rem;
 			}
