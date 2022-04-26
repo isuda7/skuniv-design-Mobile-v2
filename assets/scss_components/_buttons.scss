@@ -110,6 +110,10 @@
     &.info {
         color:#A4A6AA;
     }
+    &.black {
+        background-color:transparent;
+        color:#000;
+    }
     &.primary {
         background-color:transparent;
         color:$ColorPrimary;

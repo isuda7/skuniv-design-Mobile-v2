@@ -31,7 +31,7 @@
 
 // 페이지 여백 공통화
 .content_body {
-	padding-bottom:4rem;	
+	padding-bottom:4rem;
 }
 .has_floating .content_body {
 	padding-bottom:0.8rem;
@@ -40,6 +40,10 @@
 .content_body .tab_panel {
 	margin-bottom : -4rem;
 	padding-bottom : 4rem;
+}
+.has_floating .content_body .tab_panel {
+	margin-bottom : -0.8rem;
+	padding-bottom : 0.8rem;
 }
 
 // Styles

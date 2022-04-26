@@ -48,22 +48,92 @@
 					<!-- Board Toolbar -->
                     <div class="board_toolbar">
 						<div class="board_count">
-							<span class="total">총</span>
-                            <em class="count">11</em>
-                            <span class="unit">개</span>
-                        </div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheckAll" tabindex="0" class="hidden" />
+								<label for="learningCheckAll"><span>전체선택</span></label>
+							</div>
+						</div>
                         <div class="board_util">
-							<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
-                            <button type="button" class="btn ico remove"><span class="blind">Remove</span></button>
+                            <button type="button" class="btn text black">취소</button>
                         </div>
                     </div>
 					<!-- // Board Toolbar -->
 
 					<!-- Board List -->
 					<div class="board_list out_sec">
-						<!-- Case 삭제모드: has_check 추가 -->
-						<div class="item learning type4">
-							<!-- Case 삭제모드
+						<div class="item learning type4 has_check">
+							<div class="item_check">
+								<div class="checkbox basic">
+									<input type="checkbox" name="learningCheck" id="learningCheck1" tabindex="0"
+										class="hidden" />
+									<label for="learningCheck1"></label>
+								</div>
+							</div>
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="thumb" aria-hidden="true"
+										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+								</div>
+								<div class="item_title">
+									<p class="sub_txt">카테고리명</p>
+									<p class="title">
+										<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+									</p>
+								</div>
+							</a>
+							<div class="item_foot">
+								<div class="left_area">
+									<span class="date">2022.04.30</span>
+								</div>
+								<div class="right_area">
+									<em class="total_count">
+										<span class="count">1</span>
+										<span class="split">/</span>
+										<span class="total">10</span>
+									</em>
+									<button type="button" class="btn ico learning">
+										<span class="blind">학습목록</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="item learning type4 has_check">
+							<div class="item_check">
+								<div class="checkbox basic">
+									<input type="checkbox" name="learningCheck" id="learningCheck2" tabindex="0"
+										class="hidden" />
+									<label for="learningCheck2"></label>
+								</div>
+							</div>
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="thumb" aria-hidden="true"
+										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+								</div>
+								<div class="item_title">
+									<p class="sub_txt">카테고리명</p>
+									<p class="title">
+										<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+									</p>
+								</div>
+							</a>
+							<div class="item_foot">
+								<div class="left_area">
+									<span class="date">2022.04.30</span>
+								</div>
+								<div class="right_area">
+									<em class="total_count">
+										<span class="count">1</span>
+										<span class="split">/</span>
+										<span class="total">10</span>
+									</em>
+									<button type="button" class="btn ico learning">
+										<span class="blind">학습목록</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="item learning type4 has_check">
 							<div class="item_check">
 								<div class="checkbox basic">
 									<input type="checkbox" name="learningCheck" id="learningCheck3" tabindex="0"
@@ -71,7 +141,6 @@
 									<label for="learningCheck3"></label>
 								</div>
 							</div>
-							-->
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="thumb" aria-hidden="true"
@@ -100,7 +169,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type4 has_check">
+							<div class="item_check">
+								<div class="checkbox basic">
+									<input type="checkbox" name="learningCheck" id="learningCheck4" tabindex="0"
+										class="hidden" />
+									<label for="learningCheck4"></label>
+								</div>
+							</div>
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="thumb" aria-hidden="true"
@@ -129,7 +205,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type4 has_check">
+							<div class="item_check">
+								<div class="checkbox basic">
+									<input type="checkbox" name="learningCheck" id="learningCheck5" tabindex="0"
+										class="hidden" />
+									<label for="learningCheck5"></label>
+								</div>
+							</div>
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="thumb" aria-hidden="true"
@@ -158,65 +241,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">카테고리명</p>
-									<p class="title">
-										<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
-									</p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<div class="left_area">
-									<span class="date">2022.04.30</span>
-								</div>
-								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+						<div class="item learning type4 has_check">
+							<div class="item_check">
+								<div class="checkbox basic">
+									<input type="checkbox" name="learningCheck" id="learningCheck6" tabindex="0"
+										class="hidden" />
+									<label for="learningCheck6"></label>
 								</div>
 							</div>
-						</div>
-						<div class="item learning type4">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">카테고리명</p>
-									<p class="title">
-										<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
-									</p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<div class="left_area">
-									<span class="date">2022.04.30</span>
-								</div>
-								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="item learning type4">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="thumb" aria-hidden="true"
@@ -247,6 +279,14 @@
 						</div>
 					</div>
 					<!-- // Board List -->
+
+					<!-- Page Floating -->
+					<div class="page_floating">
+						<div class="page_action">
+							<button type="button" class="btn basic primary">숨김처리(N)</button>
+						</div>
+					</div>
+					<!-- // Page Floating -->
 				</div>
 			</div>
 		</main>

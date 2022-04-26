@@ -12,6 +12,11 @@
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.tab_list').scrollLeft(180);
+		})
+	</script>
 </head>
 
 <body>
@@ -33,11 +38,11 @@
                 <div class="out_sec sticky">
                     <div class="tab style2 has_scroll">
                         <div class="tab_list">
-                            <button type="button" class="tab_item is_active">학습중</button>
+                            <button type="button" class="tab_item">학습중</button>
                             <button type="button" class="tab_item">학습예정</button>
                             <button type="button" class="tab_item">muSUNI 학습완료</button>
                             <button type="button" class="tab_item">개인학습 완료</button>
-                            <button type="button" class="tab_item">취소/미이수</button>
+                            <button type="button" class="tab_item is_active">취소/미이수</button>
                         </div>
                         <div class="tab_next">
                             <button type="button" class="btn ico next"><span class="blind">다음</span></button>
@@ -54,29 +59,14 @@
                         </div>
                         <div class="board_util">
 							<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
-                            <button type="button" class="btn ico remove"><span class="blind">Remove</span></button>
                         </div>
                     </div>
 					<!-- // Board Toolbar -->
 
 					<!-- Board List -->
 					<div class="board_list out_sec">
-						<!-- Case 삭제모드: has_check 추가 -->
-						<div class="item learning type4">
-							<!-- Case 삭제모드
-							<div class="item_check">
-								<div class="checkbox basic">
-									<input type="checkbox" name="learningCheck" id="learningCheck3" tabindex="0"
-										class="hidden" />
-									<label for="learningCheck3"></label>
-								</div>
-							</div>
-							-->
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -86,26 +76,15 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 -</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state wait">취소</span>
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -115,26 +94,15 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 2022.04.30</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state negative">미승인</span>
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -144,26 +112,15 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 2022.04.30</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state negative">미승인</span>
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -173,26 +130,15 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 -</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state wait">취소</span>
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -202,26 +148,15 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 2022.04.30</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state negative">미승인</span>
 								</div>
 							</div>
 						</div>
-						<div class="item learning type4">
+						<div class="item learning type6">
 							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-									<span class="thumb" aria-hidden="true"
-										style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
 								<div class="item_title">
 									<p class="sub_txt">카테고리명</p>
 									<p class="title">
@@ -231,17 +166,10 @@
 							</a>
 							<div class="item_foot">
 								<div class="left_area">
-									<span class="date">2022.04.30</span>
+									<span class="date">승인일자 2022.04.30</span>
 								</div>
 								<div class="right_area">
-									<em class="total_count">
-										<span class="count">1</span>
-										<span class="split">/</span>
-										<span class="total">10</span>
-									</em>
-									<button type="button" class="btn ico learning">
-										<span class="blind">학습목록</span>
-									</button>
+									<span class="state negative">미승인</span>
 								</div>
 							</div>
 						</div>

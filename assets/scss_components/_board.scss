@@ -19,6 +19,9 @@
 	.board_util {
 		display: flex;
 		align-items: center;
+		.btn.text:last-child {
+			margin-right:-1rem;
+		}
 		.arw_expand:last-child {
 			margin-right:-1rem;
 		}
@@ -49,8 +52,9 @@
         position: relative;
         flex-wrap: wrap;
         .item_check {
-            width:3.2rem;
+            width:2rem;
             flex:none;
+			margin-right:1.2rem;
         }
         .item_body {
             position: relative;
@@ -82,6 +86,9 @@
             .item_body {
                 width:calc(100% - 3.2rem);
             }
+			.item_foot {
+				padding-left:3.2rem;
+			}
         }
     }
 
@@ -94,6 +101,15 @@
 			width: 10rem;
 			height: 6.8rem;
 			margin-right: 1.2rem;
+			.thumb {
+				&::before {
+					content:'';
+					display:block;
+					width:100%;
+					height:100%;
+					background-color: rgba(0,0,0,0.5);
+				}
+			}
 			.ribon {
 				position: absolute;
 				right: 0.8rem;
@@ -179,7 +195,7 @@
 						margin-right:0.4rem;
 						width:1.6rem;
 						height:1.6rem;
-						background-image: url('../img/icons_16_ic_time_grey_06.svg');
+						background: url('../img/icons_16_ic_time_grey_06.svg') no-repeat center center / 100% auto;
 					}
 				}
 				.btn.learning {
@@ -203,6 +219,29 @@
 					font-weight: 700;
 					color: $ColorPrimary;
 					margin-right:0.8rem;
+				}
+				.date {
+					color:$ColorSubTxt;
+				}
+			}
+		}
+		// 학습 Type6
+		&.type6 {
+			.item_foot {
+				.date {
+					color: $ColorSubTxt;
+				}
+				.state {
+					font-weight: 700;
+					&.wait {
+						color: $ColorSubTxt;
+					}
+					&.positive {
+						color:$ColorPositive;
+					}
+					&.negative {
+						color:$ColorNegative;
+					}
 				}
 			}
 		}
