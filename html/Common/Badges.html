@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <!-- Guide IA -->
+    <link href="../../_guide/assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+            <section class="g_sec">
+                <h2 class="g_h2">Badges</h2>
+                <h3 class="g_h3">Category</h3>
+				<h4 class="g_h4">01 AI/DT</h4>
+                <div class="g_preview">
+
+                </div>
+				<h4 class="g_h4">02 공통직무</h4>
+                <div class="g_preview">
+
+                </div>
+				<h4 class="g_h4">03 미래Biz</h4>
+                <div class="g_preview">
+
+                </div>
+				<h4 class="g_h4">04 행복경영</h4>
+                <div class="g_preview">
+
+                </div>
+				<h4 class="g_h4">05 BM Design</h4>
+                <div class="g_preview">
+
+                </div>
+				<h4 class="g_h4">06      SK(주) C&C</h4>
+                <div class="g_preview">
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal Alert -->
+    <div class="modal_wrap" id="ModalAlert">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">삭제</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">삭제하시겠습니까?<br />여러줄이 들어갑니다.</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalAlert')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Alert -->
+
+    <!-- Modal Confirm -->
+    <div class="modal_wrap" id="ModalConfirm">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">삭제확인</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">삭제하시겠습니까?<br />여러줄이 들어갑니다.</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text" onclick="ModalAlertClose('#ModalConfirm')">취소</button>
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalConfirm')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Confirm -->
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap" id="ModalBottomSheet">
+        <div class="modal modal_bottomsheet">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#ModalBottomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalBottomSheet</h3>
+            </div>
+            <div class="modal_content">
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap" id="SelectBottomSheet">
+        <div class="modal modal_bottomsheet modal_select">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+            </div>
+            <div class="modal_content">
+                <ul class="select_list">
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" />
+                            <label for="selectlist1"><span>전체</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                            <label for="selectlist2"><span>Select Option1</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist3" tabindex="0" class="hidden" />
+                            <label for="selectlist3"><span>Select Option2</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist4" tabindex="0" class="hidden" />
+                            <label for="selectlist4"><span>Select Option3</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist5" tabindex="0" class="hidden" />
+                            <label for="selectlist5"><span>Select Option4</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist6" tabindex="0" class="hidden" />
+                            <label for="selectlist6"><span>Select Option5</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist7" tabindex="0" class="hidden" />
+                            <label for="selectlist7"><span>Select Option6</span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap" id="ModalFullpopup">
+        <div class="modal modal_fullpopup">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalFullpopup</h3>
+            </div>
+            <div class="modal_content">
+                <div class="sticky">
+                    <div class="tab style2">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item is_active">Tab 1</button>
+                            <button type="button" class="tab_item">Tab 2</button>
+                            <button type="button" class="tab_item">Tab 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_panel">
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+    <!-- Toast -->
+    <div id="Toast1" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+        <div class="toast_btn">
+            <button type="button" class="btn text primary">더 보기</button>
+        </div>
+    </div>
+    <!-- // Toast -->
+
+    <!-- Toast -->
+    <div id="Toast2" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+    </div>
+    <!-- // Toast -->
+
+</body>
+
+</html>
