@@ -481,7 +481,35 @@
 }
 //비디오 스크립트
 .videoscript_page {
+    .video_download {
+        display: flex;
+        align-items: center;
+        padding:1rem 0;
+        .left {
+            display: flex;
+            align-items: center;
+            &::after {
+                content:"";
+                position: relative;
+                margin-left:0.6rem;
+                width:2rem;
+                height:2rem;
+                background-image: url('../img/icons_20_ic_information_grey_07.svg');
+                }       
+            .btn_down {
+                @include FontBody13;
+                color:#cbcdcf;
+                border:1px solid #44464a;
+                border-radius: 4px;
+                padding:0.4rem 1.2rem;
+            }
+        }
+        .right {
+            margin-left: auto;
+        }
+    }
     .videoscript_txt {
+        margin-top:0.6rem;
         > .txt + .txt {
             margin-top:3rem;
         }
