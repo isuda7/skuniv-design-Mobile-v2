@@ -1,104 +1,41 @@
-//task board
-.board_toolbar + .task_list_wrap {
-    margin-top:0.7rem;
-}
-.task_board{
-    padding-bottom : 1.6rem;
-    & + .task_board{
-        padding-top : 2rem;
-        border-top : 0.1rem solid #44464a;
-    }
-    .task_tit {
-        font-size: 1.6rem;
-        word-break: break-all;
-        @include Ellipsis2;
-    }
-    .label + .task_tit {padding-top: 0.8rem;}
-
-}
-.task_info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    margin-top: 1.6rem;
-    @include FontBody14;
-    color :#75777b;
-    .left{
-        display: flex;
-        align-items: center;
-        flex:0 1 auto;
-        overflow: hidden;
-        span{
-            display: inline-block;
-        }
-        .avata {
-            margin-right : 0.6rem;
-            width :2rem;
-            height : 2rem;
-        }
-        .user_id{
-            margin-right : 0.8rem;
-            @include Ellipsis1;
-        }
-        .reg_date {
-            margin-right:2rem;
-            flex:none;
-        }
-    }
-    .right {
-        display: flex;
-        align-items: center;
-        flex:none;
-        .label{
-            margin-left: 1.2rem;
-            &:first-child{
-                margin-left: 0;
-            }
-            &::before{
-                content:'';
-                display:inline-block;
-                margin-right : .4rem;
-                width : 1.6rem;
-                height : 1.6rem;
-            }
-        }
-    }
-}
-
-.label{
-    &.cnt_views{
-        &::before{
-            background-image: url("../../assets/img/icons_16_ic_view_grey_04.svg");
-        }
-    }
-    &.cnt_cmmt{
-        &::before{
-            background-image: url("../../assets/img/icons_16_ic_comment_grey_04.svg");
-        }
-    }
-    &.cnt_like{
-        &::before{
-            background-image: url("../../assets/img/icons_16_ic_like_grey_04.svg");
-        }
-    }
-}
-
+/* LearningContents layout */
 .classroom_page .degree_page {
     padding-top:2rem;
 }
+.content_body{
+    &.task_commt_page{
+        background-color: #151617;
+    }
+}
+.board_toolbar + .task_list_wrap {
+    margin-top:0.7rem;
+}
+/* // LearningContents layout */
 
+/* theme_dark */
+.theme_dark .board_comments_wrap{
+    background-color: #151617;
+}
 
-/* board */
+.theme_dark .file_down_area .cube_references{
+    background-color:transparent;
+}
+
+.theme_dark .cube_references .references_util {
+    .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+    .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
+}
+/* // theme_dark */
+
+/* board Detail 공통 */
 .board_dt_wrap {
-   padding: 2rem 0 0 ;
+    padding: 2rem 0 0 ;
 }
 .board_dt_title {
     border-bottom: 0.1rem solid #1c1d1f;
     padding-bottom: 1.2rem;
     margin-bottom: 2rem;
 }
-
 .board_dt_title {
     .title_area .title {
         color: #fff;
@@ -156,7 +93,6 @@
         }
     }
 }
-
 .board_dt_content {
     .board_ph {
         color: #f2f3f5;
@@ -193,36 +129,99 @@
         color : $ColorSubTxt;
     }
 }
-
-.content_body{
-    &.task_commt_page{
-        background-color: #151617;
-    }
-}
-
 .board_comments_wrap {
-	display:flex;
-	flex-direction: column;
-	flex:1 0 auto;
+    display:flex;
+    flex-direction: column;
+    flex:1 0 auto;
     margin-left: -$GapSideBase;
     margin-right: -$GapSideBase;
     padding: 0 $GapSideBase 3.2rem;
 }
+/* // board Detail 공통 */
 
-.theme_dark .board_comments_wrap{
-    background-color: #151617;
+/* LearningContents - Task */
+/* task board */
+.task_board{
+    padding-bottom : 1.6rem;
+    & + .task_board{
+        padding-top : 2rem;
+        border-top : 0.1rem solid #44464a;
+    }
+    .task_tit {
+        font-size: 1.6rem;
+        word-break: break-all;
+        @include Ellipsis2;
+    }
+    .label + .task_tit {padding-top: 0.8rem;}
 }
-
-.theme_dark .file_down_area .cube_references{
-    background-color:transparent;
+.task_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin-top: 1.6rem;
+    @include FontBody14;
+    color :#75777b;
+    .left{
+        display: flex;
+        align-items: center;
+        flex:0 1 auto;
+        overflow: hidden;
+        span{
+            display: inline-block;
+        }
+        .avata {
+            margin-right : 0.6rem;
+            width :2rem;
+            height : 2rem;
+        }
+        .user_id{
+            margin-right : 0.8rem;
+            @include Ellipsis1;
+        }
+        .reg_date {
+            margin-right:2rem;
+            flex:none;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        flex:none;
+        .label{
+            margin-left: 1.2rem;
+            &:first-child{
+                margin-left: 0;
+            }
+            &::before{
+                content:'';
+                display:inline-block;
+                margin-right : .4rem;
+                width : 1.6rem;
+                height : 1.6rem;
+            }
+        }
+    }
 }
-
-.theme_dark .cube_references .references_util {
-    .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
-    .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
+.label{
+    &.cnt_views{
+        &::before{
+            background-image: url("../../assets/img/icons_16_ic_view_grey_04.svg");
+        }
+    }
+    &.cnt_cmmt{
+        &::before{
+            background-image: url("../../assets/img/icons_16_ic_comment_grey_04.svg");
+        }
+    }
+    &.cnt_like{
+        &::before{
+            background-image: url("../../assets/img/icons_16_ic_like_grey_04.svg");
+        }
+    }
 }
-
-
+/* // task board */
+/* task Modal */
 .modal.task_edit{
     .modal_footer{
         height : 4.5rem;
@@ -272,8 +271,6 @@
         height : 100%;
     }
 }
-
-
 .edit_contents{
     .acco_content.is_active{
         display: flex;
@@ -324,13 +321,11 @@
         }
     }
 }
-
 .ico.clear::before{
     width :2rem;
     height : 2rem;
     background-image: url("../../assets/img/icons_20_ic_clear_grey_04.svg");
 }
-
 .edit_tool_bar {
     padding: 1.2rem 2rem;
     position: fixed;
@@ -371,7 +366,6 @@
         }
     }
 }
-
 .font_tool_bar{
     padding : 1.2rem $GapSideBase;
     position: fixed;
@@ -426,8 +420,11 @@
         }
     }
 }
+/* // task Modal */
+/* // LearningContents - Task */
 
-//webpage
+/* LearningContents - webpage , document */
+//web
 .emb_sec {
     display: flex;
     flex-wrap: wrap;
@@ -440,7 +437,7 @@
         width: 100%;
     }
 }
-//document viewer
+// doc
 .doc_viewer{
     display: flex;
     flex-wrap: wrap;
