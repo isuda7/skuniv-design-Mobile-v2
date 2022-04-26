@@ -1333,6 +1333,9 @@
 					line-height:2.2rem;
 					padding:1.2rem 0;
 					vertical-align: top;
+					&::-webkit-scrollbar {
+						display:none;
+					}
                 }
             }
         }
