@@ -39,6 +39,9 @@
 			&.remove::before {
 				background-image: url('../img/icons_20_ic_delete_black.svg');
 			}
+			&.playlist::before {
+				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
+			}
 		}
 	}
 }
@@ -152,6 +155,13 @@
 		}
 
 		// 학습 Type1 (생략)
+		&.type1 {
+			.item_foot {
+				.rate_count {
+					color:#999999;
+				}
+			}
+		}
 
 		// 학습 Type2
 		&.type2 {

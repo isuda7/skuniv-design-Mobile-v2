@@ -200,3 +200,40 @@
         background-color:$ColorTabPenelGrey;
     }
 }
+
+// 배지인증서
+.modal_badgeCert {
+    .cert_sec {
+        margin-top:2rem;
+        .cert_body {
+            margin-top:1.2rem;
+            p {
+                color: $ColorSubTxt;
+                & + p {
+                    margin-top:2rem;
+                }
+            }
+        }
+    }
+}
+
+// 플레이리스트 만들기
+.modal_playlistAdd {
+    .modal_content {
+        padding-top:1.6rem;
+    }
+    .playlistAdd_form {
+        .tit {
+            display:block;
+            margin-bottom:0.8rem;
+            @include FontBody13;
+            color:$ColorSubTxt;
+        }
+        .form_row + .form_row {
+            margin-top:2rem;
+        }
+        textarea.basic {
+            height:12.8rem;
+        }
+    }
+}

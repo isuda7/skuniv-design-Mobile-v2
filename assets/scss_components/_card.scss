@@ -293,49 +293,30 @@
 	}
 	&.hor {
 		&.badge {
+			background-color: #fff;
+			border-radius: $RadiusLarge;
+			@include Shadow2;
 			margin-top:0.8rem;
-			border-radius: $RadiusLarge;
-			@include Shadow2;
-			.card_inner {
-				padding:1.8rem 2rem;
-			}
-			.card_thumb {
-				width:8rem;
-				height:8rem;
-				margin-right:1.3rem;
-			}
-			.card_body {
-				.title {
-					@include FontBody16;
-					@include Ellipsis2;
-				}
-				.total_count {
-					margin-top:0.4rem;
-					color:#A4A6AA;
-				}
-			}
-		}
-		&.mybadge {
-			border-radius: $RadiusLarge;
-			@include Shadow2;
-			& + .card.badge {
-				margin-top:0.8rem;
-			}
 			.card_inner {
 				flex-wrap:wrap;
-				padding:1.8rem 2rem;
+				padding:1.6rem 1.6rem;
+				background-color: transparent;
 			}
 			.card_thumb {
-				width:9rem;
-				height:9rem;
-				margin-right:1.3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width:9.2rem;
+				height:9.2rem;
+				margin-right:1.2rem;
 			}
 			.card_body {
-				width:calc(100% - 10.3rem);
+				width:calc(100% - 10.4rem);
 				.title {
 					@include FontBody16;
 					@include Ellipsis2;
 				}
+				.count,
 				.date {
 					margin-top:0.4rem;
 					color:#A4A6AA;

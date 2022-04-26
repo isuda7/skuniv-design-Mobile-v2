@@ -40,6 +40,7 @@
 		@include FontTitle16;
 	}
 	.sub_txt {
+		margin-top:0.2rem;
 		color:$ColorSubTxt;
 	}
 }
@@ -78,7 +79,7 @@
 			background-image: url("../img/icons_40_ic_guage_0#{$i}.svg");
 		}
 	}
-	@for $j from 10 to 20 {
+	@for $j from 10 to 21 {
 		&.per#{$j*5}{
 			background-image: url("../img/icons_40_ic_guage_#{$j}.svg");
 		}
