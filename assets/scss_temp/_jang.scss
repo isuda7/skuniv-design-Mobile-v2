@@ -110,11 +110,14 @@
         margin-top: 1.2rem;
         color: #75777b;
         @include FontBody14;
-
+        display: flex;
+        align-items: center;
+        overflow: hidden;
         span {
             display: inline-block;
             margin-right: 0.8rem;
             vertical-align: middle;
+            flex : none;
         }
         .avata {
             width: 2rem;
@@ -122,10 +125,10 @@
             margin-right: 0.6rem;
         }
         .user_id {
-            max-width: 40%;
             overflow : hidden;
             text-overflow : ellipsis;
             white-space : nowrap;
+            flex : 0 1 auto;
         }
         .reg_date {
             margin-right: 1.6rem;
@@ -198,10 +201,14 @@
 }
 
 .board_comments_wrap {
+	display:flex;
+	flex-direction: column;
+	flex:1 0 auto;
     margin-left: -$GapSideBase;
     margin-right: -$GapSideBase;
     padding: 0 $GapSideBase 3.2rem;
 }
+
 .theme_dark .board_comments_wrap{
     background-color: #151617;
 }
@@ -210,7 +217,10 @@
     background-color:transparent;
 }
 
-.theme_dark .cube_references .references_util .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+.theme_dark .cube_references .references_util {
+    .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+    .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
+}
 
 
 .modal.task_edit{
@@ -413,6 +423,57 @@
         }
         &.is_active::before{
             background-position-y: 100%;
+        }
+    }
+}
+
+//webpage
+.emb_sec {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color:#1c1d1f;
+    margin : - $GapSideBase;
+    margin-top : 0;
+    margin-bottom : 0;
+    .embedded.iframe-area{
+        width: 100%;
+    }
+    .link_area{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.2rem 2rem;
+        width: 100%;
+        .link_tit{
+            color :#cbcdcf;
+            @include FontBody12;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            flex : none;
+            &::before{
+                content:'';
+                display: inline-block;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-image: url("../../assets/img/icons_12_ic_file_grey_05.svg");
+            }
+        }
+        .link_wrap{
+            overflow: hidden;
+            flex : 0 1 auto;
+            margin-left: .8rem;
+        }
+        .ach.ico{
+            padding-right: 1.2rem;
+            position: relative;
+            color: $ColorSubTxt;
+            @include FontBody12;
+            @include Ellipsis1;
+            background-image : url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
+            background-repeat: no-repeat;
+            background-position: 100% 50%;
         }
     }
 }
