@@ -1,0 +1,97 @@
+.badge_ico {
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    background-position: center center;
+
+    // 사이즈
+    &.xl {
+        width:8rem;
+        height:8rem;
+        img {
+            width:2.4rem;
+            height:2.4rem;
+        }
+    }
+    &.md {
+        width:5.2rem;
+        height:5.2rem;
+        img {
+            width:1.6rem;
+            height:1.6rem;
+        }
+    }
+    &.xs {
+        width:4rem;
+        height:4rem;
+        img {
+            width:1.2rem;
+            height:1.2rem;
+        }
+    }
+
+    // 상태
+    .status {
+        position: absolute;
+        left:50%;
+        top:0;
+        transform: translateX(-50%);
+        min-width:4rem;
+        height:1.6rem;
+        padding:0 0.6rem;
+        @include FontBody10;
+        border-radius: 1rem;
+        box-shadow: 0 1px 0.3rem 0 rgba(0,0,0,0.06), 0 0.2rem 1px rgba(0,0,0,0.04), 0 1px 1px 0 rgba(0,0,0,0.02);
+        color:#fff;
+        &.challenge {
+            background-color: $ColorPrimary;
+        }
+        &.acheive {
+            background-color: $ColorSecondary;
+        }
+    }
+
+    // 01 AI/DT
+    &.ai {
+        &_star1 {background-image: url('../img/img_badge_01_1_star.svg');}
+        &_star2 {background-image: url('../img/img_badge_01_2_star.svg');}
+        &_star3 {background-image: url('../img/img_badge_01_3_star.svg');}
+    }
+
+    // 02 공통직무
+    &.com {
+        &_star1 {background-image: url('../img/img_badge_02_1_star.svg');}
+        &_star2 {background-image: url('../img/img_badge_02_2_star.svg');}
+        &_star3 {background-image: url('../img/img_badge_02_3_star.svg');}
+    }
+
+    // 03 미래Biz
+    &.biz {
+        &_star1 {background-image: url('../img/img_badge_03_1_star.svg');}
+        &_star2 {background-image: url('../img/img_badge_03_2_star.svg');}
+        &_star3 {background-image: url('../img/img_badge_03_3_star.svg');}
+    }
+
+    // 04 행복경영
+    &.happy {
+        &_star1 {background-image: url('../img/img_badge_04_1_star.svg');}
+        &_star2 {background-image: url('../img/img_badge_04_2_star.svg');}
+        &_star3 {background-image: url('../img/img_badge_04_3_star.svg');}
+    }
+
+    // 05 BM Design
+    &.design {
+        &_star1 {background-image: url('../img/img_badge_05_1_star.svg');}
+        &_star2 {background-image: url('../img/img_badge_05_2_star.svg');}
+        &_star3 {background-image: url('../img/img_badge_05_3_star.svg');}
+    }
+
+    // 06 SK(주) C&C
+    &.skcnc {
+        &_star1 {background-image: url('../img/img_badge_06_1_star.png');}
+        &_star2 {background-image: url('../img/img_badge_06_2_star.png');}
+        &_star3 {background-image: url('../img/img_badge_06_3_star.png');}
+    }
+}
