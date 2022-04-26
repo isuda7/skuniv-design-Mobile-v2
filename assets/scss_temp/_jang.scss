@@ -217,7 +217,10 @@
     background-color:transparent;
 }
 
-.theme_dark .cube_references .references_util .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+.theme_dark .cube_references .references_util {
+    .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+    .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
+}
 
 
 .modal.task_edit{
@@ -474,5 +477,3 @@
         }
     }
 }
-
- 

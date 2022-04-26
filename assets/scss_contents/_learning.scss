@@ -573,6 +573,16 @@
 		flex-wrap: nowrap;
 		flex:none;
 		margin-left:1.8rem;
+		.ico {
+			&+.ico{
+				margin-left: 1.8rem;
+			}
+		}
+		.ico.file_open{
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_openinnew_black.svg');
+		}
 		.ico.file_down {
 			width:2rem;
 			height:2rem;
@@ -580,6 +590,8 @@
 		}
 	}
 }
+.theme_dark .learning_attachment .cube_references { background-color: transparent; }
+
 .theme_dark .cube_references {
 	background-color: #151617;
 	border-color: #44464A;
@@ -1198,6 +1210,9 @@
 			&.webpage::before {
 				background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
 			}
+			&.document::before {
+				background-image :url("../img/icons_16_ic_document_grey_06.svg");
+			}
 			&.discussion::before {
 				background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
 			}
@@ -1215,7 +1230,6 @@
 	//info_area 하단에 url, 첨부 file 등등
 	.learning_attachment {
 		margin-top : 3.2rem;
-
 		.l_guide{
 			padding-top : 1.4rem;
 			@include FontBody12;
@@ -1227,6 +1241,40 @@
 				padding-top: 0.4rem;
 				@include FontBody14;
 				color : #cbcdcf;
+			}
+		}
+		//첨부파일
+		.att_title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.sub_title {
+				strong {
+					display: inline-block;
+					@include FontBody16;
+					font-weight: bold;
+				}
+				.cnt {
+					margin-left: .4rem;
+					color : $ColorPrimary;
+				}
+			}
+			.btn.down_all{
+				padding : 0 1.4rem 0 0; 
+				color : $ColorSubTxt;
+				@include FontBody14;
+				background-image: url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
+				background-repeat: no-repeat;
+				background-position: 100% 50%;
+			}
+		}
+		.att_list .cube_references{
+			margin-top : .8rem;
+			.references_body{
+				overflow: hidden;
+			}
+			.title{
+				@include Ellipsis1;
 			}
 		}
 	}
