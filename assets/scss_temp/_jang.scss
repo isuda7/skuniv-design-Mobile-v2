@@ -439,41 +439,116 @@
     .embedded.iframe-area{
         width: 100%;
     }
-    .link_area{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1.2rem 2rem;
-        width: 100%;
-        .link_tit{
-            color :#cbcdcf;
-            @include FontBody12;
-            position: relative;
-            display: inline-flex;
+}
+//document viewer
+.doc_viewer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color:#1c1d1f;
+    .doc_area{
+        position: relative;
+        .doc_pagination {
+            position: absolute;
+            bottom: .8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0,0,0, 0.3);
+            padding: .5rem 0;
+            display: flex;
             align-items: center;
-            flex : none;
-            &::before{
-                content:'';
-                display: inline-block;
-                width: 1.2rem;
-                height: 1.2rem;
-                background-image: url("../../assets/img/icons_12_ic_file_grey_05.svg");
+            justify-content: center;
+            border-radius: 3.2rem;
+            .pages_num{
+                color : #fff;
+                @include FontBody12;
             }
         }
-        .link_wrap{
-            overflow: hidden;
-            flex : 0 1 auto;
-            margin-left: .8rem;
-        }
-        .ach.ico{
-            padding-right: 1.2rem;
+    }
+    .doc_info_area{
+        position: relative;
+        .doc_bar_wrap {
             position: relative;
-            color: $ColorSubTxt;
-            @include FontBody12;
-            @include Ellipsis1;
-            background-image : url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
-            background-repeat: no-repeat;
-            background-position: 100% 50%;
+            display: block;
+            width: 100%;
+            height: .4rem;
+            background-color: #a4a6aa;
+            .doc_bar {
+                display: inline-block;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $ColorPrimary;
+            }
         }
+    }
+} 
+.doc_pagination{
+    .doc_act{
+        width: 1.2rem;
+        height: 1.2rem;
+        margin : 0 .6rem;
+        background-image: url("../../assets/img/icons_12_ic_chervron_right_white.svg");
+        background-repeat: no-repeat;
+        &.prev{
+            transform: scaleX(-1);
+        }
+    }
+}
+
+//web, doc 공통
+.doc_link_wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    width: 100%;
+    .label_tit{
+        color :#cbcdcf;
+        @include FontBody12;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        flex : none;
+        &.link::before{
+            content:'';
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-image: url("../../assets/img/icons_12_ic_file_grey_05.svg");
+        }
+    }
+    .doc_cnt{
+        display: inline-flex;
+        align-items: center;
+        margin-left : .4rem;
+        span{
+            color :#cbcdcf;
+            @include FontBody12;
+        }
+    }
+    .doc_name{
+        overflow: hidden;
+        flex : 0 1 auto;
+        margin-left: .8rem;
+        width: 100%;
+    }
+    .link_wrap{
+        overflow: hidden;
+        flex : 0 1 auto;
+        margin-left: .8rem;
+        width: 100%;
+    }
+    .ach.ico{
+        padding-right: 1.2rem;
+        position: relative;
+        color: $ColorSubTxt;
+        @include FontBody12;
+        @include Ellipsis1;
+        background-image : url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
     }
 }
