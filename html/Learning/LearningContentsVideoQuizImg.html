@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+					<h1><strong>Video QUIZ</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container videoquiz_page">
+            <input type="range" value="1" min="0" max="9" class="step_range sticky" />
+			<div class="content_body">
+                <div class="step_count">
+                    <em class="current">3</em>
+                    <b class="split">/</b>
+                    <span class="total">9</span>
+                </div>
+                <div class="atare_survey">
+                    <h2 class="atare_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다.</h2>
+                    <div class="radio_group">
+						<div class="quiz_img">
+							<div class="radio block">
+								<input type="radio" name="radioBlock1" id="radioBlock11" tabindex="0" class="hidden" />
+								<label for="radioBlock11"><span>매우 그렇다</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="radio block">
+								<input type="radio" name="radioBlock1" id="radioBlock12" tabindex="0" class="hidden" />
+								<label for="radioBlock12"><span>그렇다</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+                        <div class="quiz_img">
+							<div class="radio block">
+								<input type="radio" name="radioBlock1" id="radioBlock13" tabindex="0" class="hidden" />
+								<label for="radioBlock13"><span>보통이다</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="radio block">
+								<input type="radio" name="radioBlock1" id="radioBlock14" tabindex="0" class="hidden" />
+								<label for="radioBlock14"><span>그렇지 않다</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="radio block">
+								<input type="radio" name="radioBlock1" id="radioBlock15" tabindex="0" class="hidden" />
+								<label for="radioBlock15"><span>매우 그렇지 않다</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+                    </div>
+                </div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">다음</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

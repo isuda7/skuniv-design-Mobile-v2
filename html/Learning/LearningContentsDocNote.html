@@ -12,31 +12,32 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
-        function learningThumb(){
-            // 타이틀 라인수만큼 스타일 구분하기
-            var TitleEl = document.querySelector(".overay_area .title");
-            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
-            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
-            var Remain = TitleHeight / TitleLineHeight;
-            TitleEl.classList.add("line"+Remain);
-        }
-        $(function(){
-            // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
-        });
-    </script>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+	</script>
 </head>
 <body>
-<div class="sub_wrapper theme_dark has_sticky gap_none">
+<div class="sub_wrapper has_sticky theme_dark has_floating">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
+                <h1><strong class="transition">[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
             </div>
             <div class="appbar_right">
                 <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
@@ -46,31 +47,47 @@
     <!-- // Header -->
 
 	<!-- Container -->
-    <main role="main" class="container learning_container">
-        <div class="content_head">
-            <!-- 학습영상 -->
-            <div class="cube_player_sec">
-                <!-- Player영역 -->
-                <div class="cube_player">
-                    <img src="../../assets/img/demo/thumb-01.png" alt="">
-                    <div class="player_timeline">
-                        <input type="range" class="timeline_range" value="0" min="0" max="100" />
-                    </div>
-                </div>
-                <!-- // Player영역 -->
-            </div>
-            <!-- //학습영상 -->
-        </div>
-        <div class="content_body contents_page">
+    <main role="main" class="container learning_container document_page">
+        <div class="content_body document_content">
             <!-- 과정제목 -->
             <div class="learning_subject">
                 <div class="title_area">
                     <span class="label style1 primary">학습중</span>
-                    <h1 class="title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
+                    <h1 class="title appbar_title"><strong>[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
                 </div>
                 <div class="info_area">
-                    <span class="label video">Video</span>
+                    <span class="label document">Document</span>
                     <span class="label time">30m</span>
+                </div>
+                <div class="learning_attachment">
+                    <div class="att_title">
+                        <h2 class="sub_title"><strong>첨부파일</strong><strong class="cnt">2</strong></h2>
+                        <button type="button" class="btn down_all">전체 다운로드</button>
+                    </div>
+                    <div class="att_list">
+                        <div class="cube_references">
+                            <div class="references_body">
+                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
+                                <p class="bytes">249KB</p>
+                            </div>
+                            <div class="references_util">
+                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                            </div>
+                        </div>
+                        <div class="cube_references">
+                            <div class="references_body">
+                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
+                                <p class="bytes">249KB</p>
+                            </div>
+                            <div class="references_util">
+                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- //과정제목 -->
@@ -79,19 +96,17 @@
                 <div class="tab style2">
                     <div class="tab_list">
                         <button type="button" class="tab_item">개요</button>
-                        <button type="button" class="tab_item">스크립트</button>
                         <button type="button" class="tab_item">코멘트</button>
                         <button type="button" class="tab_item is_active">학습노트</button>
                     </div>
                 </div>
             </div>
-            <!-- //학습과정 탭 -->
-            <!-- 보드 카운트 -->
             <div class="tab_panel note_page">
+                <!-- 보드 카운트 -->
                 <div class="board_toolbar">
                     <div class="board_count">
                         <span class="total">총</span>
-                        <em class="count">0</em>
+                        <em class="count">2</em>
                         <span class="unit">개</span>
                     </div>
                 </div>
@@ -101,8 +116,8 @@
                     <div class="cube_note">
                         <div class="note_head">
                             <div class="left">
-                                <p class="note_time">00 : 00 : 03</p>
-                                <button type="button" class="btn ico openinnew"><span class="blind">새창 열기</button>
+                                <p class="note_title">학습노트1</p>
+                                <button type="button" class="btn ico openinnew blind"><span class="blind">새창 열기</button>
                             </div>
                             <div class="right">
                                 <div class="tooltip basic left bottom">
@@ -118,7 +133,7 @@
                             <div class="note_txt">
                                 <p class="txt">
                                     최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다.
-                                    <!-- 2줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
+                                    <button type="button" class="btn more">더 보기</button>
                                 </p>
                             </div>
                             <div class="note_date">
@@ -129,7 +144,7 @@
                     <div class="cube_note">
                         <div class="note_head">
                             <div class="left">
-                                <p class="note_title">학습노트1</p>
+                                <p class="note_title">학습노트2</p>
                                 <p class="btn ico openinnew blind"><span class="blind">새창 열기</p>
                             </div>
                             <div class="right">
@@ -159,8 +174,8 @@
                 <!-- 코멘트 -->
                 <div class="note_floating">
                     <div class="note_body">
-                        <p class="label note_time">00 : 00 : 00</p>
-                        <!-- <p class="label note_title">학습노트 3</p> -->
+                        <!-- <p class="label note_time">00 : 00 : 00</p> -->
+                        <p class="label note_title">학습노트 3</p>
                         <p class="note_form">
                             <label for="noteForm" class="tit blind">학습노트 작성</label>
                             <textarea id="noteForm" cols="10" rows="1" class="basic" placeholder="학습노트를 작성해 보세요."></textarea>
@@ -168,11 +183,13 @@
                     </div>
                 </div>
                 <!-- // 코멘트 -->
+
             </div>
         </div>
     </main>
     <!-- // Container -->
 
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 </body>
 </html>

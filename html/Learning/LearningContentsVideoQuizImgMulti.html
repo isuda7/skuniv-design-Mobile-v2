@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+					<h1><strong>Video QUIZ</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container videoquiz_page">
+            <input type="range" value="1" min="0" max="9" class="step_range sticky" />
+			<div class="content_body">
+                <div class="step_count">
+                    <em class="current">2</em>
+                    <b class="split">/</b>
+                    <span class="total">9</span>
+                </div>
+                <div class="atare_survey">
+                    <h2 class="atare_tit">[과목 구성] 특히 인상 깊은 과목이 있으시다면 무엇인가요? (복수선택)</h2>
+                    <div class="check_group">
+						<div class="quiz_img">
+							<div class="checkbox block">
+								<input type="checkbox" name="checkBox1" id="checkBox11" tabindex="0" class="hidden" />
+								<label for="checkBox11"><span>[1일차] Team Building</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="checkbox block">
+								<input type="checkbox" name="checkBox1" id="checkBox12" tabindex="0" class="hidden" checked />
+								<label for="checkBox12"><span>[1일차] SK History & Biz.</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="checkbox block">
+								<input type="checkbox" name="checkBox1" id="checkBox13" tabindex="0" class="hidden" checked />
+								<label for="checkBox13"><span>[1일차] SK 인싸되기</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="checkbox block">
+								<input type="checkbox" name="checkBox1" id="checkBox14" tabindex="0" class="hidden" />
+								<label for="checkBox14"><span>[2일차] ESG 기반의 Financial Story</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+						<div class="quiz_img">
+							<div class="checkbox block">
+								<input type="checkbox" name="checkBox1" id="checkBox15" tabindex="0" class="hidden" />
+								<label for="checkBox15"><span>[2일차][3일차] SKMS W/S</span></label>
+							</div>
+							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
+						</div>
+                    </div>
+                </div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">다음</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
