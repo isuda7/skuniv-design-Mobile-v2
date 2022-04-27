@@ -591,12 +591,12 @@
         .tit_other {
             display: flex;
             align-items: center;
-            margin-bottom:1.2rem;
-            > .left {
+            margin-top:-1rem;
+            > .atare_tit {
                 margin-right:1.2rem;
                 @include Ellipsis2;
             }
-            > .right {
+            > .btn_view {
                 width:4.8rem;
                 height:4.8rem;
                 background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
