@@ -250,8 +250,11 @@
             width:2.4rem;
             height:2.4rem;
         }
-        &.close::before {
-            background-image:url('../img/icons_24_ic_close_black.svg');
+        &.close {
+            justify-content: flex-start;
+            &::before {
+                background-image:url('../img/icons_24_ic_close_black.svg');
+            }
         }
         &.back {
             justify-content: flex-start;
