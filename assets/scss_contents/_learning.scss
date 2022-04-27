@@ -1455,7 +1455,13 @@
             .ico.survey {
                 width:5.2rem;
                 height:6.0rem;
-                background-color: #ddd;
+				margin:0 auto;
+                &.pass {
+					background-image: url(../img/icons_60_ic_result_done.svg);
+				}
+                &.fail {
+					background-image: url(../img/icons_60_ic_result_fail.svg);
+				}
             }
             .score {
                 margin-top:2.5rem;
@@ -1721,6 +1727,13 @@
             }
         }
     }
+}
+
+// Modal BadgeList
+.modal_badgelist {
+	.modal_content {
+		padding-bottom:3rem;
+	}
 }
 
 

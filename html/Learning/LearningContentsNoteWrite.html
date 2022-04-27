@@ -13,14 +13,6 @@
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
     <script>
-        function learningThumb(){
-            // 타이틀 라인수만큼 스타일 구분하기
-            var TitleEl = document.querySelector(".overay_area .title");
-            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
-            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
-            var Remain = TitleHeight / TitleLineHeight;
-            TitleEl.classList.add("line"+Remain);
-        }
         $(function(){
             // 스티키 레이아웃 설정
             var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
@@ -49,15 +41,8 @@
     <main role="main" class="container learning_container">
         <div class="content_head">
             <!-- 학습영상 -->
-            <div class="cube_player_sec">
-                <!-- Player영역 -->
-                <div class="cube_player">
-                    <img src="../../assets/img/demo/thumb-01.png" alt="">
-                    <div class="player_timeline">
-                        <input type="range" class="timeline_range" value="0" min="0" max="100" />
-                    </div>
-                </div>
-                <!-- // Player영역 -->
+            <div class="cube_player_sec" id="playerSec">
+                <script>$('#playerSec').load('../Common/player.html');</script>
             </div>
             <!-- //학습영상 -->
         </div>

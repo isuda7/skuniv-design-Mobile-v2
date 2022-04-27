@@ -24,10 +24,21 @@
 .gap_none {
     .header {
         position: absolute;
+        height:0;
     }
     .appbar {
         position: absolute;
+        height:0;
         background-color: transparent;
+        align-items: flex-start;
+        .appbar_left {
+            max-width:100%;
+            width:auto;
+        }
+        .appbar_left,
+        .appbar_right {
+            height:$HeightAppBar;
+        }
     }
     .header.theme_dark {
         background-color: transparent;

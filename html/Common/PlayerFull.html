@@ -9,7 +9,7 @@
 
                         재생/정지: 기본숨김, is_visible 보기
                     -->
-                    <div class="cube_player" onclick="PlayerOvewrap(this, event)">
+                    <div class="cube_player is_fullscreen" onclick="PlayerOvewrap(this, event)">
                         <!-- DBClick Constrols -->
                         <div class="player_db_controls">
                             <button type="button" class="btn dubble_backward"><span>10초</span></button>
@@ -32,7 +32,7 @@
                                     <button type="button" class="btn ico caption is_active"><span class="blind">자막보기</span></button>
                                     <button type="button" class="btn ico speed"><span class="blind">재생속도</span></button>
                                     <button type="button" class="btn ico pip"><span class="blind">작게보기</span></button>
-                                    <button type="button" class="btn ico full"><span class="blind">전체보기</span></button>
+                                    <button type="button" class="btn ico full is_active"><span class="blind">전체보기</span></button>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="player_timeline">
                             <div class="timeline_thumb" style="left:25%">
                                 <div class="thumb" aria-hidden="true"
-									style="background-image:url('../../assets/img/demo/placeimg_640_360_animals.jpg')">
+									style="background-image:url('../../assets/img/demo/thumb-01.png')">
                                 </div>
                                 <p class="time">5:00</p>
                             </div>
@@ -70,28 +70,26 @@
                                 'background',
                                 'linear-gradient(to right, #ff664d 0%, #ff664d '+ val +'%, rgba(164, 166, 170, 0.5) ' + val + '%, rgba(164, 166, 170, 0.5) 100%)'
                             );
-                            $('.timeline_thumb').css('left', val+'%');
+							$('.timeline_thumb').css('left', val+'%');
                         }
 
                         // Overwrap
 						function PlayerOvewrap(obj, e){
-                            /* 인터렉션 확인용 퍼블 스크립트
-                                var visibleClass= 'is_visible';
-                                var activeClass= 'is_active';
-                                var $overWrap = $(obj).find('.player_overwrap');
-                                if ($overWrap.has(e.target).length === 0) {
-                                    // 활성화
-                                    if ($(obj).hasClass(visibleClass) === false) {
-                                        $(obj).addClass("is_visible is_active");
-                                    }
+							var visibleClass= 'is_visible';
+							var activeClass= 'is_active';
+							var $overWrap = $(obj).find('.player_overwrap');
+                            if ($overWrap.has(e.target).length === 0) {
+								// 활성화
+								if ($(obj).hasClass(visibleClass) === false) {
+                                    $(obj).addClass("is_visible is_active");
+								}
 
-                                    // 비활성화
-                                    else {
-                                        $(obj).removeClass("is_active").on('transitionend', function(){
-                                            (!$(obj).hasClass('is_active')) && $(obj).removeClass("is_visible");
-                                        })
-                                    }
-                                }
-                            */
+								// 비활성화
+								else {
+                                    $(obj).removeClass("is_active").on('transitionend', function(){
+                                        (!$(obj).hasClass('is_active')) && $(obj).removeClass("is_visible");
+                                    })
+								}
+							}
 						}
 					</script>

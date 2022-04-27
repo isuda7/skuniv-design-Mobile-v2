@@ -483,15 +483,13 @@
     }
     &.full{
     }
-} 
+}
 
 .doc_pagination{
     .doc_act{
-        width: 1.2rem;
-        height: 1.2rem;
-        margin : 0 .6rem;
-        background-image: url("../img/icons_12_ic_chervron_right_white.svg");
-        background-repeat: no-repeat;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url("../img/icons_12_ic_chervron_right_white.svg") no-repeat center center / 1.2rem auto;
         &.prev{
             transform: scaleX(-1);
         }

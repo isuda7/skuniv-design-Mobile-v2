@@ -4,21 +4,23 @@
     height:20.2rem;
     background-color: #000;
     color:#fff;
-    overflow: hidden;
+    // overflow: hidden;
     // 기본노출
     .player_thumb {
         position: absolute;
         width:100%;
         height: 100%;
         z-index: 10;
-        background: no-repeat center center / cover;
+        .thumb {
+            background-size:auto 100%;
+        }
     }
     .player_timeline {
         position: absolute;
         left:0;
         bottom:0;
         width:100%;
-        z-index: 30;
+        z-index: 50;
 
         .timeline_thumb {
             position:absolute;
@@ -66,45 +68,44 @@
 
     // 조건부활성화
     .player_overwrap {
-        display:none;
+        display:flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         position: absolute;
         left:0;
         bottom:0;
         width:100%;
         height:100%;
+        background-color: rgba(0,0,0,0.5);
         z-index:20;
-        opacity: 0;
-        &.is_actice {
-            visibility: visible;
-            opacity: 1;
-            transition: all 0.2s ease;
-        }
         .player_controls {
             display:flex;
             justify-content: space-evenly;
             align-items: center;
             width: 100%;
-            .btn.prev::before {
+            height:0;
+            opacity: 1;
+            transition: all 0.2s ease;
+            .btn.backward::before {
                 width:3.6rem;
                 height:3.6rem;
-                background: #ddd;
+                background-image: url('../img/icons_36_ic_back_white.svg');
             }
-            .btn.next::before {
+            .btn.forward::before {
                 width:3.6rem;
                 height:3.6rem;
-                background: #ddd;
+                background-image: url('../img/icons_36_ic_forward_white.svg');
             }
             .btn.start::before {
                 width:3.2rem;
                 height:3.2rem;
-                background: #ddd;
+                background-image: url('../img/icons_32_ic_play.svg');
             }
             .btn.pause::before {
                 width:3.2rem;
                 height:3.2rem;
-                background: #ddd;
+                background-image: url('../img/icons_32_ic_stop.svg');
             }
             .btn.start,
             .btn.pause {
@@ -125,6 +126,7 @@
             width:100%;
             padding:0 $GapSideBase;
             .time_area {
+                @include FontBody12;
                 .split {
                     color:rgba(255,255,255,0.9);
                 }
@@ -141,20 +143,25 @@
                     &::before {
                         width:2.4rem;
                         height:2.4rem;
-                        background: #ddd;
                     }
                 }
                 .btn.ico.caption::before {
-                    background: #ddd;
+                    background-image: url('../img/icons_24_ic_cc_off_on.svg');
                 }
-                .btn.ico.spped::before {
-                    background: #ddd;
+                .btn.ico.caption.is_active::before {
+                    background-position: bottom;
                 }
-                .btn.ico.screen1::before {
-                    background: #ddd;
+                .btn.ico.speed::before {
+                    background-image: url('../img/icons_24_ic_speed_white.svg');
                 }
-                .btn.ico.screen2::before {
-                    background: #ddd;
+                .btn.ico.pip::before {
+                    background-image: url('../img/icons_24_ic_pip_white.svg');
+                }
+                .btn.ico.full::before {
+                    background-image: url('../img/icons_24_ic_full_white.svg');
+                }
+                .btn.ico.full.is_active::before {
+                    background-image: url('../img/icons_24_ic_contraction_white.svg');
                 }
             }
         }
@@ -162,115 +169,179 @@
 }
 
 // Overwrap Active
-.cube_player.is_active {
+.cube_player {
     .player_overwrap {
-        opacity: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s ease;
     }
-    .player_timeline {
-        .timeline_range {
-            pointer-events: auto;
-            &::-webkit-slider-thumb {
-                transform: scale(1);
-            }
+
+    &.is_visible {
+        .player_overwrap {
+            visibility: visible;
         }
     }
-}
-
-// Overwrap Visible
-.cube_player.is_visible {
-    .player_overwrap {
-        display:flex;
+    &.is_active {
+        .player_overwrap {
+            opacity: 1;
+        }
+        .player_timeline {
+            .timeline_range {
+                pointer-events: auto;
+                &::-webkit-slider-thumb {
+                    transform: scale(1);
+                }
+            }
+        }
     }
 }
 
 // Prev/Next Active
 .cube_player {
-    .player_overwrap {
+    .player_db_controls {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index: 30;
+        width:100%;
+        height:100%;
         overflow: hidden;
-        &::before,
-        &::after {
-            content:'';
-            pointer-events: none;
-            display:block;
+        .btn.dubble_backward,
+        .btn.dubble_forward {
+            display:flex;
+            justify-content: center;
+            align-items: center;
             position:absolute;
             top:50%;
             width:120vw;
             height:120vw;
+            padding:0;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.3  );
             transition: all 0.2s;
+            span {
+                color:#fff;
+            }
         }
-        &::before {
+        .btn.dubble_backward {
             left:0;
+            padding-left:80vw;
             transform: translate(-70%, -50%) scale(0.9);
             opacity: 0;
         }
-        &::after {
+        .btn.dubble_forward {
             right:0;
+            padding-right:80vw;
             transform: translate(70%, -50%) scale(0.9);
             opacity: 0;
         }
+    }
+    .player_overwrap {
         .player_controls {
-            .btn.prev,
-            .btn.next {
+            .btn.backward,
+            .btn.forward {
                 opacity: 1;
-                transition: opacity 0.1s ease;
+                transition: opacity 0.3s ease;
             }
         }
     }
-    &.is_preved {
-        .player_overwrap {
-            &::before {
-                transform: translate(-70%, -50%) scale(1);
-                opacity: 1;
-            }
-            .player_controls {
-                .btn.prev {
-                    pointer-events: none;
-                    opacity: 0;
-                }
-            }
-        }
-    }
-    &.is_nexted {
-        .player_overwrap {
-            &::after {
-                transform: translate(70%, -50%) scale(1);
-                opacity: 1;
-            }
-            .player_controls {
-                .btn.next {
-                    pointer-events: none;
-                    opacity: 0;
-                }
-            }
+    &.is_visible {
+        .player_db_controls {
+            pointer-events: none;
         }
     }
 }
 
-// Fullscreen
-.cube_player.is_fullscreen {
+// 전체화면모드 이거나 가로모드인 경우
+@mixin PlayerFullscreen {
     position: fixed;
     left:0;
     top:0;
     width:100%;
     height:100%;
+    .player_overwrap {
+        .player_controls {
+            .btn.start::before {
+                width:4rem;
+                height:4rem;
+                background-image: url('../img/icons_40_ic_play.svg');
+            }
+            .btn.pause::before {
+                width:4rem;
+                height:4rem;
+                background-image: url('../img/icons_40_ic_stop.svg');
+            }
+        }
+        .play_utils {
+            bottom:4rem;
+            .option_area .btn.ico {
+                margin-left:2.4rem;
+            }
+        }
+    }
+    .player_timeline {
+        visibility: hidden;
+        opacity: 0;
+        left:$GapSideBase;
+        right:$GapSideBase;
+        bottom:2rem;
+        width:auto;
+        transition: all ease;
+    }
+    &.is_visible {
+        .player_timeline {
+            visibility: visible;
+        }
+    }
+    &.is_active {
+        .player_timeline {
+            opacity: 1;
+        }
+    }
+    &.is_backward {
+        .btn.dubble_backward {
+            transform: translate(-70%, -50%) scale(1);
+            opacity: 1;
+        }
+        .player_overwrap {
+            .player_controls {
+                .btn.backward {
+                    pointer-events: none;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &.is_forward {
+        .btn.dubble_forward {
+            transform: translate(70%, -50%) scale(1);
+            opacity: 1;
+        }
+        .player_overwrap {
+            .player_controls {
+                .btn.forward {
+                    pointer-events: none;
+                    opacity: 0;
+                }
+            }
+        }
+    }
     &.is_timeline {
+        .player_controls {
+            opacity: 0;
+        }
         .player_timeline {
             .timeline_thumb {
                 display:block;
             }
         }
     }
-    .player_overwrap {
-        .play_utils {
-            bottom:3.2rem;
-        }
-    }
-    .player_timeline {
-        left:$GapSideBase;
-        right:$GapSideBase;
-        bottom:2rem;
-        width:auto;
+}
+.cube_player.is_fullscreen {
+    @include PlayerFullscreen;
+}
+@media all and (orientation: landscape) {
+    .cube_player {
+        @include PlayerFullscreen;
     }
 }
