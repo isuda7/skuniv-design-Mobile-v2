@@ -557,7 +557,7 @@
         }
     }
 }
-//비디오 퀴즈
+//플레이어 퀴즈
 .videoquiz_page {
     > .content_body {
         margin-top:2rem;
@@ -593,10 +593,8 @@
             align-items: center;
             margin-top:-1rem;
             > .atare_tit {
-                margin-right:1.2rem;
                 @include Ellipsis2;
             }
-            
         }
         .other_group {
             .review_other {
@@ -609,12 +607,17 @@
         }
     }
 }
-//비디오 퀴즈 공통 버튼
+//플레이어 퀴즈 공통 버튼
 .videoquiz_page {
     .btn_view {
-        width:4.8rem;
-        height:4.8rem;
-        background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
-        border-radius:0.4rem;
+        margin-left:1.2rem;
+        padding:inherit;
+        &::before {
+            content:"";
+            width:4.8rem;
+            height:4.8rem;
+            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
+            border-radius:0.4rem;
+        }
     }
 }
