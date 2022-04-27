@@ -250,6 +250,9 @@
             width:2.4rem;
             height:2.4rem;
         }
+        &.close::before {
+            background-image:url('../img/icons_24_ic_close_black.svg');
+        }
         &.back {
             justify-content: flex-start;
             &::before {
@@ -312,6 +315,9 @@
 .theme_dark {
     .appbar {
         .btn.ico {
+            &.close::before {
+                background-image:url('../img/icons_24_ic_close_white.svg');
+            }
             &.back::before {
                 background-image:url('../img/icons_24_ic_back_white.svg');
             }
