@@ -559,8 +559,28 @@
 }
 //플레이어 퀴즈
 .videoquiz_page {
+    .btn_view {
+        margin-left:1.2rem;
+        padding:inherit;
+        &::before {
+            content:"";
+            width:4.8rem;
+            height:4.8rem;
+            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
+            border-radius:0.4rem;
+        }
+    }
     > .content_body {
         margin-top:2rem;
+        .radio_group, .check_group {
+            .quiz_img {
+                display: flex;
+                align-items: center;
+                & + .quiz_img {
+                    margin-top:0.8rem;
+                }
+            }
+        }
         .textarea_group {
             textarea.basic {
                 height:12.8rem;
@@ -604,20 +624,6 @@
                     color:#a4a6aa;
                 }
             }
-        }
-    }
-}
-//플레이어 퀴즈 공통 버튼
-.videoquiz_page {
-    .btn_view {
-        margin-left:1.2rem;
-        padding:inherit;
-        &::before {
-            content:"";
-            width:4.8rem;
-            height:4.8rem;
-            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
-            border-radius:0.4rem;
         }
     }
 }
