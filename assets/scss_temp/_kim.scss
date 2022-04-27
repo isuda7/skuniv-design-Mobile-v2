@@ -557,12 +557,32 @@
 .videoquiz_page {
     > .content_body {
         margin-top:2rem;
-        textarea.basic {
-            height:12.8rem;
+        .textarea_group {
+            textarea.basic {
+                height:12.8rem;
+            }
+            p.bytes {
+                color:#A4A6AA;
+                text-align: right;
+            }
         }
-        p.bytes {
-            color:#A4A6AA;
-            text-align: right;
+        .wrong_group {
+            display: flex;
+            align-items:center;
+            > .img {
+                flex:none;
+                display:inline-block;
+                width:6rem;
+                height:6rem;
+                background-image: url('../img/icons_60_ic_result_fail.svg');
+                margin-bottom:2rem;
+            }
+            > .tit {
+                flex:none;
+            }
+            > .sub_txt {
+                flex:none;
+            }
         }
     }
 }
