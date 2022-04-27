@@ -372,7 +372,7 @@
     overflow: hidden;
     flex:0 1 auto;
     background-color:#151617;
-    .popup_head {
+     .popup_head {
         position: relative;
         z-index: 100;
         display:flex;
@@ -383,12 +383,12 @@
             align-items:center;
             width:100%;
             height:6.8rem;
-            .popup_tit {
+             .popup_tit {
                 font-size:1.8rem;
                 line-height:2.4rem;
                 font-weight:700;
             }
-            .btn.ico.close {
+            > .btn.ico.close {
                 width:3.2rem;
                 height:3.2rem;
                 padding:0;
@@ -406,7 +406,7 @@
             margin-left:auto;
         }
     }
-    .popup_body {
+     .popup_body {
         display:flex;
         flex:1 1 auto;
         width:100%;
@@ -467,7 +467,7 @@
                 width: 1.6rem;
                 height: 1.6rem;
                 margin-left: 2rem;
-                background-image: url(../img/icons_16_ic_chervron_right_grey_05.svg);
+                background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
             }
             > .item_title {
                 width: 100%;
@@ -526,7 +526,7 @@
         }
     }
 }
-//플레이어 퀴즈, 다음학습 화면
+//플레이어 퀴즈 start//, 다음학습 화면
 .cube_player_sec {
     position: relative;
     > .player_zindex {
@@ -551,5 +551,11 @@
                 padding:0.5rem 2rem;
             }
         }
+    }
+}
+//비디오 퀴즈
+.videoquiz_page {
+    > .content_body {
+        margin-top:2rem;
     }
 }

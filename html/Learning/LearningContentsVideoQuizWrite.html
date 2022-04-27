@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+					<h1><strong>Video QUIZ</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container videoquiz_page">
+            <input type="range" value="1" min="0" max="9" class="step_range sticky" />
+			<div class="content_body">
+                <div class="step_count">
+                    <em class="current">4</em>
+                    <b class="split">/</b>
+                    <span class="total">9</span>
+                </div>
+                <div class="atare_survey">
+                    <h2 class="atare_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다.</h2>
+                    <div class="textarea_group">
+                        <p class="textarea block">
+                            <label for="write_form" class="tit blind">학습노트 작성</label>
+                            <textarea id="write_form" placeholder="학습노트를 작성해 보세요." maxlength="1000" class="basic dark_form"></textarea>
+                        </p>
+                    </div>
+                </div>
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">다음</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
