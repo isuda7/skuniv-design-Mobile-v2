@@ -162,7 +162,7 @@
     margin-top: 1.6rem;
     @include FontBody14;
     color :#75777b;
-    .left{
+    & > .left{
         display: flex;
         align-items: center;
         flex:0 1 auto;
@@ -184,7 +184,7 @@
             flex:none;
         }
     }
-    .right {
+    & > .right {
         display: flex;
         align-items: center;
         flex:none;

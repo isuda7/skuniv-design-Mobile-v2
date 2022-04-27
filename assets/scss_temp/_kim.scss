@@ -321,10 +321,8 @@
         padding:0 2rem;
         border-top:1px solid #33353c;
         background-color: #000000;
-        .note_time {
+        .label {
             position: relative;
-            display: flex;
-            align-items: center;
             flex:none;
             margin-right:1.2rem;
             color:#f8f8fa;
@@ -334,7 +332,13 @@
                 margin-right:0.4rem;
                 width:1.6rem;
                 height:1.6rem;
+                
+            }
+            &.note_time::before{
                 background-image: url('../img/icons_16_ic_time_grey_05.svg');
+            }
+            &.note_title::before{
+                background-image: url('../img/icons_16_ic_note_grey_05.svg');
             }
         }
         .note_form {
