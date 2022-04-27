@@ -557,5 +557,12 @@
 .videoquiz_page {
     > .content_body {
         margin-top:2rem;
+        textarea.basic {
+            height:12.8rem;
+        }
+        p.bytes {
+            color:#A4A6AA;
+            text-align: right;
+        }
     }
 }
