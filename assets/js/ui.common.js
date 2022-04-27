@@ -82,6 +82,7 @@ var layoutHasClass = {
 		($('.container').find('.page_floating').length) && this.hasPage('has_floating'); // 하당고정 플로팅이 있을 때
 		($('.container').find('.page_expand').length) && this.hasPage('has_expand'); // 하당고정 더보기가 있을 때
 		($('.container').find('.comment_floating').length) && this.hasPage('has_comment'); // 하당고정 코멘트가 있을 때
+		($('.container').find('.note_floating').length) && this.hasPage('has_comment'); // 하당고정 코멘트가 있을 때
 
 		// 모달공통(풀팝업, 버틈시트)
 		($('.modal').find('.sticky').length) && this.hasModal('has_sticky'); // 스티키가 있을 때

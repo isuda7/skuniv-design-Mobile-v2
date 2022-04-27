@@ -70,9 +70,14 @@
 		opacity: 0;
 		pointer-events: none;
 	}
+	&.has_comment {
+		.btn.ico.top {
+			bottom:8rem;
+		}
+	}
 	&.has_floating {
 		.btn.ico.top {
-			bottom:9.6rem;
+			bottom:9.2rem;
 		}
 	}
 	&.has_expand {

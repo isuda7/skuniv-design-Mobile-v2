@@ -47,6 +47,13 @@ label .required {
     margin-left:0.2rem;
     color:$ColorPrimary;
 }
+textarea.basic + .bytes,
+input.basic + .bytes {
+    margin-top:0.4rem;
+    text-align: right;
+    color:#a4a6aa;
+}
+
 
 // Input
 input.basic {
@@ -69,6 +76,13 @@ input.basic {
         color:#e3e4e5;
         background-color: #f8f8fa;
         border:1px solid #f2f3f5;
+    }
+}
+.theme_dark {
+    input.basic {
+        color :#fff;
+        background-color: #000;
+        border:1px solid #25272b;
     }
 }
 
@@ -95,6 +109,13 @@ textarea.basic {
         color:#e3e4e5;
         background-color: #f8f8fa;
         border:1px solid #f2f3f5;
+    }
+}
+.theme_dark {
+    textarea.basic {
+        color :#fff;
+        background-color: #000;
+        border:1px solid #25272b;
     }
 }
 
