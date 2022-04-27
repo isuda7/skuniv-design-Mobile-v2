@@ -1,3 +1,36 @@
+///////////////////////////////////////////////////
+// Splash
+///////////////////////////////////////////////////
+.splash_wrapper {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    .splash_logo {
+        width:14.4rem;
+        height:4.4rem;
+    }
+    .splash_loading {
+        position:absolute;
+        bottom:4rem;
+        left:4rem;
+        right:4rem;
+        display:block;
+        width:auto;
+        height:0.3rem;
+        overflow: hidden;
+        border-radius: 0.2rem;
+        background-color: #f2f3f5;
+        &_active {
+            display: block;
+            width:0;
+            height:100%;
+            background-color: $ColorSecondary;
+        }
+    }
+}
 
 ///////////////////////////////////////////////////
 // Login Components
