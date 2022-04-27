@@ -482,15 +482,6 @@
         }
     }
     &.full{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 300;
-        width: 100vw;
-        height: 100vh;
-        display: block;
     }
 } 
 
@@ -562,7 +553,7 @@
     }
 }
 //Document 가로모드
-.has_full{
+.sub_wrapper.has_full{
     .header{
         .is_transition{
             background-color: rgba(0,0,0, 0.5);
@@ -571,8 +562,33 @@
     .page_floating .page_action{
         z-index: 40;
     }
+    .btn.top{display: none;}
     .sticky.out_sec{
         z-index: 40;
     }
+    .doc_viewer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 300;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    &.has_bottom_modal{
+        .doc_viewer, .appbar{
+            width : 60vw;
+        }
+    }
 }
-
+.full_height{
+    left: auto;
+    right : 0;
+    width : 40vw;
+        .modal_bottomsheet{
+            margin: 0;
+            max-height: none;
+        }
+}
