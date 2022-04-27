@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_sticky has_floating">
+	<div class="sub_wrapper has_floating">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
@@ -29,28 +29,17 @@
 
 		<!-- Container -->
 		<main role="main" class="container videoquiz_page">
-            <input type="range" value="1" min="0" max="9" class="step_range sticky" />
 			<div class="content_body">
-                <div class="step_count">
-                    <em class="current">4</em>
-                    <b class="split">/</b>
-                    <span class="total">9</span>
+                <div class="atare_survey flex_area centered">
+					<div class="wrong_group no_data">
+						<span class="img"><span class="blind">결과 오답</span></span>
+						<p class="tit"><strong>오답입니다.</strong></p>
+						<p class="sub_txt">다시 확인하고 제출하세요.</p>
+					</div>
                 </div>
-                <div class="atare_survey">
-                    <h2 class="atare_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다.</h2>
-                    <div class="textarea_group">
-                        <p class="textarea block">
-                            <label for="write_form" class="tit blind">비디오 퀴즈 답변 작성</label>
-                            <textarea id="write_form" placeholder="답변을 입력해주세요." maxlength="1000" class="basic"></textarea>
-							<p class="bytes"><span class="count_no">0</span>&nbsp;&#47;&nbsp;1000</p>
-                        </p>
-                    </div>
-                </div>
-
 				<div class="page_floating">
 					<div class="page_action">
-						<!-- 텍스트 입력창 활성화되면 다음 버튼 disabled 해제-->
-						<button type="button" class="btn basic primary" disabled>다음</button>
+						<button type="button" class="btn basic primary">퀴즈 재응시</button>
 					</div>
 				</div>
 			</div>

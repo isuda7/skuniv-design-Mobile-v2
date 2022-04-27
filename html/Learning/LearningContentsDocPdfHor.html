@@ -30,11 +30,12 @@
 		});
 	</script>
 </head>
-<body>
-<div class="sub_wrapper has_sticky theme_dark has_floating">
+<!-- 가로 모드 has_full -->
+<body class="is_dimmed">
+<div class="sub_wrapper has_sticky theme_dark has_full"> 
 	<!-- Header -->
     <header class="header">
-        <div class="appbar basic">
+        <div class="appbar basic is_transition">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
                 <h1><strong class="transition">[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
@@ -48,6 +49,36 @@
 
 	<!-- Container -->
     <main role="main" class="container learning_container document_page">
+        <div class="content_head">
+            <!-- documentviewer -->
+            <div class="doc_viewer full flex_area centered">
+                <div class="doc_area">
+                    <div class="doc_wrap" style="display: flex; align-items: center; justify-content: center; flex: 1 0 auto">
+                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
+                    </div>
+                    <div class="doc_pagination">
+                        <a href="javascript:void(0)" class="doc_act prev"><span class="blind">prev 이동</span></a>
+                        <div class="pages_num">
+                            <span>23</span>
+                            <span> / </span>
+                            <span>50</span>
+                        </div>
+                        <a href="javascript:void(0)" class="doc_act next"><span class="blind">next 이동</span></a>
+                    </div>
+                </div>
+                <div class="doc_info_area">
+                    <div class="doc_bar_wrap">
+                        <span class="doc_bar" style="width : 46%"></span>
+                    </div>
+                    <div class="doc_link_wrap">
+                        <div class="label_tit link"><span>PDF</span></div>
+                        <div class="doc_cnt"><span>1</span><span>/</span><span>2</span></div>
+                        <div class="doc_name"><a href="javascript:void(0)" class="ach ico">[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- // documentviewer -->
+        </div>
         <div class="content_body document_content">
             <!-- 과정제목 -->
             <div class="learning_subject">
@@ -232,7 +263,6 @@
                     </div>
                 </div>
                 <!-- // 강사 -->
-                
                 <!-- floating btn -->
                 <div class="page_floating">
                     <div class="page_action">
@@ -247,5 +277,31 @@
 
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
+<!-- Modal Bottomsheet -->
+<div class="modal_wrap is_active is_visible">
+    <div class="modal modal_bottomsheet modal_select theme_dark">
+        <div class="modal_header">
+            <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+        </div>
+        <div class="modal_content">
+            <ul class="select_list">
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" checked/>
+                        <label for="selectlist1"><span>[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</span></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                        <label for="selectlist2"><span>[보충학습자료] 꿀잼반도체2.pdf</span></label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="dimmer" aria-hidden="true"></div> -->
+</div>
+<!-- // Modal Bottomsheet -->
 </body>
 </html>

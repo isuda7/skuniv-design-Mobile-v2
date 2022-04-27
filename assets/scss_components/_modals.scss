@@ -83,9 +83,9 @@
     }
 
     &.theme_dark {
-        background-color: #000;
+        background-color: #151617;
         .sticky {
-            background-color: #000;
+            background-color: #151617;
         }
         .btn.ico {
             &.close::before {
@@ -496,7 +496,7 @@
                 align-items: center;
                 width:100%;
                 height:100%;
-                padding:0 2rem 0 0;
+                padding:0;
                 @include FontBody16;
                 vertical-align: top;
                 &::before {
@@ -516,6 +516,7 @@
             }
             input:checked + label {
                 color:$ColorPrimary;
+                font-weight: bold;
                 &::after {
                     display:block;
                 }

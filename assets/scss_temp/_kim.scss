@@ -321,10 +321,8 @@
         padding:0 2rem;
         border-top:1px solid #33353c;
         background-color: #000000;
-        .note_time {
+        .label {
             position: relative;
-            display: flex;
-            align-items: center;
             flex:none;
             margin-right:1.2rem;
             color:#f8f8fa;
@@ -334,7 +332,13 @@
                 margin-right:0.4rem;
                 width:1.6rem;
                 height:1.6rem;
+                
+            }
+            &.note_time::before{
                 background-image: url('../img/icons_16_ic_time_grey_05.svg');
+            }
+            &.note_title::before{
+                background-image: url('../img/icons_16_ic_note_grey_05.svg');
             }
         }
         .note_form {
@@ -557,5 +561,32 @@
 .videoquiz_page {
     > .content_body {
         margin-top:2rem;
+        .textarea_group {
+            textarea.basic {
+                height:12.8rem;
+            }
+            p.bytes {
+                color:#A4A6AA;
+                text-align: right;
+            }
+        }
+        .wrong_group, .correct_group, .finish_group {
+            > .img {
+                display:inline-block;
+                width:6rem;
+                height:6rem;
+                margin-bottom:2rem;
+            }
+        }
+        .wrong_group {
+            > .img {
+                background-image: url('../img/icons_60_ic_result_fail.svg');
+            }
+        }
+        .correct_group, .finish_group {
+            > .img {
+                background-image: url('../img/icons_60_ic_result_done.svg');
+            }
+        }
     }
 }
