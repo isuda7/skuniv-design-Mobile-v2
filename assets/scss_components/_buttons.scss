@@ -181,10 +181,11 @@
     border-radius:2rem;
     color:$ColorSecondary;
     font-weight:700;
+    background-color:#fff;
     &:focus,
     &:hover,
     &:active {
-        background-color:#F8F8FA;;
+        background-color:#F8F8FA;
     }
     &:disabled {
         opacity: 0.8;
