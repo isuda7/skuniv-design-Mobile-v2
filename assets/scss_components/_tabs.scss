@@ -15,13 +15,8 @@
 			text-align: center;
 		}
 	}
-	&.wide {
-		.tab_list {
-			.tab_item {
-				flex:1 1 auto;
-				width: 100%;
-			}
-		}
+	.tab_next {
+		display: none;
 	}
 	&.has_scroll {
 		.tab_list {
@@ -33,6 +28,7 @@
             }
 		}
 		.tab_next {
+			display: block;
 			position: absolute;
 			right:0;
 			top:0;
@@ -136,6 +132,14 @@
 		width: 100%;
 		height: 1px;
 		background-color: #e3e4e5;
+	}
+	&.wide {
+		.tab_list {
+			.tab_item {
+				flex:1 1 auto;
+				width: 100%;
+			}
+		}
 	}
 }
 .theme_dark {
