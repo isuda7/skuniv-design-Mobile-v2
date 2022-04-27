@@ -992,12 +992,15 @@
             @include FontBody14;
             padding:1.6rem;
             .post_txt {
-				margin-bottom:1.5rem;
                 position: relative;
+				margin-bottom:1.5rem;
                 .txt {
                     @include Ellipsis7;
                 }
 				.more {
+					position: absolute;
+					right:0;
+					bottom:0;
 					padding:0;
 				}
 				&.is_expanded {
