@@ -5,6 +5,9 @@
     background-color: #000;
     color:#fff;
     // overflow: hidden;
+    > img {
+        height:100%;
+    }
     // 기본노출
     .player_thumb {
         position: absolute;
