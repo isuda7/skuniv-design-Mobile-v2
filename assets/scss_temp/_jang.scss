@@ -481,7 +481,19 @@
             }
         }
     }
+    &.full{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 300;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
 } 
+
 .doc_pagination{
     .doc_act{
         width: 1.2rem;
@@ -549,3 +561,18 @@
         background-position: 100% 50%;
     }
 }
+//Document 가로모드
+.has_full{
+    .header{
+        .is_transition{
+            background-color: rgba(0,0,0, 0.5);
+        }
+    }
+    .page_floating .page_action{
+        z-index: 40;
+    }
+    .sticky.out_sec{
+        z-index: 40;
+    }
+}
+
