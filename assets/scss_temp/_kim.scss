@@ -570,22 +570,22 @@
                 text-align: right;
             }
         }
-        .wrong_group {
-            display: flex;
-            align-items:center;
+        .wrong_group, .correct_group, .finish_group {
             > .img {
-                flex:none;
                 display:inline-block;
                 width:6rem;
                 height:6rem;
-                background-image: url('../img/icons_60_ic_result_fail.svg');
                 margin-bottom:2rem;
             }
-            > .tit {
-                flex:none;
+        }
+        .wrong_group {
+            > .img {
+                background-image: url('../img/icons_60_ic_result_fail.svg');
             }
-            > .sub_txt {
-                flex:none;
+        }
+        .correct_group, .finish_group {
+            > .img {
+                background-image: url('../img/icons_60_ic_result_done.svg');
             }
         }
     }
