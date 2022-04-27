@@ -22,7 +22,7 @@
 }
 
 .theme_dark .cube_references .references_util {
-    .ico.file_down{background-image: url('../../assets/img/icons_20_ic_download_white.svg');}
+    .ico.file_down{background-image: url('../img/icons_20_ic_download_white.svg');}
     .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
 }
 /* // theme_dark */
@@ -74,7 +74,7 @@
             position: relative;
             margin : 0;
             padding-left: 2.8rem;
-            background-image : url("../../assets/img/icons_16_ic_view_grey_07.svg");
+            background-image : url("../img/icons_16_ic_view_grey_07.svg");
             background-repeat: no-repeat;
             background-position: 0.8rem 50%;
 
@@ -108,7 +108,7 @@
         .label.download{
             display: inline-block;
             padding : 0 .4rem 0 2rem;
-            background-image: url('../../assets/img/icons_16_ic_file_white.svg');
+            background-image: url('../img/icons_16_ic_file_white.svg');
             background-repeat: no-repeat;
             background-position: 0 50%;
         }
@@ -206,17 +206,17 @@
 .label{
     &.cnt_views{
         &::before{
-            background-image: url("../../assets/img/icons_16_ic_view_grey_04.svg");
+            background-image: url("../img/icons_16_ic_view_grey_04.svg");
         }
     }
     &.cnt_cmmt{
         &::before{
-            background-image: url("../../assets/img/icons_16_ic_comment_grey_04.svg");
+            background-image: url("../img/icons_16_ic_comment_grey_04.svg");
         }
     }
     &.cnt_like{
         &::before{
-            background-image: url("../../assets/img/icons_16_ic_like_grey_04.svg");
+            background-image: url("../img/icons_16_ic_like_grey_04.svg");
         }
     }
 }
@@ -303,7 +303,7 @@
                 position: absolute;
                 right : $GapSideBase;
                 transform : rotate(180deg);
-                background-image:url("../../assets/img/icons_16_ic_chervron_up_grey_05.svg");
+                background-image:url("../img/icons_16_ic_chervron_up_grey_05.svg");
                 background-repeat: no-repeat;
             }
             &.is_active::after{
@@ -324,7 +324,7 @@
 .ico.clear::before{
     width :2rem;
     height : 2rem;
-    background-image: url("../../assets/img/icons_20_ic_clear_grey_04.svg");
+    background-image: url("../img/icons_20_ic_clear_grey_04.svg");
 }
 .edit_tool_bar {
     padding: 1.2rem 2rem;
@@ -344,19 +344,19 @@
             height : 2rem;
         }
         &.e_font::before{
-            background-image: url("../../assets/img/icons_20_ic_text_size_off_on.svg");
+            background-image: url("../img/icons_20_ic_text_size_off_on.svg");
         }
         &.e_img::before{
-            background-image: url("../../assets/img/icons_20_ic_image_off_on.svg");
+            background-image: url("../img/icons_20_ic_image_off_on.svg");
         }
         &.e_link::before{
-            background-image: url("../../assets/img/icons_20_ic_clip_off_on.svg");
+            background-image: url("../img/icons_20_ic_clip_off_on.svg");
         }
         &.e_align::before{
-            background-image: url("../../assets/img/icons_20_ic_text_align_off_on.svg");
+            background-image: url("../img/icons_20_ic_text_align_off_on.svg");
         }
         &.e_attch::before{
-            background-image: url("../../assets/img/icons_20_ic_file_off_on.svg");
+            background-image: url("../img/icons_20_ic_file_off_on.svg");
         }
         &.is_active::before{
             background-position-y: 100%;
@@ -395,25 +395,25 @@
             height : 2rem;
         }
         &.e_bolder::before{
-            background-image: url('../../assets/img/icons_20_ic_text_bolder_off_on.svg');
+            background-image: url('../img/icons_20_ic_text_bolder_off_on.svg');
         }
         &.e_italic::before{
-            background-image:url('../../assets/img/icons_20_ic_text_italic_off_on.svg');
+            background-image:url('../img/icons_20_ic_text_italic_off_on.svg');
         }
         &.e_underline::before{
-            background-image:url('../../assets/img/icons_20_ic_text_underline_off_on.svg')
+            background-image:url('../img/icons_20_ic_text_underline_off_on.svg')
         }
         &.e_mid_line::before{
-            background-image:url('../../assets/img/icons_20_ic_text_strikethrough_off_on.svg')
+            background-image:url('../img/icons_20_ic_text_strikethrough_off_on.svg')
         }
         &.e_fontAlign::before{
-            background-image:url('../../assets/img/icons_20_ic_text_align_off_on.svg')
+            background-image:url('../img/icons_20_ic_text_align_off_on.svg')
         }
         &.e_addDot::before{
-            background-image:url('../../assets/img/icons_20_ic_text_dot_off_on.svg')
+            background-image:url('../img/icons_20_ic_text_dot_off_on.svg')
         }
         &.e_addNum::before{
-            background-image:url('../../assets/img/icons_20_ic_text_number_off_on.svg')
+            background-image:url('../img/icons_20_ic_text_number_off_on.svg')
         }
         &.is_active::before{
             background-position-y: 100%;
@@ -499,7 +499,7 @@
         width: 1.2rem;
         height: 1.2rem;
         margin : 0 .6rem;
-        background-image: url("../../assets/img/icons_12_ic_chervron_right_white.svg");
+        background-image: url("../img/icons_12_ic_chervron_right_white.svg");
         background-repeat: no-repeat;
         &.prev{
             transform: scaleX(-1);
@@ -526,7 +526,7 @@
             display: inline-block;
             width: 1.2rem;
             height: 1.2rem;
-            background-image: url("../../assets/img/icons_12_ic_file_grey_05.svg");
+            background-image: url("../img/icons_12_ic_file_grey_05.svg");
         }
     }
     .doc_cnt{
@@ -556,7 +556,7 @@
         color: $ColorSubTxt;
         @include FontBody12;
         @include Ellipsis1;
-        background-image : url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
+        background-image : url("../img/icons_12_ic_chervron_right_grey_06.svg");
         background-repeat: no-repeat;
         background-position: 100% 50%;
     }
