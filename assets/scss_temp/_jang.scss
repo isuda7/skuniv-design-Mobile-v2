@@ -254,6 +254,8 @@
         margin-right: -$GapSideBase;
         padding: 1rem 2rem;
         .input {
+            display: inline-block;
+            width : 100%;
             @include FontBody16;
         }
     }
@@ -295,6 +297,7 @@
             padding: 2rem $GapSideBase;
             display: block;
             @include FontTitle14;
+            border-bottom : .1rem solid #f2f3f5;
             .cnt{
                 margin-left : .4rem;
                 display: inline-block;
