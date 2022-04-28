@@ -64,50 +64,47 @@
                 <div class="tab style2">
                     <div class="tab_list">
                         <button type="button" class="tab_item">개요</button>
-                        <button type="button" class="tab_item is_active">스크립트</button>
+                        <button type="button" class="tab_item">스크립트</button>
                         <button type="button" class="tab_item">코멘트</button>
-                        <button type="button" class="tab_item">학습노트</button>
+                        <button type="button" class="tab_item is_active">학습노트</button>
                     </div>
                 </div>
             </div>
             <!-- //학습과정 탭 -->
-            <div class="tab_panel audioscript_page">
-                <!-- 다운로드 버튼 영역 -->
-                <div class="download">
-                    <div class="left">
-                        <button type="button" class="btn btn_down">다운로드</button>
-                    </div>
-                    <div class="right">
-                        <button type="button" class="btn text arw_expand">KR</button>
+            <!-- 보드 카운트 -->
+            <div class="tab_panel note_page">
+                <div class="board_toolbar">
+                    <div class="board_count">
+                        <span class="total">총</span>
+                        <em class="count">0</em>
+                        <span class="unit">개</span>
                     </div>
                 </div>
-                <!-- // 다운로드 버튼 영역 -->
-                <!-- 스크립트 텍스트 -->
-                <div class="script_txt">
-                    <p class="txt style">
-                        누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지, 한번쯤 고민해 본 적 있으신가요?
-                    </p>
-                    <p class="txt">
-                        누구나 일을 잘하고 싶은 생각은 가지고 있지만, 산업을 바라보는 Insight를 얻을 수 있도록 구성하였습니다.
-                    </p>
-                    <p class="txt style">
-                        누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지, 한번쯤 고민해 본 적 있으신가요?
-                    </p>
-                    <p class="txt">
-                        누구나 일을 잘하고 싶은 생각은 가지고 있지만, 산업을 바라보는 Insight를 얻을 수 있도록 구성하였습니다.
-                    </p>
-                    <p class="txt style">
-                        누구나 일을 잘하고 싶은 생각은 가지고 있지만, 산업을 바라보는 Insight를 얻을 수 있도록 구성하였습니다.
-                    </p>
+                <!-- Empty -->
+                <div class="flex_area centered">
+                    <div class="no_data note_empty">
+                        <p class="tit"><strong>작성된 학습노트가 없습니다.</strong></p>
+                        <p class="sub_txt">첫 학습노트를 남겨보세요.</p>
+                    </div>
                 </div>
-                <!-- // 스크립트 텍스트 -->
+                <!-- //Empty -->
+                <!-- 학습노트 -->
+                <div class="note_floating">
+                    <div class="note_body">
+                        <p class="note_time">00 : 00 : 03</p>
+                        <p class="note_form">
+                            <label for="noteForm" class="tit blind">학습노트 작성</label>
+                            <textarea id="noteForm" cols="10" rows="1" class="basic" placeholder="학습노트를 작성해 보세요."></textarea>
+                        </p>
+                    </div>
+                </div>
+                <!-- // 학습노트 -->
             </div>
-            <!-- // 학습과정 탭 -->
+            <!-- //보드 카운트 -->
         </div>
     </main>
     <!-- // Container -->
 
-	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 </body>
 </html>
