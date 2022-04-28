@@ -121,6 +121,18 @@
 
     .btn.like {
         color : $ColorSubTxt;
+        
+        &.ico {
+            &::before {
+                width : 2.4rem;
+                height : 2.4rem;
+                margin-right : .5rem;
+                background-image : url("../img/icons_24_ic_like_white_off_on.svg");
+            }
+            &.is_active::before{
+                background-position: 0 100%;
+            }
+        }
     }
 }
 .board_comments_wrap {
