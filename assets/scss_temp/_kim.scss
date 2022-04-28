@@ -458,6 +458,7 @@
         }
     }
 }
+
 //과정목록 단일
 .modal_videolist {
     .course_item {
@@ -487,6 +488,7 @@
         }
     }
 }
+
 //비디오 스크립트, 오디오 스크립트
 .videoscript_page, .audioscript_page {
     > .download {
@@ -530,7 +532,8 @@
         }
     }
 }
-//플레이어 퀴즈 start//, 다음학습 화면
+
+//플레이어 퀴즈start, 다음학습 화면
 .cube_player_sec {
     position: relative;
     > .player_zindex {
@@ -557,6 +560,7 @@
         }
     }
 }
+
 //플레이어 퀴즈
 .videoquiz_page {
     .btn_view {
@@ -627,11 +631,87 @@
         }
     }
 }
+
 //오디오 페이지 플레이어 영상 영역 크기 조정
 .audio_player_sec {
     .cube_player {
         .player_thumb {
             padding:3.2rem 5.8rem;
+        }
+    }
+}
+
+//강사 공통
+.teacher_sec {
+    border-bottom: 0;
+    > .teacher_inner {
+        padding:inherit;
+        border-bottom: 0;
+        &::after {
+            background-image: none;
+        }
+        .teacher_body {
+            .title {
+            @include FontTitle18;
+            }   
+        }
+    }
+}
+//강사텍스트 공동
+.txt_hyphen1 {
+    position: relative;
+	padding-left:0.7rem;
+	@include FontTitle14;
+    line-height:2.2rem;
+    font-weight: 400;
+	color:#1C1D1F;
+	&::before {
+		content:'';
+		position: absolute;
+		left:0;
+		top:0.9rem;
+		width:0.3rem;
+		height:0.1rem;
+		background-color: #1C1D1F;
+    }
+}
+.txt_hyphen2 {
+    position: relative;
+	padding-left:1.4rem;
+	@include FontTitle14;
+    line-height:2.2rem;
+    font-weight: 400;
+	color:#75777b;
+	&::before {
+		content:'';
+		position: absolute;
+		left:0.7rem;
+		top:0.9rem;
+		width:0.3rem;
+		height:0.1rem;
+		background-color: #75777b;
+        font-weight: 400;
+    }
+}
+//강사 페이지
+.teacher_page {
+    > .info {
+        margin-top:2.4rem;
+        > .script {
+            & + .script {
+                margin-top:5.2rem;
+            }
+            .sec_head {
+                margin-bottom:1.6rem;
+            }
+            .sec_txt {
+                & + .sec_txt {
+                    margin-top:1.6rem;
+                }
+                & > h3 {
+                    margin-bottom:0.4rem;
+                }
+            }
         }
     }
 }
