@@ -324,6 +324,9 @@
             &+.cube_references {margin-left: .8rem;}
             .references_util{
                 align-items: flex-start;
+                .clear.btn {
+                    margin : -1rem -1rem 0 0;
+                }
             }
         }
     }
