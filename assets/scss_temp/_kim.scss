@@ -487,9 +487,9 @@
         }
     }
 }
-//비디오 스크립트
-.videoscript_page {
-    .video_download {
+//비디오 스크립트, 오디오 스크립트
+.videoscript_page, .audioscript_page {
+    > .download {
         display: flex;
         align-items: center;
         padding:1rem 0;
@@ -516,7 +516,7 @@
             margin-left: auto;
         }
     }
-    .videoscript_txt {
+    > .script_txt {
         margin-top:0.6rem;
         > .txt + .txt {
             margin-top:3rem;
