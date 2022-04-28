@@ -14,60 +14,38 @@
     <title>mySUNI Design Mobile V2</title>
 	<script>
 		$(function(){
-            var body = $('body');
-            var $subWrapper = $('.sub_wrapper');
+            // Appbar Transition
             var $appbar = $('.appbar');
             var $appbarTitle = $('.appbar_title');
-
 			$(window).scroll(function(){
                 var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
                 var scrollTop = $(window).scrollTop();
 				// appbar_title이 appbar밑으로 절반이상 사라질때
-				if (scrollTop > appbarTitleShow) {
-					$appbar.addClass('is_transition');
-				} else {
-					$appbar.removeClass('is_transition');
-				}
+				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
 			});
 
-            $(window).on('resize', function(){
-                var w_height = $(window).innerHeight();
-                var w_width = $(window).innerWidth();
-                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-                var scrollTop = $(window).scrollTop();
-
-                if(w_width > w_height) {
-                    body.addClass('is_dimmed');
-                    $subWrapper.addClass('has_full');
-                    $appbar.addClass('is_transition').addClass('blind');
-                }else{
-                    body.removeClass('is_dimmed');
-                    $subWrapper.removeClass('has_full');
-                    $appbar.removeClass('blind');
-                    if(scrollTop <= appbarTitleShow) {
-                        $appbar.removeClass('is_transition');
-                    }
-                }
-            });
-
+            // LandspaceMode
             $(window).on('touchstart', function(e){
-                if($('.sub_wrapper').hasClass('has_full')){
-                    if($appbar.hasClass('blind')){
-                        $appbar.removeClass('blind').addClass('is_transition');
-                    }else{
-                        $appbar.addClass('blind').removeClass('is_transition');
-                    }
-                } 
+                var orientation = window.orientation;
+                if (orientation != undefined){
+                    (orientation !== 0) && $('.appbar').toggleClass('is_hide');
+                }
+            })
+            $(window).on('resize', function(e){
+                var orientation = window.orientation;
+                if(orientation != undefined){
+                    (orientation === 0) ? $('.appbar').removeClass('is_hide') : $('.appbar').addClass('is_hide');
+                }
             })
 		});
 	</script>
 </head>
 <!-- 가로 모드 -->
-<body class="is_dimmed">
-<div class="sub_wrapper has_sticky theme_dark has_full"> 
+<body>
+<div class="sub_wrapper theme_dark has_full_landscape has_modal_landscape">
 	<!-- Header -->
     <header class="header">
-        <div class="appbar basic is_transition">
+        <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
                 <h1><strong class="transition">[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
@@ -83,7 +61,7 @@
     <main role="main" class="container learning_container document_page">
         <div class="content_head">
             <!-- documentviewer -->
-            <div class="doc_viewer">
+            <div class="doc_viewer full_landscape">
                 <div class="doc_area">
                     <div class="doc_wrap flex_area centered">
                         <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
@@ -310,7 +288,7 @@
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
 <!-- Modal Bottomsheet -->
-<div class="modal_wrap">
+<div class="modal_wrap modal_landscape">
     <div class="modal modal_bottomsheet modal_select theme_dark">
         <div class="modal_header">
             <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>

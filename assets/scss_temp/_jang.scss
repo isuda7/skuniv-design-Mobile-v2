@@ -121,7 +121,7 @@
 
     .btn.like {
         color : $ColorSubTxt;
-        
+
         &.ico {
             &::before {
                 width : 2.4rem;
@@ -556,43 +556,99 @@
         background : url("../img/icons_12_ic_chervron_right_grey_06.svg") no-repeat 100% 50%;
     }
 }
-//Document 가로모드
-.sub_wrapper.has_full{
-    .header{
-        .is_transition{
+
+// 가로모드 full_landscape 공통 (확인후 레이아웃 공통으로 소스 이전)
+// 페이지: has_full_landscape, full_landscape
+// 버틈시트: has_modal_landscape, modal_landscape
+@media all and (orientation: landscape) {
+    .sub_wrapper.theme_dark.has_full_landscape {
+        height:100vh;
+        overflow: hidden;
+        .appbar{
             background-color: rgba(0,0,0, 0.5);
+            &.is_hide {
+                display:none;
+            }
+            .transition {
+                opacity: 1;
+            }
+        }
+        .page_floating .page_action{
+            z-index: 40;
+        }
+        .btn.top {
+            display: none;
+        }
+        .sticky.out_sec{
+            z-index: 40;
+        }
+        .full_landscape {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 300;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        &.has_modal_landscape {
+            .full_landscape,
+            .appbar {
+                width: 60%;
+            }
         }
     }
-    .page_floating .page_action{
-        z-index: 40;
-    }
-    .btn.top{display: none;}
-    .sticky.out_sec{
-        z-index: 40;
-    }
-    .doc_viewer{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 300;
-        width: 100vw;
-        height: 100vh;
-        display: block;
-    }
-    &.has_bottom_modal{
-        .doc_viewer, .appbar{
-            width : 60vw;
-        }
-    }
-}
-.full_height{
-    left: auto;
-    right : 0;
-    width : 40vw;
+    .modal_landscape{
+        left: auto;
+        right : 0;
+        width : 40vw;
         .modal_bottomsheet{
             margin: 0;
             max-height: none;
         }
+    }
 }
+// .sub_wrapper.landscape_full {
+
+// }
+// .sub_wrapper.has_full{
+//     .header{
+//         .is_transition{
+//             background-color: rgba(0,0,0, 0.5);
+//         }
+//     }
+//     .page_floating .page_action{
+//         z-index: 40;
+//     }
+//     .btn.top{display: none;}
+//     .sticky.out_sec{
+//         z-index: 40;
+//     }
+//     .doc_viewer{
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         z-index: 300;
+//         width: 100vw;
+//         height: 100vh;
+//         display: block;
+//     }
+//     &.has_bottom_modal{
+//         .doc_viewer, .appbar{
+//             width : 60vw;
+//         }
+//     }
+// }
+// .full_height{
+//     left: auto;
+//     right : 0;
+//     width : 40vw;
+//         .modal_bottomsheet{
+//             margin: 0;
+//             max-height: none;
+//         }
+// }

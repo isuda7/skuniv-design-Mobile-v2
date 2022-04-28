@@ -14,24 +14,35 @@
     <title>mySUNI Design Mobile V2</title>
 	<script>
 		$(function(){
+            // Appbar Transition
+            var $subWrapper = $('.sub_wrapper');
+            var $appbar = $('.appbar');
+            var $appbarTitle = $('.appbar_title');
 			$(window).scroll(function(){
-				var $appbar = $('.appbar');
-				var $appbarTitle = $('.appbar_title');
-				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-				var scrollTop = $(window).scrollTop();
-
+                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+                var scrollTop = $(window).scrollTop();
 				// appbar_title이 appbar밑으로 절반이상 사라질때
-				if (scrollTop > appbarTitleShow) {
-					$appbar.addClass('is_transition');
-				} else {
-					$appbar.removeClass('is_transition');
-				}
-			})
+				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
+			});
+
+            // LandspaceMode
+            $subWrapper.on('touchstart', function(e){
+                var orientation = window.orientation;
+                if (orientation != undefined){
+                    (orientation == 90) && $('.appbar').toggleClass('is_hide');
+                }
+            })
+            $(window).on('resize', function(e){
+                var orientation = window.orientation;
+                if(orientation != undefined){
+                    (orientation == 0) ? $('.appbar').removeClass('is_hide') : $('.appbar').addClass('is_hide');
+                }
+            })
 		});
 	</script>
 </head>
 <body>
-<div class="sub_wrapper has_sticky theme_dark">
+<div class="sub_wrapper theme_dark has_full_landscape">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -50,7 +61,7 @@
     <main role="main" class="container learning_container document_page">
         <div class="content_head">
             <!-- documentviewer -->
-            <div class="doc_viewer">
+            <div class="doc_viewer full_landscape">
                 <div class="doc_area">
                     <div class="doc_wrap">
                         <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img"/>
