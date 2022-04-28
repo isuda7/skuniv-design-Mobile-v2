@@ -879,52 +879,63 @@
         font-weight: 700;
         margin-bottom:0.5rem;
     }
-    .link_url {
-        border-radius: $RadiusLarge;
-        @include FontBody13;
-        padding:2rem;
-		color:#33353C;
-        .link_body {
-            display: flex;
-            .link_thumb {
-                width:5.2rem;
-                height:5.2rem;
-                background-color:#eee;
-                margin-right:1.2rem;
-                flex: none;
-            }
-            .link_title {
-                flex:0 1 auto;
-                overflow: hidden;
-                .title {
-                    @include Ellipsis2;
-                }
-                .url {
-                    @include Ellipsis1;
-                    @include FontBody10;
-					color:#A4A6AA;
-                }
-            }
-        }
-    }
+}
+.link_url {
+	border-radius: $RadiusLarge;
+	@include FontBody13;
+	padding:2rem;
+	color:#33353C;
+	border : 0.1rem solid #E3E4E5;
+	.link_body {
+		display: flex;
+		.link_thumb {
+			width:5.2rem;
+			height:5.2rem;
+			background-color:#eee;
+			margin-right:1.2rem;
+			flex: none;
+		}
+		.link_title {
+			flex:0 1 auto;
+			overflow: hidden;
+			.title {
+				@include Ellipsis2;
+			}
+			.url {
+				@include Ellipsis1;
+				@include FontBody10;
+				color:#A4A6AA;
+			}
+		}
+	}
 }
 .theme_dark {
     .link_wrap {
         .sub_title {
             color:#75777B;
         }
-        .link_url {
-            background-color: #151617;
-            color:#F8F8FA;
-			.link_body {
-				.link_title {
-					.url {
-						color: #75777B;
-					}
+    }
+	.link_url {
+		background-color: #151617;
+		border-color : #151617;
+		color:#F8F8FA;
+		.link_body {
+			.link_title {
+				.title{
+					color : #f8f8fa;
+				}
+				.url {
+					color: #75777B;
 				}
 			}
-        }
-    }
+		}
+	}
+	.overview_page{
+		.link_url {
+			background-color: #1c1d1f;
+			border-color : #1c1d1f;
+		}	
+	}
 }
 
 //코멘트
@@ -1254,6 +1265,9 @@
 				padding-top: 0.4rem;
 				@include FontBody14;
 				color : #cbcdcf;
+			}
+			& + .learning_codition{
+				padding-top : 1.6rem;
 			}
 		}
 		//첨부파일
