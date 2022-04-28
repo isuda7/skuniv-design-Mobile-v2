@@ -1,13 +1,7 @@
-// Styles
-.divider.style1 {
+.divider {
+    display: block;
     height:1.2rem;
-    margin:0 calc(-1 * $GapSideBase);
-    background:#F8F8FA;
-    border:0;
-}
-.divider.style2 {
-    height:1.2rem;
-    margin:0 calc(-1 * $GapSideBase);
+    margin:0 ($GapSideBase * -1);
     background:#f2f3f5;
     border:0;
 }
