@@ -1,0 +1,23 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="dh40no97ac" d="M0 0h80v80H0z"/>
+        <path d="M40 80c22.091 0 40-17.909 40-40S62.091 0 40 0 0 17.909 0 40s17.909 40 40 40z" id="jfvlk65mha"/>
+        <path d="M40 72c17.673 0 32-14.327 32-32C72 22.327 57.673 8 40 8 22.327 8 8 22.327 8 40c0 17.673 14.327 32 32 32z" id="2j7fhyyjrb"/>
+        <path id="63xo0cxccg" d="M0 0h24v24H0z"/>
+        <mask id="bjadsvgioe" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="80" height="80" fill="#fff">
+            <use xlink:href="#jfvlk65mha"/>
+        </mask>
+        <mask id="wdh0vxmohf" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="64" height="64" fill="#fff">
+            <use xlink:href="#2j7fhyyjrb"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="v2vcsr1jkd" fill="#fff">
+            <use xlink:href="#dh40no97ac"/>
+        </mask>
+        <g mask="url(#v2vcsr1jkd)">
+            <use stroke="#EE5A45" mask="url(#bjadsvgioe)" stroke-width="10" fill="#FFF" stroke-dasharray="0,0" xlink:href="#jfvlk65mha"/>
+            <use stroke="#EE5A45" mask="url(#wdh0vxmohf)" stroke-width="2" fill="#FFF" stroke-dasharray="0,0" xlink:href="#2j7fhyyjrb"/>
+        </g>
+    </g>
+</svg>
