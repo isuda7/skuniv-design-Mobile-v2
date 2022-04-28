@@ -12,7 +12,7 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
+	<script>
 		$(function(){
 			$(window).scroll(function(){
 				var $appbar = $('.appbar');
@@ -28,16 +28,16 @@
 				}
 			})
 		});
-    </script>
+	</script>
 </head>
 <body>
-<div class="sub_wrapper theme_dark has_sticky has_floating">
+<div class="sub_wrapper has_sticky has_floating theme_dark">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="transition">[Task] 현재 수행 또는 계획 중인 업무를 린보드의 5개 항목에 맞춰 가설을 정리하고 스토리텔링으로 작성해 보세요.</strong></h1>
+                <h1><strong class="transition">[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
             </div>
             <div class="appbar_right">
                 <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
@@ -47,40 +47,38 @@
     <!-- // Header -->
 
 	<!-- Container -->
-    <main role="main" class="container learning_container task_page">
-        <div class="content_body task_content">
+    <main role="main" class="container learning_container cohort_page">
+        <div class="content_body">
             <!-- 과정제목 -->
             <div class="learning_subject">
                 <div class="title_area">
-                    <h1 class="title appbar_title"><strong>[Task] 현재 수행 또는 계획 중인 업무를 린보드의 5개 항목에 맞춰 가설을 정리하고 스토리텔링으로 작성해 보세요.</strong></h1>
+                    <span class="label style1 primary">학습중</span>
+                    <h1 class="title appbar_title"><strong>[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
                 </div>
                 <div class="info_area">
-                    <span class="label task">Task</span>
+                    <span class="label cohort">Cohort</span>
                     <span class="label time">30m</span>
                 </div>
                 <div class="learning_attachment">
-                    <!-- 코멘트 count -->
-                    <div class="my_commentinfo">
-                        <div class="left">
-                            <span class="label style1">미이수</span>
-                            <!-- <span class="label style1 primary">이수</span> -->
-                            <p class="txt">나의 코멘트</p>
+                    <!-- link -->
+                    <div class="link_wrap">
+                        <h2 class="sub_title">URL</h2>
+                        <div class="link_url">
+                            <a class="anchor" href="javascript:void(0)">
+                                <div class="link_body">
+                                    <div class="link_thumb">
+                                        <span class="thumb" style="background-image: url('');"></span>
+                                    </div>
+                                    <div class="link_title">
+                                        <p class="title">인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까? 인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까?</p>
+                                        <p class="url">https://mysuni.sk.com/suni_main/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="right">
-                            <span class="count_my">1개</span>
-                            <span class="count_section">/</span>
-                            <span class="count_all">10개</span>
-                        </div>
+                        <p class="l_guide">* 학습 특성상 PC학습을 권장합니다.</p>
                     </div>
-                    <!-- //코멘트 count -->
-                    <!-- 이수조건 -->
-                    <div class="learning_codition">
-                        <h2 class="heading2">이수조건</h2>
-                        <div class="c_txt">
-                            <p>본 과정은 담당자가 이수 조건 충족여부를 확인한 후 이수처리를 해드립니다. 아래 5개 항목에 대한 내용 작성여부 확인 1. 대상고객, 2. 고객문제, 3. 문제대안, 4.솔루션, 5. 고유가치제안 (솔루션을 통해 고객이 최종적으로 받게되는 수혜)</p>
-                        </div>
-                    </div>
-                    <!-- //이수조건 -->
+                    <!-- // link -->
                 </div>
             </div>
             <!-- //과정제목 -->
@@ -88,13 +86,12 @@
             <div class="out_sec sticky">
                 <div class="tab style2">
                     <div class="tab_list">
-                        <button type="button" class="tab_item">Task</button>
                         <button type="button" class="tab_item">개요</button>
+                        <button type="button" class="tab_item">코멘트</button>
                         <button type="button" class="tab_item is_active">학습노트</button>
                     </div>
                 </div>
             </div>
-
             <div class="tab_panel note_page">
                 <!-- 보드 카운트 -->
                 <div class="board_toolbar">
@@ -104,15 +101,14 @@
                         <span class="unit">개</span>
                     </div>
                 </div>
-                <!-- //보드 카운트 -->
-                <!-- Note list -->
+                <!-- // 보드 카운트 -->
+                <!-- 게시물 -->
                 <div class="learning_note">
-                    <!-- note -->
                     <div class="cube_note">
                         <div class="note_head">
                             <div class="left">
                                 <p class="note_title">학습노트1</p>
-                                <button type="button" class="btn ico openinnew"><span class="blind">새창 열기</button>
+                                <button type="button" class="btn ico openinnew blind"><span class="blind">새창 열기</button>
                             </div>
                             <div class="right">
                                 <div class="tooltip basic left bottom">
@@ -136,7 +132,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- //note -->
                     <div class="cube_note">
                         <div class="note_head">
                             <div class="left">
@@ -156,35 +151,7 @@
                         <div class="note_body">
                             <div class="note_txt">
                                 <p class="txt">
-                                    누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지
-                                    <!-- 2줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
-                                </p>
-                            </div>
-                            <div class="note_date">
-                                <p class="date">2022.03.01</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cube_note">
-                        <div class="note_head">
-                            <div class="left">
-                                <p class="note_title">학습노트4</p>
-                                <p class="btn ico openinnew blind"><span class="blind">새창 열기</p>
-                            </div>
-                            <div class="right">
-                                <div class="tooltip basic left bottom">
-                                    <button type="button" class="btn ico more"><span class="blind">편집메뉴 보기</button>
-                                    <div class="tooltip_body">
-                                        <button type="button" class="btn edit">수정</button>
-                                        <button type="button" class="btn remove">삭제</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="note_body">
-                            <div class="note_txt">
-                                <p class="txt">
-                                    누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지
+                                    누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지 
                                     <!-- 2줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
                                 </p>
                             </div>
@@ -194,19 +161,19 @@
                         </div>
                     </div>
                 </div>
-                <!-- //  Note list -->
-                <!-- 작성 input floating -->
+                <!-- // 게시물 -->
+                <!-- 코멘트 -->
                 <div class="note_floating">
                     <div class="note_body">
                         <!-- <p class="label note_time">00 : 00 : 00</p> -->
-                        <p class="label note_title">학습노트 5</p>
+                        <p class="label note_title">학습노트 3</p>
                         <p class="note_form">
                             <label for="noteForm" class="tit blind">학습노트 작성</label>
                             <textarea id="noteForm" cols="10" rows="1" class="basic" placeholder="학습노트를 작성해 보세요."></textarea>
                         </p>
                     </div>
                 </div>
-                <!-- // 작성 input floating -->
+                <!-- // 코멘트 -->
             </div>
         </div>
     </main>

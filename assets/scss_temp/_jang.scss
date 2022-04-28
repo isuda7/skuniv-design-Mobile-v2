@@ -74,9 +74,7 @@
             position: relative;
             margin : 0;
             padding-left: 2.8rem;
-            background-image : url("../img/icons_16_ic_view_grey_07.svg");
-            background-repeat: no-repeat;
-            background-position: 0.8rem 50%;
+            background : url("../img/icons_16_ic_view_grey_07.svg") no-repeat 0.8rem 50%;
 
             &::before {
                 content: '';
@@ -108,9 +106,7 @@
         .label.download{
             display: inline-block;
             padding : 0 .4rem 0 2rem;
-            background-image: url('../img/icons_16_ic_file_white.svg');
-            background-repeat: no-repeat;
-            background-position: 0 50%;
+            background: url('../img/icons_16_ic_file_white.svg') no-repeat 0 50%;
         }
         .cnt { color :$ColorPrimary}
     }
@@ -303,8 +299,7 @@
                 position: absolute;
                 right : $GapSideBase;
                 transform : rotate(180deg);
-                background-image:url("../img/icons_16_ic_chervron_up_grey_05.svg");
-                background-repeat: no-repeat;
+                background: url("../img/icons_16_ic_chervron_up_grey_05.svg") no-repeat;
             }
             &.is_active::after{
                 transform:  rotate(0);
@@ -481,8 +476,6 @@
             }
         }
     }
-    &.full{
-    }
 }
 
 .doc_pagination{
@@ -545,9 +538,7 @@
         color: $ColorSubTxt;
         @include FontBody12;
         @include Ellipsis1;
-        background-image : url("../img/icons_12_ic_chervron_right_grey_06.svg");
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
+        background : url("../img/icons_12_ic_chervron_right_grey_06.svg") no-repeat 100% 50%;
     }
 }
 //Document 가로모드
