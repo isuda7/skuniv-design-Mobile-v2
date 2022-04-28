@@ -973,8 +973,8 @@
 			flex:none;
             margin-left:auto;
 			.btn.ico.more {
-				width:3.2rem;
-				height:3.2rem;
+				width:2.4rem;
+				height:2.4rem;
 				padding:0;
 				margin-right:-0.5rem;
 				&::before {
@@ -991,6 +991,7 @@
             border-radius: 0 8px 8px 8px;
             @include FontBody14;
             padding:1.6rem;
+			background-color: #fff;
             .post_txt {
                 position: relative;
 				margin-bottom:1.5rem;
@@ -1013,7 +1014,7 @@
             .post_btn {
 				width:100%;
                 padding:1.5rem 0 0;
-				border-top:1px solid #1C1D1F;
+				border-top:1px solid #F2F3F5;
 				color:#75777B;
 				@include FontBody12;
 				display: flex;
@@ -1053,7 +1054,7 @@
 						.btn.like::before {
 							width: 1.6rem;
 							height: 1.6rem;
-							background-image: url("../img/icons_16_ic_like_grey_07.svg");
+							background-image: url("../img/icons_16_ic_like_grey_04.svg");
 							margin-top:1px;
 						}
 						.btn.like.is_active::before {
@@ -1088,12 +1089,15 @@
 			.post_txt .btn.more {
 				color:#A4A6AA;
 			}
-			.post_btn>.right .btn_wrap .btn.like {
-				&::before {
-					background-image: url("../img/icons_16_ic_like_off_grey_06.svg");
-				}
-				&.is_active::before {
-					background-image: url("../img/icons_16_ic_like_on.svg");
+			.post_btn {
+				border-top:1px solid #1C1D1F;
+				>.right .btn_wrap .btn.like {
+					&::before {
+						background-image: url("../img/icons_16_ic_like_grey_07.svg");
+					}
+					&.is_active::before {
+						background-image: url("../img/icons_16_ic_like_on.svg");
+					}
 				}
 			}
 		}
@@ -1105,6 +1109,9 @@
 	.post {
 		padding:1.6rem $GapSideBase 0 $GapSideBase;
 		.post_head {
+			display: flex;
+			height:2rem;
+			align-items: center;
 			.left .avata {
 				width:2rem;
 				height:2rem;
@@ -1141,6 +1148,9 @@
     }
 }
 .theme_dark {
+	.post_detail {
+		background-color: #000;
+	}
 	.post_detail .post .post_body .post_main .post_btn>.right {
 		.btn.like::before {
 			background-image: url("../img/icons_24_ic_like_off_white.svg");
@@ -1325,7 +1335,8 @@
         height:4rem;
         width:100%;
         padding:0 $GapSideBase;
-        background-color: #44464a;
+        background-color: #f2f3f5;
+		color:$ColorSubTxt;
         &.is_visible {
             display:flex;
         }
@@ -1333,10 +1344,12 @@
             width:2rem;
             height:2rem;
             padding:0;
+			border-radius: 50%;
             &::before {
-                width:2rem;
-                height:2rem;
+				width:2rem;
+				height:2rem;
                 background-image:url('../img/icons_20_ic_clear_grey_04.svg');
+
             }
         }
     }
@@ -1349,9 +1362,9 @@
         width:100%;
         height:inherit;
         padding:0 2rem;
-        border-top:1px solid #33353c;
+        border-top:1px solid #eeeeee;
 		border-bottom:1px solid transparent;
-        background-color: #000000;
+		background-color: #fff;
         display: flex;
         align-items: center;
         .left{
@@ -1378,7 +1391,7 @@
                     border:0;
                     height:4.2rem;
 					line-height:2.2rem;
-					padding:1.2rem 0;
+					padding:1rem 0;
 					vertical-align: top;
 					&::-webkit-scrollbar {
 						display:none;
@@ -1405,7 +1418,7 @@
                 &::before {
                     width:2.4rem;
                     height:2.4rem;
-                    background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+                    background-image: url('../img/icons_24_ic_send_inactive_grey_03.svg');
                 }
                 &.is_active::before {
                     background-image: url('../img/icons_24_ic_send_active.svg');
@@ -1413,6 +1426,28 @@
             }
         }
     }
+}
+.theme_dark .comment_floating {
+	.comment_alert {
+		color:#fff;
+		.btn.ico.close {
+			background-color: #cbcdcf;
+			&::before {
+                width:1.2rem;
+                height:1.2rem;
+				background-image:url('../img/icons_12_ic_delete_black.svg');
+			}
+		}
+	}
+	.comment_body {
+        border-top:1px solid #33353c;
+        background-color: #000000;
+		.right {
+			.btn.send::before {
+				background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+			}
+		}
+	}
 }
 
 /////////////////////////////////

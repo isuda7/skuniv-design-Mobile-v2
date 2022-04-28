@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1 class="transition"><strong>편향을 극복하고 현상을 바로보기 위한 스터디</strong></h1>
+				</div>
+                <div class="appbar_right">
+                    <button type="button" class="btn ico more"><span class="blind">더보기 메뉴</span></button>
+                </div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container playlist_container view_page">
+			<div class="content_body">
+                <!-- Playlist View -->
+                <div class="playlist_view">
+                    <div class="title_area">
+                        <h1 class="title appbar_title">편향을 극복하고 현상을 바로보기 위한 스터디</h1>
+                        <p class="para">cognitive bias에 대해서 꼼꼼히 살펴보고, 주어진대로 보는 것이 아니라 있는 그대로 보는 눈을 가지는 공부를 해 봅시다!</p>
+                    </div>
+                    <div class="info_area">
+                        <div class="left">
+                            <div class="username">
+                                <span class="avata" aria-hidden="true" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                <span class="name">이순신</span>
+                            </div>
+                            <i class="split" aria-hidden="true"></i>
+                            <span class="date">2022.01.11 생성</span>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btn like is_active">12</button>
+                        </div>
+                    </div>
+                    <div class="make_status">
+                        <p class="recom">
+                            추천받은 <em>3명</em>
+                        </p>
+                        <p class="buy">
+                            담아간 <em>3명</em>
+                        </p>
+                    </div>
+                </div>
+                <!-- // Playlist View -->
+
+                <div class="out_sec sticky">
+                    <div class="tab style2">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item">플레이리스트</button>
+                            <button type="button" class="tab_item is_active">코멘트</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_panel bg_grey">
+                    <!-- Board Toolbar -->
+                    <div class="board_toolbar">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">20</em>
+                            <span class="unit">개</span>
+                        </div>
+                        <div class="board_util">
+                            <button type="button" class="btn text arw_expand">최신순</button>
+                        </div>
+                     </div>
+                    <!-- // Board Toolbar -->
+
+                    <!-- 게시물 -->
+                    <div class="post_list">
+                        <div class="post">
+                            <div class="post_head">
+                                <div class="left">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    <strong class="user_id">아린(나)</strong>
+                                    <span class="write_time">8분전</span>
+                                    <i class="ico pin is_visible"><span class="blind">고정</span></i>
+                                </div>
+                                <div class="right">
+                                    <div class="tooltip basic left bottom">
+                                        <button type="button" class="btn ico more"><span class="blind">편집메뉴 보기</button>
+                                        <div class="tooltip_body">
+                                            <button type="button" class="btn edit">수정</button>
+                                            <button type="button" class="btn remove">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_body">
+                                <div class="post_main">
+                                    <div class="post_txt">
+                                        <!-- CSS 중간말줄임 표현불가 -->
+                                        <p class="txt">
+                                            최대7줄까지 보입니다. 최대7줄까지 보입니다.
+                                        </p>
+                                        <!-- 7줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
+                                    </div>
+                                    <div class="post_btn">
+                                        <div class="left">
+                                            <p class="comment">답글&nbsp;<span class="no">4</span></p>
+                                            <button type="button" class="comment_write">답글작성</button>
+                                        </div>
+                                        <div class="right">
+                                            <div class="btn_wrap">
+                                                <button type="button" class="btn ico like is_active"><span class="blind">좋아요</span></button>
+                                                <p class="like_no">25</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="post_head">
+                                <div class="left">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    <strong class="user_id">아린(나)</strong>
+                                    <span class="write_time">8분전</span>
+                                    <i class="ico pin"><span class="blind">고정</span></i>
+                                </div>
+                                <div class="right">
+                                    <div class="tooltip basic left bottom">
+                                        <button type="button" class="btn ico more"><span class="blind">편집메뉴 보기</button>
+                                        <div class="tooltip_body">
+                                            <button type="button" class="btn edit">수정</button>
+                                            <button type="button" class="btn remove">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_body">
+                                <div class="post_main">
+                                    <div class="post_txt">
+                                        <!-- CSS 중간말줄임 표현불가 -->
+                                        <p class="txt">
+                                            최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다 최대7줄....
+                                        </p>
+                                        <button type="button" class="btn more">더 보기</button>
+                                    </div>
+                                    <div class="post_btn">
+                                        <div class="left">
+                                            <p class="comment">답글&nbsp;<span class="no">4</span></p>
+                                            <button type="button" class="comment_write">답글작성</button>
+                                        </div>
+                                        <div class="right">
+                                            <div class="btn_wrap">
+                                                <button type="button" class="btn ico like"><span class="blind">좋아요</span></button>
+                                                <p class="like_no">25</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="post_head">
+                                <div class="left">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    <strong class="user_id">아린(나)</strong>
+                                    <span class="write_time">8분전</span>
+                                    <i class="ico pin"><span class="blind">고정</span></i>
+                                </div>
+                            </div>
+                            <div class="post_body">
+                                <div class="post_main">
+                                    <div class="post_txt is_expanded">
+                                        <!-- CSS 중간말줄임 표현불가 -->
+                                        <p class="txt">
+                                            최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다.최대7줄까지 보입니다.최대7줄까지 보입니다. 최대7줄까지 보입니다.최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다.최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다.
+                                        </p>
+                                        <button type="button" class="btn more">접기</button>
+                                    </div>
+                                    <div class="post_btn">
+                                        <div class="left">
+                                            <p class="comment">답글&nbsp;<span class="no">4</span></p>
+                                            <button type="button" class="comment_write">답글작성</button>
+                                        </div>
+                                        <div class="right">
+                                            <div class="btn_wrap">
+                                                <button type="button" class="btn ico like"><span class="blind">좋아요</span></button>
+                                                <p class="like_no">25</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 게시물 -->
+
+                    <!-- 코멘트 -->
+                    <div class="comment_floating">
+                        <div class="comment_body">
+                            <div class="comment_alert">
+                                <p class="txt">아란님에게 답글 남기는 중...</p>
+                                <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                            </div>
+                            <div class="left">
+                                <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                <div class="comment_form">
+                                    <label for="commentForm" class="tit blind">코멘트 입력</label>
+                                    <textarea id="commentForm" cols="10" rows="1" class="basic" placeholder="이야기를 나눠보세요."></textarea>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                                <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 코멘트 -->
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
