@@ -1,3 +1,11 @@
+.divider {
+    display: block;
+    height:1.2rem;
+    margin:0 ($GapSideBase * -1);
+    background:#f2f3f5;
+    border:0;
+}
+
 // Styles
 .divider.style1 {
     height:1.2rem;
