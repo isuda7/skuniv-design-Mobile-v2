@@ -1,6 +1,6 @@
 //Overview
 .overview_page {
-    padding-bottom:5.23rem;
+    padding-bottom:5.2rem;
 }
 
 //선수과정 필수 & 선택
@@ -624,6 +624,14 @@
                     color:#a4a6aa;
                 }
             }
+        }
+    }
+}
+//오디오 페이지 플레이어 영상 영역 크기 조정
+.audio_player_sec {
+    .cube_player {
+        .player_thumb {
+            padding:3.2rem 5.8rem;
         }
     }
 }
