@@ -39,9 +39,7 @@
 .board_dt_title {
     .title_area .title {
         color: #fff;
-        font-size: 1.6rem;
-        line-height: 2rem;
-        font-weight: bold;
+        @include FontTitle16;
     }
     .board_dt_info {
         margin-top: 1.2rem;
@@ -94,7 +92,7 @@
 .board_dt_content {
     .board_ph {
         color: #f2f3f5;
-        @include FontBody14;
+        @include FontBody16;
         word-wrap: break-word;
     }
 }
@@ -123,6 +121,18 @@
 
     .btn.like {
         color : $ColorSubTxt;
+        
+        &.ico {
+            &::before {
+                width : 2.4rem;
+                height : 2.4rem;
+                margin-right : .5rem;
+                background-image : url("../img/icons_24_ic_like_white_off_on.svg");
+            }
+            &.is_active::before{
+                background-position: 0 100%;
+            }
+        }
     }
 }
 .board_comments_wrap {
@@ -244,6 +254,8 @@
         margin-right: -$GapSideBase;
         padding: 1rem 2rem;
         .input {
+            display: inline-block;
+            width : 100%;
             @include FontBody16;
         }
     }
@@ -284,8 +296,8 @@
         .acc_title {
             padding: 2rem $GapSideBase;
             display: block;
-            @include FontBody14;
-            font-weight: bold;
+            @include FontTitle14;
+            border-bottom : .1rem solid #f2f3f5;
             .cnt{
                 margin-left : .4rem;
                 display: inline-block;
