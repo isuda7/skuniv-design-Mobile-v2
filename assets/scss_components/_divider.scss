@@ -1,7 +1,14 @@
 .divider {
     display: block;
     height:1.2rem;
-    margin:0 ($GapSideBase * -1);
+    margin:0;
     background:#f2f3f5;
     border:0;
+}
+
+.modal_content,
+.content_body {
+    .divider {
+        margin:0 ($GapSideBase * -1);
+    }
 }

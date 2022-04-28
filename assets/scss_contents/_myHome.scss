@@ -382,3 +382,21 @@
         }
     }
 }
+
+.modal_replies {
+    .post_detail .post {
+        padding:1rem 0 0 0;
+    }
+    .post_detail .post .post_body .post_main .post_btn {
+        margin-top:1.4rem;
+    }
+    .post_list {
+        padding-top:2rem;
+        padding-bottom:4rem;
+    }
+}
+.modal_fullpopup.has_comment {
+    .comment_floating .comment_body {
+        position:relative;
+    }
+}

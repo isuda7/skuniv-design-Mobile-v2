@@ -87,6 +87,7 @@ var layoutHasClass = {
 		// 모달공통(풀팝업, 버틈시트)
 		($('.modal').find('.sticky').length) && this.hasModal('has_sticky'); // 스티키가 있을 때
 		($('.modal').find('.page_floating').length) && this.hasModal('has_floating'); // 하당고정 플로팅이 있을 때
+		($('.modal').find('.comment_floating').length) && this.hasModal('has_comment'); // 하당고정 플로팅이 있을 때
 
 	},
 	hasPage: function(className){

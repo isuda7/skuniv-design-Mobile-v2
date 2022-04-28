@@ -5,7 +5,11 @@
 	.tab_list {
 		position: relative;
 		display: flex;
-		align-items: center;
+		.tab_inner {
+			display: flex;
+			align-items: center;
+			height:100%;
+		}
 		.tab_item {
 			position: relative;
 			z-index: 1;
