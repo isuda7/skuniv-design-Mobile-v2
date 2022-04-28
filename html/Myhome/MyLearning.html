@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>나의 학습 현황</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container myLearning_container myLearning_page">
+			<div class="content_body">
+                <!-- myLearning_status -->
+                <div class="myLearning_status">
+                    <div class="myLearning_list">
+                        <a href="javascript:void(0)" class="item time">
+                            <div class="label">
+                                <i class="ico"></i>
+                                <strong class="txt">학습시간</strong>
+                            </div>
+                            <div class="value">
+                                <em class="txt">19h 26m</em>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="item stemp">
+                            <div class="label">
+                                <i class="ico"></i>
+                                <strong class="txt">스템프</strong>
+                            </div>
+                            <div class="value">
+                                <em class="txt">152</em>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="item badge">
+                            <div class="label">
+                                <i class="ico"></i>
+                                <strong class="txt">뱃지</strong>
+                            </div>
+                            <div class="value">
+                                <em class="txt">3</em>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // myLearning_status -->
+
+                <!-- 학습목표 -->
+                <div class="myLearning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">학습목표</h2>
+                        <button type="button" class="btn target">목표설정</button>
+                    </div>
+                    <div class="myLearning_target">
+                        <!-- 목표설정 -->
+                        <div class="schedule_target">
+                            <div class="item time">
+                                <div class="cube_circle per50" aria-hidden="true"></div>
+                                <div class="cont">
+                                    <p class="sub_txt">오늘 학습시간</p>
+                                    <p class="value">1h 40m</p>
+                                </div>
+                            </div>
+                            <div class="item attend">
+                                <div class="cube_circle per50" aria-hidden="true"></div>
+                                <div class="cont">
+                                    <p class="sub_txt">이번 주 출석</p>
+                                    <p class="value">3일</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 목표설정 -->
+
+                        <!-- 달력 -->
+                        <div class="schedule_calender ">
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="th"><span class="day">일</span></div>
+                                    <div class="th"><span class="day">월</span></div>
+                                    <div class="th"><span class="day">화</span></div>
+                                    <div class="th"><span class="day">수</span></div>
+                                    <div class="th"><span class="day">목</span></div>
+                                    <div class="th"><span class="day">금</span></div>
+                                    <div class="th"><span class="day">토</span></div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td empty"><span class="day">29</span></div>
+                                    <div class="td empty"><span class="day">30</span></div>
+                                    <div class="td"><span class="day">1</span></div>
+                                    <div class="td"><span class="day">2</span></div>
+                                    <div class="td"><span class="day">3</span></div>
+                                    <div class="td"><span class="day">4</span></div>
+                                    <div class="td"><span class="day">5</span></div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td"><span class="day">6</span></div>
+                                    <div class="td"><span class="day">7</span><span class="time">2h 45m</span></div>
+                                    <div class="td"><span class="day">8</span><span class="time">2h 45m</span></div>
+                                    <div class="td"><span class="day">9</span></div>
+                                    <div class="td"><span class="day">10</span></div>
+                                    <div class="td"><span class="day">11</span></div>
+                                    <div class="td"><span class="day">12</span></div>
+                                </div>
+                                <div class="tr is_current">
+                                    <div class="td"><span class="day">13</span></div>
+                                    <div class="td"><span class="day today">14</span></div>
+                                    <div class="td"><span class="day">15</span><span class="time">22h 45m</span></div>
+                                    <div class="td"><span class="day">16</span></div>
+                                    <div class="td"><span class="day">17</span></div>
+                                    <div class="td"><span class="day">18</span></div>
+                                    <div class="td"><span class="day">19</span></div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td"><span class="day">20</span></div>
+                                    <div class="td"><span class="day">21</span><span class="time">2h 45m</span></div>
+                                    <div class="td"><span class="day">22</span><span class="time">2h 45m</span></div>
+                                    <div class="td"><span class="day">23</span><span class="time">2h 45m</span></div>
+                                    <div class="td"><span class="day">24</span></div>
+                                    <div class="td"><span class="day">25</span></div>
+                                    <div class="td"><span class="day">26</span></div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td"><span class="day">27</span></div>
+                                    <div class="td"><span class="day">28</span></div>
+                                    <div class="td"><span class="day">29</span></div>
+                                    <div class="td"><span class="day">30</span></div>
+                                    <div class="td"><span class="day">31</span></div>
+                                    <div class="td empty"><span class="day">1</span></div>
+                                    <div class="td empty"><span class="day">2</span></div>
+                                </div>
+                            </div>
+
+                            <div class="schedule_expand">
+                                <button type="button" class="btn ico expand"><span class="blind">펼치기</span></button>
+                            </div>
+                        </div>
+                        <!-- // 달력 -->
+                    </div>
+                </div>
+                <!-- // 학습목표 -->
+
+                <hr class="divider" />
+
+                <!-- 학습리포트 -->
+                <div class="myLearning_sec">
+                    <div class="sec_head">
+                        <h2 class="heading2">학습리포트</h2>
+                    </div>
+                    <div class="sec_body">
+                        <!-- 올해의 학습시간 -->
+                        <div class="mylearning_report">
+                            <div class="vertical_graph">
+                                <p class="title">올해의 학습시간은<br/>우리 회사 <em>상위 20%</em>예요.</p>
+                                <div class="graph_area">
+                                    <div class="graph">
+                                        <div class="graph_bar primary" style="height:100%">
+                                            <p class="tit">나</p>
+                                            <p class="value">23h 47m</p>
+                                        </div>
+                                        <div class="graph_bar" style="height:50%">
+                                            <p class="tit">회사평균</p>
+                                            <p class="value">13h 47m</p>
+                                        </div>
+                                    </div>
+                                    <div class="cutline" style="bottom:50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 올해의 학습시간은 -->
+
+                        <!-- 뱃지 획득률 -->
+                        <div class="mylearning_report">
+                            <div class="vertical_graph">
+                                <p class="title">뱃지 획득률은<br/>우리 회사 <em>평균 이상</em>예요.</p>
+                                <div class="graph_area">
+                                    <div class="graph">
+                                        <div class="graph_bar primary" style="height:100%">
+                                            <p class="tit">나</p>
+                                            <p class="value">23h 47m</p>
+                                        </div>
+                                        <div class="graph_bar" style="height:30%">
+                                            <p class="tit">회사평균</p>
+                                            <p class="value">13h 47m</p>
+                                        </div>
+                                    </div>
+                                    <div class="cutline" style="bottom:30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 올해의 학습시간은 -->
+
+                        <!-- Reports 카테고리 -->
+                        <div class="mylearning_report">
+                            <div class="horizontal_graph">
+                                <p class="title"><em>DT 카테고리</em>를<br />가장 많이 들으셨네요.</p>
+                                <div class="graph_area">
+                                    <div class="graph">
+                                        <div style="width:30%" class="graph_cell ai"></div>
+                                        <div style="width:10%" class="graph_cell dt"></div>
+                                        <div style="width:6%" class="graph_cell happy"></div>
+                                        <div style="width:6%" class="graph_cell sv"></div>
+                                        <div style="width:6%" class="graph_cell design"></div>
+                                        <div style="width:6%" class="graph_cell global"></div>
+                                        <div style="width:6%" class="graph_cell leadership"></div>
+                                        <div style="width:6%" class="graph_cell management"></div>
+                                        <div style="width:6%" class="graph_cell semicond"></div>
+                                        <div style="width:6%" class="graph_cell green"></div>
+                                        <div style="width:6%" class="graph_cell bm"></div>
+                                        <div style="width:6%" class="graph_cell skacademy"></div>
+                                    </div>
+                                </div>
+                                <div class="legend_area">
+                                    <ul class="legend">
+                                        <li class="item ai">
+                                            <strong class="tit">AI</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item dt">
+                                            <strong class="tit">DT</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item happy">
+                                            <strong class="tit">행복</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item sv">
+                                            <strong class="tit">SV/ESG</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item design">
+                                            <strong class="tit">혁신디자인</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item global">
+                                            <strong class="tit">Global</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item leadership">
+                                            <strong class="tit">Leadership</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item management">
+                                            <strong class="tit">Management</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item semicond">
+                                            <strong class="tit">미래반도체</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item green">
+                                            <strong class="tit">Green</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item bm">
+                                            <strong class="tit">BM Design</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item skacademy">
+                                            <strong class="tit">SK Academy</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Reports 카테고리 -->
+
+                        <!-- mySUNI 학습 -->
+                        <div class="mylearning_report">
+                            <div class="horizontal_graph">
+                                <p class="title"><em>mySUNI 학습</em>이<br>전체 50%를 차지해요.</p>
+                                <div class="graph_area">
+                                    <div class="graph">
+                                        <div style="width:20%" class="graph_cell mysuni"></div>
+                                        <div style="width:20%" class="graph_cell relation"></div>
+                                        <div style="width:10%" class="graph_cell lecture"></div>
+                                        <div style="width:10%" class="graph_cell personal"></div>
+                                    </div>
+                                </div>
+                                <div class="legend_area">
+                                    <ul class="legend">
+                                        <li class="item mysuni">
+                                            <strong class="tit">mySUNI</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item relation">
+                                            <strong class="tit">관계사</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item lecture">
+                                            <strong class="tit">강의시간</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                        <li class="item personal">
+                                            <strong class="tit">개인학습</strong>
+                                            <span class="value">
+                                                <span class="time">4h 27m</span>
+                                                <span class="per">(20%)</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // mySUNI 학습 -->
+                    </div>
+                </div>
+                <!-- //학습리포트 -->
+
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic">버튼</button>
+						<button type="button" class="btn basic primary">버튼</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

@@ -71,7 +71,6 @@
         }
     }
 
-
     // 사이즈
     &.xl {
         width:8rem;
@@ -117,47 +116,5 @@
         &.acheive {
             background-color: $ColorSecondary;
         }
-    }
-
-    // 01 AI/DT
-    &.ai {
-        &_star1 {background-image: url('../img/img_badge_01_1_star.svg');}
-        &_star2 {background-image: url('../img/img_badge_01_2_star.svg');}
-        &_star3 {background-image: url('../img/img_badge_01_3_star.svg');}
-    }
-
-    // 02 공통직무
-    &.com {
-        &_star1 {background-image: url('../img/img_badge_02_1_star.svg');}
-        &_star2 {background-image: url('../img/img_badge_02_2_star.svg');}
-        &_star3 {background-image: url('../img/img_badge_02_3_star.svg');}
-    }
-
-    // 03 미래Biz
-    &.biz {
-        &_star1 {background-image: url('../img/img_badge_03_1_star.svg');}
-        &_star2 {background-image: url('../img/img_badge_03_2_star.svg');}
-        &_star3 {background-image: url('../img/img_badge_03_3_star.svg');}
-    }
-
-    // 04 행복경영
-    &.happy {
-        &_star1 {background-image: url('../img/img_badge_04_1_star.svg');}
-        &_star2 {background-image: url('../img/img_badge_04_2_star.svg');}
-        &_star3 {background-image: url('../img/img_badge_04_3_star.svg');}
-    }
-
-    // 05 BM Design
-    &.design {
-        &_star1 {background-image: url('../img/img_badge_05_1_star.svg');}
-        &_star2 {background-image: url('../img/img_badge_05_2_star.svg');}
-        &_star3 {background-image: url('../img/img_badge_05_3_star.svg');}
-    }
-
-    // 06 SK(주) C&C
-    &.skcnc {
-        &_star1 {background-image: url('../img/img_badge_06_1_star.png');}
-        &_star2 {background-image: url('../img/img_badge_06_2_star.png');}
-        &_star3 {background-image: url('../img/img_badge_06_3_star.png');}
     }
 }

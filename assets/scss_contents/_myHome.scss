@@ -224,6 +224,384 @@
 
 
 ///////////////////////////////////////////////////
+// 나의 학습 현황
+///////////////////////////////////////////////////
+// 공통섹션
+.myLearning_sec {
+    padding-top:2rem;
+    padding-bottom:2rem;
+    .sec_head {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        .btn.target {
+            padding:0;
+            color:$ColorSubTxt;
+            &::after {
+                content:'';
+                display:block;
+                position: relative;
+                top:1px;
+                width:1.6rem;
+                height:1.6rem;
+                margin-left:0.4rem;
+                background: url('../img/icons_16_ic_setting_black.svg') no-repeat center center / 100% auto;
+            }
+        }
+    }
+}
+
+// 학습현황
+.myLearning_status {
+    display: flex;
+    padding:2rem;
+    margin:0 -2rem;
+    overflow-x: auto;
+    background-color: #f8f8fa;
+    &::-webkit-scrollbar {
+        display:none;
+    }
+    .myLearning_list {
+        display:flex;
+        flex:none;
+        margin:0 -0.4rem;
+        .item {
+            flex:none;
+            width: 14rem;
+            height: 12rem;
+            padding:1.6rem 1.2rem 1.6rem 1.5rem;
+            margin:0 0.4rem;
+            background-color: #fff;
+            @include Shadow4;
+            border-radius: $RadiusLarge;
+            .label {
+                display:block;
+                color: #a4a6aa;
+            }
+            .value {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top:2.2rem;
+                @include FontTitle18;
+                &::after {
+                    content:'';
+                    display:block;
+                    width:1.6rem;
+                    height:1.6rem;
+                    background:url('../img/icons_16_ic_chervron_right_grey_04.svg') no-repeat center center / 100% auto;
+                }
+            }
+            .ico {
+                display: block;
+                width:1.6rem;
+                height:1.6rem;
+                margin-bottom:0.4rem;
+            }
+            &.time .ico {
+                background-image: url('../img/icons_16_ic_time_grey_05.svg');
+            }
+            &.stemp .ico {
+                background-image: url('../img/icons_16_ic_user_grey_05.svg');
+            }
+            &.badge .ico {
+                background-image: url('../img/icons_16_ic_time_grey_03.svg');
+            }
+        }
+    }
+}
+
+// 학습목표
+.myLearning_target {
+    .schedule_target {
+        display:flex;
+        border:1px solid #e3e4e5;
+        border-radius:$RadiusLarge;
+        padding:1rem 0;
+        height:8rem;
+        .item {
+            display: flex;
+            align-items: center;
+            width:50%;
+            padding:0 1.6rem;
+            .cube_circle {
+                flex:none;
+                width:3.2rem;
+                height:3.2rem;
+                margin-right:0.8rem;
+                &::before {
+                    content:'';
+                    display:block;
+                    width:1.6rem;
+                    height:1.6rem;
+                }
+            }
+            .cont {
+                flex:0 1 auto;
+                width:100%;
+                .value {
+                    @include FontTitle16;
+                }
+
+            }
+            &.time {
+                .cube_circle::before {
+                    background:url('../img/icons_16_ic_time_grey_06.svg') no-repeat center center / 100% auto;
+                }
+            }
+            &.attend {
+                .cube_circle::before {
+                    background:url('../img/icons_16_ic_check_primary.svg') no-repeat center center / 100% auto;
+                }
+            }
+        }
+        .item + .item {
+            border-left:1px solid #e3e4e5;
+        }
+    }
+    .schedule_calender {
+        margin-top:2rem;
+        .table {
+            display:table;
+            border-collapse:collapse;
+            table-layout: fixed;
+            width:100%;
+            .tr {
+                display:none;
+                &.is_current {
+                    display:table-row;
+                }
+                > div {
+                    display:table-cell;
+                    text-align: center;
+                    font-size:1.4rem;
+                    line-height: 1.8rem;;
+                    color:$ColorSubTxt;
+                    &.th {
+                        font-size:1.2rem;
+                        padding:0.5rem 0;
+                    }
+                    &.td {
+                        height:4rem;
+                        padding:0.5rem 0;
+                        .day {
+                            display:flex;
+                            justify-content: center;
+                            align-items: center;
+                            width:2.4rem;
+                            height:2.4rem;
+                            margin:0 auto;
+                            border-radius: 50%;
+                            font-weight: 700;
+                            &.today {
+                                background: rgba(255, 102, 77, 0.2);
+                                color:$ColorPrimary;
+                            }
+                        }
+                        .time {
+                            display:block;
+                            color:$ColorPrimary;
+                            @include FontBody10;
+                        }
+                    }
+                    &.empty {
+                        color:#e3e4e5;
+                    }
+                }
+            }
+        }
+        .schedule_expand {
+            margin-top:0.6rem;
+            text-align: center;
+            .btn.ico.expand::before {
+                width:2.4rem;
+                height:2.4rem;
+                background-image: url('../img/icons_24_ic_chervron_down_black.svg');
+            }
+        }
+    }
+    .schedule_calender.is_expanded {
+        .table .tr {
+            display:table-row;
+        }
+        .btn.ico.expand::before {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+// 학습리포트
+.mylearning_report {
+    padding:2.8rem 2rem 2rem 2rem;
+    border-radius: $RadiusLarge;
+    background-color: #f8f8fa;
+    & + .mylearning_report {
+        margin-top:2rem;
+    }
+    .title {
+        text-align: center;
+        @include FontTitle16;
+        em {
+            color:$ColorSecondary;
+        }
+    }
+    .vertical_graph {
+        padding-bottom:2.4rem;
+        .graph_area {
+            position: relative;
+            margin-top:5.2rem;
+            .cutline {
+                position: absolute;
+                left:calc(50% - 10rem);
+                display:block;
+                width:20rem;
+                height:1px;
+                border-top:1px dotted $ColorSubTxt;
+            }
+            .graph {
+                display:flex;
+                justify-content: center;
+                align-items: flex-end;
+                height:10rem;
+                .graph_bar {
+                    position: relative;
+                    width:5rem;
+                    margin:0 1.5rem;
+                    background-color: #e3e4e5;
+                    &.primary {
+                        background-color: $ColorSecondary;
+                    }
+                    .tit {
+                        position: absolute;
+                        left:calc(50% - 4rem);
+                        top:calc(100% + 0.6rem);
+                        width:8rem;
+                        text-align: center;
+                        @include FontBody12;
+                        color:$ColorSubTxt;
+                    }
+                    .value {
+                        position: absolute;
+                        left:calc(50% - 4rem);
+                        bottom:calc(100% + 0.6rem);
+                        width:8rem;
+                        text-align: center;
+                        @include FontBody13;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .horizontal_graph {
+        .title {
+            text-align: left;
+        }
+        .graph_area {
+            margin-top:1.2rem;
+            .graph {
+                display:table;
+                table-layout: fixed;
+                width:100%;
+                .graph_cell {
+                    display:table-cell;
+                    height:3rem;
+                    transition: width 0.3s 0.2s ease;
+                    // Category
+                    &.ai {background-color: $ColorCateAi;}
+                    &.dt {background-color: $ColorCateDt;}
+                    &.happy {background-color: $ColorCateHappinesst;}
+                    &.sv {background-color: $ColorCateSV;}
+                    &.design {background-color: $ColorCateDesign;}
+                    &.global {background-color: $ColorCateGlobal;}
+                    &.leadership {background-color: $ColorCateLeadership;}
+                    &.management {background-color: $ColorCateManagement;}
+                    &.semicond {background-color: $ColorCateSemicond;}
+                    &.green {background-color: $ColorCateGreen;}
+                    &.bm {background-color: $ColorCateBM;}
+                    &.skacademy {background-color: $ColorCateSkacademy;}
+
+                    // Biz
+                    &.mysuni {background-color: $ColorCateMysuni;}
+                    &.relation {background-color: $ColorCateRelation;}
+                    &.lecture {background-color: $ColorCateLecture;}
+                    &.personal {background-color: $ColorCatePersonal;}
+
+                }
+            }
+        }
+        .legend_area {
+            margin-top:2rem;
+            .legend {
+                .item {
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tit {
+                        display:flex;
+                        align-items: center;
+                    }
+                    .tit::before {
+                        content:'';
+                        display:block;
+                        width:2rem;
+                        height:2rem;
+                        margin-right:0.4rem;
+                        font-size:1.2rem;
+                        font-weight: 700;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height:calc(2rem - 2px);
+                        border:1px solid transparent;
+                        background-color: #fff;
+                    }
+                    &:nth-child(1) .tit::before {content:'1';}
+                    &:nth-child(2) .tit::before {content:'2';}
+                    &:nth-child(3) .tit::before {content:'3';}
+                    &:nth-child(4) .tit::before {content:'4';}
+                    &:nth-child(5) .tit::before {content:'5';}
+                    &:nth-child(6) .tit::before {content:'6';}
+                    &:nth-child(7) .tit::before {content:'7';}
+                    &:nth-child(8) .tit::before {content:'8';}
+                    &:nth-child(9) .tit::before {content:'9';}
+                    &:nth-child(10) .tit::before {content:'10';}
+                    &:nth-child(11) .tit::before {content:'11';}
+                    &:nth-child(12) .tit::before {content:'12';}
+
+                    // Category
+                    &.ai .tit::before {color: $ColorCateAi; border-color:$ColorCateAi;}
+                    &.dt .tit::before {color: $ColorCateDt; border-color:$ColorCateDt;}
+                    &.happy .tit::before {color: $ColorCateHappinesst; border-color:$ColorCateHappinesst;}
+                    &.sv .tit::before {color: $ColorCateSV; border-color:$ColorCateSV;}
+                    &.design .tit::before {color: $ColorCateDesign; border-color:$ColorCateDesign;}
+                    &.global .tit::before {color: $ColorCateGlobal; border-color:$ColorCateGlobal;}
+                    &.leadership .tit::before {color: $ColorCateLeadership; border-color:$ColorCateLeadership;}
+                    &.management .tit::before {color: $ColorCateManagement; border-color:$ColorCateManagement;}
+                    &.semicond .tit::before {color: $ColorCateSemicond; border-color:$ColorCateSemicond;}
+                    &.green .tit::before {color: $ColorCateGreen; border-color:$ColorCateGreen;}
+                    &.bm .tit::before {color: $ColorCateBM; border-color:$ColorCateBM;}
+                    &.skacademy .tit::before {color: $ColorCateSkacademy; border-color:$ColorCateSkacademy;}
+
+                    // Biz
+                    &.mysuni .tit::before {color: $ColorCateMysuni; border-color:$ColorCateMysuni;}
+                    &.relation .tit::before {color: $ColorCateRelation; border-color:$ColorCateRelation;}
+                    &.lecture .tit::before {color: $ColorCateLecture; border-color:$ColorCateLecture;}
+                    &.personal .tit::before {color: $ColorCatePersonal; border-color:$ColorCatePersonal;}
+
+                    .per {
+                        color:$ColorSubTxt;
+                    }
+                }
+                .item + .item {
+                    margin-top:0.8rem;
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////
 // Playlist
 ///////////////////////////////////////////////////
 // 플레이리스트
@@ -240,6 +618,7 @@
         }
     }
 }
+
 // 플레이리스트 만들기
 .modal_playlistAdd {
     .modal_content {
