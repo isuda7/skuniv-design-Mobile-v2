@@ -2,63 +2,54 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="../../favicon.ico" />
-    <!-- Guide Common -->
-    <link href="../../assets/css/index.css" rel="stylesheet" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
-    <!-- Guide IA -->
-    <link href="../../_guide/assets/css/guide.css" rel="stylesheet" />
-    <title>mySUNI Design Mobile V2</title>
+    <style>
+        /* 페이지 정리용 (개발에 사용되지 않음) */
+        .heading2 {margin-top:4rem; margin-bottom:1.6rem;}
+        .heading2:first-child {margin-top:2rem;}
+    </style>
 </head>
 
 <body>
-    <div class="g_wrap">
-        <header>
-            <h1>Publishing Guide</h1>
-        </header>
-        <div class="g_cont">
-            <section class="g_sec">
-                <h2 class="g_h2">Card Basic</h2>
-                <h3 class="g_h3">Playlist</h3>
-                <h4 class="g_h4">Playlist</h4>
-                <div class="g_preview">
-                    <div class="card basic playlist">
-                        <div class="card_head">
-                            <button type="button" class="btn ico file vod"><span class="blind">VOD Play 보러가기</span></button>
-                            <button type="button" class="btn text primary buy">플레이리스트 담기</button>
-                        </div>
-                        <a href="javasccript:void(0)" class="card_inner">
-                            <div class="card_body">
-                                <p class="title">
-                                    <strong>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
-                                </p>
-                            </div>
-                            <div class="card_foot">
-                                <div class="profile">
-                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
-                                    <p class="name">전혜림가나다라바사아자차카타파하아자차</p>
-                                </div>
-                                <div class="count">
-                                    <em>총 3개</em>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <h4 class="g_h4">Playlist</h4>
-                <div class="g_preview">
-                    <div class="card basic playlist">
+	<div class="sub_wrapper has_appnav has_sticky">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>Card Playlist</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<div class="tooltip left bottom transition">
+						<button type="button" class="btn ico more"><span class="blind">더보기</span></button>
+						<div class="tooltip_body">
+							더보기 목록
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<div class="content_body">
+                <h2 class="heading2">Playlist Basic</h2>
+				<!-- Card List -->
+                <div class="card_playlist_list">
+                    <div class="card_playlist">
+                        <button type="button" class="btn text primary buy">플레이리스트 담기</button>
                         <a href="javascript:void(0)" class="card_inner">
                             <div class="card_head">
                                 <em class="label make">내가만든</em>
-                                <button type="button" class="btn text primary buy">플레이리스트 담기</button>
                             </div>
                             <div class="card_body">
                                 <p class="title">
@@ -76,7 +67,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="card basic playlist">
+                    <div class="card_playlist">
                         <a href="javascript:void(0)" class="card_inner">
                             <div class="card_head">
                                 <em class="label buy">내가담은</em>
@@ -97,7 +88,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="card basic playlist">
+                    <div class="card_playlist">
                         <a href="javascript:void(0)" class="card_inner">
                             <div class="card_head">
                                 <em class="label recom">추천받은</em>
@@ -119,47 +110,12 @@
                         </a>
                     </div>
                 </div>
+				<!-- // Card List -->
 
-                <h2 class="g_h2">Card Vertical</h2>
-                <h3 class="g_h3">Learning</h3>
-                <div class="g_preview">
-                    <div class="card ver learning">
-                        <div class="card_inner">
-                            <div class="card_thumb">
-                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
-                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-                            </div>
-                            <a href="javascript:void(0)" class="card_body">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>코스명이 들어갑니다 코스명이 들어가요 코스명이요 세줄까지 들어가요.</strong></p>
-                            </a>
-                        </div>
-                        <div class="card_foot">
-                            <span class="rate_count">4.8</span>
-                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-                        </div>
-                    </div>
-                    <div class="card ver learning">
-                        <div class="card_inner">
-                            <div class="card_thumb">
-                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
-                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-                            </div>
-                            <a href="javascript:void(0)" class="card_body">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>코스명이 들어갑니다 코스명이 들어가요 코스명이요 세줄까지 들어가요.</strong></p>
-                            </a>
-                        </div>
-                        <div class="card_foot">
-                            <span class="rate_count">4.8</span>
-                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="g_h3">Playlist</h3>
-                <div class="g_preview">
-                    <div class="card ver playlist">
+                <h2 class="heading2">Playlist Main</h2>
+                <!-- Card List -->
+                <div class="card_playlist_main_slide">
+                    <div class="card_playlist_main">
                         <a href="javascript:void(0)" class="card_inner">
                             <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt="">
                                 <div class="avata_name">
@@ -168,15 +124,150 @@
                                 </div>
                             </span>
                             <div class="card_body">
+                                <em class="label make">내가만든</em>
+                                <p class="title"><strong>리스트명최대두줄리스트명최대두줄</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_playlist_main">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt="">
+                                <div class="avata_name">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    <strong class="name">꿈꾸는하루 꿈꾸는하루 꿈꾸는하루 이틀 삼사오육일</strong>
+                                </div>
+                            </span>
+                            <div class="card_body">
+                                <em class="label buy">내가담은</em>
+                                <p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_playlist_main">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt="">
+                                <div class="avata_name">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                    <strong class="name">꿈꾸는하루 꿈꾸는하루 꿈꾸는하루 이틀 삼사오육일</strong>
+                                </div>
+                            </span>
+                            <div class="card_body">
+                                <em class="label recom">추천받은</em>
                                 <p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
                             </div>
                         </a>
                     </div>
                 </div>
+                <!-- // Card List -->
 
-                <h3 class="g_h3">Topic</h3>
-                <div class="g_preview">
-                    <div class="card ver topic">
+                <h2 class="heading2">Cube 학습과정</h2>
+				<!-- Card List -->
+                <div class="card_cube_slide">
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>코스명이 들어갑니다 코스명이 들어가요 코스명이요 세줄까지 들어가요.</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>코스명이 들어갑니다 코스명이 들어가요 코스명이요 세줄까지 들어가요.</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>코스명이 들어갑니다 코스명이 들어가요 코스명이요 세줄까지 들어가요.</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                </div>
+				<!-- // Card List -->
+
+                <h2 class="heading2">Cube 내해당카드</h2>
+                <!-- 내 해당카드 -->
+                <div class="card_cube_parents">
+                    <div class="card_inner">
+                        <div class="card_thumb">
+                            <a href="javascript:voide(0)"  class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');"><span class="blind">Thumbnails</span></a>
+                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                        </div>
+                        <a class="card_body">
+                            <p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
+                            <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 내 해당카드 -->
+
+                <h2 class="heading2">토픽</h2>
+                <!-- Card List -->
+                <div class="card_topic_slide">
+                    <div class="card_topic">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <div class="card_thumb">
+                                <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                            </div>
+                            <div class="card_body">
+                                <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                            </div>
+                            <div class="card_foot">
+                                <p class="total_count">
+                                    <span class="total">총</span>&nbsp;
+                                    <em class="count">7</em>
+                                    <span class="text">개 학습카드</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_topic">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <div class="card_thumb">
+                                <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                            </div>
+                            <div class="card_body">
+                                <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                            </div>
+                            <div class="card_foot">
+                                <p class="total_count">
+                                    <span class="total">총</span>&nbsp;
+                                    <em class="count">7</em>
+                                    <span class="text">개 학습카드</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_topic">
                         <a href="javascript:void(0)" class="card_inner">
                             <div class="card_thumb">
                                 <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
@@ -194,46 +285,41 @@
                         </a>
                     </div>
                 </div>
+                <!-- // Card List -->
 
-                <h2 class="g_h2">Card Horizontal</h2>
-                <h3 class="g_h3">Badge</h3>
-                <div class="g_preview">
-                    <div class="card hor badge">
-                        <a href="javascript:void(0)" class="card_inner">
-                            <div class="card_thumb">
-                                <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-badge01.png')" alt=""></span>
-                            </div>
-                            <div class="card_body">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
-                                <p class="count">진행중 2&nbsp;/&nbsp;11</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <h3 class="g_h3">My Badge</h3>
-                <div class="g_preview">
-                    <div class="card hor mybadge">
-                        <a href="javascript:void(0)" class="card_inner">
-                            <div class="card_thumb">
-                                <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-badge01.png')" alt=""></span>
-                            </div>
-                            <div class="card_body">
-                                <p class="sub_txt">카테고리명</p>
-                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
-                                <p class="date">획득일자 2022.03.31</p>
-                            </div>
-                        </a>
-                        <div class="card_foot">
-                            <button type="button" class="btn text">인증서보기</button>
+                <h2 class="heading2">커뮤니티 단건</h2>
+                <!-- card_community -->
+                <div class="card_community">
+                    <a href="javascript:void(0)" class="item_body">
+                        <div class="item_thumb">
+                            <span class="thumb" aria-hidden="true"
+                                style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+                                alt=""></span>
+                        </div>
+                        <div class="item_title">
+                            <p class="sub_txt">카테고리명</p>
+                            <p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+                                    Community</strong></p>
+                        </div>
+                        <div class="item_foot">
+                            <p class="desc">
+                                SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+                            </p>
+                        </div>
+                    </a>
+                    <div class="item_util">
+                        <div class="checkbox rating">
+                            <input type="checkbox" name="rating" id="rating1" tabindex="0" class="hidden" />
+                            <label for="rating1"><span class="blind">관심등록</span></label>
                         </div>
                     </div>
                 </div>
+                <!-- // card_community -->
 
-                <h2 class="g_h2">Card ETC</h2>
-                <h3 class="g_h3">Community</h3>
-                <div class="g_preview">
-                    <div class="card community">
+                <h2 class="heading2">커뮤니티 목록 기본</h2>
+				<!-- Card List -->
+                <div class="card_community_list">
+                    <div class="card_community">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="thumb" aria-hidden="true"
@@ -258,8 +344,38 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card_community">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="thumb" aria-hidden="true"
+                                    style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+                                    alt=""></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+                                        Community</strong></p>
+                            </div>
+                            <div class="item_foot">
+                                <p class="desc">
+                                    SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+                                </p>
+                            </div>
+                        </a>
+                        <div class="item_util">
+                            <div class="checkbox rating">
+                                <input type="checkbox" name="rating" id="rating1" tabindex="0" class="hidden" />
+                                <label for="rating1"><span class="blind">관심등록</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- // Card List -->
 
-                    <div class="card community">
+                <h2 class="heading2">커뮤니티 목록 확장</h2>
+				<!-- Card List -->
+                <div class="card_community_list">
+                    <div class="card_community">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="thumb" aria-hidden="true"
@@ -284,30 +400,217 @@
                         </a>
                         <div class="item_util">
                             <div class="checkbox rating">
-                                <input type="checkbox" name="rating" id="rating2" tabindex="0" class="hidden" />
-                                <label for="rating2"><span class="blind">관심등록</span></label>
+                                <input type="checkbox" name="rating2" id="rating21" tabindex="0" class="hidden" />
+                                <label for="rating21"><span class="blind">관심등록</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_community">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="thumb" aria-hidden="true"
+                                    style="background-image:url('../../assets/img/demo/thumb-community01.png')"
+                                    alt=""></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>[ Management College ] _ 직무 Essential 과정의
+                                        Community</strong></p>
+                            </div>
+                            <div class="item_foot">
+                                <p class="desc">
+                                    SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간 SV/ESG를 깊이 이해하고 업무에 적용하기 위해 함께 학습하는 공간
+                                </p>
+                                <div class="info_area">
+                                    <span class="username">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                                    <span class="member">멤버 000</span>
+                                    <i class="ico lock"><span class="blind">비밀글</span></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item_util">
+                            <div class="checkbox rating">
+                                <input type="checkbox" name="rating2" id="rating22" tabindex="0" class="hidden" />
+                                <label for="rating22"><span class="blind">관심등록</span></label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h3 class="g_h3">Cube 내 해당 카드</h3>
-                <div class="g_preview">
-                    <div class="card cube_parents">
-                        <div class="card_inner">
+				<!-- // Card List -->
+
+                <h2 class="heading2">피드 목록</h2>
+                <!-- Card List -->
+                <div class="card_feed_list">
+                    <div class="card_feed">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_title">
+                                <p class="sub_txt">몸챙김과 행복</p>
+                                <p class="title">
+                                    <strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong>
+                                </p>
+                            </div>
+                            <div class="item_cont">
+                                <p class="desc">
+                                    작년 한때는 메타버스라는 키워드가 정말 많이 보이던 시기가 있었는데, 올해는 비교적 잠잠한 것 같습니다. 머니투데이는 금일자 기사에서...
+                                </p>
+                                <div class="item_info">
+                                    <div class="left">
+                                        <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                        <span class="name">Saoirse Una Ronan</span>
+                                        <span class="bar"></span>
+                                        <span class="time">8분 전</span>
+                                    </div>
+                                    <div class="right">
+                                        <span class="label cnt_views">76</span>
+                                        <span class="bar"></span>
+                                        <span class="label cnt_cmmt">21</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <div class="left">
+                                <button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+                                <button type="button" class="btn ico bookmark is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="btn like is_active"><span class="blind">좋아요</span>24</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_feed">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_title">
+                                <p class="sub_txt">몸챙김과 행복</p>
+                                <p class="title">
+                                    <strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong>
+                                </p>
+                            </div>
+                            <div class="item_cont">
+                                <p class="desc">
+                                    작년 한때는 메타버스라는 키워드가 정말 많이 보이던 시기가 있었는데, 올해는 비교적 잠잠한 것 같습니다. 머니투데이는 금일자 기사에서...
+                                </p>
+                                <div class="item_info">
+                                    <div class="left">
+                                        <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                        <span class="name">Saoirse Una Ronan</span>
+                                        <span class="bar"></span>
+                                        <span class="time">8분 전</span>
+                                    </div>
+                                    <div class="right">
+                                        <span class="label cnt_views">76</span>
+                                        <span class="bar"></span>
+                                        <span class="label cnt_cmmt">21</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <div class="left">
+                                <button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+                                <button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="btn like"><span class="blind">좋아요</span>24</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Card List -->
+
+                <h2 class="heading2">뱃지 리스트 (기본)</h2>
+                <!-- Card List -->
+                <div class="card_badge_list">
+                    <div class="card_badge">
+                        <a href="javascript:void(0)" class="card_inner">
                             <div class="card_thumb">
-                                <a href="javascript:voide(0)"  class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');"><span class="blind">Thumbnails</span></a>
-                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                                <div class="badge_box xl" aria-label="AI one-star badge">
+                                    <img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+                                </div>
                             </div>
-                            <a class="card_body">
-                                <p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
-                            </a>
+                            <div class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+                                <p class="date">획득일자 2022.03.21</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_badge">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <div class="card_thumb">
+                                <div class="badge_box xl" aria-label="AI one-star badge">
+                                    <img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+                                <p class="date">획득일자 2022.03.21</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // Card List -->
+
+                <h2 class="heading2">뱃지 리스트 (인증서보기)</h2>
+                <!-- Card List -->
+                <div class="card_list">
+                    <div class="card_badge">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <div class="card_thumb">
+                                <div class="badge_box xl" aria-label="AI one-star badge">
+                                    <img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+                                <p class="date">획득일자 2022.03.21</p>
+                            </div>
+                        </a>
+                        <div class="card_foot">
+                            <button type="button" class="btn text">인증서보기</button>
+                        </div>
+                    </div>
+                    <div class="card_badge">
+                        <a href="javascript:void(0)" class="card_inner">
+                            <div class="card_thumb">
+                                <div class="badge_box xl" aria-label="AI one-star badge">
+                                    <img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <p class="sub_txt">카테고리명</p>
+                                <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+                                <p class="date">획득일자 2022.03.21</p>
+                            </div>
+                        </a>
+                        <div class="card_foot">
+                            <button type="button" class="btn text">인증서보기</button>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    </div>
+                <!-- // Card List -->
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<nav class="appnav">
+				<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+				<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+				<a href="/Mobile/Myhome/" class="item item_myhome"><span class="blind">마이홈</span></a>
+				<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+				<a href="/Mobile/More/" class="item item_more">더보기</a>
+			</nav>
+		</footer>
+		<!-- // Footer -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
 </body>
 
 </html>

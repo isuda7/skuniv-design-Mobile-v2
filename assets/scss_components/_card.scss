@@ -1,672 +1,121 @@
-// Default
+// Common
 .card {
-	position: relative;
-	// Vertical Layout
-	&.ver {
-		.card_inner {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			overflow: hidden;
-			border-radius: $RadiusLarge;
-			background-color: #fff;
-		}
-		.card_thumb {
-			position: relative;
-			flex: none;
-		}
-		.card_body {
-			flex: 1 1 auto;
-		}
-		.card_foot {
-			flex: none;
-		}
-	}
-	&.hor {
-		.card_inner {
-			display:flex;
-			align-items: center;
-			background-color: #fff;
-		}
-		.card_thumb {
-			flex:none;
-		}
-		.card_body {
-			flex:1 1 auto;
-		}
-	}
-	.sub_txt {
-		@include FontBody14;
-		color:$ColorSubTxt;
-	}
-	.btn.ico {
-		&.file {
-			padding:0;
-		}
-		&.file::before {
-			content:"";
-			width:2rem;
-			height:2rem;
-			background-color:#ddd;
-		}
-		&.learning::before {
-			content:"";
-			width:2rem;
-			height:2rem;
-			background-image: url('../img/icons_20_ic_cubelist_black.svg');
-		}
-	}
-}
-// Styles
-.card {
-	&.basic {
-		&.playlist {
-			margin-top:0.8rem;
-			.card_inner {
-				display: block;
-				padding: 1.6rem;
-				padding-top:4.3rem;
-				border-radius: $RadiusLarge;
-				background-color: #fff;
-				@include Shadow2;
-			}
-			.card_head {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom:0.8rem;
-				position:absolute;
-				left:1.6rem;
-				top:1.6rem;
-				width:calc(100%  - 3.2rem);
-				.label.make {
-					color:$ColorPlaylistMake;
-				}
-				.label.buy {
-					color:$ColorPlaylistBuy;
-				}
-				.label.recom {
-					color:$ColorPlaylistRecom;
-				}
-			}
-			.card_body {
-				.title {
-					color: #000;
-					@include FontBody14;
-					@include Ellipsis2;
-				}
-			}
-			.card_foot {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				margin-top: 1.2rem;
-				width:100%;
-				@include FontBody13;
-				.profile {
-					display: flex;
-					align-items: center;
-					flex:0 1 auto;
-					overflow: hidden;
-					// width: calc(100% - 5rem);
-					.avata {
-						flex: none;
-						width: 2rem;
-						height: 2rem;
-						margin-right: 0.4rem;
-					}
-					.name {
-						flex: 0 1 auto;
-						display: block;
-						@include Ellipsis1;
-					}
-				}
-				.count {
-					display:flex;
-					align-items: center;
-					flex:none;
-					margin-left:0.8rem;
-					color: #a4a6aa;
-					&::before {
-						content:"";
-						display:block;
-						width:1px;
-						height:1.2rem;
-						background-color: #F2F3F5;
-						margin-right:0.8rem;
-					}
-				}
-			}
-			.btn.text.buy {
-				padding:0;
-				&::before {
-					position: relative;
-					top:1px;
-					content:'';
-					display:block;
-					width:1.6rem;
-					height:1.6rem;
-					margin-right:0.2rem;
-					background: url('../img/icons_16_ic_addplaylist_orange.svg') no-repeat center center / 100% auto;
-				}
-			}
-		}
-	}
-	&.ver {
-		// 학습카드
-		&.learning {
-			width: 15.6rem;
-			height: 23rem;
-			background-color: #fff;
-			border-radius: $RadiusLarge;
-			box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.02), 0px 5px 22px rgba(0, 0, 0, 0.04), 0px 7px 8px rgba(0, 0, 0, 0.06);
-			.card_inner {
-				height:100%;
-			}
-			.card_thumb {
-				width: 100%;
-				height: 9rem;
-			}
-			.card_body {
-				padding: 1rem;
-				.sub_txt {
-					+.title {
-						margin-top: 0.4rem;
-					}
-				}
-				.title {
-					height: 6rem;
-					font-size: 1.6rem;
-					line-height: 2rem;
-					color: #000;
-					@include Ellipsis3;
-				}
-			}
-			.card_foot {
-				position: absolute;
-				left:0;
-				bottom:0;
-				width:100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 0 1rem 1rem 1rem;
-			}
-		}
-		// 플레이리스트카드
-		&.playlist {
-			width: 15.6rem;
-			.thumb {
-				width: inherit;
-				height: 15.6rem;
-				border-radius: 50%;
-				.avata_name {
-					position: relative;
-					z-index: 10;
-					padding: 0 2rem;
-					.avata {
-						display: block;
-						margin: auto;
-						width: 4.8rem;
-						height: 4.8rem;
-					}
-					.name {
-						font-size: 1.2rem;
-						line-height: 1.8rem;
-						color: #fff;
-						text-align: center;
-						@include Ellipsis2;
-					}
-				}
-				&::after {
-					content: "";
-					display: block;
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-			.card_body {
-				margin-top: 0.4rem;
-				.title {
-					text-align: center;
-					font-size: 1.6rem;
-					line-height: 2rem;
-					@include Ellipsis2;
-				}
-			}
-		}
-		// 토픽카드
-		&.topic {
-			.card_inner {
-				position: relative;
-				display: flex;
-				flex-direction: column;
-				width: 15.6rem;
-				height: 20.0rem;
-				overflow: hidden;
-				border-radius: $RadiusLarge;
-				color: #fff;
-				padding: 1.6rem 1rem;
-				&::after {
-					content: "";
-					display: block;
-					position: absolute;
-					left: 0;
-					top: 0;
-					z-index: 1;
-					width: 100%;
-					height: 100%;
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-			.card_thumb {
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: 0;
-				width:100%;
-				height:100%;
-			}
-			.card_body {
-				position: relative;
-				display: flex;
-				flex: 1 0 auto;
-				z-index: 10;
-				.title {
-					height: 6rem;
-					font-size: 1.6rem;
-					line-height: 2rem;
-					color: inherit;
-					@include Ellipsis3;
-				}
-			}
-			.card_foot {
-				position: relative;
-				z-index: 10;
-				font-size: 1.6rem;
-			}
-		}
-	}
-	&.hor {
-		&.badge {
-			background-color: #fff;
-			border-radius: $RadiusLarge;
-			@include Shadow2;
-			margin-top:0.8rem;
-			.card_inner {
-				flex-wrap:wrap;
-				padding:1.6rem 1.6rem;
-				background-color: transparent;
-			}
-			.card_thumb {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width:9.2rem;
-				height:9.2rem;
-				margin-right:1.2rem;
-			}
-			.card_body {
-				width:calc(100% - 10.4rem);
-				.title {
-					@include FontBody16;
-					@include Ellipsis2;
-				}
-				.count,
-				.date {
-					margin-top:0.4rem;
-					color:#A4A6AA;
-				}
-			}
-			.card_foot {
-				display:flex;
-				justify-content: center;
-				align-items: center;
-				width:100%;
-				height:4.8rem;
-				border-top:1px solid #F2F3F5;
-				.ui.button.text {
-					height:100%;
-					width:100%;
-				}
-			}
-		}
-	}
-	// Cases
-	&.has_check {
-		.item_body {
-			width:calc(100% - 3.2rem);
-		}
-	}
-	.ribon {
-		position: absolute;
-		right: 0.8rem;
-		top: 0;
-		z-index: 10;
-		width: 2.4rem;
-		height: 2.4rem;
-		border-radius: 0;
-		&::before {
-			width:2.4rem;
-			height:2.4rem;
-			background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
-		}
-		&.is_active {
-			&::before {
-				background-position: center bottom;
-			}
-		}
-	}
-}
-
-// ETC
-.card {
-	// 커뮤니티
-	&_list .card.community {
-		@include Shadow2;
-	}
-	&.community {
-		display: flex;
-		align-items: center;
-		position: relative;
-		flex-wrap: wrap;
-		margin-top:0.8rem;
-		border: 1px solid #f2f3f5;
-		border-radius: $RadiusLarge;
-		background-color: #fff;
-		.item_check {
-			width:3.2rem;
-			flex:none;
-		}
-		.item_body {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			width:100%;
-			align-items: center;
-			padding: 1.6rem;
-			.item_thumb {
-				width: 5.2rem;
-				height: 5.2rem;
-				margin-right: 1.2rem;
-				flex: none;
-			}
-			.item_title {
-				flex: 0 1 auto;
-				width: calc(100% - 6.4rem);
-				flex: none;
-				padding-right: 4.6rem;
-				.sub_txt {
-					color: #000;
-					&+.title {
-						margin-top: 0.2rem;
-					}
-				}
-				.title {
-					font-size: 1.6rem;
-					line-height: 2rem;
-					font-weight: 700;
-					color: #000;
-					@include Ellipsis2;
-				}
-			}
-		}
-		.item_util {
+	&_thumb {
+		.ribon {
 			position: absolute;
-			top: 3.2rem;
-			right: 2rem;
+			right: 0.8rem;
+			top: 0;
 			z-index: 10;
-			margin-left:1.2rem;
-			.checkbox.rating {
-				margin: 0;
-				.icon {
-					content: "";
-					width: 2.2rem;
-					height: 2.2rem;
-					display: block;
-					background-color: #ddd;
-					&.active {
-						background-color: $ColorPrimary;
-					}
-					&::before {
-						display: none;
-					}
-				}
+			width: 2.4rem;
+			height: 2.4rem;
+			border-radius: 0;
+			&::before {
+				width:2.4rem;
+				height:2.4rem;
+				background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
 			}
-		}
-		.item_foot {
-			display: block;
-			margin-top: 1.6rem;
-			@include FontBody14;
-			color: $ColorSubTxt;
-			overflow: hidden;
-			width:100%;
-			.desc + .info_area {
-				margin-top: 1.2rem;
-			}
-			.info_area {
-				display: flex;
-				align-items: center;
-				width:100%;
-				overflow: hidden;
-				@include FontBody13;
+			&.is_active {
 				&::before {
-					content:'';
-					position: relative;
-					top:1px;
-					display:flex;
-					width:1.6rem;
-					height:1.6rem;
-					margin:0 0.4rem 0 0;
-					background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
-				}
-				.username {
-					flex: 0 1 auto;
-					@include Ellipsis1;
-				}
-				.member {
-					display: flex;
-					align-items: center;
-					flex: none;
-					margin-right:1rem;
-					&::before {
-						content: "";
-						display: block;
-						width: 1px;
-						height: 1rem;
-						margin-right: 0.8rem;
-						margin-left: 0.8rem;
-						background-color: #CBCDCF;
-					}
-				}
-				.ico.lock {
-					flex:none;
-					margin-left: auto;
-					width: 1.6rem;
-					height: 1.6rem;
-					background-image: url('../img/icons_16_ic_lock_black.svg');
+					background-position: center bottom;
 				}
 			}
 		}
 	}
-
-	// 피드
-	&_list .card.feed {
-		@include Shadow2;
-	}
-	&.feed {
-		display: flex;
-		align-items: center;
-		position: relative;
-		flex-wrap: wrap;
-		margin-top:0.8rem;
-		border: 1px solid #f2f3f5;
-		border-radius: $RadiusLarge;
-		background-color: #fff;
-		.item_check {
-			width:3.2rem;
-			flex:none;
-		}
-		.item_body {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			width:100%;
-			align-items: center;
-			padding: 1.6rem;
-			.item_thumb {
-				width: 5.2rem;
-				height: 5.2rem;
-				margin-right: 1.2rem;
-				flex: none;
+	&_foot {
+		.btn.ico {
+			&.file {
+				padding:0;
 			}
-			.item_title {
-				.sub_txt {
-					color: #000;
-					&+.title {
-						margin-top: 0.4rem;
-					}
-				}
-				.title {
-					font-size: 1.6rem;
-					line-height: 2rem;
-					font-weight: 700;
-					color: #000;
-					@include Ellipsis2;
-				}
+			&.file::before {
+				content:"";
+				width:2rem;
+				height:2rem;
+				background-color:#ddd;
 			}
-		}
-		.item_cont {
-			display: block;
-			margin-top: 0.8rem;
-			@include FontBody14;
-			color: $ColorSubTxt;
-			overflow: hidden;
-			width:100%;
-			.desc {
-				color:#000;
-			}
-			.desc + .item_info {
-				margin-top: 1.2rem;
-			}
-			.item_info {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				width:100%;
-				margin-top: 1.6rem;
-				@include FontBody14;
-				color :#75777b;
-				> .left{
-					display: flex;
-					align-items: center;
-					flex:0 1 auto;
-					overflow: hidden;
-					span{
-						display: inline-block;
-					}
-					.avata {
-						margin-right : 0.6rem;
-						width :2rem;
-						height : 2rem;
-					}
-					.name{
-						@include Ellipsis1;
-					}
-					.time {
-						display:flex;
-						align-items: center;
-						margin-right:2rem;
-						flex:none;
-						color:#a4a6aa;
-					}
-				}
-				> .right {
-					display: flex;
-					align-items: center;
-					flex:none;
-					.label {
-						&:first-child{
-							margin-left: 0;
-						}
-						&::before{
-							content:'';
-							display:inline-block;
-							margin-right : .4rem;
-							width : 1.6rem;
-							height : 1.6rem;
-						}
-					}
-				}
-				.bar {
-					display:inline-block;
-					width:1px;
-					height:1rem;
-					margin:0 0.8rem;
-					background-color: #f2f3f5;
-				}
-			}
-		}
-		.item_foot {
-			display:flex;
-			width:100%;
-			height:4.8rem;
-			align-items: center;
-			padding:0 1.6rem;
-			border-top:1px solid #f2f3f5;
-			> .left {
-				display:flex;
-				align-items: center;
-				.btn + .btn {
-					margin-left:2rem;
-				}
-			}
-			> .right {
-				margin-left:auto;
-			}
-			.btn.share::before {
-				width:2.4rem;
-				height:2.4rem;
-				background-image: url('../img/icons_24_ic_share_black.svg');
-			}
-			.btn.bookmark::before {
-				width:2.4rem;
-				height:2.4rem;
-				background-image: url('../img/icons_24_ic_bookmark_off_on_2.svg');
-			}
-			.btn.bookmark.is_active::before {
-				background-position-y: bottom;
-			}
-			.btn.like {
-				color:$ColorSubTxt;
-			}
-			.btn.like::before {
-				content:'';
-				display:block;
-				width:2.4rem;
-				height:2.4rem;
-				margin-right:0.4rem;
-				background-image: url('../img/icons_24_ic_like_off_on.svg');
-			}
-			.btn.like.is_active::before {
-				background-position-y: bottom;
+			&.learning::before {
+				content:"";
+				width:2rem;
+				height:2rem;
+				background-image: url('../img/icons_20_ic_cubelist_black.svg');
 			}
 		}
 	}
 }
 
-// cube내 해당과정
-.card.cube_parents{
+// Cube
+.card_cube {
+	position: relative;
+	flex:none;
+	width: 15.6rem;
+	height: 23rem;
+	background-color: #fff;
+	border-radius: $RadiusLarge;
+	box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.02), 0px 5px 22px rgba(0, 0, 0, 0.04), 0px 7px 8px rgba(0, 0, 0, 0.06);
+	&_slide {
+		display:flex;
+		overflow-x: auto;
+		margin:0 -2rem -2.4rem;
+		padding:0 2rem 2.4rem;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		.card_cube + .card_cube {
+			margin-left:0.8rem;
+		}
+	}
+	.card_inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+		height:100%;
+	}
+	.card_thumb {
+		position: relative;
+		flex: none;
+		width: 100%;
+		height: 9rem;
+	}
+	.card_body {
+		flex: 1 1 auto;
+		padding: 1rem;
+		.sub_txt {
+			+.title {
+				margin-top: 0.4rem;
+			}
+		}
+		.title {
+			height: 6rem;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			color: #000;
+			@include Ellipsis3;
+		}
+	}
+	.card_foot {
+		flex: none;
+		position: absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem 1rem 1rem;
+	}
+}
+
+// Cube 내 해당과정
+.card_cube_parents{
 	.card_inner{
 		padding:1.6rem;
 		display: flex;
 		align-items: center;
 		border : 0.1rem solid $FormBasicBorder;
 		border-radius: 0.8rem;
+		background-color: #ffffff;
 	}
 	.card_thumb {
 		position: relative;
@@ -702,12 +151,604 @@
 	}
 }
 
+// Topic
+.card_topic {
+	&_slide {
+		display:flex;
+		overflow-x: auto;
+		margin:0 -2rem;
+		padding:0 2rem;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		.card_topic + .card_topic {
+			margin-left:0.8rem;
+		}
+	}
+	.card_inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 15.6rem;
+		height: 20.0rem;
+		overflow: hidden;
+		border-radius: $RadiusLarge;
+		color: #fff;
+		padding: 1.6rem 1rem;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	.card_thumb {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		width:100%;
+		height:100%;
+	}
+	.card_body {
+		position: relative;
+		display: flex;
+		flex: 1 0 auto;
+		z-index: 10;
+		.title {
+			height: 6rem;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			color: inherit;
+			@include Ellipsis3;
+		}
+	}
+	.card_foot {
+		position: relative;
+		z-index: 10;
+		font-size: 1.6rem;
+	}
+}
+
+// Playlist Basic
+.card_playlist {
+	position: relative;
+	margin-top:0.8rem;
+	.card_inner {
+		display: block;
+		padding: 1.6rem;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+		@include Shadow2;
+	}
+	.card_head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom:0.8rem;
+		.label.make {
+			color:$ColorPlaylistMake;
+		}
+		.label.buy {
+			color:$ColorPlaylistBuy;
+		}
+		.label.recom {
+			color:$ColorPlaylistRecom;
+		}
+	}
+	.card_body {
+		.title {
+			color: #000;
+			@include FontBody14;
+			@include Ellipsis2;
+		}
+	}
+	.card_foot {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 1.2rem;
+		width:100%;
+		@include FontBody13;
+		.profile {
+			display: flex;
+			align-items: center;
+			flex:0 1 auto;
+			overflow: hidden;
+			// width: calc(100% - 5rem);
+			.avata {
+				flex: none;
+				width: 2rem;
+				height: 2rem;
+				margin-right: 0.4rem;
+			}
+			.name {
+				flex: 0 1 auto;
+				display: block;
+				@include Ellipsis1;
+			}
+		}
+		.count {
+			display:flex;
+			align-items: center;
+			flex:none;
+			margin-left:0.8rem;
+			color: #a4a6aa;
+			&::before {
+				content:"";
+				display:block;
+				width:1px;
+				height:1.2rem;
+				background-color: #F2F3F5;
+				margin-right:0.8rem;
+			}
+		}
+	}
+	.btn.text.buy {
+		position: absolute;
+		top:1.6rem;
+		right:1.6rem;
+		padding:0;
+		&::before {
+			position: relative;
+			top:1px;
+			content:'';
+			display:block;
+			width:1.6rem;
+			height:1.6rem;
+			margin-right:0.2rem;
+			background: url('../img/icons_16_ic_addplaylist_orange.svg') no-repeat center center / 100% auto;
+		}
+	}
+}
+
+// Playlist Main
+.card_playlist_main {
+	flex:none;
+	width: 15.6rem;
+	&_slide {
+		display:flex;
+		overflow-x: auto;
+		margin:0 -2rem;
+		padding:0 2rem;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		.card_playlist_main + .card_playlist_main {
+			margin-left:0.8rem;
+		}
+	}
+	// Layout
+	.card_inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+	}
+	.card_thumb {
+		position: relative;
+		flex: none;
+	}
+	.card_body {
+		flex: 1 1 auto;
+		margin-top: 0.4rem;
+		.label {
+			display:block;
+			margin-bottom:0.4rem;
+			text-align: center;
+		}
+		.label.make {
+			color:$ColorPlaylistMake;
+		}
+		.label.buy {
+			color:$ColorPlaylistBuy;
+		}
+		.label.recom {
+			color:$ColorPlaylistRecom;
+		}
+		.title {
+			text-align: center;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			@include Ellipsis2;
+		}
+	}
+	.card_foot {
+		flex: none;
+	}
+	.thumb {
+		width: inherit;
+		height: 15.6rem;
+		border-radius: 50%;
+		.avata_name {
+			position: relative;
+			z-index: 10;
+			padding: 0 2rem;
+			.avata {
+				display: block;
+				margin: auto;
+				width: 4.8rem;
+				height: 4.8rem;
+			}
+			.name {
+				margin-top: 0.8rem;
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+				color: #fff;
+				text-align: center;
+				@include Ellipsis2;
+			}
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+// Badge
+.card_badge {
+	background-color: #fff;
+	border-radius: $RadiusLarge;
+	@include Shadow2;
+	margin-top:0.8rem;
+
+	.card_inner {
+		display:flex;
+		align-items: center;
+		background-color: #fff;
+		flex-wrap:wrap;
+		padding:1.6rem 1.6rem;
+		background-color: transparent;
+	}
+	.card_thumb {
+		flex:none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:9.2rem;
+		height:9.2rem;
+		margin-right:1.2rem;
+	}
+	.card_body {
+		flex:1 1 auto;
+		width:calc(100% - 10.4rem);
+		.title {
+			@include FontBody16;
+			@include Ellipsis2;
+		}
+		.count,
+		.date {
+			margin-top:0.4rem;
+			color:#A4A6AA;
+		}
+	}
+	.card_foot {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		height:4.8rem;
+		border-top:1px solid #F2F3F5;
+		.btn.text {
+			height:100%;
+			width:100%;
+		}
+	}
+}
+
+// Feed
+.card_feed {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	margin-top:0.8rem;
+	border: 1px solid #f2f3f5;
+	border-radius: $RadiusLarge;
+	background-color: #fff;
+	@include Shadow2;
+	.item_check {
+		width:3.2rem;
+		flex:none;
+	}
+	.item_body {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		width:100%;
+		align-items: center;
+		padding: 1.6rem;
+		.item_thumb {
+			width: 5.2rem;
+			height: 5.2rem;
+			margin-right: 1.2rem;
+			flex: none;
+		}
+		.item_title {
+			.sub_txt {
+				color: #000;
+				&+.title {
+					margin-top: 0.4rem;
+				}
+			}
+			.title {
+				font-size: 1.6rem;
+				line-height: 2rem;
+				font-weight: 700;
+				color: #000;
+				@include Ellipsis2;
+			}
+		}
+	}
+	.item_cont {
+		display: block;
+		margin-top: 0.8rem;
+		@include FontBody14;
+		color: $ColorSubTxt;
+		overflow: hidden;
+		width:100%;
+		.desc {
+			color:#000;
+		}
+		.desc + .item_info {
+			margin-top: 1.2rem;
+		}
+		.item_info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width:100%;
+			margin-top: 1.6rem;
+			@include FontBody14;
+			color :#75777b;
+			> .left{
+				display: flex;
+				align-items: center;
+				flex:0 1 auto;
+				overflow: hidden;
+				span{
+					display: inline-block;
+				}
+				.avata {
+					margin-right : 0.6rem;
+					width :2rem;
+					height : 2rem;
+				}
+				.name{
+					@include Ellipsis1;
+				}
+				.time {
+					display:flex;
+					align-items: center;
+					margin-right:2rem;
+					flex:none;
+					color:#a4a6aa;
+				}
+			}
+			> .right {
+				display: flex;
+				align-items: center;
+				flex:none;
+				.label {
+					&:first-child{
+						margin-left: 0;
+					}
+					&::before{
+						content:'';
+						display:inline-block;
+						margin-right : .4rem;
+						width : 1.6rem;
+						height : 1.6rem;
+					}
+				}
+			}
+			.bar {
+				display:inline-block;
+				width:1px;
+				height:1rem;
+				margin:0 0.8rem;
+				background-color: #f2f3f5;
+			}
+		}
+	}
+	.item_foot {
+		display:flex;
+		width:100%;
+		height:4.8rem;
+		align-items: center;
+		padding:0 1.6rem;
+		border-top:1px solid #f2f3f5;
+		> .left {
+			display:flex;
+			align-items: center;
+			.btn + .btn {
+				margin-left:2rem;
+			}
+		}
+		> .right {
+			margin-left:auto;
+		}
+		.btn.share::before {
+			width:2.4rem;
+			height:2.4rem;
+			background-image: url('../img/icons_24_ic_share_black.svg');
+		}
+		.btn.bookmark::before {
+			width:2.4rem;
+			height:2.4rem;
+			background-image: url('../img/icons_24_ic_bookmark_off_on_2.svg');
+		}
+		.btn.bookmark.is_active::before {
+			background-position-y: bottom;
+		}
+		.btn.like {
+			color:$ColorSubTxt;
+		}
+		.btn.like::before {
+			content:'';
+			display:block;
+			width:2.4rem;
+			height:2.4rem;
+			margin-right:0.4rem;
+			background-image: url('../img/icons_24_ic_like_off_on.svg');
+		}
+		.btn.like.is_active::before {
+			background-position-y: bottom;
+		}
+	}
+}
+
+// Community
+.card_community {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	margin-top:0.8rem;
+	border: 1px solid #f2f3f5;
+	border-radius: $RadiusLarge;
+	background-color: #fff;
+	&_list .card_community {
+		@include Shadow2;
+	}
+	.item_check {
+		width:3.2rem;
+		flex:none;
+	}
+	.item_body {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		width:100%;
+		align-items: center;
+		padding: 1.6rem;
+		.item_thumb {
+			width: 5.2rem;
+			height: 5.2rem;
+			margin-right: 1.2rem;
+			flex: none;
+		}
+		.item_title {
+			flex: 0 1 auto;
+			width: calc(100% - 6.4rem);
+			flex: none;
+			padding-right: 4.6rem;
+			.sub_txt {
+				color: #000;
+				&+.title {
+					margin-top: 0.2rem;
+				}
+			}
+			.title {
+				font-size: 1.6rem;
+				line-height: 2rem;
+				font-weight: 700;
+				color: #000;
+				@include Ellipsis2;
+			}
+		}
+	}
+	.item_util {
+		position: absolute;
+		top: 3.2rem;
+		right: 2rem;
+		z-index: 10;
+		margin-left:1.2rem;
+		.checkbox.rating {
+			margin: 0;
+			.icon {
+				content: "";
+				width: 2.2rem;
+				height: 2.2rem;
+				display: block;
+				background-color: #ddd;
+				&.active {
+					background-color: $ColorPrimary;
+				}
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	.item_foot {
+		display: block;
+		margin-top: 1.6rem;
+		@include FontBody14;
+		color: $ColorSubTxt;
+		overflow: hidden;
+		width:100%;
+		.desc + .info_area {
+			margin-top: 1.2rem;
+		}
+		.info_area {
+			display: flex;
+			align-items: center;
+			width:100%;
+			overflow: hidden;
+			@include FontBody13;
+			&::before {
+				content:'';
+				position: relative;
+				top:1px;
+				display:flex;
+				width:1.6rem;
+				height:1.6rem;
+				margin:0 0.4rem 0 0;
+				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+			}
+			.username {
+				flex: 0 1 auto;
+				@include Ellipsis1;
+			}
+			.member {
+				display: flex;
+				align-items: center;
+				flex: none;
+				margin-right:1rem;
+				&::before {
+					content: "";
+					display: block;
+					width: 1px;
+					height: 1rem;
+					margin-right: 0.8rem;
+					margin-left: 0.8rem;
+					background-color: #CBCDCF;
+				}
+			}
+			.ico.lock {
+				flex:none;
+				margin-left: auto;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url('../img/icons_16_ic_lock_black.svg');
+			}
+		}
+	}
+}
+
 //cube 내 해당과정 - dark
 .theme_dark{
     //큐브내 해당과정
     .card.cube_parents{
         .card_inner{
+			background-color: #151617;
             border-color: #44464a;
         }
     }
 }
+

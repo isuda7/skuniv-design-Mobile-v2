@@ -78,6 +78,7 @@ function setResized(){
 var layoutHasClass = {
 	init: function(){
 		// 페이지
+		($('.container').find('.appnav').length) && this.hasPage('has_appnav'); // 네비게이션이 있을 때
 		($('.container').find('.sticky').length) && this.hasPage('has_sticky'); // 스티키가 있을 때
 		($('.container').find('.page_floating').length) && this.hasPage('has_floating'); // 하당고정 플로팅이 있을 때
 		($('.container').find('.page_expand').length) && this.hasPage('has_expand'); // 하당고정 더보기가 있을 때
