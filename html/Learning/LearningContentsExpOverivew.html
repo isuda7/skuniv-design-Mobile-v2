@@ -12,37 +12,40 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-	<script>
+    <script>
 		$(function(){
-            // Appbar Transition
-            var $appbar = $('.appbar');
-            var $appbarTitle = $('.appbar_title');
 			$(window).scroll(function(){
-                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-                var scrollTop = $(window).scrollTop();
-				// appbar_title이 appbar밑으로 절반이상 사라질때
-				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
-			});
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
 
-            // LandscapeMode
-            $(window).on('touchstart', function(e){
-                var orientation = window.orientation;
-                if (orientation != undefined){
-                    (orientation !== 0) && $('.appbar').toggleClass('is_hide');
-                }
-            })
-            $(window).on('resize', function(e){
-                var orientation = window.orientation;
-                if(orientation != undefined){
-                    (orientation === 0) ? $('.appbar').removeClass('is_hide') : $('.appbar').addClass('is_hide');
-                }
-            })
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
 		});
-	</script>
+        
+        // Alert
+        function ModalAlertOpen(id){
+            $(id).addClass("is_visible is_active");
+            $("body").addClass("is_dimmed");
+        };
+        function ModalAlertClose(id){
+            $(id).removeClass("is_active").on('transitionend', function(){
+                if (!$(id).hasClass('is_active')) {
+                    $(id).removeClass("is_visible");
+                    $("body").removeClass("is_dimmed");
+                }
+            })
+        };
+    </script>
 </head>
-<!-- 가로 모드 -->
 <body>
-<div class="sub_wrapper theme_dark has_full_landscape">
+<div class="sub_wrapper theme_dark has_sticky has_floating">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -58,38 +61,8 @@
     <!-- // Header -->
 
 	<!-- Container -->
-    <main role="main" class="container learning_container document_page">
-        <div class="content_head">
-            <!-- documentviewer -->
-            <div class="doc_viewer full_landscape">
-                <div class="doc_area">
-                    <div class="doc_wrap flex_area centered">
-                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
-                    </div>
-                    <div class="doc_pagination">
-                        <a href="javascript:void(0)" class="doc_act prev"><span class="blind">prev 이동</span></a>
-                        <div class="pages_num">
-                            <span>23</span>
-                            <span> / </span>
-                            <span>50</span>
-                        </div>
-                        <a href="javascript:void(0)" class="doc_act next"><span class="blind">next 이동</span></a>
-                    </div>
-                </div>
-                <div class="doc_info_area">
-                    <div class="doc_bar_wrap">
-                        <span class="doc_bar" style="width : 46%"></span>
-                    </div>
-                    <div class="doc_link_wrap">
-                        <div class="label_tit link"><span>PDF</span></div>
-                        <div class="doc_cnt"><span>1</span><span>/</span><span>2</span></div>
-                        <div class="doc_name"><a href="javascript:void(0)" class="ach ico">[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</a></div>
-                    </div>
-                </div>
-            </div>
-            <!-- // documentviewer -->
-        </div>
-        <div class="content_body document_content">
+    <main role="main" class="container learning_container experiential_page">
+        <div class="content_body experiential_content">
             <!-- 과정제목 -->
             <div class="learning_subject">
                 <div class="title_area">
@@ -97,38 +70,29 @@
                     <h1 class="title appbar_title"><strong>[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
                 </div>
                 <div class="info_area">
-                    <span class="label document">Document</span>
+                    <span class="label experiential">Experiential</span>
                     <span class="label time">30m</span>
                 </div>
                 <div class="learning_attachment">
-                    <div class="att_title">
-                        <h2 class="sub_title"><strong>첨부파일</strong><strong class="cnt">2</strong></h2>
-                        <button type="button" class="btn down_all">전체 다운로드</button>
-                    </div>
-                    <div class="att_list">
-                        <div class="cube_references">
-                            <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
-                                <p class="bytes">249KB</p>
-                            </div>
-                            <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
-                            </div>
+                    <!-- link -->
+                    <div class="link_wrap">
+                        <h2 class="sub_title">URL</h2>
+                        <div class="link_url">
+                            <a class="anchor" href="javascript:void(0)">
+                                <div class="link_body">
+                                    <div class="link_thumb">
+                                        <span class="thumb" style="background-image: url('');"></span>
+                                    </div>
+                                    <div class="link_title">
+                                        <p class="title">인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까? 인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까?</p>
+                                        <p class="url">https://mysuni.sk.com/suni_main/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="cube_references">
-                            <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
-                                <p class="bytes">249KB</p>
-                            </div>
-                            <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
-                            </div>
-                        </div>
+                        <p class="l_guide">* 학습 특성상 PC학습을 권장합니다.</p>
                     </div>
+                    <!-- // link -->
                 </div>
             </div>
             <!-- //과정제목 -->
@@ -142,16 +106,16 @@
                     </div>
                 </div>
             </div>
-
+            <!-- //학습과정 탭 -->
             <div class="tab_panel overview_page">
                 <!-- 과정 Overview -->
                 <div class="cube_overview">
                     <ul>
                         <li class="item_complete done">11,247명 이수</li>
-                        <li class="item_part basic">basic</li>
+                        <!-- <li class="item_part basic">basic</li> -->
                         <li class="item_part intermediate">Intermediate</li>
-                        <li class="item_part advanced">advanced</li>
-                        <li class="item_part expert">expert</li>
+                        <!-- <li class="item_part advanced">advanced</li> -->
+                        <!-- <li class="item_part expert">expert</li> -->
                         <li class="item_contact">이름 두 줄 이상일 경우, 버튼이 밑줄에 맞춰집니다.</li>
                     </ul>
                     <button type="button" class="btn text arw_link">문의하기</button>
@@ -171,7 +135,7 @@
                 <!-- 해당과정 -->
                 <div class="learning_sec">
                     <div class="sec_head">
-                        <h2 class="heading2">해당 과정</h2>
+                        <h2 class="heading2">해당과정</h2>
                     </div>
                     <div class="sec_body">
                         <div class="card cube_parents">
@@ -188,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- // 해당과정 -->
+                <!--  // 해당과정 -->
 
                 <!-- Cube Section -->
                 <div class="learning_sec">
@@ -196,21 +160,21 @@
                         <h2 class="heading2">정보</h2>
                     </div>
                     <div class="sec_body">
-                        <h3 class="heading3">학습목표</h3>
+                        <h3 class="heading3">학습목표</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">
                                 반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
                             </p>
                         </div>
-                        <h3 class="heading3">대상</h3>
+                        <h3 class="heading3">대상</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">모든 구성원</p>
                         </div>
-                        <h3 class="heading3">교육기관 출처</h3>
+                        <h3 class="heading3">교육기관 출처</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">SK mySUNI</p>
                         </div>
-                        <h3 class="heading3">이수조건</h3>
+                        <h3 class="heading3">이수조건</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">진도율 100%</p>
                         </div>
@@ -273,46 +237,39 @@
                     </div>
                 </div>
                 <!-- // 강사 -->
-                <!-- floating btn -->
+                
+                <!-- 버튼-->
                 <div class="page_floating">
                     <div class="page_action">
-                        <button type="button" class="btn basic primary">학습완료</button>
+                        <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalConfirm')">학습시작</button>
                     </div>
                 </div>
-                <!-- // floating btn -->
+                <!-- // 버튼-->
             </div>
+            <!-- // 학습과정 탭 -->
         </div>
     </main>
     <!-- // Container -->
 
+    <!-- Modal Confirm -->
+    <div class="modal_wrap" id="ModalConfirm">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">강의시작</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">외부 사이트로 이동 후 학습을 시작합니다.<br/>계속 진행하시겠습니까?</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text" onclick="ModalAlertClose('#ModalConfirm')">취소</button>
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalConfirm')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Confirm -->
+
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
-<!-- Modal Bottomsheet -->
-<div class="modal_wrap modal_landscape">
-    <div class="modal modal_bottomsheet modal_select theme_dark">
-        <div class="modal_header">
-            <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
-            <h3 class="modal_tit">PDF (2)</h3>
-        </div>
-        <div class="modal_content">
-            <ul class="select_list">
-                <li>
-                    <div class="radio option">
-                        <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" checked/>
-                        <label for="selectlist1"><span>[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</span></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="radio option">
-                        <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
-                        <label for="selectlist2"><span>[보충학습자료] 꿀잼반도체2.pdf</span></label>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- <div class="dimmer" aria-hidden="true"></div> -->
-</div>
-<!-- // Modal Bottomsheet -->
 </body>
 </html>
