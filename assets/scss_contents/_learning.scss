@@ -1456,9 +1456,12 @@
 	.comment_body {
         border-top:1px solid #33353c;
         background-color: #000000;
-		.right {
-			.btn.send::before {
+		.right .btn.send {
+			&::before {
 				background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+			}
+			&.is_active::before {
+				background-image: url('../img/icons_24_ic_send_active.svg');
 			}
 		}
 	}
