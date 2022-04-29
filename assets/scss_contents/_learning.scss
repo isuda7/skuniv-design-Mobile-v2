@@ -627,7 +627,7 @@
 	}
 }
 .theme_dark .cube_infolist {
-	background: #25272B;
+	background: #151617;
 	color:#F8F8FA;
 	.item .date {
 		color:#A4A6AA;
@@ -1456,9 +1456,12 @@
 	.comment_body {
         border-top:1px solid #33353c;
         background-color: #000000;
-		.right {
-			.btn.send::before {
+		.right .btn.send {
+			&::before {
 				background-image: url('../img/icons_24_ic_send_inactive_grey_07.svg');
+			}
+			&.is_active::before {
+				background-image: url('../img/icons_24_ic_send_active.svg');
 			}
 		}
 	}

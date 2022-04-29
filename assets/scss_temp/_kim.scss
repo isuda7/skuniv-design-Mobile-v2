@@ -717,9 +717,33 @@
 }
 
 //E-learning
+.elearning_ico {
+    flex: none;
+    display: block;
+}
 .elearning_page {
-    .cube_infolist {
+    .request_info {
         margin:2rem 0 3.2rem 0;
+        .heading2 {
+            margin-bottom:0.8rem;
+        }
+        .cube_infolist {
+            > .item {
+                display: flex;
+                align-items: center;
+                > .title {
+                    flex: none;
+                    display: block;
+                    width:7.7rem;
+                }
+            }
+        }
+        .notice_txt {
+            @include FontBody12;
+            color:#75777b;
+            display: block;
+            margin-top:0.8rem;
+        }
     }
     .degree_page {
         padding-top:2rem;
