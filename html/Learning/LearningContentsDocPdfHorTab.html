@@ -25,17 +25,17 @@
 				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
 			});
 
-            // LandspaceMode
+            // LandscapeMode
             $subWrapper.on('touchstart', function(e){
                 var orientation = window.orientation;
                 if (orientation != undefined){
-                    (orientation == 90) && $('.appbar').toggleClass('is_hide');
+                    (orientation == 90) && $appbar.toggleClass('is_hide');
                 }
             })
             $(window).on('resize', function(e){
                 var orientation = window.orientation;
                 if(orientation != undefined){
-                    (orientation == 0) ? $('.appbar').removeClass('is_hide') : $('.appbar').addClass('is_hide');
+                    (orientation == 0) ? $appbar.removeClass('is_hide') :$appbar.addClass('is_hide');
                 }
             })
 		});
