@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_setTarget">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">학습 목표 설정</h3>
+            </div>
+            <div class="modal_content">
+				<div class="setTarget_sec">
+                    <div class="setTarget_form1">
+                        <div class="form_row">
+                            <label for="setTargetForm1" class="form_tit">올해 학습 목표</label>
+                            <div class="form_input">
+                                <input type="text" id="setTargetForm1" value="200" class="basic" />
+                            </div>
+                            <span class="form_txt">시간</span>
+                        </div>
+                        <div class="form_row">
+                            <span class="form_tit">일주일에</span>
+                            <div class="form_input">
+                                <!-- <button type="button" class="btn select">선택</button> -->
+                                <button type="button" class="btn select is_valued">3일</button>
+                            </div>
+                            <span class="form_txt">출석</span>
+                        </div>
+                        <div class="form_row">
+                            <label for="setTargetForm3" class="form_tit">하루에</label>
+                            <div class="form_input">
+                                <input type="text" id="setTargetForm3" value="30" class="basic" />
+                            </div>
+                            <span class="form_txt">분</span>
+                        </div>
+                    </div>
+                    <div class="setTarget_form2">
+                        <div class="sec_head">
+                            <div class="left_area">
+                                <h4 class="heading2">학습 알리미 설정</h4>
+                                <p class="explain">알림을 설정하고 목표 달성률을 높여보세요</p>
+                            </div>
+                            <div class="right_area">
+                                <div class="toggle basic">
+                                    <input type="checkbox" name="toggle1" id="toggle1" tabindex="0" class="hidden"/>
+                                    <label for="toggle1"><span class="blind">Toggle</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sec_body">
+                            <div class="selecection">
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week1" tabindex="0" class="hidden" checked/>
+									<label for="week1">월</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week2" tabindex="0" class="hidden" />
+									<label for="week2">화</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week3" tabindex="0" class="hidden" />
+									<label for="week3">수</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week4" tabindex="0" class="hidden" />
+									<label for="week4">목</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week5" tabindex="0" class="hidden" />
+									<label for="week5">금</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week6" tabindex="0" class="hidden" />
+									<label for="week6">토</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week7" tabindex="0" class="hidden" />
+									<label for="week7">일</label>
+								</div>
+                            </div>
+                            <div class="input_group time">
+                                <input type="text" value="오전 09:30" class="basic" />
+                                <button type="button" class="btn ico time"><div class="blind">시간선택</div></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">완료</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>

@@ -252,7 +252,7 @@
     }
 }
 
-// 학습현황
+// 학습 현황
 .myLearning_status {
     display: flex;
     padding:2rem;
@@ -312,7 +312,7 @@
     }
 }
 
-// 학습목표
+// 학습 목표
 .myLearning_target {
     .schedule_target {
         display:flex;
@@ -431,7 +431,7 @@
     }
 }
 
-// 학습리포트
+// 학습 리포트
 .mylearning_report {
     padding:2.8rem 2rem 2rem 2rem;
     border-radius: $RadiusLarge;
@@ -596,6 +596,65 @@
                 .item + .item {
                     margin-top:0.8rem;
                 }
+            }
+        }
+    }
+}
+
+// 학습 목표 설정
+.setTarget_sec {
+    padding-bottom:1.6rem;
+    .setTarget_form1 {
+        display:table;
+        .form_row {
+            display:table-row;
+            .form_tit,
+            .form_input,
+            .form_txt {
+                display:table-cell;
+                vertical-align: middle;
+                padding:0.8rem 0;
+            }
+            .form_tit {
+                width:100%;
+                @include FontBody16;
+            }
+            .form_input {
+                input.basic {
+                    width:8.4rem;
+                }
+            }
+            .form_txt {
+                padding-left:0.6rem;
+                text-align: center;
+                white-space: nowrap;
+                color: #a4a6aa;
+            }
+        }
+    }
+    .setTarget_form2 {
+        margin-top:2.4rem;
+        padding-top:0.8rem;
+        border-top:1px solid #f2f3f5;
+        .sec_head {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:1.5rem 0;
+            .explain {
+                margin-top:0.2rem;
+                @include FontBody13;
+                color:#a4a6aa;
+            }
+        }
+        .sec_body {
+            display:none;
+            margin-top:0.8rem;
+            .input_group.time {
+                margin-top:2rem;
+            }
+            &.is_visible {
+                display:block;
             }
         }
     }

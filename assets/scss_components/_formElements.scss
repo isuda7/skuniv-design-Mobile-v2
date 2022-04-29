@@ -391,3 +391,42 @@ textarea.basic {
         -webkit-appearance: none;
     }
 }
+
+.selecection {
+    display:flex;
+    .checkbox {
+        display:flex;
+        flex:1 1 auto;
+        label {
+            display:block;
+            height:4rem;
+            width:100%;
+            background-color: #f8f8fa;
+            border:1px solid #f2f3f5;
+            color:$ColorSubTxt;
+            border-radius: $RadiusSmall;
+            text-align: center;
+            padding-top:1.4rem;
+            &::before {
+                content:'';
+                display:block;
+                left:calc(50% - 0.8rem);
+                top:0.3rem;
+                width:1.6rem;
+                height:1.6rem;
+                background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 100% auto;
+            }
+        }
+        input:checked + label {
+            color: $ColorPrimary;
+            background-color: #fff;
+            border-color: $ColorPrimary;
+            &::before {
+                background-image: url('../img/icons_16_ic_check_primary.svg');
+            }
+        }
+    }
+    .checkbox + .checkbox {
+        margin-left:0.2rem;
+    }
+}

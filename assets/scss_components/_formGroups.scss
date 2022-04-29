@@ -94,4 +94,20 @@
             }
         }
     }
+    &.time {
+        .btn.time {
+            position: absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            justify-content: flex-end;
+            padding:0 1.3rem;
+            &::before {
+                width:1.6rem;
+                height:1.6rem;
+                background-image:url('../img/icons_16_ic_time_grey_05.svg');
+            }
+        }
+    }
 }
