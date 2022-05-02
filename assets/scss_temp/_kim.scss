@@ -760,3 +760,24 @@
         margin-top:2.4rem;
     }
 }
+
+//Test
+.test_container {
+    .test_information {
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before {
+                content:"";
+                margin-right:0.4rem;
+                width:1.6rem;
+                height:1.6rem;
+                background-image:url('../img/icons_16_ic_test_grey_06.svg');
+            }
+        }
+    }
+	.desc {
+		@include FontBody12;
+	}
+}

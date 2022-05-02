@@ -1487,7 +1487,16 @@
         margin-bottom:2.4rem;
         @include FontTitle14;
         color:$ColorSubTxt;
-        text-align: center;
+        display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content:"";
+			margin-right:0.4rem;
+			width:1.6rem;
+			height:1.6rem;
+			background-image:url('../img/icons_16_ic_test_grey_06.svg');
+		}
     }
     .subject_area {
         text-align: center;
@@ -1536,6 +1545,9 @@
                 @include FontTitle14;
                 color:#000;
             }
+			.desc {
+				@include FontBody12;
+			}
         }
     }
 }
@@ -1543,6 +1555,7 @@
 // 이수정보
 .course_define {
     margin-top:auto;
+	padding-top:2rem;
     .label_area {
         margin-bottom:0.8rem;
     }
