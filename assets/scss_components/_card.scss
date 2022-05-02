@@ -146,8 +146,18 @@
 		}
 	}
 	.sub_txt {
+		color :#a4a6aa;
 		@include FontBody12;
 		@include Ellipsis1;
+	}
+}
+.theme_dark .card_cube_parents{
+	.card_inner {
+		background: transparent;
+		border-color: #44464a;
+		.title{
+			color : #f2f3f5;
+		}
 	}
 }
 
