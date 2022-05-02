@@ -1559,9 +1559,6 @@
                 @include FontTitle14;
                 color:#000;
             }
-			.desc {
-				@include FontBody12;
-			}
         }
     }
 }
@@ -1592,6 +1589,7 @@
     .desc_area {
         margin-top:2rem;
         .desc {
+			@include FontBody12;
             position: relative;
             padding-left:1rem;
             color:#a4a6aa;
@@ -1604,7 +1602,6 @@
         }
     }
 }
-
 // 평가그래프
 .review_graph {
     padding:2rem;
