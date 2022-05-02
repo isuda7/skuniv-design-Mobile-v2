@@ -319,6 +319,7 @@
 
 // Playlist Main
 .card_playlist_main {
+	position: relative;
 	flex:none;
 	width: 15.6rem;
 	&_slide {
@@ -333,7 +334,6 @@
 			margin-left:0.8rem;
 		}
 	}
-	// Layout
 	.card_inner {
 		position: relative;
 		display: flex;
@@ -407,6 +407,19 @@
 			background-color: rgba(0, 0, 0, 0.5);
 		}
 	}
+	.btn.ico.remove {
+		position: absolute;
+		right: 0;
+		top: 1.6rem;
+		width:2.4rem;
+		height:2.4rem;
+		z-index:10;
+		&::before {
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_clear_grey_04.svg');
+		}
+	}
 }
 
 // Badge
@@ -456,6 +469,46 @@
 		.btn.text {
 			height:100%;
 			width:100%;
+		}
+	}
+}
+
+// Badge Group
+.card_badge_group {
+	background-color: #fff;
+	border-radius: $RadiusLarge;
+	@include Shadow3;
+	margin-top:0.8rem;
+	padding:0 1.6rem;
+	.card_item {
+		display:flex;
+		align-items: center;
+		background-color: #fff;
+		padding:1.6rem 0;
+		background-color: transparent;
+		& + .card_item {
+			border-top:1px solid #f2f3f5;
+		}
+	}
+	.card_thumb {
+		flex:none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width:5.2rem;
+		height:5.2rem;
+		margin-right:1.2rem;
+	}
+	.card_body {
+		flex:1 1 auto;
+		width:100%;
+		.title {
+			@include FontBody16;
+			@include Ellipsis2;
+		}
+		.count {
+			margin-top:0.4rem;
+			color:#A4A6AA;
 		}
 	}
 }
@@ -622,6 +675,113 @@
 	}
 }
 
+// MyFeed
+.card_myfeed {
+	&_slide {
+		display:flex;
+		overflow-x: auto;
+		margin:-1rem -2rem -2.4rem;
+		padding:1rem 2rem 2.4rem;
+		&::-webkit-scrollbar {
+			display:none;
+		}
+		.card_myfeed + .card_myfeed {
+			margin-left:0.8rem;
+		}
+	}
+	position: relative;
+	width:15.6rem;
+	height:22rem;
+	padding:2.4rem 1rem 0;
+	border-radius: $RadiusLarge;
+	@include Shadow3;
+	> .btn.bookmark {
+		position:absolute;
+		right:1.2rem;
+		top:0;
+		&::before {
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_bookmark_on_primary.svg');
+		}
+	}
+	.card_inner {
+		display:block;
+	}
+	.card_body {
+		.labels {
+			display:flex;
+			.label {
+				height:1.7rem;
+				padding:0 0.2rem 0.2rem;
+				border-radius: 0.2rem;
+				font-size:1.2rem;
+				font-weight: 500;
+				line-height: 1.2rem;
+				&.myfeed {
+					color:$ColorPrimary;
+					background-color: rgba(255,107,86,0.2);
+				}
+				&.bookmark {
+					color:#60c2fa;
+					background-color: rgba(96,194,250,0.2);
+				}
+			}
+		}
+		.title {
+			margin-top:0.8rem;
+			font-weight: 700;
+			@include FontBody14;
+			@include Ellipsis2;
+		}
+		.para {
+			@include FontBody14;
+			@include Ellipsis2;
+		}
+	}
+	.card_foot {
+		margin-top:1.2rem;
+		.user_area {
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			.avata {
+				width:2rem;
+				height:2rem;
+				margin-right:0.4rem;
+			}
+			.name {
+				flex:0 1 auto;
+				@include Ellipsis1;
+				color:#666666;
+				line-height: 2rem;
+			}
+		}
+		.info_area {
+			display:flex;
+			justify-content: space-between;
+			margin-top:1.2rem;
+			.label {
+				justify-content: flex-start;
+				line-height: 2rem;
+				&::before {
+					content:'';
+					display:block;
+					width:1.6rem;
+					height:1.6rem;
+					margin-right:0.4rem;
+				}
+			}
+			.label.like::before {
+				background:url('../img/icons_16_ic_like_grey_04.svg') no-repeat center center / 100% auto;
+			}
+			.label.repley::before {
+				background:url('../img/icons_16_ic_comment_grey_04.svg') no-repeat center center / 100% auto;
+			}
+		}
+	}
+}
+
 // Community
 .card_community {
 	display: flex;
@@ -762,3 +922,34 @@
     }
 }
 
+// Card Empty
+.card_empty {
+	text-align: center;
+	&:not(.none_shadow) {
+		padding:3.6rem 2rem;
+		border-radius: $RadiusLarge;
+		background-color: #fff;
+		@include Shadow3;
+	}
+	.empty_explain {
+		margin-bottom:0.8rem;
+		color:#666;
+		@include FontBody12;
+	}
+	.empty_title {
+		@include FontTitle16;
+	}
+	.empty_primary {
+		margin-top:2rem;
+	}
+
+	&.badge {
+		.empty_primary {
+			display:flex;
+			justify-content: center;
+			.badge_box {
+				margin:0 0.4rem;
+			}
+		}
+	}
+}
