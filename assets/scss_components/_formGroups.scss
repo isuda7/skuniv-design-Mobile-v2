@@ -34,11 +34,12 @@
         .btn.clear {
             visibility:hidden;
             position:absolute;
-            top:0;
+            top:50%;
             right:0;
             height:$FormBasicHeight;
             width:$FormBasicHeight;
             padding:0;
+            transform: translateY(-50%);
             &::before {
                 content:"";
                 display:block;
@@ -48,7 +49,7 @@
             }
         }
         &.is_valued {
-            .btn.clear {
+            input:focus + .btn.clear {
                 visibility:visible;
             }
             input:disabled + .btn.clear {
@@ -107,6 +108,31 @@
                 width:1.6rem;
                 height:1.6rem;
                 background-image:url('../img/icons_16_ic_time_grey_05.svg');
+            }
+        }
+    }
+    &.cert {
+        input {
+            padding-right:10rem;
+        }
+        .form_cert {
+            display:none;
+            position: absolute;
+            right:1.6rem;
+            top:50%;
+            transform: translateY(-50%);
+            @include FontBody14;
+            strong {
+                color:rgba(255, 102, 77, 0.2);
+                margin-right:0.4rem;
+            }
+            em {
+                color:$ColorPrimary;
+            }
+        }
+        &.is_visible {
+            .form_cert {
+                display:flex;
             }
         }
     }

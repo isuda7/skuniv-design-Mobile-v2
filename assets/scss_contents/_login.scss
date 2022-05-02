@@ -35,11 +35,115 @@
 ///////////////////////////////////////////////////
 // Login Components
 ///////////////////////////////////////////////////
-
+// 폼제목
+.login_tit {
+    margin-bottom:1.6rem;
+}
+// 로그인폼
+.login_form {
+    input.basic {
+        height:4.8rem;
+    }
+    .form_row + .form_row {
+        margin-top:0.8rem;
+    }
+    .form_options {
+        margin-top:1.2rem;
+        .checkbox + .checkbox {
+            margin-left:1.6rem;
+        }
+    }
+    .form_action {
+        flex-direction: column;
+        padding:0;
+        margin-top:3.2rem;
+        .btn {
+            width:100%;
+            & + .btn {
+                margin-top:0.4rem;
+            }
+            &.basic {
+                height:5.2rem;
+                font-size:1.6rem;
+                line-height: 2rem;
+            }
+            &.text {
+                height:5.2rem;
+            }
+        }
+    }
+}
+// 비밀번호 초기화폼
+.pwclear_form {
+    & + .pwclear_form {
+        margin-top:4rem;
+    }
+    input.basic {
+        height:4.8rem;
+    }
+    .form_action {
+        padding:0;
+        margin-top:0.8rem;
+        .btn.basic {
+            width:100%;
+            height:5.2rem;
+            font-size:1.6rem;
+            line-height: 2rem;
+        }
+    }
+}
+// 비밀번호 재설정폼
+.pwreset_form {
+    .form_row + .form_row {
+        margin-top:2rem;
+    }
+    .form_tit {
+        display:block;
+        margin-bottom:0.8rem;
+        color:$ColorSubTxt;
+    }
+    input.basic {
+        height:4.8rem;
+    }
+}
+.help_floating {
+    position: absolute;
+    left:0;
+    bottom:4rem;
+    width:100%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    .btn.help {
+        @include FontBody13;
+        color:#a4a6aa;
+        &::before {
+            content:'';
+            display:block;
+            position: relative;
+            top:1px;
+            width:2rem;
+            height:2rem;
+            margin-right:0.4rem;
+            background: url('../img/icons_20_ic_information_grey_05.svg') no-repeat center center / 100% auto;
+        }
+    }
+}
 
 ///////////////////////////////////////////////////
 // Login Page
 ///////////////////////////////////////////////////
-.Login {
-    display: block;
+.login_container {
+    .content_body {
+        padding-top:11.8rem;
+        .login_header {
+            margin-bottom:5rem;
+            text-align: center;
+            h1 {
+                width:12.2rem;
+                height:3.5rem;
+                margin:0 auto;
+            }
+        }
+    }
 }
