@@ -675,7 +675,7 @@
 					display:block;
 					width:1.2rem;
 					height:1.2rem;
-					background-color: #555;
+					background-image: url('../img/icons_12_ic_file_grey_05.svg');
 				}
 			}
 		}
@@ -1559,9 +1559,6 @@
                 @include FontTitle14;
                 color:#000;
             }
-			.desc {
-				@include FontBody12;
-			}
         }
     }
 }
@@ -1592,6 +1589,7 @@
     .desc_area {
         margin-top:2rem;
         .desc {
+			@include FontBody12;
             position: relative;
             padding-left:1rem;
             color:#a4a6aa;
@@ -1604,7 +1602,15 @@
         }
     }
 }
-
+.theme_dark {
+	.course_define {
+		.desc_area {
+			.desc {
+				color:#75777b;
+			}
+		}
+	}
+}
 // 평가그래프
 .review_graph {
     padding:2rem;
