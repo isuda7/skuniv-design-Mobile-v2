@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            $('#loginFormEmail').focus();
+        })
+    </script>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Container -->
+		<main role="main" class="container login_container pw_reset_page">
+			<div class="content_body">
+                <div class="login_header">
+                    <h1><a href="/"><img src="../../assets/img/img_img_m_logo.svg" alt="MY SUNI" /></a></h1>
+                </div>
+                <div class="login_body">
+                    <div class="login_tit">
+                        <h2 class="heading2">비밀번호 초기화</h2>
+                    </div>
+                    <div class="pwclear_form">
+                        <div class="form_row">
+                            <label for="loginFormEmail" class="blind">이메일 또는 휴대전화 번호</label>
+                            <span class="input_group clear is_valued">
+                                <input type="text" id="loginFormEmail" placeholder="이메일 또는 휴대전화 번호" value="ss.name@sk" class="basic" />
+                                <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
+                            </span>
+
+                        </div>
+                        <div class="form_action">
+                            <button type="button" class="btn basic primary">인증번호 발송</button>
+                        </div>
+                    </div>
+                    <div class="pwclear_form">
+                        <div class="form_row">
+                            <label for="loginFormCert" class="blind">인증번호</label>
+                            <div class="input_group">
+                                <input type="password" id="loginFormCert" placeholder="인증번호" class="basic" />
+                            </div>
+                            <p class="form_desc">전송된 인증번호를 입력해주세요.</p>
+                        </div>
+                        <div class="form_action">
+                            <button type="button" class="btn basic primary" disabled>확인</button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

@@ -53,7 +53,31 @@ input.basic + .bytes {
     text-align: right;
     color:#a4a6aa;
 }
-
+.form_desc {
+    @include FontBody12;
+    margin-top:0.4rem;
+    color:#a4a6aa;
+}
+.form_alert {
+    display:none;
+    position: relative;
+    padding-left:2.2rem;
+    margin-top:0.2rem;
+    color:#ff3c3c;
+    &::before {
+        content:'';
+        position: absolute;
+        left: 0.2rem;
+        top: 0.4rem;
+        display: block;
+        width:1.6rem;
+        height:1.6rem;
+        background: url('../img/icons_16_ic_status_error.svg') no-repeat center center / 1.6rem auto;
+    }
+}
+input.basic.is_failed + .form_alert {
+    display:block;
+}
 
 // Input
 input.basic {
@@ -68,6 +92,9 @@ input.basic {
     line-height: 1.5;
     color: $FormBasicValue;
     transition: all 0.12s ease;
+    &::placeholder {
+        color:#a4a6aa;
+    }
     &:focus {
         border:1px solid #000000;
         outline: 0;
@@ -76,6 +103,9 @@ input.basic {
         color:#e3e4e5;
         background-color: #f8f8fa;
         border:1px solid #f2f3f5;
+    }
+    &.is_failed {
+        border-color: $ColorPrimary;
     }
 }
 .theme_dark {
@@ -139,18 +169,16 @@ textarea.basic {
         display:block;
         padding-left:0.8rem;
     }
-    label:before {
-        border:1px solid $FormBasicBorder;
+    label::before {
+        border:1px solid #cbcdcf;
         border-radius:0.4rem;
     }
-    input:checked + label:before {
+    label::after {
+        background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 1.6rem 1.6rem;
+    }
+    input:checked + label::before {
         border:0;
         background-color: $ColorPrimary;
-    }
-    input:checked + label:after {
-        color:#fff;
-        background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 1.6rem 1.6rem;
-
     }
 }
 
