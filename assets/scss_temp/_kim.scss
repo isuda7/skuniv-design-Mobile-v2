@@ -769,6 +769,9 @@
         margin-bottom:3.2rem;
         .cube_report {
             margin-top:3.2rem;
+            .opinion {
+                margin-bottom:0.8rem;
+            }
         }
         .report_body {
             .report_empty {
@@ -778,10 +781,14 @@
                     color:#75777b;
                 }
             }
+            .cube_references {
+                margin-top:1rem;
+            }
         }
     }
     .content_body {
         .learning_sec {
+            margin-bottom:2rem;
             .sec_head {
                 .guide_title {
                     color:#cbcdcf;
