@@ -189,3 +189,105 @@ $FormBasicDisable: #E3E4E5;
 @mixin ModalTransition {
 	transition: all 0.2s ease;
 }
+
+// Board UI
+@mixin BoardItem {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	.item_check {
+		width:2rem;
+		flex:none;
+		margin-right:1.2rem;
+	}
+	.item_body {
+		position: relative;
+		display: flex;
+		width:100%;
+		align-items: center;
+		.item_thumb {
+			position: relative;
+			flex: none;
+		}
+		.item_title {
+			display:block;
+			flex: 0 1 auto;
+		}
+	}
+	.item_utils {
+		margin-left:1.2rem;
+	}
+	.item_foot {
+		flex: none;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// Cases
+	&.has_check {
+		.item_body {
+			width:calc(100% - 3.2rem);
+		}
+		.item_foot {
+			padding-left:3.2rem;
+		}
+	}
+	// Buttons
+	.btn.ico {
+		padding:0;
+		&.filter {
+			padding:0.5rem;
+		}
+		&.filter::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-color:#ddd;
+		}
+		&.playlistAdd {
+			padding:0.5rem;
+		}
+		&.playlistAdd::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-color:#ddd;
+		}
+		&.learning::before {
+			content:"";
+			width:2.0rem;
+			height:2.0rem;
+			background-image: url('../img/icons_20_ic_cubelist_black.svg');
+		}
+		&.del {
+			padding:0.5rem;
+		}
+		&.del::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-color:#ddd;
+		}
+		&.drop {
+			padding:0.5rem;
+		}
+		&.drop::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-color:#ddd;
+		}
+		&.feel {
+			padding:0;
+		}
+		&.feel::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_information_grey_6.svg');
+		}
+	}
+}

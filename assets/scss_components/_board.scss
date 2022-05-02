@@ -46,482 +46,375 @@
 	}
 }
 
-// Board List
-.board_list {
-    // Default
-    .item {
-        display: flex;
-        align-items: center;
-        position: relative;
-        flex-wrap: wrap;
-        .item_check {
-            width:2rem;
-            flex:none;
-			margin-right:1.2rem;
-        }
-        .item_body {
-            position: relative;
-            display: flex;
-            width:100%;
-            align-items: center;
-            .item_thumb {
-				position: relative;
-                flex: none;
-            }
-            .item_title {
+
+.board_cube {
+	@include BoardItem;
+	padding: 1.6rem 2rem;
+	border-bottom: 1px solid #F2F3F5;
+	.item_thumb {
+		width: 10rem;
+		height: 6.8rem;
+		margin-right: 1.2rem;
+		.thumb {
+			&::before {
+				content:'';
 				display:block;
-                flex: 0 1 auto;
-            }
-        }
-        .item_utils {
-            margin-left:1.2rem;
-        }
-        .item_foot {
-            flex: none;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        // Cases
-        &.has_check {
-            .item_body {
-                width:calc(100% - 3.2rem);
-            }
-			.item_foot {
-				padding-left:3.2rem;
+				width:100%;
+				height:100%;
+				background-color: rgba(0,0,0,0.5);
 			}
-        }
-    }
+		}
+		.ribon {
+			position: absolute;
+			right: 0.8rem;
+			top: 0;
+			z-index: 10;
+			width: 2.4rem;
+			height: 2.4rem;
+			border-radius: 0;
+			&::before {
+				width:2.4rem;
+				height:2.4rem;
+				background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
+			}
+			&.is_active {
+				&::before {
+					background-position: center bottom;
+				}
+			}
+		}
+	}
+	.item_title {
+		.sub_txt {
+			&+.title {
+				margin-top: 0.2rem;
+			}
+		}
+		.title {
+			color: #000;
+			@include FontBody14;
+			@include Ellipsis2;
+		}
+	}
+	.item_foot {
+		margin-top: 1.3rem;
+		.left_area,
+		.right_area {
+			display: flex;
+			align-items: center;
+		}
+	}
 
-    // Styles
-	// 학습
-	.item.learning {
-		padding: 1.6rem 2rem;
-		border-bottom: 1px solid #F2F3F5;
-		.item_thumb {
-			width: 10rem;
-			height: 6.8rem;
-			margin-right: 1.2rem;
-			.thumb {
+	// 학습 Type1 (생략)
+	&.type1 {
+		.item_foot {
+			.rate_count {
+				color:#999999;
+			}
+		}
+	}
+
+	// 학습 Type2
+	&.type2 {
+		flex-wrap: nowrap;
+		.item_util {
+			flex: none;
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+			margin-left: 1rem;
+		}
+	}
+	// 학습 Type3
+	&.type3 {
+		flex-wrap: nowrap;
+		.item_util {
+			flex: none;
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: nowrap;
+			margin-top: auto;
+			margin-left: 1rem;
+			.rate_count {
+				position: absolute;
+				right: 2rem;
+				top: 1.6rem;
+
+			}
+		}
+	}
+	// 학습 Type4
+	&.type4 {
+		.item_foot {
+			.date {
+				display:flex;
+				align-items: center;
+				color:$ColorSubTxt;
 				&::before {
 					content:'';
 					display:block;
-					width:100%;
-					height:100%;
-					background-color: rgba(0,0,0,0.5);
+					margin-right:0.4rem;
+					width:1.6rem;
+					height:1.6rem;
+					background: url('../img/icons_16_ic_time_grey_06.svg') no-repeat center center / 100% auto;
 				}
 			}
-			.ribon {
-				position: absolute;
-				right: 0.8rem;
-				top: 0;
-				z-index: 10;
-				width: 2.4rem;
-				height: 2.4rem;
-				border-radius: 0;
-				&::before {
-					width:2.4rem;
-					height:2.4rem;
-					background-image: url('../img/icons_24_ic_bookmark_off_on.svg');
-				}
-				&.is_active {
-					&::before {
-						background-position: center bottom;
-					}
-				}
-			}
-		}
-		.item_title {
-			.sub_txt {
-				&+.title {
-					margin-top: 0.2rem;
-				}
-			}
-			.title {
-				color: #000;
-				@include FontBody14;
-				@include Ellipsis2;
-			}
-		}
-		.item_foot {
-			margin-top: 1.3rem;
-			.left_area,
-			.right_area {
-				display: flex;
-				align-items: center;
-			}
-		}
-
-		// 학습 Type1 (생략)
-		&.type1 {
-			.item_foot {
-				.rate_count {
-					color:#999999;
-				}
-			}
-		}
-
-		// 학습 Type2
-		&.type2 {
-			flex-wrap: nowrap;
-			.item_util {
-				flex: none;
-				display: flex;
-				align-items: center;
-				flex-wrap: nowrap;
+			.btn.learning {
 				margin-left: 1rem;
 			}
-		}
-		// 학습 Type3
-		&.type3 {
-			flex-wrap: nowrap;
-			.item_util {
-				flex: none;
-				display: flex;
-				align-items: flex-end;
-				flex-wrap: nowrap;
-				margin-top: auto;
-				margin-left: 1rem;
-				.rate_count {
-					position: absolute;
-					right: 2rem;
-					top: 1.6rem;
-
-				}
-			}
-		}
-		// 학습 Type4
-		&.type4 {
-			.item_foot {
-				.date {
-					display:flex;
-					align-items: center;
-					color:$ColorSubTxt;
-					&::before {
-						content:'';
-						display:block;
-						margin-right:0.4rem;
-						width:1.6rem;
-						height:1.6rem;
-						background: url('../img/icons_16_ic_time_grey_06.svg') no-repeat center center / 100% auto;
-					}
-				}
-				.btn.learning {
-					margin-left: 1rem;
-				}
-				.total_count {
-					.count {
-						font-weight: 700;
-						color: $ColorPrimary;
-					}
-					.split {
-						margin: 0 0.2rem;
-					}
-				}
-			}
-		}
-		// 학습 Type5
-		&.type5 {
-			.item_foot {
-				.d_day {
+			.total_count {
+				.count {
 					font-weight: 700;
 					color: $ColorPrimary;
-					margin-right:0.8rem;
 				}
-				.date {
-					color:$ColorSubTxt;
+				.split {
+					margin: 0 0.2rem;
 				}
 			}
 		}
-		// 학습 Type6
-		&.type6 {
-			.item_foot {
-				.date {
+	}
+	// 학습 Type5
+	&.type5 {
+		.item_foot {
+			.d_day {
+				font-weight: 700;
+				color: $ColorPrimary;
+				margin-right:0.8rem;
+			}
+			.date {
+				color:$ColorSubTxt;
+			}
+		}
+	}
+	// 학습 Type6
+	&.type6 {
+		.item_foot {
+			.date {
+				color: $ColorSubTxt;
+			}
+			.state {
+				font-weight: 700;
+				&.wait {
 					color: $ColorSubTxt;
 				}
-				.state {
-					font-weight: 700;
-					&.wait {
-						color: $ColorSubTxt;
-					}
-					&.positive {
-						color:$ColorPositive;
-					}
-					&.negative {
-						color:$ColorNegative;
-					}
+				&.positive {
+					color:$ColorPositive;
+				}
+				&.negative {
+					color:$ColorNegative;
 				}
 			}
 		}
 	}
+}
 
-	// 학습기본
-	.item.badge {
-		padding: 1.6rem 0;
-		border-bottom: 1px solid #F2F3F5;
-		.item_thumb {
-			width: 5.2rem;
-			height: 5.2rem;
-			margin-right: 1.2rem;
-		}
-		.item_title {
-			.sub_txt {
-				&+.title {
-					margin-top: 0.2rem;
-				}
-			}
-			.title {
-				font-size: 1.6rem;
-				line-height: 2rem;
-				color: #000;
-				@include Ellipsis2;
+// 학습기본
+.board_badge {
+	@include BoardItem;
+	padding: 1.6rem 0;
+	border-bottom: 1px solid #F2F3F5;
+	.item_thumb {
+		width: 5.2rem;
+		height: 5.2rem;
+		margin-right: 1.2rem;
+	}
+	.item_title {
+		.sub_txt {
+			&+.title {
+				margin-top: 0.2rem;
 			}
 		}
-		.item_foot {
-			margin-top: 1.3rem;
+		.title {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			color: #000;
+			@include Ellipsis2;
 		}
 	}
+	.item_foot {
+		margin-top: 1.3rem;
+	}
+}
 
-	// 커뮤니티
-	.item.community {
-		padding: 1.6rem 0;
-		border-bottom: 1px solid #F2F3F5;
-		.item_body {
-			flex-wrap: wrap;
+// 커뮤니티
+.board_community {
+	@include BoardItem;
+	padding: 1.6rem 0;
+	border-bottom: 1px solid #F2F3F5;
+	.item_body {
+		flex-wrap: wrap;
+	}
+	.item_thumb {
+		width: 5.2rem;
+		height: 5.2rem;
+		margin-right: 1.2rem;
+	}
+	.item_title {
+		width: calc(100% - 6.4rem);
+		flex: none;
+		padding-right: 4.6rem;
+		.sub_txt {
+			&+.title {
+				margin-top: 0.2rem;
+			}
 		}
-		.item_thumb {
-			width: 5.2rem;
-			height: 5.2rem;
-			margin-right: 1.2rem;
+		.title {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			font-weight: 700;
+			color: #000;
+			@include Ellipsis2;
 		}
-		.item_title {
-			width: calc(100% - 6.4rem);
-			flex: none;
-			padding-right: 4.6rem;
-			.sub_txt {
-				&+.title {
-					margin-top: 0.2rem;
+	}
+	.item_foot {
+		display: block;
+		margin-top: 1.6rem;
+		@include FontBody14;
+		color: $ColorSubTxt;
+		.desc + .info_area {
+			margin-top: 1.2rem;
+		}
+		.info_area {
+			display: flex;
+			align-items: center;
+			width:100%;
+			overflow: hidden;
+			.username {
+				flex: 0 1 auto;
+				@include Ellipsis1;
+				.icon.level {
+					flex:none;
+					width:1.6rem;
+					height:1.6rem;
+					margin:0 0.6rem 0 0;
+					background-color: #ddd;
+					vertical-align: middle;
 				}
 			}
-			.title {
-				font-size: 1.6rem;
-				line-height: 2rem;
-				font-weight: 700;
-				color: #000;
-				@include Ellipsis2;
-			}
-		}
-		.item_foot {
-			display: block;
-			margin-top: 1.6rem;
-			@include FontBody14;
-			color: $ColorSubTxt;
-			.desc + .info_area {
-				margin-top: 1.2rem;
-			}
-			.info_area {
+			.member {
 				display: flex;
 				align-items: center;
-				width:100%;
-				overflow: hidden;
-				.username {
-					flex: 0 1 auto;
-					@include Ellipsis1;
-					.icon.level {
-						flex:none;
-						width:1.6rem;
-						height:1.6rem;
-						margin:0 0.6rem 0 0;
-						background-color: #ddd;
-						vertical-align: middle;
-					}
-				}
-				.member {
-					display: flex;
-					align-items: center;
-					flex: none;
-					&::before {
-						content: "";
-						display: block;
-						width: 1px;
-						height: 1rem;
-						margin-right: 0.8rem;
-						margin-left: 0.8rem;
-						background-color: #CBCDCF;
-					}
-					.icon.lock {
-						margin-left: 2rem;
-						width: 1.2rem;
-						height: 1.4rem;
-					}
-				}
-			}
-		}
-		.item_util {
-			position: absolute;
-			top: 3.2rem;
-			right: 0;
-			z-index: 10;
-			.checkbox.rating {
-				margin: 0;
-				.icon {
+				flex: none;
+				&::before {
 					content: "";
-					width: 2.2rem;
-					height: 2.2rem;
 					display: block;
-					background-color: #ddd;
-					&.active {
-						background-color: $ColorPrimary;
-					}
-					&::before {
-						display: none;
-					}
+					width: 1px;
+					height: 1rem;
+					margin-right: 0.8rem;
+					margin-left: 0.8rem;
+					background-color: #CBCDCF;
+				}
+				.icon.lock {
+					margin-left: 2rem;
+					width: 1.2rem;
+					height: 1.4rem;
 				}
 			}
 		}
 	}
-
-	// Teacher
-	.item.teacher {
-		padding: 2rem 0;
-		border-bottom: 1px solid #F2F3F5;
-		.item_body {
-			width: 100%;
-			flex-wrap: wrap;
-		}
-		.item_thumb {
-			width: 5.2rem;
-			height: 5.2rem;
-			margin-right: 1.2rem;
-		}
-		.item_title {
-			width: calc(100% - 6.4rem);
-			flex: none;
-			.sub_txt {
-				margin-top: 0.4rem;
-			}
-			.title {
-				@include Ellipsis1;
-				@include FontTitle16;
-			}
-		}
-		.item_foot {
-			display: block;
-			margin-top: 1.2rem;
-			.info_list {
-				li {
-					display: flex;
-					align-items: center;
-					overflow: hidden;
-					&+& {
-						margin-top: 0.4rem;
-					}
-					.tit {
-						flex: none;
-						margin-right: 1.2rem;
-						@include FontBody14;
-						color: $ColorSubTxt;
-						font-weight: 700;
-					}
-					.para {
-						@include Ellipsis1;
-						color: $ColorSubTxt;
-					}
-					& + li {
-						margin-top:0.4rem;
-					}
+	.item_util {
+		position: absolute;
+		top: 3.2rem;
+		right: 0;
+		z-index: 10;
+		.checkbox.rating {
+			margin: 0;
+			.icon {
+				content: "";
+				width: 2.2rem;
+				height: 2.2rem;
+				display: block;
+				background-color: #ddd;
+				&.active {
+					background-color: $ColorPrimary;
+				}
+				&::before {
+					display: none;
 				}
 			}
 		}
 	}
-	// Playlist
-	.item.playlist {
-		padding: 1.2rem 0;
-		border-bottom: 1px solid #F2F3F5;
-		.item_check {
-			width:2.8rem;
+}
+
+// Teacher
+.board_teacher {
+	@include BoardItem;
+	padding: 2rem 0;
+	border-bottom: 1px solid #F2F3F5;
+	.item_body {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.item_thumb {
+		width: 5.2rem;
+		height: 5.2rem;
+		margin-right: 1.2rem;
+	}
+	.item_title {
+		width: calc(100% - 6.4rem);
+		flex: none;
+		.sub_txt {
+			margin-top: 0.4rem;
 		}
-		.item_thumb {
-			width: 5.2rem;
-			height: 5.2rem;
-			margin-right: 0.8rem;
+		.title {
+			@include Ellipsis1;
+			@include FontTitle16;
 		}
-		.item_title {
-			width:100%;
-			flex: 1 1 auto;
-			.title {
-				@include Ellipsis1;
-				@include FontTitle14;
-			}
-			.company {
-				@include FontBody12;
-				color:#A4A6AA;
-			}
-			.email {
-				@include FontBody12;
-				color:#000;
+	}
+	.item_foot {
+		display: block;
+		margin-top: 1.2rem;
+		.info_list {
+			li {
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				&+& {
+					margin-top: 0.4rem;
+				}
+				.tit {
+					flex: none;
+					margin-right: 1.2rem;
+					@include FontBody14;
+					color: $ColorSubTxt;
+					font-weight: 700;
+				}
+				.para {
+					@include Ellipsis1;
+					color: $ColorSubTxt;
+				}
+				& + li {
+					margin-top:0.4rem;
+				}
 			}
 		}
 	}
+}
 
-	// Icon Buttons
-	.item {
-		// Buttons
-		.btn.ico {
-			padding:0;
-			&.filter {
-				padding:0.5rem;
-			}
-			&.filter::before {
-				content:"";
-				width:2rem;
-				height:2rem;
-				background-color:#ddd;
-			}
-			&.playlistAdd {
-				padding:0.5rem;
-			}
-			&.playlistAdd::before {
-				content:"";
-				width:2rem;
-				height:2rem;
-				background-color:#ddd;
-			}
-            &.learning::before {
-                content:"";
-                width:2.0rem;
-                height:2.0rem;
-                background-image: url('../img/icons_20_ic_cubelist_black.svg');
-            }
-            &.del {
-                padding:0.5rem;
-            }
-            &.del::before {
-                content:"";
-                width:2rem;
-                height:2rem;
-                background-color:#ddd;
-            }
-            &.drop {
-                padding:0.5rem;
-            }
-            &.drop::before {
-                content:"";
-                width:2rem;
-                height:2rem;
-                background-color:#ddd;
-            }
-            &.feel {
-                padding:0;
-            }
-            &.feel::before {
-                content:"";
-                width:2rem;
-                height:2rem;
-                background-image: url('../img/icons_20_ic_information_grey_6.svg');
-            }
-        }
-    }
+// Playlist
+.board_playlist {
+	@include BoardItem;
+	padding: 1.2rem 0;
+	border-bottom: 1px solid #F2F3F5;
+	.item_thumb {
+		width: 5.2rem;
+		height: 5.2rem;
+		margin-right: 0.8rem;
+	}
+	.item_title {
+		width:100%;
+		flex: 1 1 auto;
+		.title {
+			@include Ellipsis1;
+			@include FontTitle14;
+		}
+		.company {
+			@include FontBody12;
+			color:#A4A6AA;
+		}
+		.email {
+			@include FontBody12;
+			color:#000;
+		}
+	}
 }
