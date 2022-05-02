@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+	</script>
+</head>
+<body>
+<div class="sub_wrapper has_sticky theme_dark has_floating">
+	<!-- Header -->
+    <header class="header">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1><strong>Report</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container learning_container report_page">
+        <div class="content_head">
+            <!-- 리포트 제목 -->
+            <div class="learning_subject">
+                <div class="title_area">
+                    <span class="label style1 primary blind">검수중</span>
+                    <h1 class="title appbar_title"><strong>[과제제출] BM 디자인 Essay 제출</strong></h1>
+                </div>
+                <div class="cube_report">
+                    <div class="report_toolbar">
+                        <span class="label style1">미제출</span>
+                        <p class="date blind">2022.03.02 13:00 저장</p>
+                    </div>
+                    <div class="report_body">
+                        <div class="report_title report_empty">
+                            <p class="title">Report를 등록해 주세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // 리포트 제목 -->
+        <div class="content_body">
+            <!-- 작성 가이드 -->
+            <div class="learning_sec">
+                <div class="sec_head">
+                    <h2 class="heading2 guide_title">작성 가이드</h2>
+                </div>
+                <div class="sec_body">
+                    <div class="sec_cont">
+                        <p class="sub_txt">
+                            반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- // 작성 가이드 -->
+
+            <!--다운로드 -->
+            <div class="cube_references">
+                <div class="references_body">
+                    <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                    <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
+                    <p class="bytes">249KB</p>
+                </div>
+                <div class="references_util">
+                    <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                </div>
+            </div>
+            <!-- // 다운로드 -->
+
+            <!-- 태그 -->
+            <div class="learning_sec">
+                <div class="sec_head">
+                    <h2 class="heading2">태그</h2>
+                </div>
+                <div class="sec_body">
+                    <div class="tag_list">
+                        <div class="chip_group">
+                            <button type="button" class="chip action">리더</button>
+                            <button type="button" class="chip action">Data</button>
+                            <button type="button" class="chip action">자기개발</button>
+                            <button type="button" class="chip action">리더쉽</button>
+                            <button type="button" class="chip action">리더</button>
+                            <button type="button" class="chip action">Data</button>
+                            <button type="button" class="chip action">자기개발</button>
+                            <button type="button" class="chip action">리더쉽</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //태그 -->
+
+            <!-- 강사 -->
+            <div class="learning_sec">
+                <div class="sec_head">
+                    <h2 class="heading2">강사</h2>
+                </div>
+                <div class="sec_body mar_t0">
+                    <div class="teacher_list">
+                        <div class="teacher_item">
+                            <a href="javascript:void(0)" class="teacher_inner">
+                                <div class="teacher_avata">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                </div>
+                                <div class="teacher_body">
+                                    <div class="title"><strong>조승빈</strong><span class="label style1">대표</span></div>
+                                    <div class="sub_txt">컨크루언트 애자일</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="teacher_item">
+                            <a href="javascript:void(0)" class="teacher_inner">
+                                <div class="teacher_avata">
+                                    <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                </div>
+                                <div class="teacher_body">
+                                    <div class="title"><strong>조승빈</strong></div>
+                                    <div class="sub_txt">컨크루언트 애자일</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // 강사 -->
+
+            <!-- floating btn -->
+            <div class="page_floating">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">Report 등록</button>
+                </div>
+            </div>
+            <!-- // floating btn -->
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>C9989A0D-1C0B-458B-AAE8-128AA138114E</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid/Keep" transform="translate(-835.000000, -841.000000)">
+            <g id="16dp" transform="translate(62.000000, 729.000000)">
+                <g id="Black" transform="translate(773.000000, 0.000000)">
+                    <g id="Group-5836" transform="translate(0.000000, 39.999999)">
+                        <g id="Icons-/-16-/--ic_lock_white" transform="translate(0.000000, 72.000001)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Icons-/-16-/--ic_lock_black-(Background/Mask)"></g>
+                            <path d="M7.5,9.5 L7.5,11.5 C7.5,11.7761421 7.72385788,12 8,12 C8.27614212,12 8.5,11.7761421 8.5,11.5 L8.5,9.5 C8.5,9.22385788 8.27614212,9 8,9 C7.72385788,9 7.5,9.22385788 7.5,9.5 Z M4,6 L3,6 C2.44771528,6 2,6.44771528 2,7 L2,14 C2,14.5522852 2.44771504,15 3,15 L13,15 C13.5522842,15 14,14.5522852 14,14 L14,7 C14,6.44771528 13.5522852,6 13,6 L12,6 L12,5 C12,2.79086113 10.2091389,1 8,1 C5.79086113,1 4,2.79086089 4,5 L4,6 Z M5,5 L5,6 L11,6 L11,5 C11,3.34314585 9.65685415,2 8,2 C6.34314585,2 5,3.34314561 5,5 Z M13,7 L13,14 L3,14 L3,7 L13,7 Z" id="Union" fill="#75777B" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
