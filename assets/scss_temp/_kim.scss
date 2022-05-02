@@ -332,7 +332,7 @@
                 margin-right:0.4rem;
                 width:1.6rem;
                 height:1.6rem;
-                
+
             }
             &.note_time::before{
                 background-image: url('../img/icons_16_ic_time_grey_05.svg');
@@ -354,7 +354,7 @@
                 border:0;
                 height:4.2rem;
                 line-height:2.2rem;
-                padding:1.2rem 0;
+                padding:1rem 0;
                 vertical-align: top;
                 &::-webkit-scrollbar {
                     display:none;
@@ -653,7 +653,7 @@
         .teacher_body {
             .title {
             @include FontTitle18;
-            }   
+            }
         }
     }
 }
