@@ -982,8 +982,9 @@
 				}
 				&.secret {
 					display: inline-block;
+					top : .3rem;
 					margin-right : .4rem;
-					background-image: url('../img/icons_16_ic_lock_white.svg');
+					background-image: url('../img/icons_16_ic_lock_black.svg');
 				}
 			}
 			
@@ -1095,8 +1096,13 @@
 			.user_id {
 				color:#fff;
 			}
-			.ico.pin {
-				background-image: url('../img/icons_16_ic_pin_grey_05.svg');
+			.ico{
+				&.pin {
+					background-image: url('../img/icons_16_ic_pin_grey_05.svg');
+				}
+				&.secret {
+					background-image: url('../img/icons_16_ic_lock_white.svg');
+				}
 			}
 		}
 		.post_head >.right .btn.more::before {
