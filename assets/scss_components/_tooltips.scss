@@ -92,6 +92,7 @@
 .tooltip.desc {
     .tooltip_body {
         width:26rem;
+        margin:1rem;
         padding:1.6rem;
         border-radius: $RadiusSmall;
         background-color: #44464a;
@@ -109,7 +110,7 @@
                     display: block;
                     position: absolute;
                     left: 0;
-                    top:0.9rem;
+                    top:0.8rem;
                     width:0.3rem;
                     height:0.3rem;
                     border-radius: 50%;
@@ -124,17 +125,17 @@
             content:'';
             display: block;
             position: absolute;
-            border-radius: 0.4rem;
+            background: no-repeat center center / 100% auto;
         }
     }
 
     &.center.top {
         .tooltip_body::after {
-            top:calc(100% - 0.7rem);
+            top:100%;
             left:calc(50% - 0.7rem);
-            border-left:0.7rem solid transparent;
-            border-right:0.7rem solid transparent;
-            border-top:1.4rem solid #44464a;
+            width:0.8rem;
+            height:0.8rem;
+            background-image: url('../img/icons_8_ic_balloon_tail.svg');
         }
     }
 }

@@ -115,6 +115,7 @@
     display:flex;
     justify-content: center;
     .btn.help {
+        padding:0;
         @include FontBody13;
         color:#a4a6aa;
         &::before {

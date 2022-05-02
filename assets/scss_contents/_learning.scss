@@ -334,7 +334,7 @@
         width:4rem;
         height:4rem;
         margin-right:1.2rem;
-        .played {
+        .cube_circle {
             position:relative;
             display:flex;
             justify-content: center;
@@ -348,6 +348,7 @@
 				width:2rem;
 				height:2rem;
                 display:block;
+				background: url('../img/icons_20_ic_test_black.svg') no-repeat center center / 100% auto;
             }
         }
     }
@@ -369,30 +370,25 @@
     }
 
     // Case Type
-    &.video {
-        .item_thumb .played::after {
+    &.type_play:not(.is_state3) {
+        .item_thumb .cube_circle::after {
             background-image: url('../img/icons_20_ic_video_black.svg');
         }
     }
-    &.test {
-        .item_thumb .played::after {
+    &.type_doc {
+        .item_thumb .cube_circle::after {
             background-image: url('../img/icons_20_ic_test_black.svg');
         }
     }
-    &.report {
-        .item_thumb .played::after {
-            background-image: url('../img/icons_20_ic_test_black.svg');
-        }
-    }
-    &.survay {
-        .item_thumb .played::after {
-            background-image: url('../img/icons_20_ic_test_black.svg');
+    &.type_talk {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_talk_black.svg');
         }
     }
 
     // Case Disabled
     &.is_disabled {
-        .item_inner {
+        .item_body {
             pointer-events: none;
             &::after {
                 display:none;
@@ -410,9 +406,8 @@
 		 top:-0.8rem;
          width:1.6rem;
          height:1.6rem;
-         border: 2px solid #e3e4e5;
-		 border-width:0 0 2px 2px;
          margin-right:0.8rem;
+		 background:url('../img/icons_16_ic_depth.svg') no-repeat center center / 100% auto;
     }
 }
 
@@ -964,7 +959,7 @@
 		.link_url {
 			background-color: #1c1d1f;
 			border-color : #1c1d1f;
-		}	
+		}
 	}
 }
 
@@ -1017,7 +1012,7 @@
 					background-image: url('../img/icons_16_ic_lock_black.svg');
 				}
 			}
-			
+
         }
         > .right {
 			flex:none;
@@ -1208,10 +1203,9 @@
 	}
 	.post_detail .post .post_body .post_main .post_btn>.right {
 		.btn.like::before {
-			background-image: url("../img/icons_24_ic_like_off_white.svg");
+			background-image: url("../img/icons_24_ic_like_white_off_on.svg");
 		}
 		.btn.like.is_active::before {
-			background-image: url("../img/icons_24_ic_like_off_on.svg");
 			background-position-y: bottom;
 		}
 	}
@@ -1497,6 +1491,7 @@
 .theme_dark .comment_floating {
 	.comment_alert {
 		color:#fff;
+		background-color: #44464a;
 		.btn.ico.close {
 			background-color: #cbcdcf;
 			&::before {
@@ -1654,26 +1649,64 @@
         }
     }
     .graph_list {
-        margin-top:2.4rem;
+		display:table;
+		width:100%;
+        margin-top:2rem;
         .graph_item {
-            display:flex;
-            margin-top:0.8rem;
+			display:table-row;
             &:first-child {
                 margin-top:0;
             }
+			.graph_th {
+				display:table-cell;
+				min-width:11.1rem;
+				padding:0.4rem 0;
+				padding-right:1.2rem;
+				vertical-align: top;
+				white-space: nowrap;
+			}
+			.graph_td {
+				display:table-cell;
+				width:100%;
+				padding:0.4rem 0;
+				vertical-align: top;
+			}
             .graph_label {
-                display:block;
+                display:flex;
+				align-items: center;
+				height:2.8rem;
                 flex:none;
-                width:30%;
-                min-width:11.1rem;
+				@include FontBody14;
                 color:#1c1d1f;
-                padding-right:1.2rem;
+				&::before {
+					content:'';
+					flex:none;
+					display:block;
+					width:2.4rem;
+					height:2.4rem;
+					margin-right:0.8rem;
+					background:no-repeat center center / 100% auto;
+				}
+				&.n1::before {
+					background-image: url('../img/icons_24_ic_verygood.png');
+				}
+				&.n2::before {
+					background-image: url('../img/icons_24_ic_good.png');
+				}
+				&.n3::before {
+					background-image: url('../img/icons_24_ic_normal.png');
+				}
+				&.n4::before {
+					background-image: url('../img/icons_24_ic_bad.png');
+				}
+				&.n5::before {
+					background-image: url('../img/icons_24_ic_so_bad.png');
+				}
             }
             .graph_bar {
                 position: relative;
-                display:block;
-                flex:1 1 auto;
-                width:100%;
+                display:flex;
+                width:auto;
                 height:2.8rem;
                 background-color: #fff;
                 &:before {

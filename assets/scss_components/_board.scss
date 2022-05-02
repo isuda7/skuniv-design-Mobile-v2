@@ -279,22 +279,26 @@
 			align-items: center;
 			width:100%;
 			overflow: hidden;
+			@include FontBody13;
+			&::before {
+				content:'';
+				position: relative;
+				top:1px;
+				display:flex;
+				width:1.6rem;
+				height:1.6rem;
+				margin:0 0.4rem 0 0;
+				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+			}
 			.username {
 				flex: 0 1 auto;
 				@include Ellipsis1;
-				.icon.level {
-					flex:none;
-					width:1.6rem;
-					height:1.6rem;
-					margin:0 0.6rem 0 0;
-					background-color: #ddd;
-					vertical-align: middle;
-				}
 			}
 			.member {
 				display: flex;
 				align-items: center;
 				flex: none;
+				margin-right:1rem;
 				&::before {
 					content: "";
 					display: block;
@@ -304,11 +308,13 @@
 					margin-left: 0.8rem;
 					background-color: #CBCDCF;
 				}
-				.icon.lock {
-					margin-left: 2rem;
-					width: 1.2rem;
-					height: 1.4rem;
-				}
+			}
+			.ico.lock {
+				flex:none;
+				margin-left: auto;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url('../img/icons_16_ic_lock_black.svg');
 			}
 		}
 	}

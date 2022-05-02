@@ -274,10 +274,10 @@
             }
         }
         &.alim::before {
-            background-image:url('../img/icons_24_ic_alarm_black.svg');
+            background-image:url('../img/icons_24_ic_alarmthin_black_off_on.svg');
         }
         &.alim.is_active::before {
-            background-image:url('../img/icons_24_ic_alarm_noti_black.svg');
+            background-position-y: bottom;
         }
         &.more::before {
             background-image:url('../img/icons_24_ic_more_black.svg');
