@@ -1246,6 +1246,15 @@
 			&.task::before {
 				background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
 			}
+			&.talk::before {
+				background-image: url("../../assets/img/icons_16_ic_talk_grey_06.svg");
+			}
+			&.calendar::before {
+				background-image: url("../../assets/img/icons_16_ic_calendar_grey_06.svg");
+			}
+			&.people::before {
+				background-image: url("../../assets/img/icons_16_ic_people_grey_6.svg");
+			}
             & + .label {
                 margin-left:1.6rem;
             }

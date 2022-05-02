@@ -295,6 +295,7 @@
                 .txt {
                     @include Ellipsis2;
                     margin:0.8rem 0;
+                    height : 4.4rem;
                 }
             }
             .note_date {
@@ -747,5 +748,15 @@
     }
     .degree_page {
         padding-top:2rem;
+    }
+}
+
+//Talk
+.talk_page {
+    .comment_page {
+        margin-top:1.6rem;
+    }
+    .learning_attachment {
+        margin-top:2.4rem;
     }
 }

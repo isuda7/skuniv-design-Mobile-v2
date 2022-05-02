@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+    </script>
+</head>
+<body>
+<div class="sub_wrapper theme_dark">
+	<!-- Header -->
+    <header class="header">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1><strong class="transition">이번 영상 중 학습과 성장에 대해 가장 공감가거나 인상 깊었던 장면은 무엇이었나요?</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container learning_container talk_page">
+        <div class="content_body discussion_content">
+            <!-- 과정제목 -->
+            <div class="learning_subject">
+                <div class="title_area">
+                    <h1 class="title appbar_title"><strong>이번 영상 중 학습과 성장에 대해 가장 공감가거나 인상 깊었던 장면은 무엇이었나요?</strong></h1>
+                </div>
+                <div class="info_area">
+                    <span class="label talk">Talk</span>
+                    <span class="label calendar">2021.01.01</span>
+                    <span class="label people">100개 의견</span>
+                </div>
+                <div class="learning_attachment">
+                    <!-- 코멘트 count -->
+                    <div class="my_commentinfo">
+                        <div class="left">
+                            <span class="label style1">미이수</span>
+                            <span class="label style1 primary blind">이수</span>
+                            <p class="txt">나의 코멘트</p>
+                        </div>
+                        <div class="right">
+                            <span class="count_my">1개</span>
+                            <span class="count_section">/</span>
+                            <span class="count_all">1개</span>
+                        </div>
+                    </div>
+                    <!-- //코멘트 count -->
+                    <!-- Overview 텍스트 -->
+                    <div class="overview_subscript">
+                        <!-- CSS 중간말줄임 표현불가 -->
+                        <p class="overview_txt">
+                            최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니
+                            <button type="button" class="btn btn_more">...더 보기</button>
+                        </p>
+                    </div>
+                    <div class="learning_attachment">
+                        <!-- link -->
+                        <div class="link_wrap">
+                            <h2 class="sub_title">관련 URL</h2>
+                            <div class="link_url">
+                                <a class="anchor" href="javascript:void(0)">
+                                    <div class="link_body">
+                                        <div class="link_thumb">
+                                            <span class="thumb" style="background-image: url('');"></span>
+                                        </div>
+                                        <div class="link_title">
+                                            <p class="title">인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까? 인공지능을 위한 서버는 일반적인 서버와 어떻게 다를까?</p>
+                                            <p class="url">https://mysuni.sk.com/suni_main/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- // link -->
+                    </div>
+                </div>
+            </div>
+            <!-- //과정제목 -->
+            <div class="tab_panel comment_page">
+                <!-- 보드 카운트 -->
+                <div class="board_toolbar">
+                    <div class="board_count">
+                        <span class="total">총</span>
+                        <em class="count">0</em>
+                        <span class="unit">개</span>
+                    </div>
+                    <div class="board_util">
+                        <button type="button" class="btn text arw_expand">최신순</button>
+                    </div>
+                </div>
+                <!-- //보드 카운트 -->
+                <!-- Empty -->
+                <div class="flex_area centered">
+                    <div class="no_data">
+                        <p class="tit"><strong>작성된 코멘트가 없습니다.</strong></p>
+                        <p class="sub_txt">첫 코멘트를 남겨보세요.</p>
+                    </div>
+                </div>
+                <!-- //Empty -->
+                <!-- 코멘트 -->
+                <div class="comment_floating">
+                    <div class="comment_body">
+                        <div class="comment_alert">
+                            <p class="txt">아란님에게 답글 남기는 중...</p>
+                            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                        </div>
+                        <div class="left">
+                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                            <div class="comment_form">
+                                <label for="commentForm" class="tit blind">코멘트 입력</label>
+                                <textarea id="commentForm" cols="10" rows="1" class="basic" placeholder="이야기를 나눠보세요."></textarea>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                            <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 코멘트 -->
+            </div>
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>
