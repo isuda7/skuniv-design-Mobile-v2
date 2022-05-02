@@ -711,13 +711,15 @@
 		display:flex;
 		align-items: center;
 		width:100%;
-		padding: 0 2rem;
+		padding: .7rem 3.2rem .7rem 2rem;
 		color:$ColorSubTxt;
-		margin-bottom:0.6rem;
+		@include FontTitle13;
+		text-align: center;
+		border-top : .2rem solid $FormBasicDisable;
 		.title {
 			flex:none;
 			display:block;
-			width:7.7rem;
+			width:5rem;
 			margin-right:0.8rem;
 		}
 		.date {
@@ -725,13 +727,19 @@
 			width:100%;
 			flex:1 1 auto;
 		}
+		.state{
+			flex:none;
+			display:block;
+			width:7.7rem;
+			margin-left:0.8rem;
+		}
 	}
 
 	.degree_acco {
 		background-color: inherit;
-        border-top : 2px solid $FormBasicBorder;
+        border-top : .1rem solid #f2f3f5;
 		.acco_title {
-			border-bottom:1px solid #25272B;
+			border-bottom:1px solid #f2f3f5;
 			&::after {
 				content:"";
 				display:block;
@@ -749,32 +757,42 @@
 			display:flex;
 			align-items: center;
 			width:100%;
+			color:#1c1d1f;
 			.title {
 				flex:none;
 				display:block;
-				width:7.7rem;
-				color:#fff;
+				width: 5rem;
 				margin-right:0.8rem;
 			}
 			.date {
 				display:block;
 				width:100%;
 				flex:1 1 auto;
-				color:#A4A6AA;
+			}
+			.state{
+				flex:none;
+				display:block;
+				width:7rem;
+				margin-left:0.8rem;
 			}
 			& + .degree_item {
 				margin-top:0.4rem;
 			}
 		}
+		.degree_item{
+			.date{
+				color :#75777b;
+			}
+		}
 		.degree_expand {
 			position: relative;
 			height:4.6rem;
-			padding:0 4.6rem 0 2rem;
+			padding:0 3.2rem 0 2rem;
 			font-weight: 400;
 		}
 		.degree_body {
 			padding:1.6rem 2rem;
-			background-color: #25272B;
+			background-color: #f8f8fa;
 		}
 	}
 	// Cases
@@ -807,12 +825,24 @@
     //classroom 차수정보
     .degree_list .degree_acco{
         border-color: #25272b;
-		.degree_expand .title{
-			color:#F8F8FA;
+		.degree_body{
+			background-color: #25272B;
 		}
-		.degree_item .title {
-			color:#F8F8FA;
+		.degree_expand {
+			color : #a4a6aa;
+			.title{
+				color:#F8F8FA;
+			}
 		}
+		.degree_item {
+			.title {
+				color:#F8F8FA;
+			}
+			.date {
+				color:#a4a6aa;
+			}
+		}
+
     }
 
 }
