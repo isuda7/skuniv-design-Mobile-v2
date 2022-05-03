@@ -80,6 +80,7 @@
 		flex:0 1 auto;
 		overflow: hidden;
 		display:block;
+        pointer-events: none;
 		strong {
 			@include FontTitle18;
 			@include Ellipsis1;

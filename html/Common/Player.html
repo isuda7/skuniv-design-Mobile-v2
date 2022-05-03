@@ -60,7 +60,26 @@
                                 PlayerTimeline($(this));
                             });
                             PlayerTimeline($('.timeline_range'));
+
+                            // LandspaceMode
+                            $(window).on('resize', function(e){
+                                var orientation = window.orientation;
+                                if(orientation != undefined){
+                                    (orientation !== 0 && $('.cube_player').hasClass('is_visible')) && $('.appbar').removeClass('is_hide');
+                                    (orientation !== 0 && !$('.cube_player').hasClass('is_visible')) && $('.appbar').addClass('is_hide');
+                                }
+                                if ($('.sticky').length) {
+                                    setSticky();
+                                }
+                            })
                         })
+
+                        function setSticky(){
+                            // 스티키 레이아웃 설정
+                            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                            $('.container').css({'padding-top': breakStickyPos+'rem'});
+                            $('.sticky').css({'top': breakStickyPos+'rem'});
+                        }
 
                         // Range
                         function PlayerTimeline($this){
@@ -90,6 +109,12 @@
                                     $(obj).removeClass("is_active").on('transitionend', function(){
                                         (!$(obj).hasClass('is_active')) && $(obj).removeClass("is_visible");
                                     })
+                                }
+
+                                var orientation = window.orientation;
+                                if (orientation != undefined){
+                                    (orientation !== 0 && $(obj).hasClass('is_active')) && $('.appbar').removeClass('is_hide');
+                                    (orientation !== 0 && !$(obj).hasClass('is_active')) && $('.appbar').addClass('is_hide');
                                 }
                             }
 						}

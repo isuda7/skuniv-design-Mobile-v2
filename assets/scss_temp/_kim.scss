@@ -199,37 +199,6 @@
     }
 }
 
-//플레이어 배속설정, 자막설정
-.modal_videoplayersetspeed, .modal_videoplayersetsubtitle {
-    padding-bottom:4rem;
-    .radio.set_option + .radio.set_option {
-        margin-top:0.8rem;
-    }
-    .radio.set_option {
-        @include FontBody16;
-        min-height:4.8rem;
-        width:100%;
-        display: flex;;
-        input, label {
-        align-items: center;
-        }
-        label:after {
-            position:static;
-            width:1.6rem;
-            height:1.6rem;
-            margin-left:0.8rem;
-        }
-        input:checked ~ label {
-            border-color: $ColorPrimary;
-            color:$ColorPrimary;
-            font-weight: 700;
-        }
-        input:checked ~ label:after {
-            background: url('../img/icons_16_ic_check_primary.svg');
-        }
-    }
-}
-
 //학습노트
 .learning_note {
     .cube_note {

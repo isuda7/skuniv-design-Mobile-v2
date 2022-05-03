@@ -870,7 +870,7 @@
 
 .theme_dark {
     //classroom 차수정보
-	
+
     .degree_list {
 		.degree_sort {
 			border-color: #25272b;
@@ -909,19 +909,35 @@
 .overview_subscript {
     margin-top: 2rem;
     position: relative;
+	overflow: hidden;
     .overview_txt {
 		color:#44464a;
         @include Ellipsis3;
     }
     .btn_more {
-        padding:0 0 0 0.4rem;
+		float:right;
         color:#75777b;
+        padding:0 1.6rem 0 0;
+		&::after {
+			content:"";
+			position:absolute;
+			right:0;
+			top:0.7rem;
+			display:inline-block;
+			width:1.2rem;
+			height:1.2rem;
+			margin-left:0.4rem;
+			background-image: url('../img/icons_12_ic_chervron_down_grey_05.svg');
+		}
     }
     &.is_expanded {
         .overview_txt {
             display:block;
             overflow: visible;
         }
+		.btn_more::after {
+			transform:rotate(180deg);
+		}
     }
 }
 .theme_dark {
@@ -1103,19 +1119,34 @@
             .post_txt {
                 position: relative;
 				margin-bottom:1.5rem;
+				overflow: hidden;
                 .txt {
                     @include Ellipsis7;
                 }
-				.more {
-					position: absolute;
-					right:0;
-					bottom:0;
+				.btn.more {
+					float:right;
 					padding:0;
+					padding:0 1.6rem 0 0;
+					&::after {
+						content:"";
+						position:absolute;
+						right:0;
+						top:0.6rem;
+						display:inline-block;
+						width:1.2rem;
+						height:1.2rem;
+						margin-left:0.4rem;
+						background-image: url('../img/icons_12_ic_chervron_down_grey_05.svg');
+					}
 				}
 				&.is_expanded {
 					.txt {
 						display:block;
 						overflow: visible;
+					}
+					.btn.more::after {
+						top:0.7rem;
+						transform: rotate(180deg);
 					}
 				}
             }
