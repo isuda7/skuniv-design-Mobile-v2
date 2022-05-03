@@ -914,6 +914,16 @@
             }
         }
     }
+    > .textarea_group {
+        textarea {
+            height:12.8rem;
+        }
+        .bytes {
+            text-align: right;
+            color:#a4a6aa;
+            @include FontBody12;
+        }
+    }
 }
 
 @media all and (orientation: landscape) {
