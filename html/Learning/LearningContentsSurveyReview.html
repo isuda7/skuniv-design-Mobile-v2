@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+
+</head>
+
+<body class="is_dimmed">
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_surveyreview">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">Survey</h3>
+            </div>
+            <div class="modal_content">
+				<div class="survey_review">
+                    <h2 class="heading2">이 과정을 다른 사람에게도 추천하고 싶은가요?</h2>
+                    <div class="ico_btn">
+                        <div class="radio basic">
+                            <input type="radio" name="review_btn" id="review_btn1" tabindex="0" class="hidden" checked>
+                            <label for="review_btn1"></label>
+                        </div>
+                        <strong class="ico_label n1">매우 그렇다</strong>
+                    </div>
+                    <div class="ico_btn">
+                        <div class="radio basic">
+                            <input type="radio" name="review_btn" id="review_btn2" tabindex="0" class="hidden">
+                            <label for="review_btn2"></label>
+                        </div>
+                        <strong class="ico_label n2">그렇다</strong>
+                    </div>
+                    <div class="ico_btn">
+                        <div class="radio basic">
+                            <input type="radio" name="review_btn" id="review_btn3" tabindex="0" class="hidden">
+                            <label for="review_btn3"></label>
+                        </div>
+                        <strong class="ico_label n3">보통이다</strong>
+                    </div>
+                    <div class="ico_btn">
+                        <div class="radio basic">
+                            <input type="radio" name="review_btn" id="review_btn4" tabindex="0" class="hidden">
+                            <label for="review_btn4"></label>
+                        </div>
+                        <strong class="ico_label n4">아니다</strong>
+                    </div>
+                    <div class="ico_btn">
+                        <div class="radio basic">
+                            <input type="radio" name="review_btn" id="review_btn5" tabindex="0" class="hidden">
+                            <label for="review_btn5"></label>
+                        </div>
+                        <strong class="ico_label n5">매우 아니다</strong>
+                    </div>
+                    <div class="textarea_group">
+                        <p class="textarea block">
+                            <label for="write_form" class="tit blind">만족도 평가</label>
+                            <textarea id="write_form" placeholder="어떤 점이 특별히 좋았나요? 자세한 학습 후기를 남겨주세요." maxlength="1000" class="basic"></textarea>
+                            <p class="bytes"><span class="count_no">0</span>&nbsp;&#47;&nbsp;1000</p>
+                        </p>
+                    </div>
+                </div>
+			</div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>
