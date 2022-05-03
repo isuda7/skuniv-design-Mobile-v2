@@ -828,12 +828,91 @@
         }
     }
 }
-
 // report 에디터
 .report_edit {
     .modal_header {
-        .right {
+        > .right {
             margin-left: auto;
+        }
+    }
+}
+
+// Survey
+.survey_head {
+    display: flex;
+    align-items: center;
+    > .right{
+        margin-left:auto;
+    }
+}
+.survey_information {
+    margin-top:10rem;
+    > .info {
+        &::before {
+			background-image:url('../img/icons_16_ic_survey_grey_06.svg');
+		}
+    }
+}
+
+//결과통계 답변 더보기
+.resultmore_list {
+    > ul {
+        margin:1.4rem 0 2rem;
+        .list_block {
+            & + .list_block {
+                border-top:1px solid #f2f3f5;
+            }
+            display: flex;
+            align-items: center;
+            color:#75777b;
+            padding:1.2rem 0;
+            > .right {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+
+.survey_review {
+    > h2 {
+        margin:1.6rem 0 1.2rem;
+    }
+    .ico_btn {
+        display: flex;
+        align-items: center;
+        padding:1.4rem 0;
+        .ico_label {
+            display:flex;
+            align-items: center;
+            height:2.8rem;
+            flex:none;
+            @include FontBody16;
+            color:#1c1d1f;
+            &::before {
+                content:'';
+                flex:none;
+                display:block;
+                width:2.4rem;
+                height:2.4rem;
+                margin:0 0.4rem 0 0.8rem;
+                background:no-repeat center center / 100% auto;
+            }
+            &.n1::before {
+                background-image: url('../img/icons_24_ic_verygood.png');
+            }
+            &.n2::before {
+                background-image: url('../img/icons_24_ic_good.png');
+            }
+            &.n3::before {
+                background-image: url('../img/icons_24_ic_normal.png');
+            }
+            &.n4::before {
+                background-image: url('../img/icons_24_ic_bad.png');
+            }
+            &.n5::before {
+                background-image: url('../img/icons_24_ic_so_bad.png');
+            }
         }
     }
 }

@@ -301,12 +301,16 @@
         &.home::before {
             background-image:url('../img/icons_24_ic_main_black.svg');
         }
+        &.menu::before {
+            background-image:url('../img/icons_24_ic_menu_black.svg');
+        }
         &.drawer::before {
             background-image:url('../img/icons_24_ic_menu_black.svg');
         }
         &.bookmark::before {
             background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
         }
+
         &.bookmark.is_active::before {
             background-position-y: bottom;
         }
