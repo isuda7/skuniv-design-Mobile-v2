@@ -508,29 +508,28 @@
 }
 
 //플레이어 퀴즈start, 다음학습 화면
-.cube_player_sec {
-    position: relative;
-    > .player_zindex {
-        height:0;
-        position:relative;
-        z-index:29;
-        .player_box {
-            height:20.2rem;
-            padding:5.2rem 2rem 2rem 2rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            > .title {
-                @include Ellipsis2;
-                @include FontTitle16;
-                margin-bottom:0.6rem;
-            }
-            .btn_player {
-                position: absolute;
-                bottom:2rem;
-                right:2rem;
-                @include FontBody13;
-                padding:0.5rem 2rem;
-            }
+.player_zindex {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:29;
+    padding:5.2rem 2rem 2rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    .player_box {
+        > .title {
+            @include Ellipsis2;
+            @include FontTitle16;
+            margin-bottom:0.6rem;
+        }
+        .btn_player {
+            position: absolute;
+            bottom:2rem;
+            right:2rem;
+            @include FontBody13;
+            height:3.2rem;
+            padding:0.5rem 1.2rem;
         }
     }
 }
@@ -914,5 +913,15 @@
                 background-image: url('../img/icons_24_ic_so_bad.png');
             }
         }
+    }
+}
+
+@media all and (orientation: landscape) {
+    .player_zindex {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:5.2rem;
+        width:100%;
     }
 }

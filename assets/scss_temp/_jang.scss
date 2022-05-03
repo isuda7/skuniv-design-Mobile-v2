@@ -611,6 +611,7 @@
         }
         &.has_modal_landscape {
             .full_landscape,
+            .cube_player,
             .appbar {
                 width: 60%;
             }
@@ -623,6 +624,11 @@
         .modal_bottomsheet{
             margin: 0;
             max-height: none;
+            background-color: #000;
+            color:#fff;
+            .btn.ico.close::before {
+                background-image:url('../img/icons_24_ic_close_white.svg');
+            }
         }
     }
 }
