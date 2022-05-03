@@ -318,8 +318,7 @@
         display: flex;
         align-items: center;
         width:100%;
-        height:inherit;
-        padding:0 2rem;
+        padding:1.3rem 2rem;
         border-top:1px solid #33353c;
         background-color: #000000;
         .label {
@@ -345,20 +344,19 @@
         .note_form {
             width:100%;
             flex:1 1 auto;
-            input.basic {
-                border:0;
-                height:3.2rem;
-                padding:inherit;
-            }
             textarea.basic {
                 width:100%;
                 border:0;
-                height:4.2rem;
+                min-height:2.2rem;
+                max-height:11rem;
                 line-height:2.2rem;
-                padding:1rem 0;
+                padding-top:0;
+                padding-bottom:0;
                 vertical-align: top;
-                &::-webkit-scrollbar {
-                    display:none;
+            }
+            &:not(.is_focused) {
+                textarea.basic {
+                    height:2.2rem !important;
                 }
             }
         }
