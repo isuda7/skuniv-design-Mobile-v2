@@ -140,6 +140,24 @@
         }
     }
 }
+@media all and (orientation: landscape) {
+    .modal_wrap {
+        .modal_bottomsheet {
+            max-height: calc(100% - 6rem);
+        }
+        &.modal_landscape {
+            .modal_bottomsheet {
+                transform:translateX(110%);
+            }
+            &.is_active {
+                .modal_bottomsheet {
+                    transform:translateX(0%);
+                }
+            }
+        }
+    }
+}
+
 .dimmer {
     visibility: hidden;
     opacity: 0;

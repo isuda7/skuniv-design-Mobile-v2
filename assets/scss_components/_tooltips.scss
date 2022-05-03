@@ -29,6 +29,10 @@
         left:50%;
         transform: translateX(-50%);
     }
+    &.center .tooltip_body {
+        left:50%;
+        transform: translateX(-50%);
+    }
     // Transition
     .tooltip_body {
         opacity: 0;
@@ -90,6 +94,21 @@
 
 // Style Description
 .tooltip.desc {
+    .btn.help {
+        padding:0;
+        @include FontBody13;
+        color:#a4a6aa;
+        &::before {
+            content:'';
+            display:block;
+            position: relative;
+            top:1px;
+            width:2rem;
+            height:2rem;
+            margin-right:0.4rem;
+            background: url('../img/icons_20_ic_information_grey_05.svg') no-repeat center center / 100% auto;
+        }
+    }
     .tooltip_body {
         width:26rem;
         margin:1rem;
@@ -137,5 +156,18 @@
             height:0.8rem;
             background-image: url('../img/icons_8_ic_balloon_tail.svg');
         }
+    }
+}
+
+.modal_landscape,
+.theme_dark {
+    .tooltip.desc .btn.help::before {
+        background-image: url('../img/icons_20_ic_information_grey_07.svg');
+    }
+}
+
+@media all and (orientation: landscape) {
+    .tooltip.basic {
+        display:none;
     }
 }

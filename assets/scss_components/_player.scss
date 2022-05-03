@@ -4,8 +4,10 @@
     height:20.2rem;
     background-color: #000;
     color:#fff;
+    transition: width 0.2s ease;
     &_sec {
         position: relative;
+        transition: width 0.2s ease;
     }
     // overflow: hidden;
     > img {
@@ -282,6 +284,9 @@
             bottom:4rem;
             .option_area .btn.ico {
                 margin-left:2.4rem;
+                &.full::before {
+                    background-image: url('../img/icons_24_ic_contraction_white.svg');
+                }
             }
         }
     }

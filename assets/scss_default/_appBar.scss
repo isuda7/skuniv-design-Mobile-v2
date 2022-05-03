@@ -310,9 +310,26 @@
         &.bookmark::before {
             background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
         }
-
         &.bookmark.is_active::before {
             background-position-y: bottom;
+        }
+        &.script::before {
+            background-image:url('../img/icons_24_ic_script_off_on.svg');
+        }
+        &.script.is_active::before {
+            background-position-y: bottom;
+        }
+        &.note::before {
+            background-image:url('../img/icons_24_ic_note_off_on.svg');
+        }
+        &.note.is_active::before {
+            background-position-y: bottom;
+        }
+        &.script {
+            display:none;
+        }
+        &.note {
+            display:none;
         }
     }
 }
@@ -368,6 +385,28 @@
             &.bookmark.is_active::before {
                 background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
                 background-position-y: bottom;
+            }
+        }
+    }
+}
+@media all and (orientation: landscape) {
+    .header {
+        height: $HeightAppBarHor;
+    }
+    .gap_none {
+        .appbar {
+            height: $HeightAppBarHor;
+            .appbar_left,
+            .appbar_right {
+                height:inherit;
+            }
+            .btn.ico {
+                &.script {
+                    display:flex;
+                }
+                &.note {
+                    display:flex;
+                }
             }
         }
     }

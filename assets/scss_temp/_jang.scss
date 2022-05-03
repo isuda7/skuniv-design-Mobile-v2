@@ -600,6 +600,7 @@
             display: block;
             width: 100%;
             height: 100%;
+            transition: width 0.2s ease;
         }
         .comment_floating .comment_body,
         .popup_comment,
@@ -613,18 +614,18 @@
             .full_landscape,
             .cube_player,
             .appbar {
-                width: 60%;
+                width: calc(100% - 30.6rem);
             }
         }
     }
     .modal_landscape{
         left: auto;
         right : 0;
-        width : 40vw;
+        width : 30.6rem;
         .modal_bottomsheet{
             margin: 0;
             max-height: none;
-            background-color: #000;
+            background-color: #151617;
             color:#fff;
             .btn.ico.close::before {
                 background-image:url('../img/icons_24_ic_close_white.svg');

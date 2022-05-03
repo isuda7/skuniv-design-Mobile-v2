@@ -464,36 +464,30 @@
 }
 
 //비디오 스크립트, 오디오 스크립트
-.videoscript_page, .audioscript_page {
-    > .download {
+.script_sec {
+    .script_download {
         display: flex;
         align-items: center;
-        padding:1rem 0;
+        padding:1.4rem 0 1.4rem;
         .left {
             display: flex;
             align-items: center;
-            &::after {
-                content:"";
-                position: relative;
-                margin-left:0.6rem;
-                width:2rem;
-                height:2rem;
-                background-image: url('../img/icons_20_ic_information_grey_07.svg');
-                }
             .btn_down {
+                height:2.7rem;
+                padding:0rem 1.2rem;
+                margin-right:0.8rem;
                 @include FontBody13;
                 color:#cbcdcf;
                 border:1px solid #44464a;
                 border-radius: 4px;
-                padding:0.4rem 1.2rem;
+                background-color: #151617;
             }
         }
         .right {
-            margin-left: auto;
+            margin:-0.6rem -1rem -0.6rem auto;
         }
     }
-    > .script_txt {
-        margin-top:0.6rem;
+    .script_txt {
         > .txt + .txt {
             margin-top:3rem;
         }

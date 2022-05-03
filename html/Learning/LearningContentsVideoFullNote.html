@@ -37,7 +37,7 @@
         function ModalChecked(){
             var orientation = window.orientation;
             if(orientation != undefined){
-                (orientation == 0) ? ModalBSClose("#modalPlaySpeed") : ModalBSOpen("#modalPlaySpeed");
+                (orientation == 0) ? ModalBSClose("#modalPlayNote") : ModalBSOpen("#modalPlayNote");
             }
         }
 
@@ -46,10 +46,10 @@
             $(window).on('resize', function(){ ModalChecked() });
         })
     </script>
-
 </head>
 
 <body>
+    <!-- Modal Oepn: has_modal_landscape 클래스 추가 -->
     <div class="sub_wrapper theme_dark gap_none has_full_landscape has_modal_landscape">
         <!-- Header -->
         <header class="header">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="appbar_right">
                     <button type="button" class="btn ico script"><span class="blind">스크립트</span></button>
-                    <button type="button" class="btn ico note"><span class="blind">노트</span></button>
+                    <button type="button" class="btn ico note is_active" onclick="ModalBSOpen('#modalPlayNote');"><span class="blind">노트</span></button>
                     <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
                 </div>
             </div>
@@ -72,11 +72,9 @@
             <div class="content_head">
                 <!-- 학습영상 -->
                 <div class="cube_player_sec full_landscape" id="playerSec">
-                    <script>
-                        $('#playerSec').load('../Common/Player.html', function () {
-                            $('#playerSec').children().addClass('is_visible is_active');
-                        });
-                    </script>
+                    <script>$('#playerSec').load('../Common/Player.html', function(){
+                        $('#playerSec').children().addClass('is_visible is_active');
+                    });</script>
                 </div>
                 <!-- //학습영상 -->
             </div>
@@ -139,16 +137,12 @@
                             <div class="card_cube_parents">
                                 <div class="card_inner">
                                     <div class="card_thumb">
-                                        <a href="javascript:voide(0)" class="thumb"
-                                            style="background-image : url('../../assets/img/demo/thumb-01.png');"><span
-                                                class="blind">Thumbnails</span></a>
-                                        <button type="button" class="btn ico ribon is_active"><span
-                                                class="blind">찜하기</span></button>
+                                        <a href="javascript:voide(0)"  class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');"><span class="blind">Thumbnails</span></a>
+                                        <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
                                     </div>
                                     <a class="card_body">
                                         <p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-                                        <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은
-                                                몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
+                                        <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
                                     </a>
                                 </div>
                             </div>
@@ -163,24 +157,23 @@
                         </div>
                         <div class="sec_body">
                             <h3 class="heading3">학습목표</h2>
-                                <div class="sec_cont">
-                                    <p class="sub_txt">
-                                        반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에
-                                        미친 지대한 영향을 이해한다.
-                                    </p>
-                                </div>
-                                <h3 class="heading3">대상</h2>
-                                    <div class="sec_cont">
-                                        <p class="sub_txt">모든 구성원</p>
-                                    </div>
-                                    <h3 class="heading3">교육기관 출처</h2>
-                                        <div class="sec_cont">
-                                            <p class="sub_txt">SK mySUNI</p>
-                                        </div>
-                                        <h3 class="heading3">이수조건</h2>
-                                            <div class="sec_cont">
-                                                <p class="sub_txt">진도율 100%</p>
-                                            </div>
+                            <div class="sec_cont">
+                                <p class="sub_txt">
+                                    반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
+                                </p>
+                            </div>
+                            <h3 class="heading3">대상</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">모든 구성원</p>
+                            </div>
+                            <h3 class="heading3">교육기관 출처</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">SK mySUNI</p>
+                            </div>
+                            <h3 class="heading3">이수조건</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">진도율 100%</p>
+                            </div>
                         </div>
                     </div>
                     <!-- // Cube Section -->
@@ -217,13 +210,10 @@
                                 <div class="teacher_item">
                                     <a href="javascript:void(0)" class="teacher_inner">
                                         <div class="teacher_avata">
-                                            <span class="avata"
-                                                style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span
-                                                    class="blind">Profile Avata</span></span>
+                                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
                                         </div>
                                         <div class="teacher_body">
-                                            <div class="title"><strong>조승빈</strong><span class="label style1">대표</span>
-                                            </div>
+                                            <div class="title"><strong>조승빈</strong><span class="label style1">대표</span></div>
                                             <div class="sub_txt">컨크루언트 애자일</div>
                                         </div>
                                     </a>
@@ -231,9 +221,7 @@
                                 <div class="teacher_item">
                                     <a href="javascript:void(0)" class="teacher_inner">
                                         <div class="teacher_avata">
-                                            <span class="avata"
-                                                style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span
-                                                    class="blind">Profile Avata</span></span>
+                                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
                                         </div>
                                         <div class="teacher_body">
                                             <div class="title"><strong>조승빈</strong></div>
@@ -251,51 +239,86 @@
         </main>
         <!-- // Container -->
 
-        <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to
-                top</span></button>
+        <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
     </div>
 
     <!-- Modal Bottomsheet -->
-    <div class="modal_wrap is_active is_visible modal_landscape" id="modalPlaySpeed">
-        <div class="modal modal_bottomsheet modal_select">
+    <div class="modal_wrap is_active is_visible modal_landscape" id="modalPlayNote">
+        <div class="modal modal_bottomsheet modal_play_note">
             <div class="modal_header">
-                <button type="button" class="btn ico close" onclick="ModalBSClose('#modalPlaySpeed');"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">자막설정</h3>
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#modalPlayNote')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">학습노트1</h3>
             </div>
             <div class="modal_content">
-                <ul class="select_list">
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock1" tabindex="0" class="hidden"
-                                checked />
-                            <label for="radioBlock1"><span>0.5x</span></label>
+                <!-- Board Toolbar -->
+                <div class="board_toolbar gap_reset">
+                    <div class="board_count">
+                        <span class="total">총</span>
+                        <em class="count">0</em>
+                        <span class="unit">개</span>
+                    </div>
+                </div>
+                <!-- // Board Toolbar -->
+                <!-- 게시물 -->
+                <div class="learning_note">
+                    <div class="cube_note">
+                        <div class="note_head">
+                            <div class="left">
+                                <p class="note_time">00 : 00 : 03</p>
+                                <button type="button" class="btn ico openinnew"><span class="blind">새창 열기</button>
+                            </div>
+                            <div class="right">
+                                <div class="tooltip basic left bottom">
+                                    <button type="button" class="btn ico more"><span class="blind">편집메뉴 보기</button>
+                                    <div class="tooltip_body">
+                                        <button type="button" class="btn edit">수정</button>
+                                        <button type="button" class="btn remove">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock2" tabindex="0" class="hidden" />
-                            <label for="radioBlock2"><span>1.0x</span></label>
+                        <div class="note_body">
+                            <div class="note_txt">
+                                <p class="txt">
+                                    최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다. 최대2줄까지 보입니다.
+                                    <!-- 2줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
+                                </p>
+                            </div>
+                            <div class="note_date">
+                                <p class="date">2022.03.01</p>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock3" tabindex="0" class="hidden" />
-                            <label for="radioBlock3"><span>1.5x</span></label>
+                    </div>
+                    <div class="cube_note">
+                        <div class="note_head">
+                            <div class="left">
+                                <p class="note_title">학습노트1</p>
+                                <p class="btn ico openinnew blind"><span class="blind">새창 열기</p>
+                            </div>
+                            <div class="right">
+                                <div class="tooltip basic left bottom">
+                                    <button type="button" class="btn ico more"><span class="blind">편집메뉴 보기</button>
+                                    <div class="tooltip_body">
+                                        <button type="button" class="btn edit">수정</button>
+                                        <button type="button" class="btn remove">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock4" tabindex="0" class="hidden" />
-                            <label for="radioBlock4"><span>1.75x</span></label>
+                        <div class="note_body">
+                            <div class="note_txt">
+                                <p class="txt">
+                                    누구나 일을 잘하고 싶은 생각은 가지고 있지만, 실제로 일 잘하는 본질은 무엇인지
+                                    <!-- 2줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
+                                </p>
+                            </div>
+                            <div class="note_date">
+                                <p class="date">2022.03.01</p>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock5" tabindex="0" class="hidden" />
-                            <label for="radioBlock5"><span>2.0x</span></label>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <!-- // 게시물 -->
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
