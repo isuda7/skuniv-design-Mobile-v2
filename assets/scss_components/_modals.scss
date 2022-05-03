@@ -83,9 +83,9 @@
     }
 
     &.theme_dark {
-        background-color: #151617;
+        background-color: #000;
         .sticky {
-            background-color: #151617;
+            background-color: #000;
         }
         .btn.ico {
             &.close::before {
@@ -232,6 +232,12 @@
     }
     .modal_footer {
         flex:none;
+    }
+    &.theme_dark{
+        background-color: #151617;
+        .sticky {
+            background-color: #151617;
+        }
     }
 }
 
