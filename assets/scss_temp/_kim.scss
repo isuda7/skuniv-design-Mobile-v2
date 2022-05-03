@@ -822,14 +822,18 @@
 .filename_line2 {
     .references_body {
         .item {
+            position:relative;
             > strong {
                 @include Ellipsis2;
-                position:relative;
+                overflow: hidden;
             }
             > span {
-                position: fixed;
+                position: absolute;
                 bottom:0;
-                z-index: 1;
+                right:0;
+                padding-left:0.4rem;
+                background-color: #000;
+                display: inline-flex;
             }
         }
     }
