@@ -613,3 +613,44 @@
         }
     }
 }
+
+//More SubMain
+.menu_wrap{
+    .group_tit {
+        color: #a4a6aa;
+        @include FontTitle14;
+    }
+    .menu_group {
+        padding: 2.4rem 0 2rem;
+        border-bottom: .1rem solid #f2f3f5;
+    }
+}
+.group_wrap{
+    .group_item {
+        padding: 1.6rem;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        color: #000;
+        @include FontBody16;
+        &::after{
+            content: '';
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-image:url('ic_chervron_right_grey04')
+        }
+        &.ico{
+            padding-left : 3.2rem;
+            background-repeat: no-repeat;
+            background-position: 0;
+            &.notice{
+                background-image: url('../img/icons_24_ic_notice_black.svg');
+            }
+        }
+    }
+}
