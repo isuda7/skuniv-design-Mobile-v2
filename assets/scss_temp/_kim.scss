@@ -853,12 +853,20 @@
         }
     }
 }
-
 // report 에디터
 .report_edit {
     .modal_header {
         .right {
             margin-left: auto;
         }
+    }
+}
+
+// Sirvey
+.survey_head {
+    display: flex;
+    align-items: center;
+    .right{
+        margin-left:auto;
     }
 }
