@@ -784,6 +784,21 @@
             .cube_references {
                 margin-top:1rem;
             }
+            .filename_line1 {
+                .references_body {
+                    overflow: hidden;
+                    .item {
+                        display: flex;
+                        > strong {
+                            @include Ellipsis1;
+                        }
+                        > span {
+                            display: block;
+                            flex: none;
+                        }
+                    }
+                }
+            }
         }
     }
     .content_body {
