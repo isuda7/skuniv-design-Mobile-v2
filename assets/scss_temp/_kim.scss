@@ -321,6 +321,12 @@
         padding:1.3rem 2rem;
         border-top:1px solid #33353c;
         background-color: #000000;
+        .note_time {
+            position: relative;
+            flex:none;
+            margin-right:1.2rem;
+            color:#f8f8fa;
+        }
         .label {
             position: relative;
             flex:none;

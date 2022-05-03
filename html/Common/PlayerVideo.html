@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <!-- 레이아웃 스크립트 -->
+    <script>
+        $(function () {
+            // Appbar Transition
+            var $subWrapper = $('.sub_wrapper');
+            var $appbar = $('.appbar');
+            var $appbarTitle = $('.appbar_title');
+            $(window).scroll(function () {
+                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight() / 2) -
+                    $appbar.outerHeight();
+                var scrollTop = $(window).scrollTop();
+                // appbar_title이 appbar밑으로 절반이상 사라질때
+                (scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition'): $appbar.removeClass(
+                    'is_transition');
+            });
+
+            // LandspaceMode
+            $subWrapper.on('touchstart', function (e) {
+                var orientation = window.orientation;
+                if (orientation != undefined) {
+                    (orientation == 90) && $('.appbar').toggleClass('is_hide');
+                }
+            })
+            $(window).on('resize', function (e) {
+                var orientation = window.orientation;
+                if (orientation != undefined) {
+                    (orientation == 0) ? $('.appbar').removeClass('is_hide'): $('.appbar').addClass(
+                        'is_hide');
+                }
+            })
+
+            // content_head가 고정인경우 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({
+                'padding-top': breakStickyPos + 'rem'
+            });
+            $('.sticky').css({
+                'top': breakStickyPos + 'rem'
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="sub_wrapper theme_dark gap_none has_full_landscape has_modal_landscape">
+        <!-- Header -->
+        <header class="header">
+            <div class="appbar basic">
+                <div class="appbar_left">
+                    <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                    <h1><strong class="blind">학습과정</strong></h1>
+                </div>
+                <div class="appbar_right">
+                    <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
+                </div>
+            </div>
+        </header>
+        <!-- // Header -->
+
+        <!-- Container -->
+        <main role="main" class="container learning_container">
+            <div class="content_head">
+                <!-- 학습영상 -->
+                <div class="cube_player_sec full_landscape" id="playerSec">
+                    <script>
+                        $('#playerSec').load('../Common/Player.html', function () {
+                            $('#playerSec').children().addClass('is_visible is_active');
+                        });
+                    </script>
+                </div>
+                <!-- //학습영상 -->
+            </div>
+            <div class="content_body">
+                <div class="out_sec sticky gap_tab">
+                    <div class="tab style2">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item is_active">콘텐츠</button>
+                            <button type="button" class="tab_item">개요</button>
+                            <button type="button" class="tab_item">관련과정</button>
+                            <button type="button" class="tab_item">리뷰</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_panel">
+                    <div style="height:25rem; background-color:#333;"></div>
+                    <div style="height:25rem; background-color:#222;"></div>
+                    <div style="height:25rem; background-color:#333;"></div>
+                    <div style="height:25rem; background-color:#222;"></div>
+                    <div style="height:25rem; background-color:#333;"></div>
+                    <div style="height:25rem; background-color:#222;"></div>
+                </div>
+            </div>
+        </main>
+        <!-- // Container -->
+
+        <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to
+                top</span></button>
+    </div>
+    <!-- Modal Bottomsheet fullHeight -->
+    <div class="modal_wrap modal_landscape is_active is_visible">
+        <div class="modal modal_bottomsheet modal_select theme_dark">
+            <div class="modal_header">
+                <!-- 닫기시 has_bottom_modal 클래스도 같이 빼야 함 -->
+                <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">PDF (2)</h3>
+            </div>
+            <div class="modal_content">
+                <ul class="select_list">
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden"
+                                checked />
+                            <label for="selectlist1"><span>[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                            <label for="selectlist2"><span>[보충학습자료] 꿀잼반도체2.pdf</span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="dimmer" aria-hidden="true"></div> -->
+    </div>
+    <!-- // Modal Bottomsheet fullHeight -->
+</body>
+
+</html>
