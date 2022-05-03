@@ -60,7 +60,26 @@
                                 PlayerTimeline($(this));
                             });
                             PlayerTimeline($('.timeline_range'));
+
+                            // LandspaceMode
+                            $(window).on('resize', function(e){
+                                var orientation = window.orientation;
+                                if(orientation != undefined){
+                                    (orientation !== 0 && $('.cube_player').hasClass('is_visible')) && $('.appbar').removeClass('is_hide');
+                                    (orientation !== 0 && !$('.cube_player').hasClass('is_visible')) && $('.appbar').addClass('is_hide');
+                                }
+                                if ($('.sticky').length) {
+                                    setSticky();
+                                }
+                            })
                         })
+
+                        function setSticky(){
+                            // 스티키 레이아웃 설정
+                            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                            $('.container').css({'padding-top': breakStickyPos+'rem'});
+                            $('.sticky').css({'top': breakStickyPos+'rem'});
+                        }
 
                         // Range
                         function PlayerTimeline($this){
@@ -75,23 +94,28 @@
 
                         // Overwrap
 						function PlayerOvewrap(obj, e){
-                            /* 인터렉션 확인용 퍼블 스크립트
-                                var visibleClass= 'is_visible';
-                                var activeClass= 'is_active';
-                                var $overWrap = $(obj).find('.player_overwrap');
-                                if ($overWrap.has(e.target).length === 0) {
-                                    // 활성화
-                                    if ($(obj).hasClass(visibleClass) === false) {
-                                        $(obj).addClass("is_visible is_active");
-                                    }
-
-                                    // 비활성화
-                                    else {
-                                        $(obj).removeClass("is_active").on('transitionend', function(){
-                                            (!$(obj).hasClass('is_active')) && $(obj).removeClass("is_visible");
-                                        })
-                                    }
+                            /* is_visible, is_active 참고용 스크립트 */
+                            var visibleClass= 'is_visible';
+                            var activeClass= 'is_active';
+                            var $overWrap = $(obj).find('.player_overwrap');
+                            if ($overWrap.has(e.target).length === 0) {
+                                // 활성화
+                                if ($(obj).hasClass(visibleClass) === false) {
+                                    $(obj).addClass("is_visible is_active");
                                 }
-                            */
+
+                                // 비활성화
+                                else {
+                                    $(obj).removeClass("is_active").on('transitionend', function(){
+                                        (!$(obj).hasClass('is_active')) && $(obj).removeClass("is_visible");
+                                    })
+                                }
+
+                                var orientation = window.orientation;
+                                if (orientation != undefined){
+                                    (orientation !== 0 && $(obj).hasClass('is_active')) && $('.appbar').removeClass('is_hide');
+                                    (orientation !== 0 && !$(obj).hasClass('is_active')) && $('.appbar').addClass('is_hide');
+                                }
+                            }
 						}
 					</script>

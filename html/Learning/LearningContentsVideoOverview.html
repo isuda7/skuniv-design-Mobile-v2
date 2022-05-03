@@ -12,44 +12,23 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-	<script>
-		$(function(){
-            // Appbar Transition
-            var $subWrapper = $('.sub_wrapper');
-            var $appbar = $('.appbar');
-            var $appbarTitle = $('.appbar_title');
-			$(window).scroll(function(){
-                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-                var scrollTop = $(window).scrollTop();
-				// appbar_title이 appbar밑으로 절반이상 사라질때
-				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
-			});
-
-            // LandscapeMode
-            $subWrapper.on('touchstart', function(e){
-                var orientation = window.orientation;
-                if (orientation != undefined){
-                    (orientation == 90) && $appbar.toggleClass('is_hide');
-                }
-            })
-            $(window).on('resize', function(e){
-                var orientation = window.orientation;
-                if(orientation != undefined){
-                    (orientation == 0) ? $appbar.removeClass('is_hide') :$appbar.addClass('is_hide');
-                }
-            })
-		});
-	</script>
+    <script>
+        $(function(){
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+        });
+    </script>
 </head>
-<!-- 가로 모드  -->
 <body>
-<div class="sub_wrapper theme_dark has_full_landscape has_modal_landscape">
+<div class="sub_wrapper theme_dark gap_none has_full_landscape">
 	<!-- Header -->
     <header class="header">
-        <div class="appbar basic is_transition">
+        <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="transition">[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
+                <h1><strong class="transition">기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
             </div>
             <div class="appbar_right">
                 <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
@@ -59,77 +38,24 @@
     <!-- // Header -->
 
 	<!-- Container -->
-    <main role="main" class="container learning_container document_page">
+    <main role="main" class="container learning_container">
         <div class="content_head">
-            <!-- documentviewer -->
-            <div class="doc_viewer full_landscape">
-                <div class="doc_area">
-                    <div class="doc_wrap flex_area centered">
-                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
-                    </div>
-                    <div class="doc_pagination">
-                        <a href="javascript:void(0)" class="doc_act prev"><span class="blind">prev 이동</span></a>
-                        <div class="pages_num">
-                            <span>23</span>
-                            <span> / </span>
-                            <span>50</span>
-                        </div>
-                        <a href="javascript:void(0)" class="doc_act next"><span class="blind">next 이동</span></a>
-                    </div>
-                </div>
-                <div class="doc_info_area">
-                    <div class="doc_bar_wrap">
-                        <span class="doc_bar" style="width : 46%"></span>
-                    </div>
-                    <div class="doc_link_wrap">
-                        <div class="label_tit link"><span>PDF</span></div>
-                        <div class="doc_cnt"><span>1</span><span>/</span><span>2</span></div>
-                        <div class="doc_name"><a href="javascript:void(0)" class="ach ico">[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</a></div>
-                    </div>
-                </div>
+            <!-- 학습영상 -->
+            <div class="cube_player_sec full_landscape" id="playerSec">
+                <script>$('#playerSec').load('../Common/Player.html');</script>
             </div>
-            <!-- // documentviewer -->
+            <!-- //학습영상 -->
         </div>
-        <div class="content_body document_content">
+        <div class="content_body contents_page">
             <!-- 과정제목 -->
             <div class="learning_subject">
                 <div class="title_area">
                     <span class="label style1 primary">학습중</span>
-                    <h1 class="title appbar_title"><strong>[긍정습관 만들기] 3. 챗봇과 함께하는 긍정습관 만들기 실습</strong></h1>
+                    <h1 class="title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
                 </div>
                 <div class="info_area">
-                    <span class="label document">Document</span>
+                    <span class="label video">Video</span>
                     <span class="label time">30m</span>
-                </div>
-                <div class="learning_attachment">
-                    <div class="att_title">
-                        <h2 class="sub_title"><strong>첨부파일</strong><strong class="cnt">2</strong></h2>
-                        <button type="button" class="btn down_all">전체 다운로드</button>
-                    </div>
-                    <div class="att_list">
-                        <div class="cube_references">
-                            <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
-                                <p class="bytes">249KB</p>
-                            </div>
-                            <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
-                            </div>
-                        </div>
-                        <div class="cube_references">
-                            <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                                <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
-                                <p class="bytes">249KB</p>
-                            </div>
-                            <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- //과정제목 -->
@@ -138,12 +64,13 @@
                 <div class="tab style2">
                     <div class="tab_list">
                         <button type="button" class="tab_item is_active">개요</button>
+                        <button type="button" class="tab_item">스크립트</button>
                         <button type="button" class="tab_item">코멘트</button>
                         <button type="button" class="tab_item">학습노트</button>
                     </div>
                 </div>
             </div>
-
+            <!-- //학습과정 탭 -->
             <div class="tab_panel overview_page">
                 <!-- 과정 Overview -->
                 <div class="cube_overview">
@@ -172,7 +99,7 @@
                 <!-- 해당과정 -->
                 <div class="learning_sec">
                     <div class="sec_head">
-                        <h2 class="heading2">해당 과정</h2>
+                        <h2 class="heading2">해당과정</h2>
                     </div>
                     <div class="sec_body">
                         <div class="card_cube_parents">
@@ -189,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- // 해당과정 -->
+                <!--  // 해당과정 -->
 
                 <!-- Cube Section -->
                 <div class="learning_sec">
@@ -197,21 +124,21 @@
                         <h2 class="heading2">정보</h2>
                     </div>
                     <div class="sec_body">
-                        <h3 class="heading3">학습목표</h3>
+                        <h3 class="heading3">학습목표</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">
                                 반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
                             </p>
                         </div>
-                        <h3 class="heading3">대상</h3>
+                        <h3 class="heading3">대상</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">모든 구성원</p>
                         </div>
-                        <h3 class="heading3">교육기관 출처</h3>
+                        <h3 class="heading3">교육기관 출처</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">SK mySUNI</p>
                         </div>
-                        <h3 class="heading3">이수조건</h3>
+                        <h3 class="heading3">이수조건</h2>
                         <div class="sec_cont">
                             <p class="sub_txt">진도율 100%</p>
                         </div>
@@ -274,47 +201,13 @@
                     </div>
                 </div>
                 <!-- // 강사 -->
-                <!-- floating btn -->
-                <div class="page_floating">
-                    <div class="page_action">
-                        <button type="button" class="btn basic primary">학습완료</button>
-                    </div>
-                </div>
-                <!-- // floating btn -->
             </div>
+            <!-- // 학습과정 탭 -->
         </div>
     </main>
     <!-- // Container -->
 
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
-<!-- Modal Bottomsheet fullHeight -->
-<div class="modal_wrap modal_landscape is_active is_visible">
-    <div class="modal modal_bottomsheet modal_select theme_dark">
-        <div class="modal_header">
-            <!-- 닫기시 has_bottom_modal 클래스도 같이 빼야 함 -->
-            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
-            <h3 class="modal_tit">PDF (2)</h3>
-        </div>
-        <div class="modal_content">
-            <ul class="select_list">
-                <li>
-                    <div class="radio option">
-                        <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" checked/>
-                        <label for="selectlist1"><span>[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</span></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="radio option">
-                        <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
-                        <label for="selectlist2"><span>[보충학습자료] 꿀잼반도체2.pdf</span></label>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- <div class="dimmer" aria-hidden="true"></div> -->
-</div>
-<!-- // Modal Bottomsheet fullHeight -->
 </body>
 </html>
