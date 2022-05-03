@@ -661,7 +661,7 @@
             top: 50%;
             right: 0;
             transform: translateY(-50%);
-            background-image:url('ic_chervron_right_grey04')
+            background-image:url('../img/icons_16_ic_chervron_right_grey_04.svg');
         }
         &.ico{
             padding-left : 3.2rem;
@@ -670,6 +670,35 @@
             &.notice{
                 background-image: url('../img/icons_24_ic_notice_black.svg');
             }
+            &.faq{
+                background-image: url('../img/icons_24_ic_faq_black.svg');
+            }
+            &.qna{
+                background-image: url('../img/icons_24_ic_mail_black.svg');
+            }
+            &.lang{
+                background-image: url('../img/icons_24_ic_global_black.svg');
+            }
+            &.alarm{
+                background-image: url('../img/icons_24_ic_alarmthin_black_off_on.svg');
+                background-position: 0 1.7rem;
+            }
+            &.lock{
+                background-image: url('../img/icons_24_ic_lock_black.svg');
+            }
+            &.apprvl{
+                background-image: url('../img/icons_24_ic_document_check_black.svg');
+            }
+        }
+        &.new span{
+            display: inline-block;
+            padding-right: 3.6rem;
+            background: url('../img/icons_24_ic_document_check_black.svg') no-repeat 100% 100%;
+        }
+        .slct_txt{
+            display: inline-block;
+            margin-right : .2rem;
+            color :#a4a6aa;
         }
     }
 }
