@@ -5,6 +5,7 @@
 	.tab_list {
 		position: relative;
 		display: flex;
+		overflow-x: auto;
 		.tab_inner {
 			display: flex;
 			align-items: center;

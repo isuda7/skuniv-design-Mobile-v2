@@ -54,6 +54,7 @@
 			.title {
 				@include FontTitle22;
 				color:inherit;
+				word-break: break-word;
 				&.line1 { @include FontTitle22; }
 				&.line2  { @include FontTitle20; }
 				&.line3 { @include FontTitle18; }
@@ -786,6 +787,7 @@
 				display:block;
 				width:100%;
 				flex:1 1 auto;
+				word-break: break-word;
 			}
 			& + .degree_item {
 				margin-top:0.4rem;
