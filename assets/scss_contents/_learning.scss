@@ -731,7 +731,7 @@
 		display:flex;
 		align-items: center;
 		width:100%;
-		padding: .7rem 3.2rem .7rem 2rem;
+		padding: .7rem 3.2rem .7rem 0;
 		color:$ColorSubTxt;
 		@include FontTitle13;
 		text-align: center;
@@ -739,8 +739,8 @@
 		.title {
 			flex:none;
 			display:block;
-			width:5rem;
-			margin-right:0.8rem;
+			width: 3.6rem;
+			margin:0 1rem;
 		}
 		.date {
 			display:block;
@@ -750,8 +750,8 @@
 		.state{
 			flex:none;
 			display:block;
-			width:7.7rem;
-			margin-left:0.8rem;
+			width:6.4rem;
+			margin-left:1rem;
 		}
 	}
 
@@ -765,7 +765,7 @@
 				display:block;
 				position: absolute;
 				right:1.3rem;
-				top:calc(50% - 0.2rem);
+				top:calc(50% - 0.6rem);
 				width : 1.2rem;
 				height: 1.2rem;
 				background-image : url('../img/icons_12_ic_chervron_down_grey_05.svg');
@@ -781,7 +781,6 @@
 			.title {
 				flex:none;
 				display:block;
-				margin-right:0.8rem;
 			}
 			.date {
 				display:block;
@@ -792,29 +791,45 @@
 				margin-top:0.4rem;
 			}
 		}
+		.degree_expand {
+			position: relative;
+			height:4.6rem;
+			padding:0 3.2rem 0 1rem;
+			font-weight: 400;
+			text-align: center;
+			.title{
+				width: 3.6rem;
+				margin-right: 1rem;
+				&.point{
+					position: relative;
+					&::before{
+						content:'';
+						display: block;
+						width: .6rem;
+						height: .6rem;
+						border-radius: 50%;
+						background-color: $ColorPrimary;
+						position: absolute;
+						top : 50%;
+						left : -1rem;
+						transform: translateY(-50%);
+					}
+				}
+			}
+			.state{
+				flex:none;
+				display:block;
+				width:6.4rem;
+				margin-left:1rem;
+				word-break: break-word;
+			}
+		}
 		.degree_item{
 			.title{
 				width : 9rem;
 			}
 			.date{
 				color :#75777b;
-			}
-		}
-		.degree_expand {
-			position: relative;
-			height:4.6rem;
-			padding:0 3.2rem 0 2rem;
-			font-weight: 400;
-			.title{
-				width: 5rem;
-			}
-			.state{
-				flex:none;
-				display:block;
-				width:7rem;
-				margin-left:0.8rem;
-				text-align: center;
-				word-break: break-word;
 			}
 		}
 		.degree_body {
@@ -825,54 +840,70 @@
 	// Cases
 	&.has_check {
 		.degree_sort {
-			padding-left:0.4rem;
+			padding-left:0.2rem;
 			.title {
-				width:3.1rem;
 				text-align: center;
-				margin-left:4rem;
-				margin-right:3rem;
+				margin-left:2rem;
 			}
 		}
 		.degree_expand {
-			padding-left:0.4rem;
-		}
-		.radio {
-			margin-right:2rem;
-		}
-		.radio + .title {
-			width:3.1rem;
-			margin-right:3rem;
-			text-align: center;
+			padding-left:0;
+			.title{
+				width : 2.4rem;
+				margin : 0 1rem;
+			}
+			.state{
+				width : 6rem;
+			}
 		}
 	}
-
+	.degree_pnlty {
+		margin-top: 1.2rem;
+		@include FontBody12;
+		color : #666;
+		.err_txt{
+			color : $ColorError;
+			font-weight: 700;
+		}
+	}
 }
 
 .theme_dark {
     //classroom 차수정보
-    .degree_list .degree_acco{
-        border-color: #25272b;
-		.degree_body{
-			background-color: #25272B;
+	
+    .degree_list {
+		.degree_sort {
+			border-color: #25272b;
 		}
-		.degree_expand {
-			color : #a4a6aa;
-			.title{
-				color:#F8F8FA;
+		.degree_acco{
+			border-color: #25272b;
+			.acco_title{
+				border-color: #25272b;
 			}
-		}
-		.degree_item {
-			.title {
-				color:#F8F8FA;
+			.degree_body{
+				background-color: #25272B;
 			}
-			.date {
-				color:#a4a6aa;
+			.degree_expand {
+				color : #a4a6aa;
+				.title{
+					color:#F8F8FA;
+				}
 			}
-		}
+			.degree_item {
+				.title {
+					color:#F8F8FA;
+				}
+				.date {
+					color:#a4a6aa;
+				}
+			}
 
-    }
+		}
+	}
 
 }
+//modal 내 차수정보의 경우
+.modal_content .degree_list {padding-top: 1.2rem;}
 
 // 개요설명
 .overview_subscript {
