@@ -774,15 +774,15 @@
             }
         }
         .report_body {
+            .opinion_txt + .cube_references {
+                margin-top:1rem;
+            }
             .report_empty {
                 padding:1.6rem;
                 .title {
                     text-align: center;
                     color:#75777b;
                 }
-            }
-            .cube_references {
-                margin-top:1rem;
             }
         }
     }
@@ -805,6 +805,9 @@
 }
 // 파일명 Ellipsis
 .filename_line1 {
+    & + .filename_line1 {
+        margin-top:1rem;
+    }
     .references_body {
         overflow: hidden;
         .item {
@@ -820,6 +823,9 @@
     }
 }
 .filename_line2 {
+    & + .filename_line2 {
+        margin-top:1rem;
+    }
     .references_body {
         .item {
             position:relative;
@@ -832,9 +838,29 @@
                 bottom:0;
                 right:0;
                 padding-left:0.4rem;
-                background-color: #000;
                 display: inline-flex;
+                background-color: #fff;
             }
+        }
+    }
+}
+.theme_dark {
+    .filename_line2 {
+        .references_body {
+            .item {
+                > span {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+// report 에디터
+.report_edit {
+    .modal_header {
+        .right {
+            margin-left: auto;
         }
     }
 }
