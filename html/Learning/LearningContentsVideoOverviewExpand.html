@@ -28,7 +28,7 @@
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
+                <h1><strong class="transition">기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
             </div>
             <div class="appbar_right">
                 <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
@@ -41,29 +41,8 @@
     <main role="main" class="container learning_container">
         <div class="content_head">
             <!-- 학습영상 -->
-            <div class="cube_player_sec full_landscape">
-                <!-- quiz화면 영역 -->
-                <div class="player_zindex is_visible">
-                    <div class="player_box learning_subject">
-                        <p class="sub_txt">다음학습</p>
-                        <h2 class="title">기준 없는 협업, 어떻게 성장하는 협업 구심점 어떻게 성장하는 협업 구심점 협업 구심점 협업 구심점협업 구심점협업 구심점</h2>
-                        <div class="info_area">
-                            <span class="label video">Video</span>
-                            <span class="label time">30m</span>
-                        </div>
-                        <button type="button" class="btn basic primary btn_player">다음 학습 진행</button>
-                    </div>
-                </div>
-                <!-- // quiz화면 영역 -->
-                <!-- Player영역 -->
-                <div class="cube_player">
-                    <div class="player_thumb">
-                        <!-- 플레이어 영상영역 -->
-                        <span class="thumb" style="background-image: url('../../assets/img/demo/placeimg_640_360_animals.jpg');"></span>
-                        <!-- // 플레이어 영상영역 -->
-                    </div>
-                </div>
-                <!-- // Player영역 -->
+            <div class="cube_player_sec full_landscape" id="playerSec">
+                <script>$('#playerSec').load('../Common/Player.html');</script>
             </div>
             <!-- //학습영상 -->
         </div>
@@ -92,15 +71,12 @@
                 </div>
             </div>
             <!-- //학습과정 탭 -->
-            <div class="tab_panel nextlearning_page">
+            <div class="tab_panel overview_page">
                 <!-- 과정 Overview -->
                 <div class="cube_overview">
                     <ul>
-                        <li class="item_complete done">11,247명 이수</li>
-                        <li class="item_part basic">basic</li>
-                        <li class="item_part intermediate">Intermediate</li>
-                        <li class="item_part advanced">advanced</li>
-                        <li class="item_part expert">expert</li>
+                        <li class="item_complete">20명 이수</li>
+                        <li class="item_part basic">Intermediate</li>
                         <li class="item_contact">이름 두 줄 이상일 경우, 버튼이 밑줄에 맞춰집니다.</li>
                     </ul>
                     <button type="button" class="btn text arw_link">문의하기</button>
@@ -108,12 +84,12 @@
                 <!-- // 과정 Overview -->
 
                 <!-- 과정 Overview 텍스트 - 더보기시 is_expanded 추가, 더 보기 > 접기 -->
-                <div class="overview_subscript">
+                <div class="overview_subscript is_expanded">
                     <!-- CSS 중간말줄임 표현불가 -->
                     <p class="overview_txt">
-                        최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다.
+                        최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다. 최대3줄까지 보입니다.
                     </p>
-                    <button type="button" class="btn btn_more">더 보기</button>
+                    <button type="button" class="btn btn_more">접기</button>
                 </div>
                 <!-- // 과정 Overview 텍스트 -->
 

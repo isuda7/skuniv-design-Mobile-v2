@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            // 스티키 레이아웃 설정
+            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            $('.container').css({'padding-top': breakStickyPos+'rem'});
+            $('.sticky').css({'top': breakStickyPos+'rem'});
+        });
+    </script>
+</head>
+<body>
+<div class="sub_wrapper theme_dark gap_none has_full_landscape">
+	<!-- Header -->
+    <header class="header">
+        <div class="appbar basic">
+            <div class="appbar_left">
+                <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+                <h1><strong class="transition">기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
+            </div>
+            <div class="appbar_right">
+                <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
+            </div>
+        </div>
+    </header>
+    <!-- // Header -->
+
+	<!-- Container -->
+    <main role="main" class="container learning_container">
+        <div class="content_head">
+            <!-- 학습영상 -->
+            <div class="cube_player_sec full_landscape" id="playerSec">
+                <script>$('#playerSec').load('../Common/Player.html');</script>
+            </div>
+            <!-- //학습영상 -->
+        </div>
+        <div class="content_body contents_page">
+            <!-- 과정제목 -->
+            <div class="learning_subject">
+                <div class="title_area">
+                    <span class="label style1 primary">학습중</span>
+                    <h1 class="title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
+                </div>
+                <div class="info_area">
+                    <span class="label video">Video</span>
+                    <span class="label time">30m</span>
+                </div>
+            </div>
+            <!-- //과정제목 -->
+            <!-- 학습과정 탭 -->
+            <div class="out_sec sticky">
+                <div class="tab style2">
+                    <div class="tab_list">
+                        <button type="button" class="tab_item">개요</button>
+                        <button type="button" class="tab_item">스크립트</button>
+                        <button type="button" class="tab_item is_active">코멘트</button>
+                        <button type="button" class="tab_item">학습노트</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //학습과정 탭 -->
+            <!-- Board Toolbar -->
+            <div class="tab_panel comment_page">
+                <div class="board_toolbar">
+                    <div class="board_count">
+                        <span class="total">총</span>
+                        <em class="count">0</em>
+                        <span class="unit">개</span>
+                    </div>
+                    <div class="board_util">
+                        <button type="button" class="btn text arw_expand">최신순</button>
+                    </div>
+                </div>
+
+                <!-- Empty -->
+                <div class="flex_area centered">
+                    <div class="no_data">
+                        <p class="tit"><strong>작성된 코멘트가 없습니다.</strong></p>
+                        <p class="sub_txt">첫 코멘트를 남겨보세요.</p>
+                    </div>
+                </div>
+                <!-- //Empty -->
+
+                <!-- 코멘트 -->
+                <div class="comment_floating">
+                    <div class="comment_body">
+                        <div class="comment_alert">
+                            <p class="txt">아란님에게 답글 남기는 중...</p>
+                            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                        </div>
+                        <div class="left">
+                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                            <div class="comment_form">
+                                <label for="commentForm" class="tit blind">코멘트 입력</label>
+                                <textarea id="commentForm" cols="10" rows="1" class="basic" placeholder="이야기를 나눠보세요."></textarea>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                            <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 코멘트 -->
+            </div>
+            <!-- //Board Toolbar -->
+        </div>
+    </main>
+    <!-- // Container -->
+
+</div>
+</body>
+</html>

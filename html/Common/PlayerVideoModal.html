@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Modal Oepn: has_modal_landscape 클래스 추가 -->
     <div class="sub_wrapper theme_dark gap_none has_full_landscape has_modal_landscape">
         <!-- Header -->
         <header class="header">
@@ -36,11 +37,9 @@
             <div class="content_head">
                 <!-- 학습영상 -->
                 <div class="cube_player_sec full_landscape" id="playerSec">
-                    <script>
-                        $('#playerSec').load('../Common/Player.html', function () {
-                            $('#playerSec').children().addClass('is_visible is_active');
-                        });
-                    </script>
+                    <script>$('#playerSec').load('../Common/Player.html', function(){
+                        $('#playerSec').children().addClass('is_visible is_active');
+                    });</script>
                 </div>
                 <!-- //학습영상 -->
             </div>
@@ -103,16 +102,12 @@
                             <div class="card_cube_parents">
                                 <div class="card_inner">
                                     <div class="card_thumb">
-                                        <a href="javascript:voide(0)" class="thumb"
-                                            style="background-image : url('../../assets/img/demo/thumb-01.png');"><span
-                                                class="blind">Thumbnails</span></a>
-                                        <button type="button" class="btn ico ribon is_active"><span
-                                                class="blind">찜하기</span></button>
+                                        <a href="javascript:voide(0)"  class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');"><span class="blind">Thumbnails</span></a>
+                                        <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
                                     </div>
                                     <a class="card_body">
                                         <p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-                                        <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은
-                                                몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
+                                        <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
                                     </a>
                                 </div>
                             </div>
@@ -127,24 +122,23 @@
                         </div>
                         <div class="sec_body">
                             <h3 class="heading3">학습목표</h2>
-                                <div class="sec_cont">
-                                    <p class="sub_txt">
-                                        반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에
-                                        미친 지대한 영향을 이해한다.
-                                    </p>
-                                </div>
-                                <h3 class="heading3">대상</h2>
-                                    <div class="sec_cont">
-                                        <p class="sub_txt">모든 구성원</p>
-                                    </div>
-                                    <h3 class="heading3">교육기관 출처</h2>
-                                        <div class="sec_cont">
-                                            <p class="sub_txt">SK mySUNI</p>
-                                        </div>
-                                        <h3 class="heading3">이수조건</h2>
-                                            <div class="sec_cont">
-                                                <p class="sub_txt">진도율 100%</p>
-                                            </div>
+                            <div class="sec_cont">
+                                <p class="sub_txt">
+                                    반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
+                                </p>
+                            </div>
+                            <h3 class="heading3">대상</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">모든 구성원</p>
+                            </div>
+                            <h3 class="heading3">교육기관 출처</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">SK mySUNI</p>
+                            </div>
+                            <h3 class="heading3">이수조건</h2>
+                            <div class="sec_cont">
+                                <p class="sub_txt">진도율 100%</p>
+                            </div>
                         </div>
                     </div>
                     <!-- // Cube Section -->
@@ -181,13 +175,10 @@
                                 <div class="teacher_item">
                                     <a href="javascript:void(0)" class="teacher_inner">
                                         <div class="teacher_avata">
-                                            <span class="avata"
-                                                style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span
-                                                    class="blind">Profile Avata</span></span>
+                                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
                                         </div>
                                         <div class="teacher_body">
-                                            <div class="title"><strong>조승빈</strong><span class="label style1">대표</span>
-                                            </div>
+                                            <div class="title"><strong>조승빈</strong><span class="label style1">대표</span></div>
                                             <div class="sub_txt">컨크루언트 애자일</div>
                                         </div>
                                     </a>
@@ -195,9 +186,7 @@
                                 <div class="teacher_item">
                                     <a href="javascript:void(0)" class="teacher_inner">
                                         <div class="teacher_avata">
-                                            <span class="avata"
-                                                style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span
-                                                    class="blind">Profile Avata</span></span>
+                                            <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
                                         </div>
                                         <div class="teacher_body">
                                             <div class="title"><strong>조승빈</strong></div>
@@ -215,8 +204,7 @@
         </main>
         <!-- // Container -->
 
-        <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to
-                top</span></button>
+        <button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
     </div>
 
     <!-- Modal Bottomsheet -->
@@ -230,33 +218,26 @@
                 <ul class="select_list">
                     <li>
                         <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock1" tabindex="0" class="hidden"
-                                checked />
-                            <label for="radioBlock1"><span>0.5x</span></label>
+                            <input type="radio" name="radioBlock" id="radioBlock1" tabindex="0" class="hidden" checked />
+                            <label for="radioBlock1"><span>자막 사용 안함</span></label>
                         </div>
                     </li>
                     <li>
                         <div class="radio option">
                             <input type="radio" name="radioBlock" id="radioBlock2" tabindex="0" class="hidden" />
-                            <label for="radioBlock2"><span>1.0x</span></label>
+                            <label for="radioBlock2"><span>한국어</span></label>
                         </div>
                     </li>
                     <li>
                         <div class="radio option">
                             <input type="radio" name="radioBlock" id="radioBlock3" tabindex="0" class="hidden" />
-                            <label for="radioBlock3"><span>1.5x</span></label>
+                            <label for="radioBlock3"><span>English</span></label>
                         </div>
                     </li>
                     <li>
                         <div class="radio option">
                             <input type="radio" name="radioBlock" id="radioBlock4" tabindex="0" class="hidden" />
-                            <label for="radioBlock4"><span>1.75x</span></label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio option">
-                            <input type="radio" name="radioBlock" id="radioBlock5" tabindex="0" class="hidden" />
-                            <label for="radioBlock5"><span>2.0x</span></label>
+                            <label for="radioBlock4"><span>中文(简体)</span></label>
                         </div>
                     </li>
                 </ul>

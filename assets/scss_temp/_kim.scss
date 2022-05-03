@@ -199,37 +199,6 @@
     }
 }
 
-//플레이어 배속설정, 자막설정
-.modal_videoplayersetspeed, .modal_videoplayersetsubtitle {
-    padding-bottom:4rem;
-    .radio.set_option + .radio.set_option {
-        margin-top:0.8rem;
-    }
-    .radio.set_option {
-        @include FontBody16;
-        min-height:4.8rem;
-        width:100%;
-        display: flex;;
-        input, label {
-        align-items: center;
-        }
-        label:after {
-            position:static;
-            width:1.6rem;
-            height:1.6rem;
-            margin-left:0.8rem;
-        }
-        input:checked ~ label {
-            border-color: $ColorPrimary;
-            color:$ColorPrimary;
-            font-weight: 700;
-        }
-        input:checked ~ label:after {
-            background: url('../img/icons_16_ic_check_primary.svg');
-        }
-    }
-}
-
 //학습노트
 .learning_note {
     .cube_note {
@@ -321,6 +290,12 @@
         padding:1.3rem 2rem;
         border-top:1px solid #33353c;
         background-color: #000000;
+        .note_time {
+            position: relative;
+            flex:none;
+            margin-right:1.2rem;
+            color:#f8f8fa;
+        }
         .label {
             position: relative;
             flex:none;
@@ -533,29 +508,28 @@
 }
 
 //플레이어 퀴즈start, 다음학습 화면
-.cube_player_sec {
-    position: relative;
-    > .player_zindex {
-        height:0;
-        position:relative;
-        z-index:29;
-        .player_box {
-            height:20.2rem;
-            padding:5.2rem 2rem 2rem 2rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            > .title {
-                @include Ellipsis2;
-                @include FontTitle16;
-                margin-bottom:0.6rem;
-            }
-            .btn_player {
-                position: absolute;
-                bottom:2rem;
-                right:2rem;
-                @include FontBody13;
-                padding:0.5rem 2rem;
-            }
+.player_zindex {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:29;
+    padding:5.2rem 2rem 2rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    .player_box {
+        > .title {
+            @include Ellipsis2;
+            @include FontTitle16;
+            margin-bottom:0.6rem;
+        }
+        .btn_player {
+            position: absolute;
+            bottom:2rem;
+            right:2rem;
+            @include FontBody13;
+            height:3.2rem;
+            padding:0.5rem 1.2rem;
         }
     }
 }
@@ -856,17 +830,108 @@
 // report 에디터
 .report_edit {
     .modal_header {
-        .right {
+        > .right {
             margin-left: auto;
         }
     }
 }
 
-// Sirvey
+// Survey
 .survey_head {
     display: flex;
     align-items: center;
-    .right{
+    > .right{
         margin-left:auto;
+    }
+}
+.survey_information {
+    margin-top:10rem;
+    > .info {
+        &::before {
+			background-image:url('../img/icons_16_ic_survey_grey_06.svg');
+		}
+    }
+}
+
+//결과통계 답변 더보기
+.resultmore_list {
+    > ul {
+        margin:1.4rem 0 2rem;
+        .list_block {
+            & + .list_block {
+                border-top:1px solid #f2f3f5;
+            }
+            display: flex;
+            align-items: center;
+            color:#75777b;
+            padding:1.2rem 0;
+            > .right {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+
+.survey_review {
+    > h2 {
+        margin:1.6rem 0 1.2rem;
+    }
+    .ico_btn {
+        display: flex;
+        align-items: center;
+        padding:1.4rem 0;
+        .ico_label {
+            display:flex;
+            align-items: center;
+            height:2.8rem;
+            flex:none;
+            @include FontBody16;
+            color:#1c1d1f;
+            &::before {
+                content:'';
+                flex:none;
+                display:block;
+                width:2.4rem;
+                height:2.4rem;
+                margin:0 0.4rem 0 0.8rem;
+                background:no-repeat center center / 100% auto;
+            }
+            &.n1::before {
+                background-image: url('../img/icons_24_ic_verygood.png');
+            }
+            &.n2::before {
+                background-image: url('../img/icons_24_ic_good.png');
+            }
+            &.n3::before {
+                background-image: url('../img/icons_24_ic_normal.png');
+            }
+            &.n4::before {
+                background-image: url('../img/icons_24_ic_bad.png');
+            }
+            &.n5::before {
+                background-image: url('../img/icons_24_ic_so_bad.png');
+            }
+        }
+    }
+    > .textarea_group {
+        textarea {
+            height:12.8rem;
+        }
+        .bytes {
+            text-align: right;
+            color:#a4a6aa;
+            @include FontBody12;
+        }
+    }
+}
+
+@media all and (orientation: landscape) {
+    .player_zindex {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:5.2rem;
+        width:100%;
     }
 }
