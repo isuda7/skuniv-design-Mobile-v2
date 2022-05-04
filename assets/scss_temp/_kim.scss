@@ -642,6 +642,7 @@
             margin-bottom:0.8rem;
         }
         .cube_infolist {
+            margin-bottom:2.4rem;
             > .item {
                 display: flex;
                 align-items: center;
@@ -655,8 +656,6 @@
         .notice_txt {
             @include FontBody12;
             color:#75777b;
-            display: block;
-            margin-top:0.8rem;
         }
     }
     .degree_page {
