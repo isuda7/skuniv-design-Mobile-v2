@@ -6,10 +6,38 @@
                         .cube_player.is_timeline : timeline thumbnail active
                         .cube_player.is_pipscreen : pip mode
                         .cube_player.is_fullscreen : fullscreen mode
+                        .cube_player.is_quiz : quiz mode
+
 
                         재생/정지: 기본숨김, is_visible 보기
                     -->
                     <div class="cube_player" onclick="PlayerOvewrap(this, event)">
+                        <!-- quiz화면 영역 -->
+                        <div class="player_zindex quiz_start">
+                            <button type="button" class="btn ico close" onclick="quizeClose(this)"><span class="blind">퀴즈닫기</span></button>
+                            <div class="player_box">
+                                <h2 class="title">Video QUIZ</h2>
+                                <p class="txt">답안 제출 후 강의 이어보기가 가능합니다.</p>
+                                <button type="button" class="btn basic primary btn_player">퀴즈시작</button>
+                            </div>
+                        </div>
+                        <!-- // quiz화면 영역 -->
+
+                        <!-- quiz화면 영역 -->
+                        <div class="player_zindex quiz_ing">
+                            <button type="button" class="btn ico close" onclick="quizeClose(this)"><span class="blind">퀴즈닫기</span></button>
+                            <div class="player_box learning_subject">
+                                <p class="sub_txt">다음학습</p>
+                                <h2 class="title">기준 없는 협업, 어떻게 성장하는 협업 구심점 어떻게 성장하는 협업 구심점 협업 구심점 협업 구심점협업 구심점협업 구심점</h2>
+                                <div class="info_area">
+                                    <span class="label video">Video</span>
+                                    <span class="label time">30m</span>
+                                </div>
+                                <button type="button" class="btn basic primary btn_player">다음 학습 진행</button>
+                            </div>
+                        </div>
+                        <!-- // quiz화면 영역 -->
+
                         <!-- DBClick Constrols -->
                         <div class="player_db_controls">
                             <button type="button" class="btn dubble_backward"><span>10초</span></button>
@@ -74,6 +102,7 @@
                             })
                         })
 
+                        // Stciky 있을 시
                         function setSticky(){
                             // 스티키 레이아웃 설정
                             var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
@@ -98,7 +127,8 @@
                             var visibleClass= 'is_visible';
                             var activeClass= 'is_active';
                             var $overWrap = $(obj).find('.player_overwrap');
-                            if ($overWrap.has(e.target).length === 0) {
+                            console.log(e.target);
+                            if ($overWrap.has(e.target).length === 0 && $(obj).find('.player_zindex').has(e.target).length === 0) {
                                 // 활성화
                                 if ($(obj).hasClass(visibleClass) === false) {
                                     $(obj).addClass("is_visible is_active");
@@ -118,4 +148,12 @@
                                 }
                             }
 						}
+
+                        // Quiz Close
+                        function quizeClose(obj) {
+                            $(obj).parent('.player_zindex').removeClass('is_visible');
+                            $(obj).closest('.cube_player').removeClass('is_quiz');
+                            $('.appbar').removeClass('is_hidden');
+                        }
+
 					</script>

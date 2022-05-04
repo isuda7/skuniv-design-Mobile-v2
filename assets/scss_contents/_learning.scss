@@ -1334,6 +1334,7 @@
 		.title {
 			@include FontTitle18;
             color:#000;
+			word-break: keep-all;
         }
     }
     .info_area {

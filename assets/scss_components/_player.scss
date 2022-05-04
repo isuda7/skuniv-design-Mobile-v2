@@ -28,7 +28,7 @@
         left:0;
         bottom:0;
         width:100%;
-        z-index: 50;
+        z-index: 60;
 
         .timeline_thumb {
             position:absolute;
@@ -260,6 +260,62 @@
     }
 }
 
+// Quize Mode
+.cube_player {
+    &.is_quiz {
+        .player_timeline {
+            visibility: visible;
+            opacity: 1;
+            .timeline_range {
+                pointer-events: auto;
+                &::-webkit-slider-thumb {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+//플레이어 퀴즈start, 다음학습 화면
+.player_zindex {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:50;
+    padding:5.2rem 2rem 2rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    .player_box {
+        > .title {
+            @include Ellipsis2;
+            @include FontTitle16;
+            margin-bottom:0.6rem;
+        }
+        .btn_player {
+            position: absolute;
+            bottom:2rem;
+            right:2rem;
+            @include FontBody13;
+            height:3.2rem;
+            padding:0.5rem 1.2rem;
+        }
+    }
+    .btn.ico.close {
+        position:absolute;
+        left:2rem;
+        top:1.4rem;
+        &::before {
+            width:2.4rem;
+            height:2.4rem;
+            background-image: url('../img/icons_24_ic_close_white.svg');
+        }
+    }
+    &.is_visible {
+        display:block;
+    }
+}
+
 // 전체화면모드 이거나 가로모드인 경우
 @mixin PlayerFullscreen {
     position: fixed;
@@ -354,5 +410,28 @@
 @media all and (orientation: landscape) {
     .cube_player {
         @include PlayerFullscreen;
+    }
+    .player_zindex {
+        padding:8rem 2rem 0;
+        width:100%;
+        &.is_visible {
+            display:flex;
+        }
+        .player_box {
+            width:100%;
+            .title {
+                margin-top:0.8rem;
+                @include FontTitle20;
+            }
+            .info_area {
+                margin-top:1rem;
+            }
+            .btn_player {
+                bottom:5.7rem;
+                height:4rem;
+                padding:0 2rem;
+                @include FontTitle16;
+            }
+        }
     }
 }
