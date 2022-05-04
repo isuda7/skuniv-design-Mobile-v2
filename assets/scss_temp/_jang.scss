@@ -703,3 +703,40 @@
         }
     }
 }
+
+//board_notice
+.board_notice_list{
+    margin-left : -$GapSideBase;
+    margin-right : -$GapSideBase;
+}
+.board_notice{
+    padding : 2rem $GapSideBase 1.7rem;
+    border-bottom : .1rem solid #f2f3f5;
+    .inner {
+        display: inline-block;
+    }
+    .board_title{
+        color : #000;
+        @include FontBody14;
+        @include Ellipsis2;
+    }
+    .board_info_area{
+        margin-top: .6rem;
+        color :#75777b;
+        @include FontBody13;
+        .left{
+            display: flex;
+            align-items: center;
+            .label{
+                margin-left : .8rem;
+                &::before{
+                    content : '';
+                    display: inline-block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-right : .4rem;
+                }
+            }
+        }
+    }
+}
