@@ -276,67 +276,6 @@
         }
     }
 }
-.note_floating {
-    height:6rem;
-    // 노트 입력
-    .note_body {
-        position:fixed;
-        left:0;
-        bottom:0;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        width:100%;
-        padding:1.3rem 2rem;
-        border-top:1px solid #33353c;
-        background-color: #000000;
-        .note_time {
-            position: relative;
-            flex:none;
-            margin-right:1.2rem;
-            color:#f8f8fa;
-        }
-        .label {
-            position: relative;
-            flex:none;
-            margin-right:1.2rem;
-            color:#f8f8fa;
-            &::before {
-                content:"";
-                position: static;
-                margin-right:0.4rem;
-                width:1.6rem;
-                height:1.6rem;
-
-            }
-            &.note_time::before{
-                background-image: url('../img/icons_16_ic_time_grey_05.svg');
-            }
-            &.note_title::before{
-                background-image: url('../img/icons_16_ic_note_grey_05.svg');
-            }
-        }
-        .note_form {
-            width:100%;
-            flex:1 1 auto;
-            textarea.basic {
-                width:100%;
-                border:0;
-                min-height:2.2rem;
-                max-height:11rem;
-                line-height:2.2rem;
-                padding-top:0;
-                padding-bottom:0;
-                vertical-align: top;
-            }
-            &:not(.is_focused) {
-                textarea.basic {
-                    height:2.2rem !important;
-                }
-            }
-        }
-    }
-}
 
 .note_write {
     padding-top:1.6rem;
