@@ -728,6 +728,13 @@
 
 // 차수목록 아코디언
 .degree_list {
+	.sort_type {
+		display: flex;
+		align-items: center;
+		> .right {
+			margin-left: auto;
+		}	
+	}
 	.degree_sort {
 		display:flex;
 		align-items: center;
