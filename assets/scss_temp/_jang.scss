@@ -564,7 +564,7 @@
 // 페이지: has_full_landscape, full_landscape
 // 버틈시트: has_modal_landscape, modal_landscape
 @media all and (orientation: landscape) {
-    .sub_wrapper.theme_dark.has_full_landscape {
+    .sub_wrapper.has_full_landscape {
         height:100vh;
         overflow: hidden;
         .appbar{

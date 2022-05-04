@@ -387,33 +387,6 @@
     }
 }
 
-//플레이어 퀴즈start, 다음학습 화면
-.player_zindex {
-    position:absolute;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    z-index:29;
-    padding:5.2rem 2rem 2rem 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    .player_box {
-        > .title {
-            @include Ellipsis2;
-            @include FontTitle16;
-            margin-bottom:0.6rem;
-        }
-        .btn_player {
-            position: absolute;
-            bottom:2rem;
-            right:2rem;
-            @include FontBody13;
-            height:3.2rem;
-            padding:0.5rem 1.2rem;
-        }
-    }
-}
-
 //플레이어 퀴즈
 .videoquiz_page {
     .btn_view {
@@ -805,16 +778,3 @@
     }
 }
 
-@media all and (orientation: landscape) {
-    .player_zindex {
-        display:flex;
-        padding:8rem 2rem 0;
-        width:100%;
-        .player_box {
-            width:100%;
-            .title {
-                @include FontTitle18;
-            }
-        }
-    }
-}
