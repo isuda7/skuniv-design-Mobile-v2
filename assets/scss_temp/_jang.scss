@@ -603,9 +603,9 @@
             transition: width 0.2s ease;
         }
         .comment_floating .comment_body,
-        .popup_comment,
+        .popup_persistent,
         .note_floating .note_body,
-        .popup_note,
+        .popup_persistent,
         .toast,
         .sticky {
             z-index:0;

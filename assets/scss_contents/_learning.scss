@@ -1251,6 +1251,7 @@
 
 //코멘트 상세
 .post_detail {
+	margin:0 -2rem;
 	.post {
 		padding:1.6rem $GapSideBase 0 $GapSideBase;
 		.post_head {
@@ -1313,13 +1314,6 @@
 }
 .theme_dark .coment_empty .tit {
 	color:#fff;
-}
-
-.popup_comment {
-	.post_list {
-		padding:2rem $GapSideBase;
-		background-color: #151617;
-	}
 }
 
 // 학습과정제목
