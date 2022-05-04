@@ -1,0 +1,90 @@
+///////////////////////////////////////////////////
+// Feed
+///////////////////////////////////////////////////
+// Profile Headr
+.community_head {
+    width:100%;
+    padding:2rem;
+    .profile_link {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .avata_area {
+            flex:none;
+            margin-right:2rem;
+            .avata {
+                width:5.2rem;
+                height:5.2rem;
+            }
+        }
+        .title_area {
+            width:calc(100% - 10rem);
+            overflow: hidden;
+            .title {
+                flex:0 1 auto;
+                display:flex;
+                align-items: center;
+                overflow: hidden;
+                .name {
+                    flex:0 1 auto;
+                    @include FontTitle18;
+                    @include Ellipsis1;
+                }
+                .btn {
+                    margin-left:0.4rem;
+                }
+                .btn.ico.change {
+                    &::before {
+                        width:2.4rem;
+                        height:2.4rem;
+                        background-image: url('../img/icons_24_ic_changename_black.svg');
+                    }
+                }
+            }
+            .company {
+                margin-top:0.4rem;
+                @include FontBody14;
+                color:$ColorSubTxt;
+            }
+            .follow {
+                display:flex;
+                align-items: center;
+                margin-top:0.4rem;
+                .split {
+                    display:block;
+                    width:1px;
+                    height:1rem;
+                    margin:0 1.2rem;
+                    background-color: #e3e4e5;
+                }
+                .tit {
+                    @include FontBody14;
+                }
+                .count {
+                    margin-left:0.4rem;
+                    @include FontTitle14;
+                    color:$ColorPrimary;
+                }
+            }
+        }
+        .btn_area {
+            margin-top:2rem;
+        }
+    }
+    // 편집하기
+    .avata_edit {
+        position: relative;
+        margin:auto;
+        width:8rem;
+        height:8rem;
+        .ico.edit {
+            position: absolute;
+            right:0;
+            bottom:0;
+            width: 2.4rem;
+            height:2.4rem;
+            background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
+        }
+    }
+    
+}

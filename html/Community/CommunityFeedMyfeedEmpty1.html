@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.header');
+				var appbarShow = 284;
+				var scrollTop = $(window).scrollTop();
+
+				// Appbar 보여줄 시점에 Active
+				if (scrollTop > appbarShow) {
+					$appbar.removeClass('theme_secondary');
+				} else {
+					$appbar.addClass('theme_secondary');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body class="is_scroll_first is_scroll_last">
+	<div class="sub_wrapper has_sticky">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<!--button type="button" class="btn ico back"><span class="blind">뒤로</span></button-->
+					<h1><strong>커뮤니티</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico learning is_active"><span class="blind">학습</span></button>
+					<button type="button" class="btn ico bookmark is_active"><span class="blind">북마크</span></button>
+					<button type="button" class="btn ico more"><span class="blind">더 보기</span></button>
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container communityfeed_page">
+			<div class="content_head">
+				<!-- 프로필 헤더 -->
+				<div class="community_head">
+					<a href="javascript:voide(0)" class="profile_link">
+						<div class="avata_area">
+							<span class="avata" style="background-image:url('../../assets/img/icon_80_ic_default_profile.svg')"></span>
+						</div>
+						<div class="title_area">
+							<div class="title">
+								<strong class="name">사용자이름이 닉네임이라서 길어지면 님</strong>
+							</div>
+							<div class="follow">
+								<strong class="tit">팔로잉</strong>
+								<em class="count">20</em><span class="blind">명</span>
+								<b class="split"></b>
+								<strong class="tit">팔로워</strong>
+								<em class="count">20</em><span class="blind">명</span>
+							</div>
+						</div>
+					</a>
+					<div class="btn_area">
+						<button type="button" class="btn basic primary">Primary</button>
+						<button type="button" class="btn basic" disabled="">Basic</button>
+					</div>	
+				</div>
+				<!-- // 프로필 헤더 -->
+			</div>
+			<div class="content_body">
+				<!-- 학습과정 탭 -->
+				<div class="out_sec sticky gap_tab">
+					<div class="tab style2">
+						<div class="tab_list">
+							<button type="button" class="tab_item is_active">나의 커뮤니티</button>
+							<button type="button" class="tab_item">팔로잉 피드</button>
+							<button type="button" class="tab_item">나의 피드</button>
+							<button type="button" class="tab_item">북마크</button>
+						</div>
+					</div>
+				</div>
+				<!-- //학습과정 탭 -->
+                <div class="tab_panel playlist_page">
+                    <div class="flex_area centered">
+                        <div class="no_data">
+                            <!-- 메뉴별 Empty 문구 입니다. -->
+                            <p class="sub_txt">플레이리스트가 없습니다.</p>
+                            <p class="sub_txt">소속된 커뮤니티가 없습니다.</p>
+                            <p class="sub_txt">작성한 피드가 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<nav class="appnav">
+				<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+				<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+				<a href="/Mobile/Myhome/" class="item item_myhome"><span class="blind">마이홈</span></a>
+				<a href="/Mobile/Cummunity/" class="item item_comunity is_active">커뮤니티</a>
+				<a href="/Mobile/More/" class="item item_more">더보기</a>
+			</nav>
+		</footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>
