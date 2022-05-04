@@ -337,101 +337,48 @@
         }
     }
 }
-//학습노트 작성
-.popup_note {
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    width:100%;
-    z-index: 1001;
-    display:flex;
-    flex-direction: column;
-    overflow: hidden;
-    flex:0 1 auto;
-    background-color:#151617;
-     .popup_head {
-        position: relative;
-        z-index: 100;
-        display:flex;
-        align-items:center;
-        padding:0 $GapSideBase;
-        > .left {
-            display:flex;
-            align-items:center;
-            width:100%;
-            height:6.8rem;
-             .popup_tit {
-                font-size:1.8rem;
-                line-height:2.4rem;
-                font-weight:700;
-            }
-            > .btn.ico.close {
-                width:3.2rem;
-                height:3.2rem;
-                padding:0;
-                margin-left:-0.4rem;
+
+.note_write {
+    padding-top:1.6rem;
+    .write_info {
+        display: flex;
+        align-items: center;
+        .write_time {
+            display: flex;
+            align-items: center;
+            &::before {
+                content:"";
+                position: relative;
                 margin-right:0.4rem;
-                &::before {
-                    width:2.4rem;
-                    height:2.4rem;
-                    background-image:url('../img/icons_24_ic_close_white.svg');
-                }
+                width:1.6rem;
+                height:1.6rem;
+                background-image: url('../img/icons_16_ic_time_grey_05.svg');
+
             }
         }
-        > .right {
-            flex: none;
-            margin-left:auto;
+        .reload {
+            display: flex;
+            align-items: center;
+            &::before {
+                content:"";
+                position: relative;
+                margin-left:0.6rem;
+                width:1.6rem;
+                height:1.6rem;
+                background-image: url('../img/icons_16_ic_refreshment.svg');
+
+            }
         }
     }
-     .popup_body {
-        display:flex;
-        flex:1 1 auto;
-        width:100%;
-        flex-direction: column;
-        overflow-y: auto;
-        padding:0 $GapSideBase;
-        .note_write {
-            .write_info {
-                display: flex;
-                align-items: center;
-                .write_time {
-                    display: flex;
-                    align-items: center;
-                    &::before {
-                        content:"";
-                        position: relative;
-                        margin-right:0.4rem;
-                        width:1.6rem;
-                        height:1.6rem;
-                        background-image: url('../img/icons_16_ic_time_grey_05.svg');
-
-                    }
-                }
-                .reload {
-                    display: flex;
-                    align-items: center;
-                    &::before {
-                        content:"";
-                        position: relative;
-                        margin-left:0.6rem;
-                        width:1.6rem;
-                        height:1.6rem;
-                        background-image: url('../img/icons_16_ic_refreshment.svg');
-
-                    }
-                }
-            }
-            .write_form {
-                margin:0.6rem 0 0;
-                textarea.basic {
-                    height:12.8rem;
-                    padding:0.9rem 1.6rem;
-                }
-            }
+    .write_form {
+        margin:0.6rem 0 0;
+        textarea.basic {
+            height:12.8rem;
+            padding:0.9rem 1.6rem;
         }
     }
 }
+
 
 //과정목록 단일
 .modal_videolist {
@@ -923,9 +870,13 @@
 @media all and (orientation: landscape) {
     .player_zindex {
         display:flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom:5.2rem;
+        padding:8rem 2rem 0;
         width:100%;
+        .player_box {
+            width:100%;
+            .title {
+                @include FontTitle18;
+            }
+        }
     }
 }
