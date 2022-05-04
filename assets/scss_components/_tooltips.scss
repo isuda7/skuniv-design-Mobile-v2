@@ -159,7 +159,6 @@
     }
 }
 
-.modal_landscape,
 .theme_dark {
     .tooltip.desc .btn.help::before {
         background-image: url('../img/icons_20_ic_information_grey_07.svg');
@@ -169,5 +168,11 @@
 @media all and (orientation: landscape) {
     .tooltip.basic {
         display:none;
+    }
+
+    .modal_landscape {
+        .tooltip.desc {
+            display:none;
+        }
     }
 }

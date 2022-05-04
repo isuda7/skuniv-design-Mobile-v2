@@ -272,9 +272,13 @@
         height:$HeightAppBar;
         padding:0 $GapSideBase;
         .modal_tit {
+            margin-right: auto;
             font-size:1.8rem;
             line-height:2.4rem;
             font-weight:700;
+        }
+        .btn.text:last-child {
+            margin-right:-1rem;
         }
     }
     .modal_content {
