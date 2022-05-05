@@ -12,23 +12,6 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-	<script>
-		$(function(){
-			$(window).scroll(function(){
-				var $appbar = $('.appbar');
-				var $appbarTitle = $('.appbar_title');
-				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-				var scrollTop = $(window).scrollTop();
-
-				// appbar_title이 appbar밑으로 절반이상 사라질때
-				if (scrollTop > appbarTitleShow) {
-					$appbar.addClass('is_transition');
-				} else {
-					$appbar.removeClass('is_transition');
-				}
-			})
-		});
-	</script>
 </head>
 <body>
 <div class="sub_wrapper theme_dark">
@@ -64,7 +47,7 @@
             <!-- 리포트 내용 확인 -->
             <div class="report_confirm">
                 <p class="confirm_txt">
-                    리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 
+                    리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다. 리포트 작성 완료입니다.
                 </p>
             </div>
             <!-- // 리포트 내용 확인 -->
@@ -72,32 +55,24 @@
             <!--다운로드 -->
             <div class="file_down_area">
                 <div class="area_title"><strong class="label download">첨부파일</strong><strong class="cnt">2</strong></div>
-                <div class="cube_references filename_line1">
+                <div class="cube_references">
                     <div class="references_body">
-                        <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                        <p class="item">
-                            <strong>[보충학습자료] 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다. 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다.</strong>
-                            <span>.pdf</span>
-                        </p>
+                        <!-- CSS 여러줄 말줄임은 확장자 고정 불가 -->
+                        <p class="item">[보충학습자료] 꿀잼반도체1.인공지능 핵실엄 준비로 시끄럽습니다.pdf</p>
                         <p class="bytes">249KB</p>
                     </div>
                     <div class="references_util">
-                        <a href="javascript:void(0)" class="ico file_open blind"><span class="blind">새창열기</span></a>
-                        <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                        <a href="javascript:void(0)" class="btn ico file_down"><span class="blind">다운로드</span></a>
                     </div>
                 </div>
-                <div class="cube_references filename_line1">
+                <div class="cube_references">
                     <div class="references_body">
-                        <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                        <p class="item">
-                            <strong>[보충학습자료] 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다. 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다.</strong>
-                            <span>.pdf</span>
-                        </p>
+                        <!-- CSS 여러줄 말줄임은 확장자 고정 불가 -->
+                        <p class="item">[보충학습자료] 꿀잼반도체1.인공지능 핵실엄 준비로 시끄럽습니다.pdf</p>
                         <p class="bytes">249KB</p>
                     </div>
                     <div class="references_util">
-                        <a href="javascript:void(0)" class="ico file_open blind"><span class="blind">새창열기</span></a>
-                        <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                        <a href="javascript:void(0)" class="btn ico file_down"><span class="blind">다운로드</span></a>
                     </div>
                 </div>
             </div>

@@ -107,26 +107,28 @@
                     <div class="board_count">
                         <span class="total">총</span>
                         <em class="count">0</em>
-                        <span class="unit">개</span>
+                        <span class="unit">개 강의구성</span>
                     </div>
                 </div>
 
-                <!-- [CubeItem Cases]
-                    공통: cube
+				<!--
+					[CubeItem Cases]
+					공통: cube_item
 
-                    진행전: is_state1
-                    진행중: is_state2
-                    진행완료: is_state3
+					[진행상태]
+					진행전: is_state1
+					진행중: is_state2
+					진행완료: is_state3
 
-                    큐브기본: basic
-                    테스트: test
-                    레포트: report
-                    설문지: survay
+					[큐브유형]
+					유형1: type_play (Video, Audio, E-learning, Classroom, Task, Documents, webpage, Discussion, Experiential, Cohort)
+					유형2: type2 (Test, Report, Survey)
+					유형3: type3 (Talk)
 
-                    화살표 없는 경우: is_disabled
-                    리플인 경우: is_repley
-                -->
-                <div class="cube_list">
+					화살표 없는 경우: is_disabled [테스트: 학습 진행불가(학습 미시작), 설문: 진행 불가(학습 미진행)]
+					리플인 경우: is_repley
+				 -->
+                 <div class="cube_list">
                     <div class="cube_item type_play is_state1">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">

@@ -38,62 +38,24 @@
 
     <!-- Modal FullPopup -->
     <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup modal_taskEdit">
+        <div class="modal modal_fullpopup modal_boardwrite">
             <div class="modal_header">
 				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">Task 작성</h3>
                 <button type="button" class="btn text primary"><span>등록</span></button>
             </div>
-            <div class="modal_content flex_area">
+            <div class="modal_content flex_content">
                 <div class="edit_tit">
                     <input type="text" class="input" placeholder="제목을 입력해주세요."/>
                 </div>
                 <div class="edit_contents flex_area">
-					<!-- 첨부파일 등록 acc -->
-                    <div class="acc_file_upload is_hidden">
-						<div class="acc_file">
-							<a href="javascript:voide(0)" class="acc_title is_active">
-								<strong class="tit">첨부파일</strong><strong class="cnt">3</strong>
-							</a>
-							<div class="acco_content is_active">
-								<div class="cube_references">
-									<div class="references_body">
-										<p class="title">[꿀잼반도체] 1. 인류 최고의 발명품 트랜지스인류 최명품 트랜지명품 트랜지스터.pdf</p>
-										<p class="bytes">249KB</p>
-									</div>
-									<div class="references_util">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-								<div class="cube_references">
-									<div class="references_body">
-										<p class="title">[보충학습자료] 꿀잼반도체 1. 인류 최고의 발.pdf</p>
-										<p class="bytes">249KB</p>
-									</div>
-									<div class="references_util">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-								<div class="cube_references">
-									<div class="references_body">
-										<p class="title">[보충학습자료] 꿀잼반도체 1. 인류 최고의 발.pdf</p>
-										<p class="bytes">249KB</p>
-									</div>
-									<div class="references_util">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </div>
-					<!-- // 첨부파일 등록 acc -->
 					<div class="edit_form_wrap">
-						<textarea class="textarea full" placeholder="내용을 입력해주세요."></textarea>
+						<textarea cols="10" rows="10" class="textarea full" placeholder="내용을 입력해주세요.">안녕하십니까</textarea>
 					</div>
                 </div>
             </div>
             <div class="modal_footer">
-				 <div class="font_tool_bar"> <!-- is_active -->
+				<div class="font_tool_bar is_active">
                     <button type="button" class="btn e_fontSize"><span>12pt</span></button>
                     <button type="button" class="btn ico e_bolder"><span class="blind">Bold</span></button>
                     <button type="button" class="btn ico e_italic"><span class="blind">Italic</span></button>

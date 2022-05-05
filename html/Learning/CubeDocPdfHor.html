@@ -14,24 +14,35 @@
     <title>mySUNI Design Mobile V2</title>
 	<script>
 		$(function(){
+            // Appbar Transition
+            var $appbar = $('.appbar');
+            var $appbarTitle = $('.appbar_title');
 			$(window).scroll(function(){
-				var $appbar = $('.appbar');
-				var $appbarTitle = $('.appbar_title');
-				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-				var scrollTop = $(window).scrollTop();
-
+                var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+                var scrollTop = $(window).scrollTop();
 				// appbar_title이 appbar밑으로 절반이상 사라질때
-				if (scrollTop > appbarTitleShow) {
-					$appbar.addClass('is_transition');
-				} else {
-					$appbar.removeClass('is_transition');
-				}
-			})
+				(scrollTop > appbarTitleShow) ? $appbar.addClass('is_transition') : $appbar.removeClass('is_transition');
+			});
+
+            // LandscapeMode
+            $(window).on('touchstart', function(e){
+                var orientation = window.orientation;
+                if (orientation != undefined){
+                    (orientation !== 0) && $('.appbar').toggleClass('is_hide');
+                }
+            })
+            $(window).on('resize', function(e){
+                var orientation = window.orientation;
+                if(orientation != undefined){
+                    (orientation === 0) ? $('.appbar').removeClass('is_hide') : $('.appbar').addClass('is_hide');
+                }
+            })
 		});
 	</script>
 </head>
+<!-- 가로 모드 -->
 <body>
-<div class="sub_wrapper has_sticky theme_dark">
+<div class="sub_wrapper theme_dark has_full_landscape">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -50,10 +61,10 @@
     <main role="main" class="container learning_container document_page">
         <div class="content_head">
             <!-- documentviewer -->
-            <div class="doc_viewer">
+            <div class="doc_viewer full_landscape">
                 <div class="doc_area">
-                    <div class="doc_wrap">
-                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img"/>
+                    <div class="doc_wrap flex_area centered">
+                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
                     </div>
                     <div class="doc_pagination">
                         <a href="javascript:void(0)" class="doc_act prev"><span class="blind">prev 이동</span></a>
@@ -97,24 +108,24 @@
                     <div class="att_list">
                         <div class="cube_references">
                             <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <!-- CSS 여러줄 말줄임은 확장자 고정 불가 -->
                                 <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
                                 <p class="bytes">249KB</p>
                             </div>
                             <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                                <a href="javascript:void(0)" class="btn ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="btn ico file_down"><span class="blind">다운로드</span></a>
                             </div>
                         </div>
                         <div class="cube_references">
                             <div class="references_body">
-                                <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
+                                <!-- CSS 여러줄 말줄임은 확장자 고정 불가 -->
                                 <p class="title">[보충학습자료] 꿀잼반도체 반도체오브 반도체 1줄만 노출되는 pdf 파일명.pdf</p>
                                 <p class="bytes">249KB</p>
                             </div>
                             <div class="references_util">
-                                <a href="javascript:void(0)" class="ico file_open"><span class="blind">새창열기</span></a>
-                                <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
+                                <a href="javascript:void(0)" class="btn ico file_open"><span class="blind">새창열기</span></a>
+                                <a href="javascript:void(0)" class="btn ico file_down"><span class="blind">다운로드</span></a>
                             </div>
                         </div>
                     </div>
@@ -276,5 +287,32 @@
 
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
+<!-- Modal Bottomsheet -->
+<div class="modal_wrap modal_landscape">
+    <div class="modal modal_bottomsheet modal_select theme_dark">
+        <div class="modal_header">
+            <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+            <h3 class="modal_tit">PDF (2)</h3>
+        </div>
+        <div class="modal_content">
+            <ul class="select_list">
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" checked/>
+                        <label for="selectlist1"><span>[보충학습자료] 꿀잼반도체 1. 꿀잼반도체...pdf</span></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                        <label for="selectlist2"><span>[보충학습자료] 꿀잼반도체2.pdf</span></label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="dimmer" aria-hidden="true"></div> -->
+</div>
+<!-- // Modal Bottomsheet -->
 </body>
 </html>

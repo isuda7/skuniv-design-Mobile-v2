@@ -12,23 +12,6 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-	<script>
-		$(function(){
-			$(window).scroll(function(){
-				var $appbar = $('.appbar');
-				var $appbarTitle = $('.appbar_title');
-				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
-				var scrollTop = $(window).scrollTop();
-
-				// appbar_title이 appbar밑으로 절반이상 사라질때
-				if (scrollTop > appbarTitleShow) {
-					$appbar.addClass('is_transition');
-				} else {
-					$appbar.removeClass('is_transition');
-				}
-			})
-		});
-	</script>
 </head>
 <body>
 <div class="sub_wrapper theme_dark has_floating">
@@ -53,7 +36,7 @@
             <div class="learning_subject">
                 <div class="title_area">
                     <span class="label style1 primary blind">검수중</span>
-                    <h1 class="title appbar_title"><strong>[과제제출] BM 디자인 Essay 제출</strong></h1>
+                    <h1 class="title"><strong>[과제제출] BM 디자인 Essay 제출</strong></h1>
                 </div>
                 <div class="cube_report">
                     <div class="report_toolbar">
@@ -71,46 +54,40 @@
         <!-- // 리포트 제목 -->
         <div class="content_body">
             <!-- 작성 가이드 -->
-            <div class="learning_sec">
-                <div class="sec_head">
-                    <h2 class="heading2 guide_title">작성 가이드</h2>
+            <div class="report_guide">
+                <div class="title_area">
+                    <h2 class="heading2">작성 가이드</h2>
+                    <p class="para">
+                        본 과정은 담당자가 이수 조건 충족여부를 확인한 후 이수처리를 해드립니다.<br/>아래 5개 항목에 대한 내용 작성여부 확인 1. 대상고객, 2. 고객문제, 3. 문제대안, 4.솔루션, 5. 고유가치제안 (솔루션을 통해 고객이 최종적으로 받게되는 수혜)
+                    </p>
                 </div>
-                <div class="sec_body">
-                    <div class="sec_cont">
-                        <p class="sub_txt">
-                            반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지고, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 미친 지대한 영향을 이해한다.
-                        </p>
+
+                <!--다운로드 -->
+                <div class="references_area">
+                    <div class="cube_references">
+                        <div class="references_body">
+                            <!-- CSS 여러줄 말줄임은 확장자 고정 불가 -->
+                            <p class="title">
+                                [보충학습자료] 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다. 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다.pdf
+                            </p>
+                            <p class="bytes">249KB</p>
+                        </div>
+                        <div class="references_util">
+                            <a href="javascript:void(0)" class="btn ico file_down"><span class="blind">다운로드</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- // 작성 가이드 -->
+                <!-- // 다운로드 -->
 
-            <!--다운로드 -->
-            <div class="cube_references filename_line2">
-                <div class="references_body">
-                    <!-- CSS 말줄임은 확장자를 남길수가 없습니다. -->
-                    <p class="item">
-                        <strong>[보충학습자료] 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다. 꿀잼반도체1.인공지능 핵실험 준비로 시끄럽습니다.</strong>
-                        <span>.pdf</span>
-                    </p>
-                    <p class="bytes">249KB</p>
-                </div>
-                <div class="references_util">
-                    <a href="javascript:void(0)" class="ico file_open blind"><span class="blind">새창열기</span></a>
-                    <a href="javascript:void(0)" class="ico file_down"><span class="blind">다운로드</span></a>
-                </div>
-            </div>
-            <!-- // 다운로드 -->
-
-            <!-- 안내사항 -->
-            <div class="course_define">
-                <div class="desc_area mar_t0">
+                <!-- 안내사항 -->
+                <div class="desc_area">
                     <p class="desc">
                         과정담당자가 등록한 Report 양식을 다운받을 수 있습니다.  작성된 리포트를 Upload하시면 과정 담당자가 확인 후 의견을 드릴 예정입니다.
                     </p>
                 </div>
+                <!-- //안내사항 -->
             </div>
-            <!-- //안내사항 -->
+            <!-- // 작성 가이드 -->
 
             <!-- floating btn -->
             <div class="page_floating">

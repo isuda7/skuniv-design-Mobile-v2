@@ -1,37 +1,7 @@
 ///////////////////////////////////////////////////
-// Section, Common
+// 학습과정, 큐브공통
 ///////////////////////////////////////////////////
-.learning_container {
-	.tab_panel.degree_page{
-		padding-bottom : 4rem;
-	}
-	.classroom_page .degree_page {
-		padding-top:2rem;
-	}
-}
-
-// Learning Section
-.learning_sec {
-	margin-top:5.2rem;
-	&:first-child {
-		margin-top:0;
-	}
-	.sec_head + .sec_body {
-		margin-top:1.6rem;
-	}
-	.heading3 {
-		margin-top:1.6rem;
-		&:first-child {
-			margin-top:0;
-		}
-	}
-	.heading3 +	.sec_cont {
-		margin-top:0.4rem;
-		padding-left:0.7rem;
-	}
-}
-
-// 학습과정 썸네일
+// s: 학습정보 썸네일
 .learning_thumb {
 	position:relative;
 	background-color: #ddd;
@@ -110,7 +80,9 @@
 		}
 	}
 }
+// e: 학습정보 썸네일
 
+// s: 관련뱃지
 .learning_badge {
 	height:7rem;
 	background-color: #fff;
@@ -184,8 +156,9 @@
 		}
 	}
 }
+// e: 관련뱃지
 
-// 뱃지 복수리스트
+// s: 관련뱃지복수
 .learning_badge_list {
 	.badge_item {
 		border-bottom:1px solid #f2f3f5;
@@ -241,402 +214,9 @@
 
 	}
 }
+// e: 관련뱃지복수
 
-// 학습과정 관련강사
-.teacher_item {
-	background-color: #fff;
-	color:#1C1D1F;
-	border-bottom:1px solid #f2f3f5;
-	.teacher_inner {
-		display:flex;
-		align-items: center;
-		width:100%;
-		height:inherit;
-		padding:1.6rem 0 1.6rem 0;
-		.teacher_avata {
-			position: relative;
-			display:flex;
-			justify-content: center;
-			width:5.2rem;
-			height:5.2rem;
-			margin-right:1.2rem;
-			flex:none;
-			.avata {
-				width:100%;
-				height:100%;
-			}
-		}
-		.teacher_body {
-			width:100%;
-			flex:0 1 auto;
-			// overflow: hidden;
-			.title {
-				position: relative;
-				display:inline-flex;
-				flex:0 1 auto;
-				strong {
-					flex:0 1 auto;
-					@include FontTitle14;
-					@include Ellipsis1;
-					color: #1C1D1F;
-				}
-				.label {
-					position:absolute;
-					top:50%;
-					left:calc(100% +  0.4rem);
-					transform: translateY(-50%);
-				}
-			}
-			.sub_txt {
-				margin-top:0.4rem;
-				@include FontBody14;
-			}
-		}
-		&::after {
-			content:"";
-			display:block;
-			width:1.6rem;
-			height:1.6rem;
-			background-image : url("../img/icons_16_ic_chervron_right_grey_05.svg");
-			margin-left:1.6rem;
-		}
-	}
-}
-.theme_dark .teacher_item {
-	border-bottom:1px solid #25272b;
-	background-color: #151617;
-	.teacher_inner .teacher_body .title strong {
-		color:#F8F8FA;
-	}
- }
-
-// 학습리스트
-.cube_item {
-    // Layout
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	position: relative;
-
-	.item_body {
-		position: relative;
-		display: flex;
-		width:100%;
-		align-items: center;
-	}
-	.item_thumb {
-		flex: none;
-	}
-	.item_title {
-		flex: 1 1 auto;
-	}
-	.item_foot {
-		flex: none;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.sub_txt {
-		@include FontBody14;
-		color:$ColorSubTxt;
-	}
-
-	// Cases
-	&.has_check {
-		.item_body {
-			width:calc(100% - 3.2rem);
-		}
-	}
-
-    // Styles
-    border-bottom: 1px solid #F2F3F5;
-    .item_body {
-        padding:2rem 0;
-        &::after {
-            content:"";
-			flex: none;
-            display:block;
-            width:1.6rem;
-            height:1.6rem;
-            margin-left:2rem;
-            background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
-        }
-    }
-    .item_thumb {
-        flex:none;
-        width:4rem;
-        height:4rem;
-        margin-right:1.2rem;
-        .cube_circle {
-            position:relative;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            padding:0;
-            width:100%;
-            height:100%;
-            border-radius: 50%;
-            &::after {
-                content:"";
-				width:2rem;
-				height:2rem;
-                display:block;
-				background: url('../img/icons_20_ic_test_black.svg') no-repeat center center / 100% auto;
-            }
-        }
-    }
-    .item_title {
-        flex:0 1 auto;
-        width:100%;
-        overflow: hidden;
-        .title {
-            @include FontBody14;
-        }
-        .sub_txt {
-            margin-top:0.4rem;
-            display:flex;
-            align-items: center;
-            .split {
-                @include SplitBar;
-            }
-        }
-    }
-
-    // Case Type
-    &.type_play:not(.is_state3) {
-        .item_thumb .cube_circle::after {
-            background-image: url('../img/icons_20_ic_video_black.svg');
-        }
-    }
-    &.type_doc {
-        .item_thumb .cube_circle::after {
-            background-image: url('../img/icons_20_ic_test_black.svg');
-        }
-    }
-    &.type_talk {
-        .item_thumb .cube_circle::after {
-            background-image: url('../img/icons_20_ic_talk_black.svg');
-        }
-    }
-
-    // Case Disabled
-    &.is_disabled {
-        .item_body {
-            pointer-events: none;
-            &::after {
-                display:none;
-            }
-        }
-
-    }
-
-    // Case Repley
-    &.is_repley .item_body::before {
-         content:"";
-         display:block;
-		 flex:none;
-		 position: relative;
-		 top:-0.8rem;
-         width:1.6rem;
-         height:1.6rem;
-         margin-right:0.8rem;
-		 background:url('../img/icons_16_ic_depth.svg') no-repeat center center / 100% auto;
-    }
-}
-
-// 학습리스트 아코디언
-.cube_acco {
-	width:auto;
-	max-width:none;
-	margin-left:-$GapSideBase;
-	margin-right:-$GapSideBase;
-	.acco_title::after {
-		content:"";
-		display:block;
-		position:absolute;
-		right:2rem;
-		top:calc(50% - 0.6rem);
-		width:1.6rem;
-		height:1.6rem;
-		margin-left:1.4rem;
-		background: url('../img/icons_12_ic_chervron_down_black.svg') no-repeat center center / 100% auto;
-	}
-	.acco_content {
-		padding:0 $GapSideBase;
-	}
-	.cube_expand {
-		display:flex;
-		align-items: center;
-		position: relative;
-		padding:2rem 4.6rem 2rem 2rem;
-		background-color: #F8F8FA;
-		.expand_body {
-			flex:0 1 auto;
-			width:100%;
-			overflow: hidden;
-			.title {
-				padding:0;
-				@include FontTitle16;
-				@include Ellipsis1;
-			}
-			.sub_txt {
-				margin-top:0.4rem;
-				em {
-					color:$ColorPrimary;
-				}
-			}
-		}
-	}
-}
-
-// Cube Overview
-.cube_overview {
-	margin-top:2rem;
-	display:flex;
-	padding:1.6rem 2rem;
-	background-color: #F8F8FA;
-	border-radius: $RadiusLarge;
-	color:#1C1D1F;
-	ul {
-		flex:0 1 auto;
-		width:100%;
-		li {
-			position:relative;
-			padding-left:2.4rem;
-			&::before {
-				content:"";
-				position:absolute;
-				left:0;
-				top:0.4rem;
-				width:1.6rem;
-				height:1.6rem;
-				display:block;
-			}
-		}
-		.item_complete::before {
-			background-image: url('../img/icons_16_ic_user_grey_05.svg');
-		}
-        .item_part.basic::before {
-            background-image: url('../img/icons_16_ic_level_1_grey_05.svg');
-        }
-        .item_part.intermediate::before {
-            background-image: url('../img/icons_16_ic_level_2_grey_05.svg');
-        }
-        .item_part.advanced::before {
-            background-image: url('../img/icons_16_ic_level_3_grey_05.svg');
-        }
-        .item_part.expert::before {
-            background-image: url('../img/icons_16_ic_level_4_grey_05.svg');
-        }
-        .item_contact::before {
-            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
-        }
-		.item_contact::before {
-			background-image: url('../img/icons_16_ic_customer_grey_05.svg');
-		}
-	}
-	.btn.arw_link {
-		margin-left:1.2rem;
-		margin-top:auto;
-		padding:0;
-	}
-}
-
-.theme_dark .cube_overview {
-	background-color: #1C1D1F;
-	color:#F8F8FA;
-    //큐브내 overview icon
-    ul {
-		li::after {
-			background-color: #ddd;
-		}
-        li::before {
-            background-color: inherit;
-            background-repeat: no-repeat;
-        }
-        .item_complete{
-			&::before {
-				background-image: url('../img/icons_16_ic_time_grey_05.svg');
-			}
-			&.done::before {
-				background-image: url('../img/icons_16_ic_user_grey_05.svg');
-			}
-        }
-        .item_part.basic::before {
-            background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
-        }
-        .item_part.intermediate::before {
-            background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
-        }
-        .item_part.advanced::before {
-            background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
-        }
-        .item_part.expert::before {
-            background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
-        }
-        .item_contact::before {
-            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
-        }
-    }
-}
-
-// Cube References
-.cube_references {
-	display:flex;
-	padding:1.6rem 2rem;
-	border:1px solid #E3E4E5;
- 	border-radius: $RadiusLarge;
-	color:#44464A ;
-	.references_body {
-		flex:0 1 auto;
-		width:100%;
-		@include FontBody12;
-		.bytes {
-			color:#A4A6AA;
-		}
-	}
-	.references_util {
-		display: flex;
-		align-items: center;
-		flex-wrap: nowrap;
-		flex:none;
-		margin-left:1.8rem;
-		.ico {
-			&+.ico{
-				margin-left: 1.8rem;
-			}
-		}
-		.ico.file_open{
-			width:2rem;
-			height:2rem;
-			background-image: url('../img/icons_20_ic_openinnew_black.svg');
-		}
-		.ico.file_down {
-			width:2rem;
-			height:2rem;
-			background-image: url('../img/icons_20_ic_download_black.svg');
-		}
-	}
-}
-.theme_dark .learning_attachment .cube_references { background-color: transparent; }
-
-.theme_dark .cube_references {
-	background-color: #151617;
-	border-color: #44464A;
-	color:#E3E4E5;
-	.references_body .bytes {
-		color:$ColorSubTxt;
-	}
-	.references_util {
-		.btn.ico::before {
-			background-color: #ddd;
-		}
-	}
-}
-
-
-// Cube Infolist
+// s: 신청정보
 .cube_infolist {
 	display:block;
 	padding:2rem 2rem;
@@ -661,79 +241,10 @@
 		color:#A4A6AA;
 	}
 }
+// e: 신청정보
 
-// Cube Report
-.cube_report {
-	.report_toolbar {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom:0.8rem;
-		.date {
-			@include FontBody12;
-			color:$ColorSubTxt;
-		}
-		.label.style1:not(.primary) + .date {
-			color:$ColorPrimary;
-		}
-	}
-	.report_body {
-		display:block;
-		padding:2rem 2rem;
-		border:1px solid #E3E4E5;
- 		border-radius: $RadiusLarge;
-		color:#44464A;
-	}
-	.report_title {
-		.title {
-			@include Ellipsis4;
-		}
-	}
-	.report_attach {
-		margin-top:1.2rem;
-		display: flex;
-		@include FontBody12;
-		.attach_title {
-			flex:none;
-			margin-right:0.8rem;
-			.title {
-				color:#A4A6AA;
-				&::before {
-					content:"";
-					display:block;
-					width:1.2rem;
-					height:1.2rem;
-					background-image: url('../img/icons_12_ic_file_grey_05.svg');
-				}
-			}
-		}
-		.attach_files {
-			flex:0 1 auto;
-			overflow: hidden;
-			color:$ColorSubTxt;
-			.item {
-				display:flex;
-				strong {
-					flex:0 1 auto;
-					@include Ellipsis1;
-				}
-				span {
-					display:block;
-					flex:none;
-				}
-			}
-		}
-	}
-}
-.theme_dark .cube_report {
-	.report_body {
-		background-color: #151617;
-		border:0;
-		color:#F8F8FA;
-	}
-}
 
-// 차수목록 아코디언
+// s: 차수정보
 .degree_list {
 	.sort_type {
 		display: flex;
@@ -882,7 +393,6 @@
 		}
 	}
 }
-
 .theme_dark {
     //classroom 차수정보
 
@@ -917,10 +427,312 @@
 	}
 
 }
-//modal 내 차수정보의 경우
 .modal_content .degree_list {padding-top: 1.2rem;}
+// e: 차수정보
 
-// 개요설명
+// s: 큐브리스트_단일과정
+.cube_item {
+    // Layout
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+
+	.item_body {
+		position: relative;
+		display: flex;
+		width:100%;
+		align-items: center;
+	}
+	.item_thumb {
+		flex: none;
+	}
+	.item_title {
+		flex: 1 1 auto;
+	}
+	.item_foot {
+		flex: none;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.sub_txt {
+		@include FontBody14;
+		color:$ColorSubTxt;
+	}
+
+	// Cases
+	&.has_check {
+		.item_body {
+			width:calc(100% - 3.2rem);
+		}
+	}
+
+    // Styles
+    border-bottom: 1px solid #F2F3F5;
+    .item_body {
+        padding:2rem 0;
+        &::after {
+            content:"";
+			flex: none;
+            display:block;
+            width:1.6rem;
+            height:1.6rem;
+            margin-left:2rem;
+            background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
+        }
+    }
+    .item_thumb {
+        flex:none;
+        width:4rem;
+        height:4rem;
+        margin-right:1.2rem;
+        .cube_circle {
+            position:relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding:0;
+            width:100%;
+            height:100%;
+            border-radius: 50%;
+            &::after {
+                content:"";
+				width:2rem;
+				height:2rem;
+                display:block;
+				background: url('../img/icons_20_ic_test_black.svg') no-repeat center center / 100% auto;
+            }
+        }
+    }
+    .item_title {
+        flex:0 1 auto;
+        width:100%;
+        overflow: hidden;
+        .title {
+            @include FontBody14;
+        }
+        .sub_txt {
+            margin-top:0.4rem;
+            display:flex;
+            align-items: center;
+            .split {
+                @include SplitBar;
+            }
+        }
+    }
+
+    // Case Type
+    &.type_play:not(.is_state3) {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_video_black.svg');
+        }
+    }
+    &.type_doc {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_test_black.svg');
+        }
+    }
+    &.type_talk {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_talk_black.svg');
+        }
+    }
+
+    // Case Disabled
+    &.is_disabled {
+        .item_body {
+            pointer-events: none;
+            &::after {
+                display:none;
+            }
+        }
+
+    }
+
+    // Case Repley
+    &.is_repley .item_body::before {
+         content:"";
+         display:block;
+		 flex:none;
+		 position: relative;
+		 top:-0.8rem;
+         width:1.6rem;
+         height:1.6rem;
+         margin-right:0.8rem;
+		 background:url('../img/icons_16_ic_depth.svg') no-repeat center center / 100% auto;
+    }
+}
+// e: 큐브리스트_단일과정
+
+// s: 큐브리스트_묶음과정
+.cube_acco {
+	width:auto;
+	max-width:none;
+	margin-left:-$GapSideBase;
+	margin-right:-$GapSideBase;
+	.acco_title::after {
+		content:"";
+		display:block;
+		position:absolute;
+		right:2rem;
+		top:calc(50% - 0.6rem);
+		width:1.6rem;
+		height:1.6rem;
+		margin-left:1.4rem;
+		background: url('../img/icons_12_ic_chervron_down_black.svg') no-repeat center center / 100% auto;
+	}
+	.acco_content {
+		padding:0 $GapSideBase;
+	}
+	.cube_expand {
+		display:flex;
+		align-items: center;
+		position: relative;
+		padding:2rem 4.6rem 2rem 2rem;
+		background-color: #F8F8FA;
+		.expand_body {
+			flex:0 1 auto;
+			width:100%;
+			overflow: hidden;
+			.title {
+				padding:0;
+				@include FontTitle16;
+				@include Ellipsis1;
+			}
+			.sub_txt {
+				margin-top:0.4rem;
+				em {
+					color:$ColorPrimary;
+				}
+			}
+		}
+	}
+}
+// e: 큐브리스트_묶음과정
+
+// s: 선수과정 코스
+.course_item {
+    > .item_body {
+        display: flex;
+        align-items: center;
+        padding-bottom:2rem;
+        &::after {
+            content: "";
+            display: flex;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-left: 2rem;
+            background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
+        }
+        > .item_title {
+            width: 100%;
+            > .title {
+                color:#a4a6aa;
+            }
+            > .sub_txt {
+                color:#44464a;
+                font-weight:bold;
+                @include Ellipsis2
+            }
+        }
+    }
+}
+// e: 선수과정 코스
+
+// s: Overview
+.cube_overview {
+	margin-top:2rem;
+	display:flex;
+	padding:1.6rem 2rem;
+	background-color: #F8F8FA;
+	border-radius: $RadiusLarge;
+	color:#1C1D1F;
+	ul {
+		flex:0 1 auto;
+		width:100%;
+		li {
+			position:relative;
+			padding-left:2.4rem;
+			&::before {
+				content:"";
+				position:absolute;
+				left:0;
+				top:0.4rem;
+				width:1.6rem;
+				height:1.6rem;
+				display:block;
+			}
+		}
+		.item_complete::before {
+			background-image: url('../img/icons_16_ic_user_grey_05.svg');
+		}
+        .item_part.basic::before {
+            background-image: url('../img/icons_16_ic_level_1_grey_05.svg');
+        }
+        .item_part.intermediate::before {
+            background-image: url('../img/icons_16_ic_level_2_grey_05.svg');
+        }
+        .item_part.advanced::before {
+            background-image: url('../img/icons_16_ic_level_3_grey_05.svg');
+        }
+        .item_part.expert::before {
+            background-image: url('../img/icons_16_ic_level_4_grey_05.svg');
+        }
+        .item_contact::before {
+            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
+        }
+		.item_contact::before {
+			background-image: url('../img/icons_16_ic_customer_grey_05.svg');
+		}
+	}
+	.btn.arw_link {
+		margin-left:1.2rem;
+		margin-top:auto;
+		padding:0;
+	}
+}
+.theme_dark .cube_overview {
+	background-color: #1C1D1F;
+	color:#F8F8FA;
+    //큐브내 overview icon
+    ul {
+		li::after {
+			background-color: #ddd;
+		}
+        li::before {
+            background-color: inherit;
+            background-repeat: no-repeat;
+        }
+        .item_complete{
+			&::before {
+				background-image: url('../img/icons_16_ic_time_grey_05.svg');
+			}
+			&.done::before {
+				background-image: url('../img/icons_16_ic_user_grey_05.svg');
+			}
+        }
+        .item_part.basic::before {
+            background-image: url('../img/icons_16_ic_level_1_grey_03.svg');
+        }
+        .item_part.intermediate::before {
+            background-image: url('../img/icons_16_ic_level_2_grey_03.svg');
+        }
+        .item_part.advanced::before {
+            background-image: url('../img/icons_16_ic_level_3_grey_03.svg');
+        }
+        .item_part.expert::before {
+            background-image: url('../img/icons_16_ic_level_4_grey_03.svg');
+        }
+        .item_contact::before {
+            background-image: url('../img/icons_16_ic_customer_grey_05.svg');
+        }
+    }
+}
+// e: Overview
+
+// s: Overview Subscript
 .overview_subscript {
     margin-top: 2rem;
     position: relative;
@@ -961,38 +773,270 @@
         color: #cbcdcf;
     }
 }
+// e: Overview Subscript
 
-
-//나의 코멘트
-.my_commentinfo {
-    border-radius: $RadiusLarge;
-    @include FontBody13;
-    padding:2rem;
-    display: flex;
-    .left {
-        width:50%;
-        display: flex;
-        .txt {
-            margin:0.2rem 0 0 1rem;
-        }
-    }
-    .right {
-        width:50%;
-        text-align: right;
-        @include FontBody14;
-        .count_my {
-            font-weight: 800;
-            color:#ff664d;
-        }
-    }
-}
-.theme_dark {
-	.my_commentinfo {
-		background-color: #151617;
-		color:#F8F8FA;
+// s: 선수과정
+.course_learning {
+    border-bottom:1px solid #f2f3f5;
+	.course_inner {
+		display:flex;
+		align-items: center;
+		width:100%;
+		height:inherit;
+		padding:1.5rem 0 1.5rem 0;
+		.course_body {
+            display:flex;
+            align-items: center;
+            width:100%;
+			flex:0 1 auto;
+			color:#fff;
+			overflow: hidden;
+            .label.style1 {
+                margin-right:1.2rem;
+            }
+            .elective {
+                color:#75777B;
+            }
+			.title {
+				@include FontBody13;
+                @include Ellipsis1;
+				color:#000;
+			}
+            .state {
+                flex:none;
+                margin-left:1.2rem;
+                &.primary {
+                    @include FontBody14;
+                    color:$ColorPrimary;
+                }
+            }
+		}
+		&::after {
+			content:"";
+			display:block;
+			width:1.6rem;
+			height:1.6rem;
+			margin-left:1.2rem;
+			background-image:url('../img/icons_16_ic_chervron_right_grey_05.svg');
+		}
 	}
 }
-//관련url
+// e: 선수과정
+
+// s: 학습과정 섹션
+.learning_sec {
+	margin-top:5.2rem;
+	&:first-child {
+		margin-top:0;
+	}
+	.sec_head + .sec_body {
+		margin-top:1.6rem;
+	}
+	.heading3 {
+		margin-top:1.6rem;
+		&:first-child {
+			margin-top:0;
+		}
+	}
+	.heading3 +	.sec_cont {
+		margin-top:0.4rem;
+		padding-left:0.7rem;
+	}
+}
+// e: 학습과정 섹션
+
+// s: 참고자료
+.cube_references {
+    position: relative;
+	display:flex;
+    flex:none;
+	padding:1.6rem 2rem;
+	border:1px solid #E3E4E5;
+ 	border-radius: $RadiusLarge;
+	color:#44464A;
+    &_list {
+        .cube_references + .cube_references {
+            margin-top:0.8rem;
+        }
+    }
+    &_slide {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding : 1.6rem $GapSideBase;
+        background-color: #f8f8fa;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        .cube_references {
+            width:calc(100vw - 4rem);
+            max-width: 40rem;
+            padding-right:4rem;
+            background-color: #fff;
+            .references_clear {
+                position:absolute;
+                top:1rem;
+                right:1rem;
+                .btn.clear {
+                    &::before{
+                        width :2rem;
+                        height : 2rem;
+                        background-image: url("../img/icons_20_ic_clear_grey_04.svg");
+                    }
+                }
+            }
+        }
+
+        .cube_references + .cube_references {
+            margin-left:0.8rem;
+        }
+    }
+	.references_body {
+		flex:0 1 auto;
+		width:100%;
+		@include FontBody12;
+        .title {
+            @include Ellipsis2;
+            color:#44464a;
+        }
+		.bytes {
+			color:#A4A6AA;
+		}
+	}
+	.references_util {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		flex:none;
+		margin-left:1.8rem;
+		.btn.ico {
+            &::before {
+                width:2rem;
+                height:2rem;
+            }
+			& +.btn{
+				margin-left: 1.8rem;
+			}
+		}
+		.btn.file_open::before {
+			background-image: url('../img/icons_20_ic_openinnew_black.svg');
+		}
+		.btn.file_down::before {
+			background-image: url('../img/icons_20_ic_download_black.svg');
+		}
+	}
+}
+.theme_dark {
+    .learning_attachment .cube_references {
+        background-color: transparent;
+    }
+    .cube_references {
+        background-color: #151617;
+        border-color: #44464A;
+        .references_body {
+            .title {
+                color:#E3E4E5;
+            }
+            .bytes {
+                color:$ColorSubTxt;
+            }
+        }
+        .references_util {
+            .btn.file_open::before {
+                background-image: url('../img/icons_20_ic_openinnew_white.svg');
+            }
+            .btn.file_down::before {
+                background-image: url('../img/icons_20_ic_download_white.svg');
+            }
+        }
+    }
+}
+// e: 참고자료
+
+// s: 태그정보
+.tag_list {
+    overflow: hidden;
+    .chip_group {
+        display:flex;
+        flex-wrap:wrap;
+        margin:-0.5rem;
+        .chip {
+            margin:0.5rem;
+        }
+    }
+}
+// e: 태그정보
+
+// s: 강사정보
+.teacher_item {
+	background-color: #fff;
+	color:#1C1D1F;
+	border-bottom:1px solid #f2f3f5;
+	.teacher_inner {
+		display:flex;
+		align-items: center;
+		width:100%;
+		height:inherit;
+		padding:1.6rem 0 1.6rem 0;
+		.teacher_avata {
+			position: relative;
+			display:flex;
+			justify-content: center;
+			width:5.2rem;
+			height:5.2rem;
+			margin-right:1.2rem;
+			flex:none;
+			.avata {
+				width:100%;
+				height:100%;
+			}
+		}
+		.teacher_body {
+			width:100%;
+			flex:0 1 auto;
+			// overflow: hidden;
+			.title {
+				position: relative;
+				display:inline-flex;
+				flex:0 1 auto;
+				strong {
+					flex:0 1 auto;
+					@include FontTitle14;
+					@include Ellipsis1;
+					color: #1C1D1F;
+				}
+				.label {
+					position:absolute;
+					top:50%;
+					left:calc(100% +  0.4rem);
+					transform: translateY(-50%);
+				}
+			}
+			.sub_txt {
+				margin-top:0.4rem;
+				@include FontBody14;
+			}
+		}
+		&::after {
+			content:"";
+			display:block;
+			width:1.6rem;
+			height:1.6rem;
+			background-image : url("../img/icons_16_ic_chervron_right_grey_05.svg");
+			margin-left:1.6rem;
+		}
+	}
+}
+.theme_dark .teacher_item {
+	border-bottom:1px solid #25272b;
+	background-color: #151617;
+	.teacher_inner .teacher_body .title strong {
+		color:#F8F8FA;
+    }
+}
+// e: 강사정보
+
+// s: 관련url
 .link_wrap {
     .sub_title {
         font-weight: 700;
@@ -1057,8 +1101,179 @@
 		}
 	}
 }
+// e: 관련url
 
-//코멘트
+// s: 평가그래프
+.review_graph {
+    padding:2rem;
+    border-radius: $RadiusLarge;
+    background-color: #f8f8fa;
+    .graph_title {
+        @include FontBody16;
+        font-weight: 700;
+        em {
+            color:$ColorSecondary;
+        }
+    }
+    .graph_list {
+		display:table;
+		width:100%;
+        margin-top:2rem;
+        .graph_item {
+			display:table-row;
+            &:first-child {
+                margin-top:0;
+            }
+			.graph_th {
+				display:table-cell;
+				min-width:11.1rem;
+				padding:0.4rem 0;
+				padding-right:1.2rem;
+				vertical-align: top;
+				white-space: nowrap;
+			}
+			.graph_td {
+				display:table-cell;
+				width:100%;
+				padding:0.4rem 0;
+				vertical-align: top;
+			}
+            .graph_label {
+                display:flex;
+				align-items: center;
+				height:2.8rem;
+                flex:none;
+				@include FontBody14;
+                color:#1c1d1f;
+				&::before {
+					content:'';
+					flex:none;
+					display:block;
+					width:2.4rem;
+					height:2.4rem;
+					margin-right:0.8rem;
+					background:no-repeat center center / 100% auto;
+				}
+				&.n1::before {
+					background-image: url('../img/icons_24_ic_verygood.png');
+				}
+				&.n2::before {
+					background-image: url('../img/icons_24_ic_good.png');
+				}
+				&.n3::before {
+					background-image: url('../img/icons_24_ic_normal.png');
+				}
+				&.n4::before {
+					background-image: url('../img/icons_24_ic_bad.png');
+				}
+				&.n5::before {
+					background-image: url('../img/icons_24_ic_so_bad.png');
+				}
+            }
+            .graph_bar {
+                position: relative;
+                display:flex;
+                width:auto;
+                height:2.8rem;
+                background-color: #fff;
+                &:before {
+                    content:'';
+                    display:block;
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    z-index: 1;
+                    width:100%;
+                    height:100%;
+                    border:1px solid #f2f3f5;
+                }
+                .graph_active {
+                    position: relative;
+                    z-index: 2;
+                    width:50%;
+                    height:100%;
+                    background-color: #00bfae;
+                }
+                .graph_value {
+                    display:flex;
+                    align-items: center;
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    height:100%;
+                    padding-right:0.8rem;
+                }
+            }
+        }
+    }
+}
+// e: 평가그래프
+
+// s: 리뷰리스트
+.review_list {
+    .item {
+        padding:1.6rem $GapSideBase;
+        border-bottom:1px solid #f2f3f5;
+        .item_whiter {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            .whiter {
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                .avata {
+                    width:2rem;
+                    height:2rem;
+                }
+                .name {
+                    margin-left:0.6rem;
+                    color:$ColorSubTxt;
+                }
+            }
+			.date {
+				color:$ColorSubTxt;
+			}
+        }
+        .item_coment {
+            margin-top:0.9rem;
+        }
+    }
+}
+// e: 리뷰리스트
+
+// s: 나의 코멘트
+.my_commentinfo {
+    border-radius: $RadiusLarge;
+    @include FontBody13;
+    padding:2rem;
+    display: flex;
+    .left {
+        width:50%;
+        display: flex;
+        .txt {
+            margin:0.2rem 0 0 1rem;
+        }
+    }
+    .right {
+        width:50%;
+        text-align: right;
+        @include FontBody14;
+        .count_my {
+            font-weight: 800;
+            color:#ff664d;
+        }
+    }
+}
+.theme_dark {
+	.my_commentinfo {
+		background-color: #151617;
+		color:#F8F8FA;
+	}
+}
+// e: 나의 코멘트
+
+// s: 코멘트
 .post {
 	&_list {
 		padding-top:1.2rem;
@@ -1224,7 +1439,6 @@
         }
     }
 }
-
 .theme_dark {
     .post {
 		.post_head >.left {
@@ -1263,8 +1477,9 @@
 		}
 	}
 }
+// e: 코멘트
 
-//코멘트 상세
+// s: 코멘트 상세
 .post_detail {
 	margin:0 -2rem;
 	.post {
@@ -1321,498 +1536,7 @@
 		}
 	}
 }
-
-.coment_empty {
-	.tit {
-		@include FontTitle16;
-	}
-}
-.theme_dark .coment_empty .tit {
-	color:#fff;
-}
-
-// s: 학습과정제목
-.learning_subject {
-	padding:0.4rem 0 1.6rem 0;
-
-    .title_area {
-		.label {
-			margin-bottom:1rem;
-		}
-		.title {
-			@include FontTitle18;
-            color:#000;
-			word-break: keep-all;
-        }
-    }
-    .info_area {
-        display:flex;
-        margin-top:0.8rem;
-        color:$ColorSubTxt;
-        .label {
-            &::before {
-				content:'';
-				width : 1.6rem;
-				height: 1.6rem;
-                margin-right:0.4rem;
-            }
-			&.video::before {
-				background-image: url('../../assets/img/icons_16_ic_video_grey_06.svg');
-			}
-			&.time::before {
-				background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
-			}
-			&.classroom::before {
-				background-image: url("../img/icons_16_ic_classroom_grey_06.svg");
-			}
-			&.elearning::before {
-				background-image: url("../img/icons_16_ic_e_learning_grey_06.svg");
-			}
-			&.cohort::before {
-				background-image: url("../img/icons_16_ic_cohort_grey_06.svg");
-			}
-			&.audio::before {
-				background-image: url("../img/icons_16_ic_audio_grey_06.svg");
-			}
-			&.webpage::before {
-				background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
-			}
-			&.document::before {
-				background-image :url("../img/icons_16_ic_document_grey_06.svg");
-			}
-			&.discussion::before {
-				background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
-			}
-			&.experiential::before {
-				background-image: url("../img/icons_16_ic_experiential_grey_06.svg");
-			}
-			&.task::before {
-				background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
-			}
-			&.talk::before {
-				background-image: url("../../assets/img/icons_16_ic_talk_grey_06.svg");
-			}
-			&.calendar::before {
-				background-image: url("../../assets/img/icons_16_ic_calendar_grey_06.svg");
-			}
-			&.people::before {
-				background-image: url("../../assets/img/icons_16_ic_people_grey_6.svg");
-			}
-            & + .label {
-                margin-left:1.6rem;
-            }
-        }
-    }
-	//info_area 하단에 url, 첨부 file 등등
-	.learning_attachment {
-		margin-top : 3.2rem;
-		.l_guide{
-			padding-top : 1.4rem;
-			@include FontBody12;
-			color :$ColorSubTxt;
-		}
-		.learning_codition{
-			padding-top : 2.4rem;
-			.c_txt {
-				padding-top: 0.4rem;
-				@include FontBody14;
-				color : #cbcdcf;
-			}
-			& + .learning_codition{
-				padding-top : 1.6rem;
-			}
-		}
-		//첨부파일
-		.att_title {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			.sub_title {
-				strong {
-					display: inline-block;
-					@include FontBody16;
-					font-weight: bold;
-				}
-				.cnt {
-					margin-left: .4rem;
-					color : $ColorPrimary;
-				}
-			}
-			.btn.down_all{
-				padding : 0 1.4rem 0 0;
-				color : $ColorSubTxt;
-				@include FontBody14;
-				background-image: url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
-				background-repeat: no-repeat;
-				background-position: 100% 50%;
-			}
-		}
-		.att_list .cube_references {
-			margin-top : .8rem;
-			.references_body{
-				overflow: hidden;
-			}
-			.title{
-				@include Ellipsis1;
-			}
-		}
-	}
-}
-.content_head + .content_body {
-	.learning_subject {
-		padding-top:2rem;
-	}
-}
-
-.theme_dark {
-    .learning_subject {
-        .title_area {
-            .title {
-                color:#fff;
-            }
-        }
-    }
-}
-// e: 학습과정제목
-
-// s: 태그정보
-.tag_list {
-    overflow: hidden;
-    .chip_group {
-        display:flex;
-        flex-wrap:wrap;
-        margin:-0.5rem;
-        .chip {
-            margin:0.5rem;
-        }
-    }
-}
-// e: 태그정보
-
-// s: task Modal
-.modal_taskEdit {
-    .modal_content {
-        &.flex_area{
-            flex-direction: column;
-        }
-        .edit_tit {
-            margin-top : .8rem;
-            margin-left: -$GapSideBase;
-            margin-right: -$GapSideBase;
-            padding: 1rem 2rem;
-            .input {
-                display: inline-block;
-                width : 100%;
-                @include FontBody16;
-            }
-        }
-        .edit_contents{
-            margin-left: -$GapSideBase;
-            margin-right: -$GapSideBase;
-            padding : 1.2rem 2rem 2rem 2rem;
-            flex-direction: column;
-            border-top : .1rem solid $FormBasicBorder;
-            .edit_form_wrap {
-                flex : 1 0 auto;
-            }
-            .textarea{
-                @include FontBody14;
-                &.full{
-                    width : 100%;
-                    height : 100%;
-                }
-            }
-        }
-    }
-    .edit_contents{
-        .acco_content.is_active{
-            display: flex;
-            flex-direction: row;
-            overflow-x: auto;
-            padding : 1.6rem $GapSideBase;
-            background-color: #f8f8fa;
-            &::-webkit-scrollbar {
-                display:none;
-            }
-        }
-        .acc_file_upload {
-            position: relative;
-            margin-top : 0;
-            margin-bottom : $GapSideBase;
-            margin-left : -$GapSideBase;
-            margin-right : -$GapSideBase;
-            .acc_title {
-                padding: 2rem $GapSideBase;
-                display: block;
-                @include FontTitle14;
-                border-bottom : .1rem solid #f2f3f5;
-                .cnt{
-                    margin-left : .4rem;
-                    display: inline-block;
-                    color :$ColorPrimary;
-                }
-                &::after{
-                    content:'';
-                    display: inline-block;
-                    width :1.6rem;
-                    height :1.6rem;
-                    position: absolute;
-                    right : $GapSideBase;
-                    transform : rotate(180deg);
-                    background: url("../img/icons_16_ic_chervron_up_grey_05.svg") no-repeat;
-                }
-                &.is_active::after{
-                    transform:  rotate(0);
-                }
-            }
-            .cube_references {
-                flex: 1 0 auto;
-                max-width: 100%;
-                background-color: #fff;
-                &+.cube_references {margin-left: .8rem;}
-                .references_util{
-                    align-items: flex-start;
-                    .btn.clear {
-                        margin : -1rem -1rem 0 0;
-                        &::before{
-                            width :2rem;
-                            height : 2rem;
-                            background-image: url("../img/icons_20_ic_clear_grey_04.svg");
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .edit_tool_bar {
-        padding: 1.2rem 2rem;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-top: .1rem solid $FormBasicBorder;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .btn {
-            width : 2rem;
-            height : 2rem;
-            &::before{
-                width : 2rem;
-                height : 2rem;
-            }
-            &.e_font::before{
-                background-image: url("../img/icons_20_ic_text_size_off_on.svg");
-            }
-            &.e_img::before{
-                background-image: url("../img/icons_20_ic_image_off_on.svg");
-            }
-            &.e_link::before{
-                background-image: url("../img/icons_20_ic_clip_off_on.svg");
-            }
-            &.e_align::before{
-                background-image: url("../img/icons_20_ic_text_align_off_on.svg");
-            }
-            &.e_attch::before{
-                background-image: url("../img/icons_20_ic_file_off_on.svg");
-            }
-            &.is_active::before{
-                background-position-y: 100%;
-            }
-            &+.btn{
-                margin-left : 3rem
-            }
-        }
-    }
-    .font_tool_bar{
-        padding : 1.2rem $GapSideBase;
-        position: fixed;
-        bottom : 4.5rem;
-        left: 0;
-        right : 0;
-        display: none;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: #f8f8fa;
-        &.is_active{
-            display: flex;
-        }
-        .btn {
-            width : 2rem;
-            height : 2rem;
-            background-position: 0 0;
-            &+.btn{
-                margin-left : 3rem
-            }
-            &.e_fontSize{
-                padding : 0;
-                width : auto;
-            }
-            &.ico::before{
-                width : 2rem;
-                height : 2rem;
-            }
-            &.e_bolder::before{
-                background-image: url('../img/icons_20_ic_text_bolder_off_on.svg');
-            }
-            &.e_italic::before{
-                background-image:url('../img/icons_20_ic_text_italic_off_on.svg');
-            }
-            &.e_underline::before{
-                background-image:url('../img/icons_20_ic_text_underline_off_on.svg')
-            }
-            &.e_mid_line::before{
-                background-image:url('../img/icons_20_ic_text_strikethrough_off_on.svg')
-            }
-            &.e_fontAlign::before{
-                background-image:url('../img/icons_20_ic_text_align_off_on.svg')
-            }
-            &.e_addDot::before{
-                background-image:url('../img/icons_20_ic_text_dot_off_on.svg')
-            }
-            &.e_addNum::before{
-                background-image:url('../img/icons_20_ic_text_number_off_on.svg')
-            }
-            &.is_active::before{
-                background-position-y: 100%;
-            }
-        }
-    }
-    .modal_footer{
-        height : 4.5rem;
-    }
-}
-// e: task Modal
-
-// s: board Detail 공통
-.board_dt_wrap {
-    padding: 2rem 0 0 ;
-    .board_dt_title {
-        border-bottom: 0.1rem solid #1c1d1f;
-        padding-bottom: 1.2rem;
-        margin-bottom: 2rem;
-        .title_area .title {
-            color: #fff;
-            @include FontTitle16;
-        }
-        .board_dt_info {
-            margin-top: 1.2rem;
-            color: #75777b;
-            @include FontBody14;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            span {
-                display: inline-block;
-                margin-right: 0.8rem;
-                vertical-align: middle;
-                flex : none;
-            }
-            .avata {
-                width: 2rem;
-                height: 2rem;
-                margin-right: 0.6rem;
-            }
-            .user_id {
-                overflow : hidden;
-                text-overflow : ellipsis;
-                white-space : nowrap;
-                flex : 0 1 auto;
-            }
-            .reg_date {
-                margin-right: 1.6rem;
-            }
-            .cnt_views {
-                position: relative;
-                margin : 0;
-                padding-left: 2.8rem;
-                background : url("../img/icons_16_ic_view_grey_07.svg") no-repeat 0.8rem 50%;
-
-                &::before {
-                    content: '';
-                    display: inline-block;
-                    vertical-align: top;
-                    width: .1rem;
-                    height: .8rem;
-                    background-color: #33353c;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
-    }
-    .board_dt_content {
-        .board_ph {
-            color: #f2f3f5;
-            @include FontBody16;
-            word-wrap: break-word;
-        }
-    }
-    .file_down_area {
-        margin-top: 2.4rem;
-        .area_title {
-            color: #fff;
-            @include FontBody14;
-            .label.download{
-                display: inline-block;
-                padding : 0 .4rem 0 2rem;
-                background: url('../img/icons_16_ic_file_white.svg') no-repeat 0 50%;
-            }
-            .cnt { color :$ColorPrimary}
-        }
-        .cube_references{
-            margin-top : 1.2rem;
-        }
-    }
-    .board_like_area {
-        margin: 3.2rem -2rem 0;
-        padding: 1.6rem 2rem;
-        border-top: .1rem solid #151617;
-        display: flex;
-        justify-content: flex-end;
-
-        .btn.like {
-            color : $ColorSubTxt;
-
-            &.ico {
-                &::before {
-                    width : 2.4rem;
-                    height : 2.4rem;
-                    margin-right : .5rem;
-                    background-image : url("../img/icons_24_ic_like_white_off_on.svg");
-                }
-                &.is_active::before{
-                    background-position: 0 100%;
-                }
-            }
-        }
-    }
-    .board_comments_wrap {
-        display:flex;
-        flex-direction: column;
-        flex:1 0 auto;
-        margin-left: -$GapSideBase;
-        margin-right: -$GapSideBase;
-        padding: 0 $GapSideBase 3.2rem;
-    }
-}
-.theme_dark {
-	.board_dt_wrap {
-		.board_comments_wrap{
-			background-color: #151617;
-		}
-		.file_down_area .cube_references{
-			background-color:transparent;
-		}
-		.cube_references .references_util {
-			.ico.file_down{background-image: url('../img/icons_20_ic_download_white.svg');}
-			.ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
-		}
-	}
-}
-// e: board Detail 공통
+// e: 코멘트 상세
 
 // s: Coment Floating
 .comment_floating {
@@ -1974,6 +1698,459 @@
 }
 // e: Coment Floating
 
+// s: 학습과정제목
+.learning_subject {
+	padding:0.4rem 0 1.6rem 0;
+
+    .title_area {
+		.label {
+			margin-bottom:1rem;
+		}
+		.title {
+			@include FontTitle18;
+            color:#000;
+			word-break: keep-all;
+        }
+    }
+    .info_area {
+        display:flex;
+        margin-top:0.8rem;
+        color:$ColorSubTxt;
+        .label {
+            &::before {
+				content:'';
+				width : 1.6rem;
+				height: 1.6rem;
+                margin-right:0.4rem;
+            }
+			&.video::before {
+				background-image: url('../../assets/img/icons_16_ic_video_grey_06.svg');
+			}
+			&.time::before {
+				background-image: url('../../assets/img/icons_16_ic_time_grey_05.svg');
+			}
+			&.classroom::before {
+				background-image: url("../img/icons_16_ic_classroom_grey_06.svg");
+			}
+			&.elearning::before {
+				background-image: url("../img/icons_16_ic_e_learning_grey_06.svg");
+			}
+			&.cohort::before {
+				background-image: url("../img/icons_16_ic_cohort_grey_06.svg");
+			}
+			&.audio::before {
+				background-image: url("../img/icons_16_ic_audio_grey_06.svg");
+			}
+			&.webpage::before {
+				background-image :url("../img/icons_16_ic_webpage_grey_06.svg");
+			}
+			&.document::before {
+				background-image :url("../img/icons_16_ic_document_grey_06.svg");
+			}
+			&.discussion::before {
+				background-image: url("../img/icons_16_ic_discussion_grey_06.svg");
+			}
+			&.experiential::before {
+				background-image: url("../img/icons_16_ic_experiential_grey_06.svg");
+			}
+			&.task::before {
+				background-image: url("../../assets/img/icons_16_ic_task_grey_06.svg");
+			}
+			&.talk::before {
+				background-image: url("../../assets/img/icons_16_ic_talk_grey_06.svg");
+			}
+			&.calendar::before {
+				background-image: url("../../assets/img/icons_16_ic_calendar_grey_06.svg");
+			}
+			&.people::before {
+				background-image: url("../../assets/img/icons_16_ic_people_grey_6.svg");
+			}
+            & + .label {
+                margin-left:1.6rem;
+            }
+        }
+    }
+	//info_area 하단에 url, 첨부 file 등등
+	.learning_attachment {
+		margin-top : 3.2rem;
+		.l_guide{
+			padding-top : 1.4rem;
+			@include FontBody12;
+			color :$ColorSubTxt;
+		}
+		.learning_codition{
+			padding-top : 2.4rem;
+			.c_txt {
+				padding-top: 0.4rem;
+				@include FontBody14;
+				color : #cbcdcf;
+			}
+			& + .learning_codition{
+				padding-top : 1.6rem;
+			}
+		}
+		//첨부파일
+		.att_title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.sub_title {
+				strong {
+					display: inline-block;
+					@include FontBody16;
+					font-weight: bold;
+				}
+				.cnt {
+					margin-left: .4rem;
+					color : $ColorPrimary;
+				}
+			}
+			.btn.down_all{
+				padding : 0 1.4rem 0 0;
+				color : $ColorSubTxt;
+				@include FontBody14;
+				background-image: url("../../assets/img/icons_12_ic_chervron_right_grey_06.svg");
+				background-repeat: no-repeat;
+				background-position: 100% 50%;
+			}
+		}
+		.att_list .cube_references {
+			margin-top : .8rem;
+			.references_body{
+				overflow: hidden;
+			}
+			.title{
+				@include Ellipsis1;
+			}
+		}
+	}
+}
+.content_head + .content_body {
+	.learning_subject {
+		padding-top:2rem;
+	}
+}
+.theme_dark {
+    .learning_subject {
+        .title_area {
+            .title {
+                color:#fff;
+            }
+        }
+    }
+}
+// e: 학습과정제목
+
+// Modal BadgeList
+.modal_badgelist {
+	.modal_content {
+		padding-bottom:3rem;
+	}
+}
+
+///////////////////////////////////////////////////
+// Report
+///////////////////////////////////////////////////
+// s: 작성가이드
+.report_guide {
+    .title_area {
+        color:#cbcdcf;
+        .heading2 {
+            color:inherit;
+            margin-bottom:0.4rem;
+        }
+    }
+    .references_area {
+        margin-top:2.4rem;
+    }
+    .desc_area {
+        margin-top:2.4rem;
+    }
+}
+// e: 작성가이드
+
+// s: Cube Report
+.cube_report {
+	.report_toolbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom:0.8rem;
+		.date {
+			@include FontBody12;
+			color:$ColorSubTxt;
+		}
+		.label.style1:not(.primary) + .date {
+			color:$ColorPrimary;
+		}
+	}
+	.report_body {
+		display:block;
+		padding:2rem 2rem;
+		border:1px solid #E3E4E5;
+ 		border-radius: $RadiusLarge;
+		color:#44464A;
+        .cube_references_list {
+            margin-top:1.2rem;
+        }
+        .report_empty {
+            padding:1.6rem;
+            .title {
+                text-align: center;
+                color:#75777b;
+            }
+        }
+	}
+	.report_title {
+		.title {
+			@include Ellipsis4;
+		}
+	}
+	.report_attach {
+		margin-top:1.2rem;
+		display: flex;
+		@include FontBody12;
+		.attach_title {
+			flex:none;
+			margin-right:0.8rem;
+			.title {
+				color:#A4A6AA;
+				&::before {
+					content:"";
+					display:block;
+					width:1.2rem;
+					height:1.2rem;
+					background-image: url('../img/icons_12_ic_file_grey_05.svg');
+				}
+			}
+		}
+		.attach_files {
+			flex:0 1 auto;
+			overflow: hidden;
+			color:$ColorSubTxt;
+			.item {
+				display:flex;
+                overflow: hidden;
+				strong {
+                    display: block;
+					flex:0 1 auto;
+					@include Ellipsis1;
+				}
+				span {
+					display:block;
+					flex:none;
+				}
+			}
+		}
+	}
+}
+.theme_dark .cube_report {
+	.report_body {
+		background-color: #151617;
+		border:0;
+		color:#F8F8FA;
+	}
+}
+// e: Cube Report
+
+// s: 가이드안내
+.desc_area {
+    .desc {
+        @include FontBody12;
+        position: relative;
+        padding-left:1rem;
+        color:#a4a6aa;
+        &::before {
+            content:'*';
+            position:absolute;
+            left:0;
+            top:0.4rem;
+        }
+    }
+}
+.theme_dark {
+    .desc_area {
+        .desc {
+            color:#75777b;
+        }
+    }
+}
+// e: 가이드안내
+
+/////////////////////////////////
+// TASK
+/////////////////////////////////
+// s: task Modal
+.modal_boardwrite {
+    .modal_content {
+        padding:0;
+        .edit_tit {
+            flex:none;
+            padding-top:0.8rem;
+            .input {
+                display: inline-block;
+                width : 100%;
+                padding: 1rem 2rem;
+                @include FontBody16;
+            }
+        }
+    }
+    .edit_contents{
+        flex-direction: column;
+        border-top : .1rem solid $FormBasicBorder;
+        .acco_file_upload {
+            flex:none;
+            position: relative;
+            margin-top : 1.2rem;
+            .acco_title {
+                padding: 2rem $GapSideBase;
+                display: block;
+                @include FontTitle14;
+                border-bottom : .1rem solid #f2f3f5;
+                .cnt{
+                    margin-left : .4rem;
+                    display: inline-block;
+                    color :$ColorPrimary;
+                }
+                &::after{
+                    content:'';
+                    display: inline-block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    position: absolute;
+                    top:calc(50% - 0.8rem);
+                    right : $GapSideBase;
+                    transform : rotate(180deg);
+                    background: url("../img/icons_16_ic_chervron_up_grey_05.svg") no-repeat;
+                }
+                &.is_active::after{
+                    transform:  rotate(0);
+                }
+            }
+        }
+        .edit_form_wrap {
+            display:flex;
+            flex-direction: column;
+            flex : 1 0 auto;
+            textarea {
+                padding:2rem;
+                @include FontBody14;
+                &::placeholder {
+                    color: #a4a6aa;
+                }
+                &.full{
+                    width : 100%;
+                    height : 100%;
+                }
+            }
+        }
+        .acco_content {
+            display: none;
+            &.is_active {
+                display:block;
+            }
+        }
+    }
+    .edit_tool_bar {
+        padding: 1.2rem 2rem;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: .1rem solid $FormBasicBorder;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .btn {
+            width : 2rem;
+            height : 2rem;
+            &::before{
+                width : 2rem;
+                height : 2rem;
+            }
+            &.e_font::before{
+                background-image: url("../img/icons_20_ic_text_size_off_on.svg");
+            }
+            &.e_img::before{
+                background-image: url("../img/icons_20_ic_image_off_on.svg");
+            }
+            &.e_link::before{
+                background-image: url("../img/icons_20_ic_clip_off_on.svg");
+            }
+            &.e_align::before{
+                background-image: url("../img/icons_20_ic_text_align_off_on.svg");
+            }
+            &.e_attch::before{
+                background-image: url("../img/icons_20_ic_file_off_on.svg");
+            }
+            &.is_active::before{
+                background-position-y: 100%;
+            }
+            &+.btn{
+                margin-left : 3rem
+            }
+        }
+    }
+    .font_tool_bar{
+        padding : 1.2rem $GapSideBase;
+        position: fixed;
+        bottom : 4.5rem;
+        left: 0;
+        right : 0;
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #f8f8fa;
+        &.is_active{
+            display: flex;
+        }
+        .btn {
+            width : 2rem;
+            height : 2rem;
+            background-position: 0 0;
+            &+.btn{
+                margin-left : 3rem
+            }
+            &.e_fontSize{
+                padding : 0;
+                width : auto;
+            }
+            &.ico::before{
+                width : 2rem;
+                height : 2rem;
+            }
+            &.e_bolder::before{
+                background-image: url('../img/icons_20_ic_text_bolder_off_on.svg');
+            }
+            &.e_italic::before{
+                background-image:url('../img/icons_20_ic_text_italic_off_on.svg');
+            }
+            &.e_underline::before{
+                background-image:url('../img/icons_20_ic_text_underline_off_on.svg')
+            }
+            &.e_mid_line::before{
+                background-image:url('../img/icons_20_ic_text_strikethrough_off_on.svg')
+            }
+            &.e_fontAlign::before{
+                background-image:url('../img/icons_20_ic_text_align_off_on.svg')
+            }
+            &.e_addDot::before{
+                background-image:url('../img/icons_20_ic_text_dot_off_on.svg')
+            }
+            &.e_addNum::before{
+                background-image:url('../img/icons_20_ic_text_number_off_on.svg')
+            }
+            &.is_active::before{
+                background-position-y: 100%;
+            }
+        }
+    }
+    .modal_footer{
+        height : 4.5rem;
+    }
+}
+// e: task Modal
+
 // s: Task Board
 .board_toolbar + .task_list_wrap {
     margin-top:0.7rem;
@@ -2061,20 +2238,141 @@
 }
 // e: Task Board
 
-/////////////////////////////////
-// Test
-/////////////////////////////////
-// atareSurvey Page
-.atareSurvey_page {
-    .content_body {
-        padding-top:2.4rem;
+// s: board Detail
+.board_dt_wrap {
+    padding: 2rem 0 0 ;
+    .board_dt_title {
+        border-bottom: 0.1rem solid #1c1d1f;
+        padding-bottom: 1.2rem;
+        margin-bottom: 2rem;
+        .title_area .title {
+            color: #fff;
+            @include FontTitle16;
+        }
+        .board_dt_info {
+            margin-top: 1.2rem;
+            color: #75777b;
+            @include FontBody14;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            span {
+                display: inline-block;
+                margin-right: 0.8rem;
+                vertical-align: middle;
+                flex : none;
+            }
+            .avata {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 0.6rem;
+            }
+            .user_id {
+                overflow : hidden;
+                text-overflow : ellipsis;
+                white-space : nowrap;
+                flex : 0 1 auto;
+            }
+            .reg_date {
+                margin-right: 1.6rem;
+            }
+            .cnt_views {
+                position: relative;
+                margin : 0;
+                padding-left: 2.8rem;
+                background : url("../img/icons_16_ic_view_grey_07.svg") no-repeat 0.8rem 50%;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: top;
+                    width: .1rem;
+                    height: .8rem;
+                    background-color: #33353c;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
-    .step_count {
-        margin-bottom:1.2rem;
+    .board_dt_content {
+        .board_ph {
+            color: #f2f3f5;
+            @include FontBody16;
+            word-wrap: break-word;
+        }
+    }
+    .file_down_area {
+        margin-top: 2.4rem;
+        .area_title {
+            color: #fff;
+            @include FontBody14;
+            .label.download{
+                display: inline-block;
+                padding : 0 .4rem 0 2rem;
+                background: url('../img/icons_16_ic_file_white.svg') no-repeat 0 50%;
+            }
+            .cnt { color :$ColorPrimary}
+        }
+        .cube_references{
+            margin-top : 1.2rem;
+        }
+    }
+    .board_like_area {
+        margin: 3.2rem -2rem 0;
+        padding: 1.6rem 2rem;
+        border-top: .1rem solid #151617;
+        display: flex;
+        justify-content: flex-end;
+        .btn.like {
+            color : $ColorSubTxt;
+            &.ico {
+                &::before {
+                    width : 2.4rem;
+                    height : 2.4rem;
+                    margin-right : .5rem;
+                    background-image : url("../img/icons_24_ic_like_white_off_on.svg");
+                }
+                &.is_active::before{
+                    background-position: 0 100%;
+                }
+            }
+        }
     }
 }
+.board_comments_wrap {
+    display:flex;
+    flex-direction: column;
+    flex:1 0 auto;
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    padding: 0 $GapSideBase 3.2rem;
+    .no_data {
+        padding:10.7rem 0;
+    }
+}
+.theme_dark {
+    .board_dt_wrap {
+        .file_down_area .cube_references{
+            background-color:transparent;
+        }
+        .cube_references .references_util {
+            .ico.file_down{background-image: url('../img/icons_20_ic_download_white.svg');}
+            .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
+        }
+    }
+    .board_comments_wrap{
+        background-color: #151617;
+    }
+}
+// e: board Detail 공통
 
-// 응시하기
+/////////////////////////////////
+// Test, Survey
+/////////////////////////////////
+// s: 응시하기
 .test_information {
     margin-top:6.4rem;
     flex:none;
@@ -2143,8 +2441,9 @@
         }
     }
 }
+// e: 응시하기
 
-// 이수정보
+// s: 이수정보
 .course_define {
     margin-top:auto;
 	padding-top:2rem;
@@ -2169,175 +2468,20 @@
     }
     .desc_area {
         margin-top:2rem;
-        .desc {
-			@include FontBody12;
-            position: relative;
-            padding-left:1rem;
-            color:#a4a6aa;
-            &::before {
-                content:'*';
-                position:absolute;
-                left:0;
-                top:0.4rem;
-            }
-        }
     }
 }
-.theme_dark {
-	.course_define {
-		.desc_area {
-			.desc {
-				color:#75777b;
-			}
-		}
-	}
-}
-// 평가그래프
-.review_graph {
-    padding:2rem;
-    border-radius: $RadiusLarge;
-    background-color: #f8f8fa;
-    .graph_title {
-        @include FontBody16;
-        font-weight: 700;
-        em {
-            color:$ColorSecondary;
-        }
-    }
-    .graph_list {
-		display:table;
-		width:100%;
-        margin-top:2rem;
-        .graph_item {
-			display:table-row;
-            &:first-child {
-                margin-top:0;
-            }
-			.graph_th {
-				display:table-cell;
-				min-width:11.1rem;
-				padding:0.4rem 0;
-				padding-right:1.2rem;
-				vertical-align: top;
-				white-space: nowrap;
-			}
-			.graph_td {
-				display:table-cell;
-				width:100%;
-				padding:0.4rem 0;
-				vertical-align: top;
-			}
-            .graph_label {
-                display:flex;
-				align-items: center;
-				height:2.8rem;
-                flex:none;
-				@include FontBody14;
-                color:#1c1d1f;
-				&::before {
-					content:'';
-					flex:none;
-					display:block;
-					width:2.4rem;
-					height:2.4rem;
-					margin-right:0.8rem;
-					background:no-repeat center center / 100% auto;
-				}
-				&.n1::before {
-					background-image: url('../img/icons_24_ic_verygood.png');
-				}
-				&.n2::before {
-					background-image: url('../img/icons_24_ic_good.png');
-				}
-				&.n3::before {
-					background-image: url('../img/icons_24_ic_normal.png');
-				}
-				&.n4::before {
-					background-image: url('../img/icons_24_ic_bad.png');
-				}
-				&.n5::before {
-					background-image: url('../img/icons_24_ic_so_bad.png');
-				}
-            }
-            .graph_bar {
-                position: relative;
-                display:flex;
-                width:auto;
-                height:2.8rem;
-                background-color: #fff;
-                &:before {
-                    content:'';
-                    display:block;
-                    position: absolute;
-                    left:0;
-                    top:0;
-                    z-index: 1;
-                    width:100%;
-                    height:100%;
-                    border:1px solid #f2f3f5;
-                }
-                .graph_active {
-                    position: relative;
-                    z-index: 2;
-                    width:50%;
-                    height:100%;
-                    background-color: #00bfae;
-                }
-                .graph_value {
-                    display:flex;
-                    align-items: center;
-                    position:absolute;
-                    top:0;
-                    right:0;
-                    height:100%;
-                    padding-right:0.8rem;
-                }
-            }
-        }
-    }
-}
+// e: 이수정보
 
-// 리뷰리스트
-.review_list {
-    .item {
-        padding:1.6rem $GapSideBase;
-        border-bottom:1px solid #f2f3f5;
-        .item_whiter {
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            .whiter {
-                display:flex;
-                justify-content: space-between;
-                align-items: center;
-                .avata {
-                    width:2rem;
-                    height:2rem;
-                }
-                .name {
-                    margin-left:0.6rem;
-                    color:$ColorSubTxt;
-                }
-            }
-			.date {
-				color:$ColorSubTxt;
-			}
-        }
-        .item_coment {
-            margin-top:0.9rem;
-        }
-    }
-}
-
-// 응시하기 설문
+// s: 응시하기 설문
 .atare_survey {
     .atare_tit {
         margin-bottom:3.2rem;
         @include FontTitle18;
     }
 }
+// e: 응시하기 설문
 
-// 응시하기 결과
+// s: 응시하기 결과
 .atare_result {
     .atare_tit {
         @include FontTitle18;
@@ -2441,111 +2585,12 @@
         }
     }
 }
-
-// Modal BadgeList
-.modal_badgelist {
-	.modal_content {
-		padding-bottom:3rem;
-	}
-}
-
+// e: 응시하기 결과
 
 ///////////////////////////////////////////////////
-// Pages
+// 학습활동
 ///////////////////////////////////////////////////
-
-// Review Page
-.review_page {
-    &.tab_panel {
-        padding-top:2rem;
-    }
-    .board_toolbar {
-        margin-top:1.6rem;
-    }
-}
-
-//선수과정 필수 & 선택
-.modal_elctivelearning, .modal_advancelearning {
-    .course_data {
-        width:100%;
-        margin-bottom:3rem;
-        color:#75777b;
-        text-align: center;
-        .ico {
-            width:4rem;
-            height:4rem;
-            margin:0 auto 0.8rem;
-            &.advance {
-                background-image: url('../img/icons_40_ic_warning_primary.svg');
-            }
-            &.elective {
-                background-image: url('../img/icons_40_ic_warning_grey_03.svg');
-            }
-        }
-    }
-    .course_tit {
-        @include FontTitle16;
-        height:inherit;
-        font-weight: 700;
-    }
-}
-.modal_elctivelearning {
-    .modal_content {
-        padding-bottom:0.8rem;
-    }
-}
-.modal_advancelearning {
-    .modal_content {
-        padding-bottom:3.2rem;
-    }
-}
-.course_learning {
-    border-bottom:1px solid #f2f3f5;
-	.course_inner {
-		display:flex;
-		align-items: center;
-		width:100%;
-		height:inherit;
-		padding:1.5rem 0 1.5rem 0;
-		.course_body {
-            display:flex;
-            align-items: center;
-            width:100%;
-			flex:0 1 auto;
-			color:#fff;
-			overflow: hidden;
-            .label.style1 {
-                margin-right:1.2rem;
-            }
-            .elective {
-                color:#75777B;
-            }
-			.title {
-				@include FontBody13;
-                @include Ellipsis1;
-				color:#000;
-			}
-            .state {
-                flex:none;
-                margin-left:1.2rem;
-                &.primary {
-                    @include FontBody14;
-                    color:$ColorPrimary;
-                }
-            }
-		}
-		&::after {
-			content:"";
-			display:block;
-			width:1.6rem;
-			height:1.6rem;
-			margin-left:1.2rem;
-			background-image:url('../img/icons_16_ic_chervron_right_grey_05.svg');
-		}
-	}
-}
-
-//학습활동 overview
+// s: 학습활동 개요
 .activity_overview {
     margin-top: 1.2rem;
     padding:1.6rem 2rem;
@@ -2558,8 +2603,9 @@
         font-weight: 700;
     }
 }
+// e: 학습활동 개요
 
-//학습활동 가이드
+// s: 학습활동 가이드
 .activity_note {
     width: 100%;
     .title {
@@ -2613,52 +2659,58 @@
         text-align: center;
     }
 }
+// e: 학습활동 가이드
 
-//큐브공통 오버뷰 페이지
-.contentsoverview_page {
-    background-color:#000;
-    .learning_sec {
-        .sec_body {
-            .board_list {
-                .overview_item {
-                    border:1px solid #44464a;
-                    border-radius: 8px;
-                    padding:1.6rem;
-                    .item_thumb {
-                        position: relative;
-                        width:8rem;
-                        height:5.4rem;
-                        .thumb {
-                            .thumbico {
-                                position: absolute;
-                                top:0;
-                                right:0.5rem;
-                                width:2.4rem;
-                                height:2.4rem;
-                                background-image: url('../../assets/img/icons_24_ic_bookmark_off_on.svg');
-                                background-position-y: top;
-                            }
-                            .is_active {
-                                background-position-y: bottom;
-                            }
-                        }
-                    }
-                    .item_title {
+///////////////////////////////////////////////////
+// Pages
+///////////////////////////////////////////////////
+// s: Review
+.review_page {
+    &.tab_panel {
+        padding-top:2rem;
+    }
+    .board_toolbar {
+        margin-top:1.6rem;
+    }
+}
+// e: Review
 
-                        .sub_txt {
-                            color:#a4a6aa;
-                            @include FontBody12;
-                        }
-                        .title {
-                            @include FontBody12;
-                            color:#f2f3f5;
-                        }
-                    }
-                }
+// s: 선수과정 필수&선택
+.modal_elctivelearning, .modal_advancelearning {
+    .course_data {
+        width:100%;
+        margin-bottom:3rem;
+        color:#75777b;
+        text-align: center;
+        .ico {
+            width:4rem;
+            height:4rem;
+            margin:0 auto 0.8rem;
+            &.advance {
+                background-image: url('../img/icons_40_ic_warning_primary.svg');
+            }
+            &.elective {
+                background-image: url('../img/icons_40_ic_warning_grey_03.svg');
             }
         }
     }
+    .course_tit {
+        @include FontTitle16;
+        height:inherit;
+        font-weight: 700;
+    }
 }
+.modal_elctivelearning {
+    .modal_content {
+        padding-bottom:0.8rem;
+    }
+}
+.modal_advancelearning {
+    .modal_content {
+        padding-bottom:3.2rem;
+    }
+}
+// e: 선수과정 필수&선택
 
 //학습노트 목록
 .learning_note {
@@ -2776,37 +2828,6 @@
         textarea.basic {
             height:12.8rem;
             padding:0.9rem 1.6rem;
-        }
-    }
-}
-
-
-//과정목록 단일
-.modal_videolist {
-    .course_item {
-        > .item_body {
-            display: flex;
-            align-items: center;
-            padding-bottom:2rem;
-            &::after {
-                content: "";
-                display: flex;
-                width: 1.6rem;
-                height: 1.6rem;
-                margin-left: 2rem;
-                background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
-            }
-            > .item_title {
-                width: 100%;
-                > .title {
-                    color:#a4a6aa;
-                }
-                > .sub_txt {
-                    color:#44464a;
-                    font-weight:bold;
-                    @include Ellipsis2
-                }
-            }
         }
     }
 }
@@ -3059,21 +3080,11 @@
         margin-bottom:3.2rem;
         .cube_report {
             margin-top:3.2rem;
-            .opinion {
+            .heading2 {
                 margin-bottom:0.8rem;
             }
         }
         .report_body {
-            .opinion_txt + .cube_references {
-                margin-top:1rem;
-            }
-            .report_empty {
-                padding:1.6rem;
-                .title {
-                    text-align: center;
-                    color:#75777b;
-                }
-            }
         }
     }
     .content_body {
@@ -3093,58 +3104,7 @@
         background-color: inherit;
     }
 }
-// 파일명 Ellipsis
-.filename_line1 {
-    & + .filename_line1 {
-        margin-top:1rem;
-    }
-    .references_body {
-        overflow: hidden;
-        .item {
-            display: flex;
-            > strong {
-                @include Ellipsis1;
-            }
-            > span {
-                display: block;
-                flex: none;
-            }
-        }
-    }
-}
-.filename_line2 {
-    & + .filename_line2 {
-        margin-top:1rem;
-    }
-    .references_body {
-        .item {
-            position:relative;
-            > strong {
-                @include Ellipsis2;
-                overflow: hidden;
-            }
-            > span {
-                position: absolute;
-                bottom:0;
-                right:0;
-                padding-left:0.4rem;
-                display: inline-flex;
-                background-color: #fff;
-            }
-        }
-    }
-}
-.theme_dark {
-    .filename_line2 {
-        .references_body {
-            .item {
-                > span {
-                    background-color: #000;
-                }
-            }
-        }
-    }
-}
+
 // report 에디터
 .report_edit {
     .modal_header {
@@ -3389,6 +3349,26 @@
 }
 // e: Webpage, Document 공통
 
+ // 차수목록 여백
+ .learning_container {
+	.tab_panel.degree_page{
+		padding-bottom : 4rem;
+	}
+	.classroom_page .degree_page {
+		padding-top:2rem;
+	}
+}
+
+// s: 응시하기 페이지
+.atareSurvey_page {
+    .content_body {
+        padding-top:2.4rem;
+    }
+    .step_count {
+        margin-bottom:1.2rem;
+    }
+}
+// e: 응시하기 페이지
 
 ///////////////////////////////////////////////////
 // orientation: landscape
@@ -3466,3 +3446,4 @@
     }
 	// s: Modal Landscape
 }
+
