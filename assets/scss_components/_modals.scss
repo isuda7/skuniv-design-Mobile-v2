@@ -512,7 +512,8 @@
             display:flex;
             justify-content: space-between;
             align-items: center;
-            height:5.6rem;
+            min-height:5.6rem;
+            padding:1.3rem 0;
         }
         .radio {
             display:block;
@@ -548,6 +549,13 @@
                 &::after {
                     display:block;
                 }
+            }
+            input.basic {
+                display:none;
+            }
+            input.basic.is_visible {
+                display:block;
+                margin-top:1.6rem;
             }
         }
         .rating {

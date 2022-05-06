@@ -15,9 +15,9 @@ textarea {
     font-size:inherit;
     line-height:inherit;
 }
-.radio input,
-.toggle input,
-.checkbox input {
+.radio input[type=radio],
+.toggle input[type=checkbox],
+.checkbox input[type=checkbox] {
     cursor: pointer;
     position: absolute;
     top: 0px;
