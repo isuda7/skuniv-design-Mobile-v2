@@ -276,6 +276,7 @@
             font-size:1.8rem;
             line-height:2.4rem;
             font-weight:700;
+            @include Ellipsis1;
         }
         .btn.text:last-child {
             margin-right:-1rem;

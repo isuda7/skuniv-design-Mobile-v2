@@ -193,7 +193,7 @@
 // e: 개인정보 수집
 
 // s: 개인정보 동의
-.modal_agree {
+.privacy_agree {
 	.agree_all {
 		padding:1.3rem 0;
 		border-bottom:1px solid #f2f3f5;
@@ -233,3 +233,19 @@
 	}
 }
 // e: 개인정보 동의
+
+// s: 개인정보 동의 상세
+.privacy_detail {
+	padding-top:2rem;
+	.privacy_tit {
+		margin-top:2.4rem;
+		@include FontTitle14;
+		&:first-child {
+			margin-top:0;
+		}
+	}
+	.privacy_cont {
+		margin-top:0.4rem;
+	}
+}
+// e: 개인정보 동의 상세
