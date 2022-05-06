@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        function learningThumb(){
+            // 타이틀 라인수만큼 스타일 구분하기
+            var TitleEl = document.querySelector(".overay_area .title");
+            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+            var Remain = TitleHeight / TitleLineHeight;
+            TitleEl.classList.add("line"+Remain);
+        }
+    </script>
+</head>
+<body>
+<div class="sub_wrapper has_sticky">
+	<!-- Container -->
+    <main role="main" class="container learning_container note_all_page">
+        <div class="content_head theme_dark">
+            <div class="activity_note_head">
+                <div class="thumb" aria-hidden="true"
+                    style="background-image:url('../../assets/img/demo/placeimg_640_360_animals.jpg')">
+                </div>
+                <div class="note_title">
+                    <p class="sub_txt">Green</p>
+                    <p class="tit">[깨끗한 지구] RE100 톺아보기</p>
+                    <p class="tit">글로벌 기업의 Game Changer, RE100</p>
+                    <div class="info_area">
+                        <button type="button" class="btn text arw_expand">폴더1</button>
+                        <i class="split"></i>
+                        <span class="txt">노트4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content_body">
+            <div class="tab_panel note_page_all pad_b0">
+                <!-- 학습노트 -->
+                <div class="activity_note_view">
+                    <div class="note_item type_vod">
+                        <div class="note_tit">
+                            <strong class="tit">00:03:20</strong>
+                            <!-- 오픈이후 추가기능 -->
+                        </div>
+                        <div class="note_cont">
+                            <div class="note_vod" id="miniPlayer">
+                                <script>
+                                    $('#miniPlayer').load('../Common/Player.html', function(){
+                                        var $cubePlayer = $('#miniPlayer').children('.cube_player');
+                                        $cubePlayer.addClass('is_miniplayer is_active is_visible');
+                                        $cubePlayer.find('.btn.start').addClass('is_visible');
+                                        $cubePlayer.find('.btn.pause').removeClass('is_visible');
+                                    });
+                                </script>
+                            </div>
+                            <p class="txt">
+                                1. 반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지며, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 끼친 지대한 영향을 이해한다.
+                            </p>
+                            <p class="txt">
+                                2. 트랜지스터의 구조와 동작원리를 살펴보고, 이를 구현하기 위한 반도체 공정 Process와 그 원리에 대해 각 단계별로 알아본다.
+                            </p>
+                        </div>
+                        <div class="note_info">
+                            <span class="date">2022.03.21</span>
+                        </div>
+                        <hr class="divider" />
+                    </div>
+                    <div class="note_item type_vod">
+                        <div class="note_tit">
+                            <strong class="tit">학습노트</strong>
+                            <!-- 오픈이후 추가기능 -->
+                        </div>
+                        <div class="note_cont">
+                            <p class="txt">
+                                1. 반도체, 반도체 Chip, 트랜지스터가 각각 무엇인지 안다. 또한 트랜지스터가 왜 반도체로 만들어지며, 트랜지스터의 발명이 오늘날 컴퓨터 발전에 끼친 지대한 영향을 이해한다.
+                            </p>
+                            <p class="txt">
+                                2. 트랜지스터의 구조와 동작원리를 살펴보고, 이를 구현하기 위한 반도체 공정 Process와 그 원리에 대해 각 단계별로 알아본다.
+                            </p>
+                        </div>
+                        <hr class="divider" />
+                    </div>
+                </div>
+                <!-- //학습노트 -->
+            </div>
+            <!-- // 학습과정 탭 -->
+        </div>
+    </main>
+    <!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+</div>
+</body>
+</html>

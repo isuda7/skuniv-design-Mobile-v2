@@ -755,6 +755,7 @@
 		float:right;
         color:#75777b;
         padding:0 1.6rem 0 0;
+        margin-top:0.6rem;
 		&::after {
 			content:"";
 			position:absolute;
@@ -1366,8 +1367,8 @@
                 }
 				.btn.more {
 					float:right;
-					padding:0;
 					padding:0 1.6rem 0 0;
+                    margin-top:0.6rem;
 					&::after {
 						content:"";
 						position:absolute;
@@ -2615,14 +2616,18 @@
 }
 // e: 학습활동 개요
 
-// s: 학습활동 가이드
+// s: 학습활동 노트 목록
 .activity_note {
     width: 100%;
-    .title {
+    &:first-child .note_title {
+        padding-top:1.2rem;
+    }
+    .note_title {
         padding:1.6rem 0;
         border-bottom:1px solid #f2f3f5;
         margin-bottom:1.6rem;
         .note_link{
+            display:inline-block;
             &::after {
                 content:"";
                 position:relative;
@@ -2643,8 +2648,8 @@
     }
     .note_contents {
         .note_link {
-            margin-bottom:1.2rem;
-            color:#ff664d;
+            margin-bottom:0.8rem;
+            color:$ColorPrimary;
             @include FontBody13;
         }
         .link_ico {
@@ -2660,16 +2665,116 @@
                 background-image: url('../img/icons_16_ic_openinnew_primary.svg');
             }
         }
-    }
-    .note_contents +  .note_contents {
-        margin-top:1.2rem;
+        .note_item +  .note_item {
+            margin-top:1.2rem;
+        }
     }
     .more_area {
         padding:1.4rem 0;
         text-align: center;
     }
 }
-// e: 학습활동 가이드
+// e: 학습활동 노트 목록
+
+// s: 학습활동 노트 전체보기 헤더
+.activity_note_head {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding:2rem;
+    height:18.4rem;
+    color:#fff;
+    .thumb {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    .note_title {
+        position: relative;
+        z-index:20;
+        .sub_txt {
+            color:inherit;
+        }
+        .tit {
+            margin-top:0.4rem;
+        }
+        .info_area {
+            display: flex;
+            align-items: center;
+            margin-top:0.8rem;
+            .split {
+                display:block;
+                width:1px;
+                height:1rem;
+                margin:0 1rem;
+                background-color: #fff;
+            }
+            .btn.text {
+                padding:0;
+                color: inherit;
+            }
+        }
+    }
+}
+// e: 학습활동 노트 전체보기 헤더
+
+// s: 학습활동 노트 전체보기 본문
+.activity_note_view {
+    .note_item {
+        position: relative;
+        padding:2rem 0 2.8rem;
+        .divider {
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+        .note_tit {
+            color:$ColorPrimary;
+            .note_link{
+                display:inline-block;
+                &::after {
+                    content:"";
+                    position:relative;
+                    top:1px;
+                    display:inline-block;
+                    width:1.2rem;
+                    height:1.2rem;
+                    margin-left:0.2rem;
+                    background-image: url('../img/icons_12_ic_chervron_right_black.svg');
+                }
+            }
+            .note_no {
+                display: block;
+                margin-top:0.8rem;
+                @include FontBody12;
+                color:#1c1d1f;
+            }
+        }
+        .note_cont {
+            margin-top:1.7rem;
+            .txt + .txt {
+                margin-top:2.4rem;
+            }
+        }
+        .note_info {
+            margin-top:1.6rem;
+            color:#a4a6aa;
+        }
+    }
+    .note_item.type_vod {
+        .note_cont {
+            margin-top:1rem;
+            .note_vod {
+                width:16rem;
+                height:9rem;
+                margin-bottom:1.2rem;
+            }
+        }
+    }
+}
+// e: 학습활동 노트 전체보기 본문
 
 ///////////////////////////////////////////////////
 // Pages

@@ -435,3 +435,36 @@
         }
     }
 }
+
+// Mini Player
+.cube_player.is_miniplayer {
+    width:16rem;
+    height:9rem;
+    .player_db_controls {
+        display:none;
+    }
+    .player_overwrap {
+        .player_controls {
+            .btn.backward {
+                display:none;
+            }
+            .btn.forward {
+                display:none;
+            }
+            .btn.pause::before {
+                width:2.4rem;
+                height:2.4rem;
+            }
+            .btn.start::before {
+                width:2.4rem;
+                height:2.4rem;
+            }
+        }
+        .play_utils {
+            display:none;
+        }
+    }
+    .player_timeline {
+        display:none;
+    }
+}
