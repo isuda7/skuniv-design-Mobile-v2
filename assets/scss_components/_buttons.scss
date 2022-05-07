@@ -140,7 +140,11 @@
         background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
     }
 }
-
+.theme_dark {
+    .btn.arw_expand::after {
+        background-image: url('../img/icons_12_ic_chervron_down_white.svg');
+    }
+}
 .btn.pill {
     font-size: 1rem;
     line-height:1.4rem;

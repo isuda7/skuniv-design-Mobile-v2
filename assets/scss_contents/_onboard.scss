@@ -1,4 +1,4 @@
-// 온보드 가입절차
+// s: 온보드 가입절차
 .onboard_learning {
 	margin-top:4rem;
 	.onboard_step {
@@ -37,8 +37,9 @@
 		}
 	}
 }
+// e: 온보드 가입절차
 
-// 업데이트 안내
+// s: 업데이트 안내
 .update_page {
 	// Items
 	.update_item {
@@ -143,3 +144,108 @@
 		z-index: 100;
 	}
 }
+// e: 업데이트 안내
+
+// s: 개인정보 수집
+.privacy_page {
+	.content_body {
+		padding-top:1.2rem;
+	}
+	.privacy_head {
+		padding-bottom:4rem;
+		border-bottom:1px solid #f2f3f5;
+		.title {
+			@include FontTitle20;
+			em {
+				color:$ColorPrimary;
+			}
+		}
+		.explain {
+			margin-top:1.4rem;
+			color:#a4a6aa;
+		}
+	}
+	.privacy_body {
+		padding-top:4rem;
+		.txt {
+			margin-top:2.4rem;
+			&:first-child {
+				margin-top:0;
+			}
+			.primary {
+				color:$ColorPrimary;
+			}
+		}
+		.info {
+			position: relative;
+			margin-top:0.4rem;
+			padding-left:1rem;
+			color:#a4a6aa;
+			&::before {
+				content:'*';
+				position: absolute;
+				left:0;
+				top:0;
+			}
+		}
+	}
+}
+// e: 개인정보 수집
+
+// s: 개인정보 동의
+.privacy_agree {
+	.agree_all {
+		padding:1.3rem 0;
+		border-bottom:1px solid #f2f3f5;
+		.checkbox.basic {
+			label {
+				@include FontTitle14;
+			}
+		}
+	}
+	.agree_list {
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding:1.3rem 0;
+			.checkbox.basic {
+				label::before,
+				label::after {
+					top:calc(50% - 1rem);
+				}
+			}
+			.agree_link {
+				width:3.2rem;
+				height:3.2rem;
+				margin:-0.8rem;
+				margin-left:1.2rem;
+				&::before {
+					width:1.6rem;
+					height:1.6rem;
+					background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
+				}
+			}
+		}
+	}
+	.form_alert {
+		margin-top:1.6rem;
+	}
+}
+// e: 개인정보 동의
+
+// s: 개인정보 동의 상세
+.privacy_detail {
+	padding-top:2rem;
+	.privacy_tit {
+		margin-top:2.4rem;
+		@include FontTitle14;
+		&:first-child {
+			margin-top:0;
+		}
+	}
+	.privacy_cont {
+		margin-top:0.4rem;
+	}
+}
+// e: 개인정보 동의 상세

@@ -276,6 +276,7 @@
             font-size:1.8rem;
             line-height:2.4rem;
             font-weight:700;
+            @include Ellipsis1;
         }
         .btn.text:last-child {
             margin-right:-1rem;
@@ -511,7 +512,8 @@
             display:flex;
             justify-content: space-between;
             align-items: center;
-            height:5.6rem;
+            min-height:5.6rem;
+            padding:1.3rem 0;
         }
         .radio {
             display:block;
@@ -547,6 +549,13 @@
                 &::after {
                     display:block;
                 }
+            }
+            input.basic {
+                display:none;
+            }
+            input.basic.is_visible {
+                display:block;
+                margin-top:1.6rem;
             }
         }
         .rating {

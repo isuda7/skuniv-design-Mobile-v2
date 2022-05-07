@@ -15,9 +15,9 @@ textarea {
     font-size:inherit;
     line-height:inherit;
 }
-.radio input,
-.toggle input,
-.checkbox input {
+.radio input[type=radio],
+.toggle input[type=checkbox],
+.checkbox input[type=checkbox] {
     cursor: pointer;
     position: absolute;
     top: 0px;
@@ -63,18 +63,20 @@ input.basic + .bytes {
     position: relative;
     padding-left:2.2rem;
     margin-top:0.2rem;
+    @include FontBody12;
     color:#ff3c3c;
     &::before {
         content:'';
         position: absolute;
         left: 0.2rem;
-        top: 0.4rem;
+        top: 0.1rem;
         display: block;
         width:1.6rem;
         height:1.6rem;
         background: url('../img/icons_16_ic_status_error.svg') no-repeat center center / 1.6rem auto;
     }
 }
+.form_alert.is_visible,
 input.basic.is_failed + .form_alert {
     display:block;
 }
@@ -157,7 +159,7 @@ textarea.basic {
         height:2rem;
         width:2rem;
         left:0;
-        top:1px;
+        top:0;
     }
     label {
         padding-left:2.0rem;
