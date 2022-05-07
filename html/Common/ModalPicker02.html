@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			var swierPicker = {
+				threshold: 5,
+				speed:300,
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				slideToClickedSlide: true,
+				direction: "vertical",
+				resistanceRatio: false,
+				on: {
+					init: function(swiper){
+						// Swiper가 적용되면 보여주도록 대응
+						$(swiper.$el).closest('.ui_swiper').addClass('is_swiper');
+					}
+				}
+			}
+			var swiperHour = new Swiper(".swiper_hour .swiper-container", swierPicker);
+			var swiperMinute = new Swiper(".swiper_minute .swiper-container", swierPicker);
+		})
+	</script>
+</head>
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_picker">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">시간변경</h3>
+            </div>
+            <div class="modal_content">
+				<div class="picker_list">
+					<div class="picker_item">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_hour">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<dis class="swiper-wrapper">
+									<div class="swiper-slide">00시간</div>
+									<div class="swiper-slide">01시간</div>
+									<div class="swiper-slide">02시간</div>
+									<div class="swiper-slide">03시간</div>
+									<div class="swiper-slide">04시간</div>
+									<div class="swiper-slide">05시간</div>
+									<div class="swiper-slide">06시간</div>
+									<div class="swiper-slide">07시간</div>
+									<div class="swiper-slide">08시간</div>
+									<div class="swiper-slide">09시간</div>
+									<div class="swiper-slide">10시간</div>
+								</dis>
+							</div>
+							<!-- // Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+					<div class="picker_item">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_minute">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<dis class="swiper-wrapper">
+									<div class="swiper-slide">00분</div>
+									<div class="swiper-slide">10분</div>
+									<div class="swiper-slide">20분</div>
+									<div class="swiper-slide">30분</div>
+									<div class="swiper-slide">40분</div>
+									<div class="swiper-slide">50분</div>
+									<div class="swiper-slide">60분</div>
+								</dis>
+							</div>
+							<!-- // Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>

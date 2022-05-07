@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			var swierPicker = {
+				threshold: 5,
+				speed:300,
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				slideToClickedSlide: true,
+				direction: "vertical",
+				resistanceRatio: false,
+				on: {
+					init: function(swiper){
+						// Swiper가 적용되면 보여주도록 대응
+						$(swiper.$el).closest('.ui_swiper').addClass('is_swiper');
+					}
+				}
+			}
+			var swiperYear = new Swiper(".swiper_year .swiper-container", $.extend(swierPicker));
+			var swiperMonth = new Swiper(".swiper_month .swiper-container", swierPicker);
+			var swiperDay = new Swiper(".swiper_day .swiper-container", swierPicker);
+		})
+	</script>
+</head>
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_picker">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">시작일</h3>
+            </div>
+            <div class="modal_content">
+				<div class="picker_list">
+					<div class="picker_item">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_year">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<dis class="swiper-wrapper">
+									<div class="swiper-slide">2019년</div>
+									<div class="swiper-slide">2020년</div>
+									<div class="swiper-slide">2021년</div>
+									<div class="swiper-slide">2022년</div>
+								</dis>
+							</div>
+							<!-- // Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+					<div class="picker_item">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_month">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<dis class="swiper-wrapper">
+									<div class="swiper-slide">01월</div>
+									<div class="swiper-slide">02월</div>
+									<div class="swiper-slide">03월</div>
+									<div class="swiper-slide">04월</div>
+									<div class="swiper-slide">05월</div>
+									<div class="swiper-slide">06월</div>
+									<div class="swiper-slide">07월</div>
+									<div class="swiper-slide">08월</div>
+									<div class="swiper-slide">09월</div>
+									<div class="swiper-slide">10월</div>
+									<div class="swiper-slide">11월</div>
+									<div class="swiper-slide">12월</div>
+								</dis>
+							</div>
+							<!-- // Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+					<div class="picker_item">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_day">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<dis class="swiper-wrapper">
+									<div class="swiper-slide">01일</div>
+									<div class="swiper-slide">02일</div>
+									<div class="swiper-slide">03일</div>
+									<div class="swiper-slide">04일</div>
+									<div class="swiper-slide">05일</div>
+									<div class="swiper-slide">06일</div>
+									<div class="swiper-slide">07일</div>
+									<div class="swiper-slide">08일</div>
+									<div class="swiper-slide">09일</div>
+									<div class="swiper-slide">10일</div>
+									<div class="swiper-slide">11일</div>
+									<div class="swiper-slide">12일</div>
+									<div class="swiper-slide">13일</div>
+									<div class="swiper-slide">14일</div>
+									<div class="swiper-slide">15일</div>
+									<div class="swiper-slide">16일</div>
+									<div class="swiper-slide">17일</div>
+									<div class="swiper-slide">18일</div>
+									<div class="swiper-slide">19일</div>
+									<div class="swiper-slide">20일</div>
+									<div class="swiper-slide">21일</div>
+									<div class="swiper-slide">22일</div>
+									<div class="swiper-slide">23일</div>
+									<div class="swiper-slide">24일</div>
+									<div class="swiper-slide">25일</div>
+									<div class="swiper-slide">26일</div>
+									<div class="swiper-slide">27일</div>
+									<div class="swiper-slide">28일</div>
+									<div class="swiper-slide">29일</div>
+									<div class="swiper-slide">30일</div>
+									<div class="swiper-slide">31일</div>
+								</dis>
+							</div>
+							<!-- // Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>

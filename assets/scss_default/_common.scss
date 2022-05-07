@@ -3,23 +3,27 @@
 	속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
 -------------------------------------------------------------------*/
 /* Swiper */
-.swiper {
+.ui_swiper {
 	position: relative;
+	opacity: 0;
+	&.is_swiper {
+		opacity: 1;
+	}
 }
 
-.swiper>.swiper-button-prev,
-.swiper>.swiper-button-next {
+.ui_swiper>.swiper-button-prev,
+.ui_swiper>.swiper-button-next {
 	margin: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-.swiper>.swiper-container>.swiper-button-prev,
-.swiper>.swiper-container>.swiper-button-next {
+.ui_swiper>.swiper-container>.swiper-button-prev,
+.ui_swiper>.swiper-container>.swiper-button-next {
 	display: none;
 }
 
-.swiper .swiper-pagination {
+.ui_swiper .swiper-pagination {
 	display: flex;
 	justify-content: center;
 	position:static;
@@ -27,11 +31,11 @@
 	bottom: 1.0rem;
 }
 
-.swiper .swiper-pagination-bullet {
+.ui_swiper .swiper-pagination-bullet {
 	margin: 0 0.3rem;
 }
 
-.swiper .swiper-controller {
+.ui_swiper .swiper-controller {
 	position: relative;
 	z-index: 1;
 	display:flex;
@@ -39,10 +43,10 @@
 	align-items: center;
 }
 
-.swiper .swiper-controller .swiper-pagination {
+.ui_swiper .swiper-controller .swiper-pagination {
 	width:auto;
 }
-.swiper .swiper-controller .swiper-pagination + .swiper-autoplay {
+.ui_swiper .swiper-controller .swiper-pagination + .swiper-autoplay {
 	margin-left:1.0rem;
 }
 
