@@ -70,6 +70,11 @@
 		opacity: 0;
 		pointer-events: none;
 	}
+	&.has_favorit {
+		.btn.ico.top {
+			bottom:16.4rem;
+		}
+	}
 	&.has_comment {
 		.btn.ico.top {
 			bottom:8rem;

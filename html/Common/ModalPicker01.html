@@ -19,6 +19,7 @@
 			var swierPicker = {
 				threshold: 5,
 				speed:300,
+				// freeMode: true,
 				slidesPerView: 'auto',
 				centeredSlides: true,
 				slideToClickedSlide: true,
@@ -31,7 +32,7 @@
 					}
 				}
 			}
-			var swiperYear = new Swiper(".swiper_year .swiper-container", $.extend(swierPicker));
+			var swiperYear = new Swiper(".swiper_year .swiper-container", swierPicker);
 			var swiperMonth = new Swiper(".swiper_month .swiper-container", swierPicker);
 			var swiperDay = new Swiper(".swiper_day .swiper-container", swierPicker);
 		})
