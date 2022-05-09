@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>FAQ</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container more_container">
+			<div class="content_body faq_page">
+                <div class="out_sec sticky">
+                    <div class="board_search_area">
+                        <div class="search_input ico">
+                            <input type="search" placeholder="검색어를 입력하세요" class="input"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq_wrap">
+                    <!-- FAQ Category -->
+                    <div class="faq_category_wrap">
+                        <div class="chip filter">
+                            <input type="radio" name="filterChip" id="filterChip1" tabindex="0" class="hidden" checked>
+                            <label for="filterChip1">전체</label>
+                        </div>
+                        <div class="chip filter">
+                            <input type="radio" name="filterChip" id="filterChip2" tabindex="0" class="hidden">
+                            <label for="filterChip2">학습 Rule</label>
+                        </div>
+                        <div class="chip filter">
+                            <input type="radio" name="filterChip" id="filterChip3" tabindex="0" class="hidden">
+                            <label for="filterChip3">Contents</label>
+                        </div>
+                        <div class="chip filter">
+                            <input type="radio" name="filterChip" id="filterChip4" tabindex="0" class="hidden">
+                            <label for="filterChip4">System</label>
+                        </div>
+                        <div class="chip filter">
+                            <input type="radio" name="filterChip" id="filterChip5" tabindex="0" class="hidden">
+                            <label for="filterChip5">College</label>
+                        </div>
+                    </div>
+                    <!-- // FAQ Category -->
+                    <div class="acc_faq_list">
+                        <!-- FAQ Accordion -->
+                        <div class="acc_faq">
+                            <div class="acco_title is_active">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">mySUNI는 실명으로만 사용해야 하나요?</span>
+                                </div>
+                            </div>
+                            <div class="acco_content is_active">
+                                <div class="inner">
+                                    <p>Main 화면 우측 상단 프로필 메뉴를 통해, 실명 또는 원하시는 닉네임을 설정하여 자유롭게 이용할 수 있습니다. 더불어 프로필 사진도 변경가능합니다.&nbsp;</p>
+                                    <p>닉네임을 설정하시더라도 상세 조회 시에는 실명 정보가 함께 노출되니 참고 부탁드립니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // FAQ Accordion -->
+                        
+                        <div class="acc_faq">
+                            <div class="acco_title">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">사용 언어를 변경할 수 있나요?</span>
+                                </div>
+                            </div>
+                            <div class="acco_content">
+                                <div class="inner">
+                                    <p>네 가능합니다. 시스템의 메뉴 및 과정 소개 내용은 Main 화면 우측 상단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다. <br/><br/>또한 컨텐츠 자막의 경우 영상 화면 우측 하단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_faq">
+                            <div class="acco_title">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">사외에서 어떻게 접속하나요?</span>
+                                </div>
+                            </div>
+                            <div class="acco_content">
+                                <div class="inner">
+                                    <p>네 가능합니다. 시스템의 메뉴 및 과정 소개 내용은 Main 화면 우측 상단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다. <br/><br/>또한 컨텐츠 자막의 경우 영상 화면 우측 하단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_faq">
+                            <div class="acco_title">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">글자 수에 따라 리스트 높이값이 가변됩니다. FAQ에서 모든 글자수는 말줄임표 없이 모두 노출시킵니다.</span>
+                                </div>
+                            </div>
+                            <div class="acco_content">
+                                <div class="inner">
+                                    <p>네 가능합니다. 시스템의 메뉴 및 과정 소개 내용은 Main 화면 우측 상단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다. <br/><br/>또한 컨텐츠 자막의 경우 영상 화면 우측 하단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_faq">
+                            <div class="acco_title">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">글자 수에 따라 리스트 높이값이 가변됩니다. FAQ에서 모든 글자수는 말줄임표 없이 모두 노출시킵니다.</span>
+                                </div>
+                            </div>
+                            <div class="acco_content">
+                                <div class="inner">
+                                    <p>네 가능합니다. 시스템의 메뉴 및 과정 소개 내용은 Main 화면 우측 상단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다. <br/><br/>또한 컨텐츠 자막의 경우 영상 화면 우측 하단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_faq">
+                            <div class="acco_title">
+                                <div class="inner">
+                                    <strong class="tit_q">Q</strong>
+                                    <span class="tit">글자 수에 따라 리스트 높이값이 가변됩니다. FAQ에서 모든 글자수는 말줄임표 없이 모두 노출시킵니다.</span>
+                                </div>
+                            </div>
+                            <div class="acco_content">
+                                <div class="inner">
+                                    <p>네 가능합니다. 시스템의 메뉴 및 과정 소개 내용은 Main 화면 우측 상단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다. <br/><br/>또한 컨텐츠 자막의 경우 영상 화면 우측 하단의 글로벌 버튼(언어 설정 버튼)을 통해 설정할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

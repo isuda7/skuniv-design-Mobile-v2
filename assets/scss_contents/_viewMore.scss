@@ -52,7 +52,7 @@
 }
 .group_wrap{
     .group_item {
-        padding: 1.6rem;
+        padding: $FormBasicPadding;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -123,7 +123,7 @@
 .board_notice{
     border-bottom : .1rem solid #f2f3f5;
     .inner {
-        padding : 2rem $GapSideBase 1.6rem;
+        padding : 2rem $GapSideBase $FormBasicPadding;
         display: inline-block;
         width: 100%;
     }
@@ -174,9 +174,6 @@
     .board_dt_wrap{
         padding : 2rem 0 4rem;
     }
-    .board_comments_wrap{
-        background-color: #f8f8fa;
-    }
 }
 // e: Board Detail
 
@@ -211,7 +208,7 @@
         padding: .9rem .9rem 0.9rem 1.2rem;
         background-color: #f8f8fa;
         border: .1rem solid #f2f3f5;
-        border-radius: .4rem;
+        border-radius: $FormBasicRadius;
         &.ico{
             position: relative;
             display: flex;
@@ -250,7 +247,7 @@
             @include FontBody14;
         }
     }
-    .contact_bttn_area{
+    .contact_btn_area{
         padding-top : 1.5rem;
         display: flex;
         align-items: center;
@@ -263,7 +260,7 @@
             flex : 0 1 auto;
             width : 100%;
             border : .1rem solid $FormBasicBorder;
-            border-radius: .4rem;
+            border-radius: $FormBasicRadius;
             @include FontBody14;
             &::before{
                 margin-right : .4rem;
@@ -289,13 +286,154 @@
 }
 // e: 1:1 상단
 
-// s: FAQ
+// s: 1:1 detail & admin_answer
+.qna_page{
+    .qna_navi{
+        margin-bottom: .4rem;
+        display: flex;
+        align-items: center;
+        span{
+            display: block;
+            color: $ColorSubTxt;
+            @include FontBody14;
+            &+span{
+                margin-left : .9rem;
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: .1rem;
+                    height : 1.2rem;
+                    background-color: $FormBasicBorder;
+                    position: absolute;
+                    top: .5rem;
+                    left: -.45rem;
+                }
+            }
+        }
+    }
+    .board_dt_wrap .board_dt_title .board_dt_info{
+        justify-content: space-between;
+        margin-top: .8rem;
+        .state{
+            font-weight: 700;
+            &.done{
+                color: $ColorPositive
+            }
+        }
+    }
+
+}
+.admin_answer_sec{
+    display:flex;
+    flex-direction: column;
+    flex:1 0 auto;
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    margin-bottom: -4rem;
+    padding: 2rem $GapSideBase 3.2rem;
+    .answer_area{
+        .answer_tit{
+            @include FontTitle16;
+        }
+        .answer_dt{
+            margin-top: 1.4rem;
+            .board_ph{
+                @include FontBody14;
+            }
+            .reg_date{
+                margin-top: 1.6rem;
+                color: $ColorSubTxt;
+                @include FontBody13;
+            }
+        }
+        
+    }
+    .answer_feedback_area{
+        margin-top : 2.4rem;
+        display: flex;
+        .answer_feedback{
+            flex : 1 0 auto;
+            padding: 2rem;  
+            width : 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: $FormBasicRadius;
+            border: .1rem solid $FormBasicBorder;
+            strong{
+                color: $ColorPrimary;
+            }
+            //PC와 동일하게 rate로 갈경우 변경
+            .feedback_bttn{
+                display: flex;
+                align-items: center;
+                .btn {
+                    &::before{
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                    }
+                    &.is_active::before{
+                        background-position-y: 100%;
+                    }
+                    &+.btn{
+                        margin-left: 2.4rem
+                    }
+                }
+                .thumb_up::before{
+                    background-image: url("../img/icons_24_ic_thumup_off_on.svg");
+                }
+                .thumb_down::before{
+                    background-image: url("../img/icons_24_ic_thumdown_off_on.svg");
+                }
+            }
+        }
+    }
+}
+// e: 1:1 detail
+
+// s: 1:1 detail feedback bottomsheet
+.modal.feedback{
+    //PC와 동일하게 rate로 갈경우 변경
+    .feedback_bttn{
+        padding: 2.4rem 0 3.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn {
+            &::before{
+                width: 4.8rem;
+                height: 4.8rem;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            &.is_active::before{
+                background-position-y: 100%;
+            }
+            &+.btn{
+                margin-left: 3.2rem
+            }
+        }
+        .thumb_up::before{
+            background-image: url("../img/icons_48_ic_thumbup_off_on.svg");
+        }
+        .thumb_down::before{
+            background-image: url("../img/icons_48_ic_thumbdown_off_on.svg");
+        }
+    }
+}
+// e: 1:1 detail feedback bottomsheet
+
+// s: 1:1 board
 .board_qna{
     border-bottom : .1rem solid #f2f3f5;
     .inner{
         display: inline-block;
         width: 100%;
-        padding : 2rem $GapSideBase 1.6rem;
+        padding : 2rem $GapSideBase $FormBasicPadding;
     }
     .board_title{
         color : #000;
@@ -303,7 +441,7 @@
         .qna_navi{
             margin-bottom : .2rem;
             display: block;
-            color: #75777b;
+            color: $ColorSubTxt;
         }
         .tit{
             @include Ellipsis2;
@@ -314,7 +452,7 @@
         display: flex;
         align-content: center;
         justify-content: space-between;
-        color:#75777b;
+        color:$ColorSubTxt;
         .date{
             @include FontBody13;
         }
@@ -324,6 +462,53 @@
                 color : $ColorPositive;
             }
         }
+    }
+}
+// e: 1:1 board
+
+// s: FAQ
+.faq_category_wrap{
+    padding : .8rem 0 1.2rem;
+    width : 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    .chip{
+        flex: none;
+        &+.chip{
+            margin-left : .8rem;
+        }
+    }
+} 
+.acc_faq_list{
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    .acco_title{
+        padding: $FormBasicPadding 4.8rem $FormBasicPadding 2rem;
+        border-bottom: .1rem solid #f2f3f5;
+        @include FontBody16;
+        &::after{
+            width: 1.2rem;
+            height: 1.2rem;
+            top: calc(50% - .6rem);
+            right : 2rem;
+            background-image: url("../img/icons_12_ic_chervron_down_grey_05.svg");
+        }
+        .inner{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .tit_q{
+            margin-right: .8rem;
+            display: inline-block;
+            color: #a4a6aa;
+        }
+    }
+    .acco_content{
+        padding : 2rem 2rem 2.4rem;
+        background-color: #f8f8fa;
+        color:rgba(0,0,0, .7);
     }
 }
 // e: FAQ
@@ -338,7 +523,7 @@
             width: 100%;
         }
         .board_title_area {
-            color: #75777b;
+            color: $ColorSubTxt;
             @include FontBody14;
             .board_label_area{
                 display: flex;
@@ -375,10 +560,10 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 1rem;
-            color: #75777b;
+            color: $ColorSubTxt;
             @include FontBody13;
             .stat{
-                color: #75777b;
+                color: $ColorSubTxt;
                 @include FontTitle14;
                 &.done{
                     color: $ColorPositive;
