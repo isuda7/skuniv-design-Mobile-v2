@@ -8,7 +8,6 @@
     .profile_link {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         .avata_area {
             flex:none;
             margin-right:2rem;
@@ -18,7 +17,7 @@
             }
         }
         .title_area {
-            width:calc(100% - 10rem);
+            width:calc(100% - 7.2rem);
             overflow: hidden;
             .title {
                 flex:0 1 auto;
@@ -28,23 +27,8 @@
                 .name {
                     flex:0 1 auto;
                     @include FontTitle18;
-                    @include Ellipsis1;
+                    color:#000;
                 }
-                .btn {
-                    margin-left:0.4rem;
-                }
-                .btn.ico.change {
-                    &::before {
-                        width:2.4rem;
-                        height:2.4rem;
-                        background-image: url('../img/icons_24_ic_changename_black.svg');
-                    }
-                }
-            }
-            .company {
-                margin-top:0.4rem;
-                @include FontBody14;
-                color:$ColorSubTxt;
             }
             .follow {
                 display:flex;
@@ -66,25 +50,20 @@
                     color:$ColorPrimary;
                 }
             }
-        }
-        .btn_area {
-            margin-top:2rem;
-        }
+        }    
     }
-    // 편집하기
-    .avata_edit {
-        position: relative;
-        margin:auto;
-        width:8rem;
-        height:8rem;
-        .ico.edit {
-            position: absolute;
-            right:0;
-            bottom:0;
-            width: 2.4rem;
-            height:2.4rem;
-            background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
+    .btn_area {
+        margin-top:2rem;
+        display: flex;
+        border-radius: 4px;
+        border:1px solid #E3E4E5;
+        > button {
+            width:50%;
+            @include FontTitle14;
         }
-    }
-    
+        > .btn.basic.disabled {
+            border:0;
+            color:#a4a6aa;
+        }
+    }    
 }

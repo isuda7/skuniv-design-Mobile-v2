@@ -275,9 +275,15 @@
             }
         }
         &.alim::before {
-            background-image:url('../img/icons_24_ic_alarmthin_black_off_on.svg');
+            background-image:url('../img/icons_24_ic_alarm_black_off_on.svg');
         }
         &.alim.is_active::before {
+            background-position-y: bottom;
+        }
+        &.alimthin::before {
+            background-image:url('../img/icons_24_ic_alarmthin_black_off_on.svg');
+        }
+        &.alimthin.is_active::before {
             background-position-y: bottom;
         }
         &.more::before {
