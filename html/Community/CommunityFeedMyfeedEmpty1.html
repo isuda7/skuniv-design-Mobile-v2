@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_floating">
+	<div class="sub_wrapper has_sticky has_appnav">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
@@ -53,16 +53,18 @@
 							</div>
 						</div>
 					</a>
-					<div class="btn_area">
-						<button type="button" class="btn basic primary">피드</button>
-						<button type="button" class="btn basic disabled" disabled>커뮤니티 목록</button>
-					</div>	
+					<div class="tab style1 gap_tab">
+                        <div class="tab_list feed_tab">
+                            <a href="javascript:(0)" class="tab_item is_active">피드</a>
+                            <a href="javascript:(0)" class="tab_item disable">커뮤니티 목록</a>
+                        </div>
+                    </div>
 				</div>
 				<!-- // 프로필 헤더 -->
 			</div>
 			<div class="content_body">
 				<!-- 학습과정 탭 -->
-				<div class="out_sec sticky gap_tab">
+				<div class="out_sec sticky">
 					<div class="tab style2">
 						<div class="tab_list feed_tab">
 							<button type="button" class="tab_item">나의 커뮤니티</button>
@@ -88,7 +90,9 @@
 			</div>
 		</main>
 		<!-- // Container -->
-
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
 		<!-- Footer -->
 		<footer class="footer">
 			<nav class="appnav">
