@@ -4,6 +4,9 @@
 
 // community common
 .community_container {
+    .toast {
+        margin-bottom:7.4rem;
+    }
     .tab_list.feed_tab {
         > .tab_item {
             @include FontTitle14;
@@ -58,7 +61,6 @@
             overflow: hidden;
             .title {
                 display:flex;
-                justify-content:left;
                 align-items: center;
                 overflow: hidden;
                 &::after {
@@ -190,7 +192,7 @@
                 }
             }
             .feed_btn {
-                padding:1.6rem 2rem;
+                padding:1rem 2rem;
                 border-top:1px solid #f2f3f5;
                 display: flex;
                 & > .right {
