@@ -1,3 +1,44 @@
+// s: Settings
+.setting_sec {
+    padding-top:0.4rem;
+    .item {
+        &_title {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            padding:1.6rem 0;
+            min-height:5.6rem;
+            .tit {
+                @include FontBody16;
+            }
+            .txt {
+                margin-top:0.2rem;
+                color:$ColorSubTxt;
+            }
+            &.arw::after {
+                content:'';
+                display:block;
+                width:1.6rem;
+                height:1.6rem;
+                background: url('../img/icons_16_ic_chervron_right_grey_04.svg') no-repeat center center / 100% auto;
+            }
+        }
+        &_content {
+            display:none;
+            &.is_visible {
+                display: block;
+                padding-top:0.8rem;
+                padding-bottom:2rem;
+            }
+            .selecection + .input_group.time {
+                margin-top:2rem;
+            }
+        }
+    }
+}
+// e: Settings
+
 // s: SubMain Menu Group
 .menu_wrap{
     .group_tit {

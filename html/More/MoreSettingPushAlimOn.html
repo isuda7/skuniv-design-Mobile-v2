@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>Push 알림 설정</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container more_container setAlim_page">
+			<div class="content_body">
+                <div class="setting_sec">
+                    <!-- 학습 알림 -->
+                    <div class="item">
+                        <div class="item_title">
+                            <div class="title">
+                                <p class="tit"><strong>학습 알림</strong></p>
+                                <p class="txt">나의 학습, 플레이스트 정보 실시간 알림</p>
+                            </div>
+                            <div class="toggle basic">
+                                <input type="checkbox" name="toggleSetting" id="toggleSetting1" tabindex="0" class="hidden" checked />
+                                <label for="toggleSetting1"><span class="blind">Toggle</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //학습 알림 -->
+                    <!-- 학습루틴 알림 -->
+                    <div class="item">
+                        <div class="item_title">
+                            <div class="title">
+                                <p class="tit"><strong>학습루틴 알림</strong></p>
+                                <p class="txt">내가 설정한 루틴에 맞춰 알림 제공</p>
+                            </div>
+                            <div class="toggle basic">
+                                <input type="checkbox" name="toggleSetting" id="toggleSetting2" tabindex="0" class="hidden" checked />
+                                <label for="toggleSetting2"><span class="blind">Toggle</span></label>
+                            </div>
+                        </div>
+                        <div class="item_content is_visible">
+                            <div class="selecection">
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week1" tabindex="0" class="hidden" checked/>
+									<label for="week1">월</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week2" tabindex="0" class="hidden" />
+									<label for="week2">화</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week3" tabindex="0" class="hidden" />
+									<label for="week3">수</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week4" tabindex="0" class="hidden" />
+									<label for="week4">목</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week5" tabindex="0" class="hidden" />
+									<label for="week5">금</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week6" tabindex="0" class="hidden" />
+									<label for="week6">토</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="week" id="week7" tabindex="0" class="hidden" />
+									<label for="week7">일</label>
+								</div>
+                            </div>
+                            <div class="input_group time">
+                                <input type="text" value="오전 09:30" class="basic" />
+                                <button type="button" class="btn ico time"><div class="blind">시간선택</div></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //학습루틴 알림 -->
+                    <!-- 이벤트 알림 -->
+                    <div class="item">
+                        <div class="item_title">
+                            <div class="title">
+                                <p class="tit"><strong>이벤트 알림</strong></p>
+                                <p class="txt">신규 이벤트 정보에 대한 알림</p>
+                            </div>
+                            <div class="toggle basic">
+                                <input type="checkbox" name="toggleSetting" id="toggleSetting3" tabindex="0" class="hidden"/>
+                                <label for="toggleSetting3"><span class="blind">Toggle</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //이벤트 알림 -->
+                    <!-- 커뮤니티 알림 -->
+                    <div class="item">
+                        <div class="item_title">
+                            <div class="title">
+                                <p class="tit"><strong>커뮤니티 알림</strong></p>
+                                <p class="txt">댓글, 팔로워 등 커뮤니티 활동에 대한 알림</p>
+                            </div>
+                            <div class="toggle basic">
+                                <input type="checkbox" name="toggleSetting" id="toggleSetting4" tabindex="0" class="hidden"/>
+                                <label for="toggleSetting4"><span class="blind">Toggle</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //커뮤니티 알림 -->
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>

@@ -45,12 +45,11 @@
 		<!-- // Header -->
 
 		<!-- Container -->
-		<main role="main" class="container onboard_container interestTask_page">
+		<main role="main" class="container onboard_container currentTask_page">
 			<div class="content_body">
                 <div class="step_bar">
                     <span class="step_item is_comped"><span class="blind">Step 1</span></span>
-                    <span class="step_item is_comped"><span class="blind">Step 2</span></span>
-                    <span class="step_item"><span class="blind">Step 3</span></span>
+                    <span class="step_item"><span class="blind">Step 2</span></span>
                 </div>
 
 				<div class="onboard_learning">
@@ -69,18 +68,18 @@
 					</div>
 					<div class="onboard_form">
 						<div class="checkbox basic">
-							<input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden" />
+							<input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden" checked />
 							<label for="checkbox11">
 								<span>현재 직무를 더 발전시키고 싶어요.</span>
 							</label>
 						</div>
 
 						<div class="form_controls">
-							<button type="button" class="btn select">관심 직군</button>
+							<button type="button" class="btn select" disabled>관심 직군</button>
 							<p class="txt">의</p>
 						</div>
 						<div class="form_controls">
-							<button type="button" class="btn select">관심 직무</button>
+							<button type="button" class="btn select" disabled>관심 직무</button>
 							<p class="txt">(으)로</p>
 						</div>
 						<div class="form_controls">
@@ -92,7 +91,7 @@
 				<div class="page_floating">
 					<div class="page_action">
 						<button type="button" class="btn basic">이전</button>
-						<button type="button" class="btn basic primary" disabled>다음</button>
+						<button type="button" class="btn basic primary">다음</button>
 					</div>
 				</div>
 			</div>
