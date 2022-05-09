@@ -1,6 +1,43 @@
 ///////////////////////////////////////////////////
 // Feed
 ///////////////////////////////////////////////////
+
+// community common
+.community_container {
+    .tab_list.feed_tab {
+        > .tab_item {
+            @include FontTitle14;
+        }
+        > .tab_item.disable {
+            color:#a4a6aa;
+        }
+    }
+    .board_action {
+        margin-top:1.6rem;
+    }
+    .btn.ico {
+        flex:none;
+        width:3.2rem;
+        height:3.2rem;
+        padding:0;
+        &::before {
+            width:2.4rem;
+            height:2.4rem;
+        }
+        &.like::before {
+            background-image:url('../img/icons_24_ic_like_off_on.svg');
+        }
+        &.like.is_active::before {
+            background-position-y: bottom;
+        }
+        &.share::before {
+            background-image:url('../img/icons_24_ic_share_black.svg');
+        }
+        &.bookmark::before {
+            background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
+        }
+    }
+}
 // Profile Headr
 .community_head {
     width:100%;
@@ -8,7 +45,6 @@
     .profile_link {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         .avata_area {
             flex:none;
             margin-right:2rem;
@@ -18,33 +54,28 @@
             }
         }
         .title_area {
-            width:calc(100% - 10rem);
+            width:calc(100% - 7.2rem);
             overflow: hidden;
             .title {
-                flex:0 1 auto;
                 display:flex;
+                justify-content:left;
                 align-items: center;
                 overflow: hidden;
+                &::after {
+                    content:"";
+                    position:relative;
+                    top:1px;
+                    display:block;
+                    width:1.2rem;
+                    height:1.2rem;
+                    margin-left:0.2rem;
+                    background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
+                }
                 .name {
                     flex:0 1 auto;
                     @include FontTitle18;
-                    @include Ellipsis1;
+                    color:#000;
                 }
-                .btn {
-                    margin-left:0.4rem;
-                }
-                .btn.ico.change {
-                    &::before {
-                        width:2.4rem;
-                        height:2.4rem;
-                        background-image: url('../img/icons_24_ic_changename_black.svg');
-                    }
-                }
-            }
-            .company {
-                margin-top:0.4rem;
-                @include FontBody14;
-                color:$ColorSubTxt;
             }
             .follow {
                 display:flex;
@@ -66,25 +97,109 @@
                     color:$ColorPrimary;
                 }
             }
-        }
-        .btn_area {
-            margin-top:2rem;
+        }    
+    }
+}
+.community_page {
+    .feed_list_wrap {
+        .feed_list {
+            .desc {
+                & > .cate {
+                    @include FontBody13;
+                    margin:2.4rem 0 0.8rem;
+                    .split {
+                        position: relative;
+                        display:inline-block;
+                        top:0.2rem;
+                        width:1px;
+                        height:1.3rem;
+                        margin:0 0.4rem;
+                        background-color: #000;
+                    }
+                }
+                & > .txt {
+                    margin-top:1.6rem;
+                }
+                & > .add_img {
+                    margin-top:1.6rem;
+                }
+            }
+            .feed_info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width:100%;
+                @include FontBody14;
+                color :#75777b;
+                margin:1.6rem 0;
+                & > .left{
+                    display: flex;
+                    align-items: center;
+                    flex:0 1 auto;
+                    overflow: hidden;
+                    span{
+                        display: inline-block;
+                    }
+                    .avata {
+                        margin-right : 0.6rem;
+                        width :2rem;
+                        height : 2rem;
+                    }
+                    .user_id{
+                        margin-right : 0.8rem;
+                        @include Ellipsis1;
+                    }
+                    .reg_date {
+                        margin-right:2rem;
+                        flex:none;
+                    }
+                }
+                & > .right {
+                    display: flex;
+                    align-items: center;
+                    flex:none;
+                    .label{
+                        margin-left: 1.2rem;
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        &::before{
+                            content:'';
+                            display:inline-block;
+                            margin-right : .4rem;
+                            width : 1.6rem;
+                            height : 1.6rem;
+                        }
+                    }
+                }
+                .label{
+                    &.cnt_views{
+                        &::before{
+                            background-image: url("../img/icons_16_ic_view_grey_04.svg");
+                        }
+                    }
+                    &.cnt_cmmt{
+                        &::before{
+                            background-image: url("../img/icons_16_ic_comment_grey_04.svg");
+                        }
+                    }
+                    &.cnt_like{
+                        &::before{
+                            background-image: url("../img/icons_16_ic_like_grey_04.svg");
+                        }
+                    }
+                }
+            }
+            .feed_btn {
+                padding:1.6rem 2rem;
+                border-top:1px solid #f2f3f5;
+                display: flex;
+                & > .right {
+                    display: flex;
+                    align-items: center;
+                    margin-left:auto;
+                }
+            }
         }
     }
-    // 편집하기
-    .avata_edit {
-        position: relative;
-        margin:auto;
-        width:8rem;
-        height:8rem;
-        .ico.edit {
-            position: absolute;
-            right:0;
-            bottom:0;
-            width: 2.4rem;
-            height:2.4rem;
-            background-image: url('../img/icons_24_ic_addphoto_grey_05.svg');
-        }
-    }
-    
 }

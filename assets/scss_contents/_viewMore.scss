@@ -107,11 +107,61 @@
                     height: 1.6rem;
                     margin-right : .4rem;
                 }
+                &.cnt_views{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_view_grey_04.svg");
+                    }
+                }
+                &.cnt_cmmt{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_comment_grey_04.svg");
+                    }
+                }
+                &.cnt_like{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_like_grey_04.svg");
+                    }
+                }
             }
         }
     }
 }
 // e: Board Notice
+
+// s: Board Detail
+.more_container{
+    .board_dt_wrap{
+        padding : 2rem 0 4rem;
+    }
+    .board_comments_wrap{
+        background-color: #f8f8fa;
+    }
+}
+// e: Board Detail
+
+// s: board Notice Detail
+.notice_page {
+    .board_dt_wrap .board_dt_title {
+        .board_dt_info {
+            span::before{
+                display: none;
+            }
+            .reg_date {
+                margin-right : .8rem;
+            }
+            .label {
+                &.cnt_views{
+                    background-image : url("../img/icons_16_ic_view_grey_04.svg");
+                }
+                &.cnt_cmmt{
+                    padding-left : 2.8rem;
+                    background: url("../img/icons_16_ic_comment_grey_04.svg") no-repeat 0.8rem 50%;
+                }
+            }
+        }
+    }
+}
+// e: board Notice Detail
 
 // s: board top search area
 .board_search_area {
