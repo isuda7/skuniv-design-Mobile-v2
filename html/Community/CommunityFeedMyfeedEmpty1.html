@@ -12,26 +12,10 @@
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
-	<script>
-		$(function(){
-			$(window).scroll(function(){
-				var $appbar = $('.header');
-				var appbarShow = 284;
-				var scrollTop = $(window).scrollTop();
-
-				// Appbar 보여줄 시점에 Active
-				if (scrollTop > appbarShow) {
-					$appbar.removeClass('theme_secondary');
-				} else {
-					$appbar.addClass('theme_secondary');
-				}
-			})
-		})
-	</script>
 </head>
 
-<body class="is_scroll_first is_scroll_last">
-	<div class="sub_wrapper has_sticky">
+<body>
+	<div class="sub_wrapper has_floating">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
