@@ -19,6 +19,7 @@
 
 // Input Group
 .input_group {
+    display:block;
     flex:1 1 auto;
     position:relative;
     input {
@@ -61,7 +62,7 @@
         input {
             padding-left:$FormBasicHeight;
         }
-        .btn.srch {
+        .ico.srch {
             position:absolute;
             top:0;
             left:0;

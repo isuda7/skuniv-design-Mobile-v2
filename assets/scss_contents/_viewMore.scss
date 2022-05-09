@@ -230,6 +230,12 @@
             @include FontBody14;
         }
     }
+    .input_group.srch {
+        input.basic {
+            background-color: #f8f8fa;
+            border: .1rem solid #f2f3f5;
+        }
+    }
 }
 // e: board top search area
 
@@ -347,14 +353,14 @@
                 @include FontBody13;
             }
         }
-        
+
     }
     .answer_feedback_area{
         margin-top : 2.4rem;
         display: flex;
         .answer_feedback{
             flex : 1 0 auto;
-            padding: 2rem;  
+            padding: 2rem;
             width : 100%;
             display: flex;
             align-items: center;
@@ -479,7 +485,7 @@
             margin-left : .8rem;
         }
     }
-} 
+}
 .acc_faq_list{
     margin-left: -$GapSideBase;
     margin-right: -$GapSideBase;
