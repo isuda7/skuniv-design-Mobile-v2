@@ -57,7 +57,7 @@
         .btn.remove::before {
             width:1rem;
             height:1rem;
-            background-color: #000;
+            background-image: url('../img/icons_12_ic_delete_black.svg');
         }
     }
 }
@@ -68,5 +68,13 @@
             background-color: #44464A;
             color:#fff;
         }
+    }
+}
+
+// Chip Group
+.chip_input_group {
+    margin:-0.5rem -0.4rem;
+    .chip.input {
+        margin:0.5rem 0.4rem;
     }
 }
