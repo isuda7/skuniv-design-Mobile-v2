@@ -32,8 +32,12 @@
 					}
 				}
 			}
-			var swiperHour = new Swiper(".swiper_hour .swiper-container", swierPicker);
-			var swiperMinute = new Swiper(".swiper_minute .swiper-container", swierPicker);
+			var swiperHourParam = {loop:true}
+			var swiperMinuteParam = {loop:true}
+			$.extend(swiperHourParam, swierPicker);
+			$.extend(swiperMinuteParam, swierPicker);
+			var swiperHour = new Swiper(".swiper_hour .swiper-container", swiperHourParam);
+			var swiperMinute = new Swiper(".swiper_minute .swiper-container", swiperMinuteParam);
 		})
 	</script>
 </head>

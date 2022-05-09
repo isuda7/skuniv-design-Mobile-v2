@@ -32,9 +32,13 @@
 					}
 				}
 			}
+			var swiperHourParam = {loop:true}
+			var swiperMinuteParam = {loop:true}
+			$.extend(swiperHourParam, swierPicker);
+			$.extend(swiperMinuteParam, swierPicker);
 			var swiperHalf = new Swiper(".swiper_half .swiper-container", swierPicker);
-			var swiperHour = new Swiper(".swiper_hour .swiper-container", swierPicker);
-			var swiperMinute = new Swiper(".swiper_minute .swiper-container", swierPicker);
+			var swiperHour = new Swiper(".swiper_hour .swiper-container", swiperHourParam);
+			var swiperMinute = new Swiper(".swiper_minute .swiper-container", swiperMinuteParam);
 		})
 	</script>
 </head>
@@ -90,18 +94,6 @@
 									<div class="swiper-slide">09시</div>
 									<div class="swiper-slide">10시</div>
 									<div class="swiper-slide">11시</div>
-									<div class="swiper-slide">12시</div>
-									<div class="swiper-slide">13시</div>
-									<div class="swiper-slide">14시</div>
-									<div class="swiper-slide">15시</div>
-									<div class="swiper-slide">16시</div>
-									<div class="swiper-slide">17시</div>
-									<div class="swiper-slide">18시</div>
-									<div class="swiper-slide">19시</div>
-									<div class="swiper-slide">20시</div>
-									<div class="swiper-slide">21시</div>
-									<div class="swiper-slide">22시</div>
-									<div class="swiper-slide">23시</div>
 								</dis>
 							</div>
 							<!-- // Swiper Component -->
@@ -114,6 +106,7 @@
 							<!-- Swiper Component -->
 							<div class="swiper swiper-container">
 								<dis class="swiper-wrapper">
+									<div class="swiper-slide">00분</div>
 									<div class="swiper-slide">01분</div>
 									<div class="swiper-slide">02분</div>
 									<div class="swiper-slide">03분</div>

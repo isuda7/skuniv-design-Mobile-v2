@@ -32,9 +32,13 @@
 					}
 				}
 			}
+			var swiperMonthParam = {loop:true}
+			var swiperDayParam = {loop:true}
+			$.extend(swiperMonthParam, swierPicker);
+			$.extend(swiperDayParam, swierPicker);
 			var swiperYear = new Swiper(".swiper_year .swiper-container", swierPicker);
-			var swiperMonth = new Swiper(".swiper_month .swiper-container", swierPicker);
-			var swiperDay = new Swiper(".swiper_day .swiper-container", swierPicker);
+			var swiperMonth = new Swiper(".swiper_month .swiper-container", swiperMonthParam);
+			var swiperDay = new Swiper(".swiper_day .swiper-container", swiperDayParam);
 		})
 	</script>
 </head>
