@@ -16,6 +16,11 @@
     <!-- Guide IA -->
     <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
+    <style>
+        .divider {
+            display:none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,32 +31,6 @@
         <div class="g_cont">
 
         <section class="g_sec">
-            <!-- Form Layout -->
-            <h2 class="g_h2">Feildset</h2>
-            <div class="g_preview">
-                <form class="form">
-                    <div class="form_body">
-                        <div class="form_row">
-                            <label htmlFor="formName">First Name</label>
-                            <input id="formName" placeholder="First Name" class="basic" />
-                        </div>
-                        <div class="form_row">
-                            <label htmlFor="formName2">Last Name</label>
-                            <input id="formName2" placeholder="Last Name" class="basic" />
-                        </div>
-                        <div class="form_row">
-                            <div class="checkbox basic">
-                                <input type="checkbox" name="checkbox0" id="checkbox01" tabindex="0" class="hidden" />
-                                <label for="checkbox01"><span>Make my profile visible</span></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form_foot">
-                        <button type="submit" class="btn primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-
             <!-- Input -->
             <h2 class="g_h2">Input</h2>
             <h3 class="g_h3">Basic</h3>
@@ -79,23 +58,26 @@
             <h3 class="g_h3">Search</h3>
             <div class="g_preview">
                 <span class="input_group clear srch">
-                    <button type="button" class="btn ico srch"><span class="blind">검색</span></button>
-                    <input type="search" placeholder="placeholder" value="" />
+                    <i class="ico srch"><span class="blind">검색</span></i>
+                    <input type="text" placeholder="placeholder" value="" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
                 </span>
                 <hr class="divider" />
                 <span class="input_group clear srch is_valued">
-                    <button type="button" class="btn ico srch"><span class="blind">검색</span></button>
-                    <input type="search" placeholder="placeholder" value="입력된 상태" />
+                    <i class="ico srch"><span class="blind">검색</span></i>
+                    <input type="search" placeholder="placeholder" value="입력된 상태" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
                 </span>
                 <hr class="divider" />
-                <div class="board_search_area">
-                    <div class="search_input ico">
-                        <input type="search" placeholder="검색어를 입력하세요" class="input"/>
+                <div class="out_sec">
+                    <div class="board_search_area">
+                        <span class="input_group clear srch">
+                            <i class="ico srch"><span class="blind">검색</span></i>
+                            <input type="search" placeholder="placeholder" value="" class="basic" />
+                            <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
+                        </span>
                     </div>
                 </div>
-
             </div>
             <h3 class="g_h3">Picker</h3>
             <h4 class="g_h4">Date</h4>
