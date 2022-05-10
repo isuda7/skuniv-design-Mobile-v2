@@ -664,6 +664,9 @@
                 input{
                     box-sizing: border-box;
                 }
+                &.file{
+                    margin-top:0;
+                }
             }
         }
     }
@@ -740,7 +743,10 @@
                 }
             }
         }
-        .btn.ico.plus{
+        .ico.plus{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             margin-right: 1rem;
             width: 10rem;
             height: 10rem;
@@ -748,9 +754,11 @@
             border: .1rem solid #f2f3f5;
             border-radius: $FormBasicRadius;
             &::before{
+                content: '';
+                display: block;
                 width: 2.4rem;
                 height: 2.4rem;
-                background-image: url('../img/icons_24_ic_add_grey_04.svg');
+                background: url('../img/icons_24_ic_add_grey_04.svg') no-repeat center/100% auto;
             }
         }   
 
