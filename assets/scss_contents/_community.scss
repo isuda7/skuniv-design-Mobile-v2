@@ -4,6 +4,13 @@
 
 // community common
 .community_container {
+    .split {
+        display: block;
+        width: 1px;
+        height: 1rem;
+        margin: 0 1.2rem;
+        background-color: #e3e4e5;
+    }
     .count.primary {
         color:#FF664D;
     }
@@ -108,109 +115,118 @@
         }    
     }
 }
-.community_page {
-    .feed_list_wrap {
-        .feed_list {
-            .desc {
-                & > .cate {
-                    @include FontBody13;
-                    margin:2.4rem 0 0.8rem;
-                    .split {
-                        position: relative;
-                        display:inline-block;
-                        top:0.2rem;
-                        width:1px;
-                        height:1.3rem;
-                        margin:0 0.4rem;
-                        background-color: #000;
-                    }
-                }
-                & > .txt {
-                    margin-top:1.6rem;
-                }
-                & > .add_img {
-                    margin-top:1.6rem;
+// 피드
+.feed_list_wrap {
+    .feed_list {
+        .desc {
+            & > .cate {
+                @include FontBody13;
+                margin:2.4rem 0 0.8rem;
+                .split {
+                    position: relative;
+                    display:inline-block;
+                    top:0.2rem;
+                    width:1px;
+                    height:1.3rem;
+                    margin:0 0.4rem;
+                    background-color: #000;
                 }
             }
-            .feed_info {
+            & > .txt {
+                margin-top:1.6rem;
+            }
+            & > .add_img {
+                margin-top:1.6rem;
+            }
+        }
+        .feed_info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100%;
+            @include FontBody14;
+            color :#75777b;
+            margin:1.6rem 0;
+            & > .left{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                width:100%;
-                @include FontBody14;
-                color :#75777b;
-                margin:1.6rem 0;
-                & > .left{
-                    display: flex;
-                    align-items: center;
-                    flex:0 1 auto;
-                    overflow: hidden;
-                    span{
-                        display: inline-block;
-                    }
-                    .avata {
-                        margin-right : 0.6rem;
-                        width :2rem;
-                        height : 2rem;
-                    }
-                    .user_id{
-                        margin-right : 0.8rem;
-                        @include Ellipsis1;
-                    }
-                    .reg_date {
-                        margin-right:2rem;
-                        flex:none;
-                    }
+                flex:0 1 auto;
+                overflow: hidden;
+                span{
+                    display: inline-block;
                 }
-                & > .right {
-                    display: flex;
-                    align-items: center;
+                .avata {
+                    margin-right : 0.6rem;
+                    width :2rem;
+                    height : 2rem;
+                }
+                .user_id{
+                    margin-right : 0.8rem;
+                    @include Ellipsis1;
+                }
+                .reg_date {
+                    margin-right:2rem;
                     flex:none;
-                    .label{
-                        margin-left: 1.2rem;
-                        &:first-child{
-                            margin-left: 0;
-                        }
-                        &::before{
-                            content:'';
-                            display:inline-block;
-                            margin-right : .4rem;
-                            width : 1.6rem;
-                            height : 1.6rem;
-                        }
-                    }
                 }
+            }
+            & > .right {
+                display: flex;
+                align-items: center;
+                flex:none;
                 .label{
-                    &.cnt_views{
-                        &::before{
-                            background-image: url("../img/icons_16_ic_view_grey_04.svg");
-                        }
+                    margin-left: 1.2rem;
+                    &:first-child{
+                        margin-left: 0;
                     }
-                    &.cnt_cmmt{
-                        &::before{
-                            background-image: url("../img/icons_16_ic_comment_grey_04.svg");
-                        }
-                    }
-                    &.cnt_like{
-                        &::before{
-                            background-image: url("../img/icons_16_ic_like_grey_04.svg");
-                        }
+                    &::before{
+                        content:'';
+                        display:inline-block;
+                        margin-right : .4rem;
+                        width : 1.6rem;
+                        height : 1.6rem;
                     }
                 }
             }
-            .feed_btn {
-                padding:1rem 2rem;
-                border-top:1px solid #f2f3f5;
-                display: flex;
-                & > .right {
-                    display: flex;
-                    align-items: center;
-                    margin-left:auto;
+            .label{
+                &.cnt_views{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_view_grey_04.svg");
+                    }
                 }
+                &.cnt_cmmt{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_comment_grey_04.svg");
+                    }
+                }
+                &.cnt_like{
+                    &::before{
+                        background-image: url("../img/icons_16_ic_like_grey_04.svg");
+                    }
+                }
+            }
+        }
+        .feed_btn {
+            padding:1rem 2rem;
+            border-top:1px solid #f2f3f5;
+            display: flex;
+            & > .right {
+                display: flex;
+                align-items: center;
+                margin-left:auto;
             }
         }
     }
 }
+// 커뮤니티 목록
+.community_list_wrap {
+    .head {
+        width:100%;
+        .right {
+            justify-content: flex-end;
+        }
+    }
+}
+// 팔로워
 .followlist_page {
     .followlist_wrap {
         margin-top:1.4rem;

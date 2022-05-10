@@ -176,3 +176,56 @@
         }
     }
 }
+
+//style icon 
+.info.ico{
+    &::before{
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url('../img/icons_24_ic_information_grey_05.svg');
+    }
+}
+//style bubble tooltip_body 
+.tooltip.bubble {
+    .tooltip_body{
+        padding: $FormBasicPadding;
+        border-radius: $FormBasicRadius;
+        background-color: #fff;
+        width: 50vw;
+        @include FontBody12;
+        &.theme_dark{
+            background-color: #44464a;
+            color: #fff;
+        }
+        &::before{
+            content : '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-bottom: 1.4rem solid #44464a;
+            border-left: .7rem solid transparent;
+            border-right: .7rem solid transparent;
+            position: absolute;
+            top: -.8rem;
+            left: .1rem;
+            border-radius: .1rem;
+        }
+        li{
+            position: relative;
+            padding-left: 1rem;
+            word-break: keep-all;
+            word-wrap: break-word;
+            &::before{
+                content :'';
+                display: inline-block;
+                width: .3rem;
+                height: .3rem;
+                background-color: #cbcdcf;
+                border-radius: 50%;
+                position: absolute;
+                top: .8rem;
+                left: 0;
+            }
+        }
+    }
+}
