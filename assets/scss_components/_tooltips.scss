@@ -193,16 +193,20 @@
         background-color: #fff;
         width: 50vw;
         @include FontBody12;
+        @include Shadow2;
         &.theme_dark{
             background-color: #44464a;
             color: #fff;
+            &::before{
+                border-bottom-color: #44464a;
+            }
         }
         &::before{
             content : '';
             display: block;
             width: 0;
             height: 0;
-            border-bottom: 1.4rem solid #44464a;
+            border-bottom: 1.4rem solid #fff;
             border-left: .7rem solid transparent;
             border-right: .7rem solid transparent;
             position: absolute;
@@ -225,6 +229,9 @@
                 position: absolute;
                 top: .8rem;
                 left: 0;
+            }
+            &+li{
+                margin-top: .6rem;
             }
         }
     }

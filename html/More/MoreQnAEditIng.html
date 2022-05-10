@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+                <div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>문의글 작성</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container more_container">
+			<div class="content_body qna_page">
+                <!-- form -->
+                <div class="qna_form_sec">
+                    <div class="form_wrap">
+                        <form class="qna_edit">
+                            <div class="field">
+                                <div class="field_body">
+                                    <h4 class="info_head impt"><span>문의유형</span></h4>
+                                    <div class="info_body">
+                                        <button type="button" class="btn select is_valued">이용 오류</button>
+                                        <button type="button" class="btn select is_valued">사이트이용 오류</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field_body">
+                                    <h4 class="info_head impt"><span>제목</span></h4>
+                                    <div class="info_body">
+                                        <div class="input_group clear count">
+                                            <input type="text" placeholder="제목을 입력해주세요" value="재수강 학습시간 반영 건" class="basic" />
+                                            <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
+                                            <div class="cnt">
+                                                <span>13</span><span>/100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field_body">
+                                    <h4 class="info_head impt"><span>내용</span></h4>
+                                    <div class="info_body">
+                                        <div class="input_group count">
+                                            <textarea id="qna_dt" cols="10" rows="5" class="basic" placeholder="내용을 입력해주세요" >안녕하세요 작년에 수강한 과정중 "컨설턴트의 일하는 스킬익히기 1부" 재수강 중인데 올해 학습시간에 반영이 않되는 건가요? 수강 과정중 이해도가 낮아 반복 수강이 필요하거나 시간이 지나 재 수강으로 이</textarea>
+                                            <div class="cnt">
+                                                <span>112</span><span>/1,000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field_body">
+                                    <h4 class="info_head"><span>파일첨부</span></h4>
+                                    <div class="info_body">
+                                        <div class="attch_area">
+                                            <span class="input_group file">
+                                                <input id="file_image" type="file" class="input_file" hidden/>
+                                                <label for="file_image" class="ico plus"><span class="blind">파일첨부</span></label>
+                                            </span>
+                                            <div class="attch_thumbnail">
+                                                <span class="image_wrap">
+                                                    <img src="../../assets/img/demo/thumb-01.png" alt="temp img"/>
+                                                    <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
+                                                </span>
+                                                <span class="image_wrap">
+                                                    <img src="../../assets/img/demo/thumb-02.png" alt="temp img"/>
+                                                    <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- // form -->
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic primary">작성완료</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
