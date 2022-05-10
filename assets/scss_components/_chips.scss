@@ -72,6 +72,12 @@
 }
 
 // Chip Group
+.chip_action_group {
+    margin:-0.5rem -0.4rem;
+    .chip.action {
+        margin:0.5rem 0.4rem;
+    }
+}
 .chip_input_group {
     margin:-0.5rem -0.4rem;
     .chip.input {

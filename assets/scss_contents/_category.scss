@@ -1,0 +1,53 @@
+
+// s: 카테고리 탭영역
+.category_tab_sec {
+    padding:0.8rem 0;
+}
+// e: 카테고리 탭영역
+
+// s: 관심채널
+.category_channel_sec {
+    padding-bottom:2.8rem;
+    .sec_head {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:2.4rem;
+        margin-top:2rem;
+        .btn.text {
+            padding:0;
+        }
+        .count {
+            color:$ColorPrimary;
+        }
+    }
+}
+// e: 관심채널
+
+// s: 전체 카테고리
+.category_list_sec {
+    padding-top:2rem;
+    .heading2 + .category_list {
+        margin-top:1.2rem;
+    }
+}
+.category_list {
+    .category_link {
+        display:flex;
+        min-height:5.5rem;
+        padding:1.4rem 0;
+        align-items: center;
+        border-bottom:1px solid #eeeeee;
+        @include FontTitle16;
+        &::before {
+            content:'';
+            display:block;
+            width:2.8rem;
+            height:2.8rem;
+            margin-right:1.2rem;
+            border-radius: 0.4rem;
+            background-color: #eee;
+        }
+    }
+}
+// e: 전체 카테고리
