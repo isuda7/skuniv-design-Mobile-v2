@@ -16,6 +16,11 @@
         border:1px solid #E3E4E5;
         background-color: #fff;
         color: #000000;
+        .ico.more {
+            width:2rem;
+            height:2rem;
+            background-image: url('../img/icons_20_ic_more_black.svg');
+        }
     }
     &.filter {
         label {
@@ -73,12 +78,16 @@
 
 // Chip Group
 .chip_action_group {
+    display:flex;
+    flex-wrap: wrap;
     margin:-0.5rem -0.4rem;
     .chip.action {
         margin:0.5rem 0.4rem;
     }
 }
 .chip_input_group {
+    display:flex;
+    flex-wrap: wrap;
     margin:-0.5rem -0.4rem;
     .chip.input {
         margin:0.5rem 0.4rem;

@@ -8,7 +8,7 @@
 // s: 관심채널
 .category_channel_sec {
     padding-bottom:2.8rem;
-    .sec_head {
+    .title_area {
         display:flex;
         justify-content: space-between;
         align-items: center;
@@ -20,6 +20,11 @@
         .count {
             color:$ColorPrimary;
         }
+    }
+}
+.category_channel {
+    .chip_action_group {
+        position: relative;
     }
 }
 // e: 관심채널
@@ -47,6 +52,70 @@
             margin-right:1.2rem;
             border-radius: 0.4rem;
             background-color: #eee;
+        }
+        &.ai::before {
+            background:url('../img/icons_16_ic_ai_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateAi;
+        }
+        &.dt::before {
+            background:url('../img/icons_16_ic_dt_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateDt;
+        }
+        &.happinesst::before {
+            background:url('../img/icons_16_ic_happy_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateHappinesst;
+        }
+        &.sv::before {
+            background:url('../img/icons_16_ic_svesg_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateSV;
+        }
+        &.design::before {
+            background:url('../img/icons_16_ic_design_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateDesign;
+        }
+        &.global::before {
+            background:url('../img/icons_16_ic_global_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateGlobal;
+        }
+        &.leadership::before {
+            background:url('../img/icons_16_ic_leadership_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateLeadership;
+        }
+        &.management::before {
+            background:url('../img/icons_16_ic_management_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateManagement;
+        }
+        &.semicond::before {
+            background:url('../img/icons_16_ic_future_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateSemicond;
+        }
+        &.green::before {
+            background:url('../img/icons_16_ic_green_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateGreen;
+        }
+        &.bm::before {
+            background:url('../img/icons_16_ic_bmdesign_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateBM;
+        }
+        &.skacademy::before {
+            background:url('../img/icons_16_ic_skacademy_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateSkacademy;
+        }
+        &.skoper::before {
+            background:url('../img/icons_16_ic_sk_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateSkoper;
+        }
+        &.life::before {
+            background:url('../img/icons_16_ic_lifestyle_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateLife;
+        }
+        &.inno::before {
+            background:url('../img/icons_16_ic_innovation_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateInno;
+        }
+        &.com::before {
+            background:url('../img/icons_16_ic_butterfly_white.svg') no-repeat center center / 1.6rem auto;
+            background-color:$ColorCateCom;
         }
     }
 }

@@ -139,6 +139,24 @@
             transform: translateY(0%);
         }
     }
+    &.modal_slide_new {
+        .modal_bottomsheet {
+            transform: translateX(110%);
+        }
+    }
+    &.modal_slide_old {
+        .modal_bottomsheet {
+            transform: translateX(-110%);
+        }
+    }
+    &.modal_slide_new,
+    &.modal_slide_old {
+        &.is_active {
+            .modal_bottomsheet {
+                transform: translateX(0%);
+            }
+        }
+    }
 }
 @media all and (orientation: landscape) {
     .modal_wrap {
