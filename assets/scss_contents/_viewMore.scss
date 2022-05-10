@@ -204,32 +204,6 @@
 // s: board top search area
 .board_search_area {
     padding: .8rem 2rem;
-    .search_input {
-        padding: .9rem .9rem 0.9rem 1.2rem;
-        background-color: #f8f8fa;
-        border: .1rem solid #f2f3f5;
-        border-radius: $FormBasicRadius;
-        &.ico{
-            position: relative;
-            display: flex;
-            align-items: center;
-            &::before{
-                content :'';
-                display: inline-block;
-                margin-right: .8rem;
-                width: 2rem;
-                height: 2rem;
-                background:url('../img/icons_20_ic_search_black.svg') no-repeat;
-            }
-        }
-        .input {
-            display: inline-block;
-            width : 100%;
-            height: 100%;
-            background-color: transparent;
-            @include FontBody14;
-        }
-    }
     .input_group.srch {
         input.basic {
             background-color: #f8f8fa;
@@ -596,13 +570,57 @@
             @include FontBody13;
         }
     }
-    .appd_info{
-        .field{
-            margin-top: 4rem;
-            .field_tit{
-                padding-bottom: 1.2rem;
-                border-bottom: .1rem solid #a4a6aa;
-                @include FontTitle16;
+}
+.appd_info{
+    .field{
+        margin-top: 4rem;
+        .field_tit{
+            padding-bottom: 1.2rem;
+            border-bottom: .1rem solid #a4a6aa;
+            @include FontTitle16;
+        }
+        .field_sub{
+            padding: $FormBasicPadding 0;
+            border-bottom : .1rem solid #f2f3f5;
+            .info_heading{
+                color: #75777b;
+                @include FontBody13;
+            }
+            .info_dt{
+                @include FontBody16;
+                display: flex;
+                align-items: center;
+                .stat{
+                    &.negative{
+                        color: $ColorNegative;
+                    }
+                    &.positive{
+                        color: $ColorPositive;
+                    }
+                }
+                strong{
+                    display: block;
+                    position: relative;
+                    & + strong{
+                        margin-left: 1.3rem;
+                        &::before{
+                            content:'';
+                            display: block;
+                            width: .1rem;
+                            height: 1.2rem;
+                            background-color: #cbcdcf;
+                            position: absolute;
+                            top: calc(50% - .5rem);
+                            left: -.6rem;
+                        }
+                    }
+                }
+                textarea{
+                    margin-top: .8rem;
+                }
+            }
+            &.edit{
+                border-bottom:0;
             }
         }
     }

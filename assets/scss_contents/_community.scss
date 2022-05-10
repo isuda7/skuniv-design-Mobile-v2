@@ -4,6 +4,9 @@
 
 // community common
 .community_container {
+    .count.primary {
+        color:#FF664D;
+    }
     .toast {
         margin-bottom:7.4rem;
     }
@@ -39,9 +42,12 @@
         &.bookmark::before {
             background-image:url('../img/icons_24_ic_bookmark_off_on_2.svg');
         }
+        &.bookmark.is_active::before {
+            background-position-y: bottom;
+        }
     }
 }
-// Profile Headr
+// Profile Header
 .community_head {
     width:100%;
     padding:2rem;
@@ -54,6 +60,7 @@
             .avata {
                 width:5.2rem;
                 height:5.2rem;
+                border-radius: 50%;
             }
         }
         .title_area {
@@ -199,6 +206,44 @@
                     display: flex;
                     align-items: center;
                     margin-left:auto;
+                }
+            }
+        }
+    }
+}
+.followlist_page {
+    .followlist_wrap {
+        margin-top:1.4rem;
+        .followlist{
+            padding:1rem 0;
+            display: flex;
+            align-items: center;
+            & > .left {
+                overflow: hidden;
+                .profile_link {
+                    display: flex;
+                    align-items: center;
+                    .avata {
+                        width:5.2rem;
+                        height:5.2rem;
+                        border-radius: 50%;
+                    }
+                    .name {
+                        @include FontTitle16;
+                        @include Ellipsis1;
+                        padding:0 1.2rem;
+                    }
+                }
+            }
+            & > .right {
+                margin-left:auto;
+                flex: none;
+                & > button {
+                    padding:0.5rem 2rem;
+                }
+                & > button.primary {
+                    background-color: inherit;
+                    color:#FF664D;
                 }
             }
         }
