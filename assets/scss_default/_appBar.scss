@@ -86,6 +86,9 @@
 			@include Ellipsis1;
 		}
 	}
+    .btn.text:not(.primary) {
+        color:#a4a6aa;
+    }
 
     // Cases
 	&.profile {

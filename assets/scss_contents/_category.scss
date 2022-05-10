@@ -6,14 +6,12 @@
 // e: 카테고리 탭영역
 
 // s: 관심채널
-.category_channel_sec {
-    padding-bottom:2.8rem;
+.favorit_channel_sec {
+    margin-top:2rem;
     .title_area {
         display:flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom:2.4rem;
-        margin-top:2rem;
         .btn.text {
             padding:0;
         }
@@ -22,10 +20,15 @@
         }
     }
 }
-.category_channel {
+.favorit_channel {
+    padding-top:2.4rem;
+    padding-bottom:2.8rem;
     .chip_action_group {
         position: relative;
     }
+}
+.favorit_channel_empty {
+    padding:4rem 2rem 5rem 2rem;
 }
 // e: 관심채널
 
@@ -120,3 +123,34 @@
     }
 }
 // e: 전체 카테고리
+
+// s: 관심채널 목록
+.channel_list_sec {
+    .heading2 {
+        margin-bottom:1.2rem;
+        .count {
+            color:$ColorPrimary;
+        }
+    }
+    .channel_item {
+        display: flex;
+        justify-content: space-between;
+        min-height:6rem;
+        padding:1.8rem 0;
+        border-bottom:1px solid #f2f3f5;
+        @include FontBody16;
+        .count {
+            color:#a4a6aa;
+        }
+    }
+    & + .channel_list_sec {
+        margin-top:4rem;
+    }
+}
+.category_container.channel_page {
+    .content_body {
+        padding-top:2rem;
+    }
+}
+
+// e: 관심채널

@@ -12,39 +12,6 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
-    <script>
-        function chipShowInit($chips){
-            var chipLast = 0;
-            var chipGapH = 10;
-            var chipSizeH = 32;
-            var chipBreakPos = (chipSizeH * 3) + (chipGapH * 2);
-            $chips.each(function(){
-                if (chipLast === 0){
-                    var eleBottom = $(this).position().top + chipSizeH;
-                    var eleRight = $(this).position().left + $(this).outerWidth();
-                    if (eleBottom > chipBreakPos) {
-                        chipLast = $(this).index();
-                        $chips.eq(chipLast-2).nextAll().hide();
-                        $chips.siblings('.more').show();
-                    }
-                    $chips.closest('.favorit_channel').removeAttr('style');
-                }
-            })
-        }
-        function chipShowReset($chips){
-            $chips.show().closest('.favorit_channel').css('opacity', 0);
-            chipLast = 0;
-            chipShowInit($chips);
-        }
-
-        $(function(){
-            var $chips = $('.favorit_channel .chip.action');
-            chipShowInit($chips);
-            $(window).on('resize', function(){
-                chipShowReset($chips);
-            });
-         });
-    </script>
 </head>
 
 <body>
@@ -80,32 +47,15 @@
                 <!-- 관심채널 -->
                 <div class="favorit_channel_sec">
                     <div class="title_area">
-                        <h2 class="heading2">관심채널 <span class="count">15</span></h2>
-                        <button type="button" class="btn text arw_link">전체보기</button>
+                        <h2 class="heading2">관심채널 <span class="count">0</span></h2>
+                        <!-- <button type="button" class="btn text arw_link">전체보기</button> -->
                     </div>
-                    <div class="favorit_channel" style="opacity: 0;">
-                        <div class="chip_action_group">
-                            <button type="button" class="chip action light">AI Biz. Implementation</button>
-                            <button type="button" class="chip action light">AI Trend Watch</button>
-                            <button type="button" class="chip action light">Ezecutive AI/DT</button>
-                            <button type="button" class="chip action light">함께하는 행복 실천</button>
-                            <button type="button" class="chip action light">혁신 트렌드와 인사이트</button>
-                            <button type="button" class="chip action light">AI Biz. Implementation</button>
-                            <button type="button" class="chip action light">AI Trend Watch</button>
-                            <button type="button" class="chip action light">Ezecutive AI/DT</button>
-                            <button type="button" class="chip action light">함께하는 행복 실천</button>
-                            <button type="button" class="chip action light">혁신 트렌드와 인사이트</button>
-                            <button type="button" class="chip action light">AI Biz. Implementation</button>
-                            <button type="button" class="chip action light">AI Trend Watch</button>
-                            <button type="button" class="chip action light">Ezecutive AI/DT</button>
-                            <button type="button" class="chip action light">함께하는 행복 실천</button>
-                            <button type="button" class="chip action light">혁신 트렌드와 인사이트</button>
-                            <button type="button" class="chip action light">AI Biz. Implementation</button>
-                            <button type="button" class="chip action light">AI Trend Watch</button>
-                            <button type="button" class="chip action light">Ezecutive AI/DT</button>
-                            <button type="button" class="chip action light">함께하는 행복 실천</button>
-                            <button type="button" class="chip action light">혁신 트렌드와 인사이트</button>
-                            <button type="button" class="chip action light more"><i class="ico more"><span class="blind">더보기</span></i></button>
+                    <div class="favorit_channel_empty">
+                        <div class="no_data">
+                            <p class="sub_txt">
+                                등록된 관심채널이 없습니다. <br/>
+                                학습을 탐색하며 관심 있는 채널을 추가해보세요!
+                            </p>
                         </div>
                     </div>
                 </div>

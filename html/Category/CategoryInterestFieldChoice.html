@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+                var scrollTop = $(this).scrollTop();
+
+				if (scrollTop > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+
+                // Spyscroll 이벤트
+                $('.tab_item').each(function(){
+                    var $this = $(this);
+                    var $tabPanel = $('#' + $this.data('id'));
+                    var breakPoint = $tabPanel.offset().top - 100 - 50; //상단공간 100 + 정확한 지점까지 50픽셀 근접하면
+                    if (scrollTop > breakPoint) {
+                        $this.addClass('is_active').siblings().removeClass('is_active');
+                    }
+                })
+			})
+		})
+
+        function tabSpyScroll(obj){
+            $(obj).addClass('is_active').siblings().removeClass('is_active');
+
+            var id = '#'+$(obj).data('id');
+            var scrGap = 100;
+            var scrTop = $(id).offset().top - scrGap;
+            $('.modal_content').scrollTop(scrTop);
+        }
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible">
+        <!-- 관심채널 펼쳐짐 expanded_favorit 추가  -->
+        <div class="modal modal_fullpopup expanded_favorit">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">채널 편집</h3>
+            </div>
+            <!-- 관심채널 펼쳐짐 is_dimmed 추가  -->
+            <div class="modal_content is_dimmed">
+				<div class="sticky">
+					<div class="tab style2 has_scroll">
+						<div class="tab_list">
+							<div class="tab_inner">
+								<button type="button" class="tab_item is_active" data-id="tabPanel1" onclick="tabSpyScroll(this)">AI</button>
+								<button type="button" class="tab_item" data-id="tabPanel2" onclick="tabSpyScroll(this)">DT</button>
+								<button type="button" class="tab_item" data-id="tabPanel3" onclick="tabSpyScroll(this)">SV ESG</button>
+								<button type="button" class="tab_item" data-id="tabPanel4" onclick="tabSpyScroll(this)">Global</button>
+								<button type="button" class="tab_item" data-id="tabPanel5" onclick="tabSpyScroll(this)">Leadership</button>
+								<button type="button" class="tab_item" data-id="tabPanel6" onclick="tabSpyScroll(this)">Management</button>
+								<button type="button" class="tab_item" data-id="tabPanel7" onclick="tabSpyScroll(this)">미래반도체</button>
+								<button type="button" class="tab_item" data-id="tabPanel8" onclick="tabSpyScroll(this)">Green</button>
+								<button type="button" class="tab_item" data-id="tabPanel9" onclick="tabSpyScroll(this)">BM Design &amp; Storytelling</button>
+								<button type="button" class="tab_item" data-id="tabPanel10" onclick="tabSpyScroll(this)">SK아카데미</button>
+								<button type="button" class="tab_item" data-id="tabPanel11" onclick="tabSpyScroll(this)">SK경영</button>
+							</div>
+						</div>
+						<div class="tab_next">
+							<button type="button" class="btn ico next"><span class="blind">다음</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- AI Tabpanel -->
+				<div class="tab_panel" id="tabPanel1">
+					<div class="favorit_sec">
+						<h2 class="heading2">AI <em class="count">3</em></h2>
+						<div class="checkbox_group">
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox1" id="checkbox1_1" tabindex="0" class="hidden" />
+								<label for="checkbox1_1"><span>AI/DT Literacy <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox1" id="checkbox1_2" tabindex="0" class="hidden" />
+								<label for="checkbox1_2"><span>AI Biz. Implementation <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox_group">
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox1_2" id="checkbox1_21" tabindex="0" class="hidden" />
+									<label for="checkbox1_21"><span>Executive AI/DT <em class="count">3</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox1_2" id="checkbox1_22" tabindex="0" class="hidden" />
+									<label for="checkbox1_22"><span>AI Biz Case <em class="count">15</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox1_2" id="checkbox1_23" tabindex="0" class="hidden" />
+									<label for="checkbox1_23"><span>SK AI Practice <em class="count">8</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox1_2" id="checkbox1_24" tabindex="0" class="hidden" />
+									<label for="checkbox1_24"><span>AI 적용 방법론 <em class="count">7</em></span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //AI Tabpanel -->
+				<!-- DT Tabpanel -->
+				<div class="tab_panel" id="tabPanel2">
+					<div class="favorit_sec">
+						<h2 class="heading2">DT <em class="count">4</em></h2>
+						<div class="checkbox_group">
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox2" id="checkbox2_1" tabindex="0" class="hidden" />
+								<label for="checkbox2_1"><span>AI/DT Literacy <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox2" id="checkbox2_2" tabindex="0" class="hidden" />
+								<label for="checkbox2_2"><span>AI Biz. Implementation <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox_group">
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox2_2" id="checkbox2_21" tabindex="0" class="hidden" />
+									<label for="checkbox2_21"><span>Executive AI/DT <em class="count">3</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox2_2" id="checkbox2_22" tabindex="0" class="hidden" />
+									<label for="checkbox2_22"><span>AI Biz Case <em class="count">15</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox2_2" id="checkbox2_23" tabindex="0" class="hidden" />
+									<label for="checkbox2_23"><span>SK AI Practice <em class="count">8</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox2_2" id="checkbox2_24" tabindex="0" class="hidden" />
+									<label for="checkbox2_24"><span>AI 적용 방법론 <em class="count">7</em></span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //DT Tabpanel -->
+				<!-- SV Tabpanel -->
+				<div class="tab_panel" id="tabPanel3">
+					<div class="favorit_sec">
+						<h2 class="heading2">SV ESG <em class="count">4</em></h2>
+						<div class="checkbox_group">
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox3" id="checkbox3_1" tabindex="0" class="hidden" />
+								<label for="checkbox3_1"><span>AI/DT Literacy <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox3" id="checkbox3_2" tabindex="0" class="hidden" />
+								<label for="checkbox3_2"><span>AI Biz. Implementation <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox_group">
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox3_2" id="checkbox3_21" tabindex="0" class="hidden" />
+									<label for="checkbox3_21"><span>Executive AI/DT <em class="count">3</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox3_2" id="checkbox3_22" tabindex="0" class="hidden" />
+									<label for="checkbox3_22"><span>AI Biz Case <em class="count">15</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox3_2" id="checkbox3_23" tabindex="0" class="hidden" />
+									<label for="checkbox3_23"><span>SK AI Practice <em class="count">8</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox3_2" id="checkbox3_24" tabindex="0" class="hidden" />
+									<label for="checkbox3_24"><span>AI 적용 방법론 <em class="count">7</em></span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //SV Tabpanel -->
+				<!-- Global Tabpanel -->
+				<div class="tab_panel" id="tabPanel4">
+					<div class="favorit_sec">
+						<h2 class="heading2">Global <em class="count">4</em></h2>
+						<div class="checkbox_group">
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox4" id="checkbox4_1" tabindex="0" class="hidden" />
+								<label for="checkbox4_1"><span>AI/DT Literacy <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox4" id="checkbox4_2" tabindex="0" class="hidden" />
+								<label for="checkbox4_2"><span>AI Biz. Implementation <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox_group">
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox4_2" id="checkbox4_21" tabindex="0" class="hidden" />
+									<label for="checkbox4_21"><span>Executive AI/DT <em class="count">3</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox4_2" id="checkbox4_22" tabindex="0" class="hidden" />
+									<label for="checkbox4_22"><span>AI Biz Case <em class="count">15</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox4_2" id="checkbox4_23" tabindex="0" class="hidden" />
+									<label for="checkbox4_23"><span>SK AI Practice <em class="count">8</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox4_2" id="checkbox4_24" tabindex="0" class="hidden" />
+									<label for="checkbox4_24"><span>AI 적용 방법론 <em class="count">7</em></span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Global Tabpanel -->
+				<!-- Leadership Tabpanel -->
+				<div class="tab_panel" id="tabPanel5">
+					<div class="favorit_sec">
+						<h2 class="heading2">Leadership <em class="count">4</em></h2>
+						<div class="checkbox_group">
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox5" id="checkbox5_1" tabindex="0" class="hidden" />
+								<label for="checkbox5_1"><span>AI/DT Literacy <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox basic">
+								<input type="checkbox" name="checkbox5" id="checkbox5_2" tabindex="0" class="hidden" />
+								<label for="checkbox5_2"><span>AI Biz. Implementation <em class="count">82</em></span></label>
+							</div>
+							<div class="checkbox_group">
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox5_2" id="checkbox5_21" tabindex="0" class="hidden" />
+									<label for="checkbox5_21"><span>Executive AI/DT <em class="count">3</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox5_2" id="checkbox5_22" tabindex="0" class="hidden" />
+									<label for="checkbox5_22"><span>AI Biz Case <em class="count">15</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox5_2" id="checkbox5_23" tabindex="0" class="hidden" />
+									<label for="checkbox5_23"><span>SK AI Practice <em class="count">8</em></span></label>
+								</div>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checkbox5_2" id="checkbox5_24" tabindex="0" class="hidden" />
+									<label for="checkbox5_24"><span>AI 적용 방법론 <em class="count">7</em></span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Leadership Tabpanel -->
+				<!-- tabPanel6 -->
+				<div class="tab_panel" id="tabPanel6">
+					<div class="favorit_sec">
+						<h2 class="heading2">Tabpanel6 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel6 -->
+				<!-- tabPanel7 -->
+				<div class="tab_panel" id="tabPanel7">
+					<div class="favorit_sec">
+						<h2 class="heading2">Tabpanel7 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel7 -->
+				<!-- tabPanel8 -->
+				<div class="tab_panel" id="tabPanel8">
+					<div class="favorit_sec">
+						<h2 class="heading2">Tabpanel8 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel8 -->
+				<!-- tabPanel9 -->
+				<div class="tab_panel" id="tabPanel9">
+					<div class="favorit_sec">
+						<h2 class="heading2">Tabpanel9 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel9 -->
+				<!-- tabPanel10 -->
+				<div class="tab_panel" id="tabPanel10">
+					<div class="favorit_sec">
+						<h2 class="heading2">tabPanel10 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel10 -->
+				<!-- tabPanel11 -->
+				<div class="tab_panel" id="tabPanel11">
+					<div class="favorit_sec">
+						<h2 class="heading2">tabPanel11 <em class="count">4</em></h2>
+					</div>
+				</div>
+				<!-- //tabPanel11 -->
+
+                <div class="dimmer_floating" aria-hidden="true"></div>
+            </div>
+            <div class="modal_footer">
+                <div class="favorit_floating">
+                    <div class="favorit_body">
+                        <div class="acco favorit_acco">
+                            <!-- 관심채널 펼쳐짐 is_active -->
+                            <div class="acco_title is_active">
+                                <em class="count">24</em>&nbsp;개 선택
+                                <button type="button" class="btn text primary">전체선택 해제</button>
+                            </div>
+                            <!-- 관심채널 펼쳐짐 is_active -->
+                            <div class="acco_content is_active">
+                                <div class="chip_input_group">
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Scenario Planning Advenced</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Biz. Implementation</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">혁신 트렌드와 인사이트</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Trend Watch</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">함께하는 행복 실천</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Scenario Planning Advenced</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Biz. Implementation</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">혁신 트렌드와 인사이트</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Trend Watch</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">함께하는 행복 실천</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Scenario Planning Advenced</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Biz. Implementation</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">혁신 트렌드와 인사이트</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">AI Trend Watch</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">함께하는 행복 실천</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                    <span class="chip input">
+                                        <button type="button" class="btn default">Financial Story</button>
+                                        <button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page_action">
+                            <button type="button" class="btn basic primary">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>

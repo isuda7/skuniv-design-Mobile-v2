@@ -52,7 +52,9 @@
 	</script>
 </head>
 
+<!-- 관심채널 펼쳐짐 is_dimmed 추가 -->
 <body class="is_dimmed">
+    <!-- 관심채널 펼쳐짐 expanded_favorit 추가 -->
 	<div class="sub_wrapper expanded_favorit">
 		<!-- Header -->
 		<header class="header">
@@ -90,7 +92,7 @@
                         <div class="tab style2 has_scroll">
                             <div class="tab_list">
                                 <div class="tab_inner">
-                                    <button type="button" class="tab_item" data-id="tabPanel1" onclick="tabSpyScroll(this)">AI</button>
+                                    <button type="button" class="tab_item is_active" data-id="tabPanel1" onclick="tabSpyScroll(this)">AI</button>
                                     <button type="button" class="tab_item" data-id="tabPanel2" onclick="tabSpyScroll(this)">DT</button>
                                     <button type="button" class="tab_item" data-id="tabPanel3" onclick="tabSpyScroll(this)">SV ESG</button>
                                     <button type="button" class="tab_item" data-id="tabPanel4" onclick="tabSpyScroll(this)">Global</button>
@@ -330,10 +332,12 @@
 				<div class="favorit_floating">
                     <div class="favorit_body">
                         <div class="acco favorit_acco">
+                            <!-- 관심채널 펼쳐짐 is_active 추가 -->
                             <div class="acco_title is_active">
                                 <em class="count">24</em>&nbsp;개 선택
                                 <button type="button" class="btn text primary">전체선택 해제</button>
                             </div>
+                            <!-- 관심채널 펼쳐짐 is_active 추가 -->
                             <div class="acco_content is_active">
                                 <div class="chip_input_group">
                                     <span class="chip input">
@@ -441,7 +445,7 @@
                         </div>
                     </div>
 				</div>
-                <div class="dimmer" aria-hidden="true"></div>
+                <div class="dimmer_floating" aria-hidden="true"></div>
 			</div>
 		</main>
 		<!-- // Container -->

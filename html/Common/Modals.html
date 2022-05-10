@@ -53,7 +53,7 @@
             $(newID).addClass("is_visible is_active");
         }
         function ModalBSSlideClose(newID, oldID){
-            $(oldID).addClass("is_active");
+            $(oldID).addClass("is_active").removeClass('modal_slide_old');
             $(newID).removeClass("is_active");
             $(newID).removeClass("is_active").on('transitionend', function(){
                 (!$(newID).hasClass('is_active')) && $(newID).removeClass("is_visible");

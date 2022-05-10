@@ -258,36 +258,34 @@
 	.onbard_favorit {
 		margin-top:3.2rem;
 	}
-	.favorit_sec {
-		padding-top:2.4rem;
-		padding-bottom:2rem;
-		border-top:1px solid #f2f3f5;
-		.heading2 {
-			margin-bottom:1.2rem;
-			.count {
-				color:$ColorPrimary;
-			}
+}
+.favorit_sec {
+	padding-top:2.4rem;
+	padding-bottom:2rem;
+	border-top:1px solid #f2f3f5;
+	.heading2 {
+		margin-bottom:1.2rem;
+		.count {
+			color:$ColorPrimary;
 		}
-		.checkbox.basic {
-			display: flex;
-			align-items: center;
-			height:4.8rem;
-			.count {
-				color:#a4a6aa;
-			}
+	}
+	.checkbox.basic {
+		display: flex;
+		align-items: center;
+		height:4.8rem;
+		.count {
+			color:#a4a6aa;
 		}
-		.checkbox_group > .checkbox_group {
-			padding-left:2.8rem;
-		}
+	}
+	.checkbox_group > .checkbox_group {
+		padding-left:2.8rem;
 	}
 }
 // e: 관심분야 페이지
 
 // s: 관심분야 플로팅
 .favorit_floating {
-	.dimmer {
-		display:none;
-	}
+	height:14.4rem;
 	.favorit_body {
 		display: flex;
 		flex-direction: column;
@@ -295,7 +293,6 @@
 		left:0;
 		bottom:0;
 		width:100%;
-		height:inherit;
 		max-height:calc(100% - 5.2rem - var(--safeTop));
 		background-color: #fff;
 		box-shadow:0px -0.4rem 0.5rem rgba(0, 0, 0, 0.02), 0 -0.1rem 1rem rgba(0, 0, 0, 0.04), 0 -0.2rem 0.4rem rgba(0, 0, 0, 0.06);
@@ -349,12 +346,17 @@
 	margin-bottom : -0.8rem;
 	padding-bottom : 0.8rem;
 }
+.dimmer_floating {
+	@include Dimmer;
+	display:none;
+}
 .expanded_favorit {
 	.favorit_body {
 		z-index: 1200;
 	}
-	.dimmer {
+	.dimmer_floating {
 		opacity: 1;
+		display:block;
 		visibility: visible;
 	}
 }
