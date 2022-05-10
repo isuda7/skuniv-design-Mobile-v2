@@ -67,6 +67,17 @@
 				height:100%;
 				background-color: rgba(0,0,0,0.5);
 			}
+			.cube_state {
+				position: absolute;
+				left:0.4rem;
+				bottom:0.4rem;
+				height:2.2rem;
+				padding:0 0.6rem 0.2rem;
+				border-radius: $RadiusSmall;
+				@include FontBody13;
+				color: #fff;
+				background-color: rgba(0,0,0,0.6);
+			}
 		}
 		.ribon {
 			position: absolute;

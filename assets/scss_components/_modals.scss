@@ -570,7 +570,8 @@
         }
         .rating {
             input + label::after {
-                background-image: url('../img/icons_24_ic_appbarstar_off_black.svg');
+                // background-image: url('../img/icons_24_ic_appbarstar_off_black.svg');
+                background-image: url('../img/icons_24_ic_star_off_grey_04.svg');
             }
             input:checked + label::after {
                 background-image: url('../img/icons_24_ic_star_on_primary.svg');
@@ -580,9 +581,9 @@
                     margin-right:0.5rem;
                     color:#A4A6AA;
                 }
-                input + label::after {
-                    background-image: url('../img/icons_24_ic_star_off_grey_04.svg');
-                }
+                // input + label::after {
+                //     background-image: url('../img/icons_24_ic_star_off_grey_04.svg');
+                // }
             }
         }
         .arw_link {

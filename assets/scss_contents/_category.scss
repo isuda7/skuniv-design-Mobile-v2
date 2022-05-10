@@ -1,4 +1,6 @@
-
+///////////////////////////////////////////////////
+// Category Components
+///////////////////////////////////////////////////
 // s: 카테고리 탭영역
 .category_tab_sec {
     padding:0.8rem 0;
@@ -6,40 +8,40 @@
 // e: 카테고리 탭영역
 
 // s: 관심채널
-.favorit_channel_sec {
-    margin-top:2rem;
-    .title_area {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        .btn.text {
-            padding:0;
-        }
-        .count {
-            color:$ColorPrimary;
+.favorit_channel {
+    &_sec {
+        margin-top:2rem;
+        .title_area {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn.text {
+                padding:0;
+            }
+            .count {
+                color:$ColorPrimary;
+            }
         }
     }
-}
-.favorit_channel {
+    &_empty {
+        padding:4rem 2rem 5rem 2rem;
+    }
     padding-top:2.4rem;
     padding-bottom:2.8rem;
     .chip_action_group {
         position: relative;
     }
 }
-.favorit_channel_empty {
-    padding:4rem 2rem 5rem 2rem;
-}
 // e: 관심채널
 
 // s: 전체 카테고리
-.category_list_sec {
-    padding-top:2rem;
-    .heading2 + .category_list {
-        margin-top:1.2rem;
-    }
-}
 .category_list {
+    &_list_sec {
+        padding-top:2rem;
+        .heading2 + .category_list {
+            margin-top:1.2rem;
+        }
+    }
     .category_link {
         display:flex;
         min-height:5.5rem;
@@ -125,11 +127,16 @@
 // e: 전체 카테고리
 
 // s: 관심채널 목록
-.channel_list_sec {
-    .heading2 {
-        margin-bottom:1.2rem;
-        .count {
-            color:$ColorPrimary;
+.channel_list {
+    &_sec {
+        .heading2 {
+            margin-bottom:1.2rem;
+            .count {
+                color:$ColorPrimary;
+            }
+        }
+        & + .channel_list_sec {
+            margin-top:4rem;
         }
     }
     .channel_item {
@@ -143,14 +150,56 @@
             color:#a4a6aa;
         }
     }
-    & + .channel_list_sec {
-        margin-top:4rem;
+}
+// e: 관심채널 목록
+
+// s: 관심채널 상세 셀렉트
+.category_select {
+    .btn {
+        display:flex;
+        width:100%;
+        height:6rem;
+        padding:0 $GapSideBase;
+        @include FontBody16;
+        border-bottom:1px solid #e3e4e5;
+        .option {
+            position: relative;
+            display:flex;
+            flex:1 1 auto;
+            align-items: center;
+            width:100%;
+            padding-right:2.4rem;
+            @include Ellipsis1;
+            color:#000000;
+            &::after {
+                content:'';
+                position: absolute;
+                right:0;
+                top:calc(50% - 0.8rem);
+                display:block;
+                width:1.6rem;
+                height:1.6rem;
+                background: url('../img/icons_16_ic_chervron_down_grey_05.svg') no-repeat center center / 100% auto;
+            }
+            &.selected::after {
+                background-image: url('../img/icons_16_ic_chervron_right_grey_04.svg');
+            }
+            & + .option {
+                margin-left:0.8rem;
+            }
+        }
     }
 }
-.category_container.channel_page {
-    .content_body {
-        padding-top:2rem;
+// e: 관심채널 상세 셀렉트
+///////////////////////////////////////////////////
+// Category Pages
+///////////////////////////////////////////////////
+// 관심채널 목록
+.category_container {
+    &.channel_page {
+        .content_body {
+            padding-top:2rem;
+        }
     }
 }
 
-// e: 관심채널
