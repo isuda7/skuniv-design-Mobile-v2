@@ -137,4 +137,15 @@
             }
         }
     }
+    &.count{
+        .btn.clear{
+            top: 2rem;
+        }
+        .cnt {
+            margin-top: .4rem;
+            text-align: right;
+            color: #a4a6aa;
+            @include FontBody12;
+        }
+    }
 }
