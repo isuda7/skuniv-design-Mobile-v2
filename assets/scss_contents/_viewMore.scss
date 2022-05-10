@@ -608,6 +608,7 @@
                     display: block;
                     position: relative;
                     word-break: break-all;
+                    word-wrap: break-word;
                     & + strong{
                         margin-left: 1.3rem;
                         &::before{
