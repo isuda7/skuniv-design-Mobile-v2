@@ -644,6 +644,9 @@
             textarea{
                 margin-top: .8rem;
                 box-sizing: border-box;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
             }
             .select{
                 margin-top: .8rem;
@@ -756,7 +759,6 @@
 
 //1:1
 .qna_form_sec{
-    padding-bottom: 3.9rem;
     .qna_edit {
         margin-top: .6rem;
         .field{
