@@ -453,6 +453,9 @@
     overflow-x: auto;
     display: flex;
     flex-wrap: nowrap;
+    &::-webkit-scrollbar {
+        display:none;
+    }
     .chip{
         flex: none;
         &+.chip{
@@ -557,7 +560,7 @@
 }
 // e: 승인관리 list
 
-// s: 승인관리 유료과정 form
+// s: 승인관리 form
 .appd_form{
     .form_head{
         padding: 1.2rem 0 .8rem;
@@ -566,8 +569,10 @@
         }
         .appd_desc{
             margin-top: .8rem;
-            color: #75777b;
+            color: $ColorSubTxt;
             @include FontBody13;
+            word-wrap: break-word;
+            word-break: keep-all;
         }
     }
 }
@@ -582,8 +587,9 @@
         .field_sub{
             padding: $FormBasicPadding 0;
             border-bottom : .1rem solid #f2f3f5;
+            position: relative;
             .info_heading{
-                color: #75777b;
+                color: $ColorSubTxt;
                 @include FontBody13;
             }
             .info_dt{
@@ -601,6 +607,7 @@
                 strong{
                     display: block;
                     position: relative;
+                    word-break: break-all;
                     & + strong{
                         margin-left: 1.3rem;
                         &::before{
@@ -615,14 +622,47 @@
                         }
                     }
                 }
+                > div{
+                    margin-top: .8rem;
+                }
                 textarea{
                     margin-top: .8rem;
                 }
-            }
-            &.edit{
-                border-bottom:0;
+                .cube_references{
+                    flex: 0 1 auto;
+                }
             }
         }
     }
 }
-// e: 승인관리 유료과정 form
+// e: 승인관리 form
+
+// s: 승인관리 - 개인학습
+.field_sub{
+    .tooltip{
+        display: inline-block;
+        .btn.info{
+            position: relative;
+            top : .3rem;
+        }
+        .tooltip_body{
+            margin-top : 1rem;
+            left: -.5rem;
+            &::before{
+                left: .6rem;
+            }
+        }
+    }
+    .btn.edu_time {
+        padding: .6rem 1.2rem;
+        color: $ColorSubTxt;
+        @include FontBody13;
+        border: .1rem solid $FormBasicBorder;
+        border-radius: $FormBasicRadius;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
+// e: 승인관리 - 개인학습
