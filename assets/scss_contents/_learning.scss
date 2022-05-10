@@ -2377,7 +2377,7 @@
                 color :#f2f3f5;
             }
         }
-        .file_down_area{ 
+        .file_down_area{
             .area_title{
                 color :#fff;
                 .label {
@@ -3379,12 +3379,16 @@
 
 // s: Document viewer
 .doc_viewer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: block;
+    // flex-wrap: wrap;
+    // flex-direction: column;
     background-color:#1c1d1f;
     .doc_area{
         position: relative;
+        height:100%;
+        .doc_wrap {
+            height:100%;
+        }
         .doc_pagination {
             position: absolute;
             bottom: .8rem;
@@ -3400,6 +3404,19 @@
                 color : #fff;
                 @include FontBody12;
             }
+        }
+        .react-pdf__Document {
+            height:100%;
+        }
+        .react-pdf__Page {
+            overflow: hidden;
+            width:100%;
+            height:100%;
+        }
+        .react-pdf__Page__textContent,
+        canvas {
+            width:100% !important;
+            height:auto !important;
         }
     }
     .doc_info_area{
@@ -3563,6 +3580,14 @@
             .cube_player,
             .appbar {
                 width: calc(100% - 30.6rem);
+            }
+        }
+        // Document Viewer
+        .doc_viewer {
+            .react-pdf__Page__textContent,
+            canvas {
+                width:100% !important;
+                height:auto !important;
             }
         }
     }
