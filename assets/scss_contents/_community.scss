@@ -4,6 +4,22 @@
 
 // community common
 .community_container {
+    .community_category_wrap{
+        padding : 0.8rem 0 2rem;
+        width : 100%;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        .chip{
+            flex: none;
+            &+.chip{
+                margin-left : 0.8rem;
+            }
+        }
+    }
     .split {
         display: block;
         width: 1px;
@@ -219,10 +235,40 @@
 }
 // 커뮤니티 목록
 .community_list_wrap {
-    .head {
-        width:100%;
-        .right {
-            justify-content: flex-end;
+    .join_community_list, .all_community_list {
+        .head {
+            width:100%;
+            .right {
+                justify-content: flex-end;
+            }
+        }
+        .list_box {
+            border:inherit;
+            border-radius:inherit;
+        }
+        .list_box + .list_box {
+            border-top: 1px solid #f2f3f5;
+        }
+        .btn_more {
+            display: flex;
+            justify-content: center;
+            padding:0.8rem 0;
+            border-top:1px solid #f2f3f5;
+        }
+    }
+    .join_community_list {
+        .item_body {
+            padding-left:0;
+            padding-right:0;
+        }
+        .item_util {
+            right: 0rem;
+        }
+    }
+    .all_community_list {
+        margin-top:3rem;
+        .item_body {
+            padding:1.2rem 2rem;
         }
     }
 }
