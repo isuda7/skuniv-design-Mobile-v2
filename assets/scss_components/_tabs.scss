@@ -185,3 +185,15 @@
 		}
 	}
 }
+
+// tab fontsize14
+.tab.small_tab {
+    .tab_list {
+        .tab_item {
+            @include FontTitle14;
+        }
+		.tab_item.disabled {
+            color:#a4a6aa;
+        }
+    }
+}
