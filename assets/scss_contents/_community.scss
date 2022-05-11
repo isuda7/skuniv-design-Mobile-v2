@@ -2,6 +2,17 @@
 // Feed
 ///////////////////////////////////////////////////
 
+// tab style2 fontsize14 
+.tab.style2 {
+    .tab_list.small_tab {
+        > .tab_item {
+            @include FontTitle14;
+        }
+        > .tab_item.disable {
+            color:#a4a6aa;
+        }
+    }
+}
 // community common
 .community_container {
     .community_category_wrap{
@@ -33,7 +44,7 @@
     .toast {
         margin-bottom:7.4rem;
     }
-    .tab_list.feed_tab {
+    .tab_list.small_tab {
         > .tab_item {
             @include FontTitle14;
         }
@@ -311,6 +322,25 @@
                     color:#FF664D;
                 }
             }
+        }
+    }
+}
+// 모달 컨펌 패스워드
+.modal_confirmpassword {
+    .notice {
+        width:100%;
+        margin-bottom:3rem;
+        color:#75777b;
+        text-align: center;
+        .ico {
+            width:4rem;
+            height:4rem;
+            margin:0 auto 0.8rem;
+            background-image: url('../img/icons_40_ic_warning_grey_03.svg');
+        }
+        .msg {
+            color:#000;
+            @include FontBody16;
         }
     }
 }

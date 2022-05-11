@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+    <script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+    </script>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong class="tit">핫토픽</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container recom_container">
+			<div class="content_body topic_page bg_grey">
+                <div class="topic_list_wrap">
+                    <!-- board tool -->
+                    <div class="board_toolbar">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">10</em>
+                            <span class="unit">개</span>
+                        </div>
+                        <div class="board_util">
+                            <button type="button" class="btn text arw_expand">최신순</button>
+                        </div>
+                    </div>
+                    <!-- // board tool -->
+
+                    <!-- cardlist -->
+                    <div class="card_topic_list">
+                        <!-- card_topic -->
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- // card_topic -->
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card_topic">
+                            <a href="javascript:void(0)" class="card_inner">
+                                <div class="card_thumb">
+                                    <span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></span>
+                                </div>
+                                <div class="card_body">
+                                    <p class="title"><strong>핫토픽이름이들어갑니다핫토픽이름핫토픽이름</strong></p>
+                                </div>
+                                <div class="card_foot">
+                                    <p class="total_count">
+                                        <span class="total">총</span>&nbsp;
+                                        <em class="count">7</em>
+                                        <span class="text">개 학습카드</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- // cardlist -->
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
