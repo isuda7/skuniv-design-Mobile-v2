@@ -2,10 +2,13 @@
 input {
     font-family:inherit;
     line-height:1.5;
+    box-sizing: border-box;
 }
 textarea {
+    display:block;
     font-family:inherit;
     line-height:1.5;
+    box-sizing: border-box;
 }
 .radio,
 .toggle,
@@ -42,29 +45,37 @@ textarea {
     position:absolute;
 }
 
-// Required
-label .required {
-    margin-left:0.2rem;
-    color:$ColorPrimary;
-}
-textarea.basic + .bytes,
-input.basic + .bytes {
-    margin-top:0.4rem;
-    text-align: right;
-    color:#a4a6aa;
+.form_tit {
+    display:flex;
+    align-items: center;
+    @include FontBody13;
+    color:$ColorSubTxt;
+    &.required::after {
+        content: '*';
+        display: block;
+        color: $ColorPrimary;
+        @include FontBody13;
+        margin-left:0.2rem;
+    }
 }
 .form_desc {
     @include FontBody12;
     margin-top:0.4rem;
     color:#a4a6aa;
 }
+.form_bytes {
+    margin-top:0.4rem;
+    margin-left:auto;
+    text-align:right;
+    color:#a4a6aa;
+    @include FontBody12;
+}
 .form_alert {
     display:none;
     position: relative;
     padding-left:2.2rem;
-    margin-top:0.2rem;
+    margin-top:0.4rem;
     @include FontBody12;
-    color:#ff3c3c;
     &::before {
         content:'';
         position: absolute;
@@ -73,12 +84,8 @@ input.basic + .bytes {
         display: block;
         width:1.6rem;
         height:1.6rem;
-        background: url('../img/icons_16_ic_status_error.svg') no-repeat center center / 1.6rem auto;
+        background: no-repeat center center / 1.6rem auto;
     }
-}
-.form_alert.is_visible,
-input.basic.is_failed + .form_alert {
-    display:block;
 }
 
 // Input
@@ -105,9 +112,6 @@ input.basic {
         color:#e3e4e5;
         background-color: #f8f8fa;
         border:1px solid #f2f3f5;
-    }
-    &.is_failed {
-        border-color: $ColorPrimary;
     }
 }
 .theme_dark {
@@ -150,8 +154,7 @@ textarea.basic {
 
 // Checkbox
 .checkbox.basic {
-    font-size:1.4rem;
-    line-height:2.2rem;
+    @include FontBody14;
     min-height:2.0rem;
     input,
     label:before,
@@ -169,15 +172,81 @@ textarea.basic {
         padding-left:0.8rem;
     }
     label::before {
-        border:1px solid #cbcdcf;
-        border-radius:0.4rem;
+        background: no-repeat center center / 2rem 2rem;
     }
     label::after {
-        background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 1.6rem 1.6rem;
+        display:none;
+    }
+    // 상태별
+    label::before {
+        background-image: url('../img/icons_20_ic_check_off_grey.svg');
     }
     input:checked + label::before {
-        border:0;
-        background-color: $ColorPrimary;
+        background-image: url('../img/icons_20_ic_check_on_primary.svg');
+    }
+    input:disabled + label::before {
+        background-image: url('../img/icons_20_ic_check_off_grey_disabled.svg');
+    }
+    input:disabled:checked + label::before {
+        background-image: url('../img/icons_20_ic_check_on_primary_disabled.svg');
+    }
+}
+.checkbox.basic.large {
+    min-height:2.4rem;
+    input,
+    label:before,
+    label:after {
+        height:2.4rem;
+        width:2.4rem;
+    }
+    label {
+        padding-left:2.4rem;
+    }
+    label::before {
+        background: no-repeat center center / 2.4rem 2.4rem;
+    }
+    // 상태별
+    label::before {
+        background-image: url('../img/icons_24_ic_check_off_grey.svg');
+    }
+    input:checked + label::before {
+        background-image: url('../img/icons_24_ic_check_on_primary.svg');
+    }
+    input:disabled + label::before {
+        background-image: url('../img/icons_24_ic_check_off_grey_disabled.svg');
+    }
+    input:disabled:checked + label::before {
+        background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
+    }
+}
+.theme_dark {
+    .checkbox.basic {
+        label::before {
+            background-image: url('../img/icons_20_ic_check_dark_off_grey.svg');
+        }
+        input:checked + label::before {
+            background-image: url('../img/icons_20_ic_check_on_primary.svg');
+        }
+        input:disabled + label::before {
+            background-image: url('../img/icons_20_ic_check_dark_off_grey_disabled.svg');
+        }
+        input:disabled:checked + label::before {
+            background-image: url('../img/icons_20_ic_check_dark_on_primary_disabled.svg');
+        }
+    }
+    .checkbox.basic.large {
+        label::before {
+            background-image: url('../img/icons_24_ic_check_dark_off_grey.svg');
+        }
+        input:checked + label::before {
+            background-image: url('../img/icons_24_ic_check_on_primary.svg');
+        }
+        input:disabled + label::before {
+            background-image: url('../img/icons_24_ic_check_dark_off_grey_disabled.svg');
+        }
+        input:disabled:checked + label::before {
+            background-image: url('../img/icons_24_ic_check_dark_on_primary_disabled.svg');
+        }
     }
 }
 
@@ -200,25 +269,81 @@ textarea.basic {
         padding-left:0.8rem;
     }
     label:before {
-        border-radius:50%;
-        border:1px solid $FormBasicBorder;
-        transition:all 0.05s ease;
+        background: no-repeat center center / 2rem 2rem;
     }
     label:after {
-        transform:scale(0);
-        top:0.5rem;
-        left:0.4rem;
-        width:1.2rem;
-        height:1.2rem;
-        border-radius:50%;
-        transition:all 0.1s ease;
+        display: none;
     }
-    input:checked ~ label:before {
-        border-color:$ColorPrimary !important;
+    // 상태별
+    label::before {
+        background-image: url('../img/icons_20_ic_radio_off_grey.svg');
     }
-    input:checked ~ label:after {
-        transform:scale(1);
-        background-color:$ColorPrimary !important;
+    input:checked + label::before {
+        background-image: url('../img/icons_20_ic_radio_on_primary.svg');
+    }
+    input:disabled + label::before {
+        background-image: url('../img/icons_20_ic_radio_off_grey_disabled.svg');
+    }
+    input:disabled:checked + label::before {
+        background-image: url('../img/icons_20_ic_radio_on_primary_disabled.svg');
+    }
+}
+.radio.basic.large {
+    min-height:2.4rem;
+    input,
+    label:before,
+    label:after {
+        height:2.4rem;
+        width:2.4rem;
+    }
+    label {
+        padding-left:2.4rem;
+    }
+    label::before {
+        background: no-repeat center center / 2.4rem 2.4rem;
+    }
+    // 상태별
+    label::before {
+        background-image: url('../img/icons_24_ic_radio_off_grey.svg');
+    }
+    input:checked + label::before {
+        background-image: url('../img/icons_24_ic_radio_on_primary.svg');
+    }
+    input:disabled + label::before {
+        background-image: url('../img/icons_24_ic_radio_off_grey_disabled.svg');
+    }
+    input:disabled:checked + label::before {
+        background-image: url('../img/icons_24_ic_radio_on_primary_disabled.svg');
+    }
+}
+.theme_dark {
+    .radio.basic {
+        label::before {
+            background-image: url('../img/icons_20_ic_radio_dark_off_grey.svg');
+        }
+        input:checked + label::before {
+            background-image: url('../img/icons_20_ic_radio_dark_on_primary.svg');
+        }
+        input:disabled + label::before {
+            background-image: url('../img/icons_20_ic_radio_dark_off_grey_disabled.svg');
+        }
+        input:disabled:checked + label::before {
+            background-image: url('../img/icons_20_ic_radio_dark_on_primary_disabled.svg');
+        }
+    }
+    .radio.basic.large {
+        label::before {
+            background-image: url('../img/icons_24_ic_radio_dark_off_grey.svg');
+        }
+        input:checked + label::before {
+            background-image: url('../img/icons_24_ic_radio_dark_on_primary.svg');
+        }
+        input:disabled + label::before {
+            background-image: url('../img/icons_24_ic_radio_dark_off_grey_disabled.svg');
+        }
+        input:disabled:checked + label::before {
+            background-image: url('../img/icons_24_ic_radio_dark_on_primary_disabled.svg');
+        }
     }
 }
 
@@ -269,12 +394,7 @@ textarea.basic {
     input:disabled ~ label {
         opacity: 0.75;
     }
-    .textarea_group,
-    > textarea {
-        display:none;
-    }
-    .textarea_group.is_visible,
-    > textarea.is_visible {
+    .input_group.is_visible {
         display:block;
         margin-top:0.4rem;
     }
@@ -434,6 +554,7 @@ textarea.basic {
             border-radius: $RadiusSmall;
             text-align: center;
             padding-top:1.4rem;
+            @include FontBody14;
             &::before {
                 content:'';
                 display:block;
@@ -442,6 +563,9 @@ textarea.basic {
                 width:1.6rem;
                 height:1.6rem;
                 background: url('../img/icons_16_ic_check_grey_03.svg') no-repeat center center / 100% auto;
+            }
+            &::after {
+                display:none;
             }
         }
         input:checked + label {

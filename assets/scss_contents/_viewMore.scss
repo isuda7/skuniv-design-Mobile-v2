@@ -172,7 +172,7 @@
 // s: Board Detail
 .more_container{
     .board_dt_wrap{
-        padding : 2rem 0 4rem;
+        padding : 1.2rem 0 4rem;
     }
 }
 // e: Board Detail
@@ -580,198 +580,80 @@
         }
     }
 }
-.field{
-    margin-top: 4rem;
-    .field_tit{
-        padding-bottom: 1.2rem;
-        border-bottom: .1rem solid #a4a6aa;
-        @include FontTitle16;
+// e: 승인관리, 1:1 form
+.attch_area{
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    .input_group {
+        flex:none;
     }
-    .field_body{
-        padding: $FormBasicPadding 0;
-        border-bottom : .1rem solid #f2f3f5;
-        position: relative;
-        .info_head{
-            display: block;
-            color: $ColorSubTxt;
-            @include FontBody13;
-            &.impt span{
-                position: relative;
-                &::after{
-                    content: '*';
-                    color: $ColorPrimary;
-                    @include FontBody13;
-                    display: inline-block;
-                    position: absolute;
-                    top: 0;
-                    left: calc(100% + .2rem);
-                }
-            }
-        }
-        .info_body{
-            @include FontBody16;
-            display: flex;
-            align-items: stretch;
-            .stat{
-                &.negative{
-                    color: $ColorNegative;
-                }
-                &.positive{
-                    color: $ColorPositive;
-                }
-            }
-            strong{
-                display: block;
-                position: relative;
-                word-break: break-all;
-                word-wrap: break-word;
-                & + strong{
-                    margin-left: 1.3rem;
-                    &::before{
-                        content:'';
-                        display: block;
-                        width: .1rem;
-                        height: 1.2rem;
-                        background-color: #cbcdcf;
-                        position: absolute;
-                        top: calc(50% - .5rem);
-                        left: -.6rem;
-                    }
-                }
-            }
-            > div{
-                margin-top: .8rem;
-            }
-            textarea{
-                margin-top: .8rem;
-                box-sizing: border-box;
-                &::-webkit-scrollbar{
-                    display: none;
-                }
-            }
-            .select{
-                margin-top: .8rem;
-                height: auto;
-                @include FontBody14;
-                word-break: keep-all;
-                word-wrap: break-word;
-                + .btn.select{
-                    margin-left: .8rem;
-                }
-            }
-            .cube_references{
-                flex: 0 1 auto;
-            }
-            .input_group{
-                margin-top: .8rem;
-                input{
-                    box-sizing: border-box;
-                }
-                &.file{
-                    margin-top:0;
-                }
-            }
-        }
+    &::-webkit-scrollbar{
+        display: none;
     }
-}
-.field_body{
-    .tooltip{
-        display: inline-block;
-        .btn.info{
-            position: relative;
-            top : .3rem;
-        }
-        .tooltip_body{
-            margin-top : 1rem;
-            left: -.5rem;
-            &::before{
-                left: .6rem;
-            }
-        }
-    }
-    .btn.edu_time {
-        padding: .6rem 1.2rem;
-        color: $ColorSubTxt;
-        @include FontBody13;
-        border: .1rem solid $FormBasicBorder;
-        border-radius: $FormBasicRadius;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-    }
-    .attch_area{
-        overflow-x: auto;
+    .attch_thumbnail {
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
-        &::-webkit-scrollbar{
-            display: none;
-        }
-        .attch_thumbnail {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-            .image_wrap {
-                display: inline-block;
-                width: 10rem;
-                height: 10rem;
-                border-radius: .4rem;
-                overflow: hidden;
-                position: relative;
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-                & + .image_wrap{
-                    margin-left: 1rem;
-                }
-                &::before{
-                    content: '';
-                    background-color: rgba(0, 0, 0, 0.2);
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                }
-                .btn.ico.clear{
-                    position: absolute;
-                    top: .8rem;
-                    right: .8rem;
-                    &::before{
-                        width: 1.2rem;
-                        height: 1.2rem;
-                        background-image: url('../img/icons_12_ic_delete_white.svg');
-                    }
-                }
-            }
-        }
-        .ico.plus{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
+        .image_wrap {
+            display: inline-block;
             width: 10rem;
             height: 10rem;
-            background-color: #f2f3f5;
-            border: .1rem solid #f2f3f5;
-            border-radius: $FormBasicRadius;
+            border-radius: .4rem;
+            overflow: hidden;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            & + .image_wrap{
+                margin-left: 1rem;
+            }
             &::before{
                 content: '';
-                display: block;
-                width: 2.4rem;
-                height: 2.4rem;
-                background: url('../img/icons_24_ic_add_grey_04.svg') no-repeat center/100% auto;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
             }
-        }   
-
+            .btn.ico.clear{
+                position: absolute;
+                top: .8rem;
+                right: .8rem;
+                &::before{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    background-image: url('../img/icons_12_ic_delete_white.svg');
+                }
+            }
+        }
+    }
+    .ico.plus{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        width: 10rem;
+        height: 10rem;
+        background-color: #f2f3f5;
+        border: .1rem solid #f2f3f5;
+        border-radius: $FormBasicRadius;
+        &::before{
+            content: '';
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            background: url('../img/icons_24_ic_add_grey_04.svg') no-repeat center/100% auto;
+        }
     }
 }
 
 //1:1
 .qna_form_sec{
+    padding-top:1.6rem;
     .qna_edit {
-        margin-top: .6rem;
         .field{
             margin-top:0;
             .field_body{
@@ -868,14 +750,129 @@
             }
         }
     }
-    
+
 }
-
-
-
-
-
-
-
-
 // e: modal PinChage
+
+
+// .field{
+//     margin-top: 4rem;
+//     .field_tit{
+//         padding-bottom: 1.2rem;
+//         border-bottom: .1rem solid #a4a6aa;
+//         @include FontTitle16;
+//     }
+//     .field_body{
+//         padding: $FormBasicPadding 0;
+//         border-bottom : .1rem solid #f2f3f5;
+//         position: relative;
+//         .info_head{
+//             display: block;
+//             color: $ColorSubTxt;
+//             @include FontBody13;
+//             &.impt span{
+//                 position: relative;
+//                 &::after{
+//                     content: '*';
+//                     color: $ColorPrimary;
+//                     @include FontBody13;
+//                     display: inline-block;
+//                     position: absolute;
+//                     top: 0;
+//                     left: calc(100% + .2rem);
+//                 }
+//             }
+//         }
+//         .info_body{
+//             @include FontBody16;
+//             display: flex;
+//             align-items: stretch;
+//             .stat{
+//                 &.negative{
+//                     color: $ColorNegative;
+//                 }
+//                 &.positive{
+//                     color: $ColorPositive;
+//                 }
+//             }
+//             strong{
+//                 display: block;
+//                 position: relative;
+//                 word-break: break-all;
+//                 word-wrap: break-word;
+//                 & + strong{
+//                     margin-left: 1.3rem;
+//                     &::before{
+//                         content:'';
+//                         display: block;
+//                         width: .1rem;
+//                         height: 1.2rem;
+//                         background-color: #cbcdcf;
+//                         position: absolute;
+//                         top: calc(50% - .5rem);
+//                         left: -.6rem;
+//                     }
+//                 }
+//             }
+//             > div{
+//                 margin-top: .8rem;
+//             }
+//             textarea{
+//                 margin-top: .8rem;
+//                 box-sizing: border-box;
+//                 &::-webkit-scrollbar{
+//                     display: none;
+//                 }
+//             }
+//             .select{
+//                 margin-top: .8rem;
+//                 height: auto;
+//                 @include FontBody14;
+//                 word-break: keep-all;
+//                 word-wrap: break-word;
+//                 + .btn.select{
+//                     margin-left: .8rem;
+//                 }
+//             }
+//             .cube_references{
+//                 flex: 0 1 auto;
+//             }
+//             .input_group{
+//                 margin-top: .8rem;
+//                 input{
+//                     box-sizing: border-box;
+//                 }
+//                 &.file{
+//                     margin-top:0;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .field_body{
+//     .tooltip{
+//         display: inline-block;
+//         .btn.info{
+//             position: relative;
+//             top : .3rem;
+//         }
+//         .tooltip_body{
+//             margin-top : 1rem;
+//             left: -.5rem;
+//             &::before{
+//                 left: .6rem;
+//             }
+//         }
+//     }
+//     .btn.edu_time {
+//         padding: .6rem 1.2rem;
+//         color: $ColorSubTxt;
+//         @include FontBody13;
+//         border: .1rem solid $FormBasicBorder;
+//         border-radius: $FormBasicRadius;
+//         position: absolute;
+//         top: 50%;
+//         right: 0;
+//         transform: translateY(-50%);
+//     }
+// }

@@ -192,6 +192,33 @@
             margin-top:2rem;
         }
     }
+    .field {
+        width: 100%;
+        .form_tit {
+            flex:none;
+            width:11rem;
+            display:block;
+            margin-bottom:0.8rem;
+            @include FontBody14;
+            color:$ColorSubTxt;
+            &.required {
+                span {
+                    display:flex;
+                    align-items: center;
+                    &::after{
+                        content: '*';
+                        color: $ColorPrimary;
+                        @include FontBody13;
+                        display: block;
+                        margin-left:0.2rem;
+                    }
+                }
+            }
+        }
+        .textarea.basic {
+            height:11.2rem;
+        }
+    }
 }
 
 // Profile Popup

@@ -49,7 +49,7 @@
                     <input type="text" placeholder="placeholder" value="" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
                 </span>
-                <hr class="divider" />
+                <br />
                 <span class="input_group clear is_valued">
                     <input type="text" placeholder="placeholder" value="입력된 상태" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
@@ -57,17 +57,30 @@
             </div>
             <h3 class="g_h3">Count</h3>
             <div class="g_preview">
-                <div class="input_group clear count">
+                <div class="input_group clear">
                     <input type="text" placeholder="placeholder" value="" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
-                    <div class="cnt"><span>0</span><span>/100</span></div>
+                    <p class="form_bytes">0/100</p>
                 </div>
-                <hr class="divider" />
-                <div class="input_group clear is_valued count">
+                <br />
+                <div class="input_group clear is_valued">
                     <input type="text" placeholder="placeholder" value="입력된 상태" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
-                    <div class="cnt"><span>7</span><span>/100</span></div>
+                    <p class="form_bytes">0/100</p>
                 </div>
+                <br />
+                <div class="input_group">
+                    <textarea placeholder="Placeholder" cols="10" rows="5" class="basic"></textarea>
+                    <p class="form_bytes">0/100</p>
+                </div>
+            </div>
+            <h3 class="g_h3">인증번호</h3>
+            <div class="g_preview">
+                <div class="input_group cert is_visible">
+                    <input type="password" id="loginFormCert" placeholder="인증번호" value="1234" class="basic" />
+                    <p class="form_cert"><strong>남은시간</strong><em>9:59</em></p>
+                </div>
+                <p class="form_desc">전송된 인증번호를 입력해주세요.</p>
             </div>
             <h3 class="g_h3">Search</h3>
             <div class="g_preview">
@@ -76,13 +89,13 @@
                     <input type="text" placeholder="placeholder" value="" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
                 </span>
-                <hr class="divider" />
+                <br />
                 <span class="input_group clear srch is_valued">
                     <i class="ico srch"><span class="blind">검색</span></i>
                     <input type="search" placeholder="placeholder" value="입력된 상태" class="basic" />
                     <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
                 </span>
-                <hr class="divider" />
+                <br />
                 <div class="out_sec">
                     <div class="board_search_area">
                         <span class="input_group clear srch">
@@ -132,12 +145,6 @@
                 <textarea placeholder="Placeholder" cols="10" rows="2" value="Value" class="basic"></textarea>
                 <br />
                 <textarea placeholder="Placeholder" cols="10" rows="2" class="basic" disabled></textarea>
-                <div class="input_group count">
-                    <textarea placeholder="Placeholder" cols="10" rows="5" class="basic"></textarea>
-                    <div class="cnt">
-                        <span>0</span><span>/1,000</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Select -->
@@ -149,46 +156,287 @@
                 <button type="button" class="btn select is_disabled" disabled>Placeholder Disabled</button>
                 <button type="button" class="btn select is_valued" disabled>Valueed Disabled</button>
                 <p class="g_desc">Bottomsheet Page 참고</p>
-                <p><a href="/guide/Modals" class="g_link">/guide/Modals</a> 가이드 참조한다.</p>
+                <p><a href="../../html/Common/Modals.html" class="g_link">/html/Common/Modals.html</a> 가이드 참조한다.</p>
             </div>
 
             <!-- Checkbox -->
             <h2 class="g_h2">Checkbox</h2>
-            <h3 class="g_h3">Basic</h3>
+            <h3 class="g_h3">Basic (Size: 20)</h3>
             <div class="g_preview">
                 <div class="checkbox basic">
                     <input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden" />
-                    <label for="checkbox11"><span>Make my profile visible</span></label>
+                    <label for="checkbox11"></label>
                 </div>
                 <br />
                 <div class="checkbox basic">
                     <input type="checkbox" name="checkbox1" id="checkbox12" tabindex="0" class="hidden" />
-                    <label for="checkbox12"><span>Make my profile visible</span></label>
+                    <label for="checkbox12"><span>Default</span></label>
                 </div>
                 <br />
                 <div class="checkbox basic">
-                    <input type="checkbox" name="checkbox1" id="checkbox13" tabindex="0" class="hidden" />
-                    <label for="checkbox13"><span>Make my profile visible</span></label>
+                    <input type="checkbox" name="checkbox1" id="checkbox13" tabindex="0" class="hidden" checked />
+                    <label for="checkbox13"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkbox1" id="checkbox14" tabindex="0" class="hidden" disabled />
+                    <label for="checkbox14"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkbox1" id="checkbox15" tabindex="0" class="hidden" disabled checked />
+                    <label for="checkbox15"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <div class="g_preview theme_dark out_sec" style="padding:2rem">
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkboxDark1" id="checkboxDark11" tabindex="0" class="hidden" />
+                    <label for="checkboxDark11"></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkboxDark1" id="checkboxDark12" tabindex="0" class="hidden" />
+                    <label for="checkboxDark12"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkboxDark1" id="checkboxDark13" tabindex="0" class="hidden" checked />
+                    <label for="checkboxDark13"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkboxDark1" id="checkboxDark14" tabindex="0" class="hidden" disabled />
+                    <label for="checkboxDark14"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic">
+                    <input type="checkbox" name="checkboxDark1" id="checkboxDark15" tabindex="0" class="hidden" disabled checked />
+                    <label for="checkboxDark15"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <h3 class="g_h3">Basic Large (Size: 24)</h3>
+            <div class="g_preview">
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkbox2" id="checkbox21" tabindex="0" class="hidden" />
+                    <label for="checkbox21"></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkbox2" id="checkbox22" tabindex="0" class="hidden" />
+                    <label for="checkbox22"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkbox2" id="checkbox23" tabindex="0" class="hidden" checked />
+                    <label for="checkbox23"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkbox2" id="checkbox24" tabindex="0" class="hidden" disabled />
+                    <label for="checkbox24"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkbox2" id="checkbox25" tabindex="0" class="hidden" disabled checked />
+                    <label for="checkbox25"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <div class="g_preview theme_dark out_sec" style="padding:2rem">
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkboxDark2" id="checkboxDark21" tabindex="0" class="hidden" />
+                    <label for="checkboxDark21"></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkboxDark2" id="checkboxDark22" tabindex="0" class="hidden" />
+                    <label for="checkboxDark22"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkboxDark2" id="checkboxDark23" tabindex="0" class="hidden" checked />
+                    <label for="checkboxDark23"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkboxDark2" id="checkboxDark24" tabindex="0" class="hidden" disabled />
+                    <label for="checkboxDark24"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="checkbox basic large">
+                    <input type="checkbox" name="checkboxDark2" id="checkboxDark25" tabindex="0" class="hidden" disabled checked />
+                    <label for="checkboxDark25"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <h3 class="g_h3">Block (Survey)</h3>
+            <div class="g_preview">
+                <div class="checkbox block">
+                    <input type="checkbox" name="checkbox3" id="checkbox31" tabindex="0" class="hidden" />
+                    <label for="checkbox31"><span>Make my profile visible</span></label>
+                </div>
+                <div class="checkbox block">
+                    <input type="checkbox" name="checkbox3" id="checkbox32" tabindex="0" class="hidden" />
+                    <label for="checkbox32"><span>Make my profile visible</span></label>
+                </div>
+                <div class="checkbox block">
+                    <input type="checkbox" name="checkbox3" id="checkbox33" tabindex="0" class="hidden" />
+                    <label for="checkbox33"><span>Make my profile visible</span></label>
+                </div>
+            </div>
+            <h3 class="g_h3">Weekly</h3>
+            <div class="g_preview">
+                <div class="selecection">
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week1" tabindex="0" class="hidden" checked/>
+                        <label for="week1">월</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week2" tabindex="0" class="hidden" />
+                        <label for="week2">화</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week3" tabindex="0" class="hidden" />
+                        <label for="week3">수</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week4" tabindex="0" class="hidden" />
+                        <label for="week4">목</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week5" tabindex="0" class="hidden" />
+                        <label for="week5">금</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week6" tabindex="0" class="hidden" />
+                        <label for="week6">토</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="week" id="week7" tabindex="0" class="hidden" />
+                        <label for="week7">일</label>
+                    </div>
                 </div>
             </div>
 
             <!-- Radio -->
             <h2 class="g_h2">Radio</h2>
-            <h3 class="g_h3">Basic</h3>
+            <h3 class="g_h3">Basic (Size: 20)</h3>
             <div class="g_preview">
                 <div class="radio basic">
-                    <input type="radio" name="radioBasic1" id="radioBasic11" tabindex="0" class="hidden" />
-                    <label for="radioBasic11"><span>Make my profile visible</span></label>
+                    <input type="radio" name="radio1" id="radio11" tabindex="0" class="hidden" />
+                    <label for="radio11"></label>
                 </div>
                 <br />
                 <div class="radio basic">
-                    <input type="radio" name="radioBasic1" id="radioBasic12" tabindex="0" class="hidden" />
-                    <label for="radioBasic12"><span>Make my profile visible</span></label>
+                    <input type="radio" name="radio1" id="radio12" tabindex="0" class="hidden" />
+                    <label for="radio12"><span>Default</span></label>
                 </div>
                 <br />
                 <div class="radio basic">
-                    <input type="radio" name="radioBasic1" id="radioBasic13" tabindex="0" class="hidden" />
-                    <label for="radioBasic13"><span>Make my profile visible</span></label>
+                    <input type="radio" name="radio1" id="radio13" tabindex="0" class="hidden" checked />
+                    <label for="radio13"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" disabled />
+                    <label for="radio14"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDisabled1" id="radio15" tabindex="0" class="hidden" disabled checked />
+                    <label for="radio15"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <div class="g_preview theme_dark out_sec" style="padding:2rem">
+                <div class="radio basic">
+                    <input type="radio" name="radioDark1" id="radioDark11" tabindex="0" class="hidden" />
+                    <label for="radioDark11"></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDark1" id="radioDark12" tabindex="0" class="hidden" />
+                    <label for="radioDark12"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDark1" id="radioDark13" tabindex="0" class="hidden" checked />
+                    <label for="radioDark13"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDisabledDark1" id="radioDark14" tabindex="0" class="hidden" disabled />
+                    <label for="radioDark14"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="radio basic">
+                    <input type="radio" name="radioDisabledDark1" id="radioDark15" tabindex="0" class="hidden" disabled checked />
+                    <label for="radioDark15"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <h3 class="g_h3">Basic Large (Size: 24)</h3>
+            <div class="g_preview">
+                <div class="radio basic large">
+                    <input type="radio" name="radio2" id="radio21" tabindex="0" class="hidden" />
+                    <label for="radio21"></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radio2" id="radio22" tabindex="0" class="hidden" />
+                    <label for="radio22"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radio2" id="radio23" tabindex="0" class="hidden" checked />
+                    <label for="radio23"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDisabled2" id="radio24" tabindex="0" class="hidden" disabled />
+                    <label for="radio24"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDisabled2" id="radio25" tabindex="0" class="hidden" disabled checked />
+                    <label for="radio25"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <div class="g_preview theme_dark out_sec" style="padding:2rem">
+                <div class="radio basic large">
+                    <input type="radio" name="radioDark2" id="radioDark21" tabindex="0" class="hidden" />
+                    <label for="radioDark21"></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDark2" id="radioDark22" tabindex="0" class="hidden" />
+                    <label for="radioDark22"><span>Default</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDark2" id="radioDark23" tabindex="0" class="hidden" checked />
+                    <label for="radioDark23"><span>Default Checked</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDisabledDark2" id="radioDark24" tabindex="0" class="hidden" disabled />
+                    <label for="radioDark24"><span>Disabled</span></label>
+                </div>
+                <br />
+                <div class="radio basic large">
+                    <input type="radio" name="radioDisabledDark2" id="radioDark25" tabindex="0" class="hidden" disabled checked />
+                    <label for="radioDark25"><span>Disabled Checked</span></label>
+                </div>
+            </div>
+            <h3 class="g_h3">Block (Survey)</h3>
+            <div class="g_preview">
+                <div class="radio block">
+                    <input type="radio" name="radio3" id="radio31" tabindex="0" class="hidden" />
+                    <label for="radio31"><span>Make my profile visible</span></label>
+                </div>
+                <div class="radio block">
+                    <input type="radio" name="radio3" id="radio32" tabindex="0" class="hidden" />
+                    <label for="radio32"><span>Make my profile visible</span></label>
+                </div>
+                <div class="radio block">
+                    <input type="radio" name="radio3" id="radio33" tabindex="0" class="hidden" />
+                    <label for="radio33"><span>Make my profile visible</span></label>
                 </div>
             </div>
 
@@ -203,11 +451,11 @@
             </div>
 
             <!-- Required -->
-            <h2 class="g_h2">필수</h2>
+            <h2 class="g_h2">필수입력 표시</h2>
             <div class="g_preview">
-                <em class="required">*</em>
+                <label for="" class="form_tit">라벨링</label>
+                <label for="" class="form_tit required">라벨링</label>
             </div>
-
         </section>
     </div>
 </div>

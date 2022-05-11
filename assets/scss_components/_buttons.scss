@@ -65,7 +65,7 @@
 .btn.select {
     flex:1 1 auto;
     justify-content: space-between;
-    height:4.8rem;
+    height:$FormBasicHeight;
     width:100%;
     padding:0.9rem 1.6rem 0.9rem 1.6rem;
     border:1px solid $FormBasicBorder;

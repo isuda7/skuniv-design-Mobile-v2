@@ -1,3 +1,13 @@
+// Form Row
+.form_row {
+    & + .form_row {
+        margin-top:2rem;
+    }
+    .form_tit {
+        margin-bottom:0.8rem;
+    }
+}
+
 // Form Controls
 .form_controls {
 	display:flex;
@@ -15,11 +25,15 @@
 			color:#A4A6AA;
 		}
 	}
+    .btn.select + .btn.select {
+        margin-left:0.8rem;
+    }
 }
 
-// Input Group
+// Input Group - Types
 .input_group {
-    display:block;
+    display:flex;
+    flex-wrap: wrap;
     flex:1 1 auto;
     position:relative;
     input {
@@ -35,12 +49,12 @@
         .btn.clear {
             visibility:hidden;
             position:absolute;
-            top:50%;
+            top:0;
             right:0;
             height:$FormBasicHeight;
             width:$FormBasicHeight;
             padding:0;
-            transform: translateY(-50%);
+            // transform: translateY(-50%);
             &::before {
                 content:"";
                 display:block;
@@ -50,7 +64,7 @@
             }
         }
         &.is_valued {
-            input:focus + .btn.clear {
+            .btn.clear {
                 visibility:visible;
             }
             input:disabled + .btn.clear {
@@ -137,15 +151,39 @@
             }
         }
     }
-    &.count{
-        .btn.clear{
-            top: 2rem;
+}
+
+// Input Group - Status
+.input_group {
+    &.is_failed {
+        input.basic {
+            border-color:$ColorNegative;
         }
-        .cnt {
-            margin-top: .4rem;
-            text-align: right;
-            color: #a4a6aa;
-            @include FontBody12;
+        .form_alert {
+            display:block;
+            color:$ColorNegative;
+            &::before {
+                background-image: url('../img/icons_16_ic_status_error.svg');
+            }
+        }
+        .form_bytes {
+            color:$ColorNegative;
+        }
+    }
+    &.is_successed {
+        input.basic {
+            border-color:$ColorPositive;
+        }
+        .form_alert {
+            display:block;
+            color:$ColorPositive;
+            &::before {
+                background-image: url('../img/icons_16_ic_status_success.svg');
+            }
+        }
+        .form_bytes {
+            color:$ColorPositive;
         }
     }
 }
+

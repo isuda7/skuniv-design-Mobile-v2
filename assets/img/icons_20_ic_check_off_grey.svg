@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>D8454FDA-55AA-435B-7104-2240973DF9A6</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-    </defs>
     <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Selection-Controls" transform="translate(-61.000000, -400.000000)">
             <g id="01.-Check-Box" transform="translate(40.000000, 346.000000)">
                 <g id="States-01=02.-Unselected,-States-02=01.-Enabled,-Size=20,-Dark-Mode=No" transform="translate(21.000000, 54.000000)">
                     <path d="M0,0 L20,0 L20,20 L0,20 L0,0 Z" id="States-01=02.-Unselected,-States-02=01.-Enabled,-Size=20,-Dark-Mode=No-(Background)"></path>
-                    <use id="사각형-6" stroke="#CBCDCF" mask="url(#mask-2)" stroke-width="2" stroke-dasharray="0,0" xlink:href="#path-1"></use>
+                    <path d="M4.5,0.5 L15.5,0.5 C17.709139,0.5 19.5,2.290861 19.5,4.5 L19.5,15.5 C19.5,17.709139 17.709139,19.5 15.5,19.5 L4.5,19.5 C2.290861,19.5 0.5,17.709139 0.5,15.5 L0.5,4.5 C0.5,2.290861 2.290861,0.5 4.5,0.5 Z" id="사각형-6" stroke="#CBCDCF" stroke-dasharray="0,0"></path>
                     <path d="M5.5,10.0004301 L8.5,13.5 L14.5,6.5" id="Stroke-3" stroke="#CBCDCF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
                 </g>
             </g>
