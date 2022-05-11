@@ -575,8 +575,8 @@
             margin-top: .8rem;
             color: $ColorSubTxt;
             @include FontBody13;
-            word-wrap: break-word;
             word-break: keep-all;
+            word-wrap: break-word;
         }
     }
 }
@@ -610,7 +610,7 @@
         .info_body{
             @include FontBody16;
             display: flex;
-            align-items: center;
+            align-items: stretch;
             .stat{
                 &.negative{
                     color: $ColorNegative;
@@ -652,6 +652,8 @@
                 margin-top: .8rem;
                 height: auto;
                 @include FontBody14;
+                word-break: keep-all;
+                word-wrap: break-word;
                 + .btn.select{
                     margin-left: .8rem;
                 }

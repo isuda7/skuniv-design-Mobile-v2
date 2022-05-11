@@ -243,6 +243,8 @@
             font-size:1.8rem;
             line-height:2.4rem;
             font-weight:700;
+            word-break: keep-all;
+            word-wrap: break-word;
         }
         .header_right {
             margin-left:auto;
@@ -714,6 +716,8 @@
     .toast_txt {
         flex:0 1 auto;
         @include FontBody14;
+        word-break: keep-all;
+        word-wrap: break-word;
     }
     .toast_btn {
         margin-right:-1rem;
