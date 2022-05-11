@@ -15,23 +15,6 @@
 }
 // community common
 .community_container {
-    .course_data {
-        width:100%;
-        margin-bottom:3rem;
-        color:#75777b;
-        text-align: center;
-        .ico {
-            width:4rem;
-            height:4rem;
-            margin:0 auto 0.8rem;
-            &.advance {
-                background-image: url('../img/icons_40_ic_warning_primary.svg');
-            }
-            &.elective {
-                background-image: url('../img/icons_40_ic_warning_grey_03.svg');
-            }
-        }
-    }
     .community_category_wrap{
         padding : 0.8rem 0 2rem;
         width : 100%;
@@ -339,6 +322,25 @@
                     color:#FF664D;
                 }
             }
+        }
+    }
+}
+// 모달 컨펌 패스워드
+.modal_confirmpassword {
+    .notice {
+        width:100%;
+        margin-bottom:3rem;
+        color:#75777b;
+        text-align: center;
+        .ico {
+            width:4rem;
+            height:4rem;
+            margin:0 auto 0.8rem;
+            background-image: url('../img/icons_40_ic_warning_grey_03.svg');
+        }
+        .msg {
+            color:#000;
+            @include FontBody16;
         }
     }
 }
