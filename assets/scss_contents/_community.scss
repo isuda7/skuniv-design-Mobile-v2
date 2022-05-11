@@ -261,9 +261,14 @@
         }
     }
     .all_community_list {
-        margin-top:3rem;
+        margin-top:3rem;        
         .item_body {
             padding:1.2rem 2rem;
+            .item_title {
+                .sub_txt{
+                    color:#75777B;
+                }
+            }
         }
     }
 }

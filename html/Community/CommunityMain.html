@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_sticky has_appnav">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1 class="blind"><strong>커뮤니티</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico home is_active"><span class="blind">메안홈</span></button>
+					<button type="button" class="btn ico menu"><span class="blind">메뉴</span></button>
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container">
+			<div class="content_head">
+				<!-- 프로필 헤더 -->
+				<div class="card_community">
+                    <a href="javascript:void(0)" class="item_body">
+                        <div class="item_thumb">
+                            <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-community01.png')" alt=""></span>
+                        </div>
+                        <div class="item_title">
+                            <p class="title"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></p>
+                        </div>
+                        <div class="item_foot">
+                            <div class="info_area">
+                                <span class="username">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                                <span class="member">멤버 000</span>
+                                <i class="ico lock"><span class="blind">비밀글</span></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="item_util">
+                        <!-- 툴팁 활성화 is_active is_visible -->
+                        <div class="tooltip bottom left desc">
+                            <button type="button" class="btn ico help"><span class="blind">도움말</span></button>
+                            <div class="tooltip_body">
+                                <ul class="help_list">
+                                    <li>가이드 문구가 여러 문단일 때는 블릿이 있는 것으로 합니다.</li>
+                                    <li>가이드 문구가 여러 문단일 때는 블릿이 있는 것으로 합니다.</li>
+                                </ul>
+                                <p class="help_txt">가이드 문구가 한 문단일 때는 블릿이 없는 것으로 합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- // 프로필 헤더 -->
+			</div>
+			<div class="content_body">
+				<!-- 학습과정 탭 -->
+				<div class="out_sec sticky">
+					<div class="tab style2 small_tab">
+						<div class="tab_list">
+							<button type="button" class="tab_item">나의 커뮤니티</button>
+							<button type="button" class="tab_item">팔로잉 피드</button>
+							<button type="button" class="tab_item">나의 피드</button>
+							<button type="button" class="tab_item is_active">북마크</button>
+						</div>
+					</div>
+				</div>
+				<!-- //학습과정 탭 -->
+                <div class="tab_panel community_page">
+                    <div class="flex_area centered">
+                        <div class="no_data">
+                            <!-- 메뉴별 Empty 문구 입니다. -->
+                            <p class="tit">북마크한 게시물이 없습니다.</p>
+                            <p class="sub_txt">커뮤니티에 가입하고 게시글을 북마크해보세요.</p>
+                            <div class="board_action">
+								<button type="button" class="btn pill2">가입할 커뮤니티 찾기</button>
+							</div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+		<!-- Footer -->
+		<footer class="footer">
+			<nav class="appnav">
+				<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+				<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+				<a href="/Mobile/Myhome/" class="item item_myhome"><span class="blind">마이홈</span></a>
+				<a href="/Mobile/Cummunity/" class="item item_comunity is_active">커뮤니티</a>
+				<a href="/Mobile/More/" class="item item_more">더보기</a>
+			</nav>
+		</footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>
