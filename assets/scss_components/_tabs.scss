@@ -27,7 +27,13 @@
 		.tab_list {
             flex-wrap:nowrap;
 			overflow-x:auto;
-			padding-right:4rem !important;
+			.tab_inner::after {
+				content:'';
+				display:block;
+				width:4rem;
+				height:100%;
+				flex:none;
+			}
             .tab_item {
                 flex:none;
             }

@@ -442,3 +442,57 @@
 		}
 	}
 }
+
+// 러닝패스
+.board_badgePass {
+	&_list {
+		padding-top:0.7rem;
+	}
+	@include BoardItem;
+	padding:1.2rem $GapSideBase;
+	border-bottom:1px solid #f2f3f5;
+	.item_body {
+		.item_title {
+			.title {
+				min-height:4rem;
+				@include Ellipsis2;
+			}
+		}
+	}
+	.item_foot {
+		margin-top:0.41rem;
+		.info_area {
+			display:flex;
+			align-items: center;
+			.state {
+				color: $ColorPrimary;
+			}
+			.split {
+				width:1px;
+				height:1rem;
+				margin:0 0.8rem;
+				background-color: #e3e4e5;
+			}
+			.time {
+				color:$ColorSubTxt;
+			}
+		}
+		.util_area {
+			display:flex;
+			align-items: center;
+			.total_count {
+				display:flex;
+				align-items: center;
+				margin-right: 1rem;
+				color:$ColorSubTxt;
+				.count {
+					color: #000;
+					font-weight: 700;
+				}
+				.split {
+					margin:0 0.2rem;
+				}
+			}
+		}
+	}
+}

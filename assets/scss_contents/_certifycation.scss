@@ -1,8 +1,12 @@
+// s: 목록
 .cert_list {
     &_sec {
         padding-top:1.6rem;
         .board_toolbar {
             padding-top:0;
+        }
+        .no_data {
+            padding:12rem 0;
         }
     }
     padding-top:0.4rem;
@@ -26,3 +30,45 @@
         }
     }
 }
+// e: 목록
+
+// s: 상세
+.certView_head {
+    display:flex;
+    margin-bottom:2rem;
+    .badge_area {
+        flex:none;
+        padding:0.6rem;
+        margin-right:1.2rem;
+    }
+    .title_area {
+        .sub_txt {
+            margin-bottom:0.4rem;
+        }
+        .title {
+            @include FontTitle18;
+            @include Ellipsis2;
+        }
+    }
+    .info_area {
+        display:flex;
+        align-items: center;
+        margin-top:0.8rem;
+        > p {
+            display:flex;
+            align-items: center;
+        }
+        .split {
+            display:block;
+            width:1px;
+            height:1.2rem;
+            margin:0 0.8rem;
+            background-color: #f2f3f5;
+        }
+        .tit {
+            margin-right: 0.4rem;
+            color:$ColorSubTxt;
+        }
+    }
+}
+// e: 상세
