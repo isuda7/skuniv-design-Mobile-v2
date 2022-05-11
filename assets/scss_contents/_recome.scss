@@ -1,0 +1,31 @@
+.topic_list_wrap {
+    width:100%; 
+    overflow: hidden;
+    .card_topic_list {
+        display: flex;
+        flex-wrap: wrap;
+        .card_topic {
+            flex:none;
+            margin: .6rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+@media screen and (max-width: calc(15.6rem*3)) {
+    .topic_list_wrap .card_topic_list {
+        margin: .6rem calc((50% - 15.6rem)/-2);
+        .card_topic{
+            min-width: 50%;
+        }
+    }
+}
+@media screen and (min-width: calc(15.6rem*3)) {
+    .topic_list_wrap .card_topic_list {
+        margin: .6rem calc((100%/3 - 15.6rem)/-6);
+        .card_topic{
+            margin: .6rem calc((100%/3 - 15.6rem)/6);
+        }
+    }
+}
