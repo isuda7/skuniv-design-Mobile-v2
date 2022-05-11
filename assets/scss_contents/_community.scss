@@ -2,12 +2,15 @@
 // Feed
 ///////////////////////////////////////////////////
 
-.tab_list.small_tab {
-    > .tab_item {
-        @include FontTitle14;
-    }
-    > .tab_item.disable {
-        color:#a4a6aa;
+// tab style2 fontsize14 
+.tab.style2 {
+    .tab_list.small_tab {
+        > .tab_item {
+            @include FontTitle14;
+        }
+        > .tab_item.disable {
+            color:#a4a6aa;
+        }
     }
 }
 // community common
@@ -58,7 +61,14 @@
     .toast {
         margin-bottom:7.4rem;
     }
-    
+    .tab_list.small_tab {
+        > .tab_item {
+            @include FontTitle14;
+        }
+        > .tab_item.disable {
+            color:#a4a6aa;
+        }
+    }
     .board_action {
         margin-top:1.6rem;
     }
