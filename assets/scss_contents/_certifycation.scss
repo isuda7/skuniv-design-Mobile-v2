@@ -72,3 +72,46 @@
     }
 }
 // e: 상세
+
+// s: 상세소개
+.certView_sec {
+    & + .certView_sec {
+        margin-top:5.2rem;
+    }
+    .sec_body {
+        margin-top:1.6rem;
+        .para + .para {
+            margin-top:2rem;
+        }
+    }
+}
+.content_body .tab_panel.certInfo_page {
+    padding-top:2rem;
+    padding-bottom:3rem;
+}
+// e: 상세소개
+
+// s: 연관 Badge
+.relation_badge {
+    .badge_body {
+        display:flex;
+        align-items: center;
+        padding-bottom:1.3rem;
+        > .badge_thumb {
+            flex:none;
+            width:5.2rem;
+            margin-right:1.2rem;
+        }
+        .badge_title {
+            flex: 1 1 auto;
+            overflow: hidden;
+            .title {
+                margin-top:0.4rem;
+                @include FontTitle16;
+                @include Ellipsis1;
+                font-weight: 400;
+            }
+        }
+    }
+}
+// e: 연관 Badge
