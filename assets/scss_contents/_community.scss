@@ -4,6 +4,12 @@
 
 // community common
 .community_container {
+    .card_community.main_head {
+        border:0;
+        .item_body {
+            padding:1.2rem 2rem 2rem;
+        }
+    }
     .community_category_wrap{
         padding : 0.8rem 0 2rem;
         width : 100%;
@@ -261,9 +267,14 @@
         }
     }
     .all_community_list {
-        margin-top:3rem;
+        margin-top:3rem;        
         .item_body {
             padding:1.2rem 2rem;
+            .item_title {
+                .sub_txt{
+                    color:#75777B;
+                }
+            }
         }
     }
 }
