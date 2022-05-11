@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>72C25578-9800-4999-850B-D0A4E5695FE2</title>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-24-/--Icons/Grid/Keep" transform="translate(-296.000000, -805.000000)">
+            <g id="16dp" transform="translate(62.000000, 729.000000)">
+                <g id="White" transform="translate(122.000000, 0.000000)">
+                    <g id="Icon-/-16-/-White" transform="translate(40.000000, 40.000000)">
+                        <g id="Icons-/-16-/-ic_course_white" transform="translate(72.000000, 36.000000)">
+                            <rect id="area" x="0" y="0" width="16" height="16"></rect>
+                            <circle id="Oval" fill="#FFFFFF" cx="3.25" cy="3.75" r="1.25"></circle>
+                            <rect id="Rectangle" fill="#FFFFFF" x="6" y="3" width="8" height="1.5" rx="0.75"></rect>
+                            <circle id="Oval" fill="#FFFFFF" cx="3.25" cy="7.75" r="1.25"></circle>
+                            <rect id="Rectangle" fill="#FFFFFF" x="6" y="7" width="8" height="1.5" rx="0.75"></rect>
+                            <circle id="Oval" fill="#FFFFFF" cx="3.25" cy="11.75" r="1.25"></circle>
+                            <rect id="Rectangle" fill="#FFFFFF" x="6" y="11" width="8" height="1.5" rx="0.75"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

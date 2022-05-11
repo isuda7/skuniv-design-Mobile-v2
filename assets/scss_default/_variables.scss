@@ -123,6 +123,11 @@ $FormBasicDisable: #E3E4E5;
 	font-size:1.6rem;
 	line-height: 2.4rem;
 }
+@mixin FontTitle10 {
+	font-size:1rem;
+	line-height: 1.6rem;
+	font-weight: 700;
+}
 @mixin FontTitle13 {
 	font-size:1.3rem;
 	line-height: 1.9rem;
