@@ -1,0 +1,28 @@
+.cert_list {
+    &_sec {
+        padding-top:1.6rem;
+        .board_toolbar {
+            padding-top:0;
+        }
+    }
+    padding-top:0.4rem;
+    .item {
+        border-bottom:1px solid #f2f3f5;
+        .item_body {
+            display:flex;
+            align-items: center;
+            padding:0.8rem 0;
+            .item_badge {
+                flex:none;
+                margin-right:1.2rem;
+            }
+            .item_title {
+                flex:1 1 auto;
+                overflow: hidden;
+                .title {
+                    @include Ellipsis1;
+                }
+            }
+        }
+    }
+}
