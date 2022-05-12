@@ -27,6 +27,18 @@
 			margin-bottom: 1.5rem;
 		}
 		margin-top:3.2rem;
+		textarea.basic {
+			height:4rem;
+			padding-top:0.8rem;
+			padding-bottom:0.8rem;
+		}
+		.btn.select {
+			height:auto;
+			min-height:$FormBasicHeight;
+			padding-top:0.8rem;
+			padding-bottom:0.8rem;
+			text-align: left;
+		}
 		.form_controls {
 			color:#a4a6aa;
 			& + .form_controls {

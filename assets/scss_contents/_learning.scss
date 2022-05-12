@@ -1362,6 +1362,12 @@
                 position: relative;
 				margin-bottom:1.5rem;
 				overflow: hidden;
+                .add_img {
+                    overflow: hidden;
+                }
+                .add_img + .txt {
+                    margin-top:1.2rem;
+                }
                 .txt {
                     @include Ellipsis7;
                 }
@@ -2628,6 +2634,7 @@
 // s: 학습활동 개요
 .activity_overview {
     margin-top: 1.2rem;
+    margin-bottom:1.6rem;
     padding:1.6rem 2rem;
     background-color:#f8f8fa;
     border-radius: $RadiusLarge;
@@ -2650,6 +2657,13 @@
         padding:1.6rem 0;
         border-bottom:1px solid #f2f3f5;
         margin-bottom:1.6rem;
+        .sub_txt:first-child {
+            margin-bottom:0.4rem;
+        }
+        .sub_tit {
+            margin-bottom:0.4rem;
+            color: $ColorSubTxt;
+        }
         .note_link{
             display:inline-block;
             &::after {

@@ -12,6 +12,16 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
+    <script>
+        function learningThumb(){
+            // 타이틀 라인수만큼 스타일 구분하기
+            var TitleEl = document.querySelector(".overay_area .title");
+            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
+            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
+            var Remain = TitleHeight / TitleLineHeight;
+            TitleEl.classList.add("line"+Remain);
+        }
+    </script>
 </head>
 <body>
 <div class="sub_wrapper has_sticky">
@@ -20,7 +30,7 @@
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong>나의 학습활동</strong></h1>
+                <h1><strong>나의 학습과정</strong></h1>
             </div>
         </div>
     </header>
