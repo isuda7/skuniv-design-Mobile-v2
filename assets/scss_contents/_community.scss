@@ -5,14 +5,13 @@
 // community common
 .community_container {
     .board_community.main_profile {
-        padding:1.2rem 2rem 2rem 2rem;
         & > .item_util {
             top:2.4rem;
             right:2rem;
         }
     }
     .community_category_wrap{
-        padding : 0.8rem 0 2rem;
+        padding : 0.8rem 0 0;
         width : 100%;
         overflow-x: auto;
         display: flex;
@@ -242,49 +241,20 @@
 }
 // 커뮤니티 목록
 .community_list_wrap {
-    .join_community_list, .all_community_list {
-        .head {
-            width:100%;
-            .right {
-                justify-content: flex-end;
-            }
-        }
-        .list_box {
-            border:inherit;
-            border-radius:inherit;
-        }
-        .list_box + .list_box {
-            border-top: 1px solid #f2f3f5;
-        }
+    margin-top:1rem;
+    .board_community_list {
         .btn_more {
             display: flex;
             justify-content: center;
             padding:0.8rem 0;
             border-top:1px solid #f2f3f5;
         }
-        & > .no_data {
-           margin: 6rem 0 7rem;
-        }
     }
-    .join_community_list {
-        .item_body {
-            padding-left:0;
-            padding-right:0;
-        }
-        .item_util {
-            right: 0rem;
-        }
+    .checkbox.basic.large {
+        align-items: center;
     }
-    .all_community_list {
-        margin-top:3rem;        
-        .item_body {
-            padding:1.2rem 2rem;
-            .item_title {
-                .sub_txt{
-                    color:#75777B;
-                }
-            }
-        }
+    .no_data {
+        margin: 6rem 0 7rem;
     }
 }
 // 팔로워
