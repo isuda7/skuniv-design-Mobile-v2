@@ -26,7 +26,7 @@
 				var $prevCell = $(this).parent().prev('td');
 				var $nextCell = $(this).parent().next('td');
 				if ($nextCell.text() !== '') {
-					$prevCell.on('click', function(){
+					$prevCell.off('click').on('click', function(){
 						$(this).attr('title', '새창열기');
 						window.open(href, '_blank');
 					})
