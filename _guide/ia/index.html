@@ -26,7 +26,7 @@
 				var $prevCell = $(this).parent().prev('td');
 				var $nextCell = $(this).parent().next('td');
 				if ($nextCell.text() !== '') {
-					$prevCell.on('click', function(){
+					$prevCell.off('click').on('click', function(){
 						$(this).attr('title', '새창열기');
 						window.open(href, '_blank');
 					})
@@ -36,7 +36,7 @@
 				AddressTarget(w, $(this));
 			})
 			$('.g_menu a').each(function(){
-				$(this).click(function(){
+				$(this).off('click').on('click', function(){
 					var gap = $('.g_gnb_area').outerHeight();
 					var target = $(this).attr('href');
 					let posTop = $(target).offset().top - gap;
