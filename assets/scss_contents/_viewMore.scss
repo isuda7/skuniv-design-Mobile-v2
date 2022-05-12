@@ -755,124 +755,124 @@
 // e: modal PinChage
 
 
-// .field{
-//     margin-top: 4rem;
-//     .field_tit{
-//         padding-bottom: 1.2rem;
-//         border-bottom: .1rem solid #a4a6aa;
-//         @include FontTitle16;
-//     }
-//     .field_body{
-//         padding: $FormBasicPadding 0;
-//         border-bottom : .1rem solid #f2f3f5;
-//         position: relative;
-//         .info_head{
-//             display: block;
-//             color: $ColorSubTxt;
-//             @include FontBody13;
-//             &.impt span{
-//                 position: relative;
-//                 &::after{
-//                     content: '*';
-//                     color: $ColorPrimary;
-//                     @include FontBody13;
-//                     display: inline-block;
-//                     position: absolute;
-//                     top: 0;
-//                     left: calc(100% + .2rem);
-//                 }
-//             }
-//         }
-//         .info_body{
-//             @include FontBody16;
-//             display: flex;
-//             align-items: stretch;
-//             .stat{
-//                 &.negative{
-//                     color: $ColorNegative;
-//                 }
-//                 &.positive{
-//                     color: $ColorPositive;
-//                 }
-//             }
-//             strong{
-//                 display: block;
-//                 position: relative;
-//                 word-break: break-all;
-//                 word-wrap: break-word;
-//                 & + strong{
-//                     margin-left: 1.3rem;
-//                     &::before{
-//                         content:'';
-//                         display: block;
-//                         width: .1rem;
-//                         height: 1.2rem;
-//                         background-color: #cbcdcf;
-//                         position: absolute;
-//                         top: calc(50% - .5rem);
-//                         left: -.6rem;
-//                     }
-//                 }
-//             }
-//             > div{
-//                 margin-top: .8rem;
-//             }
-//             textarea{
-//                 margin-top: .8rem;
-//                 box-sizing: border-box;
-//                 &::-webkit-scrollbar{
-//                     display: none;
-//                 }
-//             }
-//             .select{
-//                 margin-top: .8rem;
-//                 height: auto;
-//                 @include FontBody14;
-//                 word-break: keep-all;
-//                 word-wrap: break-word;
-//                 + .btn.select{
-//                     margin-left: .8rem;
-//                 }
-//             }
-//             .cube_references{
-//                 flex: 0 1 auto;
-//             }
-//             .input_group{
-//                 margin-top: .8rem;
-//                 input{
-//                     box-sizing: border-box;
-//                 }
-//                 &.file{
-//                     margin-top:0;
-//                 }
-//             }
-//         }
-//     }
-// }
-// .field_body{
-//     .tooltip{
-//         display: inline-block;
-//         .btn.info{
-//             position: relative;
-//             top : .3rem;
-//         }
-//         .tooltip_body{
-//             margin-top : 1rem;
-//             left: -.5rem;
-//             &::before{
-//                 left: .6rem;
-//             }
-//         }
-//     }
-//     .btn.edu_time {
-//         padding: .6rem 1.2rem;
-//         color: $ColorSubTxt;
-//         @include FontBody13;
-//         border: .1rem solid $FormBasicBorder;
-//         border-radius: $FormBasicRadius;
-//         position: absolute;
-//         top: 50%;
-//         right: 0;
-//         transform: translateY(-50%);
-//     }
-// }
+.field{
+    margin-top: 4rem;
+    .field_tit{
+        padding-bottom: 1.2rem;
+        border-bottom: .1rem solid #a4a6aa;
+        @include FontTitle16;
+    }
+    .field_body{
+        padding: $FormBasicPadding 0;
+        border-bottom : .1rem solid #f2f3f5;
+        position: relative;
+        .info_head{
+            display: block;
+            color: $ColorSubTxt;
+            @include FontBody13;
+            &.impt span{
+                position: relative;
+                &::after{
+                    content: '*';
+                    color: $ColorPrimary;
+                    @include FontBody13;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: calc(100% + .2rem);
+                }
+            }
+        }
+        .info_body{
+            @include FontBody16;
+            display: flex;
+            align-items: stretch;
+            .stat{
+                &.negative{
+                    color: $ColorNegative;
+                }
+                &.positive{
+                    color: $ColorPositive;
+                }
+            }
+            strong{
+                display: block;
+                position: relative;
+                word-break: break-all;
+                word-wrap: break-word;
+                & + strong{
+                    margin-left: 1.3rem;
+                    &::before{
+                        content:'';
+                        display: block;
+                        width: .1rem;
+                        height: 1.2rem;
+                        background-color: #cbcdcf;
+                        position: absolute;
+                        top: calc(50% - .5rem);
+                        left: -.6rem;
+                    }
+                }
+            }
+            > div{
+                margin-top: .8rem;
+            }
+            textarea{
+                margin-top: .8rem;
+                box-sizing: border-box;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+            .select{
+                margin-top: .8rem;
+                height: auto;
+                @include FontBody14;
+                word-break: keep-all;
+                word-wrap: break-word;
+                + .btn.select{
+                    margin-left: .8rem;
+                }
+            }
+            .cube_references{
+                flex: 0 1 auto;
+            }
+            .input_group{
+                margin-top: .8rem;
+                input{
+                    box-sizing: border-box;
+                }
+                &.file{
+                    margin-top:0;
+                }
+            }
+        }
+    }
+}
+.field_body{
+    .tooltip{
+        display: inline-block;
+        .btn.info{
+            position: relative;
+            top : .3rem;
+        }
+        .tooltip_body{
+            margin-top : 1rem;
+            left: -.5rem;
+            &::before{
+                left: .6rem;
+            }
+        }
+    }
+    .btn.edu_time {
+        padding: .6rem 1.2rem;
+        color: $ColorSubTxt;
+        @include FontBody13;
+        border: .1rem solid $FormBasicBorder;
+        border-radius: $FormBasicRadius;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
