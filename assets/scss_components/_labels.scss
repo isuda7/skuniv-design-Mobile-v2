@@ -29,6 +29,29 @@
     }
 }
 
+.label.style2 {
+    min-width:2.6rem;
+    height:1.8rem;
+    padding:0 0.3rem;
+    background-color: #F2F3F5;
+    border-radius: $RadiusSmall;
+    @include FontBody12;
+    font-weight:400;
+    color:$ColorSubTxt;
+      &.primary {
+        background: rgba(255, 102, 77, 0.2);
+        color:$ColorPrimary;
+    }
+}
+.theme_dark .label.style2 {
+    background-color: rgba(255,255,255,0.2);
+    color : #fff;
+    &.primary {
+        background: rgba(255, 102, 77, 0.2);
+        color:$ColorPrimary;
+    }
+}
+
 // Contents
 .label.date {
     padding:0;

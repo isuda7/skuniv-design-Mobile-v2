@@ -9,6 +9,10 @@
         .item_body {
             padding:1.2rem 2rem 2rem;
         }
+        .item_util {
+            top:2.2rem;
+            right:1.2rem;
+        }
     }
     .community_category_wrap{
         padding : 0.8rem 0 2rem;
@@ -131,11 +135,19 @@
 }
 // 피드
 .feed_list_wrap {
+    .feed_list.out_sec {
+        border-bottom:1px solid #f2f3f5;
+        padding:0 2rem;
+    }
     .feed_list {
+        margin-top:2rem;
+        & > .label {
+            margin-bottom:0.8rem;
+        }
         .desc {
             & > .cate {
                 @include FontBody13;
-                margin:2.4rem 0 0.8rem;
+                margin:0m 0 0.8rem;
                 .split {
                     position: relative;
                     display:inline-block;
