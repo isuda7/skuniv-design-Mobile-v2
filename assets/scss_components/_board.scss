@@ -527,3 +527,41 @@
 		}
 	}
 }
+
+// 스템프
+.board_stamp {
+	@include BoardItem;
+	padding: 1.6rem 2rem;
+	border-bottom: 1px solid #F2F3F5;
+	.item_thumb {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		width: 10rem;
+		height: 6.8rem;
+		margin-right: 1.2rem;
+		background-color: #f2f3f5;
+		img {
+			width:6rem;
+			height:6rem;
+		}
+	}
+	.item_title {
+		.sub_txt {
+			&+.title {
+				margin-top: 0.2rem;
+			}
+		}
+		.title {
+			color: #000;
+			@include FontBody14;
+			@include Ellipsis2;
+		}
+	}
+	.item_foot {
+		margin-top: 1.4rem;
+		.date {
+			color:$ColorSubTxt;
+		}
+	}
+}

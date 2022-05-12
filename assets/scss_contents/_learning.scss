@@ -2706,6 +2706,44 @@
         .note_item +  .note_item {
             margin-top:1.2rem;
         }
+        // 코멘트
+        .note_comment {
+            .note_history {
+                @include FontBody12;
+                margin-bottom:0.8rem;
+                color:$ColorSubTxt;
+            }
+            .note_task {
+                display:flex;
+                justify-content: space-between;
+                margin-top:0.8rem;
+                .repley {
+                    display:flex;
+                    align-items: center;
+                    color:#A4A6AA;
+                    .count {
+                        margin-left:0.4rem;
+                        color:$ColorPrimary;
+                        font-weight: 700;
+                    }
+                }
+                .like {
+                    display:flex;
+                    align-items: center;
+                }
+                .btn.ico.like {
+                    &::before {
+                        width:1.6rem;
+                        height:1.6rem;
+                        margin-right:0.4rem;
+                        background-image: url('../img/icons_16_ic_like_off_grey_06.svg');
+                    }
+                    &.is_active::before {
+                        background-image:url('../img/icons_16_ic_like_on.svg');
+                    }
+                }
+            }
+        }
     }
     .more_area {
         padding:1.4rem 0;
