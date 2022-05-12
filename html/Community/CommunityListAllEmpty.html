@@ -66,7 +66,7 @@
 				<!-- 카테고리 -->
 				<div class="community_category_wrap">
 					<div class="chip filter">
-						<input type="radio" name="filterChip" id="filterChip1" tabindex="0" class="hidden" checked>
+						<input type="radio" name="filterChip" id="filterChip1" tabindex="0" class="hidden" checked="">
 						<label for="filterChip1">전체</label>
 					</div>
 					<div class="chip filter">
@@ -89,27 +89,30 @@
 				<!-- // 카테고리 -->
                 <div class="tab_panel community_page">
                     <div class="community_list_wrap">
-                        <div class="join_community_list">
-							<div class="head flex_area centered">
-								<div class="left">
-									<h2 class="heading2">가입한 커뮤니티&nbsp;<span class="count primary">5</span></h2>
-								</div>
-								<div class="right flex_area centered">
-									<div class="checkbox basic">
-										<input type="checkbox" name="checkbox1" id="running_ck" tabindex="0" class="hidden">
-										<label for="running_ck"><span>운영 중</span></label>
-									</div>
-									<span class="split"></span>
-									<button type="button" class="btn text arw_expand pad_l0 pad_r0">최신순</button>
-								</div>
+						<div class="board_toolbar">
+							<div class="board_count">
+								<h2 class="heading2">가입한 커뮤니티&nbsp;<span class="count primary">5</span></h2>
 							</div>
-							<div class="card_community list_box mar_t0">
+							<div class="board_util">
+								<div class="checkbox basic large">
+									<input type="checkbox" name="checkbox1" id="running_ck" tabindex="0" class="hidden">
+									<label for="running_ck"><span>운영 중</span></label>
+								</div>
+								<span class="split"></span>
+								<button type="button" class="btn text arw_expand pad_l0 pad_r0">최신순</button>
+							</div>
+						</div>
+						<!-- 가입한 커뮤니티 -->
+                        <div class="board_community_list type_simple">
+							<div class="board_community">
 								<a href="javascript:void(0)" class="item_body">
 									<div class="item_thumb">
 										<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-community01.png')" alt=""></span>
 									</div>
 									<div class="item_title">
-										<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></p>
+										<p class="title">
+											<strong>[ Management College ] _ 직무 Essential 과정</strong>
+										</p>
 									</div>
 								</a>
 								<div class="item_util">
@@ -119,13 +122,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="card_community list_box mar_t0">
+							<div class="board_community">
 								<a href="javascript:void(0)" class="item_body">
 									<div class="item_thumb">
 										<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-community01.png')" alt=""></span>
 									</div>
 									<div class="item_title">
-										<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></p>
+										<p class="title">
+											<strong>[ Management College ] _ 직무 Essential 과정</strong>
+										</p>
 									</div>
 								</a>
 								<div class="item_util">
@@ -135,13 +140,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="card_community list_box mar_t0">
+							<div class="board_community">
 								<a href="javascript:void(0)" class="item_body">
 									<div class="item_thumb">
 										<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-community01.png')" alt=""></span>
 									</div>
 									<div class="item_title">
-										<p class="title"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></p>
+										<p class="title">
+											<strong>[ Management College ] _ 직무 Essential 과정</strong>
+										</p>
 									</div>
 								</a>
 								<div class="item_util">
@@ -152,20 +159,28 @@
 								</div>
 							</div>
                         </div>
-						<div class="divider"></div>
-						<div class="all_community_list">
-							<div class="head flex_area centered">
-								<div class="left">
-									<h2 class="heading2">전체 커뮤니티&nbsp;<span class="count primary">0</span></h2>
-								</div>
-								<div class="right flex_area centered blind">
-									<button type="button" class="btn text arw_expand pad_l0 pad_r0">최신순</button>
-								</div>
+						<!-- //가입한 커뮤니티 -->
+						<div class="list_action out_sec">
+							<button type="button" class="btn text arw_expand">전체보기</button>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="community_list_wrap">
+						<div class="board_toolbar">
+							<div class="board_count">
+								<h2 class="heading2">전체 커뮤니티&nbsp;<span class="count primary">0</span></h2>
 							</div>
-                            <div class="no_data">
-                                <p class="sub_txt">모든 ‘AI/DT’에 가입되었습니다.<br />가입한 커뮤니티에서 활동을 시작해보세요.</p>
-                            </div>
-                        </div>
+							<div class="board_util blind">
+								<button type="button" class="btn text arw_expand pad_l0 pad_r0">최신순</button>
+							</div>
+						</div>
+						<!-- no data -->
+						<div class="no_data">
+							<p class="sub_txt">모든 ‘AI/DT’에 가입되었습니다.<br />가입한 커뮤니티에서 활동을 시작해보세요.</p>
+						</div>
+						<!-- //no data -->
                     </div>
                 </div>
 			</div>

@@ -259,6 +259,24 @@
 	@include BoardItem;
 	padding: 1.6rem 0;
 	border-bottom: 1px solid #F2F3F5;
+	&_list {
+		// Case 좌우패딩 초기화
+		&.out_sec {
+			.board_community {
+				padding-left:$GapSideBase;
+				padding-right:$GapSideBase;
+				.item_util {
+					right:2rem;
+				}
+			}
+		}
+		// Case 마지막라인 초기화
+		&.type_simple {
+			.board_community:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
 	.item_body {
 		flex-wrap: wrap;
 	}
