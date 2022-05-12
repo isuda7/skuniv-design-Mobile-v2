@@ -4,14 +4,11 @@
 
 // community common
 .community_container {
-    .card_community.main_head {
-        border:0;
-        .item_body {
-            padding:1.2rem 2rem 2rem;
-        }
-        .item_util {
-            top:2.2rem;
-            right:1.2rem;
+    .board_community.main_profile {
+        padding:1.2rem 2rem 2rem 2rem;
+        & > .item_util {
+            top:2.4rem;
+            right:2rem;
         }
     }
     .community_category_wrap{
