@@ -371,6 +371,9 @@
         &.has_line {
             border-top:1px solid #F2F3F5;
         }
+        &:first-child {
+            padding-top:1.6rem;
+        }
         & + .filter_sec.has_line {
             margin-top:3.2rem;
             padding-top:2.4rem;

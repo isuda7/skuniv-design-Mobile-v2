@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+</head>
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap modal_slide_new is_active is_visible">
+        <div class="modal modal_bottomsheet modal_filter type_list">
+            <div class="modal_header">
+				<button type="button" class="btn ico back"><span class="blind">뒤로가기</span></button>
+                <h3 class="modal_tit">교육유형</h3>
+				<div class="header_right">
+					<button type="button" class="btn text">전체 초기화</button>
+				</div>
+            </div>
+            <div class="modal_content">
+				<!-- Note 작성일자 -->
+				<div class="filter_sec">
+					<h4 class="heading2">Note 작성일자</h4>
+					<div class="filter_body">
+						<div class="filter_selector">
+							<div class="radio_group stick">
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter11" tabindex="0" class="hidden" checked />
+									<label for="filter11">1주</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter12" tabindex="0" class="hidden" />
+									<label for="filter12">1개월</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter13" tabindex="0" class="hidden" />
+									<label for="filter13">1개월</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter14" tabindex="0" class="hidden" />
+									<label for="filter14">3개월</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter15" tabindex="0" class="hidden" />
+									<label for="filter15">직접설정</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // Note 작성일자 -->
+				<!-- Category -->
+				<div class="filter_sec has_line">
+					<h4 class="heading2">카테고리</h4>
+					<div class="filter_body">
+						<ul class="filter_list">
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist1" tabindex="0" class="hidden" />
+									<label for="checklist1"><span>전체 <span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist2" tabindex="0" class="hidden" />
+									<label for="checklist2"><span>AI<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist3" tabindex="0" class="hidden" />
+									<label for="checklist3"><span>DT<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist4" tabindex="0" class="hidden" />
+									<label for="checklist4"><span>행복<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist" id="radiolist1" tabindex="0" class="hidden" />
+									<label for="radiolist1"><span>SV-ESG<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist2" tabindex="0" class="hidden" />
+									<label for="radiolist2"><span>혁신디자인<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist3" tabindex="0" class="hidden" />
+									<label for="radiolist3"><span>Global<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist4" tabindex="0" class="hidden" />
+									<label for="radiolist4"><span>Leadership<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist5" tabindex="0" class="hidden" />
+									<label for="radiolist5"><span>Management<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist6" tabindex="0" class="hidden" />
+									<label for="radiolist6"><span>Leadership<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist7" tabindex="0" class="hidden" />
+									<label for="radiolist7"><span>미래반도체<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist8" tabindex="0" class="hidden" />
+									<label for="radiolist8"><span>미래반도체<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist9" tabindex="0" class="hidden" />
+									<label for="radiolist9"><span>Green<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist10" tabindex="0" class="hidden" />
+									<label for="radiolist10"><span>BM Design &amp; Storytelling<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist11" tabindex="0" class="hidden" />
+									<label for="radiolist11"><span>SK경영<span class="count">626</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="radio basic">
+									<input type="radio" name="radiolist1" id="radiolist12" tabindex="0" class="hidden" />
+									<label for="radiolist12 "><span>Lifestyle<span class="count">626</span></span></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // Category -->
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">선택(2)</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>

@@ -22,11 +22,8 @@
 	.board_util {
 		display: flex;
 		align-items: center;
-		.btn.text:last-child {
-			margin-right:-1rem;
-		}
-		.arw_expand:last-child {
-			margin-right:-1rem;
+		.btn.text {
+			padding:0;
 		}
 		.btn.ico {
 			& + .btn.ico {
@@ -44,6 +41,21 @@
 			}
 			&.playlist::before {
 				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
+			}
+		}
+		&.has_split {
+			.split {
+				display:block;
+				width:1px;
+				height:1.2rem;
+				background-color:#e3e4e5;
+				margin:0 1rem;
+			}
+			.btn.text {
+				padding:0;
+			}
+			.btn.ico + .btn.ico {
+				margin-left:0;
 			}
 		}
 	}

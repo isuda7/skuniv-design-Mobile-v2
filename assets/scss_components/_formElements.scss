@@ -131,6 +131,7 @@ textarea.basic {
     border-radius:$FormBasicRadius;
     font-size:1.4rem;
     white-space: normal;
+    color:#000;
     &::placeholder {
         color: #a4a6aa;
     }

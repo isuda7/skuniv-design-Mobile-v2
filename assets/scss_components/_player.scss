@@ -408,8 +408,10 @@
     @include PlayerFullscreen;
 }
 @media all and (orientation: landscape) {
-    .cube_player {
-        @include PlayerFullscreen;
+    .cube_player_sec {
+        .cube_player {
+            @include PlayerFullscreen;
+        }
     }
     .player_zindex {
         padding:8rem 2rem 0;
