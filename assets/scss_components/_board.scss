@@ -455,6 +455,7 @@
 		.item_title {
 			.title {
 				min-height:4rem;
+				@include FontBody14;
 				@include Ellipsis2;
 			}
 		}
