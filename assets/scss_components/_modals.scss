@@ -31,6 +31,9 @@
             width:3.2rem;
             height:3.2rem;
             padding:0;
+            & + .ico.btn {
+                margin-left:1.6rem;
+            }
             &::before {
                 width:2.4rem;
                 height:2.4rem;
@@ -47,6 +50,15 @@
             }
             &.back::before {
                 background-image:url('../img/icons_24_ic_back_black.svg');
+            }
+            &.bookmark::before {
+                background-image: url('../img/icons_24_ic_appbarstar_off_black.svg');
+            }
+            &.bookmark.is_active::before {
+                background-image: url('../img/icons_24_ic_star_on_primary.svg');
+            }
+            &.share::before {
+                background-image: url('../img/icons_24_ic_share_black.svg');
             }
         }
     }
@@ -371,9 +383,6 @@
         &.has_line {
             border-top:1px solid #F2F3F5;
         }
-        &:first-child {
-            padding-top:1.6rem;
-        }
         & + .filter_sec.has_line {
             margin-top:3.2rem;
             padding-top:2.4rem;
@@ -423,6 +432,13 @@
 
                 }
             }
+        }
+    }
+    .filter_selector_custom {
+        margin-top:0.8rem;
+        display: none;
+        &.is_visible {
+            display: block;
         }
     }
     .filter_list {
@@ -491,6 +507,9 @@
     &.type_list .modal_content {
         .filter_sec:first-child {
             padding-top:0rem;
+        }
+        .filter_sec.gap_first {
+            padding-top:1.6rem;
         }
     }
 }
