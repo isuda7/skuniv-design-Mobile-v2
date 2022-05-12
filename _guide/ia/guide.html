@@ -36,7 +36,7 @@
 				AddressTarget(w, $(this));
 			})
 			$('.g_menu a').each(function(){
-				$(this).click(function(){
+				$(this).off('click').on('click', function(){
 					var gap = $('.g_gnb_area').outerHeight();
 					var target = $(this).attr('href');
 					let posTop = $(target).offset().top - gap;
