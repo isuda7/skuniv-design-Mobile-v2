@@ -321,43 +321,90 @@
        .community_head {
            text-align: center;
            .item_body{
+               display: block;
+                .item_thumb {
+                    overflow: hidden;
+                    .thumb {
+                        display: inline-block;
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 50%;
+                    }
+                }
+                .item_title {
+                    .title {
+                        @include FontTitle18;
+                    }
+                }
                 .item_foot {
+                    display: block;
+                    margin-top: 1.6rem;
+                    @include FontBody14;
+                    color: $ColorSubTxt;
+                    overflow: hidden;
+                    width:100%;
                     .info_area {
-                        display:flex;
+                        justify-content: center;
+                        display: flex;
                         align-items: center;
-                        justify-content:space-between;
-                        margin-top:1.2rem;
-                        .left {
+                        width:100%;
+                        overflow: hidden;
+                        &::before {
+                            content:'';
+                            position: relative;
+                            top:1px;
                             display:flex;
+                            flex: none;
+                            width:1.6rem;
+                            height:1.6rem;
+                            margin:0 0.4rem 0 0;
+                            background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+                        }
+                        .username {
+                            flex: 0 1 auto;
+                            @include Ellipsis1;
+                        }
+                        .date {
+                            display: flex;
                             align-items: center;
-                            .username {
-                                display:flex;
-                                align-items: center;
-                                .avata {
-                                    width:2rem;
-                                    height:2rem;
-                                    margin-right:0.4rem;
-                                }
-                                .name {
-                                    @include FontBody13;
-                                }
+                            flex: none;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 1px;
+                                height: 1rem;
+                                margin-right: 0.8rem;
+                                margin-left: 0.8rem;
+                                background-color: #CBCDCF;
                             }
-                            .split {
-                                display:block;
-                                width:1px;
-                                height:1rem;
-                                margin:0 0.8rem;
-                                background-color: #e3e4e5;
+                        }
+                        .member {
+                            display: flex;
+                            align-items: center;
+                            flex: none;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 1px;
+                                height: 1rem;
+                                margin-right: 0.8rem;
+                                margin-left: 0.8rem;
+                                background-color: #CBCDCF;
                             }
-                            .date {
-                                @include FontBody13;
-                                color:#a4a6aa;
+                            &::after {
+                                content: "";
+                                position: relative;
+                                display: block;
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                margin-left: 0.2rem;
+                                background-image: url(../img/icons_12_ic_chervron_right_grey_06.svg);
                             }
                         }
                     }
                 }
             }
-        } 
+        }
     }
     .detailinfo_page {
         background-color:#f8f8fa;
