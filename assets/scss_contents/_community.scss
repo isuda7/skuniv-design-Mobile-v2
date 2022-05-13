@@ -10,6 +10,22 @@
             right:2rem;
         }
     }
+    .community_category_wrap{
+        padding : 0.8rem 0 0;
+        width : 100%;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        .chip{
+            flex: none;
+            &+.chip {
+                margin-left : 0.8rem;
+            }
+        }
+    }
     .split {
         display: block;
         width: 1px;
@@ -51,67 +67,67 @@
             background-position-y: bottom;
         }
     }
-}
-// Profile Header
-.community_head {
-    width:100%;
-    padding:2rem;
-    .profile_link {
-        display: flex;
-        flex-wrap: wrap;
-        .avata_area {
-            flex:none;
-            margin-right:2rem;
-            .avata {
-                width:5.2rem;
-                height:5.2rem;
-                border-radius: 50%;
+    // Profile Header
+    .community_head {
+        width:100%;
+        padding:2rem;
+        .profile_link {
+            display: flex;
+            flex-wrap: wrap;
+            .avata_area {
+                flex:none;
+                margin-right:2rem;
+                .avata {
+                    width:5.2rem;
+                    height:5.2rem;
+                    border-radius: 50%;
+                }
             }
-        }
-        .title_area {
-            width:calc(100% - 7.2rem);
-            overflow: hidden;
-            .title {
-                display:flex;
-                align-items: center;
+            .title_area {
+                width:calc(100% - 7.2rem);
                 overflow: hidden;
-                &::after {
-                    content:"";
-                    flex:none;
-                    display:block;
-                    width:1.2rem;
-                    height:1.2rem;
-                    margin-left:0.2rem;
-                    background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
+                .title {
+                    display:flex;
+                    align-items: center;
+                    overflow: hidden;
+                    &::after {
+                        content:"";
+                        flex:none;
+                        display:block;
+                        width:1.2rem;
+                        height:1.2rem;
+                        margin-left:0.2rem;
+                        background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
+                    }
+                    .name {
+                        flex:0 1 auto;
+                        @include FontTitle18;
+                        color:#000;
+                    }
                 }
-                .name {
-                    flex:0 1 auto;
-                    @include FontTitle18;
-                    color:#000;
+                .follow {
+                    display:flex;
+                    align-items: center;
+                    margin-top:0.4rem;
+                    .split {
+                        display:block;
+                        width:1px;
+                        height:1rem;
+                        margin:0 1.2rem;
+                        background-color: #e3e4e5;
+                    }
+                    .tit {
+                        @include FontBody14;
+                    }
+                    .count {
+                        margin-left:0.4rem;
+                        @include FontTitle14;
+                        color:$ColorPrimary;
+                    }
                 }
-            }
-            .follow {
-                display:flex;
-                align-items: center;
-                margin-top:0.4rem;
-                .split {
-                    display:block;
-                    width:1px;
-                    height:1rem;
-                    margin:0 1.2rem;
-                    background-color: #e3e4e5;
-                }
-                .tit {
-                    @include FontBody14;
-                }
-                .count {
-                    margin-left:0.4rem;
-                    @include FontTitle14;
-                    color:$ColorPrimary;
-                }
-            }
+            }    
         }
-    }
+    } 
 }
 // 피드
 .feed_list_wrap {
@@ -304,7 +320,44 @@
     .modal_content {
        .community_head {
            text-align: center;
-       }
+           .item_body{
+                .item_foot {
+                    .info_area {
+                        display:flex;
+                        align-items: center;
+                        justify-content:space-between;
+                        margin-top:1.2rem;
+                        .left {
+                            display:flex;
+                            align-items: center;
+                            .username {
+                                display:flex;
+                                align-items: center;
+                                .avata {
+                                    width:2rem;
+                                    height:2rem;
+                                    margin-right:0.4rem;
+                                }
+                                .name {
+                                    @include FontBody13;
+                                }
+                            }
+                            .split {
+                                display:block;
+                                width:1px;
+                                height:1rem;
+                                margin:0 0.8rem;
+                                background-color: #e3e4e5;
+                            }
+                            .date {
+                                @include FontBody13;
+                                color:#a4a6aa;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
     }
     .detailinfo_page {
         background-color:#f8f8fa;
