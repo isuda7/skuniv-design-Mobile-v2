@@ -4,6 +4,9 @@
 
 // community common
 .community_container {
+    .tab.style1 {
+        margin-top:2.8rem;
+    }
     .board_community.main_profile {
         & > .item_util {
             top:2.4rem;
@@ -26,13 +29,6 @@
             }
         }
     }
-    .split {
-        display: block;
-        width: 1px;
-        height: 1rem;
-        margin: 0 1.2rem;
-        background-color: #e3e4e5;
-    }
     .count.primary {
         color:#FF664D;
     }
@@ -44,9 +40,12 @@
     }
     .btn.ico {
         flex:none;
-        width:3.2rem;
-        height:3.2rem;
+        width:2.4rem;
+        height:2.4rem;
         padding:0;
+        & + .btn.ico {
+            margin-left:2.4rem;
+        }
         &::before {
             width:2.4rem;
             height:2.4rem;
@@ -70,13 +69,13 @@
     // Profile Header
     .community_head {
         width:100%;
-        padding:2rem;
+        padding:1.2rem $GapSideBase 1.6rem $GapSideBase;
         .profile_link {
             display: flex;
             flex-wrap: wrap;
             .avata_area {
                 flex:none;
-                margin-right:2rem;
+                margin-right:1.2rem;
                 .avata {
                     width:5.2rem;
                     height:5.2rem;
@@ -102,13 +101,14 @@
                     .name {
                         flex:0 1 auto;
                         @include FontTitle18;
+                        @include Ellipsis1;
                         color:#000;
                     }
                 }
                 .follow {
                     display:flex;
                     align-items: center;
-                    margin-top:0.4rem;
+                    margin-top:0.6rem;
                     .split {
                         display:block;
                         width:1px;
@@ -125,12 +125,13 @@
                         color:$ColorPrimary;
                     }
                 }
-            }    
+            }
         }
-    } 
+    }
 }
 // 피드
 .feed_list_wrap {
+    padding-top:0.4rem;
     .feed_list.out_sec {
         border-bottom:1px solid #f2f3f5;
         padding:0 2rem;
@@ -143,7 +144,7 @@
         .desc {
             & > .cate {
                 @include FontBody13;
-                margin:0m 0 0.8rem;
+                margin:0 0 0.8rem;
                 .split {
                     position: relative;
                     display:inline-block;
@@ -228,10 +229,14 @@
             }
         }
         .feed_btn {
-            padding:1rem 2rem;
+            padding:1.3rem 2rem 1.4rem;
             border-top:1px solid #f2f3f5;
             display: flex;
-            & > .right {
+            > .left {
+                display: flex;
+                align-items: center;
+            }
+            > .right {
                 display: flex;
                 align-items: center;
                 margin-left:auto;
@@ -255,6 +260,11 @@
     }
     .no_data {
         margin: 6rem 0 7rem;
+    }
+    &:last-child {
+        .no_data {
+            margin: 6rem 0 3rem;
+        }
     }
 }
 // 팔로워
@@ -286,7 +296,7 @@
                 margin-left:auto;
                 flex: none;
                 & > button {
-                    padding:0.5rem 2rem;
+                    padding:0.4rem 2rem 0.6rem 2rem;
                 }
                 & > button.primary {
                     background-color: inherit;
