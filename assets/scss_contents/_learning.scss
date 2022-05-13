@@ -2969,7 +2969,7 @@
         .note_body {
             .note_txt {
                 .txt {
-                    @include Ellipsis2;
+                    // @include Ellipsis2;
                     margin:0.8rem 0;
                     height : 4.4rem;
                 }
@@ -3032,7 +3032,7 @@
         display: flex;
         align-items: center;
         padding:1.4rem 0 1.4rem;
-        .left {
+        > .left {
             display: flex;
             align-items: center;
             .btn_down {
@@ -3046,8 +3046,11 @@
                 background-color: #151617;
             }
         }
-        .right {
+        > .right {
             margin:-0.6rem -1rem -0.6rem auto;
+        }
+        .tooltip.right .tooltip_body {
+            left:-4rem;
         }
     }
     .script_txt {
