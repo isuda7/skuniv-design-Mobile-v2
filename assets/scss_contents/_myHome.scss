@@ -891,5 +891,33 @@
         padding-bottom:4rem;
     }
 }
-.modal_fullpopup.has_comment {
+
+// 학습 이수 시간
+.myLearning_container {
+    .complete_select {
+        padding:0.4rem 2rem 0.8rem;
+    }
+    .complete_filter {
+        .chip.filter {
+            em {
+                font-weight: 700;
+            }
+        }
+    }
 }
+
+// s: 학습 이수 시간 목록
+.myLearning_list {
+    .item {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        @include FontBody16;
+        height:5.6rem;
+        border-bottom: 1px solid #e3e4e5;
+        .time {
+            font-weight: 700;
+        }
+    }
+}
+// e: 학습 이수 시간 목록
