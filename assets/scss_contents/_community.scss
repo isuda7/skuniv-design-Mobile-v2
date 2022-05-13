@@ -5,7 +5,7 @@
 // community common
 .community_container {
     .board_community.main_profile {
-        & > .item_util {
+        > .item_util {
             top:2.4rem;
             right:2rem;
         }
@@ -137,7 +137,7 @@
     }
     .feed_list {
         margin-top:2rem;
-        & > .label {
+        > .label {
             margin-bottom:0.8rem;
         }
         .desc {
@@ -154,10 +154,10 @@
                     background-color: #000;
                 }
             }
-            & > .txt {
+            > .txt {
                 margin-top:1.6rem;
             }
-            & > .add_img {
+            > .add_img {
                 margin-top:1.6rem;
             }
         }
@@ -169,7 +169,7 @@
             @include FontBody14;
             color :#75777b;
             margin:1.6rem 0;
-            & > .left{
+            > .left{
                 display: flex;
                 align-items: center;
                 flex:0 1 auto;
@@ -191,7 +191,7 @@
                     flex:none;
                 }
             }
-            & > .right {
+            > .right {
                 display: flex;
                 align-items: center;
                 flex:none;
@@ -231,7 +231,7 @@
             padding:1rem 2rem;
             border-top:1px solid #f2f3f5;
             display: flex;
-            & > .right {
+            > .right {
                 display: flex;
                 align-items: center;
                 margin-left:auto;
@@ -265,7 +265,7 @@
             padding:1rem 0;
             display: flex;
             align-items: center;
-            & > .left {
+            > .left {
                 overflow: hidden;
                 .profile_link {
                     display: flex;
@@ -282,7 +282,7 @@
                     }
                 }
             }
-            & > .right {
+            > .right {
                 margin-left:auto;
                 flex: none;
                 & > button {
@@ -334,11 +334,11 @@
                 .item_title {
                     .title {
                         @include FontTitle18;
+                        margin:1.6rem 0;
                     }
                 }
                 .item_foot {
                     display: block;
-                    margin-top: 1.6rem;
                     color: $ColorSubTxt;
                     overflow: hidden;
                     width:100%;
@@ -367,39 +367,26 @@
                             display: flex;
                             align-items: center;
                             flex: none;
-                            &::before {
+                            &::before, &::after {
                                 content: "";
                                 display: block;
                                 width: 1px;
                                 height: 1rem;
                                 margin-right: 0.8rem;
                                 margin-left: 0.8rem;
-                                background-color: #CBCDCF;
+                                background-color: #cbcdcf;
                             }
                         }
-                        .member {
-                            display: flex;
-                            align-items: center;
-                            flex: none;
-                            &::before {
-                                content: "";
-                                display: block;
-                                width: 1px;
-                                height: 1rem;
-                                margin-right: 0.8rem;
-                                margin-left: 0.8rem;
-                                background-color: #CBCDCF;
-                            }
+                        > .btn.text.arw_link {
+                            padding-left:inherit;
                             &::after {
-                                content: "";
-                                position: relative;
-                                display: block;
-                                width: 1.2rem;
-                                height: 1.2rem;
-                                margin-left: 0.2rem;
-                                background-image: url(../img/icons_12_ic_chervron_right_grey_06.svg);
+                                top:inherit;
                             }
                         }
+                    }
+                    .desc {
+                        margin:1.2rem 0 2.4rem;
+                        color:#000;
                     }
                 }
             }
@@ -407,5 +394,29 @@
     }
     .detailinfo_page {
         background-color:#f8f8fa;
+        .info_list_wrap {
+            text-align: center;
+            .info_list {
+                .info_box {
+                    display: flex;
+                    align-items: center;
+                    border-bottom:1px solid #e3e4e5;
+                    padding:2rem 0 1.2rem;
+                    > .left{
+                        color:#75777b;
+                    }
+                    > .right{
+                        flex: none;
+                        margin-left:auto;
+                        margin-right:1rem;
+                    }
+                }
+            }
+            .btn.basic.unregister {
+                @include FontBody13
+                padding:0.6rem 1.2rem;
+                margin-top:3rem;
+            }
+        }
     }
 }
