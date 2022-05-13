@@ -38,27 +38,19 @@
 			<div class="appbar basic">
 				<div class="appbar_left">
 					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-					<h1><strong>FAQ</strong></h1>
+					<h1><strong>학습 이수 시간</strong></h1>
 				</div>
 			</div>
 		</header>
 		<!-- // Header -->
 
 		<!-- Container -->
-		<main role="main" class="container more_container">
+		<main role="main" class="container myLearning_container complete_page">
 			<div class="content_body faq_page">
-                <div class="out_sec sticky">
-                    <div class="board_search_area">
-                        <span class="input_group clear srch is_valued">
-                            <i class="ico srch"><span class="blind">검색</span></i>
-                            <input type="search" placeholder="검색어를 입력하세요" class="basic" />
-                            <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
-                        </span>
-                    </div>
-                </div>
-                <div class="faq_wrap">
+                <div class="sticky">
                     <!-- FAQ Category -->
-                    <div class="chip_filter_group">
+                    <button type="button" class="btn select">2022년</button>
+                    <div class="completeTime_tab">
                         <div class="chip filter">
                             <input type="radio" name="filterChip" id="filterChip1" tabindex="0" class="hidden" checked>
                             <label for="filterChip1">전체</label>
@@ -81,6 +73,8 @@
                         </div>
                     </div>
                     <!-- // FAQ Category -->
+                </div>
+                <div class="completeTime_wrap">
                     <div class="acc_faq_list">
                         <!-- FAQ Accordion -->
                         <div class="acc_faq">
