@@ -28,39 +28,51 @@
 		<!-- // Header -->
 
 		<!-- Container -->
-		<main role="main" class="container test_container atareSurvey_page">
+		<main role="main" class="container survey_container quiz_page">
             <input type="range" value="1" min="0" max="9" class="step_range sticky" />
 			<div class="content_body">
-                <div class="survey_head">
-                    <div class="left">
-                        <span class="label style1 primary">필수</span>
-                    </div>
-                    <div class="step_count right">
-                        <em class="current">1</em>
-                        <b class="split">/</b>
-                        <span class="total">9</span>
-                    </div>
-                </div>
-                <div class="atare_survey">
-                    <h2 class="atare_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다.</h2>
-                    <div class="radio_group">
-                        <div class="radio block">
-                            <input type="radio" name="radioBlock1" id="radioBlock11" tabindex="0" class="hidden" />
-                            <label for="radioBlock11"><span>고객</span></label>
-                        </div>
-                        <div class="radio block">
-                            <input type="radio" name="radioBlock1" id="radioBlock12" tabindex="0" class="hidden" checked />
-                            <label for="radioBlock12"><span>제품</span></label>
-                        </div>
-                        <div class="radio block">
-                            <input type="radio" name="radioBlock1" id="radioBlock13" tabindex="0" class="hidden" />
-                            <label for="radioBlock13"><span>서비스</span></label>
-                        </div>
-                        <div class="radio block">
-                            <input type="radio" name="radioBlock1" id="radioBlock14" tabindex="0" class="hidden" />
-                            <label for="radioBlock14"><span>하이테크</span></label>
-                        </div>
-                    </div>
+				<div class="quiz_wrap">
+					<div class="quiz_step">
+						<div class="label style2 primary">필수</div>
+						<div class="step_count">
+							<em class="current">1</em>
+							<b class="split">/</b>
+							<span class="total">9</span>
+						</div>
+					</div>
+                    <h2 class="quiz_tit">[Team Buildeing]을 통해 영입구성원 동기들을 이해하고 네트워킹 하는데 도움이 되었다. (복수선택)</h2>
+                    <ul class="quiz_form">
+						<li class="item">
+							<div class="checkbox basic large">
+								<input type="checkbox" name="checkboxBlock1" id="checkboxBlock11" tabindex="0" class="hidden" />
+								<label for="checkboxBlock11"><span>고객</span></label>
+							</div>
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
+								<input type="checkbox" name="checkboxBlock1" id="checkboxBlock12" tabindex="0" class="hidden" checked />
+								<label for="checkboxBlock12"><span>제품</span></label>
+							</div>
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
+								<input type="checkbox" name="checkboxBlock1" id="checkboxBlock13" tabindex="0" class="hidden" />
+								<label for="checkboxBlock13"><span>서비스</span></label>
+							</div>
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
+								<input type="checkbox" name="checkboxBlock1" id="checkboxBlock14" tabindex="0" class="hidden" />
+								<label for="checkboxBlock14"><span>하이테크</span></label>
+							</div>
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
+								<input type="checkbox" name="checkboxBlock1" id="checkboxBlock15" tabindex="0" class="hidden" checked />
+								<label for="checkboxBlock15"><span>커뮤니케이션 툴</span></label>
+							</div>
+						</li>
+                    </ul>
                 </div>
 
 				<div class="page_floating">

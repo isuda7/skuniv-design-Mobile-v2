@@ -2414,10 +2414,10 @@
 // e: board Detail 공통
 
 /////////////////////////////////
-// Test, Survey
+// Test, Survey, Quiz
 /////////////////////////////////
 // s: 응시하기
-.test_information {
+.quiz_information {
     margin-top:6.4rem;
     flex:none;
     .info {
@@ -2432,8 +2432,14 @@
 			margin-right:0.4rem;
 			width:1.6rem;
 			height:1.6rem;
-			background-image:url('../img/icons_16_ic_test_grey_06.svg');
+            background: no-repeat center center / 100% auto;
 		}
+        &.test::before {
+            background-image:url('../img/icons_16_ic_test_grey_06.svg');
+        }
+        &.survey::before {
+            background-image:url('../img/icons_16_ic_survey_grey_06.svg');
+        }
     }
     .subject_area {
         text-align: center;
@@ -2447,6 +2453,9 @@
         .title {
             @include FontTitle18;
         }
+        .quiz_complete {
+            margin-top:2rem;
+        }
         // 응시전
         &.is_before {
             padding:4.8rem 0;
@@ -2455,37 +2464,48 @@
         &.is_after {
             padding:2rem 0;
         }
-        // 응시결과
-        .complete_area {
-            margin:2rem auto;
-            text-align: center;
-            .ico.survey {
-                width:5.2rem;
-                height:6.0rem;
-				margin:0 auto;
-                &.pass {
-					background-image: url(../img/icons_60_ic_result_done.svg);
-				}
-                &.fail {
-					background-image: url(../img/icons_60_ic_result_fail.svg);
-				}
-            }
-            .score {
-                margin-top:2.5rem;
-                @include FontTitle18;
-            }
-        }
-        .desc_area {
-            @include FontBody14;
-            color:$ColorSubTxt;
-            strong {
-                @include FontTitle14;
-                color:#000;
+        // 응시완료
+        &.is_completed {
+            padding:4.8rem 0;
+            .complete_desc {
+                strong {
+                    @include FontTitle18;
+                }
             }
         }
     }
 }
 // e: 응시하기
+
+// s: 설문결과
+.quiz_complete {
+    text-align: center;
+    .ico.survey {
+        width:5.2rem;
+        height:6.0rem;
+        margin:0 auto;
+        &.pass {
+            background-image: url(../img/icons_60_ic_result_done.svg);
+        }
+        &.fail {
+            background-image: url(../img/icons_60_ic_result_fail.svg);
+        }
+    }
+    .score {
+        margin-top:2.5rem;
+        @include FontTitle18;
+    }
+    .complete_desc {
+        margin-top:2rem;
+        @include FontBody14;
+        color:$ColorSubTxt;
+        strong {
+            @include FontTitle14;
+            color:#000;
+        }
+    }
+}
+// e: 설문결과
 
 // s: 이수정보
 .course_define {
@@ -2516,18 +2536,160 @@
 }
 // e: 이수정보
 
-// s: 응시하기 설문
-.atare_survey {
-    .atare_tit {
-        margin-bottom:3.2rem;
+// s: 설문
+.quiz_wrap {
+    padding-top:2.4rem;
+    .quiz_step {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom:1.2rem;
+    }
+    .quiz_tit {
         @include FontTitle18;
+        margin-bottom:3.2rem;
+    }
+    .btn_view {
+        width:4.8rem;
+        height: 4.8rem;
+        margin-left:1.2rem;
+        padding:0;
+        border-radius: $RadiusSmall;
+        background: no-repeat center center / cover;
+        &::before {
+            content:"";
+            width:inherit;
+            height:inherit;
+            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
+            border-radius:0.4rem;
+        }
     }
 }
-// e: 응시하기 설문
+// e: 설문
+
+// s: 사진 보기
+.photo_viewer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 1010;
+    width:100%;
+    height:100%;
+    padding:0;
+    background-color: rgba(0, 0, 0, 0.8);
+    .img {
+        max-width:100%;
+        max-height:100%;
+    }
+}
+// e: 사진 보기
+
+// s: 질문 목록
+.quiz_form {
+    .item {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        word-break: keep-all;
+        .checkbox, .radio {
+            display:flex;
+            flex:1 1 auto;
+            width:100%;
+            label {
+                width:100%;
+            }
+        }
+        & + .item {margin-top:2.4rem;}
+    }
+}
+// e: 질문 목록
+
+// e: 질문 결과
+.quiz_result {
+    margin-top:2.4rem;
+    .item + .item {
+        margin-top:2.4rem;
+    }
+    .label.survey {
+        min-width:3.6rem;
+        height:2.2rem;
+        padding:0 0.6rem 0.1rem 0.6rem;
+        border-radius: $RadiusSmall;
+        @include FontBody13;
+        color:#fff;
+        &::before {
+            content:'';
+            display:block;
+            width:1.2rem;
+            height:1.2rem;
+            margin-right:0.5rem;
+        }
+        &.x {
+            background:$ColorPrimary;
+            &::before {
+                background: url('../img/icons_12_ic_delete_white.svg');
+            }
+        }
+        &.o {
+            background:$ColorSecondary;
+            &::before {
+                background: url('../img/icons_12_ic_circle_white.svg');
+            }
+        }
+    }
+    .title {
+        display:block;
+        margin-top:0.8rem;
+        margin-bottom:1.2rem;
+        @include FontTitle16;
+        font-weight: 400;
+        .score {
+            font-weight: 700;
+        }
+    }
+}
+
+// s: 질문 서술형
+.quiz_desc {
+    textarea {
+        height:12.8rem;
+    }
+}
+// e: 질문 서술형
+
+// s: 설문 답변
+.quiz_review {
+    padding-top:1.2rem;
+    &_title {
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .quiz_tit {
+            margin:0;
+        }
+    }
+    &_list {
+        margin-top:1.2rem;
+        .item {
+            padding:1.2rem 0;
+            border-bottom: 1px solid #f2f3f5;
+            .write_id {
+                color: #a4a6aa;
+            }
+            .write_txt {
+                color: $ColorSubTxt;
+            }
+        }
+    }
+}
+// e: 설문 상세
 
 // s: 응시하기 결과
 .atare_result {
-    .atare_tit {
+    .quiz_tit {
         @include FontTitle18;
     }
     .atare_eval {
@@ -2539,51 +2701,6 @@
             color:$ColorSubTxt;
             .cutline {
                 color:$ColorPrimary;
-            }
-        }
-    }
-
-    // 응시문항들
-    .survey_list {
-        margin-top:2.4rem;
-        .item + .item {
-            margin-top:2.4rem;
-        }
-        .label.survey {
-            min-width:3.6rem;
-            height:2.2rem;
-            padding:0 0.6rem 0.1rem 0.6rem;
-            border-radius: $RadiusSmall;
-            @include FontBody13;
-            color:#fff;
-            &::before {
-                content:'';
-                display:block;
-                width:1.2rem;
-                height:1.2rem;
-                margin-right:0.5rem;
-            }
-            &.x {
-                background:$ColorPrimary;
-                &::before {
-                    background: url('../img/icons_12_ic_delete_white.svg');
-                }
-            }
-            &.o {
-                background:$ColorSecondary;
-                &::before {
-                    background: url('../img/icons_12_ic_circle_white.svg');
-                }
-            }
-        }
-        .title {
-            display:block;
-            margin-top:0.8rem;
-            margin-bottom:1.2rem;
-            @include FontTitle16;
-            font-weight: 400;
-            .score {
-                font-weight: 700;
             }
         }
     }
@@ -2630,6 +2747,234 @@
     }
 }
 // e: 응시하기 결과
+
+// Survey Head
+.survey_head {
+    display: flex;
+    align-items: center;
+    > .right{
+        margin-left:auto;
+    }
+    > .total {
+        flex: none;
+        display: block;
+        @include FontBody12;
+        color:#666;
+    }
+    > .quiz_tit {
+        flex: none;
+        display: block;
+    }
+}
+
+.survey_information {
+    margin-top:10rem;
+    > .info {
+        &::before {
+			background-image:url('../img/icons_16_ic_survey_grey_06.svg');
+		}
+    }
+}
+
+// s: Survey Review
+.survey_review {
+    padding-top:1.6rem;
+    &_list {
+        margin-top:1.2rem;
+        .item {
+            display: flex;
+            align-items: center;
+            padding:1.3rem 0;
+            .ico_label {
+                display:flex;
+                align-items: center;
+                flex:none;
+                height:2.2rem;
+                @include FontBody16;
+                color:#1c1d1f;
+                &::before {
+                    content:'';
+                    flex:none;
+                    display:block;
+                    width:2.4rem;
+                    height:2.4rem;
+                    margin:0 0.4rem 0 0.8rem;
+                    background:no-repeat center center / 100% auto;
+                }
+                &.n1::before {
+                    background-image: url('../img/icons_24_ic_verygood.png');
+                }
+                &.n2::before {
+                    background-image: url('../img/icons_24_ic_good.png');
+                }
+                &.n3::before {
+                    background-image: url('../img/icons_24_ic_normal.png');
+                }
+                &.n4::before {
+                    background-image: url('../img/icons_24_ic_bad.png');
+                }
+                &.n5::before {
+                    background-image: url('../img/icons_24_ic_so_bad.png');
+                }
+            }
+        }
+    }
+    &_memo {
+        margin-top:0.8rem;
+        textarea {
+            height:12.8rem;
+        }
+    }
+}
+// e: Survey Review
+
+// s: 통계보기
+.statistics_wrap {
+    padding-bottom:4rem;
+    .statistics_head {
+        padding-top:1.6rem;
+        padding-bottom:1.6rem;
+        border-bottom:1px solid #f2f3f5;
+    }
+    .statistics_body {
+        padding:1.2rem 0 0 0;
+    }
+}
+.statistics_list {
+    > .item {
+        & + .item {
+            margin-top:2.4rem;
+        }
+        .item_head {
+            > .label + .title {
+                margin-top:0.8rem;
+            }
+            .title {
+                @include FontTitle16;
+            }
+        }
+        .item_body {
+            margin-top:1.2rem;
+            .img_area + .graph_area {
+                margin-top:0.8rem;
+            }
+            .title_sub {
+                margin-bottom:0.8rem;
+                @include FontTitle14;
+            }
+            .sub_item + .sub_item{
+                margin-top:1.2rem;
+            }
+        }
+
+        // Type1, Type5, Type6
+        .graph {
+            position: relative;
+            height:3.2rem;
+            border:1px solid #e3e4e5;
+            border-radius: $RadiusSmall;
+            overflow: hidden;
+            & + .graph {
+                margin-top:0.4rem;
+            }
+            .graph_active {
+                display:flex;
+                align-items: center;
+                height:100%;
+                padding:0 1.6rem;
+                white-space: nowrap;
+                background-color: #f8f8fa;
+            }
+            .graph_value {
+                position: absolute;
+                top:0;
+                right:1.2rem;
+                height:100%;
+                display:flex;
+                align-items: center;
+                color:$ColorSubTxt;
+            }
+            &.primary {
+                border-color: $ColorPrimary;
+                .graph_active {
+                    font-weight: 700;
+                    background-color: $ColorPrimaryOpacity;
+                }
+            }
+        }
+        .graph_multi {
+            .graph {
+                display:flex;
+                .graph_active {
+                    font-weight: 700;
+                    &.primary {
+                        background-color: $ColorPrimaryOpacity;
+                    }
+                    &:last-child {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+            .labels {
+                display:flex;
+                justify-content: space-between;
+                margin-top:0.2rem;
+                .label {
+                    color:$ColorSubTxt;
+                    @include FontBody13
+                }
+            }
+        }
+
+        // Type2, Type4
+        .repley_result {
+            .repley_my {
+                padding:0.9rem 1.6rem;
+                border:1px solid #f2f3f5;
+                background-color: #f8f8fa;
+                p {
+                    color:#a4a6aa;
+                }
+            }
+            .repley_other {
+                margin-top:0.4rem;
+                padding:0 1.6rem;
+                border:1px solid #e3e4e5;
+                .other_item {
+                    display:flex;
+                    justify-content: space-between;
+                    padding:0.6rem 0;
+                    color:$ColorSubTxt;
+                    & + .other_item {
+                        border-top:1px solid #f2f3f5;
+                    }
+                    .para {
+                        @include Ellipsis3;
+                    }
+                }
+                .list_action {
+                    margin:0 -1.6rem;
+                }
+            }
+        }
+    }
+}
+// e: 통계보기
+
+// s: 다른 구성원 답변
+.more_other_list {
+    padding-bottom:2rem;
+    .other_item {
+        display:flex;
+        justify-content: space-between;
+        padding:1.2rem 0;
+        color:$ColorSubTxt;
+        & + .other_item {
+            border-top:1px solid #f2f3f5;
+        }
+    }
+}
+// e: 다른 구성원 답변
 
 ///////////////////////////////////////////////////
 // 학습활동
@@ -3067,77 +3412,6 @@
     }
 }
 
-//플레이어 퀴즈
-.videoquiz_page {
-    .btn_view {
-        margin-left:1.2rem;
-        padding:inherit;
-        &::before {
-            content:"";
-            width:4.8rem;
-            height:4.8rem;
-            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
-            border-radius:0.4rem;
-        }
-    }
-    > .content_body {
-        margin-top:2rem;
-        .radio_group, .check_group {
-            .quiz_img {
-                display: flex;
-                align-items: center;
-                & + .quiz_img {
-                    margin-top:0.8rem;
-                }
-            }
-        }
-        .textarea_group {
-            textarea.basic {
-                height:12.8rem;
-            }
-            p.bytes {
-                color:#A4A6AA;
-                text-align: right;
-            }
-        }
-        .wrong_group, .correct_group, .finish_group {
-            > .img {
-                display:inline-block;
-                width:6rem;
-                height:6rem;
-                margin-bottom:2rem;
-            }
-        }
-        .wrong_group {
-            > .img {
-                background-image: url('../img/icons_60_ic_result_fail.svg');
-            }
-        }
-        .correct_group, .finish_group {
-            > .img {
-                background-image: url('../img/icons_60_ic_result_done.svg');
-            }
-        }
-        .tit_other {
-            display: flex;
-            align-items: center;
-            margin-top:-1rem;
-            > .atare_tit {
-                @include Ellipsis2;
-            }
-        }
-        .other_group {
-            .review_other {
-                padding:2rem 0;
-                border-bottom:1px #f2f3f5 solid;
-                .write_id {
-                    color:#a4a6aa;
-                }
-            }
-        }
-    }
-}
-
 //오디오 페이지 플레이어 영상 영역 크기 조정
 .audio_player_sec {
     .cube_player {
@@ -3312,110 +3586,8 @@
 }
 
 ///////////////////////////////////////////////////
-// Survey
+// Survey, Test, Quiz
 ///////////////////////////////////////////////////
-// Survey Head
-.survey_head {
-    display: flex;
-    align-items: center;
-    > .right{
-        margin-left:auto;
-    }
-    > .total {
-        flex: none;
-        display: block;
-        @include FontBody12;
-        color:#666;
-    }
-    > .atare_tit {
-        flex: none;
-        display: block;
-    }
-}
-
-.survey_information {
-    margin-top:10rem;
-    > .info {
-        &::before {
-			background-image:url('../img/icons_16_ic_survey_grey_06.svg');
-		}
-    }
-}
-
-// s: Survey 결과통계 답변 더보기
-.resultmore_list {
-    > ul {
-        margin:0 0 2rem;
-        .list_block {
-            & + .list_block {
-                border-top:1px solid #f2f3f5;
-            }
-            display: flex;
-            align-items: center;
-            color:#75777b;
-            padding:1.2rem 0;
-            > .right {
-                margin-left: auto;
-            }
-        }
-    }
-}
-// e: Survey 결과통계 답변 더보기
-
-// s: Survey Review
-.survey_review {
-    > h2 {
-        margin:1.6rem 0 1.2rem;
-    }
-    .ico_btn {
-        display: flex;
-        align-items: center;
-        padding:1.4rem 0;
-        .ico_label {
-            display:flex;
-            align-items: center;
-            height:2.8rem;
-            flex:none;
-            @include FontBody16;
-            color:#1c1d1f;
-            &::before {
-                content:'';
-                flex:none;
-                display:block;
-                width:2.4rem;
-                height:2.4rem;
-                margin:0 0.4rem 0 0.8rem;
-                background:no-repeat center center / 100% auto;
-            }
-            &.n1::before {
-                background-image: url('../img/icons_24_ic_verygood.png');
-            }
-            &.n2::before {
-                background-image: url('../img/icons_24_ic_good.png');
-            }
-            &.n3::before {
-                background-image: url('../img/icons_24_ic_normal.png');
-            }
-            &.n4::before {
-                background-image: url('../img/icons_24_ic_bad.png');
-            }
-            &.n5::before {
-                background-image: url('../img/icons_24_ic_so_bad.png');
-            }
-        }
-    }
-    > .textarea_group {
-        textarea {
-            height:12.8rem;
-        }
-        .bytes {
-            text-align: right;
-            color:#a4a6aa;
-            @include FontBody12;
-        }
-    }
-}
-// e: Survey Review
 
 ///////////////////////////////////////////////////
 // Webpage, Document
@@ -3572,17 +3744,6 @@
 		padding-top:2rem;
 	}
 }
-
-// s: 응시하기 페이지
-.atareSurvey_page {
-    .content_body {
-        padding-top:2.4rem;
-    }
-    .step_count {
-        margin-bottom:1.2rem;
-    }
-}
-// e: 응시하기 페이지
 
 ///////////////////////////////////////////////////
 // orientation: landscape
