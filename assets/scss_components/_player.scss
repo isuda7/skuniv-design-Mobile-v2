@@ -407,7 +407,21 @@
 .cube_player.is_fullscreen {
     @include PlayerFullscreen;
 }
+
+@media all and (orientation: portrait) {
+    .cube_player_pip {
+        position:fixed;
+        right:2rem;
+        bottom:4rem;
+        width:16rem;
+        height:9rem;
+        z-index: 90;
+    }
+}
 @media all and (orientation: landscape) {
+    .cube_player_pip {
+        display:none;
+    }
     .cube_player_sec {
         .cube_player {
             @include PlayerFullscreen;
