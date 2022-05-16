@@ -272,38 +272,93 @@
     .followlist_wrap {
         margin-top:1.4rem;
         .followlist{
-            padding:1rem 0;
-            display: flex;
-            align-items: center;
-            > .left {
-                overflow: hidden;
-                .profile_link {
-                    display: flex;
-                    align-items: center;
-                    .avata {
-                        width:5.2rem;
-                        height:5.2rem;
-                        border-radius: 50%;
+            .member {
+                padding:1rem 0;
+                display: flex;
+                align-items: center;
+                > .left {
+                    overflow: hidden;
+                    .profile_link {
+                        display: flex;
+                        align-items: center;
+                        .avata {
+                            width:5.2rem;
+                            height:5.2rem;
+                            border-radius: 50%;
+                        }
+                        .name {
+                            @include FontBody16
+                            @include Ellipsis1;
+                            padding:0 1.2rem;
+                            > .ellipsis {   
+                                @include Ellipsis1;
+                            }
+                        }
+                        .name.ico {
+                            display: flex;
+                            align-items: center;
+                            &::before {
+                                content: "";
+                                display:block;
+                                flex:none;
+                                width:1.6rem;
+                                height:1.6rem;
+                                margin-right:0.4rem;
+                            }
+                            &.gold::before {
+                                background-image: url('../img/icons_16_ic_boss_yellow.svg');
+                            }
+                            &.silver::before {
+                                background-image: url('../img/icons_16_ic_boss_grey_04.svg');
+                            }
+                        }
+                        
                     }
-                    .name {
-                        @include FontTitle16;
-                        @include Ellipsis1;
-                        padding:0 1.2rem;
+                }
+                > .right {
+                    margin-left:auto;
+                    flex: none;
+                    & > button {
+                        padding:0.4rem 2rem;
+                    }
+                    & > button.primary {
+                        background-color: inherit;
+                        color:#FF664D;
                     }
                 }
             }
-            > .right {
-                margin-left:auto;
-                flex: none;
-                & > button {
-                    padding:0.4rem 2rem 0.6rem 2rem;
+            .member_info {
+                display:flex;
+                align-items: center;
+                margin-top:0.6rem;
+                color:#75777b;
+                @include FontBody14;
+                border-bottom:1px solid #f2f3f5;
+                padding:0 2rem 1.6rem;
+                .split {
+                    display:block;
+                    width:1px;
+                    height:1rem;
+                    margin:0 1.2rem;
+                    background-color: #e3e4e5;
                 }
-                & > button.primary {
-                    background-color: inherit;
-                    color:#FF664D;
+                .tit {
+                    
+                    
+                }
+                .count {
+                    margin-left:0.4rem;
+                    color:$ColorPrimary;
+                }
+                .date {
+                    flex: none;
+                    margin-left: auto;
                 }
             }
         }
+    }
+    .board_search_area {
+        margin-top:2rem;
     }
 }
 // 모달 컨펌 패스워드
