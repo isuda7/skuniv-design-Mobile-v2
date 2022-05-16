@@ -6,7 +6,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: .6rem 0;
-        justify-content: space-between;
+        justify-content: space-between; //2개일때
         .card_topic {
             flex:none;
             margin: .6rem 0;
@@ -16,24 +16,48 @@
         }
     }
 }
-@media screen and (min-width: 468px) {
-    .topic_list_wrap .card_topic_list {
-        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
-        justify-content: flex-start;
-        .card_topic{
-            min-width: auto;
-            margin: .6rem calc((33.3% - 15.6rem)/2);
+
+.recom_list_wrap{
+    width:100%; 
+    overflow: hidden;
+    .card_cube_list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: .6rem 0;
+        justify-content: space-between;
+        .card_cube{
+            flex:none;
+            margin: .6rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include Shadow3;
         }
     }
+
 }
-@media screen and (min-width: 625px){
-    .topic_list_wrap .card_topic_list {
+@media screen and (min-width: 520px) { //3개
+    .topic_list_wrap .card_topic_list,
+    .recom_list_wrap .card_cube_list {
+        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
+        justify-content: flex-start;
+        .card_topic, 
+        .card_cube {
+            min-width: auto;
+            margin: .6rem calc((33.3% - 15.6rem)/2);
+        }   
+    }
+}
+@media screen and (min-width: 625px){ //4개이상
+    .topic_list_wrap .card_topic_list,
+    .recom_list_wrap .card_cube_list {
         margin: .6rem -.4rem;
         justify-content: flex-start;
-        .card_topic{
+        .card_topic, 
+        .card_cube {
             min-width: auto;
             margin: .6rem .4rem;
         }
     }
 }
-// e: hottopic 전체보기
+// e: hottopic 전체보기 & 상세
