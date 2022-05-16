@@ -12,84 +12,97 @@
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
 </head>
 
-<body>
-	<div class="sub_wrapper has_sticky has_floating">
-		<!-- Header -->
-		<header class="header">
-			<div class="appbar basic">
-				<div class="appbar_left">
-					<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
-					<h1><strong>Video QUIZ</strong></h1>
-				</div>
-			</div>
-		</header>
-		<!-- // Header -->
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
 
-		<!-- Container -->
-		<main role="main" class="container videoquiz_page">
-            <input type="range" value="1" min="0" max="9" class="step_range sticky" />
-			<div class="content_body">
-                <div class="step_count">
-                    <em class="current">2</em>
-                    <b class="split">/</b>
-                    <span class="total">9</span>
-                </div>
-                <div class="atare_survey">
-                    <h2 class="atare_tit">[과목 구성] 특히 인상 깊은 과목이 있으시다면 무엇인가요? (복수선택)</h2>
-                    <div class="check_group">
-						<div class="quiz_img">
-							<div class="checkbox block">
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_fullpopup modal_survey">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">Video QUIZ</h3>
+				<input type="range" value="1" min="0" max="9" class="step_range sticky" />
+            </div>
+            <div class="modal_content">
+                <div class="quiz_wrap">
+					<div class="quiz_step">
+						<div class="step_count">
+							<em class="current">1</em>
+							<b class="split">/</b>
+							<span class="total">9</span>
+						</div>
+					</div>
+                    <h2 class="quiz_tit">[과목 구성] 특히 인상 깊은 과목이 있으시다면 무엇인가요? (복수선택)</h2>
+                    <ul class="quiz_form">
+						<li class="item">
+							<div class="checkbox basic large">
 								<input type="checkbox" name="checkBox1" id="checkBox11" tabindex="0" class="hidden" />
 								<label for="checkBox11"><span>[1일차] Team Building</span></label>
 							</div>
 							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
-						</div>
-						<div class="quiz_img">
-							<div class="checkbox block">
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
 								<input type="checkbox" name="checkBox1" id="checkBox12" tabindex="0" class="hidden" checked />
 								<label for="checkBox12"><span>[1일차] SK History & Biz.</span></label>
 							</div>
 							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
-						</div>
-						<div class="quiz_img">
-							<div class="checkbox block">
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
 								<input type="checkbox" name="checkBox1" id="checkBox13" tabindex="0" class="hidden" checked />
 								<label for="checkBox13"><span>[1일차] SK 인싸되기</span></label>
 							</div>
 							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
-						</div>
-						<div class="quiz_img">
-							<div class="checkbox block">
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
 								<input type="checkbox" name="checkBox1" id="checkBox14" tabindex="0" class="hidden" />
 								<label for="checkBox14"><span>[2일차] ESG 기반의 Financial Story</span></label>
 							</div>
 							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
-						</div>
-						<div class="quiz_img">
-							<div class="checkbox block">
+						</li>
+						<li class="item">
+							<div class="checkbox basic large">
 								<input type="checkbox" name="checkBox1" id="checkBox15" tabindex="0" class="hidden" />
 								<label for="checkBox15"><span>[2일차][3일차] SKMS W/S</span></label>
 							</div>
 							<button type="button" class="btn btn_view"><span class="blind">확인</span></button>
-						</div>
-                    </div>
+						</li>
+                    </ul>
                 </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">다음</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
 
-				<div class="page_floating">
-					<div class="page_action">
-						<button type="button" class="btn basic primary">다음</button>
-					</div>
-				</div>
-			</div>
-		</main>
-		<!-- // Container -->
-
-		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
-			<span class="blind">Scroll to top</span>
-		</button>
-	</div>
 </body>
 
 </html>

@@ -32,7 +32,7 @@ textarea {
 .toggle label,
 .checkbox label {
     position:relative;
-    display:inline-block;
+    display:block;
 }
 .radio label::before,
 .radio label::after,
@@ -163,7 +163,7 @@ textarea.basic {
         height:2rem;
         width:2rem;
         left:0;
-        top:0;
+        top:1px;
     }
     label {
         padding-left:2.0rem;
@@ -199,9 +199,13 @@ textarea.basic {
     label:after {
         height:2.4rem;
         width:2.4rem;
+        top:0;
     }
     label {
         padding-left:2.4rem;
+    }
+    label > span {
+        padding:1px 0 1px 0.8rem;
     }
     label::before {
         background: no-repeat center center / 2.4rem 2.4rem;
@@ -254,6 +258,7 @@ textarea.basic {
 // Radio
 .radio.basic {
     @include FontBody14;
+    line-height: 2rem;
     min-height:2.0rem;
     input,
     label:before {
@@ -296,9 +301,13 @@ textarea.basic {
     label:after {
         height:2.4rem;
         width:2.4rem;
+        top:0;
     }
     label {
         padding-left:2.4rem;
+    }
+    label > span {
+        padding:1px 0 1px 0.8rem;
     }
     label::before {
         background: no-repeat center center / 2.4rem 2.4rem;

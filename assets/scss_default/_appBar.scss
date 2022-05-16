@@ -335,10 +335,15 @@
             background-position-y: bottom;
         }
         &.script {
+            // 조건부 노출
             display:none;
         }
         &.note {
+            // 조건부 노출
             display:none;
+        }
+        &.main::before {
+            background-image: url('../img/icons_24_ic_main_black.svg');
         }
     }
 }

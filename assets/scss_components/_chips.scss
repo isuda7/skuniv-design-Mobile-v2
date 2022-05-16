@@ -93,3 +93,19 @@
         margin:0.5rem 0.4rem;
     }
 }
+.chip_filter_group {
+    padding : .8rem 2rem 1.2rem;
+    width : 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    &::-webkit-scrollbar {
+        display:none;
+    }
+    .chip{
+        flex: none;
+        &+.chip{
+            margin-left : .8rem;
+        }
+    }
+}

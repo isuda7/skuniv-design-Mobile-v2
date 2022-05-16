@@ -32,18 +32,46 @@
 // 페이지 여백 공통화
 .content_body {
 	padding-bottom:4rem;
+	// Empty화면 상하여백 맞추기
+	.flex_area.centered {
+		padding-top:4rem;
+	}
+	&.pad_b0 .flex_area.centered {
+		padding-top:0;
+	}
 }
 .has_floating .content_body {
 	padding-bottom:0.8rem;
+	// Empty화면 상하여백 맞추기
+	.flex_area.centered {
+		padding-top:0.8rem;
+	}
+	&.pad_b0 .flex_area.centered {
+		padding-top:0;
+	}
 }
 //tab_panel의 경우 background-color 가 #000이 아님
 .content_body .tab_panel {
 	margin-bottom : -4rem;
 	padding-bottom : 4rem;
+	// Empty화면 상하여백 맞추기
+	.flex_area.centered {
+		padding-top:4rem;
+	}
+	&.pad_b0 .flex_area.centered {
+		padding-top:0;
+	}
 }
 .has_floating .content_body .tab_panel {
 	margin-bottom : -0.8rem;
 	padding-bottom : 0.8rem;
+	// Empty화면 상하여백 맞추기
+	.flex_area.centered {
+		padding-top:0.8rem;
+	}
+	&.pad_b0 .flex_area.centered {
+		padding-top:0;
+	}
 }
 
 // Styles
