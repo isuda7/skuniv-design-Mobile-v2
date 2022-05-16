@@ -316,7 +316,7 @@
 	.card_foot {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		/* justify-content: space-between; */
 		margin-top: 1.2rem;
 		width:100%;
 		@include FontBody13;
