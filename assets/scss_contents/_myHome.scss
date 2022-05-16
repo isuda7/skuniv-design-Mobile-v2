@@ -785,6 +785,8 @@
                 }
                 .name {
                     @include FontBody13;
+                    word-break: keep-all;
+                    word-wrap: break-word;
                 }
             }
             .split {
@@ -797,10 +799,14 @@
             .date {
                 @include FontBody13;
                 color:#a4a6aa;
+                word-break: keep-all;
+                word-wrap: break-word;
             }
         }
         .right {
             flex:none;
+            display: flex;
+            align-items: center;
             .btn.like {
                 padding:0;
                 @include FontBody12;
