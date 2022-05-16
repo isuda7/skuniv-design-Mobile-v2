@@ -280,6 +280,31 @@
 		.label.recom {
 			color:$ColorPlaylistRecom;
 		}
+		.label.ico{
+			position: relative;
+			&::before{
+				content: '';
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: 100% auto;
+			}
+			&.plList::before{
+				width: 2rem;
+				height: 2rem;
+				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
+			}	
+		}
+		.btn.putinList{
+			color: $ColorPrimary;
+			@include FontBody13;
+			&::before{
+				margin-right: .2rem;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url("../img/icons_16_ic_addplaylist_orange.svg");
+			}
+		}
 	}
 	.card_body {
 		.title {

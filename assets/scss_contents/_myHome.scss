@@ -860,6 +860,9 @@
             &.buy::before {
                 background-image:url('../img/icons_24_ic_putin_black.svg');
             }
+            &.share::before{
+                background-image: url("../img/icons_24_ic_shareslim_black.svg");
+            }
         }
     }
     // 추천받은 메세지
