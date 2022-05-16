@@ -3368,6 +3368,12 @@
             height:12.8rem;
             padding:0.9rem 1.6rem;
         }
+        > .bytes {
+            @include FontBody12;
+            color:#75777b;
+            text-align: right;
+            margin-top:0.4rem;
+        }
     }
 }
 
