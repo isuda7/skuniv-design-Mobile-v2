@@ -327,7 +327,6 @@
 			align-items: center;
 			width:100%;
 			overflow: hidden;
-			@include FontBody13;
 			&::before {
 				content:'';
 				position: relative;
