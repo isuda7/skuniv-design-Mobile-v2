@@ -7,12 +7,6 @@
     .tab.style1 {
         margin-top:2.8rem;
     }
-    .board_community.main_profile {
-        > .item_util {
-            top:2.4rem;
-            right:2rem;
-        }
-    }
     .community_category_wrap{
         padding : 0.8rem 0 0;
         width : 100%;
@@ -127,6 +121,30 @@
                 }
             }
         }
+    }
+}
+// 페이지 프로필 헤더
+.board_community.main_profile {
+    > .item_body {
+        .item_foot {
+            .info_area {
+                .btn.text.arw_link {
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 1rem;
+                        margin-right: 0.8rem;
+                        margin-left: 0.8rem;
+                        background-color: #cbcdcf;
+                    }
+                }
+            }
+        }
+    }
+    > .item_util {
+        top:2.4rem;
+        right:2rem;
     }
 }
 // 피드
@@ -287,7 +305,7 @@
                             border-radius: 50%;
                         }
                         .name {
-                            @include FontBody16
+                            @include FontBody16;
                             @include Ellipsis1;
                             padding:0 1.2rem;
                             > .ellipsis {   
@@ -432,7 +450,7 @@
                             display: flex;
                             align-items: center;
                             flex: none;
-                            &::before, &::after {
+                            &::before {
                                 content: "";
                                 display: block;
                                 width: 1px;
@@ -444,6 +462,15 @@
                         }
                         > .btn.text.arw_link {
                             padding-left:inherit;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 1px;
+                                height: 1rem;
+                                margin-right: 0.8rem;
+                                margin-left: 0.8rem;
+                                background-color: #cbcdcf;
+                            }
                             &::after {
                                 top:inherit;
                             }
