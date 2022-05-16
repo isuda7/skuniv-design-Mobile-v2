@@ -99,7 +99,7 @@
 		position: absolute;
 		left:0;
 		bottom:0;
-		width:100%;
+		right:0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -163,6 +163,13 @@
 
 // Topic
 .card_topic {
+	flex:none;
+	position: relative;
+	width: 15.6rem;
+	height: 20.0rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: $RadiusLarge;
 	@include Shadow3;
 	&_slide {
 		display:flex;
@@ -182,8 +189,6 @@
 		flex-direction: column;
 		width: 15.6rem;
 		height: 20.0rem;
-		overflow: hidden;
-		border-radius: $RadiusLarge;
 		color: #fff;
 		padding: 3.2rem 1rem 2.4rem;
 		&::after {
@@ -300,8 +305,10 @@
 			@include FontBody13;
 			&::before{
 				margin-right: .2rem;
-				width: 1.6rem;
-				height: 1.6rem;
+				position: relative;
+				top: .1rem;
+				width: 1.2rem;
+				height: 1.2rem;
 				background-image: url("../img/icons_16_ic_addplaylist_orange.svg");
 			}
 		}
