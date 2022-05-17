@@ -125,19 +125,17 @@
 }
 // 페이지 프로필 헤더
 .board_community.main_profile {
-    > .item_body {
-        .item_foot {
-            .info_area {
-                .btn.text.arw_link {
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: 1px;
-                        height: 1rem;
-                        margin-right: 0.8rem;
-                        margin-left: 0.8rem;
-                        background-color: #cbcdcf;
-                    }
+    > .item_foot {
+        .info_area {
+            .btn.text.arw_link {
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 1rem;
+                    margin-right: 0.8rem;
+                    margin-left: 0.8rem;
+                    background-color: #cbcdcf;
                 }
             }
         }
@@ -511,4 +509,11 @@
             }
         }
     }
+}
+
+// 전체 게시판 메뉴
+.modal_community_allboard {
+    width:80%;
+    position: absolute;
+    right:0;
 }
