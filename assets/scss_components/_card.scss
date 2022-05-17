@@ -300,18 +300,6 @@
 				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
 			}	
 		}
-		.btn.putinList{
-			color: $ColorPrimary;
-			@include FontBody13;
-			&::before{
-				margin-right: .2rem;
-				position: relative;
-				top: .1rem;
-				width: 1.2rem;
-				height: 1.2rem;
-				background-image: url("../img/icons_16_ic_addplaylist_orange.svg");
-			}
-		}
 	}
 	.card_body {
 		.title {
@@ -371,8 +359,8 @@
 			top:1px;
 			content:'';
 			display:block;
-			width:1.6rem;
-			height:1.6rem;
+			width:1.2rem;
+			height:1.2rem;
 			margin-right:0.2rem;
 			background: url('../img/icons_16_ic_addplaylist_orange.svg') no-repeat center center / 100% auto;
 		}
