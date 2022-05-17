@@ -1678,8 +1678,7 @@
 				min-height:2.2rem;
 				max-height:11rem;
 				line-height:2.2rem;
-				padding-top:0;
-				padding-bottom:0;
+				padding:0;
 				vertical-align: top;
 			}
 			&:not(.is_focused) {
@@ -3314,9 +3313,7 @@
         .note_body {
             .note_txt {
                 .txt {
-                    // @include Ellipsis2;
                     margin:0.8rem 0;
-                    height : 4.4rem;
                 }
             }
             .note_date {
