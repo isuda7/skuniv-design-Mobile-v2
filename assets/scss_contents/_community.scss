@@ -125,19 +125,18 @@
 }
 // 페이지 프로필 헤더
 .board_community.main_profile {
-    > .item_body {
-        .item_foot {
-            .info_area {
-                .btn.text.arw_link {
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: 1px;
-                        height: 1rem;
-                        margin-right: 0.8rem;
-                        margin-left: 0.8rem;
-                        background-color: #cbcdcf;
-                    }
+    > .item_foot {
+        margin-top:0.4rem;
+        .info_area {
+            .btn.text.arw_link {
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 1rem;
+                    margin-right: 0.8rem;
+                    margin-left: 0.8rem;
+                    background-color: #cbcdcf;
                 }
             }
         }
@@ -160,7 +159,7 @@
             margin-bottom:0.8rem;
         }
         .desc {
-            & > .cate {
+            > .cate {
                 @include FontBody13;
                 margin:0 0 0.8rem;
                 .split {
@@ -172,6 +171,14 @@
                     margin:0 0.4rem;
                     background-color: #000;
                 }
+            }
+            > .cate2 {
+                @include FontBody14;
+                color:#a4a6aa;
+                margin-bottom:0.4rem;
+            }
+            > .tit {
+                @include FontBody16;
             }
             > .txt {
                 margin-top:1.6rem;
@@ -360,10 +367,6 @@
                     margin:0 1.2rem;
                     background-color: #e3e4e5;
                 }
-                .tit {
-                    
-                    
-                }
                 .count {
                     margin-left:0.4rem;
                     color:$ColorPrimary;
@@ -510,5 +513,89 @@
                 margin-top:3rem;
             }
         }
+    }
+}
+
+// 전체 게시판 메뉴
+.modal_community_allboard {
+    width:85%;
+    position: absolute;
+    right:0;
+    .allboard_page {
+        margin-top:0.8rem;
+        .allboard_list {
+            margin-top:1.2rem;
+            .allboard_item + .allboard_item {
+                border-top:1px solid #f2f3f5;
+            }
+            .item_expand, .item_body {
+                padding-top:1.6rem;
+                padding-bottom:1.6rem;
+                padding-right:1.6rem;
+                @include FontBody16;
+                display: flex;
+                align-items: center;
+                &::after {
+                    content: "";
+                    flex:none;
+                    width:1.2rem;
+                    height:1.2rem;
+                    margin-left: auto;
+                    background-image: url("../img/icons_12_ic_chervron_right_grey_06.svg");
+                }
+                &::before {
+                    content: "";
+                    flex:none;
+                    width:2rem;
+                    height:2rem;
+                    margin-right:0.8rem;
+                }
+                &.boardbasic::before {
+                    background-image: url('../img/icons_20_ic_boardbasic_grey_05.svg');
+                }
+                &.boardsurvey::before {
+                    background-image: url('../img/icons_20_ic_boardsurvey_grey_05.svg');
+                }
+                &.boardfile::before {
+                    background-image: url('../img/icons_20_ic_boardfile_grey_05.svg');
+                }
+                &.boardhtml::before {
+                    background-image: url('../img/icons_20_ic_boardhtml_grey_05.svg');
+                }
+                &.boardlink::before {
+                    background-image: url('../img/icons_20_ic_boardlink_grey_05.svg');
+                }
+                &.boarddiscussion::before {
+                    background-image: url('../img/icons_20_ic_boarddiscussion_grey_05.svg');
+                }
+            }
+            .item_body {
+                padding-left:1.6rem;
+                background-color:#f8f8fa;
+            }
+            .menu {
+                @include Ellipsis1;
+                display: block;
+                padding-right:0.8rem;
+            }
+        }
+    }
+}
+
+// 커뮤니티 내 검색 최근 검색어
+.search_terms_page {
+    .search_terms_wrap {
+        > .heading2 {
+            margin:2.2rem 0;
+        }
+    }
+    > .sticky {
+        margin-top:1.2rem;
+    }
+    > .board_toolbar {
+        margin-top:0.8rem;
+    }
+    > .feed_list_wrap {
+        margin-top:-1rem;
     }
 }
