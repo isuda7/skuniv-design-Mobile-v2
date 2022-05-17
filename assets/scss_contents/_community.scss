@@ -159,7 +159,7 @@
             margin-bottom:0.8rem;
         }
         .desc {
-            & > .cate {
+            > .cate {
                 @include FontBody13;
                 margin:0 0 0.8rem;
                 .split {
@@ -171,6 +171,14 @@
                     margin:0 0.4rem;
                     background-color: #000;
                 }
+            }
+            > .cate2 {
+                @include FontBody14;
+                color:#a4a6aa;
+                margin-bottom:0.4rem;
+            }
+            > .tit {
+                @include FontBody16;
             }
             > .txt {
                 margin-top:1.6rem;
@@ -575,8 +583,19 @@
 }
 
 // 커뮤니티 내 검색 최근 검색어
-.search_terms_wrap {
-    > .heading2 {
-        margin:2.2rem 0;
+.search_terms_page {
+    .search_terms_wrap {
+        > .heading2 {
+            margin:2.2rem 0;
+        }
+    }
+    > .sticky {
+        margin-top:1.2rem;
+    }
+    > .board_toolbar {
+        margin-top:0.8rem;
+    }
+    > .feed_list_wrap {
+        margin-top:-1rem;
     }
 }

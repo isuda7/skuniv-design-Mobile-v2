@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar search">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1 class="blind"><strong>커뮤니티</strong></h1>
+                    <!-- 검색 -->
+                    <div class="board_search_area">
+                        <span class="input_group clear srch is_valued">
+                            <i class="ico srch"><span class="blind">검색</span></i>
+                            <input type="search" placeholder="커뮤니티 내에서 검색" value="코인" class="basic" />
+                            <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
+                        </span>
+                    </div>
+                    <!-- // 검색 -->
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container">
+			<div class="content_body search_terms_page">
+                <div class="sticky">
+                    <div class="complete_select">
+                        <button type="button" class="btn select">게시판 전체</button>
+                    </div>
+                </div>
+                <div class="board_toolbar">
+                    <div class="board_count">
+                        <span class="total">총</span>
+                        <em class="count">5</em>
+                        <span class="unit">개</span>
+                    </div>
+                    <div class="board_util pad_t0">
+                        <button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
+                    </div>
+                </div>
+                <div class="feed_list_wrap pad_t0">
+                    <div class="feed_list out_sec">
+                        <div class="desc">
+                            <p class="cate2">10문 10답</p>
+                            <p class="tit">[공지] 일상생활에서 피로한 몸을 폼롤러로 스트레칭해서 풀어봅시다!</p>
+                        </div>
+                        <div class="feed_info">
+                            <div class="left">
+                                <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                <span class="user_id">Ronan</span>
+                                <span class="reg_date">8분전</span>
+                            </div>
+                            <div class="right">
+                                <span class="label cnt_views">76</span>
+                                <span class="label cnt_cmmt">21</span>
+                                <span class="label cnt_like">44</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed_list out_sec">
+                        <div class="desc">
+                            <p class="cate2">10문 10답</p>
+                            <p class="tit">[공지] 일상생활에서 피로한 몸을 폼롤러로 스트레칭해서 풀어봅시다!</p>
+                        </div>
+                        <div class="feed_info">
+                            <div class="left">
+                                <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                <span class="user_id">Saoirse Una Ronan</span>
+                                <span class="reg_date">2021.02.21</span>
+                            </div>
+                            <div class="right">
+                                <span class="label cnt_views">76</span>
+                                <span class="label cnt_cmmt">21</span>
+                                <span class="label cnt_like">44</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed_list out_sec">
+                        <div class="desc">
+                            <p class="cate2">10문 10답</p>
+                            <p class="tit">[공지] 일상생활에서 피로한 몸을 폼롤러로 스트레칭해서 풀어봅시다!</p>
+                        </div>
+                        <div class="feed_info">
+                            <div class="left">
+                                <span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+                                <span class="user_id">Saoirse Una Ronan</span>
+                                <span class="reg_date">2021.02.21</span>
+                            </div>
+                            <div class="right">
+                                <span class="label cnt_views">76</span>
+                                <span class="label cnt_cmmt">21</span>
+                                <span class="label cnt_like">44</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+	</div>
+</body>
+
+</html>
