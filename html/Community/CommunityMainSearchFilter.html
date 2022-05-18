@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+</head>
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_filter type_list">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">필터</h3>
+				<div class="header_right">
+					<button type="button" class="btn text primary">전체 초기화</button>
+				</div>
+            </div>
+            <div class="modal_content">
+				<div class="filter_sec gap_first">
+                    <h4 class="heading2">기간</h4>
+					<div class="filter_body">
+						<!-- 일자선택 -->
+						<div class="filter_selector">
+							<div class="radio_group stick">
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter21" tabindex="0" class="hidden" checked />
+									<label for="filter21">1주</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter22" tabindex="0" class="hidden" />
+									<label for="filter22">1개월</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter23" tabindex="0" class="hidden" />
+									<label for="filter23">1년</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter1" id="filter24" tabindex="0" class="hidden" />
+									<label for="filter24">직접설정</label>
+								</div>
+							</div>
+						</div>
+						<!-- 직접입력 -->
+						<div class="filter_selector_custom">
+							<div class="form_controls date">
+								<span class="input_group date">
+									<input type="text" class="basic" placeholder="YYYY.MM.DD" />
+									<button type="button" class="btn ico date"><span class="blind">시작날짜</span></button>
+								</span>
+								<i class="form_split">-</i>
+								<span class="input_group date">
+									<input type="text" class="basic" placeholder="YYYY.MM.DD" />
+									<button type="button" class="btn ico date"><span class="blind">시작날짜</span></button>
+								</span>
+							</div>
+						</div>
+						<!-- // 직접입력 -->
+						<!-- // 일자선택 -->
+					</div>
+				</div>
+                <div class="filter_sec has_line">
+                    <h4 class="heading2">검색항목</h4>
+					<div class="filter_body">
+						<div class="filter_selector">
+							<div class="radio_group stick">
+								<div class="radio">
+									<input type="radio" name="filter2" id="filter25" tabindex="0" class="hidden" checked />
+									<label for="filter25">전체</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter2" id="filter26" tabindex="0" class="hidden" />
+									<label for="filter26">제목</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter2" id="filter27" tabindex="0" class="hidden" />
+									<label for="filter27">내용</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter2" id="filter28" tabindex="0" class="hidden" />
+									<label for="filter28">닉네임</label>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+                <div class="filter_sec has_line">
+                    <h4 class="heading2">정렬</h4>
+					<div class="filter_body">
+						<div class="filter_selector">
+							<div class="radio_group stick">
+								<div class="radio">
+									<input type="radio" name="filter3" id="filter29" tabindex="0" class="hidden" checked />
+									<label for="filter29">전체</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter3" id="filter30" tabindex="0" class="hidden" />
+									<label for="filter30">제목</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter3" id="filter31" tabindex="0" class="hidden" />
+									<label for="filter31">내용</label>
+								</div>
+								<div class="radio">
+									<input type="radio" name="filter3" id="filter32" tabindex="0" class="hidden" />
+									<label for="filter32">닉네임</label>
+								</div>
+							</div>
+						</div>
+                     </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>

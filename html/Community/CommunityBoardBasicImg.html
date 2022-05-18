@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>📈 #실적으로보는트렌드</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico home is_active"><span class="blind">메인홈</span></button>
+					<button type="button" class="btn ico menu"><span class="blind">메뉴</span></button>
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container">
+			<div class="content_body">
+                <div class="board_page board_basic_img">
+					<!-- 게시글 리스트 -->
+                    <div class="board_community_list_wrap mar_t0">
+						<div class="board_toolbar pad_t0">
+							<div class="board_count">
+								<span class="total">총</span>
+								<em class="count">5</em>
+								<span class="unit">개</span>
+							</div>
+							<div class="board_util">
+								<button type="button" class="btn text arw_expand pad_r0">최신순</button>
+							</div>
+						</div>
+						<div class="board_community_list">
+							<!-- card_cube -->
+							<div class="board_community">
+								<a href="javascript:void(0)" class="item_body">
+									<div class="item_thumb">
+										<span class="thumb" aria-hidden="true" style="background-image:url('http://placeimg.com/640/480/nature')" alt=""></span>
+									</div>
+									<div class="item_title">
+										<p class="sub_txt">카테고리명</p>
+									</div>
+									<div class="item_foot">
+										<span class="avata" style="background-image:url('../../assets/img/demo/avata-profile-80-01.png')"><span class="blind">Profile Avata</span></span>
+										<span class="name">Saoirse Una Ronan</span>
+										<span class="date">2022.04.30</span>
+									</div>
+								</a>
+							</div>
+							<!-- // card_cube -->
+
+						</div>
+                    </div>
+					<!-- // 게시글 리스트 -->
+					<!-- 버튼 -->
+					<div class="page_floating">
+						<div class="page_action">
+							<button type="button" class="btn basic primary">게시글 작성</button>
+						</div>
+					</div>
+					<!-- // 버튼 -->
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+	</div>
+</body>
+
+</html>
