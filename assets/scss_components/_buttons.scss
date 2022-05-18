@@ -71,6 +71,8 @@
     border:1px solid $FormBasicBorder;
     color:$FormBasicText;
     border-radius: $RadiusSmall;
+    word-break: keep-all;
+    word-wrap: break-word;
     &.is_valued {
         color:$FormBasicValue;
     }
