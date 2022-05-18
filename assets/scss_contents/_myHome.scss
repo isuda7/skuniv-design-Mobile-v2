@@ -903,11 +903,13 @@
     }
 }
 
+// 상단 공통 셀렉트
+.page_select {
+    padding:1.2rem $GapSideBase;
+}
+
 // 학습 이수 시간
 .myLearning_container {
-    .complete_select {
-        padding:0.4rem 2rem 0.8rem;
-    }
     .complete_filter {
         .chip.filter {
             em {
