@@ -674,8 +674,28 @@
                         margin-top:1.2rem;
                         .sub_txt {
                             @include FontBody16;
-                            @include Ellipsis1;
+                            @include Ellipsis2;
                             color:#000;
+                        }
+                    }
+                    .item_foot {
+                        margin-top:0.8rem;
+                        .user_area {
+                            display: flex;
+                            align-items: center;
+                            overflow: hidden;
+                            margin-bottom:0.6rem;
+                            .avata {
+                                width:2rem;
+                                height:2rem;
+                                margin-right:0.4rem;
+                            }
+                            .name {
+                                flex:0 1 auto;
+                                @include Ellipsis1;
+                                color:#666666;
+                                line-height: 2rem;
+                            }
                         }
                     }
                 }
