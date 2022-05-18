@@ -808,6 +808,9 @@
         overflow-y: auto;
         padding:0 $GapSideBase;
     }
+    &.has_comment {
+        padding-bottom:60px;
+    }
 }
 
 // Interaction

@@ -46,13 +46,9 @@
             </div>
             <!-- //학습영상 -->
         </div>
-        <div class="content_body contents_page is_hidden">
-            <!-- 페이지 컨텐츠 영역 -->
-            <!-- // 페이지 컨텐츠 영역 -->
-        </div>
-        <div class="content_body pad_0">
+        <div class="content_body contents_page">
             <!-- 코멘트 상세팝업 -->
-            <div class="popup_persistent theme_dark">
+            <div class="popup_persistent has_comment theme_dark is_visible is_active">
                 <div class="popup_head">
                     <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
                     <h3 class="popup_tit">코멘트</h3>
@@ -102,35 +98,35 @@
                     </div>
                     <!-- // 게시물 상세 -->
                 </div>
-
-                <!-- Toast와 코멘트는 popup_body영역 밖에 있어야 함. -->
-                <!-- Toast -->
-                <div class="toast">
-                    <p class="toast_txt">답글이 삭제되었습니다.</p>
-                </div>
-                <!-- // Toast -->
-
-                <!-- 코멘트 -->
-                <div class="comment_floating">
-                    <div class="comment_body">
-                        <div class="comment_alert">
-                            <p class="txt">아란님에게 답글 남기는 중...</p>
-                            <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
-                        </div>
-                        <!-- Comment Elements -->
-                        <span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
-                        <div class="comment_form">
-                            <label for="commentForm" class="tit blind">코멘트 입력</label>
-                            <textarea id="commentForm" cols="10" rows="1" class="basic" placeholder="이야기를 나눠보세요."></textarea>
-                        </div>
-                        <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
-                        <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
-                        <!-- //Comment Elements -->
-                    </div>
-                </div>
-                <!-- // 코멘트 -->
             </div>
             <!-- //코멘트 상세팝업 -->
+
+            <!-- Toast와 코멘트는 popup_body영역 밖에 있어야 함. -->
+            <!-- Toast -->
+            <div class="toast">
+                <p class="toast_txt">답글이 삭제되었습니다.</p>
+            </div>
+            <!-- // Toast -->
+
+            <!-- 코멘트 -->
+            <div class="comment_floating">
+                <div class="comment_body">
+                    <div class="comment_alert">
+                        <p class="txt">아란님에게 답글 남기는 중...</p>
+                        <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                    </div>
+                    <!-- Comment Elements -->
+                    <span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+                    <div class="comment_form">
+                        <label for="commentForm" class="tit blind">코멘트 입력</label>
+                        <textarea id="commentForm" cols="10" rows="1" class="basic" placeholder="이야기를 나눠보세요."></textarea>
+                    </div>
+                    <button type="button" class="btn ico attach"><span class="blind">사진 첨부</span></button>
+                    <button type="button" class="btn ico send"><span class="blind">보내기</span></button>
+                    <!-- //Comment Elements -->
+                </div>
+            </div>
+            <!-- // 코멘트 -->
         </div>
     </main>
     <!-- // Container -->
