@@ -111,6 +111,12 @@
 // e: SubMain Menu Group
 
 // s: Board List
+.notice_wrap,
+.contact_body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
 .board_notice_list,
 .board_qna_list,
 .board_approval_list{
