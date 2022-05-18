@@ -617,3 +617,71 @@
     }
 }
 
+// 게시판 기본형 이미지
+// 레이아웃
+@media screen and (min-width: 520px) { //3개
+    .board_page.board_basic_img .board_community_list_wrap .board_community_list {
+        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
+        justify-content: flex-start; 
+        .board_community {
+            min-width: auto;
+            margin: .6rem calc((33.3% - 15.6rem)/2);
+        }   
+    }
+}
+@media screen and (min-width: 625px){ //4개이상
+    .board_page.board_basic_img .board_community_list_wrap .board_community_list {
+        margin: .6rem -.4rem;
+        justify-content: flex-start; 
+        .board_community {
+            min-width: auto;
+            margin: .6rem .4rem;
+        }
+    }
+}
+// 게시물 스타일
+.board_page.board_basic_img {
+    > .board_community_list_wrap {
+        width:100%; 
+        overflow: hidden;
+        .board_community_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .board_community {
+                flex: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width:15.6rem;
+                margin-bottom:2.4rem;
+                padding: inherit;
+                border: inherit;
+                .item_body {
+                    display: block;
+                    overflow: hidden;
+                    .item_thumb {
+                        margin-right:inherit;
+                        width: 15.6rem;
+                        height: 15.6rem;
+                        .thumb {
+                            border-radius: 0.4rem;
+                        }
+                    }
+                    .item_title {
+                        width:100%;
+                        padding-right: inherit;
+                        margin-top:1.2rem;
+                        .sub_txt {
+                            @include FontBody16;
+                            @include Ellipsis1;
+                            color:#000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
