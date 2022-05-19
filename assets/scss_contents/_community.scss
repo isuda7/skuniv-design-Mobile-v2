@@ -697,7 +697,7 @@
 }
 
 // 게시판 기본형 텍스트
-.board_page.board_basic {
+.board_page {
     > .feed_list_wrap {
             margin-top:-0.8rem;
         .feed_list {
@@ -705,26 +705,24 @@
         }
     }
     > .board_dt_wrap {
-        padding-bottom:4rem;
         .board_dt_title {
             .board_dt_info {
-                .left {
-                    display: flex;
-                    align-items: center;
-                    .user_id {
-                        @include Ellipsis1;
-                    }
-                    .reg_date {
-                        margin-right:0.6rem;
-                        flex: none;
-                    }
-                    .label.cnt_views{
-                        flex: none;
-                            &::before{
-                                background-image: url("../img/icons_16_ic_view_grey_04.svg");
-                        }
-                    }                
+                .user_id{
+                    margin-right : 0.8rem;
                 }
+                .reg_date {
+                    margin-right:0.8rem;
+                }
+                .cnt_views {
+                    background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
+                }
+            }
+        }
+        .board_dt_foot {
+            display: flex;
+            align-items: center;
+            > .right{
+                margin-left:auto;
             }
         }
     }
