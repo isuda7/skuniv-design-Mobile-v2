@@ -7,4 +7,12 @@
 }
 
 // s: 검색결과
+.srch_result_list{
+    .result_body{
+        .keyword{
+            color: $ColorPositive;
+            font-weight: 900;
+        }
+    }
+}
 // e: 검색결과
