@@ -298,7 +298,7 @@
 				width: 2rem;
 				height: 2rem;
 				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
-			}	
+			}
 		}
 	}
 	.card_body {
@@ -614,10 +614,18 @@
 		color: $ColorSubTxt;
 		overflow: hidden;
 		width:100%;
-		.desc {
+		.add_img {
+			text-align: center;
+			img {
+				margin-top:1.6rem;
+				margin-bottom:0.8rem;
+			}
+		}
+		.txt {
+			@include Ellipsis3;
 			color:#000;
 		}
-		.desc + .item_info {
+		.txt + .item_info {
 			margin-top: 1.2rem;
 		}
 		.item_info {
@@ -666,6 +674,21 @@
 						margin-right : .4rem;
 						width : 1.6rem;
 						height : 1.6rem;
+					}
+					&.cnt_views{
+						&::before{
+							background-image: url("../img/icons_16_ic_view_grey_04.svg");
+						}
+					}
+					&.cnt_cmmt{
+						&::before{
+							background-image: url("../img/icons_16_ic_comment_grey_04.svg");
+						}
+					}
+					&.cnt_like{
+						&::before{
+							background-image: url("../img/icons_16_ic_like_grey_04.svg");
+						}
 					}
 				}
 			}

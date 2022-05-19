@@ -147,134 +147,7 @@
         right:2rem;
     }
 }
-// 피드
-.feed_list_wrap {
-    padding-top:0.4rem;
-    .feed_list {
-        .feed_item.out_sec {
-            border-bottom:1px solid #f2f3f5;
-            padding:0 2rem;
-        }
-        .feed_item {
-            .item_body {
-                padding-top:1.6rem;
-                display: block;
-                > .label {
-                    margin-bottom:0.8rem;
-                }
-                .desc {
-                    > .cate {
-                        @include FontBody13;
-                        margin:0 0 0.8rem;
-                        .split {
-                            position: relative;
-                            display:inline-block;
-                            top:0.2rem;
-                            width:1px;
-                            height:1.3rem;
-                            margin:0 0.4rem;
-                            background-color: #000;
-                        }
-                    }
-                    > .cate2 {
-                        @include FontBody14;
-                        color:#a4a6aa;
-                        margin-bottom:0.4rem;
-                    }
-                    > .tit {
-                        @include FontBody16;
-                    }
-                    > .txt {
-                        margin-top:1.6rem;
-                    }
-                    > .add_img {
-                        margin-top:1.6rem;
-                    }
-                }
-                .feed_info {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    width:100%;
-                    @include FontBody14;
-                    color :#75777b;
-                    margin:1.6rem 0;
-                    > .left{
-                        display: flex;
-                        align-items: center;
-                        flex:0 1 auto;
-                        overflow: hidden;
-                        span{
-                            display: inline-block;
-                        }
-                        .avata {
-                            margin-right : 0.6rem;
-                            width :2rem;
-                            height : 2rem;
-                        }
-                        .user_id{
-                            margin-right : 0.8rem;
-                            @include Ellipsis1;
-                        }
-                        .reg_date {
-                            margin-right:2rem;
-                            flex:none;
-                        }
-                    }
-                    > .right {
-                        display: flex;
-                        align-items: center;
-                        flex:none;
-                        .label{
-                            margin-left: 1.2rem;
-                            &:first-child{
-                                margin-left: 0;
-                            }
-                            &::before{
-                                content:'';
-                                display:inline-block;
-                                margin-right : .4rem;
-                                width : 1.6rem;
-                                height : 1.6rem;
-                            }
-                        }
-                    }
-                    .label{
-                        &.cnt_views{
-                            &::before{
-                                background-image: url("../img/icons_16_ic_view_grey_04.svg");
-                            }
-                        }
-                        &.cnt_cmmt{
-                            &::before{
-                                background-image: url("../img/icons_16_ic_comment_grey_04.svg");
-                            }
-                        }
-                        &.cnt_like{
-                            &::before{
-                                background-image: url("../img/icons_16_ic_like_grey_04.svg");
-                            }
-                        }
-                    }
-                }
-            }
-            .feed_btn {
-                padding:1.3rem 2rem 1.4rem;
-                border-top:1px solid #f2f3f5;
-                display: flex;
-                > .left {
-                    display: flex;
-                    align-items: center;
-                }
-                > .right {
-                    display: flex;
-                    align-items: center;
-                    margin-left:auto;
-                }
-            }
-        }
-    }
-}
+
 // 커뮤니티 목록
 .community_list_wrap {
     margin-top:1rem;
@@ -321,7 +194,7 @@
                             @include FontBody16;
                             @include Ellipsis1;
                             padding:0 1.2rem;
-                            > .ellipsis {   
+                            > .ellipsis {
                                 @include Ellipsis1;
                             }
                         }
@@ -343,7 +216,7 @@
                                 background-image: url('../img/icons_16_ic_boss_grey_04.svg');
                             }
                         }
-                        
+
                     }
                 }
                 > .right {
@@ -594,17 +467,6 @@
         margin:2.2rem 0;
     }
 }
-> .sticky {
-    padding:1.2rem 0 1.2rem;
-}
-.feed_list_wrap {
-    >.board_toolbar {
-        margin-top:-0.6rem;
-    }
-    > .feed_list {
-        margin-top:-1.6rem;
-    }
-}
 
 
 // 게시판 기본형 이미지
@@ -612,17 +474,17 @@
 @media screen and (min-width: 520px) { //3개
     .board_page.board_basic_img .board_community_list_wrap .board_community_list {
         margin: 0.6rem calc((33.3% - 15.6rem)/-2);
-        justify-content: flex-start; 
+        justify-content: flex-start;
         .board_community {
             min-width: auto;
             margin: .6rem calc((33.3% - 15.6rem)/2);
-        }   
+        }
     }
 }
 @media screen and (min-width: 625px){ //4개이상
     .board_page.board_basic_img .board_community_list_wrap .board_community_list {
         margin: .6rem -.4rem;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         .board_community {
             min-width: auto;
             margin: .6rem .4rem;
@@ -632,7 +494,7 @@
 // 게시물 스타일
 .board_page.board_basic_img {
     > .board_community_list_wrap {
-        width:100%; 
+        width:100%;
         overflow: hidden;
         .board_community_list {
             display: flex;
@@ -697,12 +559,6 @@
 
 // 게시판 기본형 텍스트
 .board_page {
-    > .feed_list_wrap {
-            margin-top:-0.8rem;
-        .feed_list {
-            margin-top:-1.6rem;
-        }
-    }
     > .board_dt_wrap {
         .board_dt_title {
             .board_dt_info {
