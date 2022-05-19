@@ -2324,7 +2324,7 @@
     .file_down_area {
         margin-top: 2.4rem;
         .area_title {
-            @include FontBody14;
+            @include FontTitle14;
             .label.download{
                 display: inline-block;
                 padding : 0 .4rem 0 2rem;

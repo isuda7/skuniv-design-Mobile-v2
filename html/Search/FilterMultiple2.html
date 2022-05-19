@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		});
+	</script>
+</head>
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap modal_slide_new is_active is_visible">
+        <div class="modal modal_bottomsheet modal_filter type_list">
+            <div class="modal_header">
+				<button type="button" class="btn ico back"><span class="blind">뒤로가기</span></button>
+                <h3 class="modal_tit">카테고리</h3>
+                <!-- <h3 class="modal_tit">교육유형</h3> -->
+				<div class="header_right">
+					<button type="button" class="btn text">전체 초기화</button>
+				</div>
+            </div>
+            <div class="modal_content">
+				<!-- Category -->
+				<div class="filter_sec">
+					<div class="filter_body">
+						<ul class="filter_list">
+							<!-- 교육유형
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist1" tabindex="0" class="hidden" />
+									<label for="checklist1"><span>교육유형<span class="count">1</span></span></label>
+								</div>
+							</li> -->
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist1" tabindex="0" class="hidden" />
+									<label for="checklist1"><span>AI<span class="count">22</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist2" tabindex="0" class="hidden" />
+									<label for="checklist2"><span>DT<span class="count">1</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist3" tabindex="0" class="hidden" />
+									<label for="checklist3"><span>행복<span class="count">33</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist4" tabindex="0" class="hidden" />
+									<label for="checklist4"><span>SV-ESG<span class="count">4</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist5" tabindex="0" class="hidden" />
+									<label for="checklist5"><span>혁신디자인<span class="count">2</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist6" tabindex="0" class="hidden" checked/>
+									<label for="checklist6"><span>Global<span class="count">3</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist7" tabindex="0" class="hidden" checked/>
+									<label for="checklist7"><span>Leadership<span class="count">7</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist8" tabindex="0" class="hidden" />
+									<label for="checklist8"><span>Management<span class="count">10</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist9" tabindex="0" class="hidden" checked/>
+									<label for="checklist9"><span>미래반도체<span class="count">44</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist10" tabindex="0" class="hidden" />
+									<label for="checklist10"><span>Green<span class="count">1</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist11" tabindex="0" class="hidden" />
+									<label for="checklist11"><span>BM Design & Storytelling<span class="count">5</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist12" tabindex="0" class="hidden" />
+									<label for="checklist12"><span>SK Academy<span class="count">6</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist13" tabindex="0" class="hidden" />
+									<label for="checklist13"><span>SK Management<span class="count">7</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist14" tabindex="0" class="hidden" />
+									<label for="checklist14"><span>Life Style<span class="count">22</span></span></label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox basic">
+									<input type="checkbox" name="checklist" id="checklist15" tabindex="0" class="hidden" />
+									<label for="checklist15"><span>SK㈜_C&amp;C<span class="count">8</span></span></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // Category -->
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">선택(3)</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+</body>
+
+</html>
