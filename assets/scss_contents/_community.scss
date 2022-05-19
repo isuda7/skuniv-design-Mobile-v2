@@ -320,7 +320,7 @@
                             @include FontBody16;
                             @include Ellipsis1;
                             padding:0 1.2rem;
-                            > .ellipsis {   
+                            > .ellipsis {
                                 @include Ellipsis1;
                             }
                         }
@@ -342,7 +342,7 @@
                                 background-image: url('../img/icons_16_ic_boss_grey_04.svg');
                             }
                         }
-                        
+
                     }
                 }
                 > .right {
@@ -594,9 +594,6 @@
             margin:2.2rem 0;
         }
     }
-    > .sticky {
-        padding:1.2rem 0 1.2rem;
-    }
     .feed_list_wrap {
         >.board_toolbar {
             margin-top:-0.6rem;
@@ -622,17 +619,17 @@
 @media screen and (min-width: 520px) { //3개
     .board_page.board_basic_img .board_community_list_wrap .board_community_list {
         margin: 0.6rem calc((33.3% - 15.6rem)/-2);
-        justify-content: flex-start; 
+        justify-content: flex-start;
         .board_community {
             min-width: auto;
             margin: .6rem calc((33.3% - 15.6rem)/2);
-        }   
+        }
     }
 }
 @media screen and (min-width: 625px){ //4개이상
     .board_page.board_basic_img .board_community_list_wrap .board_community_list {
         margin: .6rem -.4rem;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         .board_community {
             min-width: auto;
             margin: .6rem .4rem;
@@ -642,7 +639,7 @@
 // 게시물 스타일
 .board_page.board_basic_img {
     > .board_community_list_wrap {
-        width:100%; 
+        width:100%;
         overflow: hidden;
         .board_community_list {
             display: flex;
