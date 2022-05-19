@@ -32,17 +32,18 @@
     .board_action {
         margin-top:1.6rem;
     }
+    .btn.ico + .btn.ico {
+        margin-left:2.4rem;
+    }
     .btn.ico {
         flex:none;
         width:2.4rem;
         height:2.4rem;
         padding:0;
-        & + .btn.ico {
-            margin-left:2.4rem;
-        }
         &::before {
             width:2.4rem;
             height:2.4rem;
+            flex:none;
         }
         &.like::before {
             background-image:url('../img/icons_24_ic_like_off_on.svg');
@@ -573,10 +574,22 @@
             }
         }
         .board_dt_foot {
+            margin-top:3.2rem;
             display: flex;
             align-items: center;
+            padding: 1.3rem 2rem;
+            border-top: 1px solid #f2f3f5;
+            > .left {
+                display: flex;
+                align-items: center;
+            }
             > .right{
                 margin-left:auto;
+                display: flex;
+                align-items: center;
+                .like_no {
+                    margin-left:0.4rem;
+                }
             }
         }
     }
