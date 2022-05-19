@@ -588,22 +588,20 @@
 }
 
 // 커뮤니티 내 검색 최근 검색어
-.search_terms_page {
-    .search_terms_wrap {
-        > .heading2 {
-            margin:2.2rem 0;
-        }
+.search_terms_wrap {
+    > .heading2 {
+        margin:2.2rem 0;
     }
-    > .sticky {
-        padding:1.2rem 0 1.2rem;
+}
+> .sticky {
+    padding:1.2rem 0 1.2rem;
+}
+.feed_list_wrap {
+    >.board_toolbar {
+        margin-top:-0.6rem;
     }
-    .feed_list_wrap {
-        >.board_toolbar {
-            margin-top:-0.6rem;
-        }
-        > .feed_list {
-            margin-top:-1.6rem;
-        }
+    > .feed_list {
+        margin-top:-1.6rem;
     }
 }
 
