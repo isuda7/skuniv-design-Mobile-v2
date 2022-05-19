@@ -656,6 +656,7 @@
 					display:flex;
 					align-items: center;
 					margin-right:2rem;
+					margin-left:0.8rem;
 					flex:none;
 					color:#a4a6aa;
 				}
@@ -665,6 +666,9 @@
 				align-items: center;
 				flex:none;
 				.label {
+					& + .label {
+						margin-left:1.2rem;
+					}
 					&:first-child{
 						margin-left: 0;
 					}
@@ -691,13 +695,6 @@
 						}
 					}
 				}
-			}
-			.bar {
-				display:inline-block;
-				width:1px;
-				height:1rem;
-				margin:0 0.8rem;
-				background-color: #f2f3f5;
 			}
 		}
 	}
