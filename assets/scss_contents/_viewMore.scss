@@ -117,12 +117,6 @@
     flex-direction: column;
     flex: 1 0 auto;
 }
-.board_notice_list,
-.board_qna_list,
-.board_approval_list{
-    margin-left : -$GapSideBase;
-    margin-right : -$GapSideBase;
-}
 // e: Board List
 
 // s: Board Notice
@@ -458,8 +452,6 @@
 
 // s: FAQ
 .acc_faq_list{
-    margin-left: -$GapSideBase;
-    margin-right: -$GapSideBase;
     .acco_title{
         padding: $FormBasicPadding 4.8rem $FormBasicPadding 2rem;
         border-bottom: .1rem solid #f2f3f5;
