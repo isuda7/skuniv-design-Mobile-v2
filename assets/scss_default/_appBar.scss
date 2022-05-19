@@ -85,6 +85,13 @@
 			@include FontTitle18;
 			@include Ellipsis1;
 		}
+        &.bar_search_area {
+            width: 100%;
+            input.basic {
+                background-color: #f8f8fa;
+                border: .1rem solid #f2f3f5;
+            }
+        }
 	}
     .btn.text:not(.primary) {
         color:#a4a6aa;
@@ -110,13 +117,6 @@
 			}
 		}
 	}
-    &.search {
-        .board_search_area {
-            width:100%;
-            padding:0;
-            margin:0;
-        }
-    }
 }
 .theme_secondary {
     .appbar {
