@@ -35,6 +35,39 @@
 ///////////////////////////////////////////////////
 // Login Components
 ///////////////////////////////////////////////////
+// 다국어
+.login_langeage {
+    position: absolute;
+    top:1.8rem;
+    right:2rem;
+    .btn.language {
+        height:24px;
+        padding:0;
+        @include FontTitle13;
+        color:#222;
+        &::before {
+            content:'';
+            position: relative;
+            top:1px;
+            display:block;
+            width:1.6rem;
+            height:1.6rem;
+            margin-right:0.2rem;
+            background: url('../img/icons_16_ic_language_mint.svg') no-repeat center center;
+        }
+        &::after {
+            content:'';
+            position: relative;
+            top:1px;
+            display:block;
+            width:1.2rem;
+            height:1.2rem;
+            margin-left:0.4rem;
+            background: url('../img/icons_12_ic_chervron_down_black.svg') no-repeat center center;
+        }
+    }
+}
+
 // 폼제목
 .login_tit {
     margin-bottom:1.6rem;
