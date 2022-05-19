@@ -1,0 +1,18 @@
+.bar_search_area {
+    width: 100%;
+    input.basic {
+        background-color: #f8f8fa;
+        border: .1rem solid #f2f3f5;
+    }
+}
+
+// s: 검색결과
+.srch_result_list{
+    .result_body{
+        .keyword{
+            color: $ColorPositive;
+            font-weight: 900;
+        }
+    }
+}
+// e: 검색결과
