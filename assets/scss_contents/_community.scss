@@ -705,9 +705,26 @@
         }
     }
     > .board_dt_wrap {
-        .board_dt_info {
-            > .left {
-                
+        padding-bottom:4rem;
+        .board_dt_title {
+            .board_dt_info {
+                .left {
+                    display: flex;
+                    align-items: center;
+                    .user_id {
+                        @include Ellipsis1;
+                    }
+                    .reg_date {
+                        margin-right:0.6rem;
+                        flex: none;
+                    }
+                    .label.cnt_views{
+                        flex: none;
+                            &::before{
+                                background-image: url("../img/icons_16_ic_view_grey_04.svg");
+                        }
+                    }                
+                }
             }
         }
     }
