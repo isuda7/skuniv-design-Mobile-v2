@@ -2463,7 +2463,7 @@
         .title {
             @include FontTitle18;
         }
-        .quiz_complete {
+        .title + .quiz_complete {
             margin-top:2rem;
         }
         // 응시전
