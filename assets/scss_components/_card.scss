@@ -592,6 +592,7 @@
 			flex: none;
 		}
 		.item_title {
+			margin-bottom: 1.6rem;
 			.sub_txt {
 				color: #000;
 				&+.title {
@@ -609,16 +610,34 @@
 	}
 	.item_cont {
 		display: block;
-		margin-top: 0.8rem;
 		@include FontBody14;
 		color: $ColorSubTxt;
 		overflow: hidden;
 		width:100%;
 		.add_img {
+			position: relative;
 			text-align: center;
-			img {
-				margin-top:1.6rem;
-				margin-bottom:0.8rem;
+			margin-bottom:1.6rem;
+			.count {
+				position: absolute;
+				right:0.8rem;
+				bottom:0.8rem;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				height:22px;
+				padding:0 1rem;
+				background:rgba(0,0,0,0.6);
+				color:#fff;
+				@include FontBody13;
+				&::before {
+					content:'';
+					display:block;
+					width:1.6rem;
+					height:1.6rem;
+					margin-right:0.4rem;
+					background: url('../img/icons_16_ic_images_white.svg') no-repeat center center;
+				}
 			}
 		}
 		.txt {
