@@ -675,6 +675,7 @@
 				.time {
 					display:flex;
 					align-items: center;
+					margin-left:0.8rem;
 					margin-right:2rem;
 					flex:none;
 					color:#a4a6aa;
@@ -685,6 +686,9 @@
 				align-items: center;
 				flex:none;
 				.label {
+					& + .label {
+						margin-left:1.2rem;
+					}
 					&:first-child{
 						margin-left: 0;
 					}
