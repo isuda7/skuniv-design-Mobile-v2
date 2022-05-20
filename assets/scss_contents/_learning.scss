@@ -2427,6 +2427,7 @@
 /////////////////////////////////
 // s: 응시하기
 .quiz_information {
+    width:100%;
     margin-top:6.4rem;
     flex:none;
     .info {
@@ -2655,9 +2656,6 @@
         margin-bottom:1.2rem;
         @include FontTitle16;
         font-weight: 400;
-        .score {
-            font-weight: 700;
-        }
     }
 }
 
@@ -2698,6 +2696,7 @@
 
 // s: 응시하기 결과
 .atare_result {
+    padding-top:1.6rem;
     .quiz_tit {
         @include FontTitle18;
     }

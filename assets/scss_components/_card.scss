@@ -70,6 +70,7 @@
 		overflow: hidden;
 		border-radius: $RadiusLarge;
 		background-color: #fff;
+		width:100%;
 		height:100%;
 	}
 	.card_thumb {
@@ -82,7 +83,8 @@
 		flex: 1 1 auto;
 		padding: 1rem;
 		.sub_txt {
-			+.title {
+			@include Ellipsis1;
+			& + .title {
 				margin-top: 0.4rem;
 			}
 		}
