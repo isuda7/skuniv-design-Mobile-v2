@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper has_floating">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>블록 TALK (자유)</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico home is_active"><span class="blind">메인홈</span></button>
+					<button type="button" class="btn ico menu"><span class="blind">메뉴</span></button>
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container">
+			<div class="content_body">
+                <div class="tab_panel board_page">
+					<!-- 게시글 리스트 -->
+                    <div class="board_toolbar pad_t0">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">0</em>
+                            <span class="unit">개</span>
+                        </div>
+                        <div class="board_util blind">
+                            <button type="button" class="btn text arw_expand pad_r0">최신순</button>
+                        </div>
+                    </div>
+                    <!-- Empty 문구 영역 -->
+                    <div class="flex_area centered">
+                        <div class="no_data">
+                            <!-- 메뉴별 Empty 문구 입니다. -->
+                            <p class="tit">현재 작성된 게시글이 없습니다.</p>
+                            <p class="sub_txt">첫 게시글을 작성해보세요!</p>
+                        </div>
+                    </div>
+                    <!-- // Empty 문구 영역 -->
+					<!-- // 게시글 리스트 -->
+					<!-- 버튼 -->
+					<div class="page_floating">
+						<div class="page_action">
+							<button type="button" class="btn basic primary">게시글 작성</button>
+						</div>
+					</div>
+					<!-- // 버튼 -->
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+	</div>
+</body>
+
+</html>
