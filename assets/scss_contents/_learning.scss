@@ -2617,48 +2617,6 @@
 }
 // e: 질문 목록
 
-// e: 질문 결과
-.quiz_result {
-    margin-top:2.4rem;
-    .item + .item {
-        margin-top:2.4rem;
-    }
-    .label.survey {
-        min-width:3.6rem;
-        height:2.2rem;
-        padding:0 0.6rem 0.1rem 0.6rem;
-        border-radius: $RadiusSmall;
-        @include FontBody13;
-        color:#fff;
-        &::before {
-            content:'';
-            display:block;
-            width:1.2rem;
-            height:1.2rem;
-            margin-right:0.5rem;
-        }
-        &.x {
-            background:$ColorPrimary;
-            &::before {
-                background: url('../img/icons_12_ic_delete_white.svg');
-            }
-        }
-        &.o {
-            background:$ColorSecondary;
-            &::before {
-                background: url('../img/icons_12_ic_circle_white.svg');
-            }
-        }
-    }
-    .title {
-        display:block;
-        margin-top:0.8rem;
-        margin-bottom:1.2rem;
-        @include FontTitle16;
-        font-weight: 400;
-    }
-}
-
 // s: 질문 서술형
 .quiz_desc {
     textarea {
@@ -2706,56 +2664,161 @@
         margin-top:0.7rem;
         .eval {
             margin-left:0.8rem;
-            color:$ColorSubTxt;
-            .cutline {
-                color:$ColorPrimary;
+            color:#33353c;
+            em {
+                font-weight: 700;
             }
         }
     }
 
-    .survey_answer {
-        .answer {
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            @include FontBody14;
-            min-height:3.2rem;
-            width:100%;
-            padding:0.6rem 1.6rem 0.6rem 1.6rem;
-            border-radius: $RadiusSmall;
-            border:1px solid #e3e4e5;
-            &::after {
-                content:'';
-                flex:none;
-                position:static;
-                width:1.6rem;
-                height:1.6rem;
-                margin-left:0.8rem;
-            }
-            &.x {
-                border:1px solid $ColorPrimary;
-                color: $ColorPrimary;
-                font-weight: 700;
-                &::after {
-                    background: url('../img/icons_16_ic_check_primary.svg');
-                }
-            }
-            &.o {
-                border:1px solid $ColorSecondary;
-                color: $ColorSecondary;
-                font-weight: 700;
-                &::after {
-                    background: url('../img/icons_16_ic_check_secondary.svg');
-                }
-            }
-            & + .answer {
-                margin-top:0.4rem;
-            }
-        }
-    }
 }
 // e: 응시하기 결과
 
+// s: 응시하기 결과 - 질문
+.quiz_result {
+    margin-top:3.2rem;
+    .item + .item {
+        margin-top:3.2rem;
+    }
+    .label.survey {
+        min-width:3.6rem;
+        height:2.2rem;
+        padding:0 0.6rem 0.1rem 0.6rem;
+        border-radius: $RadiusSmall;
+        @include FontBody13;
+        color:#fff;
+        &::before {
+            content:'';
+            display:block;
+            width:1.2rem;
+            height:1.2rem;
+            margin-right:0.5rem;
+        }
+        &.x {
+            background:$ColorPrimary;
+            &::before {
+                background: url('../img/icons_12_ic_delete_white.svg');
+            }
+        }
+        &.o {
+            background:$ColorSecondary;
+            &::before {
+                background: url('../img/icons_12_ic_circle_white.svg');
+            }
+        }
+    }
+    .title {
+        display:block;
+        margin-top:0.8rem;
+        @include FontTitle16;
+        font-weight: 400;
+    }
+    // 선택문항
+    .answer_area {
+        margin-top:2rem;
+        .answer {
+            position: relative;
+            @include FontBody14;
+            width:100%;
+            padding-left:3.2rem;
+            padding-top:0.2rem;
+            &::before {
+                content:'';
+                flex:none;
+                position:absolute;
+                left:0;
+                top:0;
+                width:2.4rem;
+                height:2.4rem;
+                background: no-repeat center center / 100% auto;
+            }
+            &.choice {
+                color: $ColorPrimary;
+                font-weight: 700;
+            }
+            &.check {
+                &::before {
+                    background-image: url('../img/icons_24_ic_check_off_grey.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_check_on_primary.svg');
+                }
+            }
+            &.radio {
+                &::before {
+                    background-image: url('../img/icons_24_ic_radio_off_grey.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_radio_on_primary.svg');
+                }
+            }
+            & + .answer {
+                margin-top:2rem;
+            }
+        }
+    }
+    // 이미지문항
+    .answer_img_area {
+        margin-top:1rem;
+        text-align: center;
+        img {vertical-align: top;}
+        .eval_score {
+            margin-top:1rem;
+            text-align: left;
+            .score {
+                color:$ColorSubTxt;
+                margin-left:0.8rem;
+            }
+        }
+    }
+    // 설명답안
+    .summary_area {
+        text-align: left;
+        margin-top:2rem;
+    }
+    // 정답해설
+    .commentary_area {
+        margin-top:1.6rem;
+        padding:1.6rem 0;
+        border:1px solid #e3e4e5;
+        border-width:1px 0;
+        .commentary {
+            display: flex;
+            .tit {
+                flex:none;
+                width:5rem;
+                margin-right:0.8rem;
+            }
+            .txt {
+                color:$ColorSubTxt;
+            }
+            & + .commentary {
+                margin-top:1px;
+            }
+        }
+    }
+    // 설명답안
+    .summary_area {
+        padding:1rem 1.6rem;
+        background-color:#f2f3f5;
+        color:#44464a;
+    }
+
+}
+// s: 응시하기 결과 - 질문
+
+// s: 응시하기 결과 - 결과코멘트
+.quiz_result_comment {
+    margin-top:3.2rem;
+    .tit {
+        @include FontTitle16;
+    }
+    .txt {
+        margin-top:0.8rem;
+        color:$ColorSubTxt;
+    }
+}
+// e: 응시하기 결과 - 결과코멘트
 // Survey Head
 .survey_head {
     display: flex;
