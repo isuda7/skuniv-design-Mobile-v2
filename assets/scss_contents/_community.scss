@@ -595,5 +595,14 @@
             }
         }
     }
+    .board_toolbar.survey {
+        @include FontBody16;
+        .board_count {
+            color:#000;
+            .count {
+                font-weight:700;
+            }
+        }
+    }
 }
 
