@@ -2314,6 +2314,16 @@
                 }
             }
         }
+        // 툴팁잇는 경우 그룹핑
+        .board_dt_info_wrap {
+            display:flex;
+            align-items: center;
+            width:100%;
+            margin-top: 1.2rem;
+            .board_dt_info {
+                margin-top:0;
+            }
+        }
     }
     .board_dt_content {
         .board_ph {

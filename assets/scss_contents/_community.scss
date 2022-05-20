@@ -60,7 +60,7 @@
         &.more::before {
             width:2rem;
             height:2rem;
-            background-image: url('../img/icons_20_ic_more_grey_04.svg');
+            background-image:url('../img/icons_20_ic_more_grey_04.svg');
         }
     }
     // Profile Header
@@ -564,28 +564,15 @@
     > .board_dt_wrap {
         .board_dt_title {
             .board_dt_info {
-                > .left{
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    .user_id{
-                        margin-right : 0.8rem;
-                        text-overflow: ellipsis;
-                    }
-                    .reg_date {
-                        margin-right:0.8rem;
-                        flex: none;
-                    }
-                    .cnt_views {
-                        background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
-                        flex: none;
-                    }
-                }
-                > .right {
-                    margin-left: auto;
+                .cnt_views {
+                    background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
                     flex: none;
                 }
+                
+            }
+            .btn.ico.more {
+                position: relative;
+                left:0.4rem;
             }
         }
         .board_dt_foot {
@@ -605,6 +592,15 @@
                 .like_no {
                     margin-left:0.4rem;
                 }
+            }
+        }
+    }
+    .board_toolbar.survey {
+        @include FontBody16;
+        .board_count {
+            color:#000;
+            .count {
+                font-weight:700;
             }
         }
     }
