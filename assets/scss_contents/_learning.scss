@@ -2490,6 +2490,8 @@
 // s: 설문결과
 .quiz_complete {
     text-align: center;
+    padding:0 2.2rem;
+    word-break: keep-all;
     .ico.survey {
         width:5.2rem;
         height:6.0rem;
@@ -2907,8 +2909,21 @@
         padding-bottom:1.6rem;
         border-bottom:1px solid #f2f3f5;
         .users {
+            display: flex;
+            align-items: center;
             color:#666666;
             @include FontBody12;
+            &::before {
+                content:'';
+                position:relative;
+                top:1px;
+                display:block;
+                width:1.6rem;
+                height:1.6rem;
+                flex:none;
+                margin-right:0.4rem;
+                background: url('../img/icons_16_ic_avatar.svg') no-repeat center center / 100% auto;
+            }
         }
         .title {
             margin-top:0.8rem;
@@ -3179,9 +3194,18 @@
 }
 // e: 학습활동 노트 목록
 
+// s: 학습활동 노트 전체보기 모달
+.modal_activityView {
+    .sticky {
+        margin-top:-5.2rem;
+    }
+}
+// e: 학습활동 노트 전체보기 모달
+
 // s: 학습활동 노트 전체보기 헤더
 .activity_note_head {
     position: relative;
+    z-index: 90;
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
