@@ -42,12 +42,21 @@
         .tooltip_body {
             opacity: 1;
         }
+        .btn.arw_expand::after {
+            top:0rem;
+            transform: rotate(0);
+        }
     }
     &.is_visible {
         .tooltip_body {
             visibility: visible;
             pointer-events: auto;
         }
+    }
+    .btn.arw_expand::after {
+        position:relative;
+        top:0.2rem;
+        transform: rotate(-180deg);
     }
 }
 
@@ -68,7 +77,11 @@
             & + .btn {
                 border-top:1px solid #f2f3f5;
             }
-            &::before {
+            &.edit::before,
+            &.remove::before,
+            &.gallery::before,
+            &.camera::before,
+            &.file::before {
                 content:'';
                 display:block;
                 width:1.6rem;

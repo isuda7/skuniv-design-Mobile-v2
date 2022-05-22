@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////
 // Feed
 ///////////////////////////////////////////////////
-
 // community common
 .community_container {
     .tab.style1 {
@@ -568,7 +567,7 @@
                     background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
                     flex: none;
                 }
-                
+
             }
             .btn.ico.more {
                 position: relative;
@@ -606,3 +605,434 @@
     }
 }
 
+/////////////////////////////////
+// Board Write
+/////////////////////////////////
+// s: BoardWrite Modal
+.modal_boardwrite {
+    .modal_content {
+        padding:0;
+        .edit_select {
+            padding:0.8rem $GapSideBase;
+        }
+        .edit_tit {
+            flex:none;
+            padding:1rem $GapSideBase;
+            .textarea {
+                display: block;
+                width:100%;
+                word-wrap: pre-wrap;
+                word-break: normal;
+                height:2.4rem;
+                max-height:14.4rem;
+                @include FontBody16;
+                &::placeholder {
+                    color:#a4a6aa;
+                }
+            }
+            .input {
+                display: block;
+                width : 100%;
+                padding: 1rem 2rem;
+                @include FontBody16;
+            }
+        }
+    }
+    .edit_contents{
+        flex-direction: column;
+        border-top : .1rem solid $FormBasicBorder;
+        .acco_upload {
+            flex:none;
+            position: relative;
+            margin-top : 1.2rem;
+            // margin-bottom : 1.2rem;
+            .acco_title {
+                padding: 2rem $GapSideBase;
+                display: block;
+                @include FontTitle14;
+                border-bottom : .1rem solid #f2f3f5;
+                .cnt{
+                    margin-left : .4rem;
+                    display: inline-block;
+                    color :$ColorPrimary;
+                }
+                &::after{
+                    content:'';
+                    display: inline-block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    position: absolute;
+                    top:calc(50% - 0.8rem);
+                    right : $GapSideBase;
+                    transform : rotate(180deg);
+                    background: url("../img/icons_16_ic_chervron_up_grey_05.svg") no-repeat;
+                }
+                &.is_active::after{
+                    transform:  rotate(0);
+                }
+            }
+        }
+        .edit_form_wrap {
+            display:flex;
+            flex-direction: column;
+            flex : 1 0 auto;
+            padding:1.2rem $GapSideBase;
+            // 이미지첨부
+            .add_embed,
+            .add_img {
+                margin-bottom:1.2rem;
+            }
+            // 하이퍼링크첨부
+            .e_link {
+                color:$ColorSecondary;
+                text-decoration: underline
+            }
+            .edit_form {
+                @include FontBody14;
+                word-break: keep-all;
+                word-wrap: break-word;
+                .placeholder {
+                    color: #a4a6aa;
+                }
+                &.full{
+                    width : 100%;
+                    height : 100%;
+                }
+                p {
+                    min-height:2.2rem;
+                }
+            }
+            .textarea {
+                position: fixed;
+                right:200%;
+                width:100%;
+            }
+        }
+        .acco_content {
+            display: none;
+            &.is_active {
+                display:block;
+            }
+        }
+
+        // 썸네일 이미지
+        .board_thumb_slide {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            padding : 1.6rem $GapSideBase;
+            background-color: #f8f8fa;
+            &::-webkit-scrollbar {
+                display:none;
+            }
+            .board_thumb {
+                position: relative;
+                display:inline-block;
+                vertical-align: top;
+                flex:none;
+                max-width:calc(100vw - 4rem);
+                // max-width: 40rem;
+                .thumb_clear {
+                    position:absolute;
+                    top:1rem;
+                    right:1rem;
+                    .btn.clear {
+                        &::before{
+                            width :2rem;
+                            height : 2rem;
+                            background-image: url("../img/icons_20_ic_clear_grey_04.svg");
+                        }
+                    }
+                }
+            }
+
+            .board_thumb + .board_thumb {
+                margin-left:0.8rem;
+            }
+        }
+
+    }
+    // 툴바공통
+    .edit_tool_bar {
+        // position: fixed;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        height:4.4rem;
+        padding: 0 1rem;
+        border-top: .1rem solid #f2f3f5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .btn_group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .btn.ico {
+            width : 4rem;
+            height : 4rem;
+            &::before{
+                width : 2rem;
+                height : 2rem;
+            }
+            &.e_font::before{
+                background-image: url("../img/icons_20_ic_text_size_off_on.svg");
+            }
+            &.e_img::before{
+                background-image: url("../img/icons_20_ic_image_off_on.svg");
+            }
+            &.e_link::before{
+                background-image: url("../img/icons_20_ic_clip_off_on.svg");
+            }
+            &.e_align::before{
+                background-image: url("../img/icons_20_ic_text_align_off_on.svg");
+            }
+            &.e_attch::before{
+                background-image: url("../img/icons_20_ic_file_off_on.svg");
+            }
+            &.e_more::before{
+                background-image: url("../img/icons_20_ic_more_off_on.svg");
+            }
+            &.is_active::before{
+                background-position-y: 100%;
+            }
+            &+.tooltip,
+            &+.tooltip+.btn,
+            &+.btn{
+                margin-left : 1rem
+            }
+        }
+        .split {
+            flex:none;
+            display: block;
+            width:1px;
+            height:1.2rem;
+            margin:0 0 0 2rem;
+            background-color: #cbcdcf;
+        }
+        .btn.select {
+            flex:none;
+            width:8rem;
+            padding:0 1rem;
+            border:0;
+            color:#75777b;
+            &::after {
+                background-image: url('../img/icons_12_ic_chervron_down_grey_05.svg');
+            }
+        }
+    }
+    // 폰트툴바
+    .font_tool_bar{
+        // position: fixed;
+        // bottom : 4.4rem;
+        // left: 0;
+        // right : 0;
+        display: none;
+        padding : 1.2rem $GapSideBase;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #f8f8fa;
+        width:100%;
+        overflow-x:auto;
+        border-top:1px solid #e3e4e5;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        &.is_active{
+            display: flex;
+        }
+        .btn {
+            width : 2rem;
+            height : 2rem;
+            background-position: 0 0;
+            &+.btn{
+                margin-left : 3rem
+            }
+            &.e_fontSize{
+                padding : 0;
+                width : auto;
+            }
+            &.ico::before{
+                width : 2rem;
+                height : 2rem;
+            }
+            &.e_fontSize::before{
+                background-image: url('../img/icons_20_ic_fontsize_off_on.svg');
+            }
+            &.e_bolder::before{
+                background-image: url('../img/icons_20_ic_text_bolder_off_on.svg');
+            }
+            &.e_italic::before{
+                background-image:url('../img/icons_20_ic_text_italic_off_on.svg');
+            }
+            &.e_underline::before{
+                background-image:url('../img/icons_20_ic_text_underline_off_on.svg')
+            }
+            &.e_mid_line::before{
+                background-image:url('../img/icons_20_ic_text_strikethrough_off_on.svg')
+            }
+            &.e_fontAlign::before{
+                background-image:url('../img/icons_20_ic_text_align_off_on.svg')
+            }
+            &.e_indt_in::before{
+                background-image:url('../img/icons_20_ic_indentation_off_on.svg')
+            }
+            &.e_indt_out::before{
+                background-image:url('../img/icons_20_ic_handwriting_off_on.svg')
+            }
+            &.e_ul::before{
+                background-image:url('../img/icons_20_ic_text_dot_off_on.svg')
+            }
+            &.e_ol::before{
+                background-image:url('../img/icons_20_ic_text_number_off_on.svg')
+            }
+            &.is_active::before{
+                background-position-y: 100%;
+            }
+        }
+    }
+    // 폰트사이즈툴바
+    .fontsize_tool_bar {
+        display:flex;
+        align-items: center;
+        padding:0 1rem;
+        border-top:1px solid #e3e4e5;
+        background-color: #f8f8fa;
+        .btn {
+            width:4rem;
+            height:4rem;
+            font-size: 1.6rem;
+            &.e_fontBack::before {
+                width:2rem;
+                height:2rem;
+                background-image: url('../img/icons_16_ic_back_grey_05.svg');
+            }
+            & + .btn {
+                margin-left:0.8rem;
+            }
+            &.ico + .btn {
+                margin-left:0rem;
+            }
+            &.is_active {
+                color:$ColorPrimary;
+            }
+        }
+    }
+    // 더보기툴바
+    .more_tool_bar {
+        display:flex;
+        flex-wrap:wrap;
+        border-top:1px solid #f2f3f5;
+        > .tooltip,
+        > .btn {
+            width:33.333%;
+            height:10.2rem;
+            flex-direction: column;
+            border-right:1px solid #f2f3f5;
+            @include FontBody12;
+            color:#75777b;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-bottom:1px solid #f2f3f5;
+            }
+            &:nth-child(3) {
+                border-left-color: transparent;
+            }
+        }
+        > .tooltip > .btn {
+            height:100%;
+            flex-direction: column;
+            border-right:1px solid #f2f3f5;
+        }
+        .btn[class*=e_more] {
+            &::before {
+                content:'';
+                display:block;
+                margin:0 auto;
+                width:3.2rem;
+                height:3.2rem;
+                margin-bottom:0.4rem;
+            }
+            &.e_more_embed::before {
+                background-image: url('../img/icons_32_ic_embed_grey_04.svg');
+            }
+            &.e_more_vod::before {
+                background-image: url('../img/icons_32_ic_video_off_on.svg');
+            }
+            &.e_more_file::before {
+                background-image: url('../img/icons_32_ic_file_off_on.svg');
+            }
+            &.e_more_cube::before {
+                background-image: url('../img/icons_32_ic_book_off_on.svg');
+            }
+            &.e_more_thumb::before {
+                background-image: url('../img/icons_32_ic_thumbnail_off_on.svg');
+            }
+            &.is_active::before {
+                background-position-y: bottom;
+            }
+        }
+    }
+    // 앨범툴바
+    .album_toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:4.4rem;
+        padding:0 1rem;
+        border-top:1px solid #f2f3f5;
+        .tooltip {
+            height:100%;
+            .btn.arw_expand {
+                color:#000;
+                &::after {
+                    background-image: url('../img/icons_12_ic_chervron_down_black.svg');
+                }
+            }
+        }
+        .album_edit {
+            .btn.ico {
+                width:4rem;
+                height:4rem;
+                & + .btn {
+                    margin-left:0.8rem;
+                }
+                &::before {
+                    width:2rem;
+                    height:2rem;
+                }
+                &.rotate::before {
+                    background-image: url('../img/icons_20_ic_clockwise_off_on.svg');
+                }
+                &.rotate.revert::before {
+                    background-image: url('../img/icons_20_ic_counterclockwise_off_on.svg');
+                }
+                &.crop.ver::before {
+                    background-image: url('../img/icons_20_ic_horizontal_off_on.svg');
+                }
+                &.crop.hor::before {
+                    background-image: url('../img/icons_20_ic_vertical_off_on.svg');
+                }
+            }
+        }
+    }
+}
+// e: BoardWrite Modal
+
+// s: 게시판 첨부 Modal
+.modal_board_attach {
+    .form_wrap {
+        padding-bottom:0.8rem;
+    }
+}
+// e: 게시판 첨부 Modal
+
+// s: 추천 과정 선택 Modal
+.modal_cube_select {
+    .board_search_area {
+        padding:1.6rem $GapSideBase 0.8rem $GapSideBase;
+    }
+}
+// e: 추천 과정 선택 Modal

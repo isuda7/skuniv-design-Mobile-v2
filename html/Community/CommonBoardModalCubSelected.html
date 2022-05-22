@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_fullpopup modal_cube_select">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalFullpopup</h3>
+            </div>
+			<div class="sticky">
+				<div class="category_select">
+					<button type="button" class="btn depth1 selected">BM Design &amp; Storytelling</button>
+					<button type="button" class="btn depth2 selected">BM Design Fundamental</button>
+				</div>
+				<div class="board_search_area">
+					<span class="input_group clear srch">
+						<i class="ico srch"><span class="blind">검색</span></i>
+						<input type="search" placeholder="과정명을 입력해주세요." value="" class="basic" />
+						<button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
+					</span>
+				</div>
+			</div>
+            <div class="modal_content">
+				<!-- 게시판 툴바 -->
+				<div class="board_toolbar">
+					<div class="board_count">
+						<span class="total">총</span>
+						<em class="count">230</em>
+						<span class="unit">개</span>
+					</div>
+					<div class="board_util">
+						<button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
+					</div>
+				</div>
+				<!-- //게시판 툴바 -->
+
+				<!-- 추천과정 목록 -->
+				<div class="board_cube_list out_sec">
+					<div class="board_cube type5 has_check">
+						<div class="item_check">
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheck31" tabindex="0"
+									class="hidden" />
+								<label for="learningCheck31"></label>
+							</div>
+						</div>
+						<div class="item_body">
+							<div class="item_thumb">
+								<a href="javascript:void(0)" class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></a>
+							</div>
+							<a href="javascript:void(0)" class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title">
+									<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+								</p>
+							</a>
+						</div>
+						<div class="item_foot">
+							<div class="left_area">
+								<span class="date">김성혜 2022.04.30</span>
+							</div>
+						</div>
+					</div>
+					<div class="board_cube type5 has_check">
+						<div class="item_check">
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheck31" tabindex="0"
+									class="hidden" />
+								<label for="learningCheck31"></label>
+							</div>
+						</div>
+						<div class="item_body">
+							<div class="item_thumb">
+								<a href="javascript:void(0)" class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></a>
+							</div>
+							<a href="javascript:void(0)" class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title">
+									<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+								</p>
+							</a>
+						</div>
+						<div class="item_foot">
+							<div class="left_area">
+								<span class="date">김성혜 2022.04.30</span>
+							</div>
+						</div>
+					</div>
+					<div class="board_cube type5 has_check">
+						<div class="item_check">
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheck31" tabindex="0"
+									class="hidden" />
+								<label for="learningCheck31"></label>
+							</div>
+						</div>
+						<div class="item_body">
+							<div class="item_thumb">
+								<a href="javascript:void(0)" class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></a>
+							</div>
+							<a href="javascript:void(0)" class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title">
+									<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+								</p>
+							</a>
+						</div>
+						<div class="item_foot">
+							<div class="left_area">
+								<span class="date">김성혜 2022.04.30</span>
+							</div>
+						</div>
+					</div>
+					<div class="board_cube type5 has_check">
+						<div class="item_check">
+							<div class="checkbox basic">
+								<input type="checkbox" name="learningCheck" id="learningCheck31" tabindex="0"
+									class="hidden" />
+								<label for="learningCheck31"></label>
+							</div>
+						</div>
+						<div class="item_body">
+							<div class="item_thumb">
+								<a href="javascript:void(0)" class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></a>
+							</div>
+							<a href="javascript:void(0)" class="item_title">
+								<p class="sub_txt">카테고리명</p>
+								<p class="title">
+									<strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지 들어가요.</strong>
+								</p>
+							</a>
+						</div>
+						<div class="item_foot">
+							<div class="left_area">
+								<span class="date">김성혜 2022.04.30</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //추천과정 목록 -->
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic primary">완료 (N개)</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>

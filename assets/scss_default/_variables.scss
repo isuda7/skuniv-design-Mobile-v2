@@ -210,9 +210,25 @@ $FormBasicDisable: #E3E4E5;
 	position: relative;
 	flex-wrap: wrap;
 	.item_check {
-		width:2rem;
+		width:2.4rem;
 		flex:none;
-		margin-right:1.2rem;
+		margin-right:0.8rem;
+		.checkbox.basic label {
+			padding-left:2.4rem;
+		}
+		.checkbox.basic label::before {
+			background: no-repeat center center/2.4rem 2.4rem;
+		}
+		.checkbox.basic input, .checkbox.basic label:before, .checkbox.basic label:after {
+			width:2.4rem;
+			height:2.4rem;
+		}
+		.checkbox.basic label::before {
+			background-image: url("../img/icons_24_ic_check_off_grey.svg");
+		}
+		.checkbox.basic input:checked+label::before {
+			background-image: url("../img/icons_24_ic_check_on_primary.svg");
+		}
 	}
 	.item_body {
 		position: relative;
