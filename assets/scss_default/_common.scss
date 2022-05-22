@@ -6,8 +6,15 @@
 .ui_swiper {
 	position: relative;
 	opacity: 0;
+	box-sizing: border-box;
 	&.is_swiper {
 		opacity: 1;
+	}
+	.swiper,
+	.swiper-container,
+	.swiper-wrapper,
+	.swiper-slide {
+		box-sizing: inherit;
 	}
 }
 

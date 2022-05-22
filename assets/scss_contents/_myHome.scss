@@ -1,12 +1,217 @@
-
-///////////////////////////////////////////////////
-// Myhome Components
-///////////////////////////////////////////////////
-
-
 ///////////////////////////////////////////////////
 // Myhome Page
 ///////////////////////////////////////////////////
+// s: recom Main
+.content_body.myhome_main_page{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.myhome_wrap {
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    .list_sec {
+        &+.list_sec {
+            padding-top: 1.4rem;
+        }
+        // 학습과정 예외처리
+        &.learnings {
+            display:flex;
+            flex-direction: column;
+            padding-bottom:1.8rem;
+            .sec_body {
+                order: 1;
+            }
+            .sec_head {
+                order: 2;
+                justify-content: center;
+                margin:2rem 0 0 0;
+            }
+        }
+        .sec_head{
+            padding: 0 $GapSideBase;
+            margin-bottom: 1.5rem;
+            .tit{
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                color:#000;
+                @include FontTitle16;
+                > strong{
+                    display: block;
+                    line-height: 2.2rem;
+                    flex: 0 1 auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .count {
+                    margin-left:0.4rem;
+                    color:$ColorPrimary;
+                }
+            }
+            .btn{
+                padding:0;
+                color: #75777b;
+                @include FontBody14;
+                &.view_all{
+                    padding-right: 1.2rem;
+                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .6rem;
+                }
+            }
+        }
+    }
+    //s: Main swiper
+    // swiper-slide padding-bottom 1.8rem + list_sec padding-top 2.5rem = list간 간격 4.3rem
+    .ui_swiper {
+        .swiper-container{
+            padding:0 $GapSideBase;
+        }
+        &.swiper_learnings {
+            .swiper-slide {
+                width:30rem;
+                transform: scale(0.9);
+                transition: all 0.3s ease;
+                &-active {
+                    transform: scale(1);
+                }
+            }
+        }
+        &.swiper_cards,
+        &.swiper_feeds {
+            .swiper-slide{
+                padding: 0 0 1.8rem 0;
+                width: 15.6rem;
+            }
+        }
+        &.swiper_playlists {
+            .swiper-slide {
+                padding: 0 0 1.8rem 0;
+                width: 15.6rem;
+            }
+        }
+    }
+    //e: Main swiper
+
+    //s: Empty
+    .empty_wrap {
+        padding:0 $GapSideBase;
+        padding-bottom:1.8rem;
+    }
+    //e: Empty
+
+    // s: 도전중 뱃지
+    .card_badge_group_list {
+        padding-bottom:1.8rem;
+    }
+    // s: 학습 현황
+    .myData_status {
+        padding:0 2rem 1.8rem 2rem;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        .status_list {
+            display:flex;
+            width:100%;
+            height: 12rem;
+            padding:2.2rem 0;
+            @include Shadow3;
+            background-color: #fff;
+            border-radius: $RadiusLarge;
+            .item {
+                display: flex;
+                flex-direction: column;
+                flex:1 1 auto;
+                width:100%;
+                height:100%;
+                padding:0 1.2rem 0 1.5rem;
+                & + .item {
+                    border-left:1px solid #f2f3f5;
+                }
+                .label {
+                    display:block;
+                    color: #a4a6aa;
+                }
+                .value {
+                    margin-top:auto;
+                    @include FontTitle16;
+                }
+                .ico {
+                    display: block;
+                    width:1.6rem;
+                    height:1.6rem;
+                    margin-bottom:0.4rem;
+                }
+                &.time .ico {
+                    background-image: url('../img/icons_16_ic_time_grey_05.svg');
+                }
+                &.stemp .ico {
+                    background-image: url('../img/icons_16_ic_user_grey_05.svg');
+                }
+                &.badge .ico {
+                    background-image: url('../img/icons_16_ic_time_grey_03.svg');
+                }
+            }
+        }
+        .status_note {
+            margin-top:0.8rem;
+            .item {
+                display:flex;
+                align-items: center;
+                height:5.4rem;
+                padding:1.6rem;
+                background-color: #fff;
+                border-radius: $RadiusLarge;
+                @include Shadow3;
+                .tit {
+                    display: block;
+                    color:#a4a6aa;
+                }
+                .value {
+                    display:block;
+                    margin-left: auto;
+                    @include FontTitle18;
+                }
+                &::after {
+                    content:'';
+                    display:block;
+                    margin-left:0.8rem;
+                    width:1.6rem;
+                    height:1.6rem;
+                    background: url('../img/icons_16_ic_chervron_right_grey_04.svg') no-repeat center center / 100% auto;
+                }
+            }
+
+        }
+    }
+    // e: 학습현황
+
+    // s: 커뮤니티 피드 Empty
+    .feed_empty_wrap {
+        margin-top:0.6rem;
+        padding-top:4rem;
+        padding-bottom:5.4rem;
+        background-color: #f2f3f5;
+        .feed_icons {
+            display:flex;
+            overflow: hidden;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-top:4rem;
+            .ico {
+                flex:none;
+                width:5.6rem;
+                height:5.6rem;
+                background-color: yellowgreen;
+                border-radius: 50%;
+                & + .ico {
+                    margin-left:0.4rem;
+                }
+            }
+        }
+    }
+    // e: 커뮤니티 피드 Empty
+}
+// e: recom Main
 
 ///////////////////////////////////////////////////
 // Alim

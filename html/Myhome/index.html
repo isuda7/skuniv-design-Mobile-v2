@@ -10,12 +10,14 @@
     <link href="../../assets/css/index.css" rel="stylesheet" />
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <title>mySUNI Design Mobile V2</title>
 	<script>
 		$(function(){
 			$(window).scroll(function(){
 				var $appbar = $('.header');
-				var appbarShow = 284;
+				var appbarShow = 204;
 				var scrollTop = $(window).scrollTop();
 
 				// Appbar 보여줄 시점에 Active
@@ -25,6 +27,41 @@
 					$appbar.addClass('theme_secondary');
 				}
 			})
+
+			//swiper
+			var swiperLearningsParam = {
+				threshold: 5,
+				speed:300,
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				resistanceRatio: false,
+				loop: true,
+				spaceBetween: -5,
+				on: {
+					init: function(swiper){
+						// Swiper가 적용되면 보여주도록 대응
+						$(swiper.$el).closest('.ui_swiper').addClass('is_swiper');
+					}
+				}
+			}
+			var swiperLearnings = new Swiper(".swiper_learnings .swiper-container", swiperLearningsParam);
+
+			var swierParam = {
+				threshold: 5,
+				speed:300,
+				slidesPerView: 'auto',
+				resistanceRatio: false,
+				spaceBetween: 8,
+				on: {
+					init: function(swiper){
+						// Swiper가 적용되면 보여주도록 대응
+						$(swiper.$el).closest('.ui_swiper').addClass('is_swiper');
+					}
+				}
+			}
+			var swiperCards = new Swiper(".swiper_cards .swiper-container", swierParam);
+			var swiperPlaylists = new Swiper(".swiper_playlists .swiper-container", swierParam);
+			var swiperFeeds = new Swiper(".swiper_feeds .swiper-container", swierParam);
 		})
 	</script>
 
@@ -39,7 +76,7 @@
 				<h1><strong>신사임당</strong><span class="blind"> 마이 홈</span></h1>
 			</a>
 			<div class="appbar_right">
-				<button type="button" class="btn ico alim"><span class="blind">알림</span></button>
+				<button type="button" class="btn ico alim is_active"><span class="blind">알림</span></button>
 				<button type="button" class="btn ico srch"><span class="blind">검색</span></button>
 			</div>
 		</div>
@@ -47,9 +84,543 @@
 	<!-- // Header -->
 
 	<!-- Container -->
-	<main role="main" class="container">
-		<div class="content_body">
-			content_body
+	<main role="main" class="container myhome_container">
+		<div class="content_body myhome_main_page">
+			<div class="myhome_wrap">
+				<!-- 학습과정 -->
+				<div class="list_sec learnings">
+					<div class="sec_head">
+						<h2 class="blind"><strong>학습과정</strong></h2>
+						<button class="btn view_all">전체 이력보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_learnings is_swiper">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- card_learning -->
+										<div class="card_learning">
+											<div class="card_inner">
+												<a href="javascript:void(0)" class="card_thumb">
+													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
+												</a>
+												<div class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title">
+														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
+													</p>
+													<div class="btn_area">
+														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
+														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+													</div>
+													<div class="util_area">
+														<button type="button" class="btn ico pin"><span class="blind">핀고정</span></button>
+														<button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // card_learning -->
+									</div>
+									<div class="swiper-slide">
+										<!-- card_learning -->
+										<div class="card_learning">
+											<div class="card_inner">
+												<a href="javascript:void(0)" class="card_thumb">
+													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
+												</a>
+												<div class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title">
+														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
+													</p>
+													<div class="btn_area">
+														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
+														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+													</div>
+													<div class="util_area">
+														<button type="button" class="btn ico pin is_active"><span class="blind">핀고정</span></button>
+														<button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // card_learning -->
+									</div>
+									<div class="swiper-slide">
+										<!-- card_learning -->
+										<div class="card_learning">
+											<div class="card_inner">
+												<a href="javascript:void(0)" class="card_thumb">
+													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
+												</a>
+												<div class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title">
+														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
+													</p>
+													<div class="btn_area">
+														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
+														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+													</div>
+													<div class="util_area">
+														<button type="button" class="btn ico pin"><span class="blind">핀고정</span></button>
+														<button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // card_learning -->
+									</div>
+								</div>
+							</div>
+							<!-- //Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+				<!-- //학습과정 -->
+
+				<!-- 찜한과정 -->
+				<div class="list_sec cards">
+					<div class="sec_head">
+						<h2 class="tit"><strong>찜한과정</strong><i class="ico shuffle"></i></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_cards">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- card_cube -->
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+										<!-- // card_cube -->
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>Designing Customer Experience in the AI/DT EraDesigning Customer Experience in the AI/DT Era</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 들어가는 3줄짜리</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+				<!-- // 찜한과정 -->
+
+				<!-- 도전중뱃지 -->
+				<div class="list_sec badges">
+					<div class="sec_head">
+						<h2 class="tit"><strong>도전 중 뱃지</strong><em class="count">3</em></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<div class="card_badge_group_list in_sec">
+							<div class="card_badge_group">
+								<div class="card_item">
+									<div class="card_thumb">
+										<a href="javascript:void(0)" class="badge_box md" aria-label="AI one-star badge">
+											<img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+										</a>
+									</div>
+									<a href="javascript:void(0)" class="card_body">
+										<p class="title"><strong>뱃지명을 넣어주세요. 최대두줄이면 좋을거같아요 정말</strong></p>
+										<p class="count">진행중 1/11</p>
+									</a>
+								</div>
+								<div class="card_item">
+									<div class="card_thumb">
+										<a href="javascript:void(0)" class="badge_box md" aria-label="AI one-star badge">
+											<img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+										</a>
+									</div>
+									<a href="javascript:void(0)" class="card_body">
+										<p class="sub_txt">카테고리명</p>
+										<p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+										<p class="count">진행중 1/11</p>
+									</a>
+								</div>
+								<div class="card_item">
+									<div class="card_thumb">
+										<a href="javascript:void(0)" class="badge_box md" aria-label="AI one-star badge">
+											<img src="../../assets/img/demo/thumb-badge01.png" alt="" />
+										</a>
+									</div>
+									<a href="javascript:void(0)" class="card_body">
+										<p class="sub_txt">카테고리명</p>
+										<p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
+										<p class="count">진행중 1/11</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //도전중뱃지 -->
+
+				<!-- 플레이리스트 -->
+				<div class="list_sec playlists">
+					<div class="sec_head">
+						<h2 class="tit"><strong>플레이리스트</strong><em class="count">3</em></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_playlists">
+							<div class="swiper swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- playlist -->
+										<div class="card_playlist_main">
+											<a href="javascript:void(0)" class="card_inner">
+												<span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')">
+													<div class="avata_name">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<strong class="name">꿈꾸는하루 꿈꾸는하루 꿈꾸는하루 이틀 삼사오육일</strong>
+													</div>
+												</span>
+												<div class="card_body">
+													<em class="label make">내가만든</em>
+													<p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
+												</div>
+											</a>
+										</div>
+										<!-- //playlist -->
+									</div>
+									<div class="swiper-slide">
+										<!-- playlist -->
+										<div class="card_playlist_main">
+											<a href="javascript:void(0)" class="card_inner">
+												<span class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt="">
+													<div class="avata_name">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<strong class="name">Timothee Hal Chalamet</strong>
+													</div>
+												</span>
+												<div class="card_body">
+													<em class="label buy">내가담은</em>
+													<p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
+												</div>
+											</a>
+										</div>
+										<!-- //playlist -->
+									</div>
+									<div class="swiper-slide">
+										<div class="card_playlist_main">
+											<a href="javascript:void(0)" class="card_inner">
+												<span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')">
+													<div class="avata_name">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<strong class="name">꿈꾸는하루 꿈꾸는하루 꿈꾸는하루 이틀 삼사오육일</strong>
+													</div>
+												</span>
+												<div class="card_body">
+													<em class="label recom">추천받은</em>
+													<p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
+												</div>
+											</a>
+											<button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_playlist_main">
+											<a href="javascript:void(0)" class="card_inner">
+												<span class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')">
+													<div class="avata_name">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<strong class="name">꿈꾸는하루 꿈꾸는하루 꿈꾸는하루 이틀 삼사오육일</strong>
+													</div>
+												</span>
+												<div class="card_body">
+													<em class="label recom">추천받은</em>
+													<p class="title"><strong>리스트명최대두줄리스트명최대두줄 리스트명최대두줄리스트명최대두줄</strong></p>
+												</div>
+											</a>
+											<button type="button" class="btn ico remove"><span class="blind">삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+				<!-- // 인기플레이리스트 -->
+
+				<!-- 나의 데이터 -->
+				<div class="list_sec mydata">
+					<div class="sec_head">
+						<h2 class="tit"><strong>나의 데이터</strong></h2>
+					</div>
+					<div class="sec_body">
+						<div class="myData_status">
+							<div class="status_list">
+								<a href="javascript:void(0)" class="item time">
+									<div class="label">
+										<i class="ico"></i>
+										<strong class="txt">학습시간</strong>
+									</div>
+									<div class="value">
+										<em class="txt">19h 26m</em>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="item stemp">
+									<div class="label">
+										<i class="ico"></i>
+										<strong class="txt">스템프</strong>
+									</div>
+									<div class="value">
+										<em class="txt">152</em>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="item badge">
+									<div class="label">
+										<i class="ico"></i>
+										<strong class="txt">뱃지</strong>
+									</div>
+									<div class="value">
+										<em class="txt">3</em>
+									</div>
+								</a>
+							</div>
+							<div class="status_note">
+								<a href="javascript:void(0)" class="item">
+									<strong class="tit">학습노트</strong>
+									<em class="value">000</em>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 나의 데이터 -->
+
+				<!-- 나의 커뮤니티 피드 -->
+				<div class="list_sec feeds">
+					<div class="sec_head">
+						<h2 class="tit"><strong>나의 커뮤니티 피드</strong></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_feeds">
+							<div class="swiper swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- card_feed -->
+										<div class="card_myfeed">
+											<a href="javascript:void(0)" class="card_inner">
+												<div class="card_body">
+													<div class="labels">
+														<span class="label myfeed">나의 피드</span>
+													</div>
+													<p class="title">
+														<strong>피드제목입니다 피드제목입니다제목최대두줄</strong>
+													</p>
+													<p class="para">
+														이후에바로내용이나옵니다내용포함최대네줄
+													</p>
+												</div>
+												<div class="card_foot">
+													<div class="user_area">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<em class="name">이름이 길어지면 말줄임 처리</em>
+													</div>
+													<div class="info_area">
+														<span class="label like">000</span>
+														<span class="label repley">000</span>
+													</div>
+												</div>
+											</a>
+											<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+										</div>
+										<!-- //card_feed -->
+									</div>
+									<div class="swiper-slide">
+										<!-- card_feed -->
+										<div class="card_myfeed">
+											<a href="javascript:void(0)" class="card_inner">
+												<div class="card_body">
+													<div class="labels">
+														<span class="label bookmark">북마크</span>
+													</div>
+													<p class="title">
+														<strong>피드제목입니다 피드제목입니다제목최대두줄</strong>
+													</p>
+													<p class="para">
+														이후에바로내용이나옵니다내용포함최대네줄
+													</p>
+												</div>
+												<div class="card_foot">
+													<div class="user_area">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<em class="name">이름이 길어지면 말줄임 처리</em>
+													</div>
+													<div class="info_area">
+														<span class="label like">000</span>
+														<span class="label repley">000</span>
+													</div>
+												</div>
+											</a>
+											<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+										</div>
+										<!-- // card_feed -->
+									</div>
+									<div class="swiper-slide">
+										<!-- card_feed -->
+										<div class="card_myfeed">
+											<a href="javascript:void(0)" class="card_inner">
+												<div class="card_body">
+													<div class="labels">
+														<span class="label myfeed">나의 피드</span>
+													</div>
+													<p class="title">
+														<strong>피드제목입니다 피드제목입니다제목최대두줄</strong>
+													</p>
+													<p class="para">
+														이후에바로내용이나옵니다내용포함최대네줄
+													</p>
+												</div>
+												<div class="card_foot">
+													<div class="user_area">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<em class="name">이름이 길어지면 말줄임 처리</em>
+													</div>
+													<div class="info_area">
+														<span class="label like">000</span>
+														<span class="label repley">000</span>
+													</div>
+												</div>
+											</a>
+											<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+										</div>
+										<!-- //card_feed -->
+									</div>
+									<div class="swiper-slide">
+										<!-- card_feed -->
+										<div class="card_myfeed">
+											<a href="javascript:void(0)" class="card_inner">
+												<div class="card_body">
+													<div class="labels">
+														<span class="label bookmark">북마크</span>
+													</div>
+													<p class="title">
+														<strong>피드제목입니다 피드제목입니다제목최대두줄</strong>
+													</p>
+													<p class="para">
+														이후에바로내용이나옵니다내용포함최대네줄
+													</p>
+												</div>
+												<div class="card_foot">
+													<div class="user_area">
+														<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+														<em class="name">이름이 길어지면 말줄임 처리</em>
+													</div>
+													<div class="info_area">
+														<span class="label like">000</span>
+														<span class="label repley">000</span>
+													</div>
+												</div>
+											</a>
+											<button type="button" class="btn ico bookmark"><span class="blind">찜하기</span></button>
+										</div>
+										<!-- // card_feed -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+				<!-- // 나의 커뮤니티 피드 -->
+			</div>
 		</div>
 	</main>
 	<!-- // Container -->
@@ -59,8 +630,8 @@
 		<nav class="appnav">
 			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
 			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
-			<a href="/Mobile/Myhome/" class="item item_myhome"><span>마이홈</span></a>
-			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome is_active"><span>마이홈</span></a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity is_disabled">커뮤니티</a>
 			<a href="/Mobile/More/" class="item item_more">더보기</a>
 		</nav>
 	</footer>

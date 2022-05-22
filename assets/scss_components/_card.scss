@@ -392,7 +392,7 @@
 		flex-direction: column;
 		overflow: hidden;
 		border-radius: $RadiusLarge;
-		background-color: #fff;
+		// background-color: #fff;
 	}
 	.card_thumb {
 		position: relative;
@@ -415,6 +415,9 @@
 		.label.recom {
 			color:$ColorPlaylistRecom;
 		}
+		.label.recom2 {
+			color:$ColorPlaylistRecom2;
+		}
 		.title {
 			text-align: center;
 			font-size: 1.6rem;
@@ -432,7 +435,9 @@
 		.avata_name {
 			position: relative;
 			z-index: 10;
-			padding: 0 2rem;
+			top:5.4rem;
+			padding: 0 4rem;
+			margin-bottom:auto;
 			.avata {
 				display: block;
 				margin: auto;
@@ -446,6 +451,7 @@
 				color: #fff;
 				text-align: center;
 				@include Ellipsis2;
+				height: 36px;
 			}
 		}
 		&::after {
@@ -786,6 +792,7 @@
 	padding:2.4rem 1rem 0;
 	border-radius: $RadiusLarge;
 	@include Shadow3;
+	background-color: #fff;
 	> .btn.bookmark {
 		position:absolute;
 		right:1.2rem;
@@ -1032,6 +1039,9 @@
 	}
 	.empty_primary {
 		margin-top:2rem;
+		.btn.pill2 {
+			background-color: transparent;
+		}
 	}
 
 	&.badge {
@@ -1040,6 +1050,129 @@
 			justify-content: center;
 			.badge_box {
 				margin:0 0.4rem;
+			}
+		}
+	}
+}
+
+// Card Learning
+.card_learning {
+	width:30rem;
+	height:20rem;
+	border-radius: $RadiusLarge;
+	overflow: hidden;
+	.card_inner {
+		position: relative;
+		width:100%;
+		height:100%;
+		&::after {
+			content:'';
+			position: absolute;
+			left:0;
+			bottom:0;
+			z-index:12;
+			display:block;
+			width:100%;
+			height:8rem;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50%);
+		}
+	}
+	.card_thumb {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		z-index: 11;
+		&::after {
+			content:'';
+			position: absolute;
+			left:0;
+			top:0;
+			z-index:1;
+			display:block;
+			width:100%;
+			height:100%;
+			background-color: rgba(0,0,0,0.7);
+		}
+	}
+	.card_body {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position:relative;
+		z-index:13;
+		width:100%;
+		height:100%;
+		padding:2.4rem 3rem;
+		color:#fff;
+		.recom {
+			@include FontBody12;
+			color:$ColorPrimary;
+			font-weight: 700;
+			margin-bottom: 0.8rem;
+			& ~ .btn_area {
+				margin-top:1.6rem;
+			}
+		}
+		.sub_txt {
+			color: inherit;
+			@include Ellipsis1;
+		}
+		.title {
+			flex:none;
+			height:4.8rem;
+			margin-top:0.8rem;
+			@include FontTitle16;
+			@include Ellipsis2;
+			line-height: 2.4rem;
+		}
+		.btn_area {
+			margin-top:3.4rem;
+			.btn.ico {
+				width:2.4rem;
+				height:2.4rem;
+				& + .btn.ico {
+					margin-left:1.6rem;
+				}
+				&::before {
+					width:100%;
+					height:100%;
+				}
+				&.play::before {
+					background-image: url('../img/icons_24_ic_pip_play_white.svg');
+				}
+				&.learning::before {
+					background-image: url('../img/icons_24_ic_cubelist_white.svg');
+				}
+			}
+		}
+		.util_area {
+			.btn.ico {
+				position: absolute;
+				top:1.2rem;
+				width:2.4rem;
+				height:2.4rem;
+				margin:-0.6rem;
+				&::before {
+					width:1.2rem;
+					height:1.2rem;
+				}
+				&.pin {
+					left:1.2rem;
+					opacity: 0.5;
+					&.is_active {
+						opacity: 1;
+					}
+					&::before {
+						background-image: url('../img/icons_12_ic_pin_white.svg');
+					}
+				}
+				&.remove {right:1.2rem;}
+				&.remove::before {
+					background-image: url('../img/icons_12_ic_delete_white.svg');
+				}
 			}
 		}
 	}

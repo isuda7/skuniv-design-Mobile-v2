@@ -1,6 +1,6 @@
 // s: hottopic 전체보기
 .topic_list_wrap {
-    width:100%; 
+    width:100%;
     overflow: hidden;
     .card_topic_list {
         display: flex;
@@ -18,7 +18,7 @@
 }
 
 .recom_list_wrap{
-    width:100%; 
+    width:100%;
     overflow: hidden;
     .card_cube_list{
         display: flex;
@@ -41,11 +41,11 @@
     .recom_list_wrap .card_cube_list {
         margin: 0.6rem calc((33.3% - 15.6rem)/-2);
         justify-content: flex-start;
-        .card_topic, 
+        .card_topic,
         .card_cube {
             min-width: auto;
             margin: .6rem calc((33.3% - 15.6rem)/2);
-        }   
+        }
     }
 }
 @media screen and (min-width: 625px){ //4개이상
@@ -53,7 +53,7 @@
     .recom_list_wrap .card_cube_list {
         margin: .6rem -.4rem;
         justify-content: flex-start;
-        .card_topic, 
+        .card_topic,
         .card_cube {
             min-width: auto;
             margin: .6rem .4rem;
@@ -64,11 +64,12 @@
 
 // s: recom Main
 .content_body.recom_main_page{
+    padding-top:1.6rem;
     padding-bottom: 1.8rem;
 }
 .recom_wrap {
-    margin-left: -$GapSideBase; 
-    margin-right: -$GapSideBase; 
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
     .list_sec {
         &+.list_sec {
             padding-top: 2.5rem;
@@ -115,17 +116,16 @@
             }
         }
     }
-//s: Main swiper
-// swiper-slide padding-bottom 1.8rem + list_sec padding-top 2.5rem = list간 간격 4.3rem
+    //s: Main swiper
+    // swiper-slide padding-bottom 1.8rem + list_sec padding-top 2.5rem = list간 간격 4.3rem
     .ui_swiper {
         .swiper-container{
             padding:0 $GapSideBase;
-            margin-left: -.4rem;
         }
         &.swiper_cards,
         &.swiper_hottopics {
-            .swiper-slide{
-                padding: 0 0 1.8rem .4rem;
+            .swiper-slide {
+                padding: 0 0 1.8rem 0;
                 width: 15.6rem;
             }
         }
@@ -135,6 +135,7 @@
             }
             .swiper-slide {
                 width :100%;
+
                 .image_wrap{
                     display: inline-block;
                     width: 100%;
@@ -150,11 +151,11 @@
         }
         &.swiper_playlists {
             .swiper-slide {
-                padding: 1.1rem 0 1.8rem .4rem;
+                padding: 0 0 1.8rem 0;
                 width: 15.6rem;
             }
         }
     }
-//e: Main swiper
+    //e: Main swiper
 }
 // e: recom Main
