@@ -111,6 +111,39 @@
 
 // Cube 내 해당과정
 .card_cube_parents{
+	position: relative;
+    &_slide {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding : 1.6rem $GapSideBase;
+        background-color: #f8f8fa;
+        &::-webkit-scrollbar {
+            display:none;
+        }
+        .card_cube_parents {
+			flex:none;
+			width:calc(100vw - 4rem);
+            max-width: 40rem;
+            background-color: #fff;
+            .card_clear {
+                position:absolute;
+                top:1rem;
+                right:1rem;
+                .btn.clear {
+                    &::before{
+                        width :2rem;
+                        height : 2rem;
+                        background-image: url("../img/icons_20_ic_clear_grey_04.svg");
+                    }
+                }
+            }
+        }
+
+        .card_cube_parents + .card_cube_parents {
+            margin-left:0.8rem;
+        }
+    }
 	.card_inner{
 		padding:1.6rem;
 		display: flex;

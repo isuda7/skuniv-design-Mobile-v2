@@ -82,6 +82,15 @@
             &.remove::before {
                 background: url('../img/icons_16_ic_delete_grey_07.svg');
             }
+            &.gallery::before {
+                background:url('../img/icons_16_ic_image_grey_07.svg')
+            }
+            &.camera::before {
+                background:url('../img/icons_16_ic_camera_grey_07.svg')
+            }
+            &.file::before {
+                background:url('../img/icons_16_ic_folder_grey_07.svg')
+            }
         }
     }
 }
@@ -177,7 +186,7 @@
     }
 }
 
-//style icon 
+//style icon
 .info.ico{
     &::before{
         width: 1.6rem;
@@ -185,7 +194,7 @@
         background-image: url('../img/icons_24_ic_information_grey_05.svg');
     }
 }
-//style bubble tooltip_body 
+//style bubble tooltip_body
 .tooltip.bubble {
     .tooltip_body{
         padding: $FormBasicPadding;

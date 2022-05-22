@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		});
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
+        <div class="modal modal_fullpopup modal_boardwrite">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit"><strong class="blind">게시글 작성</strong></h3>
+                <button type="button" class="btn text primary" disabled><span>등록</span></button>
+            </div>
+            <div class="modal_content flex_content">
+				<div class="edit_select">
+					<button type="button" class="btn select">게시판 선택</button>
+				</div>
+                <div class="edit_tit">
+                    <textarea cols="10" rows="10" class="textarea full" placeholder="제목을 입력해주세요."></textarea>
+                </div>
+                <div class="edit_contents flex_area">
+					<div class="edit_form_wrap">
+						<!-- 입력결과폼 -->
+						<div class="edit_form full" tabindex="0">
+							<!-- 텍스트 입력 중 -->
+							<p># 글자모양 예시입니다.</p>
+							<p><span style="font-size:12px;">안녕하세요.</span> Fontsize 예시입니다.</p>
+							<p><span style="font-weight:700;">안녕하세요.</span> <span style="font-weight:400;">Bold 예시입니다.</span></p>
+							<p><span style="font-style:italic;">안녕하세요.</span> Italic 예시입니다.</p>
+							<p><span style="text-decoration:underline;">안녕하세요.</span> Underline 예시입니다.</p>
+							<p><span style="text-decoration:line-through;">안녕하세요.</span> Strike 예시입니다.</p>
+							<p></p>
+							<p># 문단모양 예시입니다.</p>
+							<p style="text-align:left;">안녕하세요. Align 예시입니다.</p>
+							<p style="text-align:center;">안녕하세요. Align 예시입니다.</p>
+							<p style="text-align:right;">안녕하세요. Align 예시입니다.</p>
+							<p style="text-indent:1.2rem;">안녕하세요. Indent 예시입니다.</p>
+
+							<ol>
+								<li style="list-style:decimal; margin-left:1.6rem">안녕하세요. Orther List 예시입니다.</li>
+								<li style="list-style:decimal; margin-left:1.6rem">안녕하세요. Orther List 예시입니다.
+									<ol>
+										<li style="list-style:decimal; margin-left:1.6rem">안녕하세요. Orther List 예시입니다.</li>
+										<li style="list-style:decimal; margin-left:1.6rem">안녕하세요. Orther List 예시입니다.</li>
+									</ol>
+								</li>
+							</ol>
+							<p></p>
+							<ul>
+								<li style="list-style:disc; margin-left:1.8rem">안녕하세요. Orther List 예시입니다.</li>
+								<li style="list-style:disc; margin-left:1.8rem">안녕하세요. Orther List 예시입니다.
+									<ul>
+										<li style="list-style:disc; margin-left:1.8rem">안녕하세요. Orther List 예시입니다.</li>
+										<li style="list-style:disc; margin-left:1.8rem">안녕하세요. Orther List 예시입니다.</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- 가상입력폼 -->
+						<textarea cols="10" rows="10" class="textarea">안녕하세요.</textarea>
+					</div>
+                </div>
+            </div>
+            <div class="modal_footer">
+				 <div class="font_tool_bar is_active">
+                    <button type="button" class="btn ico e_fontSize"><span class="blind">Fontsize</span></button>
+                    <button type="button" class="btn ico e_bolder is_active"><span class="blind">Bold</span></button>
+                    <button type="button" class="btn ico e_italic is_active"><span class="blind">Italic</span></button>
+                    <button type="button" class="btn ico e_underline is_active"><span class="blind">Underline</span></button>
+                    <button type="button" class="btn ico e_mid_line is_active"><span class="blind">Strike</span></button>
+                    <button type="button" class="btn ico e_fontAlign is_active"><span class="blind">Align</span></button>
+                    <button type="button" class="btn ico e_indt_in is_active"><span class="blind">Indent Inner</span></button>
+                    <button type="button" class="btn ico e_indt_out is_active"><span class="blind">Indent Outer</span></button>
+                    <button type="button" class="btn ico e_ol is_active"><span class="blind">Orther List</span></button>
+                    <button type="button" class="btn ico e_ul is_active"><span class="blind">Bullet List</span></button>
+				</div>
+                <div class="edit_tool_bar">
+                    <button type="button" class="btn ico e_font is_active"><span class="blind">글자크기</span></button>
+					<div class="tooltip right top basic">
+						<button type="button" class="btn ico e_img"><span class="blind">이미지첨부</span></button>
+						<div class="tooltip_body">
+							<button type="button" class="btn gallery">사진 보관함</button>
+							<button type="button" class="btn camera">사진 직접 촬영</button>
+							<button type="button" class="btn file">파일선택</button>
+						</div>
+					</div>
+                    <button type="button" class="btn ico e_link"><span class="blind">하이퍼링크</span></button>
+                    <button type="button" class="btn ico e_align"><span class="blind">정렬</span></button>
+                    <button type="button" class="btn ico e_more"><span class="blind">더보기</span></button>
+					<b class="split"></b>
+					<button type="button" class="btn select is_valued">비공개</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>
