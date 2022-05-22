@@ -2551,6 +2551,7 @@
 // s: 설문
 .quiz_wrap {
     padding-top:2.4rem;
+    padding-bottom:4rem;
     .quiz_step {
         display:flex;
         align-items: center;
@@ -2560,6 +2561,12 @@
     .quiz_tit {
         @include FontTitle18;
         margin-bottom:3.2rem;
+        .type {
+            font-weight: 400;
+        }
+        .quiz_tit_img {
+            margin-top:1.2rem;
+        }
     }
     .btn_view {
         width:4.8rem;
@@ -2601,20 +2608,75 @@
 
 // s: 질문 목록
 .quiz_form {
+    &_multi {
+        .quiz_stit {
+            margin-bottom:2.4rem;
+            @include FontTitle14;
+        }
+        .quiz_form_group + .quiz_form_group {
+            margin-top:3.2rem;
+        }
+    }
     .item {
         display:flex;
         justify-content: space-between;
         align-items: center;
         word-break: keep-all;
         .checkbox, .radio {
-            display:flex;
+            display:block;
             flex:1 1 auto;
             width:100%;
             label {
                 width:100%;
             }
+            input:checked + label {
+                color:$ColorPrimary;
+                font-weight: 700;
+            }
+            input:checked ~ .input_group {
+                display:flex;
+            }
+            .input_group {
+                display:none;
+                width:100%;
+                margin-top:1.2rem;
+            }
         }
+        .ico_label {
+            display:flex;
+            align-items: center;
+            flex:none;
+            height:2.2rem;
+            &::before {
+                content:'';
+                flex:none;
+                display:block;
+                width:2.4rem;
+                height:2.4rem;
+                margin:0 0.4rem 0 0;
+                background:no-repeat center center / 100% auto;
+            }
+            &.n1::before {
+                background-image: url('../img/icons_24_ic_verygood.png');
+            }
+            &.n2::before {
+                background-image: url('../img/icons_24_ic_good.png');
+            }
+            &.n3::before {
+                background-image: url('../img/icons_24_ic_normal.png');
+            }
+            &.n4::before {
+                background-image: url('../img/icons_24_ic_bad.png');
+            }
+            &.n5::before {
+                background-image: url('../img/icons_24_ic_so_bad.png');
+            }
+        }
+
         & + .item {margin-top:2.4rem;}
+    }
+    textarea.basic {
+        height:12.8rem;
     }
 }
 // e: 질문 목록
@@ -2636,6 +2698,7 @@
         align-items: flex-start;
         .quiz_tit {
             margin:0;
+
         }
     }
     &_list {

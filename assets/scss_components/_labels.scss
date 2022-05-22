@@ -38,9 +38,13 @@
     @include FontBody12;
     font-weight:400;
     color:$ColorSubTxt;
-      &.primary {
+    &.primary {
         background: $ColorPrimaryOpacity;
         color:$ColorPrimary;
+    }
+    &.secondary {
+        background: $ColorSecondaryOpacity;
+        color:$ColorSecondary;
     }
 }
 .theme_dark .label.style2 {
