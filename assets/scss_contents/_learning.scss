@@ -3155,6 +3155,9 @@
             padding:0;
             @include Ellipsis2;
         }
+        .btn {
+            color: #fff;
+        }
         .info_area {
             display: flex;
             align-items: center;
