@@ -338,8 +338,25 @@
 			.count {
 				color:$ColorPrimary;
 			}
-			.btn {
-				margin-left:auto;
+			.btn.unchecked {
+				position: relative;
+				z-index: 10;
+				height:2.4rem;
+				margin-left:0.8rem;
+				padding:0 0.8rem;
+				@include FontBody12;
+				font-weight: 400;
+				color:$ColorPrimary;
+				border-radius: $RadiusSmall;
+				border:1px solid $ColorPrimary;
+			}
+			.btn.expand {
+				position: absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				background-color: transparent;
 			}
 			&::after {
 				content:'';

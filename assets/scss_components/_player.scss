@@ -301,14 +301,19 @@
             padding:0.5rem 1.2rem;
         }
     }
-    .btn.ico.close {
+    .btn.ico {
         position:absolute;
         left:2rem;
         top:1.4rem;
-        &::before {
+        &.close::before {
             width:2.4rem;
             height:2.4rem;
             background-image: url('../img/icons_24_ic_close_white.svg');
+        }
+        &.back::before {
+            width:2.4rem;
+            height:2.4rem;
+            background-image: url('../img/icons_24_ic_back_white.svg');
         }
     }
     &.is_visible {
