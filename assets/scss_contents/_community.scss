@@ -615,6 +615,20 @@
             }
         }
     }
+    .board_toolbar.recom{
+        @include FontTitle14;
+        .board_count {
+            color:#000;
+            &::before {
+                content: "";
+                flex:none;
+                width:1.6rem;
+                height:1.6rem;
+                margin-right:0.4rem;
+                background-image: url('../img/icons_16_ic_recommend_black.svg');
+            }
+        }
+    }
     // 보드페이지 공통
     .ico {
         &.lock {
