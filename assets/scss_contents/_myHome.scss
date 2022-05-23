@@ -881,6 +881,7 @@
             .form_tit {
                 width:100%;
                 @include FontBody16;
+                color: #000;
             }
             .form_input {
                 input.basic {
@@ -889,9 +890,18 @@
             }
             .form_txt {
                 padding-left:0.6rem;
-                text-align: center;
+                text-align: right;
                 white-space: nowrap;
                 color: #a4a6aa;
+            }
+            &:last-child {
+                .form_tit,
+                .form_input,
+                .form_txt {
+                    display:table-cell;
+                    vertical-align: middle;
+                    padding:0.2rem 0;
+                }
             }
         }
     }
