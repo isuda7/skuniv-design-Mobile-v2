@@ -45,6 +45,7 @@
             <!-- 학습영상 -->
             <div class="cube_player_sec full_landscape" id="playerSec">
                 <script>
+                    // 22-05-23 Quiz Start시 뒤로가기로 변경
 					$('#playerSec').load('../Common/Player.html', function(){
 						$('#playerSec').children().addClass('is_quiz').find('.quiz_start').addClass('is_visible');
                         $('.appbar').addClass('is_hide').addClass('is_hidden');
