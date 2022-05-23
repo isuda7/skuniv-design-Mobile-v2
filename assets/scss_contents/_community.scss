@@ -567,7 +567,6 @@
                     background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
                     flex: none;
                 }
-
             }
             .btn.ico.more {
                 position: relative;
@@ -594,6 +593,19 @@
             }
         }
     }
+    .post_detail .post .post_head {
+        > .left {
+            .ico.lock {
+                margin-left:0.4rem;
+            }
+            .ico.pin {
+                background-image: url('../img/icons_16_ic_pin_grey_05.svg');
+            }
+            .user_id {
+                margin:0 0.4rem;
+            }
+        }
+    }
     .board_toolbar.survey {
         @include FontBody16;
         .board_count {
@@ -601,6 +613,15 @@
             .count {
                 font-weight:700;
             }
+        }
+    }
+    // 보드페이지 공통
+    .ico {
+        &.lock {
+            flex:none;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url('../img/icons_16_ic_lock_black.svg');
         }
     }
 }
