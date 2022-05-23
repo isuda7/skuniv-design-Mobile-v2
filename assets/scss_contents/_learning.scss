@@ -3118,6 +3118,8 @@
         }
         .tit {
             margin-top:0.4rem;
+            padding:0;
+            @include Ellipsis2;
         }
         .info_area {
             display: flex;
