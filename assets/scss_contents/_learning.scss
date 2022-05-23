@@ -1522,8 +1522,9 @@
 				.post_btn {
 					display:flex;
 					align-items: center;
-					padding:0;
-					margin-top:3.2rem;
+					margin:3.2rem -2rem 0 -2rem;
+					padding:0 2rem;
+                    width:auto;
 					height:5rem;
 					>.right {
 						.btn.like::before {
