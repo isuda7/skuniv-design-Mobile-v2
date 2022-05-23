@@ -45,6 +45,9 @@
             &.close::before {
                 background-image:url('../img/icons_24_ic_close_black.svg');
             }
+            &.close.white::before{
+                background-image:url('../img/icons_24_ic_close_white.svg');
+            }
             &.back {
                 justify-content: flex-start;
             }

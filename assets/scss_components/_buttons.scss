@@ -154,12 +154,18 @@
     }
 }
 .theme_dark {
+    .btn.text {
+        color:#fff;
+    }
     .btn.arw_expand::after {
         background-image: url('../img/icons_12_ic_chervron_down_white.svg');
     }
     .btn.arw_fold::after {
         background-image: url('../img/icons_12_ic_chervron_down_white.svg');
         transform: rotate(180deg);
+    }
+    .btn.arw_link::after {
+        background-image: url('../img/icons_12_ic_chervron_right_white.svg');
     }
 }
 .btn.pill {
