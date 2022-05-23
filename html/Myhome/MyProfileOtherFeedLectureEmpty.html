@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		})
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
+        <div class="modal modal_fullpopup modal_profile has_sticky">
+            <div class="modal_header">
+				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">프로필</h3>
+            </div>
+            <div class="modal_content flex_content">
+				<!-- 프로필 헤더 -->
+				<div class="profile_head">
+					<div class="avata_area">
+						<span class="avata"><img src="../../assets/img/icon_80_ic_default_profile.png" alt="Profile Avata"></span>
+					</div>
+					<div class="title_area">
+						<p class="title">
+							<strong class="name">사용자이름이 닉네임이라서 길어지면 님</strong>
+							<button type="button" class="btn pill">팔로우</button>
+						</p>
+						<div class="company">회사명</div>
+						<div class="follow">
+							<strong class="tit">팔로잉</strong>
+							<em class="count">20</em><span class="blind">명</span>
+							<b class="split"></b>
+							<strong class="tit">팔로워</strong>
+							<em class="count">20</em><span class="blind">명</span>
+						</div>
+					</div>
+					<div class="tag_area">
+						#태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요 #태그로노출되네요
+					</div>
+				</div>
+				<!-- // 프로필 헤더 -->
+
+				<div class="sticky">
+					<div class="tab style2">
+						<div class="tab_list">
+							<button type="button" class="tab_item is_active">커뮤니티</button>
+							<button type="button" class="tab_item">피드</button>
+						</div>
+					</div>
+				</div>
+				<div class="tab_panel feed_page">
+                    <div class="flex_area centered">
+                        <div class="no_data">
+                            <!-- 메뉴별 Empty 문구 입니다. -->
+                            <p class="sub_txt">작성한 피드가 없습니다.</p>
+                        </div>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>

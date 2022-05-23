@@ -23,10 +23,19 @@
 		}
 	}
 	.onboard_form {
+		margin-top:3.2rem;
 		> .checkbox.basic {
 			margin-bottom: 1.5rem;
 		}
-		margin-top:3.2rem;
+		> .checkbox.block {
+			.input_group {
+				display:none;
+				margin-top:0.4rem;
+				&.is_visible {
+					display:block;
+				}
+			}
+		}
 		.form_controls {
 			textarea.basic {
 				height:4rem;
