@@ -23,6 +23,9 @@
                 height:1.6rem;
                 background: url('../img/icons_16_ic_chervron_right_grey_04.svg') no-repeat center center / 100% auto;
             }
+            &[type="button"]{
+                @include FontBody16;   
+            }
         }
         &_content {
             display:none;
