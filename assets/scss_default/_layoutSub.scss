@@ -148,9 +148,16 @@
 	}
 }
 
-.tab_panel .task_board{
+.tab_panel .task_board {
 	margin-left : - $GapSideBase;
 	margin-right : - $GapSideBase;
 	padding-left : $GapSideBase;
 	padding-right : $GapSideBase;
+}
+
+// 개발 키패드 포커스시 대응
+.is_keypad_focused {
+	.content_body {
+		padding-bottom:50vh;
+	}
 }
