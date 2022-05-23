@@ -2332,6 +2332,9 @@
         &.fail {
             background-image: url(../img/icons_60_ic_result_fail.svg);
         }
+        &.wait {
+            background-image: url(../img/icons_60_ic_result_wait.svg);
+        }
     }
     .score {
         margin-top:2.5rem;
