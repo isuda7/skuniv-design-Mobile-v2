@@ -76,4 +76,8 @@
 	.is_active.item_comunity::before {background-position-y:bottom;}
 	.is_active.item_more::before {background-position-y:bottom;}
 
+	// Disabled
+	.is_disabled.item_comunity {color:#cbcdcf; pointer-events: none;}
+	.is_disabled.item_comunity::before {opacity: 0.3;}
+
 }
