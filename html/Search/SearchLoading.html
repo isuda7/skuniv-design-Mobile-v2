@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+            $(function(){
+                // 스티키 레이아웃 설정
+                var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                $('.container').css({'padding-top': breakStickyPos+'rem'});
+                $('.sticky').css({'top': breakStickyPos+'rem'});
+            })
+        });
+    </script>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1 class="bar_search_area">
+                        <span class="input_group clear srch is_valued">
+                            <i class="ico srch"><span class="blind">검색</span></i>
+                            <input type="search" placeholder="placeholder" value="ㄱㄴ" class="basic" />
+                            <button type="button" class="btn ico clear" ><span class="blind">삭제</span></button>
+                        </span>
+
+                    </h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container search_container">
+			<div class="content_body">
+				<div class="tab style2 out_sec sticky has_scroll">
+					<div class="tab_list">
+						<button type="button" class="tab_item is_active">전체</button>
+						<button type="button" class="tab_item ">과정</button>
+						<button type="button" class="tab_item ">뱃지</button>
+						<button type="button" class="tab_item ">커뮤니티</button>
+						<button type="button" class="tab_item ">강사</button>
+					</div>
+				</div>
+                <div class="tab_panel srch_result_page">
+                    <div class="board_toolbar">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">0</em>
+                            <span class="unit">개</span>
+                        </div>
+                        <div class="board_util">
+                            <button type="button" class="btn ico filter"><span class="blind">Filter View</span></button>
+                        </div>
+                    </div>
+                    <div class="flex_area centered">
+                        <div class="loader loader--style3" title="2">
+                            <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>7090CBB1-DCCE-4DD0-AC51-D584E1C26736</title>
+                                <defs>
+                                    <rect id="path-1" x="0" y="0" width="40" height="40"></rect>
+                                </defs>
+                                <g id="검색" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="검색/검색후/전체/Loading" transform="translate(-130.000000, -612.000000)">
+                                        <g id="Loading_grey" transform="translate(130.000000, 612.000000)">
+                                            <mask id="mask-2" fill="white">
+                                                <use xlink:href="#path-1"></use>
+                                            </mask>
+                                            <g id="Loading-(Background/Mask)"></g>
+                                            <path d="M13.7546082,5.27040148 C11.7792195,6.10745096 9.9919548,7.33251655 8.49872923,8.87300014 C5.93233418,11.524823 4.36150962,14.9822645 4.0523577,18.6596241 C3.74320579,22.3369837 4.71473479,26.0081589 6.80236483,29.0512409 C8.88999486,32.0943229 11.9653687,34.3222085 15.5075073,35.3574867 C19.0496459,36.3927649 22.8407617,36.1717827 26.2386284,34.7319736 C29.6364951,33.2921646 32.4321958,30.722055 34.1521282,27.4570312 C35.8720607,24.1920075 36.4104755,20.4328187 35.6761646,16.8162823 C34.9418538,13.1997459 32.9799659,9.94822478 30.1228504,7.61253667 C27.2657349,5.27684855 23.6890614,4.000603 19.9987297,4 L19.9987297,4 C17.8533137,4.00135129 15.7299968,4.43335199 13.7546082,5.27040148 Z" id="pregresscircle_line" stroke="#F2F3F5" stroke-width="4" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="검색" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="검색/검색후/전체/Loading" transform="translate(-190.000000, -612.000000)">
+                                        <g id="Loading_mint" transform="translate(190.000000, 612.000000)">
+                                            <mask id="mask-2" fill="white">
+                                                <use xlink:href="#path-1"></use>
+                                            </mask>
+                                            <g id="Loading-(Background/Mask)"></g>
+                                            <path d="M20,4 C22.145416,4.00135129 24.2687329,4.43335199 26.2441216,5.27040148 C28.2195102,6.10745096 30.0067744,7.33251655 31.5,8.87300014 C33.3215091,10.7560275 34.6527585,13.0575328 35.3768139,15.5753555 C36.1008693,18.0931783 36.1955774,20.7502782 35.6526165,23.313261 C35.1096556,25.8762438 33.9456396,28.2666883 32.2628155,30.2746201 C30.5799913,32.2825518 28.4298491,33.8465333 26.0012531,34.8291874 C23.5726571,35.8118415 20.9399166,36.1831007 18.3342886,35.9103546 C15.7286606,35.6376085 13.2298703,34.7292022 11.0574083,33.2649288 C8.88494635,31.8006555 7.10528457,29.8253186 5.87474573,27.5124283 C4.64420688,25.199538 4.00044251,22.619864 4,20" id="pregresscircle" stroke="#38B1AD" stroke-width="4" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-2)">
+                                                <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+                                                    from="0 20 20" to="360 20 20" dur="0.6s" repeatCount="indefinite" />
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<nav class="appnav">
+				<a href="/Mobile/Category/" class="item item_category is_active">전체과정</a>
+				<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+				<a href="/Mobile/Myhome/" class="item item_myhome"><span>마이홈</span></a>
+				<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+				<a href="/Mobile/More/" class="item item_more">더보기</a>
+			</nav>
+		</footer>
+		<!-- // Footer -->
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
