@@ -303,17 +303,32 @@
     }
     .btn.ico {
         position:absolute;
-        left:2rem;
-        top:1.4rem;
-        &.close::before {
-            width:2.4rem;
-            height:2.4rem;
-            background-image: url('../img/icons_24_ic_close_white.svg');
+        &.close {
+            left:2rem;
+            top:1.4rem;
+            &::before {
+                width:2.4rem;
+                height:2.4rem;
+                background-image: url('../img/icons_24_ic_close_white.svg');
+            }
         }
-        &.back::before {
-            width:2.4rem;
-            height:2.4rem;
-            background-image: url('../img/icons_24_ic_back_white.svg');
+        &.back {
+            left:2rem;
+            top:1.4rem;
+            &::before {
+                width:2.4rem;
+                height:2.4rem;
+                background-image: url('../img/icons_24_ic_back_white.svg');
+            }
+        }
+        &.cubelist {
+            right:2rem;
+            top:1.4rem;
+            &::before {
+                width: 2.4rem;
+                height:2.4rem;
+                background-image:url('../img/icons_24_ic_cubelist_white.svg');
+            }
         }
     }
     &.is_visible {

@@ -243,7 +243,7 @@
     .header,
     .content_head {
         position: fixed;
-        top:0;
+        top:var(--safeTop);
         left:0;
     }
     .sticky {
