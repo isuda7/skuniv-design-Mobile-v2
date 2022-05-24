@@ -86,7 +86,7 @@
 	.container {
 		width: 100%;
 		margin: 0;
-		padding-top: var(--safeTop);
+		// padding-top: var(--safeTop);
 		padding-bottom: var(--safeBottom);
 		@include FontBody14;
 		.content_body {
