@@ -606,7 +606,7 @@
             }
         }
     }
-    .board_toolbar.survey {
+    .board_toolbar.survey, .board_toolbar.recom {
         @include FontBody16;
         .board_count {
             color:#000;
@@ -615,7 +615,10 @@
             }
         }
     }
-    .board_toolbar.recom{
+    .board_toolbar.recom {
+        
+    }
+    .board_toolbar.ico_recom{
         @include FontTitle14;
         .board_count {
             color:#000;
