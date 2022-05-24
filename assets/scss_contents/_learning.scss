@@ -2134,8 +2134,30 @@
         border-bottom: 0.1rem solid #f2f3f5;
         padding-bottom: 1.2rem;
         margin-bottom: 2rem;
-        .title_area .title {
-            @include FontTitle16;
+        .title_area {
+            .title { 
+                @include FontTitle16;
+            }
+            &> .label {
+                position: relative;
+                top : -1.8rem;
+                + .title {
+                    margin-top: -.8rem;
+                }
+                &.ico.pin{
+                    top : -2rem;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        background: url('../img/icons_12_ic_pin_deeporange.svg') no-repeat 0 0;
+                    }
+                    + .title {
+                        margin-top : -2rem;
+                    }
+                }
+            }
         }
         .board_dt_info {
             margin-top: 1.2rem;
