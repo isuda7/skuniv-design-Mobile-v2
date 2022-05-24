@@ -26,7 +26,14 @@
 				} else {
 					$appbar.removeClass('is_transition');
 				}
-			})
+			});
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			});
 		});
 	</script>
 </head>
@@ -53,8 +60,8 @@
                 <!-- board title -->
                 <div class="board_dt_title">
                     <div class="title_area">
-                        <span class="label style1 primary">중요</span>
-                        <!-- <span class="label ico pin"><span class="blind">PIN</span></span> -->
+                        <!-- <span class="label style1 primary">중요</span> -->
+                        <span class="label ico pin"><span class="blind">PIN</span></span>
                         <h1 class="title appbar_title"><strong>스치기만 해도 오른다 하며 대세라던 메타버스, 관심 '뚝'…왜?</strong></h1>
                     </div>
                     <div class="board_dt_info">
@@ -277,5 +284,37 @@
 
 	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
 </div>
+<!-- Modal Bottomsheet -->
+<div class="modal_wrap is_active is_visible">
+    <div class="modal modal_bottomsheet modal_select">
+        <div class="modal_header">
+            <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+        </div>
+        <div class="modal_content">
+            <ul class="select_list">
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" />
+                        <label for="selectlist1"><span>Pin 해제</span></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                        <label for="selectlist2"><span>수정하기</span></label>
+                    </div>
+                </li>
+                <li>
+                    <div class="radio option">
+                        <input type="radio" name="selectlist" id="selectlist3" tabindex="0" class="hidden" />
+                        <label for="selectlist3"><span>삭제하기</span></label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dimmer" aria-hidden="true"></div>
+</div>
+<!-- // Modal Bottomsheet -->
 </body>
 </html>

@@ -562,15 +562,77 @@
 .board_page {
     > .board_dt_wrap {
         .board_dt_title {
+            .title_ico {
+                display: block;
+                width:4rem;
+                height:4rem;
+                background: url("../img/icons_40_ic_talk_black.svg") no-repeat;
+                margin-bottom:1rem;
+            }
             .board_dt_info {
-                .cnt_views {
-                    background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
-                    flex: none;
+                .label {
+                    position: relative;
+                    margin : 0;
+                    padding-left: 2.8rem;
+                    display: flex;
+                    align-items: center;
+                    & + .label {
+						margin-left:1.2rem;
+					}
+					&:first-child{
+						margin-left: 0;
+					}
+					&::before{
+						content:'';
+						display:block;
+						width : 1.6rem;
+						height : 1.6rem;
+					}
+                    &.cnt_views {
+                        background: url("../img/icons_16_ic_view_grey_04.svg") no-repeat 0.8rem 50%;
+                    }
+                    &.cnt_cmmt{
+                        background : url("../img/icons_16_ic_comment_grey_04.svg") no-repeat 0.8rem 50%;
+                    }
+                    &.cnt_views, &.cnt_cmmt  {
+                        flex: none;
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 0.1rem;
+                            height: 1rem;
+                            background-color: #e3e4e5;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                .reg_date {
+                    margin-right:0.8rem;
                 }
             }
             .btn.ico.more {
                 position: relative;
                 left:0.4rem;
+            }
+        }
+        .board_dt_content {
+            > .link_wrap {
+                margin-bottom:2.7rem;
+                .link_url {
+                    & + .link_url {
+                        margin-top:0.8rem;    
+                    }
+                    background-color:#f8f8fa;
+                    border:inherit;
+                    .title {
+                        @include Ellipsis1;
+                        @include FontBody12;
+                    }
+                }
             }
         }
         .board_dt_foot {
@@ -606,7 +668,7 @@
             }
         }
     }
-    .board_toolbar.survey, .board_toolbar.recom {
+    .board_toolbar.survey {
         @include FontBody16;
         .board_count {
             color:#000;
@@ -615,10 +677,44 @@
             }
         }
     }
-    .board_toolbar.recom {
-        
+    .board_recom_list {
+        .board_recom_item {
+            .board_toolbar.recom {
+                padding-top: inherit;
+            }
+        }
+        .board_recom_item + .board_recom_item {
+            margin-top:2.6rem;
+        }
     }
-    .board_toolbar.ico_recom{
+    .board_toolbar.recom {
+        @include FontTitle16;
+        .board_count {
+            color:#000;
+            overflow: hidden;
+            .total {
+                @include Ellipsis1;
+            }
+            .count {
+                flex: none;
+            }
+        }
+    }
+    .board_toolbar.ico_recom {
+        .board_count {
+            &::before{
+                background-image: url('../img/icons_16_ic_recommend_black.svg');
+            }
+        }
+    }
+    .board_toolbar.ico_link {
+        .board_count {
+            &::before{
+                background-image: url('../img/icons_16_ic_clip_black.svg');
+            }
+        }
+    }
+    .board_toolbar.ico_recom, .board_toolbar.ico_link {
         @include FontTitle14;
         .board_count {
             color:#000;
@@ -628,7 +724,6 @@
                 width:1.6rem;
                 height:1.6rem;
                 margin-right:0.4rem;
-                background-image: url('../img/icons_16_ic_recommend_black.svg');
             }
         }
     }
