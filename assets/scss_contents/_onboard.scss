@@ -268,8 +268,30 @@
 
 // s: 개인정보 동의 상세
 .privacy_detail {
-	padding-top:2rem;
+	padding-bottom:4rem;
+	.privacy_info {
+		padding-bottom: 2.4rem;
+		border-bottom: 1px solid #e3e4e5;
+		&:first-child {
+			margin-top:1.2rem;
+		}
+		.info_tit {
+			@include FontTitle18;
+			font-weight: 400;
+		}
+		.info_txt {
+			margin-top:0.4rem;
+			color:#44464a;
+		}
+	}
+	.privacy_group {
+		padding-bottom:2.4rem;
+		border-bottom:1px solid #e3e4e5;
+	}
 	.privacy_tit {
+		&:first-child {
+			padding-top:2rem;
+		}
 		margin-top:2.4rem;
 		@include FontTitle14;
 		&:first-child {
