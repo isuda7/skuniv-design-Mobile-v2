@@ -81,7 +81,8 @@
             &.remove::before,
             &.gallery::before,
             &.camera::before,
-            &.file::before {
+            &.file::before,
+            &.pin::before {
                 content:'';
                 display:block;
                 width:1.6rem;
@@ -103,6 +104,9 @@
             }
             &.file::before {
                 background:url('../img/icons_16_ic_folder_grey_07.svg')
+            }
+            &.pin::before {
+                background-image: url('../img/icons_16_ic_pinoff_grey_06.svg');
             }
         }
     }

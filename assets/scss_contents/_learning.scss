@@ -1835,6 +1835,9 @@
 				padding-top: 0.4rem;
 				@include FontBody14;
 				color : #cbcdcf;
+                strong {
+                    font-weight: 700;
+                }
 			}
 			& + .learning_codition{
 				padding-top : 1.6rem;
@@ -2045,6 +2048,12 @@
         font-size: 1.6rem;
         word-break: break-all;
         @include Ellipsis2;
+    }
+    .ico.pin {
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url('../img/icons_12_ic_pin_deeporange.svg') no-repeat 0 0;
     }
     .label + .task_tit {
         padding-top: 0.8rem;

@@ -500,6 +500,9 @@
 			align-items: center;
 			.state {
 				color: $ColorPrimary;
+				&.complete {
+					color:$ColorSubTxt;
+				}
 			}
 			.split {
 				width:1px;
