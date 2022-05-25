@@ -37,11 +37,10 @@
         <main role="main" class="container learning_container">
             <div class="content_head">
                 <!-- 학습영상 -->
-                <div class="cube_player_sec full_landscape" id="playerSec">
+                <div class="cube_player_sec audio_player_sec full_landscape" id="playerSec">
                     <script>
                         $('#playerSec').load('../Common/Player.html', function(){
-							$(this).find('.play_utils .pip').remove();
-							$(this).find('.play_utils .full').remove();
+                            $(this).find('.cube_player').addClass('is_active is_visible');
 						});
                     </script>
                 </div>

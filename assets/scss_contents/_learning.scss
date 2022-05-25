@@ -1682,7 +1682,7 @@
 			textarea.basic {
 				width:100%;
 				border:0;
-				min-height:2.2rem;
+				min-height:2.6rem;
 				max-height:11rem;
 				line-height:2.2rem;
 				padding:0;
@@ -3501,15 +3501,6 @@
         > .txt.style {
             color:#75777b;
             font-weight:400;
-        }
-    }
-}
-
-//오디오 페이지 플레이어 영상 영역 크기 조정
-.audio_player_sec {
-    .cube_player {
-        .player_thumb {
-            padding:3.2rem 5.8rem;
         }
     }
 }

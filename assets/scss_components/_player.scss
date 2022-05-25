@@ -504,3 +504,16 @@
         display:none;
     }
 }
+
+//오디오 페이지 플레이어 영상 영역 크기 조정
+.audio_player_sec {
+    .cube_player {
+        .player_thumb {
+            padding:3.2rem 5.8rem;
+        }
+        .btn.ico.pip,
+        .btn.ico.full {
+            display:none;
+        }
+    }
+}
