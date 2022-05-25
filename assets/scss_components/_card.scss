@@ -20,6 +20,21 @@
 				}
 			}
 		}
+		.label.d_day {
+			position: absolute;
+			top : .6rem;
+			left: .6rem;
+			z-index: 10;
+			padding: 0 1rem;
+			background:#fff;
+			color:#222;
+			font-size: 1rem;
+			line-height: 1.8rem;
+			font-weight: 700;
+			text-align: center;
+			border-radius: 1.3rem;
+			overflow: hidden;
+		}
 	}
 	&_foot {
 		.btn.ico {
