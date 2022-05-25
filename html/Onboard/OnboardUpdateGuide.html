@@ -84,7 +84,7 @@
 				</div>
 				<div class="swiper-pagination"></div>
 				<div class="page_action">
-					<button type="button" class="btn basic primary">시작</button>
+					<button type="button" class="btn basic primary" disabled>시작</button>
 				</div>
 			</div>
 		</main>
@@ -106,6 +106,9 @@
 							swiper.$el.addClass('theme_dark');
 						} else {
 							swiper.$el.removeClass('theme_dark');
+						}
+						if (swiper.activeIndex === 4) {
+							$('.page_action button').removeAttr('disabled');
 						}
 					}
 				}
