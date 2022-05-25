@@ -2135,7 +2135,7 @@
         padding-bottom: 1.2rem;
         margin-bottom: 2rem;
         .title_area {
-            .title { 
+            .title {
                 @include FontTitle16;
             }
             &> .label {
@@ -3064,8 +3064,28 @@
             margin-bottom:0.4rem;
             color: $ColorSubTxt;
         }
+        .note_info {
+            display:flex;
+            align-items: center;
+            margin-top:0.8rem;
+            color:#000;
+            .btn.arw_expand {
+                padding:0;
+                color: inherit;
+                &::after {
+                    background-image: url('../img/icons_12_ic_chervron_down_black.svg');
+                }
+            }
+            .split {
+                display:flex;
+                margin:0 1rem;
+                width:1px;
+                height:1rem;
+                background-color: #e3e4e5;
+            }
+        }
         .note_link{
-            display:inline-block;
+            display:block;
             &::after {
                 content:"";
                 position:relative;
@@ -3078,10 +3098,7 @@
             }
         }
         .note_no {
-            display: block;
-            margin-top:0.8rem;
             @include FontBody12;
-            color:#1c1d1f;
         }
     }
     .note_contents {
