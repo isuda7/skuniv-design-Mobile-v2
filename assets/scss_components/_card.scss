@@ -1055,10 +1055,8 @@
 
 // Card Empty
 .card_empty {
-	&_wrap {
-		.card_empty + .card_empty {
-			margin-top:24px;
-		}
+	& + .card_empty {
+		margin-top:24px;
 	}
 	text-align: center;
 	&:not(.none_shadow) {

@@ -691,6 +691,10 @@
 }
 
 // 학습 리포트
+.mylearning_report + .card_empty,
+.card_empty + .mylearning_report {
+    margin-top:2.4rem;
+}
 .mylearning_report {
     padding:2.8rem 2rem 2rem 2rem;
     border-radius: $RadiusLarge;
