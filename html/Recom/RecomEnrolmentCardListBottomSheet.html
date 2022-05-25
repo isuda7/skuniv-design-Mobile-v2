@@ -26,12 +26,19 @@
 				} else {
 					$appbar.removeClass('is_transition');
 				}
-			})
+			});
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			});
 		});
     </script>
 </head>
 
-<body>
+<body class="is_dimmed">
 	<div class="sub_wrapper">
 		<!-- Header -->
 		<header class="header">
@@ -209,6 +216,32 @@
 			<span class="blind">Scroll to top</span>
 		</button>
 	</div>
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_bottomsheet modal_select">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#SelectBottomSheet')"><span class="blind">닫기</span></button>
+            </div>
+            <div class="modal_content">
+                <ul class="select_list">
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist1" tabindex="0" class="hidden" checked />
+                            <label for="selectlist1"><span>전체보기</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio option">
+                            <input type="radio" name="selectlist" id="selectlist2" tabindex="0" class="hidden" />
+                            <label for="selectlist2"><span>신청 가능 과정 모아보기</span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
 </body>
 
 </html>
