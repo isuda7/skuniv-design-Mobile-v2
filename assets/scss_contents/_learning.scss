@@ -1276,6 +1276,12 @@
             color:#ff664d;
         }
     }
+    + .my_commentinfo{
+        margin-top: .8rem;
+    }
+    + .learning_codition {
+        padding-top: 2.4rem;
+    }
 }
 .theme_dark {
 	.my_commentinfo {
@@ -1830,7 +1836,7 @@
 			color :$ColorSubTxt;
 		}
 		.learning_codition{
-			padding-top : 2.4rem;
+			//padding-top : 2.4rem;
 			.c_txt {
 				padding-top: 0.4rem;
 				@include FontBody14;
