@@ -639,6 +639,11 @@
                     }
                 }
             }
+            > .board_ph {
+                p + p {
+                    margin-top:1.6rem;
+                }
+            }
         }
         .board_dt_foot {
             margin-top:3.2rem;
