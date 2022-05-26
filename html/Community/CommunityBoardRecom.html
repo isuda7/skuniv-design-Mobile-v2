@@ -11,7 +11,28 @@
 	<link href="../../assets/css/index.css" rel="stylesheet" />
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+    <script>
+        $(function(){
+			var swierParam = {
+				threshold: 5,
+				speed:300,
+				slidesPerView: 'auto',
+				resistanceRatio: false,
+				spaceBetween: 8,
+				on: {
+					init: function(swiper){
+						// Swiper가 적용되면 보여주도록 대응
+						$(swiper.$el).closest('.ui_swiper').addClass('is_swiper');
+					}
+				}
+			}
+			var swiperCards = new Swiper(".swiper_cards .swiper-container", swierParam);
+        })
+
+    </script>
 </head>
 
 <body>
@@ -45,22 +66,22 @@
 				</div>
 				<!-- //추천과정 탭 -->
                 <div class="tab_panel board_page">
-                    <div class="recom_list_wrap">
-                        <div class="board_toolbar pad_t0">
-                            <div class="board_count">
-                                <span class="total">총</span>
-                                <em class="count">9</em>
-                                <span class="unit">개</span>
-                            </div>
-                            <div class="board_util">
-                                <button type="button" class="btn text arw_expand pad_r0">최신순</button>
-                            </div>
+                    <div class="board_toolbar">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">9</em>
+                            <span class="unit">개</span>
                         </div>
+                        <div class="board_util">
+                            <button type="button" class="btn text arw_expand pad_r0">최신순</button>
+                        </div>
+                    </div>
 
+                    <div class="comunity_recom_wrap">
                         <!-- 추천과정 -->
                         <div class="list_sec cards">
                             <div class="sec_head">
-                                <h2 class="tit"><strong>추천과정</strong></h2>
+                                <h2 class="tit"><strong>[NFT 사용설명서] 전형적인 새로운 무언가 전형적인 새로운 무언가</strong><em class="count">3</em></h2>
                             </div>
                             <div class="sec_body">
                                 <!-- Custom Swiper Area -->
@@ -74,7 +95,7 @@
                                                     <div class="card_inner">
                                                         <div class="card_thumb">
                                                             <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
-                                                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+
                                                         </div>
                                                         <a href="javascript:void(0)" class="card_body">
                                                             <p class="sub_txt">카테고리명</p>
@@ -93,7 +114,7 @@
                                                     <div class="card_inner">
                                                         <div class="card_thumb">
                                                             <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
-                                                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+
                                                         </div>
                                                         <a href="javascript:void(0)" class="card_body">
                                                             <p class="sub_txt">카테고리명</p>
@@ -111,7 +132,7 @@
                                                     <div class="card_inner">
                                                         <div class="card_thumb">
                                                             <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
-                                                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+
                                                         </div>
                                                         <a href="javascript:void(0)" class="card_body">
                                                             <p class="sub_txt">카테고리명</p>
@@ -129,7 +150,7 @@
                                                     <div class="card_inner">
                                                         <div class="card_thumb">
                                                             <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
-                                                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+
                                                         </div>
                                                         <a href="javascript:void(0)" class="card_body">
                                                             <p class="sub_txt">카테고리명</p>
@@ -147,7 +168,231 @@
                                                     <div class="card_inner">
                                                         <div class="card_thumb">
                                                             <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
-                                                            <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //Swiper Component -->
+                                </div>
+                                <!-- // Custom Swiper Area -->
+                            </div>
+                        </div>
+                        <!-- // 찜한과정 -->
+
+                        <!-- 추천과정 -->
+                        <div class="list_sec cards">
+                            <div class="sec_head">
+                                <h2 class="tit"><strong>[NFT 사용설명서] 전형적인 새로운 무언가</strong><em class="count">3</em></h2>
+                            </div>
+                            <div class="sec_body">
+                                <!-- Custom Swiper Area -->
+                                <div class="ui_swiper swiper_cards">
+                                    <!-- Swiper Component -->
+                                    <div class="swiper swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <!-- card_cube -->
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                                <!-- // card_cube -->
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>Designing Customer Experience in the AI/DT EraDesigning Customer Experience in the AI/DT Era</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 들어가는 3줄짜리</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //Swiper Component -->
+                                </div>
+                                <!-- // Custom Swiper Area -->
+                            </div>
+                        </div>
+                        <!-- // 찜한과정 -->
+
+                        <!-- 추천과정 -->
+                        <div class="list_sec cards">
+                            <div class="sec_head">
+                                <h2 class="tit"><strong>[NFT 사용설명서] 전형적인 새로운 무언가</strong><em class="count">3</em></h2>
+                            </div>
+                            <div class="sec_body">
+                                <!-- Custom Swiper Area -->
+                                <div class="ui_swiper swiper_cards">
+                                    <!-- Swiper Component -->
+                                    <div class="swiper swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <!-- card_cube -->
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                                <!-- // card_cube -->
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>Designing Customer Experience in the AI/DT EraDesigning Customer Experience in the AI/DT Era</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 들어가는 3줄짜리</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="card_body">
+                                                            <p class="sub_txt">카테고리명</p>
+                                                            <p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card_foot">
+                                                        <span class="rate_count">4.8</span>
+                                                        <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card_cube">
+                                                    <div class="card_inner">
+                                                        <div class="card_thumb">
+                                                            <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+
                                                         </div>
                                                         <a href="javascript:void(0)" class="card_body">
                                                             <p class="sub_txt">카테고리명</p>

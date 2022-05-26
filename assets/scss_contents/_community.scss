@@ -513,6 +513,63 @@
     }
 }
 
+// 추천과정목록
+.comunity_recom_wrap {
+    margin:-$GapSideBase;
+    margin-top:1.2rem;
+    margin-bottom:0;
+    .list_sec {
+        &+.list_sec {
+            padding-top: 2.2rem;
+        }
+        &.bg_grey {
+            margin: 1.8rem 0 .6rem;
+            padding: 2rem 0 1.4rem;
+            background-color: #f2f3f5;
+        }
+        .sec_head{
+            padding: 0 $GapSideBase;
+            margin-bottom: 1.5rem;
+            .tit{
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                color:#000;
+                @include FontTitle16;
+                > strong{
+                    display: block;
+                    line-height: 2.2rem;
+                    flex: 0 1 auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .count {
+                    margin-left:0.4rem;
+                    color:$ColorPrimary;
+                }
+            }
+            .ico.shuffle{
+                flex: none;
+                margin-left: .4rem;
+                display: inline-block;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url("../img/icons_24_ic_shuffle_black.svg");
+            }
+            .btn{
+                padding:0;
+                color: #75777b;
+                @include FontBody14;
+                &.view_all{
+                    padding-right: 1.2rem;
+                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .6rem;
+                }
+            }
+        }
+    }
+}
+
 // 게시물 이미지 스타일
 .card_community2_wrap {
     width:100%;
