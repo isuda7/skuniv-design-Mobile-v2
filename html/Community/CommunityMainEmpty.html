@@ -12,6 +12,23 @@
 	<script src="../../assets/js/jquery.min.js"></script>
 	<script src="../../assets/js/ui.common.js"></script>
 	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
 </head>
 
 <body>
@@ -21,7 +38,7 @@
 			<div class="appbar basic">
 				<div class="appbar_left">
 					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-					<h1 class="blind"><strong>커뮤니티</strong></h1>
+					<h1 class="transition"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></h1>
 				</div>
 				<div class="appbar_right">
 					<button type="button" class="btn ico home is_active"><span class="blind">메안홈</span></button>
@@ -41,7 +58,7 @@
                             <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-community01.png')" alt=""></span>
                         </div>
                         <div class="item_title">
-                            <p class="title">
+                            <p class="title appbar_title">
                                 <strong>[ Management College ] _ 직무 Essential 과정의 Community</strong>
                             </p>
                         </div>
