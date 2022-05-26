@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E869EE6A-73EC-413D-BA6A-1D0E72C7D5DA</title>
+    <defs>
+        <rect id="path-1" x="1.52587891e-05" y="0" width="80" height="80"></rect>
+    </defs>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid/Keep" transform="translate(-1638.000000, -1845.000000)">
+            <g id="Icons-/-80-/-ic_default_profile" transform="translate(1638.000000, 1845.000000)">
+                <path d="M40,80 C17.9086094,80 0,62.0913906 0,40 C0,17.9086094 17.9086094,0 40,0 C62.0913906,0 80,17.9086094 80,40 C80,62.0913906 62.0913906,80 40,80 Z" id="Oval" fill="#F2F3F5"></path>
+                <path d="M39.9999924,43.6364326 C32.9709141,43.6364326 27.2727203,37.938238 27.2727203,30.9091587 C27.2727203,23.8800794 32.9709141,18.1818848 39.9999924,18.1818848 C47.0290706,18.1818848 52.7272644,23.8800794 52.7272644,30.9091587 C52.7272644,37.938238 47.0290706,43.6364326 39.9999924,43.6364326 Z" id="Oval" fill="#FFFFFF"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Login-1-(Background/Mask)"></g>
+                <path d="M66.8363953,69.6600522 C59.7379122,76.0873253 50.3258787,79.9999657 40.0000003,79.9999657 C29.6733304,79.9999657 20.2606458,76.0867276 13.1639557,69.6622578 C15.4660278,56.9290016 26.6053396,47.2727051 40.0000003,47.2727051 C53.3946611,47.2727051 64.533974,56.928999 66.8363953,69.6600522 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <circle id="Oval" stroke="#E3E4E5" mask="url(#mask-2)" cx="40" cy="40" r="39.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
