@@ -129,10 +129,62 @@
 
 
 // 페이지 프로필 헤더
-.board_community.main_profile {
-    > .item_foot {
-        margin-top:0.4rem;
+.community_main_head {
+    display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+    padding:2rem;
+    .item_body {
+		display: flex;
+		align-items: center;
+        width:100%;
+		.item_thumb {
+			flex: none;
+		}
+		.item_title {
+			display:block;
+			flex: 0 1 auto;
+		}
+	}
+    .item_thumb {
+		width: 5.2rem;
+		height: 5.2rem;
+		margin-right: 1.2rem;
+	}
+    .item_title {
+		width: calc(100% - 6.4rem);
+		flex: none;
+		padding-right: 3.6rem;
+		.title {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			font-weight: 700;
+			color: #000;
+			@include Ellipsis2;
+		}
+	}
+    .item_foot {
+        display: block;
+		width: 100%;
         .info_area {
+            display: flex;
+            align-items: center;
+            width:100%;
+            &::before {
+				content:'';
+				position: relative;
+				top:1px;
+				display:flex;
+				width:1.6rem;
+				height:1.6rem;
+				margin:0 0.4rem 0 0;
+				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+			}
+            .username {
+                @include Ellipsis1;
+                flex: 0 1 auto;
+            }
             .btn.text.arw_link {
                 &::before {
                     content: "";
@@ -144,11 +196,26 @@
                     background-color: #cbcdcf;
                 }
             }
+            .ico.lock {
+				flex:none;
+				margin-left: auto;
+				width: 1.6rem;
+				height: 1.6rem;
+				background-image: url('../img/icons_16_ic_lock_black.svg');
+			}
         }
     }
-    > .item_util {
-        top:2.4rem;
+    .item_util {
+        position:absolute;
+        margin-left:1.2rem;
+        top:30%;
         right:2rem;
+        .btn.ico.feel::before {
+			content:"";
+			width:2rem;
+			height:2rem;
+			background-image: url('../img/icons_20_ic_information_grey_6.svg');
+		}
     }
 }
 
