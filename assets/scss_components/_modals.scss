@@ -295,6 +295,7 @@
     border-radius:0;
     box-shadow:none;
     padding-top:var(--safeTop);
+    padding-bottom:var(--safeBottom);
     .modal_header {
         height:$HeightAppBar;
         padding:0 $GapSideBase;

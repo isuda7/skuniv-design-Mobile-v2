@@ -59,72 +59,75 @@
             background-image:url('../img/icons_20_ic_more_grey_04.svg');
         }
     }
-    // Profile Header
-    .community_head {
-        width:100%;
-        padding:1.2rem $GapSideBase 1.6rem $GapSideBase;
-        .profile_link {
-            display: flex;
-            flex-wrap: wrap;
-            .avata_area {
-                flex:none;
-                margin-right:1.2rem;
-                .avata {
-                    width:5.2rem;
-                    height:5.2rem;
-                    border-radius: 50%;
-                }
-            }
-            .title_area {
-                width:calc(100% - 7.2rem);
-                overflow: hidden;
-                .title {
-                    display:flex;
-                    align-items: center;
-                    overflow: hidden;
-                    &::after {
-                        content:"";
-                        flex:none;
-                        display:block;
-                        width:1.2rem;
-                        height:1.2rem;
-                        margin-left:0.2rem;
-                        background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
-                    }
-                    .name {
-                        flex:0 1 auto;
-                        @include FontTitle18;
-                        @include Ellipsis1;
-                        color:#000;
-                    }
-                }
-                .follow {
-                    display:flex;
-                    align-items: center;
-                    margin-top:0.6rem;
-                    .split {
-                        display:block;
-                        width:1px;
-                        height:1rem;
-                        margin:0 1.2rem;
-                        background-color: #e3e4e5;
-                    }
-                    .tit {
-                        @include FontBody14;
-                    }
-                    .count {
-                        margin-left:0.4rem;
-                        @include FontTitle14;
-                        color:$ColorPrimary;
-                    }
-                }
-            }
-        }
-    }
     .feed_toast {
         margin-bottom:7.4rem;
     }
 }
+
+// 커뮤니티 피드 헤더영역
+.community_feed_head {
+    width:100%;
+    padding:1.2rem $GapSideBase 1.6rem $GapSideBase;
+    .profile_link {
+        display: flex;
+        flex-wrap: wrap;
+        .avata_area {
+            flex:none;
+            margin-right:1.2rem;
+            .avata {
+                width:5.2rem;
+                height:5.2rem;
+                border-radius: 50%;
+            }
+        }
+        .title_area {
+            width:calc(100% - 7.2rem);
+            overflow: hidden;
+            .title {
+                display:flex;
+                align-items: center;
+                overflow: hidden;
+                &::after {
+                    content:"";
+                    flex:none;
+                    display:block;
+                    width:1.2rem;
+                    height:1.2rem;
+                    margin-left:0.2rem;
+                    background-image: url('../img/icons_12_ic_chervron_right_grey_06.svg');
+                }
+                .name {
+                    flex:0 1 auto;
+                    @include FontTitle18;
+                    @include Ellipsis1;
+                    color:#000;
+                }
+            }
+            .follow {
+                display:flex;
+                align-items: center;
+                margin-top:0.6rem;
+                .split {
+                    display:block;
+                    width:1px;
+                    height:1rem;
+                    margin:0 1.2rem;
+                    background-color: #e3e4e5;
+                }
+                .tit {
+                    @include FontBody14;
+                }
+                .count {
+                    margin-left:0.4rem;
+                    @include FontTitle14;
+                    color:$ColorPrimary;
+                }
+            }
+        }
+    }
+}
+
+
 // 페이지 프로필 헤더
 .board_community.main_profile {
     > .item_foot {
@@ -173,8 +176,8 @@
     }
 }
 // 팔로워
-.followlist_page {
-    .followlist_wrap {
+.follow_list_page {
+    .follow_list_wrap {
         margin-top:1.4rem;
         .list_item {
             .member {
@@ -260,10 +263,11 @@
     }
     .board_search_area {
         margin-top:2rem;
+        padding:0;
     }
 }
-// 모달 멤버리스트 하단 패딩 
-.modal_content .followlist_page {
+// 모달 멤버리스트 하단 패딩
+.modal_content .follow_list_page {
     padding-bottom:4rem;
 }
 
@@ -287,9 +291,9 @@
     }
 }
 // 모달 풀팝업 커뮤니티 상세 정보
-.modal_community {
+.modal_community_info {
     .modal_content {
-       .community_head {
+       .community_info_head {
            text-align: center;
            .item_body{
                display: block;
@@ -404,10 +408,11 @@
 // 전체 게시판 메뉴
 .modal_community_allboard {
     width:85%;
-    position: absolute;
-    right:0;
-    .allboard_page {
-        margin-top:0.8rem;
+    margin-top:3.2rem;
+    height:calc(100% - 3.2rem);
+    margin-left:auto;
+    .modal_content {
+        padding-bottom:0.8rem;
         .allboard_list {
             margin-top:1.2rem;
             .allboard_item + .allboard_item {
@@ -464,6 +469,16 @@
                 padding-right:0.8rem;
             }
         }
+    }
+}
+// 인터렉션
+.modal_wrap {
+    .modal_community_allboard {
+        transform:translateX(110%);
+        transition: all 0.3s ease;
+    }
+    &.is_active .modal_community_allboard {
+        transform:translateX(0);
     }
 }
 
@@ -629,7 +644,7 @@
                 margin-bottom:2.7rem;
                 .link_url {
                     & + .link_url {
-                        margin-top:0.8rem;    
+                        margin-top:0.8rem;
                     }
                     background-color:#f8f8fa;
                     border:inherit;
