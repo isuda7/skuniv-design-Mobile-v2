@@ -226,13 +226,29 @@
 
 // s: 개인정보 동의
 .privacy_agree {
-	.agree_all {
-		padding:1.3rem 0;
+	.check_txt {
+		font-weight:700;
+		color:#FF664D;
+	}
+	.policy_check {
+		border-top:1px solid #f2f3f5;
 		border-bottom:1px solid #f2f3f5;
-		.checkbox.basic {
-			label {
-				@include FontTitle14;
-			}
+		display: flex;
+		align-items: center;
+		&::after {
+			content:"";
+			display: block;
+			position: relative;
+			margin-left:auto;
+			width:1.6rem;
+			height:1.6rem;
+			background-image: url('../img/icons_16_ic_chervron_right_grey_05.svg');
+		}
+		.btn.policy_link {
+			padding:2.5rem 0;
+			display: flex;
+			align-items: center;	
+			
 		}
 	}
 	.agree_list {
