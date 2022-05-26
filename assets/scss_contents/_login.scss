@@ -114,6 +114,12 @@
     input.basic {
         height:4.8rem;
     }
+    .form_options {
+        margin:2rem 0;
+        .radio + .radio {
+            margin-left:2rem;
+        }
+    }
     .form_action {
         padding:0;
         margin-top:0.8rem;

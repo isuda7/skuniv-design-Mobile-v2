@@ -14,7 +14,7 @@
 	<title>mySUNI Design Mobile V2</title>
     <script>
         $(function(){
-            $('#loginFormEmail').focus();
+            $('#loginFormPhone').focus();
         })
     </script>
 </head>
@@ -37,15 +37,15 @@
                     </div>
                     <div class="pwclear_form">
                         <!-- Case 이메일 -->
-                        <div class="form_row">
+                        <div class="form_row is_hidden">
                             <label for="loginFormEmail" class="blind">이메일</label>
-                            <span class="input_group clear">
-                                <input type="text" id="loginFormEmail" placeholder="이메일" value="" class="basic" />
+                            <span class="input_group clear is_valued">
+                                <input type="text" id="loginFormEmail" placeholder="이메일" value="ss.name@sk" class="basic" />
                                 <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
                             </span>
                         </div>
                         <!-- Case 전화번호 -->
-                        <div class="form_row is_hidden">
+                        <div class="form_row">
                             <label for="loginFormPhone" class="blind">휴대전화 번호</label>
                             <span class="input_group clear">
                                 <input type="text" id="loginFormPhone" placeholder="휴대전화 번호" value="" class="basic" />
@@ -54,11 +54,11 @@
                         </div>
                         <div class="form_options">
                             <div class="radio basic large">
-                                <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" checked />
+                                <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" />
                                 <label for="radio14"><span>이메일</span></label>
                             </div>
                             <div class="radio basic large">
-                                <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" />
+                                <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" checked />
                                 <label for="radio14"><span>휴대전화 번호</span></label>
                             </div>
                         </div>
