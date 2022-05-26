@@ -26,7 +26,7 @@
             var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
             $('.container').css({'padding-top': breakStickyPos+'rem'});
             $('.sticky').css({'top': breakStickyPos+'rem'});
-        })
+        });
     </script>
 </head>
 <body>
@@ -69,7 +69,8 @@
                     </div>
                 </div>
             </div>
-            <script>learningThumb() // 타이틀 라인수만큼 스타일 구분하기</script>
+            <script>learningThumb(); // 타이틀 라인수만큼 스타일 구분하기
+            </script>
             <!-- // 학습과정 썸네일 -->
 
             <!-- 학습과정 관련배지 -->
@@ -125,6 +126,7 @@
             </div>
             <div class="tab_panel batch_page">
                 <!-- 큐브리스트 아코디언 -->
+                <!-- 22-05-26 TRS cube 명 없는 경우로 통일 -->
                 <div class="acco cube_acco">
                     <a href="javascript:void(0)" class="acco_title is_active">
                         <div class="cube_expand">
@@ -135,14 +137,14 @@
                         </div>
                     </a>
                     <div class="acco_content is_active">
-                        <div class="cube_item type_play is_state3">
+                        <div class="cube_item type_play is_state2">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
-									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>3m</p>
+									<div class="sub_txt">Video<i class="split"></i>3m</div>
 								</div>
 							</a>
 						</div>
@@ -153,7 +155,7 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>3m</p>
+									<div class="sub_txt">Video<i class="split"></i>3m</div>
 								</div>
 							</a>
 						</div>
@@ -163,8 +165,8 @@
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Test<i class="split"></i>응시중</p>
+									<p class="title"><strong>Test</strong></p>
+									<div class="sub_txt">응시중</div>
 								</div>
 							</a>
 						</div>
@@ -175,7 +177,18 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>고객 중심의 프로세스를 통해 인생을 바꾸는 제품을 개발하다 : 토도웍스 심재석 토도웍스 심재석</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>1h 1m</p>
+									<div class="sub_txt">Video<i class="split"></i>1h 1m</div>
+								</div>
+							</a>
+						</div>
+                        <div class="cube_item type_doc is_state3 is_repley">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Report</strong></p>
+									<div class="sub_txt">답변완료</div>
 								</div>
 							</a>
 						</div>
@@ -186,7 +199,18 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>3m</p>
+									<div class="sub_txt">Video<i class="split"></i>3m</div>
+								</div>
+							</a>
+						</div>
+                        <div class="cube_item type_doc is_state3 is_repley">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Survey</strong></p>
+									<div class="sub_txt">참여완료</div>
 								</div>
 							</a>
 						</div>
@@ -200,14 +224,14 @@
                         </div>
                     </a>
                     <div class="acco_content">
-                        <div class="cube_item type_play is_state3">
+                        <div class="cube_item type_play is_state2">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
-									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>고객 중심의 프로세스를 통해 인생을 바꾸는 제품을 개발하다 : 토도웍스 심재석 토도웍스 심재석</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>1h 1m</p>
+									<div class="sub_txt">Video<i class="split"></i>1h 1m</div>
 								</div>
 							</a>
 						</div>
@@ -218,7 +242,7 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>3m</p>
+									<div class="sub_txt">Video<i class="split"></i>3m</div>
 								</div>
 							</a>
 						</div>
@@ -239,18 +263,40 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>고객 중심의 프로세스를 통해 인생을 바꾸는 제품을 개발하다 : 토도웍스 심재석 토도웍스 심재석</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>1h 1m</p>
+									<div class="sub_txt">Video<i class="split"></i>1h 1m</div>
 								</div>
 							</a>
 						</div>
-                        <div class="cube_item type_play is_state3">
+                        <div class="cube_item type_play is_state2">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
-									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-									<p class="sub_txt">Video<i class="split"></i>3m</p>
+									<div class="sub_txt">Video<i class="split"></i>3m</div>
+								</div>
+							</a>
+						</div>
+                        <div class="cube_item type_doc is_state3 is_repley is_disabled">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per0"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Test</strong></p>
+                                    <div class="sub_txt">학습 진행 후 Test 응시 가능</div>
+								</div>
+							</a>
+						</div>
+                        <div class="cube_item type_talk is_state1">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per0"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>혁신 리더의 Diary인가?</strong></p>
+									<div class="sub_txt">Talk</div>
 								</div>
 							</a>
 						</div>
@@ -269,8 +315,8 @@
                                     <span class="cube_circle per0"><span class="blind">Cube</span></span>
                                 </div>
                                 <div class="item_title">
-                                    <p class="title"><strong>Survey 서베이 진행 불가 (학습 미진행)</strong></p>
-                                    <p class="sub_txt">학습 진행 후 Survey 참여 가능</p>
+                                    <p class="title"><strong>Survey</strong></p>
+                                    <div class="sub_txt">학습 진행 후 Survey 참여 가능</div>
                                 </div>
                             </a>
                         </div>
@@ -280,8 +326,8 @@
                                     <span class="cube_circle per0"><span class="blind">Cube</span></span>
                                 </div>
                                 <div class="item_title">
-                                    <p class="title"><strong>Survey 서베이 진행 불가 (학습 미진행)</strong></p>
-                                    <p class="sub_txt">학습 진행 후 Survey 참여 가능</p>
+                                    <p class="title"><strong>Survey</strong></p>
+                                    <div class="sub_txt">과정 공통<i class="split"></i>학습 진행 후 Survey 참여 가능</div>
                                 </div>
                             </a>
                         </div>

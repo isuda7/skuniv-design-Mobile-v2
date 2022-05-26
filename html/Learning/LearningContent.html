@@ -145,12 +145,13 @@
 
 					[큐브유형]
 					유형1: type_play (Video, Audio, E-learning, Classroom, Task, Documents, webpage, Discussion, Experiential, Cohort)
-					유형2: type2 (Test, Report, Survey)
-					유형3: type3 (Talk)
+					유형2: type_doc (Test, Report, Survey)
+					유형3: type_talk (Talk)
 
 					화살표 없는 경우: is_disabled [테스트: 학습 진행불가(학습 미시작), 설문: 진행 불가(학습 미진행)]
 					리플인 경우: is_repley
 				 -->
+                <!-- 22-05-26 TRS cube 명 없는 경우로 통일 -->
                  <div class="cube_list">
                     <div class="cube_item type_play is_state1">
                         <a href="javascript:void(0)" class="item_body">
@@ -160,6 +161,17 @@
                             <div class="item_title">
                                 <p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
                                 <div class="sub_txt">Video<i class="split"></i>3m</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cube_item type_doc is_state1 is_repley is_disabled">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="cube_circle per0"><span class="blind">Cube</span></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="title"><strong>Test</strong></p>
+                                <div class="sub_txt">학습 진행 후 Test 응시 가능</div>
                             </div>
                         </a>
                     </div>
@@ -182,20 +194,44 @@
                                 <span class="cube_circle per50"><span class="blind">Cube</span></span>
                             </div>
                             <div class="item_title">
-                                <p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
-                                <p class="sub_txt">Test<i class="split"></i>응시중</p>
+                                <p class="title"><strong>Report</strong></p>
+                                <div class="sub_txt">검수중</div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="cube_item type_play is_state2">
+                    <div class="cube_item type_play is_state3">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
-                                <span class="cube_circle per50"><span class="blind">Cube</span></span>
+                                <span class="cube_circle per100"><span class="blind">Cube</span></span>
                             </div>
                             <div class="item_title">
                                 <p class="title"><strong>프롤로그 : 왜 혁신 리더의 Diary인가?</strong></p>
                                 <div class="sub_txt">Video<i class="split"></i>3m</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="cube_item type_doc is_state3 is_repley">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="cube_circle per100"><span class="blind">Cube</span></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="title"><strong>Survey</strong></p>
+                                <div class="sub_txt">참여 완료</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="cube_item type_talk is_state1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <span class="cube_circle per0"><span class="blind">Cube</span></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="title"><strong>왜 혁신 리더의 Diary인가?</strong></p>
+                                <div class="sub_txt">Talk</div>
                             </div>
                         </a>
                     </div>
@@ -207,7 +243,7 @@
                             </div>
                             <div class="item_title">
                                 <p class="title"><strong>Survey</strong></p>
-                                <p class="sub_txt">학습 진행 후 Survey 참여 가능</p>
+                                <div class="sub_txt">과정공통<i class="split"></i>학습 진행 후 Survey 참여 가능</div>
                             </div>
                         </a>
                     </div>

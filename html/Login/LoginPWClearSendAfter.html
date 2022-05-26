@@ -35,13 +35,33 @@
                     <div class="login_tit">
                         <h2 class="heading2">비밀번호 초기화</h2>
                     </div>
+                    <!-- 22-05-26 이메일, 휴대전화 구분수정 -->
                     <div class="pwclear_form">
+                        <!-- Case 이메일 -->
                         <div class="form_row">
-                            <label for="loginFormEmail" class="blind">이메일 또는 휴대전화 번호</label>
+                            <label for="loginFormEmail" class="blind">이메일</label>
                             <span class="input_group clear is_valued">
-                                <input type="text" id="loginFormEmail" placeholder="이메일 또는 휴대전화 번호" value="ss.name@sk" class="basic" />
+                                <input type="text" id="loginFormEmail" placeholder="이메일" value="ss.name@sk" class="basic" />
                                 <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
                             </span>
+                        </div>
+                        <!-- Case 전화번호 -->
+                        <div class="form_row is_hidden">
+                            <label for="loginFormPhone" class="blind">휴대전화 번호</label>
+                            <span class="input_group clear is_valued">
+                                <input type="text" id="loginFormPhone" placeholder="휴대전화 번호" value="ss.name@sk" class="basic" />
+                                <button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
+                            </span>
+                        </div>
+                        <div class="form_options">
+                            <div class="radio basic large">
+                                <input type="radio" name="radioDisabled1" id="radio11" tabindex="0" class="hidden" checked />
+                                <label for="radio11"><span>이메일</span></label>
+                            </div>
+                            <div class="radio basic large">
+                                <input type="radio" name="radioDisabled1" id="radio14" tabindex="0" class="hidden" />
+                                <label for="radio14"><span>휴대전화 번호</span></label>
+                            </div>
                         </div>
                         <div class="form_action">
                             <button type="button" class="btn basic primary">인증번호 재전송</button>
