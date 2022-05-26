@@ -2722,6 +2722,12 @@
             }
         }
     }
+    // 22-05-26 오답시 선택지 비활성화 추가
+    .answer_area.wrong {
+        .choice {
+            opacity:0.7;
+        }
+    }
     // 이미지문항
     .answer_img_area {
         margin-top:1rem;
