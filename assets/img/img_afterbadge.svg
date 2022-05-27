@@ -1,0 +1,29 @@
+<svg width="45" height="40" viewBox="0 0 45 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-520%" y="-585%" width="1140%" height="1270%" filterUnits="objectBoundingBox" id="zuva52sf1b">
+            <feOffset dy="11" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0599999987 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feOffset dy="9" in="SourceAlpha" result="shadowOffsetOuter2"/>
+            <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter2" result="shadowBlurOuter2"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0399999991 0" in="shadowBlurOuter2" result="shadowMatrixOuter2"/>
+            <feOffset dy="24" in="SourceAlpha" result="shadowOffsetOuter3"/>
+            <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter3" result="shadowBlurOuter3"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0199999996 0" in="shadowBlurOuter3" result="shadowMatrixOuter3"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="shadowMatrixOuter2"/>
+                <feMergeNode in="shadowMatrixOuter3"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z" id="jjw1eqob5a"/>
+        <mask id="bty4g2po9c" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="#fff">
+            <use xlink:href="#jjw1eqob5a"/>
+        </mask>
+    </defs>
+    <g filter="url(#zuva52sf1b)" fill="#FFF" fill-rule="evenodd" opacity=".8">
+        <path d="M25 40c11.046 0 20-8.954 20-20S36.046 0 25 0 5 8.954 5 20s8.954 20 20 20z" opacity=".2"/>
+        <use stroke="#A9A9A9" mask="url(#bty4g2po9c)" stroke-width="3" opacity=".4" stroke-dasharray="0,0" xlink:href="#jjw1eqob5a"/>
+    </g>
+</svg>
