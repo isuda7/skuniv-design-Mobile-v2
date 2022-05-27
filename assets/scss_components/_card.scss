@@ -315,9 +315,12 @@
 	position: relative;
 	margin-top:0.8rem;
 	.card_inner {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		padding: 1.6rem;
 		border-radius: $RadiusLarge;
+		height:13.8rem;
 		background-color: #fff;
 		@include Shadow2;
 	}
