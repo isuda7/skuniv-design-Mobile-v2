@@ -2823,6 +2823,12 @@
 // s: Survey Review
 .survey_review {
     padding-top:1.6rem;
+    & + .survey_review {
+        margin-top:2.4rem;
+    }
+    .label + .heading2 {
+        margin-top:1.2rem;
+    }
     &_list {
         margin-top:1.2rem;
         .item {
