@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+                <div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>Survey</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container more_container">
+			<div class="content_body commonSurvey_page">
+                <div class="survey_review_wrap">
+                    <div class="survey_review">
+                        <span class="label style1 primary">필수</span>
+                        <h4 class="heading2">1. 이 과정을 다른 구성원에게도 추천하고 싶다.</h4>
+                        <ul class="survey_review_list">
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn0" id="review_btn1" tabindex="0" class="hidden" checked />
+                                    <label for="review_btn1"><span class="ico_label n1">매우 그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn0" id="review_btn2" tabindex="0" class="hidden" />
+                                    <label for="review_btn2"><span class="ico_label n2">그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn0" id="review_btn3" tabindex="0" class="hidden" />
+                                    <label for="review_btn3"><span class="ico_label n3">보통이다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn0" id="review_btn4" tabindex="0" class="hidden" />
+                                    <label for="review_btn4"><span class="ico_label n4">아니다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn0" id="review_btn5" tabindex="0" class="hidden" />
+                                    <label for="review_btn5"><span class="ico_label n5">매우 아니다</span></label>
+                                </div>
+                            </div>
+                        </ul>
+                        <div class="survey_review_memo">
+                            <div class="input_group">
+                                <label for="write_form" class="tit blind">만족도 평가</label>
+                                <textarea id="write_form" cols="10" rows="5" placeholder="어떤 점이 특별히 좋았나요? 자세한 학습 후기를 남겨주세요." class="basic"></textarea>
+                                <p class="form_bytes">0/300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="survey_review">
+                        <span class="label style1 primary">필수</span>
+                        <h4 class="heading2">2. 이 과정을 통해 새롭게 알게 된 것이 있다. (또는 새롭게 느낀 것이 있다)</h4>
+                        <ul class="survey_review_list">
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn1" id="review_btn11" tabindex="0" class="hidden" checked />
+                                    <label for="review_btn11"><span class="ico_label n1">매우 그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn1" id="review_btn12" tabindex="0" class="hidden" />
+                                    <label for="review_btn12"><span class="ico_label n2">그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn1" id="review_btn13" tabindex="0" class="hidden" />
+                                    <label for="review_btn13"><span class="ico_label n3">보통이다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn1" id="review_btn14" tabindex="0" class="hidden" />
+                                    <label for="review_btn14"><span class="ico_label n4">아니다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn1" id="review_btn15" tabindex="0" class="hidden" />
+                                    <label for="review_btn15"><span class="ico_label n5">매우 아니다</span></label>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="survey_review">
+                        <span class="label style1 primary">필수</span>
+                        <h4 class="heading2">3. 이 과정의 내용은 업무나 일상에서 활용 가능하다.</h4>
+                        <ul class="survey_review_list">
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn2" id="review_btn21" tabindex="0" class="hidden" checked />
+                                    <label for="review_btn21"><span class="ico_label n1">매우 그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn2" id="review_btn22" tabindex="0" class="hidden" />
+                                    <label for="review_btn22"><span class="ico_label n2">그렇다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn2" id="review_btn23" tabindex="0" class="hidden" />
+                                    <label for="review_btn23"><span class="ico_label n3">보통이다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn2" id="review_btn24" tabindex="0" class="hidden" />
+                                    <label for="review_btn24"><span class="ico_label n4">아니다</span></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio basic">
+                                    <input type="radio" name="review_btn2" id="review_btn25" tabindex="0" class="hidden" />
+                                    <label for="review_btn25"><span class="ico_label n5">매우 아니다</span></label>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_floating">
+					<div class="page_action">
+                        <button type="button" class="btn basic">저장</button>
+                        <button type="button" class="btn basic primary">제출</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+
+		<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+			<span class="blind">Scroll to top</span>
+		</button>
+	</div>
+</body>
+
+</html>
