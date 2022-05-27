@@ -2461,10 +2461,10 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom:1.2rem;
     }
     .quiz_tit {
         @include FontTitle18;
+        margin-top:1.2rem;
         margin-bottom:3.2rem;
         .type {
             font-weight: 400;
