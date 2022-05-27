@@ -2454,6 +2454,9 @@
 .quiz_wrap {
     padding-top:2.4rem;
     padding-bottom:4rem;
+    .quiz_list + .quiz_list {
+        margin-top:4rem;
+    }
     .quiz_step {
         display:flex;
         align-items: center;
@@ -2484,6 +2487,9 @@
             background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
             border-radius:0.4rem;
         }
+    }
+    .input_group {
+        margin-top:2.4rem;
     }
 }
 // e: 설문
