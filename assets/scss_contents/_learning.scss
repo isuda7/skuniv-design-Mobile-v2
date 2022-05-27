@@ -2711,29 +2711,23 @@
             }
             &.check {
                 &::before {
-                    background-image: url('../img/icons_24_ic_check_off_grey.svg');
+                    background-image: url('../img/icons_24_ic_check_off_grey_disabled.svg');
                 }
                 &.choice::before {
-                    background-image: url('../img/icons_24_ic_check_on_primary.svg');
+                    background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
                 }
             }
             &.radio {
                 &::before {
-                    background-image: url('../img/icons_24_ic_radio_off_grey.svg');
+                    background-image: url('../img/icons_24_ic_radio_off_grey_disabled.svg');
                 }
                 &.choice::before {
-                    background-image: url('../img/icons_24_ic_radio_on_primary.svg');
+                    background-image: url('../img/icons_24_ic_radio_on_primary_disabled.svg');
                 }
             }
             & + .answer {
                 margin-top:2rem;
             }
-        }
-    }
-    // 22-05-26 오답시 선택지 비활성화 추가
-    .answer_area.wrong {
-        .choice {
-            opacity:0.7;
         }
     }
     // 이미지문항
@@ -2923,7 +2917,7 @@
 .statistics_list {
     > .item {
         & + .item {
-            margin-top:2.4rem;
+            margin-top:3.2rem;
         }
         .item_head {
             > .label + .title {
@@ -2931,6 +2925,9 @@
             }
             .title {
                 @include FontTitle16;
+                small {
+                    font-weight: 400;
+                }
             }
         }
         .item_body {
@@ -2939,11 +2936,10 @@
                 margin-top:0.8rem;
             }
             .title_sub {
-                margin-bottom:0.8rem;
                 @include FontTitle14;
             }
             .sub_item + .sub_item{
-                margin-top:1.2rem;
+                margin-top:2rem;
             }
         }
 
@@ -2951,6 +2947,7 @@
         .graph {
             position: relative;
             height:3.2rem;
+            width:100%;
             border:1px solid #e3e4e5;
             border-radius: $RadiusSmall;
             overflow: hidden;
@@ -2958,12 +2955,20 @@
                 margin-top:0.4rem;
             }
             .graph_active {
+                position: relative;
                 display:flex;
                 align-items: center;
                 height:100%;
                 padding:0 1.6rem;
-                white-space: nowrap;
                 background-color: #f8f8fa;
+                span {
+                    position: absolute;
+                    left:1.6rem;
+                    top:calc(50% - 1.1rem);
+                    display:block;
+                    width:calc(100vw - 200px);
+                    @include Ellipsis1;
+                }
             }
             .graph_value {
                 position: absolute;
@@ -2972,6 +2977,7 @@
                 height:100%;
                 display:flex;
                 align-items: center;
+                white-space: nowrap;
                 color:$ColorSubTxt;
             }
             &.primary {
@@ -2981,6 +2987,23 @@
                     background-color: $ColorPrimaryOpacity;
                 }
             }
+        }
+        .graph_area {
+            .answer {
+                padding-top:0;
+                &::before {
+                    top:calc(50% - 1.2rem);
+                }
+                &.choice {
+                    color:#000;
+                }
+                & + .answer {
+                    margin-top:1.2rem;
+                }
+            }
+        }
+        .answer_area + .graph_multi {
+            margin-top:2rem;
         }
         .graph_multi {
             .graph {
@@ -2994,6 +3017,10 @@
                         justify-content: flex-end;
                     }
                 }
+                .graph_value {
+                    color: #000;
+                    font-weight: 700;
+                }
             }
             .labels {
                 display:flex;
@@ -3004,6 +3031,58 @@
                     @include FontBody13
                 }
             }
+        }
+        .answer_area {
+            padding-top:0.8rem;
+        }
+        .answer {
+            position: relative;
+            @include FontBody14;
+            width:100%;
+            padding-left:3.2rem;
+            padding-top:0.2rem;
+            vertical-align: top;
+            &::before {
+                content:'';
+                flex:none;
+                position:absolute;
+                left:0;
+                top:0;
+                width:2.4rem;
+                height:2.4rem;
+                background: no-repeat center center / 100% auto;
+            }
+            &.choice {
+                color: $ColorPrimary;
+                font-weight: 700;
+            }
+            &.check {
+                &::before {
+                    background-image: url('../img/icons_24_ic_check_off_grey_disabled.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
+                }
+            }
+            &.radio {
+                &::before {
+                    background-image: url('../img/icons_24_ic_radio_off_grey_disabled.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_radio_on_primary_disabled.svg');
+                }
+            }
+            & + .answer {
+                margin-top:2rem;
+            }
+        }
+        .answer_summary {
+            margin-top:1rem;
+            padding:0.9rem 1.6rem;
+            border-radius: $RadiusSmall;
+            border: 1px solid #f2f3f5;
+            background-color: #f8f8fa;
+            color: #44464a;
         }
 
         // Type2, Type4
@@ -3931,3 +4010,87 @@
 	// s: Modal Landscape
 }
 
+///// linked_in, coursera 안내 팝업
+.guide_desc {
+    padding: 2rem $GapSideBase 3.2rem;
+    margin-left: -$GapSideBase;
+    margin-right: -$GapSideBase;
+    strong {
+        font-weight: 700;
+    }
+    .red {
+        color: $ColorError;
+    }
+    .ph {
+        p {
+            padding-top: .4rem;
+            word-break: keep-all;
+            word-wrap: break-word;
+            span {
+                color: #33353C;
+            }
+        }
+        .depth_2{
+            text-indent: -.9rem;
+            margin-left: 1.2rem;
+            &.char {
+                text-indent: -1.9rem;
+                margin-left: 2rem;
+            }
+        }
+        + .ph {
+            margin-top: 2rem;
+        }
+        .tit {
+            padding: 1.2rem 0;
+            color: #75777b;
+            text-align: center;
+        }
+    }
+    &.img {
+        background-color: #f8f8fa;
+        border-top: 1px solid $FormBasicBorder;
+        border-bottom: 1px solid $FormBasicBorder;
+        .arrow {
+            padding-top: 1.2rem;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 1.6rem;
+                height: 2.1rem;
+                background: url('../img/img_arrow_popup.svg') no-repeat;
+                position: absolute;
+                top: -.6rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &.qna {
+        padding : 2.8rem $GapSideBase 4rem;
+        .ph {
+            + .ph {
+                margin-top: 1.2rem;
+                span, strong {
+                    color : #75777B;
+                }
+            }
+            .ico.doc{
+                display: inline-flex;
+                position: relative;
+                top: .2rem;
+                &::before {
+                    content:'';
+                    display: inline-block;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-image :url("../img/icons_16_ic_document_grey_06.svg");
+                }
+                +strong {
+                    margin-left: .6rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		});
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_fullpopup guide_popup">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">Coursera 접속을 통한 학습 방법 안내</h3>
+            </div>
+            <div class="modal_content">
+				<div class="inner">
+					<div class="guide_desc">
+						<div class="ph">
+							<p><strong>1. 과정 학습자 개인별로 mySUNI × Coursera Invitation 메일이 발송됩니다.</strong></p>
+							<p><span>수신 받으신 Invitaion 메일 하단의 <strong class="red">[①Join Now]</strong>버튼 터치 시에 해당 과정 사이트로 접속됩니다.</span></p>
+						</div>
+						<div class="ph">
+							<p><strong>2. 사이트 접속 후, 아래 두가지 옵션 중 하나를 선택해주세요.</strong></p>
+							<p class="depth_2 char">
+								<span>A.  '학습 프로그램에 참여하기' 팝업 창<br/><strong class="red">[②Join the program]</strong> 클릭</span>
+							</p>
+							<p class="depth_2 char">
+								<span>B.  사이트 상단 배너 <strong class="red">[③Join]</strong>클릭</span>
+							</p>
+						</div>
+						<div class="ph">
+							<p><strong>3. 로그인 창이 뜰 경우, <strong class="red">[④Log in with mySUNI]</strong> 버튼을 클릭하세요.</strong></p>
+							<p><span>개인별 mySUNI 계정으로 자동 로그인 처리가 되며, 프로그램 가입 이후 정상적으로 과정 학습이 가능합니다.</span></p>
+						</div>
+					</div>
+					<div class="guide_desc img">
+						<div class="ph">
+							<p class="tit"><strong>초대 메일 내 Join Now 클릭</strong></p>
+							<span class="image_wrap">
+								<img src="../../assets/img/popup_img_coursera_01.png" alt="초대 메일 내 Join Now 클릭"/>
+							</span>
+						</div>
+						<div class="ph arrow">
+							<p class="tit"><strong>프로그램 가입하기</strong></p>
+							<span class="image_wrap">
+								<img src="../../assets/img/popup_img_coursera_02.png" alt="프로그램 가입하기"/>
+							</span>
+						</div>
+						<div class="ph arrow">
+							<p class="tit"><strong>Coursera 내 mySUNI 로그인</strong></p>
+							<span class="image_wrap">
+								<img src="../../assets/img/popup_img_coursera_03.png" alt="Coursera 내 mySUNI 로그인"/>
+							</span>
+						</div>
+					</div>
+					<div class="guide_desc qna">
+						<div class="ph">
+							<p><i class="doc ico"></i><strong>Coursera 관련 FAQ</strong></p>
+						</div>
+						<div class="ph">
+							<p><span>Q. 과정을 신청했는데  mySUNI × Coursera Invitation 메일이 오지 않았습니다.</span></p>
+							<p><strong>A. 해당 메일을 수신하지 못하신 분들께서는 학습 카드에 명시된 담당자분께 문의 부탁드립니다.</strong></p>
+						</div>
+						<div class="ph">
+							<p><span>Q. “mySUNI(으)로 로그인하십시오” 버튼을 눌러도 로그인이 되질 않습니다.</span></p>
+							<p><strong>A. 접속중이신 Chrome, Internet Explorer/Edge 창을 모두 닫으신 후, 다시 접속하시기 바랍니다.</strong></p>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action action2">
+					<div class="checkbox basic large">
+						<input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden">
+						<label for="checkbox11"><span>오늘 하루 보지 않기</span></label>
+					</div>
+					<button type="button" class="btn text close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>
