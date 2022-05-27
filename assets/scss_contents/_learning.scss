@@ -2705,29 +2705,23 @@
             }
             &.check {
                 &::before {
-                    background-image: url('../img/icons_24_ic_check_off_grey.svg');
+                    background-image: url('../img/icons_24_ic_check_off_grey_disabled.svg');
                 }
                 &.choice::before {
-                    background-image: url('../img/icons_24_ic_check_on_primary.svg');
+                    background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
                 }
             }
             &.radio {
                 &::before {
-                    background-image: url('../img/icons_24_ic_radio_off_grey.svg');
+                    background-image: url('../img/icons_24_ic_radio_off_grey_disabled.svg');
                 }
                 &.choice::before {
-                    background-image: url('../img/icons_24_ic_radio_on_primary.svg');
+                    background-image: url('../img/icons_24_ic_radio_on_primary_disabled.svg');
                 }
             }
             & + .answer {
                 margin-top:2rem;
             }
-        }
-    }
-    // 22-05-26 오답시 선택지 비활성화 추가
-    .answer_area.wrong {
-        .choice {
-            opacity:0.7;
         }
     }
     // 이미지문항
@@ -2917,7 +2911,7 @@
 .statistics_list {
     > .item {
         & + .item {
-            margin-top:2.4rem;
+            margin-top:3.2rem;
         }
         .item_head {
             > .label + .title {
@@ -2925,6 +2919,9 @@
             }
             .title {
                 @include FontTitle16;
+                small {
+                    font-weight: 400;
+                }
             }
         }
         .item_body {
@@ -2933,11 +2930,10 @@
                 margin-top:0.8rem;
             }
             .title_sub {
-                margin-bottom:0.8rem;
                 @include FontTitle14;
             }
             .sub_item + .sub_item{
-                margin-top:1.2rem;
+                margin-top:2rem;
             }
         }
 
@@ -2945,6 +2941,7 @@
         .graph {
             position: relative;
             height:3.2rem;
+            width:100%;
             border:1px solid #e3e4e5;
             border-radius: $RadiusSmall;
             overflow: hidden;
@@ -2952,12 +2949,20 @@
                 margin-top:0.4rem;
             }
             .graph_active {
+                position: relative;
                 display:flex;
                 align-items: center;
                 height:100%;
                 padding:0 1.6rem;
-                white-space: nowrap;
                 background-color: #f8f8fa;
+                span {
+                    position: absolute;
+                    left:1.6rem;
+                    top:calc(50% - 1.1rem);
+                    display:block;
+                    width:calc(100vw - 200px);
+                    @include Ellipsis1;
+                }
             }
             .graph_value {
                 position: absolute;
@@ -2966,6 +2971,7 @@
                 height:100%;
                 display:flex;
                 align-items: center;
+                white-space: nowrap;
                 color:$ColorSubTxt;
             }
             &.primary {
@@ -2975,6 +2981,23 @@
                     background-color: $ColorPrimaryOpacity;
                 }
             }
+        }
+        .graph_area {
+            .answer {
+                padding-top:0;
+                &::before {
+                    top:calc(50% - 1.2rem);
+                }
+                &.choice {
+                    color:#000;
+                }
+                & + .answer {
+                    margin-top:1.2rem;
+                }
+            }
+        }
+        .answer_area + .graph_multi {
+            margin-top:2rem;
         }
         .graph_multi {
             .graph {
@@ -2988,6 +3011,10 @@
                         justify-content: flex-end;
                     }
                 }
+                .graph_value {
+                    color: #000;
+                    font-weight: 700;
+                }
             }
             .labels {
                 display:flex;
@@ -2998,6 +3025,58 @@
                     @include FontBody13
                 }
             }
+        }
+        .answer_area {
+            padding-top:0.8rem;
+        }
+        .answer {
+            position: relative;
+            @include FontBody14;
+            width:100%;
+            padding-left:3.2rem;
+            padding-top:0.2rem;
+            vertical-align: top;
+            &::before {
+                content:'';
+                flex:none;
+                position:absolute;
+                left:0;
+                top:0;
+                width:2.4rem;
+                height:2.4rem;
+                background: no-repeat center center / 100% auto;
+            }
+            &.choice {
+                color: $ColorPrimary;
+                font-weight: 700;
+            }
+            &.check {
+                &::before {
+                    background-image: url('../img/icons_24_ic_check_off_grey_disabled.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
+                }
+            }
+            &.radio {
+                &::before {
+                    background-image: url('../img/icons_24_ic_radio_off_grey_disabled.svg');
+                }
+                &.choice::before {
+                    background-image: url('../img/icons_24_ic_radio_on_primary_disabled.svg');
+                }
+            }
+            & + .answer {
+                margin-top:2rem;
+            }
+        }
+        .answer_summary {
+            margin-top:1rem;
+            padding:0.9rem 1.6rem;
+            border-radius: $RadiusSmall;
+            border: 1px solid #f2f3f5;
+            background-color: #f8f8fa;
+            color: #44464a;
         }
 
         // Type2, Type4

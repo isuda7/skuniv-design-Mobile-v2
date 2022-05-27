@@ -236,7 +236,7 @@ textarea.basic {
             background-image: url('../img/icons_20_ic_check_dark_off_grey_disabled.svg');
         }
         input:disabled:checked + label::before {
-            background-image: url('../img/icons_20_ic_check_dark_on_primary_disabled.svg');
+            background-image: url('../img/icons_20_ic_check_on_primary_disabled.svg');
         }
     }
     .checkbox.basic.large {
@@ -250,7 +250,7 @@ textarea.basic {
             background-image: url('../img/icons_24_ic_check_dark_off_grey_disabled.svg');
         }
         input:disabled:checked + label::before {
-            background-image: url('../img/icons_24_ic_check_dark_on_primary_disabled.svg');
+            background-image: url('../img/icons_24_ic_check_on_primary_disabled.svg');
         }
     }
 }
