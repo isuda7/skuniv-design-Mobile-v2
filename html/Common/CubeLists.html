@@ -38,8 +38,8 @@
 
 					[큐브유형]
 					유형1: type_play (Video, Audio, E-learning, Classroom, Task, Documents, webpage, Discussion, Experiential, Cohort)
-					유형2: type2 (Test, Report, Survey)
-					유형3: type3 (Talk)
+					유형2: type_doc (Test, Report, Survey)
+					유형3: type_talk (Talk)
 
 					화살표 없는 경우: is_disabled [테스트: 학습 진행불가(학습 미시작), 설문: 진행 불가(학습 미진행)]
 					리플인 경우: is_repley
@@ -76,7 +76,7 @@
 								</div>
 								<div class="item_title">
 									<p class="title"><strong>Link Basic</strong></p>
-									<p class="sub_txt">Report</p>
+									<p class="sub_txt">Video<i class="split"></i>3m</p>
 								</div>
 							</a>
 						</div>
@@ -139,56 +139,61 @@
 				<div class="g_preview">
 					<!-- Cube List -->
 					<div class="cube_list">
+						<p class="g_desc">case : 학습 미시작(진행불가)</p>
 						<div class="cube_item type_doc is_state1 is_disabled">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per0"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Test 학습 미시작(진행불가)</strong></p>
+									<p class="title"><strong>Test</strong></p>
 									<p class="sub_txt">학습 진행 후 Test 응시 가능</p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">case : 학습 시작(진행가능)</p>
 						<div class="cube_item type_doc is_state1">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per0"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Test 학습 시작(진행가능)</strong></p>
+									<p class="title"><strong>Test</strong></p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">case : 학습 시작(응시중)</p>
 						<div class="cube_item type_doc is_state2">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Test 학습 시작(응시중)</strong></p>
+									<p class="title"><strong>Test</strong></p>
 									<p class="sub_txt">응시중</p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">case : 응시 완료(합격)</p>
 						<div class="cube_item type_doc is_state3">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Test 응시완료(합격)</strong></p>
+									<p class="title"><strong>Test</strong></p>
 									<p class="sub_txt">합격</p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">case : 응시 완료(불합격)</p>
 						<div class="cube_item type_doc is_state3">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Test 응시완료(불합격)</strong></p>
+									<p class="title"><strong>Test</strong></p>
 									<p class="sub_txt">불합격</p>
 								</div>
 							</a>
@@ -196,10 +201,10 @@
 					</div>
 					<!-- //Cube List -->
 				</div>
-
+<!-- 
 				<h4 class="g_h4">Test : 큐브명 있는 경우</h4>
 				<div class="g_preview">
-					<!-- Cube List -->
+					Cube List
 					<div class="cube_list">
 						<div class="cube_item type_doc is_state1">
 							<a href="javascript:void(0)" class="item_body">
@@ -257,12 +262,12 @@
 							</a>
 						</div>
 					</div>
-					<!-- //Cube List -->
-				</div>
+				</div> -->
 
 				<h4 class="g_h4">Report : 큐브명 없는 경우</h4>
 				<div class="g_preview">
 					<!-- Cube List -->
+					<p class="g_desc">리포트 미제출</p>
 					<div class="cube_list">
 						<div class="cube_item type_doc is_state1">
 							<a href="javascript:void(0)" class="item_body">
@@ -270,28 +275,30 @@
 									<span class="cube_circle per0"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Report 리포트 미제출</strong></p>
+									<p class="title"><strong>Report</strong></p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">검수중(검수중)</p>
 						<div class="cube_item type_doc is_state2">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Report 검수중</strong></p>
+									<p class="title"><strong>Report</strong></p>
 									<p class="sub_txt">검수중</p>
 								</div>
 							</a>
 						</div>
+						<p class="g_desc">답변완료</p>
 						<div class="cube_item type_doc is_state3">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per100"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Report 검수중</strong></p>
+									<p class="title"><strong>Report</strong></p>
 									<p class="sub_txt">답변완료</p>
 								</div>
 							</a>
@@ -300,9 +307,8 @@
 					<!-- //Cube List -->
 				</div>
 
-				<h4 class="g_h4">Report : 큐브명 있는 경우</h4>
+				<!-- <h4 class="g_h4">Report : 큐브명 있는 경우</h4>
 				<div class="g_preview">
-					<!-- Cube List -->
 					<div class="cube_list">
 						<div class="cube_item type_doc is_state1">
 							<a href="javascript:void(0)" class="item_body">
@@ -338,21 +344,44 @@
 							</a>
 						</div>
 					</div>
-					<!-- //Cube List -->
-				</div>
+				</div> -->
 
 				<h4 class="g_h4">Survey : 큐브명 없는 경우</h4>
 				<div class="g_preview">
 					<!-- Cube List -->
 					<div class="cube_list">
+						<p class="g_desc">서베이 진행 불가 (학습 미진행)</p>
 						<div class="cube_item type_doc is_state1 is_disabled">
 							<a href="javascript:void(0)" class="item_body">
 								<div class="item_thumb">
 									<span class="cube_circle per0"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Survey 서베이 진행 불가 (학습 미진행)</strong></p>
+									<p class="title"><strong>Survey</strong></p>
 									<p class="sub_txt">학습 진행 후 Survey 참여 가능</p>
+								</div>
+							</a>
+						</div>
+						<div class="cube_item type_doc is_state1 is_disabled">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per0"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">과정 공통<i class="split"></i>학습 진행 후 Survey 참여 가능</p>
+								</div>
+							</a>
+						</div>
+						<p class="g_desc">서베이 진행 가능 (미진행)</p>
+						<div class="cube_item type_doc is_state1">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per00"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">5문항</p>
 								</div>
 							</a>
 						</div>
@@ -362,7 +391,19 @@
 									<span class="cube_circle per00"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Survey 서베이 진행 가능 (미진행)</strong></p>
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">과정공통<i class="split"></i>5문항</p>
+								</div>
+							</a>
+						</div>
+						<p class="g_desc">서베이 내용 저장</p>
+						<div class="cube_item type_doc is_state2">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per50"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Survey</strong></p>
 									<p class="sub_txt">5문항</p>
 								</div>
 							</a>
@@ -373,8 +414,20 @@
 									<span class="cube_circle per50"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Survey 서베이 내용 저장</strong></p>
-									<p class="sub_txt">5문항</p>
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">과정공통<i class="split"></i>5문항</p>
+								</div>
+							</a>
+						</div>
+						<p class="g_desc">서베이 완료</p>
+						<div class="cube_item type_doc is_state3">
+							<a href="javascript:void(0)" class="item_body">
+								<div class="item_thumb">
+									<span class="cube_circle per100"><span class="blind">Cube</span></span>
+								</div>
+								<div class="item_title">
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">참여 완료</p>
 								</div>
 							</a>
 						</div>
@@ -384,8 +437,8 @@
 									<span class="cube_circle per100"><span class="blind">Cube</span></span>
 								</div>
 								<div class="item_title">
-									<p class="title"><strong>Survey 서베이 완료</strong></p>
-									<p class="sub_txt">참여 완료</p>
+									<p class="title"><strong>Survey</strong></p>
+									<p class="sub_txt">과정공통<i class="split"></i>참여 완료</p>
 								</div>
 							</a>
 						</div>
@@ -393,9 +446,8 @@
 					<!-- //Cube List -->
 				</div>
 
-				<h4 class="g_h4">Survey : 큐브명 있는 경우</h4>
+				<!-- <h4 class="g_h4">Survey : 큐브명 있는 경우</h4>
 				<div class="g_preview">
-					<!-- Cube List -->
 					<div class="cube_list">
 						<div class="cube_item type_doc is_state1 is_disabled">
 							<a href="javascript:void(0)" class="item_body">
@@ -442,8 +494,7 @@
 							</a>
 						</div>
 					</div>
-					<!-- //Cube List -->
-				</div>
+				</div> -->
 
 				<h3 class="g_h3">묶음 (Accordion)</h3>
 				<!-- 큐브리스트 아코디언 -->
