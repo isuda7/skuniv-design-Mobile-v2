@@ -2040,13 +2040,10 @@
 // TASK
 /////////////////////////////////
 // s: Task Board
-.board_toolbar + .task_list_wrap {
-    margin-top:0.7rem;
-}
 .task_board{
+    padding-top : 1.6rem;
     padding-bottom : 1.6rem;
     & + .task_board{
-        padding-top : 2rem;
         border-top : 0.1rem solid #44464a;
     }
     .task_tit {
