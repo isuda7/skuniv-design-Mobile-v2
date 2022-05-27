@@ -633,6 +633,7 @@
 				padding:0 1rem;
 				background:rgba(0,0,0,0.6);
 				color:#fff;
+				border-radius: $RadiusSmall;
 				@include FontBody13;
 				&::before {
 					content:'';
