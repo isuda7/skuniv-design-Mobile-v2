@@ -2823,19 +2823,28 @@
 // s: Survey Review
 .survey_review {
     padding-top:1.6rem;
+    & + .survey_review {
+        margin-top:2.4rem;
+    }
+    .label + .heading2 {
+        margin-top:1.2rem;
+    }
     &_list {
         margin-top:1.2rem;
         .item {
             display: flex;
             align-items: center;
             padding:1.3rem 0;
+            input:checked + label {
+                color:#FF664D;
+                font-weight: bold;
+            }
             .ico_label {
                 display:flex;
                 align-items: center;
                 flex:none;
                 height:2.2rem;
                 @include FontBody16;
-                color:#1c1d1f;
                 &::before {
                     content:'';
                     flex:none;
