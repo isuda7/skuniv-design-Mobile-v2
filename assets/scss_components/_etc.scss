@@ -48,6 +48,17 @@
 		margin-top:0.2rem;
 		color:$ColorSubTxt;
 	}
+	&.error{
+		.tit {
+			margin : 1rem 0 2rem;
+		}
+		.image_wrap{
+			display: block;
+		}
+		.btn {
+			width: 16rem;
+		}
+	}
 }
 .theme_dark {
 	.no_data {
