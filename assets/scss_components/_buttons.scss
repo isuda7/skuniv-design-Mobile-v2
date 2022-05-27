@@ -286,6 +286,20 @@
     .btn + .btn {
         margin-left: 0.6rem;
     }
+    //오늘 하루보지않기
+    &.action2 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem 1.7rem;
+        .btn.close {
+            padding: 0;
+            width: auto;
+            height: auto;
+            flex : none;
+            @include FontBody14;
+            font-weight: 400;
+        }
+    }
 }
 .theme_dark {
     .page_action {

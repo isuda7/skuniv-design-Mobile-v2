@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$('.modal_content').scroll(function(){
+				if ($(this).scrollTop() > 0) {
+					$(this).closest('.modal').addClass('is_scrolled');
+				} else {
+					$(this).closest('.modal').removeClass('is_scrolled');
+				}
+			})
+		});
+	</script>
+</head>
+
+<body class="is_dimmed">
+	<div class="sub_wrapper">
+		<!-- 스크롤 테스트용 -->
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+		<div style="height:25rem; background-color: #ddd;"></div>
+		<div style="height:25rem; background-color: #ccc;"></div>
+	</div>
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible">
+        <div class="modal modal_fullpopup guide_popup">
+            <div class="modal_header">
+				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">Learning Methods when First Connecting to LinkedIn Guide</h3>
+            </div>
+            <div class="modal_content">
+				<div class="inner">
+					<div class="guide_desc">
+						<div class="ph">
+							<p><strong>1. Linkedin 과정을 처음 학습하는 경우, 아래와 같이 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 연동하여 사용할것인지를 확인하는 화면이 보여집니다.</strong></p>
+						</div>
+						<div class="ph">
+							<p><strong>2. 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 ‘mySUNI계정’을 연결하지 않고 학습하고 싶은 경우</strong></p>
+							<p class="depth_2"><span>- 아래 표시된 <strong class="red">①, ②</strong>번을 순서대로 클릭하시면, ‘mySUNI계정’으로 학습이 가능합니다.</span></p>
+							<p class="depth_2"><span class="red">- 최초 연결 이후에는 학습할 때 마다 별도 로그인 할 필요가 없습니다.</span></p>
+						</div>
+						<div class="ph">
+							<p><strong>3. 기존에 개인이 보유하고 있는 ‘Linkedin 계정’과 ‘mySUNI 계정’을 연결하여 학습하고 싶은 경우</strong></p>
+							<p class="depth_2"><span>- 아래 표시된 <strong class="red">③</strong>번을 클릭후 개인이 보유한 Linkedin 계정의 ID/PW를 입력하면 됩니다.</span></p>
+							<p class="depth_2"><span>- LinkedIn 과정을 학습할 때 마다 개인 계정을 입력하면, 학습이력이 LinkedIn profile에 통합 관리됩니다.</span></p>
+						</div>
+					</div>
+					<div class="guide_desc img">
+						<div class="ph">
+							<p class="tit"><strong>개인 계정과의 연동을 확인하는 팝업</strong></p>
+							<span class="image_wrap">
+								<img src="../../assets/img/popup_img_linkedin_01.png" alt="개인 계정과의 연동을 확인하는 팝업"/>
+							</span>
+						</div>
+						<div class="ph">
+							<p class="tit"><strong>재확인하는 팝업</strong></p>
+							<span class="image_wrap">
+								<img src="../../assets/img/popup_img_linkedin_02.png" alt="재확인하는 팝업"/>
+							</span>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action action2">
+					<div class="checkbox basic large">
+						<input type="checkbox" name="checkbox1" id="checkbox11" tabindex="0" class="hidden">
+						<label for="checkbox11"><span>오늘 하루 보지 않기</span></label>
+					</div>
+					<button type="button" class="btn text close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+</body>
+
+</html>
