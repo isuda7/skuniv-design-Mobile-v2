@@ -2835,13 +2835,16 @@
             display: flex;
             align-items: center;
             padding:1.3rem 0;
+            input:checked + label {
+                color:#FF664D;
+                font-weight: bold;
+            }
             .ico_label {
                 display:flex;
                 align-items: center;
                 flex:none;
                 height:2.2rem;
                 @include FontBody16;
-                color:#1c1d1f;
                 &::before {
                     content:'';
                     flex:none;
