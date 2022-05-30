@@ -3460,6 +3460,9 @@
 
 // s: 선수과정 필수&선택
 .modal_elctivelearning, .modal_advancelearning {
+    .modal_content {
+        padding-bottom:3.2rem;
+    }
     .course_data {
         width:100%;
         margin-bottom:3rem;
@@ -3481,16 +3484,6 @@
         @include FontTitle16;
         height:inherit;
         font-weight: 700;
-    }
-}
-.modal_elctivelearning {
-    .modal_content {
-        padding-bottom:0.8rem;
-    }
-}
-.modal_advancelearning {
-    .modal_content {
-        padding-bottom:3.2rem;
     }
 }
 // e: 선수과정 필수&선택
