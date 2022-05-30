@@ -486,9 +486,7 @@
 		.avata_name {
 			position: relative;
 			z-index: 10;
-			top:5.4rem;
-			padding: 0 4rem;
-			margin-bottom:auto;
+			padding: 0 2rem;
 			.avata {
 				display: block;
 				margin: auto;
@@ -1103,6 +1101,9 @@
 		.empty_primary {
 			display:flex;
 			justify-content: center;
+			img.bages {
+				height:4rem;
+			}
 			.badge_box {
 				margin:0 0.4rem;
 			}

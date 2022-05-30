@@ -160,24 +160,27 @@
     .feed_empty_wrap {
         margin-top:0.6rem;
         padding-top:4rem;
-        padding-bottom:5.4rem;
+        padding-bottom:6rem;
         background-color: #f2f3f5;
         .feed_icons {
             display:flex;
             overflow: hidden;
             flex-wrap: nowrap;
             justify-content: center;
-            margin-top:4rem;
-            .ico {
-                flex:none;
-                width:5.6rem;
-                height:5.6rem;
-                background-color: yellowgreen;
-                border-radius: 50%;
-                & + .ico {
-                    margin-left:0.4rem;
-                }
+            margin-top:3rem;
+            img {
+                width:100%;
             }
+            // .ico {
+            //     flex:none;
+            //     width:5.6rem;
+            //     height:5.6rem;
+            //     background-color: yellowgreen;
+            //     border-radius: 50%;
+            //     & + .ico {
+            //         margin-left:0.4rem;
+            //     }
+            // }
         }
     }
     // e: 커뮤니티 피드 Empty
