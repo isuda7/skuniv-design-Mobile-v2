@@ -19,6 +19,7 @@
 		<!-- Container -->
 		<main role="main" class="container login_container pw_reset_page">
 			<div class="content_body">
+                <!-- 22-05-19 다국어 언어선택 버튼추가 -->
                 <div class="login_langeage">
                     <button type="button" class="btn language">한국어</button>
                 </div>
@@ -27,37 +28,31 @@
                 </div>
                 <div class="login_body">
                     <div class="login_tit">
-                        <h2 class="heading2">비밀번호 재설정</h2>
+                        <h2 class="heading2">회원가입</h2>
                     </div>
                     <div class="pwreset_form">
                         <div class="form_row">
-                            <label for="loginFormPW" class="form_tit">현재 비밀번호</label>
-                            <div class="input_group">
-                                <input type="password" id="loginFormPW" placeholder="현재 비밀번호" value="" class="basic" />
+                            <label for="loginFormEmail" class="form_tit">이메일</label>
+                            <input type="text" id="loginFormEmail" placeholder="이메일 또는 휴대전화 번호" value="ss.name@sk" class="basic" />
+                        </div>
+                        <div class="form_row">
+                            <label for="loginFormCert" class="form_tit">인증 번호</label>
+                            <input type="password" id="loginFormCert" placeholder="인증 번호" value="123456" class="basic" />
+                        </div>
+                        <!-- 22-05-12 실패일때 구조변경(공통) -->
+                        <div class="form_row">
+                            <label for="loginFormPW" class="form_tit">비밀번호</label>
+                            <div class="input_group is_failed">
+                                <input type="password" id="loginFormPW" placeholder="영문 대소문자,숫자,특수문자 포함 8~16자" value="" class="basic" />
                                 <p class="form_alert" role="alert">비밀번호를 입력해주세요.</p>
                             </div>
                         </div>
                         <div class="form_row">
-                            <label for="loginFormPWRe" class="form_tit">새 비밀번호</label>
-                            <div class="input_group">
-                                <input type="password" id="loginFormPWRe" placeholder="새 비밀번호" value="" value="" class="basic" />
-                                <p class="form_alert" role="alert">16자 이내로 입력해주세요.</p>
+                            <label for="loginFormPWRe" class="form_tit">비밀번호 확인</label>
+                            <div class="input_group is_failed">
+                                <input type="password" id="loginFormPWRe" placeholder="비밀번호 재입력" value="" value="" class="basic" />
+                                <p class="form_alert" role="alert">비밀번호를 한 번 더 입력해주세요.</p>
                             </div>
-                            <div class="input_group">
-                                <input type="password" id="loginFormPWRe2" placeholder="새 비밀번호 확인" value="" value="" class="basic" />
-                                <p class="form_alert" role="alert">비밀번호가 일치하지 않습니다.</p>
-                            </div>
-                        </div>
-                        <div class="desc_area">
-                            <p class="desc">
-                                비밀번호는 영문, 숫자, 특수문자로 구성해주세요.
-                            </p>
-                            <p class="desc">
-                                비밀번호는 위 3가지 중 2가지로 조합할 경우 10자리 이상을 입력해주세요.
-                            </p>
-                            <p class="desc">
-                                위의 3가지 비밀번호를 모두 조합할 경우 8자리 이상을 입력해주세요.
-                            </p>
                         </div>
                     </div>
                 </div>

@@ -2078,6 +2078,7 @@
         position: relative;
         padding-left:1rem;
         color:#a4a6aa;
+        word-break: keep-all;
         &::before {
             content:'*';
             position:absolute;

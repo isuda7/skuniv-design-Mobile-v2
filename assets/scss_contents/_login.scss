@@ -141,8 +141,14 @@
         margin-bottom:0.8rem;
         color:$ColorSubTxt;
     }
+    .input_group + .input_group {
+        margin-top:0.8rem;
+    }
     input.basic {
         height:4.8rem;
+    }
+    .desc_area {
+        margin-top:0.8rem;
     }
 }
 .help_floating {
