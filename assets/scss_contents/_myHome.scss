@@ -103,6 +103,8 @@
                 .value {
                     margin-top:auto;
                     @include FontTitle16;
+                    word-break: keep-all;
+                    word-wrap: break-word;
                 }
                 .ico {
                     display: block;
