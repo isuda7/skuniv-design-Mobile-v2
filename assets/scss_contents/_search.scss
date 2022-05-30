@@ -112,3 +112,12 @@
 }
 // e: 검색 input
 
+// s: 검색 로딩바
+.loader_search {
+    position: relative;
+    display:flex;
+    flex:1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+// e: 검색 로딩바
