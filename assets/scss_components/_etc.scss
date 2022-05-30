@@ -100,4 +100,12 @@
 			background-image: url("../img/icons_40_ic_guage_#{$j}.svg");
 		}
 	}
+
+	&.per100::after {
+		content:"";
+		width:2rem;
+		height:2rem;
+		display:block;
+		background-image: url('../img/icons_20_ic_complete_black.svg') !important;
+	}
 }
