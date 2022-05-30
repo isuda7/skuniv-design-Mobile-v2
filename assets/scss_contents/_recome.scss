@@ -1,7 +1,7 @@
 // s: hottopic 전체보기
 .topic_list_wrap {
     width:100%;
-    overflow: hidden;
+    //overflow: hidden;
     .card_topic_list {
         display: flex;
         flex-wrap: wrap;
@@ -19,7 +19,7 @@
 
 .recom_list_wrap{
     width:100%;
-    overflow: hidden;
+    //overflow: hidden;
     .card_cube_list{
         display: flex;
         flex-wrap: wrap;
