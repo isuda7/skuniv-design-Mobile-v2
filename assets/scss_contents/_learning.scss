@@ -3359,15 +3359,12 @@
         .sub_txt {
             color:inherit;
         }
-        .tit {
+        .note_link {
             margin-top:0.4rem;
             padding:0;
             @include Ellipsis2;
         }
-        .btn {
-            color: #fff;
-        }
-        .info_area {
+        .note_info {
             display: flex;
             align-items: center;
             margin-top:0.8rem;
@@ -3380,7 +3377,7 @@
             }
             .btn.text {
                 padding:0;
-                color: inherit;
+                color: #fff;
             }
         }
     }
