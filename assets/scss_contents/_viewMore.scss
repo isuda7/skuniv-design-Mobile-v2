@@ -24,7 +24,7 @@
                 background: url('../img/icons_16_ic_chervron_right_grey_04.svg') no-repeat center center / 100% auto;
             }
             &[type="button"]{
-                @include FontBody16;   
+                @include FontBody16;
             }
         }
         &_content {
@@ -213,6 +213,10 @@
             border: .1rem solid #f2f3f5;
         }
     }
+}
+.tab.style2 + .board_search_area {
+    padding-top:1.6rem;
+    padding-bottom:1.6rem;
 }
 // e: board top search area
 
