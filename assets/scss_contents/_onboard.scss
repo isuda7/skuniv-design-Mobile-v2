@@ -313,6 +313,9 @@
 	.privacy_group {
 		padding-bottom:2.4rem;
 		border-bottom:1px solid #e3e4e5;
+		.privacy_tit:first-child {
+			padding-top: 2.4rem;
+		}
 	}
 	.privacy_tit {
 		&:first-child {
