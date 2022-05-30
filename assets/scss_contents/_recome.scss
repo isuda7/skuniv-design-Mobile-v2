@@ -92,9 +92,8 @@
                     display: block;
                     line-height: 2.2rem;
                     flex: 0 1 auto;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    word-break: keep-all;
+                    word-wrap: break-word;
                 }
             }
             .ico.shuffle{
