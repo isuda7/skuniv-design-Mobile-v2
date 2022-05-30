@@ -534,19 +534,73 @@
     }
 
     // Case Type
-    &.type_play:not(.is_state3) {
+    &.type_video {
         .item_thumb .cube_circle::after {
             background-image: url('../img/icons_20_ic_video_black.svg');
         }
     }
+    &.type_audio {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_audio_black.svg');
+        }
+    }
     &.type_doc {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_document_black.svg');
+        }
+    }
+    &.type_survey {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_survey_black.svg');
+        }
+    }
+    &.type_test {
         .item_thumb .cube_circle::after {
             background-image: url('../img/icons_20_ic_test_black.svg');
         }
     }
-    &.type_talk {
+    &.type_report {
         .item_thumb .cube_circle::after {
-            background-image: url('../img/icons_20_ic_talk_black.svg');
+            background-image: url('../img/icons_20_ic_report_black.svg');
+        }
+    }
+    &.type_discussion {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_discussion_black.svg');
+        }
+    }
+    &.type_elearning {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_e_learning_black.svg');
+        }
+    }
+    &.type_classroom {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_classroom_black.svg');
+        }
+    }
+    &.type_webpage {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_webpage_black.svg');
+        }
+    }
+    &.type_experiential {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_experiential_black.svg');
+        }
+    }
+    &.type_cohort {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_cohort_black.svg');
+        }
+    }
+    &.type_talk {
+        // 예외
+        .item_thumb .cube_circle {
+            background-image: none;
+        }
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_report_black.svg');
         }
     }
 
