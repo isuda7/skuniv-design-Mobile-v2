@@ -287,6 +287,8 @@
 			line-height: 2rem;
 			color: inherit;
 			@include Ellipsis3;
+			word-break: keep-all;
+			word-wrap:break-word;
 		}
 	}
 	.card_foot {
