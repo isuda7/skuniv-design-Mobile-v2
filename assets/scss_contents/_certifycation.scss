@@ -56,7 +56,9 @@
         margin-top:0.8rem;
         > p {
             display:flex;
+            flex-wrap: wrap;
             align-items: center;
+            @include FontBody13;
         }
         .split {
             display:block;
