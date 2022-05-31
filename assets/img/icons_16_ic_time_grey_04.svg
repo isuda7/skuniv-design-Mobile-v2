@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D7D8E3AE-6BD4-4DED-AE72-A79A2C0FC1C4</title>
+    <g id="홈" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="myHome" transform="translate(-30.000000, -1353.000000)" fill="#CBCDCF">
+            <g id="콘텐츠" transform="translate(20.000000, 365.000000)">
+                <g id="나의데이터" transform="translate(0.000000, 930.000000)">
+                    <g id="Group-5826" transform="translate(0.000000, 40.000000)">
+                        <g id="ic_time_grey04" transform="translate(10.000000, 18.000000)">
+                            <path d="M7.5,4 C7.5,3.72386 7.72386,3.5 8,3.5 C8.27614,3.5 8.5,3.72386 8.5,4 L8.5,7.80017 L10.5462,9.8464 C10.7415,10.0417 10.7415,10.3582 10.5462,10.5535 C10.351,10.7488 10.0344,10.7488 9.83912,10.5535 L7.7178,8.43218 C7.69918,8.41356 7.68233,8.39383 7.66726,8.37321 C7.56462,8.28164 7.5,8.14837 7.5,8 L7.5,4 Z" id="Path" fill-rule="nonzero"></path>
+                            <path d="M16,8 C16,12.4183 12.4183,16 8,16 C3.58172,16 0,12.4183 0,8 C0,3.58172 3.58172,0 8,0 C12.4183,0 16,3.58172 16,8 Z M8,15 C11.866,15 15,11.866 15,8 C15,4.13401 11.866,1 8,1 C4.13401,1 1,4.13401 1,8 C1,11.866 4.13401,15 8,15 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
