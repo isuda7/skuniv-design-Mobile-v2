@@ -3873,6 +3873,23 @@
             width:100% !important;
             height:auto !important;
         }
+        .doc_error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5.8rem 2rem;
+            background-color: #4c4c4c;
+            .no_data {
+                .sub_txt {
+                    margin:0;
+                    color: #fff;
+                    @include FontBody12;
+                }
+                .board_action {
+                    margin-top : 1rem;
+                }
+            }
+        }
     }
     .doc_info_area{
         position: relative;
