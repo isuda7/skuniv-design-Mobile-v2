@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="60px" viewBox="0 0 20 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9E4847F0-499C-4A8D-9766-ADBBBB209391</title>
+    <g id="💎-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Grid/Keep" transform="translate(-1690.000000, -1023.000000)">
+            <g id="20dp" transform="translate(62.000000, 941.000000)">
+                <g id="Black" transform="translate(954.000000, 0.000000)">
+                    <g id="Icon-/-20-/-Black" transform="translate(34.000000, 41.000000)">
+                        <g id="icons-/-20-/-ic_bookmark_off_on" transform="translate(640.000000, 41.000000)">
+                            <g id="Icons-/-20-/-ic_bookmark_on_primary" transform="translate(0.000000, 40.000000)">
+                                <path d="M0,0 L20,0 L20,20 L0,20 L0,0 Z" id="area"></path>
+                                <path d="M18,0 L18,17.0908032 C18,17.6430879 17.5522847,18.0908032 17,18.0908032 C16.7965032,18.0908032 16.5978496,18.0287189 16.4305675,17.9128413 L10.5694325,13.8527851 C10.2268892,13.6155025 9.7731108,13.6155025 9.43056749,13.8527851 L3.56943251,17.9128413 C3.11543341,18.2273302 2.4924508,18.1142348 2.17796191,17.6602357 C2.06208423,17.4929536 2,17.2943 2,17.0908032 L2,0 L2,0 L18,0 Z" id="Rectangle-4604" fill="#FF664D" fill-rule="nonzero"></path>
+                            </g>
+                            <g id="icons-/-20-/-ic_bookmark_off_black">
+                                <path d="M0,0 L20,0 L20,20 L0,20 L0,0 Z" id="area"></path>
+                                <path d="M17.5,0 L17.5,17.0908032 C17.5,17.6430879 17.1522847,18.0908933 16.6,18.0908933 C16.3965032,18.0908933 16.1672821,18.0287189 16,17.9128413 L10.5694325,13.8527851 C10.2268892,13.6155025 9.7731108,13.6155025 9.43056749,13.8527851 L4,17.9128413 C3.5460009,18.2273302 3.01448889,18.1142348 2.7,17.6602357 C2.58412231,17.4929536 2.5,17.2943 2.5,17.0908032 L2.5,0" id="Path" stroke="#A4A6AA" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
