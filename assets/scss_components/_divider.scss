@@ -5,6 +5,9 @@
     margin:0;
     background:#f2f3f5;
     border:0;
+    &.xs {
+        height:0.8rem;
+    }
 }
 .divider2 {
     display: block;
@@ -13,6 +16,9 @@
     margin:0;
     background:#f8f8fa;
     border:0;
+    &.xs {
+        height:0.8rem;
+    }
 }
 .modal_content,
 .content_body {
