@@ -557,28 +557,6 @@
 }
 
 
-// 게시판 기본형 이미지
-// 레이아웃
-@media screen and (min-width: 520px) { //3개
-    .card_community2_list {
-        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
-        justify-content: flex-start;
-        .card_community2 {
-            min-width: auto;
-            margin: .6rem calc((33.3% - 15.6rem)/2);
-        }
-    }
-}
-@media screen and (min-width: 625px){ //4개이상
-    .card_community2_list {
-        margin: .6rem -.4rem;
-        justify-content: flex-start;
-        .card_community2 {
-            min-width: auto;
-            margin: .6rem .4rem;
-        }
-    }
-}
 
 // 추천과정목록
 .comunity_recom_wrap {
@@ -665,6 +643,7 @@
             height: 15.6rem;
             .thumb {
                 border-radius: 0.4rem;
+                background-image: url('../img/img_comm_grid_empty.png');
             }
         }
         .item_title {
@@ -693,14 +672,39 @@
                 .name {
                     flex:0 1 auto;
                     @include Ellipsis1;
-                    color:#666666;
+                    color:#75777b;
                     line-height: 2rem;
                 }
+            }
+            .date {
+                color:#75777b;
             }
         }
     }
 }
 
+// 게시판 기본형 이미지
+// 레이아웃
+@media screen and (min-width: 520px) { //3개
+    .card_community2_wrap .card_community2_list {
+        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
+        justify-content: flex-start;
+        .card_community2 {
+            min-width: auto;
+            margin: .6rem calc((33.3% - 15.6rem)/2);
+        }
+    }
+}
+@media screen and (min-width: 625px){ //4개이상
+    .card_community2_wrap .card_community2_list {
+        margin: .6rem -.4rem;
+        justify-content: flex-start;
+        .card_community2 {
+            min-width: auto;
+            margin: .6rem .4rem;
+        }
+    }
+}
 // 게시판 기본형 텍스트
 .board_page {
     > .board_dt_wrap {
