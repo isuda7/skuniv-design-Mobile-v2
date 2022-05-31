@@ -849,10 +849,10 @@
 		&::before {
 			width:2rem;
 			height:2rem;
-			background-image: url('../img/icons_20_ic_bookmark_on_primary.svg');
+			background-image: url('../img/icons_20_ic_bookmark_off_on.svg');
 		}
 		&.is_active::before {
-			background-image: url('../img/icons_20_ic_bookmark_on_primary.svg');
+			background-position-y: bottom;
 		}
 	}
 	.card_inner {
