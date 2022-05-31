@@ -814,7 +814,7 @@
 			content:"";
 			position:absolute;
 			right:0;
-			top:0.7rem;
+			top:0.5rem;
 			display:inline-block;
 			width:1.2rem;
 			height:1.2rem;
@@ -828,6 +828,7 @@
             overflow: visible;
         }
 		.btn_more::after {
+            top:0.7rem;
 			transform:rotate(180deg);
 		}
     }
@@ -3369,6 +3370,7 @@
             display: flex;
             align-items: center;
             margin-top:0.8rem;
+            line-height: 1.8rem;
             .split {
                 display:block;
                 width:1px;
@@ -3379,6 +3381,7 @@
             .btn.text {
                 padding:0;
                 color: #fff;
+                line-height: 1.8rem;
             }
         }
     }
