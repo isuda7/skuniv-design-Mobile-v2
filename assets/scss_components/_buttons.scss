@@ -233,6 +233,20 @@
         }
     }
 }
+.btn.pill3 {
+    font-size:1.4rem;
+    line-height:1.8rem;
+    padding:1.1rem 1.6rem;
+    height:4rem;
+    border:1px solid #fff;
+    border-radius:2rem;
+    color:#75777b;
+    font-weight:700;
+    background-color:#fff;
+    &:disabled {
+        opacity: 0.8;
+    }
+}
 
 // Top Scroll
 .btn.ico.top {
