@@ -100,8 +100,9 @@
 			background-image: url("../img/icons_40_ic_guage_#{$j}.svg");
 		}
 	}
-
-	&.per100::after {
+}
+.cube_item {
+	.cube_circle.per100::after {
 		content:"";
 		width:2rem;
 		height:2rem;
