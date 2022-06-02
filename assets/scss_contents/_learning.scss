@@ -2525,27 +2525,33 @@
         .type {
             font-weight: 400;
         }
-        .quiz_tit_img {
+        .btn_view {
             margin-top:1.2rem;
-        }
-    }
-    .btn_view {
-        width:4.8rem;
-        height: 4.8rem;
-        margin-left:1.2rem;
-        padding:0;
-        border-radius: $RadiusSmall;
-        background: no-repeat center center / cover;
-        &::before {
-            content:"";
-            width:inherit;
-            height:inherit;
-            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50%;
-            border-radius:0.4rem;
         }
     }
     .input_group {
         margin-top:2.4rem;
+    }
+    .btn_view {
+        width:100%;
+        height:calc((((100vw - 4rem) / 16) * 9));
+        vertical-align: top;
+        padding:0;
+        background-color: #000;
+        img {
+            vertical-align: top;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &::before {
+            content:"";
+            position:absolute;
+            right:0;
+            bottom:0;
+            width:3.6rem;
+            height:3.6rem;
+            background:rgba(0, 0, 0, 0.5) url('../img/icons_20_ic_view_white.svg') no-repeat 50% 50% / 2rem auto;
+        }
     }
 }
 // e: 설문
@@ -2583,7 +2589,7 @@
     }
     .item {
         display:flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         word-break: keep-all;
         .checkbox, .radio {
@@ -2604,6 +2610,17 @@
                 display:none;
                 width:100%;
                 margin-top:1.2rem;
+            }
+            &.has_img {
+                span {
+                    min-height: 2.4rem;
+                    margin-bottom:0.8rem;
+                }
+            }
+            .btn_view {
+                width:calc(100% - 3.2rem);
+                height:calc((((100vw - 7.2rem) / 16) * 9));
+                margin-left:3.2rem;
             }
         }
         .ico_label {
@@ -2637,10 +2654,16 @@
             }
         }
 
-        & + .item {margin-top:2.4rem;}
+        & + .item {
+            margin-top:2.4rem;
+        }
     }
     textarea.basic {
         height:12.8rem;
+        &[rows="2"] {
+            height:7rem;
+        }
+
     }
 }
 // e: 질문 목록
