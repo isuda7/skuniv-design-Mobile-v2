@@ -50,6 +50,14 @@
             @include Ellipsis2;
         }
     }
+    .state_info {
+        margin-top : .4rem;
+        color: $ColorPositive;
+        @include FontBody13;
+        + .info_area {
+            margin-top:0;
+        }
+    }
     .info_area {
         display:flex;
         align-items: center;

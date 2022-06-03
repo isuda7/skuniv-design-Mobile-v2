@@ -499,7 +499,10 @@
 			display:flex;
 			align-items: center;
 			.state {
-				color: $ColorPrimary;
+				color: $ColorSubTxt;
+				&.learning {
+					color: $ColorPrimary;
+				}
 				&.complete {
 					color:$ColorSubTxt;
 				}
