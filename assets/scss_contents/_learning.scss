@@ -1666,22 +1666,24 @@
 		background-color: #fff;
         display: flex;
         align-items: flex-end;
+        // left, right 는 개발에만 적용되어 있음.
         .left{
             display: flex;
 			align-items: center;
             width:100%;
             flex:1 1 auto;
-            min-height: 3.4rem;
         }
         .right {
             display: flex;
             align-items: center;
             flex:none;
-            min-height: 3.4rem;
         }
 		.btn + .btn {
 			margin-left:1.8rem;
 		}
+        .btn.ico {
+            margin-bottom:0.4rem;
+        }
 		.btn.attach {
 			position: relative;
 			&::before {
