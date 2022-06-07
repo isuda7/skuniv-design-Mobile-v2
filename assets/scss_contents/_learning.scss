@@ -2000,6 +2000,8 @@
 		.date {
 			@include FontBody12;
 			color:$ColorSubTxt;
+            width : 100%;
+            text-align: right;
 		}
 		.label.style1:not(.primary) + .date {
 			color:$ColorPrimary;
