@@ -18,6 +18,9 @@
         position: absolute;
         width:100%;
         height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         z-index: 10;
         .thumb {
             background-size:auto 100%;
@@ -509,7 +512,11 @@
 .audio_player_sec {
     .cube_player {
         .player_thumb {
-            padding:3.2rem 5.8rem;
+            background-color: #535353;
+            .thumb {
+                width:9rem;
+                height:6.1rem;
+            }
         }
         .btn.ico.pip,
         .btn.ico.full {

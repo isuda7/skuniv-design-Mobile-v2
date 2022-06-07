@@ -315,10 +315,13 @@
         height:100%;
         overflow:auto;
         padding:0 $GapSideBase;
-        &.flex_content {
-            display:flex;
-            flex-direction: column;
-        }
+        display:flex;
+        flex-direction: column;
+        // 22-06-07 flex_content 풀팝업 기본값으로 전환
+        // &.flex_content {
+        //     display:flex;
+        //     flex-direction: column;
+        // }
     }
     .modal_footer {
         flex:none;
