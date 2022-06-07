@@ -90,6 +90,8 @@ textarea {
 
 // Input
 input.basic {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     flex:1 1 auto;
     width:100%;
     width:100%;
@@ -100,7 +102,6 @@ input.basic {
     font-size:1.4rem;
     line-height: 1.5;
     color: $FormBasicValue;
-    -webkit-appearance: none;
     transition: all 0.12s ease;
     &::placeholder {
         color:#a4a6aa;
