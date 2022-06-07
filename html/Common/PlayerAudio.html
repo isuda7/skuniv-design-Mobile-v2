@@ -37,9 +37,10 @@
         <main role="main" class="container learning_container">
             <div class="content_head">
                 <!-- 학습영상 -->
-                <div class="cube_player_sec audio_player_sec full_landscape" id="playerSec">
+                <!-- 22-06-07 Audio Player 썸네일 적용 -->
+                <div class="cube_player_sec audio_player_sec" id="playerSec">
                     <script>
-                        $('#playerSec').load('../Common/Player.html', function(){
+                        $('#playerSec').load('../Common/Player2.html', function(){
                             $(this).find('.cube_player').addClass('is_active is_visible');
 						});
                     </script>
