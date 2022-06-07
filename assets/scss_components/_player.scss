@@ -133,7 +133,7 @@
             justify-content: space-between;
             position: absolute;
             left:0;
-            bottom:1.2rem;
+            bottom:0.6rem;
             width:100%;
             padding:0 $GapSideBase;
             .time_area {
@@ -149,8 +149,11 @@
                 display:flex;
                 justify-content: center;
                 align-items: center;
+                margin-right:-0.6rem;
                 .btn.ico {
-                    margin-left:2rem;
+                    margin-left:1.2rem;
+                    width:3.6rem;
+                    height:3.6rem;
                     &::before {
                         width:2.4rem;
                         height:2.4rem;
@@ -360,9 +363,9 @@
             }
         }
         .play_utils {
-            bottom:4rem;
+            bottom:3.4rem;
             .option_area .btn.ico {
-                margin-left:2.4rem;
+                margin-left:1.2rem;
                 &.full::before {
                     background-image: url('../img/icons_24_ic_contraction_white.svg');
                 }
