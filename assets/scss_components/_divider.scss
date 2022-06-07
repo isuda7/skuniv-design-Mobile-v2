@@ -22,6 +22,11 @@
 }
 .modal_content,
 .content_body {
+    .out_sec {
+        .divider, .divider2 {
+            margin:0;
+        }
+    }
     .divider, .divider2 {
         margin:0 ($GapSideBase * -1);
     }
