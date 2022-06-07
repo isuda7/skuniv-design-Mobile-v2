@@ -100,6 +100,7 @@ input.basic {
     font-size:1.4rem;
     line-height: 1.5;
     color: $FormBasicValue;
+    -webkit-appearance: none;
     transition: all 0.12s ease;
     &::placeholder {
         color:#a4a6aa;
