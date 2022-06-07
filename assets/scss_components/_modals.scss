@@ -707,7 +707,7 @@
     position:fixed;
     left:$GapSideBase;
     right:$GapSideBase;
-    bottom:$GapSideBase;
+    bottom:calc(2rem + var(--safeBottom));
     z-index:900;
     display:flex;
     align-items: center;
@@ -751,12 +751,12 @@
 // Has Floating
 .sub_wrapper.has_floating {
     .toast {
-        bottom:9.2rem;
+        bottom:calc(9.2rem + var(--safeBottom));
     }
 }
 .sub_wrapper.has_comment {
     .toast {
-        bottom:8rem;
+        bottom:calc(8rem + var(--safeBottom));
     }
 }
 
@@ -764,9 +764,10 @@
 // Persistent Popup
 .popup_persistent {
     position: fixed;
-    top:20.2rem;
+    top:calc(20.2rem + var(--safeTop));
     left:0;
     bottom:0;
+    padding-bottom: var(--safeBottom);
     width:100%;
     z-index: 800;
     display:flex;
@@ -813,7 +814,7 @@
         padding:0 $GapSideBase;
     }
     &.has_comment {
-        padding-bottom:60px;
+        padding-bottom:calc(6rem + var(--safeBottom));
     }
 }
 

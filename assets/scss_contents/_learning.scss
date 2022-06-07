@@ -1657,7 +1657,7 @@
     .comment_body {
         position:fixed;
         left:0;
-        bottom:0;
+        bottom:var(--safeBottom);
         z-index: 900;
         width:100%;
         padding:1.3rem 2rem;
