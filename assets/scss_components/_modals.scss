@@ -124,12 +124,12 @@
 .modal_wrap {
     visibility: hidden;
     pointer-events: none;
-    .modal_alert {
+    > .modal_alert {
         opacity: 0;
         transform: scale(0.75);
         @include ModalTransition;
     }
-    .modal_bottomsheet {
+    > .modal_bottomsheet {
         transform: translateY(110%);
         @include ModalTransition;
     }
@@ -138,28 +138,28 @@
         pointer-events: auto;
     }
     &.is_active {
-        .modal_alert {
+        > .modal_alert {
             opacity: 1;
             transform: scale(1);
         }
-        .modal_bottomsheet {
+        > .modal_bottomsheet {
             transform: translateY(0%);
         }
     }
     &.modal_slide_new {
-        .modal_bottomsheet {
+        > .modal_bottomsheet {
             transform: translateX(110%);
         }
     }
     &.modal_slide_old {
-        .modal_bottomsheet {
+        > .modal_bottomsheet {
             transform: translateX(-110%);
         }
     }
     &.modal_slide_new,
     &.modal_slide_old {
         &.is_active {
-            .modal_bottomsheet {
+            > .modal_bottomsheet {
                 transform: translateX(0%);
             }
         }
@@ -167,15 +167,15 @@
 }
 @media all and (orientation: landscape) {
     .modal_wrap {
-        .modal_bottomsheet {
+        > .modal_bottomsheet {
             max-height: calc(100% - 6rem);
         }
         &.modal_landscape {
-            .modal_bottomsheet {
+            > .modal_bottomsheet {
                 transform:translateX(110%);
             }
             &.is_active {
-                .modal_bottomsheet {
+                > .modal_bottomsheet {
                     transform:translateX(0%);
                 }
             }
