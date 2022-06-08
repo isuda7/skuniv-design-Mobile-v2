@@ -3888,6 +3888,7 @@
         height:calc(100% - 4.6rem);
         .doc_wrap {
             height:100%;
+            position: relative;
         }
         .doc_pagination {
             position: absolute;
@@ -3903,6 +3904,23 @@
             .pages_num{
                 color : #fff;
                 @include FontBody12;
+            }
+        }
+        .doc_util{
+            .btn.ico {
+                &.resize{
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    background-color:rgba(0,0,0, 0.3);
+                    position: absolute;
+                    bottom: 0;
+                    right:0;
+                    &::before{
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background-image:url('../img/icons_24_ic_full_white.svg');
+                    }
+                }
             }
         }
         .react-pdf__Document {
@@ -4094,6 +4112,9 @@
             canvas {
                 width:100% !important;
                 height:auto !important;
+            }
+            .btn.ico.resize::before{
+                background-image : url('../img/icons_24_ic_contraction_white.svg');
             }
         }
     }
