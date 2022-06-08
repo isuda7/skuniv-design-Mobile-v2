@@ -3366,6 +3366,11 @@
     .sticky {
         margin-top:-5.2rem;
     }
+    .theme_dark {
+        .btn.arw_expand::after {
+            background-image: url('../img/icons_12_ic_chervron_down_white.svg');
+        }
+    }
 }
 // e: 학습활동 노트 전체보기 모달
 
