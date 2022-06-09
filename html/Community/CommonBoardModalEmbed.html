@@ -21,9 +21,8 @@
 					$(this).closest('.modal').removeClass('is_scrolled');
 				}
 			})
-		})
+		});
 	</script>
-
 </head>
 
 <body class="is_dimmed">
@@ -37,34 +36,65 @@
 		<div style="height:25rem; background-color: #ccc;"></div>
 	</div>
 
-    <!-- Modal Bottomsheet -->
-    <div class="modal_wrap is_active is_visible">
-        <div class="modal modal_bottomsheet modal_board_attach">
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
+        <div class="modal modal_fullpopup modal_boardwrite">
             <div class="modal_header">
-				<button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
-                <h3 class="modal_tit">동영상 임베드</h3>
+				<button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit"><strong class="blind">게시글 작성</strong></h3>
+                <button type="button" class="btn text primary" disabled><span>등록</span></button>
             </div>
-            <div class="modal_content">
-				<div class="form_wrap">
-					<div class="form_row">
-						<label for="formURL" class="form_tit">주소(URL)</label>
-						<!-- 입력시 is_valued 추가 -->
-						<div class="input_group clear">
-							<input type="text" placeholder="삽입할 동영상 URL를 입력하세요."  value="" class="basic" />
-							<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-						</div>
-					</div>
+            <div class="modal_content flex_content">
+				<div class="edit_select">
+					<button type="button" class="btn select">게시판 선택</button>
 				</div>
+                <div class="edit_tit">
+                    <textarea cols="10" rows="10" class="textarea full" placeholder="제목을 입력해주세요."></textarea>
+                </div>
+                <div class="edit_contents flex_area">
+					<div class="edit_form_wrap">
+						<!-- 입력결과폼 -->
+						<div class="edit_form full">
+							<div class="ql-snow">
+								<div class="ql-editor" contenteditable="true" data-placeholder="내용을 입력해주세요" role="textbox" tabindex="0"></div>
+
+								<!-- 하이퍼링크 툴팁 -->
+								<div class="ql-tooltip ql-editing" data-mode="video" style="left: -53.0156px; top: 28px;">
+									<a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+									<input type="text" data-formula="e=mc^2" data-link="" data-video="Embed URL" placeholder="URL 주소를 입력하세요.">
+									<a class="ql-action"></a><a class="ql-remove"></a>
+								</div>
+								<!-- //하이퍼링크 툴팁 -->
+							</div>
+						</div>
+						<!-- 입력폼 -->
+
+					</div>
+                </div>
             </div>
             <div class="modal_footer">
-                <div class="page_action">
-                    <button type="button" class="btn basic primary" disabled>확인</button>
+                <div class="edit_tool_bar">
+                    <button type="button" class="btn ico e_font"><span class="blind">글자크기</span></button>
+					<div class="tooltip right top basic">
+						<button type="button" class="btn ico e_img"><span class="blind">이미지첨부</span></button>
+						<div class="tooltip_body">
+							<button type="button" class="btn gallery">사진 보관함</button>
+							<button type="button" class="btn camera">사진 직접 촬영</button>
+							<button type="button" class="btn file">파일선택</button>
+						</div>
+					</div>
+                    <button type="button" class="btn ico e_link"><span class="blind">하이퍼링크</span></button>
+                    <button type="button" class="btn ico e_align left"><span class="blind">정렬</span></button>
+                    <button type="button" class="btn ico e_more"><span class="blind">더보기</span></button>
+					<b class="split"></b>
+					<button type="button" class="btn select is_valued">공개</button>
                 </div>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
     </div>
-    <!-- // Modal Bottomsheet -->
+    <!-- // Modal FullPopup -->
+
 </body>
 
 </html>

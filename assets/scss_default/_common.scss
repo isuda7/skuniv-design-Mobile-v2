@@ -723,7 +723,11 @@
 }
 
 .ql-snow .ql-tooltip {
-    position: absolute;
+    position: fixed;
+    left:2rem !important;
+    right:2rem !important;
+    top:auto !important;
+    bottom:calc(4.6rem + 4.4rem + var(--safeBottom)); // 여백 + 에디터툴바 + SafeArea
     -webkit-transform: translateY(10px);
     transform: translateY(10px)
 }
@@ -1155,71 +1159,96 @@
 }
 
 .ql-snow .ql-tooltip {
+    display:flex;
+    flex-wrap: wrap;
     background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px #ddd;
-    color: #444;
-    padding: 5px 12px;
-    white-space: nowrap
+    border: 1px solid #cbcdcf;
+    border-radius: $RadiusLarge;
+    padding: 2rem 0 0 0;
 }
 
 .ql-snow .ql-tooltip:before {
-    content: "Visit URL:";
-    line-height: 26px;
-    margin-right: 8px
+    content: "URL";
+    display:block;
+    width:100%;
+    margin:0 2rem 2.4rem 2rem;
+    @include FontTitle16;
 }
 
 .ql-snow .ql-tooltip input[type=text] {
     display: none;
-    border: 1px solid #ccc;
-    font-size: 13px;
-    height: 26px;
-    margin: 0;
-    padding: 3px 5px;
-    width: 170px
-}
-
-.ql-snow .ql-tooltip a.ql-preview {
-    display: inline-block;
-    max-width: 200px;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    vertical-align: top
-}
-
-.ql-snow .ql-tooltip a.ql-action:after {
-    border-right: 1px solid #ccc;
-    content: "Edit";
-    margin-left: 16px;
-    padding-right: 8px
-}
-
-.ql-snow .ql-tooltip a.ql-remove:before {
-    content: "Remove";
-    margin-left: 8px
 }
 
 .ql-snow .ql-tooltip a {
-    line-height: 26px
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex:1 1 auto;
+    width:50%;
+    height:4.8rem;
+    border-top: 1px solid #f2f3f5;
+    color:#75777b;
+    @include FontBody14;
 }
 
-.ql-snow .ql-tooltip.ql-editing a.ql-preview,
-.ql-snow .ql-tooltip.ql-editing a.ql-remove {
-    display: none
+.ql-snow .ql-tooltip a.ql-preview {
+    display: flex;
+    width:100%;
+    margin:0 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    height:$FormBasicHeight;
+    margin-bottom:2.4rem;
+    padding:0.6rem $FormBasicPadding;
+    border:1px solid $FormBasicBorder;
+    border-radius:$FormBasicRadius;
+    @include FontBody14;
+    color: $FormBasicValue;
+    @include Ellipsis1;
+}
+
+.ql-snow .ql-tooltip a.ql-action:after {
+    content: "수정";
+}
+
+.ql-snow .ql-tooltip a.ql-remove:before {
+    content: "삭제";
 }
 
 .ql-snow .ql-tooltip.ql-editing input[type=text] {
-    display: inline-block
+    display: block;
+    width:100%;
+    margin:0 2rem;
+    height:$FormBasicHeight;
+    margin-bottom:2.4rem;
+    padding:0.6rem $FormBasicPadding 0.8rem;
+    border:1px solid $FormBasicBorder;
+    border-radius:$FormBasicRadius;
+    @include FontBody14;
+    color: $FormBasicValue;
+    &::placeholder {
+        color:#a4a6aa;
+    }
+    &:focus {
+        border:1px solid #000000;
+        outline: 0;
+    }
+}
+.ql-snow .ql-tooltip a.ql-remove {
+    border-left:1px solid #f2f3f5;
+}
+.ql-snow .ql-tooltip.ql-editing a.ql-preview,
+.ql-snow .ql-tooltip.ql-editing a.ql-remove {
+    display: none;
 }
 
 .ql-snow .ql-tooltip.ql-editing a.ql-action:after {
-    border-right: 0;
-    content: "Save";
-    padding-right: 0
+    content: "확인";
+    color:$ColorPrimary;
 }
 
 .ql-snow .ql-tooltip[data-mode=link]:before {
-    content: "Enter link:"
+    content: "하이퍼링크"
 }
 
 .ql-snow .ql-tooltip[data-mode=formula]:before {
@@ -1227,9 +1256,9 @@
 }
 
 .ql-snow .ql-tooltip[data-mode=video]:before {
-    content: "Enter video:"
+    content: "동영상 임베드"
 }
 
 .ql-snow a {
-    color: #06c
+    color: #06c;
 }
