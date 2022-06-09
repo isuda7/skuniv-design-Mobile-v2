@@ -28,6 +28,7 @@
 		color:#A4A6AA;
 		font-size:1rem;
 		line-height: 1.4rem;
+		position: relative;
 		&::before {
 			content:'';
 			display:block;
@@ -80,5 +81,18 @@
 	// Disabled
 	.is_disabled.item_comunity {color:#cbcdcf; pointer-events: none;}
 	.is_disabled.item_comunity::before {opacity: 0.3;}
+	
+	// new badge
+	.is_new.item::after{
+		content : '';
+		display: block;
+		width: 1.4rem;
+		height: 1.4rem;
+		background : no-repeat 0 0;
+		background-image:url('../img/ic_new_badge_small.svg');
+		position: absolute;
+		top:.4rem;
+		right:1.2rem;
+	}
 
 }
