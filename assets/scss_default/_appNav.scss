@@ -81,7 +81,7 @@
 	// Disabled
 	.is_disabled.item_comunity {color:#cbcdcf; pointer-events: none;}
 	.is_disabled.item_comunity::before {opacity: 0.3;}
-	
+
 	// new badge
 	.is_new.item::after{
 		content : '';
@@ -92,7 +92,7 @@
 		background-image:url('../img/ic_new_badge_small.svg');
 		position: absolute;
 		top:.4rem;
-		right:1.2rem;
+		left:calc(50% + 1rem);
 	}
 
 }
