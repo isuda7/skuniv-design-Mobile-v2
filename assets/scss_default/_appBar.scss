@@ -352,6 +352,9 @@
         &.main::before {
             background-image: url('../img/icons_24_ic_main_black.svg');
         }
+        &.share::before {
+            background-image:url('../img/icons_24_ic_share_black.svg');
+        }
     }
 }
 .theme_secondary {

@@ -357,117 +357,114 @@
         }
     }
 }
-// 모달 풀팝업 커뮤니티 상세 정보
-.modal_community_info {
-    .modal_content {
-       .community_info_head {
-           text-align: center;
-           .item_body{
-               display: block;
-                .item_thumb {
-                    overflow: hidden;
-                    .thumb {
-                        display: inline-block;
-                        width: 8rem;
-                        height: 8rem;
-                        border-radius: 50%;
+// 커뮤니티 상세 정보
+.community_info_head {
+    text-align: center;
+    padding:0 2rem;
+    .item_body{
+        display: block;
+        .item_thumb {
+            overflow: hidden;
+            .thumb {
+                display: inline-block;
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+            }
+        }
+        .item_title {
+            .title {
+                @include FontTitle18;
+                margin:1.6rem 0;
+            }
+        }
+        .item_foot {
+            display: block;
+            color: $ColorSubTxt;
+            overflow: hidden;
+            width:100%;
+            .info_area {
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                width:100%;
+                overflow: hidden;
+                &::before {
+                    content:'';
+                    position: relative;
+                    top:1px;
+                    display:flex;
+                    flex: none;
+                    width:1.6rem;
+                    height:1.6rem;
+                    margin:0 0.4rem 0 0;
+                    background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+                }
+                .username {
+                    flex: 0 1 auto;
+                    @include Ellipsis1;
+                }
+                .date {
+                    display: flex;
+                    align-items: center;
+                    flex: none;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 1rem;
+                        margin-right: 0.8rem;
+                        margin-left: 0.8rem;
+                        background-color: #cbcdcf;
                     }
                 }
-                .item_title {
-                    .title {
-                        @include FontTitle18;
-                        margin:1.6rem 0;
+                > .btn.text.arw_link {
+                    padding-left:inherit;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 1rem;
+                        margin-right: 0.8rem;
+                        margin-left: 0.8rem;
+                        background-color: #cbcdcf;
+                    }
+                    &::after {
+                        top:inherit;
                     }
                 }
-                .item_foot {
-                    display: block;
-                    color: $ColorSubTxt;
-                    overflow: hidden;
-                    width:100%;
-                    .info_area {
-                        justify-content: center;
-                        display: flex;
-                        align-items: center;
-                        width:100%;
-                        overflow: hidden;
-                        &::before {
-                            content:'';
-                            position: relative;
-                            top:1px;
-                            display:flex;
-                            flex: none;
-                            width:1.6rem;
-                            height:1.6rem;
-                            margin:0 0.4rem 0 0;
-                            background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
-                        }
-                        .username {
-                            flex: 0 1 auto;
-                            @include Ellipsis1;
-                        }
-                        .date {
-                            display: flex;
-                            align-items: center;
-                            flex: none;
-                            &::before {
-                                content: "";
-                                display: block;
-                                width: 1px;
-                                height: 1rem;
-                                margin-right: 0.8rem;
-                                margin-left: 0.8rem;
-                                background-color: #cbcdcf;
-                            }
-                        }
-                        > .btn.text.arw_link {
-                            padding-left:inherit;
-                            &::before {
-                                content: "";
-                                display: block;
-                                width: 1px;
-                                height: 1rem;
-                                margin-right: 0.8rem;
-                                margin-left: 0.8rem;
-                                background-color: #cbcdcf;
-                            }
-                            &::after {
-                                top:inherit;
-                            }
-                        }
-                    }
-                    .desc {
-                        margin:1.2rem 0 2.4rem;
-                        color:#000;
-                    }
-                }
+            }
+            .desc {
+                margin:1.2rem 0 2.4rem;
+                color:#000;
             }
         }
     }
-    .detailinfo_page {
-        background-color:#f8f8fa;
-        .info_list_wrap {
-            text-align: center;
-            .info_list {
-                .info_box {
-                    display: flex;
-                    align-items: center;
-                    border-bottom:1px solid #e3e4e5;
-                    padding:2rem 0 1.2rem;
-                    > .left{
-                        color:#75777b;
-                    }
-                    > .right{
-                        flex: none;
-                        margin-left:auto;
-                        margin-right:1rem;
-                    }
+}
+.detailinfo_page {
+    background-color:#f8f8fa;
+    .info_list_wrap {
+        text-align: center;
+        .info_list {
+            .info_box {
+                display: flex;
+                align-items: center;
+                border-bottom:1px solid #e3e4e5;
+                padding:2rem 0 1.2rem;
+                > .left{
+                    color:#75777b;
+                }
+                > .right{
+                    flex: none;
+                    margin-left:auto;
+                    margin-right:1rem;
                 }
             }
-            .btn.basic.unregister {
-                @include FontBody13;
-                padding:0.6rem 1.2rem;
-                margin-top:3rem;
-            }
+        }
+        .btn.basic.unregister {
+            @include FontBody13;
+            padding:0.6rem 1.2rem;
+            margin-top:3rem;
         }
     }
 }

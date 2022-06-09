@@ -14,38 +14,43 @@
 	<title>mySUNI Design Mobile V2</title>
 	<script>
 		$(function(){
-			$('.modal_content').scroll(function(){
-				if ($(this).scrollTop() > 0) {
-					$(this).closest('.modal').addClass('is_scrolled');
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
 				} else {
-					$(this).closest('.modal').removeClass('is_scrolled');
+					$appbar.removeClass('is_transition');
 				}
 			})
 		})
 	</script>
 </head>
-
-<body class="is_dimmed">
-	<div class="sub_wrapper">
-		<!-- 스크롤 테스트용 -->
-		<div style="height:25rem; background-color: #ddd;"></div>
-		<div style="height:25rem; background-color: #ccc;"></div>
-		<div style="height:25rem; background-color: #ddd;"></div>
-		<div style="height:25rem; background-color: #ccc;"></div>
-		<div style="height:25rem; background-color: #ddd;"></div>
-		<div style="height:25rem; background-color: #ccc;"></div>
-	</div>
-
-    <!-- Modal FullPopup -->
-    <div class="modal_wrap is_active is_visible" id="ModalFullpopup">
-        <div class="modal modal_fullpopup modal_community_info">
-            <div class="modal_header">
-				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
-				<h3 class="modal_tit"><strong class="blind">커뮤니티 정보</strong></h3>
-				<button type="button" class="btn ico bookmark is_active"><span class="blind">찜하기</span></button>
-				<button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+<!-- 22-06-09 팝업을 페이지로 변경 -->
+<body>
+	<div class="sub_wrapper has_appnav">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1 class="transition"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico bookmark is_active"><span class="blind">찜하기</span></button>
+				    <button type="button" class="btn ico share"><span class="blind">공유하기</span></button>
+				</div>
 			</div>
-            <div class="modal_content flex_content">
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container community_container">
+			<div class="content_head">
 				<!-- 프로필 헤더 -->
 				<div class="community_info_head">
 					<a href="javascript:void(0)" class="item_body">
@@ -70,7 +75,10 @@
 					</a>
 				</div>
 				<!-- // 프로필 헤더 -->
-				<div class="sticky">
+			</div>
+			<div class="content_body">
+				<!-- 탭 -->
+				<div class="sticky out_sec">
 					<div class="tab style2">
 						<div class="tab_list">
 							<button type="button" class="tab_item">커뮤니티 정보</button>
@@ -78,7 +86,7 @@
 						</div>
 					</div>
 				</div>
-
+                <!-- // 탭 -->
                 <div class="tab_panel detailinfo_page">
                     <div class="info_list_wrap">
 						<div class="info_list">
@@ -98,12 +106,13 @@
 						<button type="button" class="btn basic unregister">탈퇴하기</button>
 					</div>
                 </div>
-            </div>
-        </div>
-        <div class="dimmer" aria-hidden="true"></div>
-    </div>
-    <!-- // Modal FullPopup -->
-
+			</div>
+		</main>
+		<!-- // Container -->
+		<!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+	</div>
 </body>
 
 </html>
