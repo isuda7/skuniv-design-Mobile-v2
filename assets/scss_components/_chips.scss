@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     height:3.2rem;
+    overflow: hidden;
     &.action {
         padding:0 1.2rem;
         border-radius:2rem;
@@ -41,7 +42,6 @@
     }
     &.input {
         .btn.default {
-            display:inline-flex;
             justify-content: center;
             align-items: center;
             height: 100%;
@@ -50,6 +50,8 @@
             background-color: #fff;
             border:1px solid #E3E4E5;
             color: #000000;
+            flex: 0 1 auto;
+            @include Ellipsis1;
         }
         .btn.remove {
             position: absolute;

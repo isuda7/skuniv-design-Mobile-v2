@@ -52,75 +52,28 @@
                     <textarea cols="10" rows="10" class="textarea full" placeholder="제목을 입력해주세요."></textarea>
                 </div>
                 <div class="edit_contents flex_area">
-					<!-- 더보기 첨부 아코디언 -->
-					<div class="acco acco_upload">
-						<!-- is_active 접기/펴기 토글 -->
-						<a href="javascript:void(0)" class="acco_title is_active">
-							<strong class="tit">추천과정</strong><strong class="cnt">3</strong>
-						</a>
-						<!-- is_active 접기/펴기 토글 -->
-						<div class="acco_content is_active">
-							<!-- 추천과 정첨부 후 -->
-							<div class="card_cube_parents_slide">
-								<div class="card_cube_parents">
-									<a href="javascript:void(0)" class="card_inner">
-										<div class="card_thumb">
-											<span class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');" alt=""></span>
-											<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-										</div>
-										<div class="card_body">
-											<p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-											<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
-										</div>
-									</a>
-									<div class="card_clear">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-								<div class="card_cube_parents">
-									<a href="javascript:void(0)" class="card_inner">
-										<div class="card_thumb">
-											<span class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');" alt=""></span>
-											<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-										</div>
-										<div class="card_body">
-											<p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-											<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
-										</div>
-									</a>
-									<div class="card_clear">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-								<div class="card_cube_parents">
-									<a href="javascript:void(0)" class="card_inner">
-										<div class="card_thumb">
-											<span class="thumb" style="background-image : url('../../assets/img/demo/thumb-01.png');" alt=""></span>
-											<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-										</div>
-										<div class="card_body">
-											<p class="sub_txt"><strong>BM Design & Storytelling</strong></p>
-											<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례같은 제목은 몇줄까지들어가는지 정책이 필요한부분입니다.</strong></p>
-										</div>
-									</a>
-									<div class="card_clear">
-										<button type="button" class="btn ico clear"><span class="blind">삭제</span></button>
-									</div>
-								</div>
-							</div>
-							<!-- //추천과정 첨부 후 -->
-						</div>
-					</div>
-					<!-- //더보기 첨부 아코디언 -->
-
 					<div class="edit_form_wrap">
-						<!-- 입력폼 -->
+						<!-- 입력결과폼 -->
 						<div class="edit_form full">
 							<div class="ql-snow">
-								<div class="ql-editor" contenteditable="true" data-placeholder="내용을 입력해주세요" role="textbox" tabindex="0"></div>
+								<div class="ql-editor" contenteditable="true" data-placeholder="내용을 입력해주세요" role="textbox" tabindex="0">
+									<!-- 하이퍼링크 첨부 -->
+									<a href="http://placeimg.com/640/480/nature" class="e_link" target="_blank">http://placeimg.com/640/480/nature</a>
+									<a href="http://placeimg.com/640/480/nature" class="e_link" target="_blank">사진첨부함</a>
+									<a href="http://placeimg.com/640/480/nature" class="e_link" target="_blank">동영상</a>
+								</div>
+
+								<!-- 하이퍼링크 툴팁 -->
+								<div class="ql-tooltip" data-mode="link" style="left: -53.0156px; top: 28px;">
+									<a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank">http://placeimg.com/640/480/nature</a>
+									<input type="text" data-formula="e=mc^2" data-link="" data-video="Embed URL" placeholder="URL 주소를 입력하세요.">
+									<a class="ql-action"></a><a class="ql-remove"></a>
+								</div>
+								<!-- //하이퍼링크 툴팁 -->
 							</div>
 						</div>
 						<!-- 입력폼 -->
+
 					</div>
                 </div>
             </div>
@@ -135,7 +88,7 @@
 							<button type="button" class="btn file">파일선택</button>
 						</div>
 					</div>
-                    <button type="button" class="btn ico e_link"><span class="blind">하이퍼링크</span></button>
+                    <button type="button" class="btn ico e_link is_active"><span class="blind">하이퍼링크</span></button>
                     <button type="button" class="btn ico e_align left"><span class="blind">정렬</span></button>
                     <button type="button" class="btn ico e_more"><span class="blind">더보기</span></button>
 					<b class="split"></b>
