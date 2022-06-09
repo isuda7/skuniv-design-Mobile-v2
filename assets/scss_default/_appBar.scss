@@ -329,6 +329,12 @@
         &.bookmark.is_active::before {
             background-position-y: bottom;
         }
+        &.bookmark_star::before {
+            background-image:url('../img/icons_24_ic_appbarstar_off_black.svg');
+        }
+        &.bookmark_star.is_active::before {
+            background-image:url('../img/icons_24_ic_star_on_primary.svg');
+        }
         &.script::before {
             background-image:url('../img/icons_24_ic_script_off_on.svg');
         }
