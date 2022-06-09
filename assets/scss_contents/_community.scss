@@ -1067,8 +1067,14 @@
             &.e_link::before{
                 background-image: url("../img/icons_20_ic_clip_off_on.svg");
             }
-            &.e_align::before{
-                background-image: url("../img/icons_20_ic_text_align_off_on.svg");
+            &.e_align.left::before{
+                background-image: url("../img/icons_20_ic_text_align_left.svg");
+            }
+            &.e_align.center::before{
+                background-image: url("../img/icons_20_ic_text_align_center.svg");
+            }
+            &.e_align.right::before{
+                background-image: url("../img/icons_20_ic_text_align_right.svg");
             }
             &.e_attch::before{
                 background-image: url("../img/icons_20_ic_file_off_on.svg");
