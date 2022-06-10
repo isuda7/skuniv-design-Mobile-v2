@@ -91,6 +91,7 @@
 		}
 		h2 {
 			@include FontTitle20;
+			color:#000;
 		}
 		.desc {
 			margin-top:1.2rem;
@@ -149,8 +150,13 @@
 				&.slide3 {
 					background-color:#25272b;
 					transition: background-color 0.5s ease;
-					.update_item .item::after {
-						background-color: #25272b;
+					.update_item {
+						.item::after {
+							background-color: #25272b;
+						}
+						h2 {
+							color: #fff;
+						}
 					}
 				}
 			}
