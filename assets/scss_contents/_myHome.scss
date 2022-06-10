@@ -11,13 +11,12 @@
     margin-right: -$GapSideBase;
     .list_sec {
         &+.list_sec {
-            padding-top: 1.4rem;
+            margin-top: 3.2rem;
         }
         // 학습과정 예외처리
         &.learnings {
             display:flex;
             flex-direction: column;
-            padding-bottom:1.8rem;
             .sec_body {
                 order: 1;
             }
@@ -64,17 +63,12 @@
     //s: Empty
     .empty_wrap {
         padding:0 $GapSideBase;
-        padding-bottom:1.8rem;
     }
     //e: Empty
 
-    // s: 도전중 뱃지
-    .card_badge_group_list {
-        padding-bottom:1.8rem;
-    }
     // s: 학습 현황
     .myData_status {
-        padding:0 2rem 1.8rem 2rem;
+        padding:0 2rem 0 2rem;
         &::-webkit-scrollbar {
             display:none;
         }
@@ -211,7 +205,6 @@
     }
     &.swiper_playlists {
         .swiper-slide {
-            padding: 0 0 1.8rem 0;
             width: 15.6rem;
         }
     }
