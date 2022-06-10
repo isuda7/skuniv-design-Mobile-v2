@@ -68,19 +68,6 @@
 	}
 }
 
-// Result Data
-.result_data {
-    text-align: center;
-    .img {display:block;}
-    .img + .msg {margin-top:10px;}
-    &.is_successed {
-        color: $ColorPositive
-    }
-    &.is_failed {
-        color: $ColorNegative
-    }
-}
-
 // Cube Circle
 .cube_circle {
 	display: flex;
