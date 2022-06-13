@@ -121,6 +121,7 @@ var isSticky = {
 		} else {
 			$obj.removeClass('is_sticky');
 		}
+		console.log(elePos, eleTop);
 	},
 }
 
