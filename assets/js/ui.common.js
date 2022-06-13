@@ -99,6 +99,31 @@ var layoutHasClass = {
 	},
 }
 
+var isSticky = {
+	init: function(){
+		var _this = this;
+		if ($('.container').find('.sticky').length){
+			_this.event($('.container').find('.sticky'));
+			_this.update($('.container').find('.sticky'));
+		}
+	},
+	event: function($obj){
+		var _this = this;
+		$(window).on('scroll', function(){
+			_this.update($obj);
+		})
+	},
+	update: function($obj){
+		var elePos = $obj.offset().top - $(window).scrollTop();
+		var eleTop = parseInt($obj.css('top'));
+		if (elePos <= eleTop) {
+			$obj.addClass('is_sticky');
+		} else {
+			$obj.removeClass('is_sticky');
+		}
+	},
+}
+
 // Range Multiple
 function RangeMultiple(){
 	const inputLeft = document.getElementById("input-left");
@@ -170,4 +195,5 @@ $(function(){
 	setStatusInit(); // 스크롤 상태 클래스
 	layoutHasClass.init() // 레이아웃 구분 클래스
 	tooltip.init(); // 툴팁 공통
+	isSticky.init(); // Sticky 상태구분
 });
