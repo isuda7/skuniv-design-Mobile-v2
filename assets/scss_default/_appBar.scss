@@ -77,7 +77,7 @@
 		display:flex;
 		align-items: center;
 		flex:none;
-        //(터치영역 32) - (아이콘크기 24) = (좌우빈공간 8 / 우측빈공간 0.4)
+        //(터치영역 32) - (아이콘크기 24) = (빈공간 8) = (좌 4) + (우 4)
         margin-right:-0.4rem;
         >.btn.ico,
         >.tooltip {

@@ -6,6 +6,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: .6rem 0;
+        padding:0 calc(((100vw - 31.2rem - 4rem)/3) - 0.4rem);
         justify-content: space-between; //2개일때
         .card_topic {
             flex:none;
@@ -24,6 +25,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: .6rem 0;
+        padding:0 calc(((100vw - 31.2rem - 4rem)/3) - 0.4rem);
         justify-content: space-between;
         .card_cube{
             flex:none;
@@ -39,7 +41,8 @@
 @media screen and (min-width: 520px) { //3개
     .topic_list_wrap .card_topic_list,
     .recom_list_wrap .card_cube_list {
-        margin: 0.6rem calc((33.3% - 15.6rem)/-2);
+        margin: 0.6rem 0;
+        padding: 0;
         justify-content: flex-start;
         .card_topic,
         .card_cube {
@@ -48,15 +51,16 @@
         }
     }
 }
-@media screen and (min-width: 625px){ //4개이상
+@media screen and (min-width: 720px){ //4개이상
     .topic_list_wrap .card_topic_list,
     .recom_list_wrap .card_cube_list {
-        margin: .6rem -.4rem;
+        margin: .6rem 0;
+        padding: 0;
         justify-content: flex-start;
         .card_topic,
         .card_cube {
             min-width: auto;
-            margin: .6rem .4rem;
+            margin: .6rem calc((25% - 15.6rem)/2);
         }
     }
 }
