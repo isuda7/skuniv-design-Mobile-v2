@@ -364,6 +364,13 @@
 		margin-top:0.4rem;
 		color :#33353c;
 	}
+	.privacy_footer {
+		padding-top: 1.6rem;
+		.info_txt {
+			color: #a4a6aa;
+			@include FontBody12;
+		}
+	}
 }
 // e: 개인정보 동의 상세
 
