@@ -145,9 +145,20 @@
 					진행완료: is_state3
 
 					[큐브유형]
-					유형1: type_play (Video, Audio, E-learning, Classroom, Task, Documents, webpage, Discussion, Experiential, Cohort)
-					유형2: type_doc (Test, Report, Survey)
-					유형3: type_talk (Talk)
+                    type_video : video,
+                    type_audio : audio,
+                    type_doc : document,
+                    type_survey : survey,
+                    type_test : test,
+                    type_report : report,
+                    type_discussion : discussion,
+                    type_elearning : e-learning,
+                    type_classroom : classroom,
+                    type_webpage : webpage,
+                    type_experiential : Experiential,
+                    type_cohort : cohort,
+                    type_talk : talk,
+                    type_task : task,
 
 					화살표 없는 경우: is_disabled [테스트: 학습 진행불가(학습 미시작), 설문: 진행 불가(학습 미진행)]
 					리플인 경우: is_repley
@@ -165,7 +176,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="cube_item type_doc is_state1 is_repley is_disabled">
+                    <div class="cube_item type_test is_state1 is_repley is_disabled">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="cube_circle per0"><span class="blind">Cube</span></span>
@@ -189,7 +200,7 @@
                         </a>
                     </div>
 
-                    <div class="cube_item type_doc is_state2 is_repley">
+                    <div class="cube_item type_report is_state2 is_repley">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="cube_circle per50"><span class="blind">Cube</span></span>
@@ -213,7 +224,7 @@
                         </a>
                     </div>
 
-                    <div class="cube_item type_doc is_state3 is_repley">
+                    <div class="cube_item type_survey is_state3 is_repley">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="cube_circle per100"><span class="blind">Cube</span></span>
@@ -237,7 +248,7 @@
                         </a>
                     </div>
 
-                    <div class="cube_item type_doc is_state1 is_disabled">
+                    <div class="cube_item type_survey is_state1 is_disabled">
                         <a href="javascript:void(0)" class="item_body">
                             <div class="item_thumb">
                                 <span class="cube_circle per0"><span class="blind">Cube</span></span>
