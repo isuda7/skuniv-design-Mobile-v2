@@ -58,23 +58,20 @@
                 </div>
                 <div class="edit_contents flex_area">
 					<div class="edit_form_wrap">
-						<textarea cols="10" rows="10" class="full" placeholder="내용을 입력해주세요."></textarea>
+						<!-- <textarea cols="10" rows="10" class="full" placeholder="내용을 입력해주세요."></textarea> -->
+						<!-- 입력폼 -->
+						<div class="edit_form full">
+							<div class="ql-snow">
+								<div class="ql-editor" contenteditable="true" data-placeholder="내용을 입력해주세요" role="textbox" tabindex="0"></div>
+							</div>
+						</div>
+						<!-- 입력폼 -->
 					</div>
                 </div>
             </div>
             <div class="modal_footer">
-				 <div class="font_tool_bar"> <!-- is_active -->
-                    <button type="button" class="btn ico e_fontSize"><span class="blind">12pt</span></button>
-                    <button type="button" class="btn ico e_bolder"><span class="blind">Bold</span></button>
-                    <button type="button" class="btn ico e_italic"><span class="blind">Italic</span></button>
-                    <button type="button" class="btn ico e_underline"><span class="blind">Underline</span></button>
-                    <button type="button" class="btn ico e_mid_line"><span class="blind">Strike</span></button>
-                    <button type="button" class="btn ico e_fontAlign"><span class="blind">Align</span></button>
-                    <!-- <button type="button" class="btn ico e_addDot"><span class="blind">Sort</span></button> -->
-                    <button type="button" class="btn ico e_ol"><span class="blind">Orther List</span></button>
-				</div>
                 <div class="edit_tool_bar">
-                    <button type="button" class="btn ico e_font is_active"><span class="blind">글자크기</span></button>
+                    <button type="button" class="btn ico e_font"><span class="blind">글자크기</span></button>
 					<div class="tooltip right top basic">
 						<button type="button" class="btn ico e_img"><span class="blind">이미지첨부</span></button>
 						<div class="tooltip_body">
@@ -85,7 +82,7 @@
 					</div>
                     <button type="button" class="btn ico e_link"><span class="blind">하이퍼링크</span></button>
                     <button type="button" class="btn ico e_align left"><span class="blind">정렬</span></button>
-                    <button type="button" class="btn ico e_attch"><span class="blind">파일첨부</span></button>
+                    <button type="button" class="btn ico e_attch"><span class="blind">file</span></button>
                 </div>
             </div>
         </div>
