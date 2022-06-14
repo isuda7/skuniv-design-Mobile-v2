@@ -2241,6 +2241,7 @@
             @include FontBody14;
             display: flex;
             align-items: center;
+            width:100%;
             overflow: hidden;
             span {
                 display: inline-block;
@@ -2265,6 +2266,7 @@
             .cnt_views {
                 position: relative;
                 margin : 0;
+                margin-left:auto;
                 padding-left: 2.8rem;
                 background : url("../img/icons_16_ic_view_grey_07.svg") no-repeat 0.8rem 50%;
 
