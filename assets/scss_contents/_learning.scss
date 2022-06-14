@@ -600,7 +600,12 @@
             background-image: none;
         }
         .item_thumb .cube_circle::after {
-            background-image: url('../img/icons_20_ic_report_black.svg');
+            background-image: url('../img/icons_20_ic_talk_black.svg');
+        }
+    }
+    &.type_task {
+        .item_thumb .cube_circle::after {
+            background-image: url('../img/icons_20_ic_write_black.svg');
         }
     }
 
@@ -3475,7 +3480,10 @@
         }
         .note_info {
             margin-top:1.6rem;
-            color:#a4a6aa;
+            .date{
+                color:#a4a6aa;
+                @include FontBody12;
+            }
         }
     }
     .note_item.type_vod {
