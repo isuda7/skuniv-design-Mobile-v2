@@ -220,6 +220,7 @@
         position: relative;
         padding:2rem $GapSideBase 1.6rem 5.2rem;
         border-bottom:1px solid #e3e4e5;
+        background-color: #f8f8fa;
         &::before {
             content:'';
             display:block;
@@ -227,6 +228,9 @@
             left:$GapSideBase;
             width:2.4rem;
             height:2.4rem;
+        }
+        &.is_read {
+            background-color: #fff;
         }
         &.learning::before {
             background-image: url('../img/icons_24_ic_learning_black.svg');
