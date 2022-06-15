@@ -489,6 +489,7 @@
 			align-items: center;
 			.state {
 				color: $ColorSubTxt;
+				@include FontBody13;
 				&.learning {
 					color: $ColorPrimary;
 				}
@@ -504,6 +505,7 @@
 			}
 			.time {
 				color:$ColorSubTxt;
+				@include FontBody13;
 			}
 		}
 		.util_area {
