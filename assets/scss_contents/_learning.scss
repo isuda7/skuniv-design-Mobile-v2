@@ -3429,9 +3429,20 @@
             color:inherit;
         }
         .note_link {
+            position:relative;
             margin-top:0.4rem;
-            padding:0;
+            padding:0 1.4rem 0 0;
             @include Ellipsis2;
+            &::after {
+                content:'';
+                position: absolute;
+                top:calc(50% - 0.5rem);
+                right:0;
+                display:block;
+                width:1.2rem;
+                height:1.2rem;
+                background: url('../img/icons_12_ic_chervron_right_white.svg');
+            }
         }
         .note_info {
             display: flex;
