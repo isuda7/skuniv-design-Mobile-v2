@@ -2588,6 +2588,20 @@
         max-width:100%;
         max-height:100%;
     }
+    .btn.ico.close {
+        position: absolute;
+        top:4.5rem;
+        right:2rem;
+        width:3.6rem;
+        height:3.6rem;
+        margin:-1.1rem;
+        &::before{
+            width:2.4rem;
+            height:2.4rem;
+            background-image:url('../img/icons_24_ic_close_white.svg');
+        }
+
+    }
 }
 // e: 사진 보기
 
