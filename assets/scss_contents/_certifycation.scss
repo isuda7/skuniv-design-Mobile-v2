@@ -57,6 +57,9 @@
         + .info_area {
             margin-top:0;
         }
+        &.primary {
+            color:$ColorPrimary;
+        }
     }
     .info_area {
         display:flex;
