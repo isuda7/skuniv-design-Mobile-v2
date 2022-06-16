@@ -26,6 +26,11 @@
                 margin:2rem 0 0 0;
             }
         }
+
+        // 카드
+        &.cards .loader_section {
+            height: 23rem;
+        }
         .sec_head{
             padding: 0 $GapSideBase;
             margin-bottom: 1.5rem;

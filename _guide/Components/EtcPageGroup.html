@@ -16,6 +16,12 @@
     <!-- Guide IA -->
     <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
+    <script>
+        function pageSearch(id) {
+            $(id).addClass('is_active is_visible');
+            $('body').addClass('is_dimmed');
+        }
+    </script>
 </head>
 
 <body>
@@ -99,6 +105,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <h2 class="g_h2">Loader</h2>
+                <h3 class="g_h3">Default</h3>
+                <div class="preview">
+                    <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩바" />
+                </div>
+                <h3 class="g_h3">Search</h3>
+                <div class="preview">
+                    <div class="g_desc">
+                        <p>자동으로 늘어난다.</p>
+                    </div>
+                    <div style="display:flex; flex-direction: column;position:relative; height:200px; background-color:#ddd;">
+                        <div class="loader_search">
+                            <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩바" />
+                        </div>
+                    </div>
+                </div>
+                <h3 class="g_h3">Section</h3>
+                <div class="preview">
+                    <div class="g_desc">
+                        <p>높이값은 해당 컨텐츠에서 지정한다.</p>
+                        <p>예시: <a href="../../html/Myhome/indexLoading.html" class="g_link">마이홈 메인 찜한과정</a></p>
+                    </div>
+                    <div style="background-color:#ddd;">
+                        <div class="loader_section" style="height:200px;">
+                            <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩바" />
+                        </div>
+                    </div>
+                </div>
+                <h3 class="g_h3">Page</h3>
+                <div class="preview">
+                    <div class="g_desc">
+                        <p>페이지 전체를 덮는다. (body에 is_dimmed 추가)</p>
+                        <p>배경 터치가능 여부에 따라서 CSS로 대응</p>
+                    </div>
+                    <button type="button" class="btn basic" onclick="pageSearch('#loaderPage')">페이지 검색중</button>
+                    <!-- 활성화시 is_active is_visible 추가 -->
+					<div class="loader_page" id="loaderPage">
+                        <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩바" />
+					</div>
                 </div>
             </section>
         </div>
