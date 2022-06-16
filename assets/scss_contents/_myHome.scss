@@ -10,26 +10,13 @@
     margin-left: -$GapSideBase;
     margin-right: -$GapSideBase;
     .list_sec {
+        // sec_body 는 로딩중일때 깨지지 않도록 높ㅇ
+        // UI 높이 확인용 (그림자 가려지므로 사용안함)
+        .sec_body {
+            min-height:18rem;
+        }
         &+.list_sec {
             margin-top: 3.2rem;
-        }
-        // 학습과정 예외처리
-        &.learnings {
-            display:flex;
-            flex-direction: column;
-            .sec_body {
-                order: 1;
-            }
-            .sec_head {
-                order: 2;
-                justify-content: center;
-                margin:2rem 0 0 0;
-            }
-        }
-
-        // 카드
-        &.cards .loader_section {
-            height: 23rem;
         }
         .sec_head{
             padding: 0 $GapSideBase;
@@ -62,6 +49,23 @@
                     background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .6rem;
                 }
             }
+        }
+
+        // Cases
+        &.learnings {
+            display:flex;
+            flex-direction: column;
+            .sec_body {
+                order: 1;
+            }
+            .sec_head {
+                order: 2;
+                justify-content: center;
+                margin:2rem 0 0 0;
+            }
+        }
+        .loader_section {
+            height: 18rem;
         }
     }
 
@@ -157,7 +161,7 @@
 
     // s: 커뮤니티 피드 Empty
     .feed_empty_wrap {
-        margin-top:0.6rem;
+        margin-top:2.4rem;
         padding-top:4rem;
         padding-bottom:6rem;
         background-color: #f2f3f5;
@@ -203,6 +207,7 @@
         }
     }
     &.swiper_feeds {
+        margin-bottom: -1.8rem;
         .swiper-slide{
             padding: 0 0 1.8rem 0;
             width: 15.6rem;

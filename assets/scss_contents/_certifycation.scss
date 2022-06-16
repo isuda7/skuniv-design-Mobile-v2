@@ -26,6 +26,17 @@
                 .title {
                     @include Ellipsis1;
                 }
+                .state_info {
+                    color: $ColorPositive;
+                    @include FontBody13;
+                    line-height: 2.2rem;
+                    em {
+                        font-weight: 700;
+                    }
+                    &.primary {
+                        color:$ColorPrimary;
+                    }
+                }
             }
         }
     }
