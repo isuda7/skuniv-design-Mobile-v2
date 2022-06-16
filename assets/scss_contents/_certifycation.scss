@@ -68,6 +68,9 @@
         + .info_area {
             margin-top:0;
         }
+        em {
+            font-weight: 700;
+        }
         &.primary {
             color:$ColorPrimary;
         }
