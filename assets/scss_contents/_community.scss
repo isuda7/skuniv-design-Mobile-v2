@@ -517,11 +517,7 @@
                     margin-right:0.8rem;
                 }
                 .ico.new {
-                    flex:none;
-                    width:1.4rem;
-                    height:1.4rem;
                     margin-left: auto;
-                    background-image: url('../img/ic_new_badge_small.svg');
                 }
                 &.boardbasic::before {
                     background-image: url('../img/icons_20_ic_boardbasic_grey_05.svg');
@@ -673,12 +669,6 @@
                 @include Ellipsis2;
                 color:#000;
                 .ico.new {
-                    display:inline-flex;
-                    flex: none;
-                    width: 1.4rem;
-                    height: 1.4rem;
-                    line-height: 1.4rem;
-                    background-image: url(../img/ic_new_badge_small.svg);
                     vertical-align: middle;
                 }
             }
@@ -743,16 +733,9 @@
                     top:-0.2rem;
                 }
                 .ico.new {
-                    position:relative;
                     top:-0.2rem;
-                    display:inline-flex;
                     vertical-align: middle;
-                    flex:none;
-                    width:1.4rem;
-                    height:1.4rem;
-                    line-height: 1.4rem;
                     margin-left:0.2rem;
-                    background-image: url('../img/ic_new_badge_small.svg');
                 }
             }
             .title_ico {

@@ -135,13 +135,8 @@
         @include FontBody14;
         @include Ellipsis2;
         .ico.new {
-            position: relative;
             top: .1rem;
             margin-right: .4rem;
-            display: inline-flex;
-            width: 1.4rem;
-            height: 1.4rem;
-            background-image: url('../img/ic_new_badge_small.svg');
         }
     }
     .board_info_area{

@@ -1,7 +1,17 @@
 // Default
 i.ico {
+    position: relative;
     display:flex;
     justify-content:center;
     align-items:center;
     background: no-repeat center center / 100% auto;
+}
+
+// N (새글)
+i.ico.new {
+    display:inline-flex;
+    flex:none;
+    width:1.4rem;
+    height:1.4rem;
+    background-image: url('../img/ic_new_badge_small.svg');
 }
