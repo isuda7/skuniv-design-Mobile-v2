@@ -4289,8 +4289,11 @@
 
 // s: 서약서 팝업
 .modal_pledge {
+    .modal_content {
+        padding-bottom: 4rem;
+    }
     .privacy_detail {
-        padding-bottom:0;
+        padding-bottom:1rem;
     }
     .doc_viewer {
         display:flex;
