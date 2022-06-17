@@ -17,31 +17,51 @@
     <link href="../../_guide/assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
     <script>
+        var pageScrTop = null;
+        function dimmVisible(){
+            pageScrTop = $(window).scrollTop();
+            $("html, body").addClass("is_dimmed").css('scroll-behavior', 'auto');
+            $('body > div:first-child').css({position: 'relative', top: pageScrTop * (-1)});
+        }
+        //스크롤 활성화
+        function dimmHidden(){
+            $("html, body").removeClass("is_dimmed");
+            $('body > div:first-child').removeAttr('style');
+            $(window).scrollTop(pageScrTop);
+            $("html, body").removeAttr('style');
+        }
+
         // Alert
         function ModalAlertOpen(id){
+            dimmVisible();
             $(id).addClass("is_visible is_active");
-            $("body").addClass("is_dimmed");
         }
         function ModalAlertClose(id){
-            $(id).removeClass("is_active").on('transitionend', function(){
+            $(id).removeClass("is_active").one('transitionend', function(){
                 if (!$(id).hasClass('is_active')) {
                     $(id).removeClass("is_visible");
-                    $("body").removeClass("is_dimmed");
+
+                    // 남아있는 모달이 없는 경우 초기화
+                    if ($('.modal_wrap.is_visible').length == 0) {
+                        dimmHidden();
+                    }
                 }
             })
         }
 
         // BottomSheet
         function ModalBSOpen(id){
+            dimmVisible();
             $(id).addClass("is_visible is_active");
-            $("body").addClass("is_dimmed");
         }
         function ModalBSClose(id){
-            $(id).removeClass("is_active").on('transitionend', function(){
+            $(id).removeClass("is_active").one('transitionend', function(){
                 if (!$(id).hasClass('is_active')) {
                     $(id).removeClass("is_visible");
-                    if ($('.modal_wrap.is_visible').length === 0){
-                        $("body").removeClass("is_dimmed");
+
+                    // 남아있는 모달이 없는 경우 초기화
+                    if ($('.modal_wrap.is_visible').length == 0) {
+                        dimmHidden();
                     }
                 }
             })
@@ -62,12 +82,16 @@
 
         // ModalFPOpen
         function ModalFPOpen(id){
+            dimmVisible();
             $(id).addClass("is_visible");
-            $("body").addClass("is_dimmed");
         }
         function ModalFPClose(id){
             $(id).removeClass("is_visible");
-            $("body").removeClass("is_dimmed");
+
+            // 남아있는 모달이 없는 경우 초기화
+            if ($('.modal_wrap.is_visible').length == 0) {
+                dimmHidden();
+            }
         }
 
         // ToastOpen
@@ -76,7 +100,7 @@
             setTimeout(function(){ ToastClose(id) }, 3000);
         }
         function ToastClose(id){
-            $(id).removeClass("is_active").on('transitionend', function(){
+            $(id).removeClass("is_active").one('transitionend', function(){
                 !$(id).hasClass('is_active') && $(id).removeClass("is_visible");
             })
         }
