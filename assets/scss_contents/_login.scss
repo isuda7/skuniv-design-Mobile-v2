@@ -38,7 +38,7 @@
 // 다국어
 .login_langeage {
     position: absolute;
-    top:1.8rem;
+    top:calc(1.8rem + var(--safeTop));
     right:2rem;
     .btn.language {
         height:24px;

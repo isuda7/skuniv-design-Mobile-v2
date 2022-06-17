@@ -78,7 +78,7 @@
 		text-align: center;
 		.onboard_skip {
 			position: absolute;
-			top:2rem;
+			top:calc(2rem + var(--safeTop));
 			right:2rem;
 			margin:-0.6rem -1rem;
 			z-index: 1;
