@@ -18,33 +18,154 @@
     }
 }
 
-.recom_list_wrap{
-    width:100%;
-    //overflow: hidden;
-    .card_cube_list{
-        display: flex;
-        flex-wrap: wrap;
-        margin: .6rem 0;
-        padding:0 calc(((100vw - 31.2rem - 4rem)/3) - 0.4rem);
-        justify-content: space-between;
-        .card_cube{
-            flex:none;
-            margin: .6rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            @include Shadow3;
+.topic_dt_head {
+    margin-top:1rem;
+    margin-left : -$GapSideBase;
+    margin-right : -$GapSideBase;
+    padding : 0 $GapSideBase 1.1rem;
+    border-bottom: 1px solid $FormBasicBorder;
+    .title_area {
+        .title {
+            margin-bottom:1.2rem;
+            @include FontTitle16;
+        }
+        .para{
+            white-space: pre-line;
+            word-break: keep-all;
+            word-wrap: break-word;
         }
     }
-
+    .info_area {
+        margin-top: 3.2rem;
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        .left {
+            display:flex;
+            align-items: center;
+            flex: 0 1 auto;
+            .total_cnt {
+                padding-left: 2.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #a4a6aa;
+                @include FontBody13;
+                background: url('../img/icons_16_ic_course_grey.svg') no-repeat 0 .2rem;
+            }
+            .split {
+                display:block;
+                width:1px;
+                height:1rem;
+                margin:0 0.8rem;
+                background-color: #e3e4e5;
+            }
+            .time {
+                padding-left: 2.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #a4a6aa;
+                @include FontBody13;
+                background: url('../img/icons_16_ic_time_grey.svg') no-repeat 0 .2rem;
+            }
+        }
+        .right {
+            flex:none;
+            display: flex;
+            align-items: center;
+            .btn.like {
+                padding:0;
+                @include FontBody12;
+                color:#000;
+                &::before {
+                    content:'';
+                    display:block;
+                    margin-right:0.4rem;
+                    width:1.6rem;
+                    height:1.6rem;
+                    background-image:url('../img/icons_16_ic_like_off_grey_06.svg');
+                }
+            }
+            .btn.like.is_active {
+                &::before {
+                    background-image:url('../img/icons_16_ic_like_on.svg');
+                }
+            }
+        }
+    }
+    // 내가 만든 플레이리스트 상태정보
+    .make_status {
+        position: relative;
+        display:flex;
+        margin-top:1.2rem;
+        border-radius: $RadiusLarge;
+        background-color: #f2f3f5;
+        padding:1.8rem 0;
+        &::before {
+            content:'';
+            position:absolute;
+            left:50%;
+            top:calc(50% - 1.5rem);
+            display:block;
+            width:1px;
+            height:3rem;
+            background-color: #e3e4e5;
+        }
+        > p {
+            display: flex;
+            width:50%;
+            flex:none;
+            justify-content: center;
+            align-items: center;
+            em {
+                font-weight: 700;
+            }
+            &::before {
+                content:'';
+                display:block;
+                width:2.4rem;
+                height:2.4rem;
+                margin-right:0.4rem;
+                background: no-repeat center center / 100% auto;
+            }
+            &.recom::before {
+                background-image:url('../img/icons_24_ic_recommend_black.svg');
+            }
+            &.buy::before {
+                background-image:url('../img/icons_24_ic_putin_black.svg');
+            }
+            &.share::before{
+                background-image: url("../img/icons_24_ic_shareslim_black.svg");
+            }
+        }
+    }
+    // 추천받은 메세지
+    .recom_msg {
+        position: relative;
+        margin-top:1.2rem;
+        border-radius: $RadiusLarge;
+        background-color: #f2f3f5;
+        padding:1.6rem;
+        dt {
+            @include FontBody12;
+            font-weight: 700;
+        }
+        dd {
+            margin-top:0.6rem;
+        }
+    }
 }
+
+.topic_dt_body {
+    margin-top: .8rem;
+}
+
 @media screen and (min-width: 520px) { //3개
-    .topic_list_wrap .card_topic_list,
     .recom_list_wrap .card_cube_list {
         margin: 0.6rem 0;
         padding: 0;
         justify-content: flex-start;
-        .card_topic,
         .card_cube {
             min-width: auto;
             margin: .6rem calc((33.3% - 15.6rem)/2);
@@ -52,12 +173,10 @@
     }
 }
 @media screen and (min-width: 720px){ //4개이상
-    .topic_list_wrap .card_topic_list,
     .recom_list_wrap .card_cube_list {
         margin: .6rem 0;
         padding: 0;
         justify-content: flex-start;
-        .card_topic,
         .card_cube {
             min-width: auto;
             margin: .6rem calc((25% - 15.6rem)/2);
