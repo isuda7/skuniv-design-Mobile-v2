@@ -1,7 +1,7 @@
 /* AppNav */
 .footer {
 	position: relative;
-	z-index:100;
+	z-index:300;
 	width: 100%;
 	height:calc(6rem + var(--safeBottom));
 }
@@ -9,6 +9,7 @@
 	position: fixed;
 	left:0;
 	bottom:0;
+	z-index:300;
 	display:flex;
 	justify-content: space-around;
 	width:100%;

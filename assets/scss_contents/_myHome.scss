@@ -1165,3 +1165,61 @@
     }
 }
 // e: 학습 이수 시간 목록
+
+// s: 마이홈 가이드
+.myhome_guide {
+    &_pop {
+        // visibility: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0);
+        padding-bottom:calc(5.6rem + 3.2rem + var(--safeBottom));
+        transition: all 0.25s ease;
+        z-index: 200;
+        &.is_visible {
+            visibility: visible;
+            .myhome_guide {
+                visibility: visible;
+            }
+        }
+        &.is_active {
+            background-color: rgba(0,0,0,0.5);
+            .myhome_guide {
+                transform: translateY(0%) scaleY(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    visibility: hidden;
+    position: relative;
+    display:inline-block;
+    padding:1.4rem 1.2rem;
+    background-color: #fff;
+    border-radius: $RadiusSmall;
+    @include Shadow2;
+    text-align: center;
+    transform: translateY(40%) scaleY(0.6);
+    opacity: 0;
+    transition: all 0.25s ease;
+    em {
+        color:$ColorSecondary;
+    }
+    &::after {
+        content:'';
+        position: absolute;
+        left:calc(50% - 0.7rem);
+        top:100%;
+        display: block;
+        width:1.4rem;
+        height:1.1rem;
+        background: url('../img/img_img_tail.svg');
+    }
+}
+// e: 마이홈 가이드
