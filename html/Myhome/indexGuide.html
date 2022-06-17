@@ -189,16 +189,15 @@
 
         <!-- 마이홈 가이드 -->
         <!-- body 에 is_dimmed 가 적용됩니다 -->
-        <div class="myhome_guide_pop">
+        <div class="myhome_guide_pop is_visible is_active">
             <div class="myhome_guide">
                 <p><em>새로워진 mySUNI</em>의 '마이홈'에서 <br/> 나만의 공부방을 경험하세요.</p>
             </div>
         </div>
         <script>
-            setTimeout(() => {
-                $('.myhome_guide_pop').addClass('is_visible is_active');
-                $('body').addClass('is_dimmed');
-            }, 1000);
+            $('.myhome_guide_pop').on('click', function(){
+                $(this).removeClass('is_visible is_active');
+            })
         </script>
         <!-- //마이홈 가이드 -->
 	</main>
