@@ -4166,6 +4166,24 @@
     }
 	// e: Full Landscape
 
+    // s: Full Landscape
+    .modal_fullpopup.has_full_landscape {
+        .full_landscape {
+           position: absolute;
+           left:0;
+           top:0;
+           width:100%;
+           height:100%;
+       }
+       .modal_header {
+           display: none;
+       }
+       .modal_footer {
+            display: none;
+       }
+    }
+    // e: Full Landscape
+
 	// s: Modal Landscape
     .modal_landscape{
         left: auto;
@@ -4267,3 +4285,25 @@
         }
     }
 }
+
+// s: 서약서 팝업
+.modal_pledge {
+    .privacy_detail {
+        padding-bottom:0;
+    }
+    .doc_viewer {
+        display:flex;
+        flex-direction: column;
+        flex:1 1 auto;
+        overflow: hidden;
+        padding-bottom:0.4rem;
+        background-color: #fff;
+        .doc_area {
+            height:100%;
+            .react-pdf__Document {
+                background-color: #fff;;
+            }
+        }
+    }
+}
+// e: 서약서 팝업
