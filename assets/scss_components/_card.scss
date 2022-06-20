@@ -703,6 +703,11 @@
 		.txt {
 			@include Ellipsis3;
 			color:#000;
+			word-break: break-all;
+			a {
+				text-decoration: underline;
+				color: #38b1ad;
+			}
 		}
 		.txt + .item_info {
 			margin-top: 1.2rem;

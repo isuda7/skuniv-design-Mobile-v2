@@ -644,8 +644,8 @@
 		.txt {
 			@include Ellipsis3;
 			color:#000;
+			word-break: break-all;
 			a {
-				display: inline-block;
 				text-decoration: underline;
 				color: #38b1ad;
 			}
