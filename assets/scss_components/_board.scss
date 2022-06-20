@@ -644,6 +644,10 @@
 		.txt {
 			@include Ellipsis3;
 			color:#000;
+			a {
+				display: inline-block;
+				text-decoration: underline;
+			}
 		}
 		.txt + .item_info {
 			margin-top: 1.2rem;
