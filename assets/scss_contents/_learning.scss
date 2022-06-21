@@ -2303,18 +2303,6 @@
     }
     .file_down_area {
         margin-top: 2.4rem;
-        .area_title {
-            @include FontTitle14;
-            .label.download{
-                display: inline-block;
-                padding : 0 .4rem 0 2rem;
-                background: url('../img/icons_16_ic_file_black.svg') no-repeat 0 50%;
-            }
-            .cnt { color :$ColorPrimary}
-        }
-        .cube_references{
-            margin-top : 1.2rem;
-        }
     }
     .board_like_area {
         margin: 3.2rem -2rem 0;
@@ -2338,6 +2326,22 @@
         }
     }
 }
+
+.file_down_area {
+    .area_title {
+        @include FontTitle14;
+        .label.download{
+            display: inline-block;
+            padding : 0 .4rem 0 2rem;
+            background: url('../img/icons_16_ic_file_black.svg') no-repeat 0 50%;
+        }
+        .cnt { color :$ColorPrimary}
+    }
+    .cube_references{
+        margin-top : 1.2rem;
+    }
+}
+
 .board_comments_wrap {
     display:flex;
     flex-direction: column;
@@ -2365,19 +2369,6 @@
                 color :#f2f3f5;
             }
         }
-        .file_down_area{
-            .area_title{
-                color :#fff;
-                .label {
-                    &.download{
-                        background-image : url('../img/icons_16_ic_file_white.svg');
-                    }
-                }
-            }
-            .cube_references{
-                background-color:transparent;
-            }
-        }
         .cube_references .references_util {
             .ico.file_down{background-image: url('../img/icons_20_ic_download_white.svg');}
             .ico.file_open{background-image: url('../img/icons_20_ic_openinnew_white.svg');}
@@ -2388,6 +2379,26 @@
     }
     .board_comments_wrap{
         background-color: #151617;
+    }
+    .file_down_area{
+        .area_title{
+            color :#fff;
+            .label {
+                &.download{
+                    background-image : url('../img/icons_16_ic_file_white.svg');
+                }
+            }
+        }
+        .cube_references{
+            background-color:transparent;
+        }
+    }
+}
+.bg_grey {
+    .file_down_area {
+        .cube_references {
+            background : #fff;
+        }
     }
 }
 // e: board Detail 공통
