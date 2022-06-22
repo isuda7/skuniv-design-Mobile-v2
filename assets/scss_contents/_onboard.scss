@@ -374,11 +374,28 @@
 }
 // e: 개인정보 동의 상세
 
-// s: 개인정보동의 창 iframe 
+// s: 개인정보동의 창 pdf
 .privacy_wrap {
 	flex : 1 1 auto;
+	position: relative;
+	.react-pdf__Document {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #4c4c4c;
+	}
+	.react-pdf__Page {
+		overflow: hidden;
+		width:100%;
+		height:100%;
+	}
+	.react-pdf__Page__textContent,
+	canvas {
+		width:100% !important;
+		height:auto !important;
+	}
 }
-// e: 개인정보동의 창 iframe
+// e: 개인정보동의 창 pdf
 
 // s: 관심분야 페이지
 .favorit_page {
