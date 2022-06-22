@@ -61,10 +61,15 @@
                             <div class="form_row">
                                 <strong class="form_tit">파일첨부</strong>
                                 <div class="attch_area">
-                                    <span class="input_group file t_type">
-                                        <input id="file_image" type="file" class="upload t_type" hidden/>
-                                        <label for="file_image" class="ico plus">업로드</label>
-                                    </span>
+                                    <div class="tooltip left bottom basic">
+                                        <button type="button" class="btn upload plus">업로드</button>
+                                        <div class="tooltip_body">
+                                            <button type="button" class="btn gallery">사진 보관함</button>
+                                            <button type="button" class="btn camera">사진 직접 촬영</button>
+                                            <button type="button" class="btn file">파일선택</button>
+                                        </div>
+                                    </div>
+                                    <!-- // 22-06-22 파일첨부 업로드 버튼타입으로 변경 + popup 추가 -->
                                     <!-- <div role="list" class="attch_list">
                                         <div class="cube_references">
                                             <div class="references_body">
