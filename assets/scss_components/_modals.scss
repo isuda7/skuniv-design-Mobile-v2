@@ -649,6 +649,14 @@
                 background-image :url('../img/icons_20_ic_download_black.svg');
             }
         }
+        .sub_list {
+            width: 100%;
+            flex: 1 0 auto;
+            .sub_item {
+                padding-left: 2.6rem;
+                background:url('../img/icons_16_ic_depth.svg') no-repeat 0 1.6rem/1.6rem;
+            }
+        }
     }
 }
 
