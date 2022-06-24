@@ -37,6 +37,7 @@
             padding-left: $GapSideBase;
             padding-right: $GapSideBase;
         }
+        &::before,
         .main_head_bg {
             content:'';
             position:absolute;

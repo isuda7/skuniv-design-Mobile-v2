@@ -4,7 +4,7 @@
     width:100%;
     z-index: 100;
     height: calc(5.2rem + var(--safeTop));
-    &::after {
+    &::before {
         content:'';
         display: block;
         position: fixed;
@@ -38,6 +38,10 @@
 .theme_dark {
     .appbar,
     .sticky {
+        background-color: #000;
+    }
+    .header::before,
+    &.header::before {
         background-color: #000;
     }
 }

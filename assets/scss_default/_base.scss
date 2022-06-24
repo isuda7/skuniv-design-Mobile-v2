@@ -95,12 +95,14 @@ select {-webkit-tap-highlight-color:transparent;}
 :root {
 	--safeTop: 0px;
 	--safeBottom: 0px;
+	--safeBottomHalf: 0px;
 }
 /* iOS 11.0 버전 */
 @supports (--safeTop: constant(safe-area-inset-top)) {
 	:root {
 		--safeTop: constant(safe-area-inset-top);
-		--safeBottom: constant(safe-area-inset-bottom );
+		--safeBottom: constant(safe-area-inset-bottom);
+		--safeBottomHalf: constant(safe-area-inset-bottom);
 	}
 }
 /* iOS 11.2 이상 */
@@ -108,5 +110,6 @@ select {-webkit-tap-highlight-color:transparent;}
 	:root {
 		--safeTop: env(safe-area-inset-top);
 		--safeBottom: env(safe-area-inset-bottom);
+		--safeBottomHalf: 18px;
 	}
 }
