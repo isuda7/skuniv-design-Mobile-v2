@@ -1066,11 +1066,14 @@
 		.teacher_body {
 			width:100%;
 			flex:0 1 auto;
-			// overflow: hidden;
+			overflow: hidden;
 			.title {
 				position: relative;
 				display:inline-flex;
 				flex:0 1 auto;
+                overflow: hidden;
+                width: 100%;
+                align-items: center;
 				strong {
 					flex:0 1 auto;
 					@include FontTitle14;
@@ -1078,10 +1081,11 @@
 					color: #1C1D1F;
 				}
 				.label {
-					position:absolute;
-					top:50%;
-					left:calc(100% +  0.4rem);
-					transform: translateY(-50%);
+                    margin-left: .4rem;
+                    flex: none;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
 				}
 			}
 			.sub_txt {
