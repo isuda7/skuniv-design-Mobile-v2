@@ -154,6 +154,13 @@
     }
 }
 .theme_dark {
+    .btn.basic {
+        &:disabled {
+            color:#33353c;
+            background-color:#1c1d1f;
+            border:0;
+        }
+    }
     // .btn.arw_expand::after {
     //     background-image: url('../img/icons_12_ic_chervron_down_white.svg');
     // }
@@ -280,6 +287,7 @@
         left:0;
         bottom:0;
         z-index:300;
+        padding-bottom:calc(2rem + var(--safeTop));
     }
 }
 

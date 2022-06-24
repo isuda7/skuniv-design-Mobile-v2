@@ -1664,10 +1664,11 @@
     .comment_body {
         position:fixed;
         left:0;
-        bottom:var(--safeBottom);
+        bottom:0;
         z-index: 900;
         width:100%;
         padding:1.3rem 2rem;
+        padding-bottom:calc(1.3rem + var(--safeBottom));
         border-top:1px solid #eeeeee;
 		border-bottom:1px solid transparent;
 		background-color: #fff;

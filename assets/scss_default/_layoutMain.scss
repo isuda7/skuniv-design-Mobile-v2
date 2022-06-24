@@ -37,13 +37,13 @@
             padding-left: $GapSideBase;
             padding-right: $GapSideBase;
         }
-        &::before {
+        .main_head_bg {
             content:'';
             position:absolute;
             left:0;
             top:0;
             width:100%;
-            height:20.4rem;
+            height:calc(20.4rem + var(--safeTop));
             background-color: $ColorSecondary;
         }
     }

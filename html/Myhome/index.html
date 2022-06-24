@@ -17,7 +17,7 @@
 		$(function(){
 			$(window).scroll(function(){
 				var $appbar = $('.header');
-				var appbarShow = 204;
+				var appbarShow  = $('.main_head_bg').height();
 				var scrollTop = $(window).scrollTop();
 
 				// Appbar 보여줄 시점에 Active
@@ -85,6 +85,8 @@
 
 	<!-- Container -->
 	<main role="main" class="container myhome_container">
+		<!-- 22-06-24 정확한 계산을 위한 요소처리 -->
+		<div class="main_head_bg"></div>
 		<div class="content_body myhome_main_page">
 			<div class="myhome_wrap">
 				<!-- 학습과정 -->

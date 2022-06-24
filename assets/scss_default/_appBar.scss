@@ -4,11 +4,23 @@
     width:100%;
     z-index: 100;
     height: calc(5.2rem + var(--safeTop));
+    &::after {
+        content:'';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        height: var(--safeTop);
+        background-color: #fff;
+    }
 }
 .appbar {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     transition: transform 0.2s ease;
 }
 .sticky {
@@ -132,6 +144,11 @@
         background-color: $ColorSecondary;
         color:#fff;
     }
+    &.header {
+        &::after {
+            background-color: $ColorSecondary;
+        }
+    }
 }
 .theme_dark {
     .appbar {
@@ -252,8 +269,9 @@
     .header,
     .content_head {
         position: fixed;
-        top:var(--safeTop);
+        top:0;
         left:0;
+        padding-top: var(--safeTop);
     }
     .sticky {
         top:20.2rem;
