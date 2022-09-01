@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
+					<h1><strong>출석체크 이벤트</strong></h1>
+				</div>
+			</div>
+		</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<div class="content_body">
+                <div class="event_done_wrap">
+                    <div class="img_box">
+                        <img src="../../assets/img/event/AttendanceCheck/icon_event_end.png" alt="" />
+                    </div>
+                    <div class="event_done_txt">
+                        <strong class="title">9월 23일자로 <br /> 출석이벤트가 종료되었습니다. </strong>
+                        <p>이벤트로 획득한 행운권은 <br /> 9월 30일까지 확인 가능합니다.</p>
+                        <p>아래의 <strong>'행운권 확인'</strong> 버튼을 눌러 확인하세요!</p>
+
+                        <em>
+                            출석 횟수가 5회 미만인 경우, <br /> '행운권 확인' 버튼이 비활성화 됩니다.
+                        </em>
+                    </div>
+                </div>
+				<div class="page_floating">
+                    <div class="page_action">
+                        <a href="#" class="btn basic">이벤트 보러가기</a>
+                        <!-- 행운권 확인 불가할 때 : disabled -->
+                        <!-- <a href="#" class="btn basic disabled">행운권 확인</a> -->
+                        <!-- 행운권 확인 가능할 때 : primary -->
+                        <a href="#" class="btn basic primary">행운권 확인</a>
+                    </div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

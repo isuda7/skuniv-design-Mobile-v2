@@ -15,14 +15,14 @@
     <script>
         $(function(){
             // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
+            // var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            // $('.container').css({'padding-top': breakStickyPos+'rem'});
+            // $('.sticky').css({'top': breakStickyPos+'rem'});
         })
     </script>
 </head>
 <body>
-<div class="sub_wrapper gap_none theme_dark">
+<div class="sub_wrapper theme_dark has_player has_full_landscape">
 	<!-- Header -->
     <header class="header theme_dark">
         <div class="appbar basic">
@@ -43,7 +43,7 @@
     <main role="main" class="container">
         <div class="content_head">
             <!-- 학습영상 -->
-            <div class="cube_player_sec">
+            <div class="cube_player_sec full_landscape">
                 <!-- Player영역 -->
                 <div class="cube_player">
                     <img src="../../assets/img/demo/thumb-01.png" alt="">

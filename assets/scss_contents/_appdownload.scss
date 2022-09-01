@@ -1,0 +1,84 @@
+.dl_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .dl_title {
+        flex: none;
+        text-align: center;
+        .logo_area img{
+            width: 70px;
+        }
+        .tit {
+            margin-top: .55rem;
+            height: 5.6rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 2.1rem;
+            line-height: 1.43;
+            letter-spacing: -.06rem;
+        }
+        .step_tit {
+            color: #999;
+            @include FontBody14;
+        }
+    }
+    .dl_contents{
+        flex: 1 1 auto;
+        margin-top: 2rem;
+        .dl_image{
+            padding: 0 2.5rem;
+        }
+        .dl_desc {
+            margin-top: 2.3rem;
+            @include FontBody14;
+            text-align: center;
+            p {
+                margin-top: 1rem;
+                word-break: keep-all;
+                word-wrap: break-word;
+            }
+            em {
+                @include FontBody13;
+                color: #999;
+            }
+            .primary {
+                color: $ColorPrimary;
+            }
+        }
+    }
+}
+.download_page {
+    justify-content: center;
+    &.content_body {
+        padding-top : calc(1.8rem + 2.5rem + var(--safeTop));
+    }
+    strong {
+        font-weight: 700;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    .dl_bullets {
+        position: relative;
+        margin-top: 1rem;
+        .swiper-pagination-bullet {
+            background-color: #e3e4e5;
+            opacity: 1;
+            width: .6rem;
+            height: .6rem;
+            margin: 0 .25rem;
+            &.swiper-pagination-bullet-active{
+                background-color : #38c0b4;
+                width: 1.8rem;
+                border-radius: .4rem;
+            }
+        }
+    }
+    .page_floating {
+        .page_action {
+            padding-top: 0;
+        }
+    }
+}

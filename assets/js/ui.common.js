@@ -75,6 +75,12 @@ function setResized(){
 	});
 }
 
+var safeArea = {
+	init: function(){
+		$('header.header').prepend("<div class='header_before'></div>");
+	}
+}
+
 var layoutHasClass = {
 	init: function(){
 		// 페이지
@@ -106,6 +112,10 @@ var isSticky = {
 			_this.event($('.container').find('.sticky'));
 			_this.update($('.container').find('.sticky'));
 		}
+		if ($('.modal').find('.sticky').length){
+			_this.modalEvent($('.modal').find('.sticky'));
+			_this.modalUpdate($('.modal').find('.sticky'));
+		}
 	},
 	event: function($obj){
 		var _this = this;
@@ -115,6 +125,21 @@ var isSticky = {
 	},
 	update: function($obj){
 		var elePos = $obj.offset().top - $(window).scrollTop();
+		var eleTop = parseInt($obj.css('top'));
+		if (elePos <= eleTop) {
+			$obj.addClass('is_sticky');
+		} else {
+			$obj.removeClass('is_sticky');
+		}
+	},
+	modalEvent: function($obj){
+		var _this = this;
+		$('.modal_content').on('scroll', function(){
+			_this.modalUpdate($obj);
+		})
+	},
+	modalUpdate: function($obj){
+		var elePos = $obj.offset().top - $('.modal_header').outerHeight();
 		var eleTop = parseInt($obj.css('top'));
 		if (elePos <= eleTop) {
 			$obj.addClass('is_sticky');
@@ -143,6 +168,10 @@ function RangeMultiple(){
 		const percent = ((_this.value - min) / (max - min)) * 100;
 		thumbLeft.style.left = percent + "%";
 		range.style.left = percent + "%";
+
+		// 포커싱 상태
+		inputLeft.classList.add('is_focused');
+		inputRight.classList.remove('is_focused');
 	};
 
 	const setRightValue = () => {
@@ -156,6 +185,10 @@ function RangeMultiple(){
 		const percent = ((_this.value - min) / (max - min)) * 100;
 		thumbRight.style.right = 100 - percent + "%";
 		range.style.right = 100 - percent + "%";
+
+		// 포커싱 상태
+		inputLeft.classList.remove('is_focused');
+		inputRight.classList.add('is_focused');
 	};
 
 	inputLeft.addEventListener("input", setLeftValue);
@@ -191,10 +224,86 @@ var tooltip = {
 	},
 }
 
+var hasPlayerFixed = {
+	init: function(){
+		if ($('.has_player').length) {
+			// 스티키 레이아웃 설정
+			var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+			$('.container').css({'padding-top': breakStickyPos+'rem'});
+			$('.sticky').css({'top': breakStickyPos+'rem'});
+		}
+	}
+}
+
+var badgeSample = {
+	init: function(color, level, isPlus){
+		// 값이 없을때 - 기본값 적용
+		var valRgb = "#395088";
+		var valColor = "navy";
+		var valLevel = 1;
+		var valIsPlus = "";
+
+		// 값이 있을때 - 인자값 적용
+		if (color !== undefined && color !== "" && color !== null) { valColor = color }
+		if (level !== undefined && level !== "" && level !== null) { valLevel = level }
+		if (isPlus !== undefined && isPlus !== false && isPlus !== null) { valIsPlus = isPlus }
+
+		// Color
+		if (color === "navy") { // AI/DT
+			valRgb = "#395088";
+		} else if (color === "yellow") { // 공통직무
+			valRgb = "#fba82d";
+		} else if (color === "green") { // 미래Biz
+			valRgb = "#0c8f19";
+		} else if (color === "red") { // 행복경영
+			valRgb = "#ee5a45";
+		} else if (color === "mint") { // BM Design
+			valRgb = "#56c6c2";
+		} else if (color === "brown") { // SK(주) C&C
+			valRgb = "#dd6b49";
+		}
+
+		// Plus
+		if (isPlus === true) { valIsPlus = "_plus" }
+
+		// HTML
+		var totalScore = '';
+		var score = ''
+		+'			<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">'
+		+'				<g fill="none" fill-rule="evenodd">'
+		+'					<path d="M0 0h8v8H0z"/>'
+		+'					<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z" fill="'+ valRgb +'"/>'
+		+'				</g>'
+		+'			</svg>';
+
+		for (var i = 0; i < valLevel; i++){
+			totalScore += score;
+		}
+		var html = ''
+		+'	<div class="badge_inner">'
+		+'		<span class="badge_logo">'
+		+'			<img src="../../assets/img/img_badge_logo_01.png" alt="" />'
+		+'		</span>'
+		+'		<span class="badge_channel">'
+		+'			<img src="../../assets/img/img_badge_chanel_01.svg" alt="" />'
+		+'		</span>'
+		+'		<span class="badge_score">'
+		+			totalScore
+		+'		</span>'
+		+'		<span class="badge_thumb">'
+		+'			<img src="../../assets/img/badges_v2/img_badge_bg_'+ valColor + valIsPlus +'.svg" alt="" />'
+		+'		</span>'
+		+'	</div>';
+		document.write(html);
+	}
+}
+
 /* Ready */
 $(function(){
 	setStatusInit(); // 스크롤 상태 클래스
 	layoutHasClass.init() // 레이아웃 구분 클래스
+	safeArea.init() // Safe Area 공통처리
 	tooltip.init(); // 툴팁 공통
 	isSticky.init(); // Sticky 상태구분
+	hasPlayerFixed.init(); // 플레이어 영역 고정
 });

@@ -42,18 +42,26 @@
                 <div class="content">
                     <h3 class="g_h3">프로젝트 환경</h3>
                     <div class="g_info_grid">
-                        <p class="g_info">웹유형 : 모바일 하이브리드 웹, REACT 환경</p>
-                        <p class="g_info">웹언어 : HTML5, CSS3, ECMA6</p>
-                        <p class="g_info">마크업 : <a href="https://react.semantic-ui.com/" target="_blank" rel="noopener noreferrer" class="link">semantic-ui-react 사용 (바로가기)</a></p>
+                        <p class="g_info">웹유형 : 모바일 하이브리드 웹</p>
+                        <p class="g_info">웹언어 : HTML5, CSS3, jQuery(Demo Script)</p>
+                        <!-- <p class="g_info">마크업 : <a href="https://react.semantic-ui.com/" target="_blank" rel="noopener noreferrer" class="link">semantic-ui-react 사용 (바로가기)</a></p> -->
                         <p class="g_info">호환성 : 모바일 삼성, 크롬, 사파리 호환성 적용</p>
-                        <p class="g_info">디자인 : 360 해상도 기준</p>
+                        <p class="g_info">디자인 : 시안 해상도 360</p>
                     </div>
 
                     <h3 class="g_h3">폴더/파일 구조</h3>
                     <ul class="g_info_grid">
-                        <li class="g_info">/assets/ : 기본파일
+                        <li class="g_info">/_guide/ : 퍼블리싱 가이드
                             <ul class="g_info_list">
-                                <li class="g_info">./fonts/ : 웹폰트</li>
+                                <li class="g_info">./PageList/ : IA 현환판</li>
+                                <li class="g_info">./Prototype/ : 유형별 템플릿</li>
+                                <li class="g_info">./StyleGuide/ : 유형별 컴포넌트</li>
+                            </ul>
+                        </li>
+                        <li class="g_info">/assets/ : 공통 파일
+                            <ul class="g_info_list">
+                                <!-- <li class="g_info">./fonts/ : 웹폰트</li> -->
+                                <li class="g_info">./css/ : Compiled Styles</li>
                                 <li class="g_info">./images/ : 이미지
                                     <ul class="g_info_list">
                                         <li class="g_info">./ : 모든 이미지</li>
@@ -61,45 +69,23 @@
                                         <li class="g_info">./temp/ : 임시 이미지</li>
                                     </ul>
                                 </li>
-                                <li class="g_info">./scss/ : 스타일</li>
+                                <li class="g_info">./scss/ : Develop Styles</li>
                             </ul>
                         </li>
-                        <li class="g_info">/components/ : 전역공통 컴포넌트
+                        <li class="g_info">/html/ : 페이지 (오름차순)
                             <ul class="g_info_list">
-                                <li class="g_info">[...사용자정의 컴포넌트]</li>
-                            </ul>
-                        </li>
-                        <li class="g_info">/guide/ : 퍼블리싱 가이드
-                            <ul class="g_info_list">
-                                <li class="g_info">./PageList/ : IA 현환판</li>
-                                <li class="g_info">./Prototype/ : 유형별 템플릿</li>
-                                <li class="g_info">./StyleGuide/ : 유형별 컴포넌트</li>
-                            </ul>
-                        </li>
-                        <li class="g_info">/layout/ : 사이트 레이아웃
-                            <ul class="g_info_list">
-                                <li class="g_info">./components/ : 레이아웃 공통 컴포넌트</li>
-                                <li class="g_info">./LayoutGuide/ : 가이드 레이아웃</li>
-                                <li class="g_info">./LayoutMain/ : 메인 레이아웃</li>
-                                <li class="g_info">./LayoutSub/ : 서브 레이아웃</li>
-                            </ul>
-                        </li>
-                        <li class="g_info">/semantic-ui/ : 프레임워크 UI
-                            <ul class="g_info_list">
-                                <li class="g_info">[...유형별 컴포넌트 스타일]</li>
-                            </ul>
-                        </li>
-                        <li class="g_info">/view/ : 페이지
-                            <ul class="g_info_list">
-                                <li class="g_info">./Login/ : 로그인</li>
-                                <li class="g_info">./Onboard/ : 온보드</li>
-                                <li class="g_info">./MyHome/ : 마이홈</li>
-                                <li class="g_info">./Category/ : 학습전체</li>
-                                <li class="g_info">./Recom/ : 추천</li>
+                                <li class="g_info">./Category/ : 학습전체(카테고리)</li>
+                                <li class="g_info">./Certification/ : 학습전체(인증)</li>
+                                <li class="g_info">./Common/ : FE 공통</li>
                                 <li class="g_info">./Community/ : 커뮤니티</li>
-                                <li class="g_info">./More/ : 더보기</li>
-                                <li class="g_info">./Search/ : 검색</li>
                                 <li class="g_info">./Learning/ : 학습</li>
+                                <li class="g_info">./Login/ : 로그인</li>
+                                <li class="g_info">./More/ : 더보기</li>
+                                <li class="g_info">./MyHome/ : 마이홈</li>
+                                <li class="g_info">./Onboard/ : 온보드</li>
+                                <li class="g_info">./Recom/ : 추천</li>
+                                <li class="g_info">./Search/ : 검색</li>
+                                <li class="g_info">./Splash/ : 앱 시작화면</li>
                             </ul>
                         </li>
                     </ul>
@@ -116,60 +102,55 @@
                     <p class="g_info">W3C Validator 표준 규칙을 준수한다.</p>
 
                     <h3 class="g_h3">특수기호</h3>
-                    <table class="ui table">
+                    <table class="g_table">
                         <caption>주의 해야할 특수기호</caption>
                         <tbody>
                             <tr>
                                 <td>&middot;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;middot;</td>
                                 <td>&#47;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#47;</td>
                                 <td>&quot;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;quot;</td>
-                                <td>&amp;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;amp;</td>
                             </tr>
                             <tr>
+                                <td>&amp;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;amp;</td>
                                 <td>&lt;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;lt;</td>
                                 <td>&gt;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;gt;</td>
-                                <td>&#40;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#40;</td>
-                                <td>&#41;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#41;</td>
-                            </tr>
-                            <tr>
-                                <td>&#91;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#91;</td>
-                                <td>&#93;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#93;</td>
-                                <td>&#123;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#123;</td>
-                                <td>&#125;&nbsp;&nbsp;:&nbsp;&nbsp;&amp;#125;</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
-                    <p>HTML Validator 및 React Code를 고려한 최소 항목임.</p>
-                    <p>특수문자 참조 URL <a href="http://kor.pe.kr/util/4/charmap2.htm" class="g_link" target="_blank" rel="noopener noreferrer">새창 바로가기</a> </p>
+                    <p class="g_info">HTML Validator 및 React Code를 고려한 최소 항목임.</p>
+                    <p class="g_info">특수문자 참조 URL <a href="http://kor.pe.kr/util/4/charmap2.htm" class="g_link" target="_blank" rel="noopener noreferrer">새창 바로가기</a> </p>
 
                     <h3 class="g_h3">마크업/컴포넌트</h3>
                     <h4 class="g_h4">Heading</h4>
                     <ul>
-                        <li class="g_info">h1 : 헤더 제목</li>
-                        <li class="g_info">h2 : 본문 섹션단위 상위 제목</li>
-                        <li class="g_info">h3 ~ h5 : 작업자의 판단으로 사용함.</li>
-                        <li class="g_info">본문에서 h2로 시작하여 스크롤시 헤더에 적용되는 케이스를 주의한다.</li>
+                        <li class="g_info">h1 : 페이지 헤더 제목</li>
+                        <li class="g_info">h2 : 페이지 본문 상위 제목</li>
+                        <li class="g_info">h3 : 모달 헤더 제목</li>
+                        <li class="g_info">h4 : 모달 본문 상위 제목</li>
+                        <li class="g_info">하위 목차는 작업자의 판단으로 사용한다.</li>
+                        <li class="g_info">본문에서 스크롤시 헤더에 노출되는 케이스는 h1 사용한다.</li>
                     </ul>
                     <h4 class="g_h4">Section</h4>
                     <ul>
-                        <li class="g_info">&lt;section&gt; 태그는 반드시 Heading이 포함되어야 한다.</li>
+                        <li class="g_info">&lt;section&gt; 사용시 반드시 Heading이 포함되어야 한다.</li>
                     </ul>
                     <h4 class="g_h4">button</h4>
                     <ul>
-                        <li class="g_info">type="button"(기본) / type="submit" 선택적으로 반드시 적용한다.</li>
+                        <li class="g_info">type="button | submit" 선택적으로 반드시 적용한다.</li>
                     </ul>
                     <h4 class="g_h4">Icon button</h4>
                     <ul>
-                        <li class="g_info">Icon대신 button::before, button::after에 적용</li>
+                        <li class="g_info">Icon대신 button::before 에 적용한다.</li>
                         <li class="g_info">고정 사이즈 또는 패딩을 통해 터치영역을 확보한다.</li>
                     </ul>
                     <h4 class="g_h4">Icon Only</h4>
                     <ul>
-                        <li class="g_info">버튼이 아닌 경우에 Icon 사용함</li>
+                        <li class="g_info">버튼이 아닌 경우에 Icon 사용한다.</li>
                     </ul>
                     <h4 class="g_h4">Icon Text</h4>
                     <ul>
-                        <li class="g_info">Icon대신 button::before, button::after에 적용</li>
+                        <li class="g_info">label 가이드를 사용하며 ::before 에 적용한다.</li>
                     </ul>
                     <h4 class="g_h4">Segment</h4>
                     <ul>
@@ -309,19 +290,18 @@
                     <h3 class="g_h3">예약어</h3>
                     <h4 class="g_h4">Layout</h4>
                     <ul>
-                        <li class="g_info">[예약어]_wrapper [카테고리명]_wrapper
+                        <li class="g_info">[예약어]_wrapper
                             <ul class="g_info_list">
                                 <li class="g_info">main_wrapper</li>
+                                <li class="g_info">submain_wrapper</li>
                                 <li class="g_info">sub_wrapper</li>
-                                <li class="g_info">sub_wrapper myhome_wrapper</li>
-                                <li class="g_info">sub_wrapper category_wrapper</li>
                             </ul>
                         </li>
                         <li class="g_info">header</li>
-                        <li class="g_info">container [페이지명]_container
+                        <li class="g_info">container [카테고리명]_container
                             <ul class="g_info_list">
                                 <!-- <li class="g_info">content_head (필요여부에 따라 사용)</li> -->
-                                <li class="g_info">content_body (다수의 컨텐츠섹션을 포함)</li>
+                                <li class="g_info">content_body [페이지명]_page</li>
                                 <!-- <li class="g_info">content_foot (필요여부에 따라 사용)</li> -->
                             </ul>
                         </li>
@@ -330,10 +310,9 @@
                     <h4 class="g_h4">Division</h4>
                     <ul>
                         <li class="g_info">전체영역: _wrapper, _wrap (예: myhome_wrapper)</li>
-                        <li class="g_info">본문영역: _container (예: profile_container)</li>
                         <li class="g_info">섹션영역: _sec (예: main_event_sec)</li>
                         <li class="g_info">지역영역: _area (예: btn_area)</li>
-                        <li class="g_info">반복영역: _list, _group (예: ul.card_list, div.btn_group)</li>
+                        <li class="g_info">반복영역: _list, _slide (예: .card_list, .card_slide)</li>
                     </ul>
                 </div>
             </div>

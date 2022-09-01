@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.header');
+				var appbarShow  = $('.main_head_bg').height();
+				var scrollTop = $(window).scrollTop();
+
+				// Appbar 보여줄 시점에 Active
+				if (scrollTop > appbarShow) {
+					$appbar.removeClass('theme_secondary');
+				} else {
+					$appbar.addClass('theme_secondary');
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="main_wrapper">
+	<!-- Header -->
+	<header class="header theme_secondary">
+		<div class="appbar profile">
+			<a href="javascript:void(0)" class="avata_area">
+				<span class="avata"><img src="../../assets/img/icons_80_ic_default_profile.png" alt="Profile Avata"></span>
+				<h1><strong>신사임당</strong><span class="blind"> 마이 홈</span></h1>
+			</a>
+			<div class="appbar_right">
+				<button type="button" class="btn ico alim is_active"><span class="blind">알림</span></button>
+				<button type="button" class="btn ico srch"><span class="blind">검색</span></button>
+			</div>
+		</div>
+	</header>
+	<!-- // Header -->
+
+	<!-- Container -->
+	<main role="main" class="container myhome_container">
+		<!-- 22-06-24 정확한 계산을 위한 요소처리 -->
+		<div class="main_head_bg"></div>
+		<div class="content_body myhome_main_page">
+			<div class="myhome_wrap">
+				<!-- 학습과정 -->
+				<div class="list_sec learnings">
+					<div class="sec_head">
+						<h2 class="blind"><strong>학습과정</strong></h2>
+						<button class="btn view_all">전체 학습 이력 보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Skeleton Component -->
+						<div class="sklt_list type_learning">
+							<div class="sklt_list_inner">
+								<div class="sklt_slide">
+									<!-- card_learning sk -->
+									<div class="card_learning">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<span class="sklt_full"></span>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_learning sk -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_learning sk -->
+									<div class="card_learning">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<span class="sklt_full"></span>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_learning sk -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_learning sk -->
+									<div class="card_learning">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<span class="sklt_full"></span>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_learning sk -->
+								</div>
+							</div>
+						</div>
+						<!-- //Skeleton Component -->
+					</div>
+				</div>
+				<!-- //학습과정 -->
+
+				<!-- 찜한과정 -->
+				<div class="list_sec cards">
+					<div class="sec_head">
+						<h2 class="tit"><strong>찜한과정</strong></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Skeleton Component -->
+						<div class="sklt_list type_card">
+							<div class="sklt_list_inner">
+								<div class="sklt_slide">
+									<!-- card_cube -->
+									<div class="card_cube">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<div class="sklt_full"></div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_cube -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_cube -->
+									<div class="card_cube">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<div class="sklt_full"></div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_cube -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_cube -->
+									<div class="card_cube">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<div class="sklt_full"></div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_cube -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_cube -->
+									<div class="card_cube">
+										<div class="card_inner">
+											<div class="card_thumb">
+												<div class="sklt_full"></div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+												<span class="sklt_line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- // card_cube -->
+								</div>
+							</div>
+						</div>
+						<!-- //Skeleton Component -->
+					</div>
+				</div>
+				<!-- // 찜한과정 -->
+
+				<!-- 도전중뱃지 -->
+				<div class="list_sec badges">
+					<div class="sec_head">
+						<h2 class="tit"><strong>도전 중 뱃지</strong><em class="count"></em></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<div class="card_badge_group_list in_sec">
+							<div class="card_badge_group">
+								<div class="card_item">
+									<div class="card_thumb">
+										<span class="sklt_round"></span>
+									</div>
+									<div class="card_body">
+										<span class="sklt_line"></span>
+										<span class="sklt_line"></span>
+										<span class="sklt_line skinny"></span>
+									</div>
+								</div>
+								<div class="card_item">
+									<div class="card_thumb">
+										<span class="sklt_round"></span>
+									</div>
+									<div class="card_body">
+										<span class="sklt_line"></span>
+										<span class="sklt_line"></span>
+										<span class="sklt_line skinny"></span>
+									</div>
+								</div>
+								<div class="card_item">
+									<div class="card_thumb">
+										<span class="sklt_round"></span>
+									</div>
+									<div class="card_body">
+										<span class="sklt_line"></span>
+										<span class="sklt_line"></span>
+										<span class="sklt_line skinny"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //도전중뱃지 -->
+
+				<!-- 플레이리스트 -->
+				<div class="list_sec playlists">
+					<div class="sec_head">
+						<h2 class="tit"><strong>플레이리스트</strong><em class="count"></em></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Skeleton Component -->
+						<div class="sklt_list type_pl">
+							<div class="sklt_list_inner">
+								<div class="sklt_slide">
+									<!-- playlist -->
+									<div class="card_playlist_main">
+										<div class="card_inner">
+											<div class="thumb sklt_full">
+												<div class="avata_name">
+													<span class="avata sklt_round"></span>
+													<span class="name">
+														<span class="sklt_line skinny"></span>
+													</span>
+												</div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line line"></span>
+												<span class="sklt_line line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- //playlist -->
+								</div>
+								<div class="sklt_slide">
+									<!-- playlist -->
+									<div class="card_playlist_main">
+										<div class="card_inner">
+											<div class="thumb sklt_full">
+												<div class="avata_name">
+													<span class="avata sklt_round"></span>
+													<span class="name">
+														<span class="sklt_line skinny"></span>
+													</span>
+												</div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line line"></span>
+												<span class="sklt_line line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- //playlist -->
+								</div>
+								<div class="sklt_slide">
+									<!-- playlist -->
+									<div class="card_playlist_main">
+										<div class="card_inner">
+											<div class="thumb sklt_full">
+												<div class="avata_name">
+													<span class="avata sklt_round"></span>
+													<span class="name">
+														<span class="sklt_line skinny"></span>
+													</span>
+												</div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line line"></span>
+												<span class="sklt_line line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- //playlist -->
+								</div>
+								<div class="sklt_slide">
+									<!-- playlist -->
+									<div class="card_playlist_main">
+										<div class="card_inner">
+											<div class="thumb sklt_full">
+												<div class="avata_name">
+													<span class="avata sklt_round"></span>
+													<span class="name">
+														<span class="sklt_line skinny"></span>
+													</span>
+												</div>
+											</div>
+											<div class="card_body">
+												<span class="sklt_line skinny"></span>
+												<span class="sklt_line line"></span>
+												<span class="sklt_line line"></span>
+											</div>
+										</div>
+									</div>
+									<!-- //playlist -->
+								</div>
+							</div>
+						</div>
+						<!-- //Skeleton Component -->
+					</div>
+				</div>
+				<!-- // 인기플레이리스트 -->
+
+				<!-- 나의 데이터 -->
+				<div class="list_sec mydata">
+					<div class="sec_head">
+						<h2 class="tit"><strong>나의 데이터</strong></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<div class="myData_status">
+							<div class="status_list">
+								<div class="item">
+									<div class="label">
+										<span class="sklt_round"></span>
+										<span class="sklt_line"></span>
+									</div>
+									<div class="value">
+										<span class="sklt_line"></span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="label">
+										<span class="sklt_round"></span>
+										<span class="sklt_line"></span>
+									</div>
+									<div class="value">
+										<span class="sklt_line"></span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="label">
+										<span class="sklt_round"></span>
+										<span class="sklt_line"></span>
+									</div>
+									<div class="value">
+										<span class="sklt_line"></span>
+									</div>
+								</div>
+							</div>
+							<div class="status_note">
+								<div class="item">
+									<span class="sklt_line skinny"></span>
+									<span class="sklt_line skinny"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 나의 데이터 -->
+
+				<!-- 나의 커뮤니티 피드 -->
+				<div class="list_sec feeds">
+					<div class="sec_head">
+						<h2 class="tit"><strong>나의 커뮤니티 피드</strong></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Skeleton Component -->
+						<div class="sklt_list type_feed">
+							<div class="sklt_list_inner">
+								<div class="sklt_slide">
+									<!-- card_feed -->
+									<div class="card_myfeed">
+										<div class="card_inner">
+											<div class="card_body">
+												<div class="labels">
+													<span class="sklt_line skinny"></span>
+												</div>
+												<p class="title">
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+												</p>
+											</div>
+											<div class="card_foot">
+												<div class="user_area">
+													<span class="avata sklt_round"></span>
+													<span class="sklt_line skinny"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //card_feed -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_feed -->
+									<div class="card_myfeed">
+										<div class="card_inner">
+											<div class="card_body">
+												<div class="labels">
+													<span class="sklt_line skinny"></span>
+												</div>
+												<p class="title">
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+												</p>
+											</div>
+											<div class="card_foot">
+												<div class="user_area">
+													<span class="avata sklt_round"></span>
+													<span class="sklt_line skinny"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //card_feed -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_feed -->
+									<div class="card_myfeed">
+										<div class="card_inner">
+											<div class="card_body">
+												<div class="labels">
+													<span class="sklt_line skinny"></span>
+												</div>
+												<p class="title">
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+												</p>
+											</div>
+											<div class="card_foot">
+												<div class="user_area">
+													<span class="avata sklt_round"></span>
+													<span class="sklt_line skinny"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //card_feed -->
+								</div>
+								<div class="sklt_slide">
+									<!-- card_feed -->
+									<div class="card_myfeed">
+										<div class="card_inner">
+											<div class="card_body">
+												<div class="labels">
+													<span class="sklt_line skinny"></span>
+												</div>
+												<p class="title">
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+													<span class="sklt_line"></span>
+												</p>
+											</div>
+											<div class="card_foot">
+												<div class="user_area">
+													<span class="avata sklt_round"></span>
+													<span class="sklt_line skinny"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //card_feed -->
+								</div>
+							</div>
+						</div>
+						<!-- //Skeleton Component -->
+					</div>
+				</div>
+				<!-- // 나의 커뮤니티 피드 -->
+			</div>
+		</div>
+	</main>
+	<!-- // Container -->
+
+	<!-- Footer -->
+	<footer class="footer">
+		<nav class="appnav">
+			<a href="/Mobile/Category/" class="item item_category">전체과정</a>
+			<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+			<a href="/Mobile/Myhome/" class="item item_myhome is_active"><span>마이홈</span></a>
+			<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+			<a href="/Mobile/More/" class="item item_more">더보기</a>
+		</nav>
+	</footer>
+	<!-- // Footer -->
+</div>
+</body>
+</html>

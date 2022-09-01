@@ -127,6 +127,7 @@
                 <h3 class="g_h3">Modal Alert/Confirm</h2>
                 <div class="g_preview">
                     <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalAlert')">Alert</button>
+                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalAlertCheck')">Alert Check</button>
                     <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalConfirm')">Confirm</button>
                 </div>
                 <h3 class="g_h3">Modal Bottomsheet</h3>
@@ -164,6 +165,30 @@
             </div>
             <div class="modal_footer">
                 <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalAlert')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Alert -->
+
+    <!-- Modal Alert Check -->
+    <div class="modal_wrap" id="ModalAlertCheck">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">삭제</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">삭제하시겠습니까?<br />여러줄이 들어갑니다.</p>
+            </div>
+            <div class="checkbox_alert">
+                <div class="checkbox basic">
+                    <input type="checkbox" name="learningCheck" id="learningCheck1" tabindex="0"
+                        class="hidden" />
+                    <label for="learningCheck1"><span>I don’t want to see this anymore.</span></label>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalAlertCheck')">확인</button>
             </div>
         </div>
         <div class="dimmer" aria-hidden="true"></div>
@@ -279,7 +304,9 @@
 				<!-- 학습시간 -->
 				<div class="filter_sec has_line">
 					<h4 class="heading2">학습시간</h4>
-                    <p class="filter_range_value">전체</p>
+                    <div class="filter_range_value">
+						<button type="button" class="btn text primary">전체</button>
+					</div>
 					<div class="filter_body">
 						<div class="multi_range">
 							<!-- 진짜 슬라이더 -->

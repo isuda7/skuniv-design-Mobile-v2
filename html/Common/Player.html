@@ -39,12 +39,31 @@
                         </div>
                         <!-- // quiz화면 영역 -->
 
+                        <!-- Quiz일때 전체화면 버튼 가리기: is_visible 클래스 토글 -->
+                        <button type="button" class="btn player_quiz_overey is_visible" onclick="alert('테스트버튼')"><span class="blind">퀴즈 전체화면 사용안함</span></button>
+                        <!-- // Quiz일때 전체화면 버튼 가리기 -->
+
+
                         <!-- DBClick Constrols -->
                         <!-- 22-06-07 더블클릭 사용안함
                         <div class="player_db_controls">
                             <button type="button" class="btn dubble_backward"><span>10초</span></button>
                             <button type="button" class="btn dubble_forward"><span>10초</span></button>
                         </div> -->
+
+                        <!-- 학습이어하기 -->
+                        <div class="player_continue">
+                            <div class="inner">
+                                <button type="button" class="btn continue_tit">
+                                    <i class="ico play"></i>
+                                    <span class="tit">다음 학습 이어하기</span>
+                                </button>
+                                <button type="button" class="btn ico continue_close">
+                                    <span class="blind">닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- //학습이어하기 -->
 
                         <!-- Overwrap Controls -->
                         <div class="player_overwrap">
@@ -95,8 +114,8 @@
                             $(window).on('resize', function(e){
                                 var orientation = window.orientation;
                                 if(orientation != undefined){
-                                    (orientation !== 0 && $('.cube_player').hasClass('is_visible')) && $('.appbar').removeClass('is_hide');
-                                    (orientation !== 0 && !$('.cube_player').hasClass('is_visible')) && $('.appbar').addClass('is_hide');
+                                    (orientation !== 0 && $('.cube_player').hasClass('is_visible')) && $('.appbar').addClass('is_visible');
+                                    (orientation !== 0 && !$('.cube_player').hasClass('is_visible')) && $('.appbar').removeClass('is_visible');
                                 }
                                 if ($('.sticky').length) {
                                     setSticky();
@@ -107,9 +126,9 @@
                         // Stciky 있을 시
                         function setSticky(){
                             // 스티키 레이아웃 설정
-                            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-                            $('.container').css({'padding-top': breakStickyPos+'rem'});
-                            $('.sticky').css({'top': breakStickyPos+'rem'});
+                            // var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+                            // $('.container').css({'padding-top': breakStickyPos+'rem'});
+                            // $('.sticky').css({'top': breakStickyPos+'rem'});
                         }
 
                         // Range
@@ -145,8 +164,8 @@
 
                                 var orientation = window.orientation;
                                 if (orientation != undefined){
-                                    (orientation !== 0 && $(obj).hasClass('is_active')) && $('.appbar').removeClass('is_hide');
-                                    (orientation !== 0 && !$(obj).hasClass('is_active')) && $('.appbar').addClass('is_hide');
+                                    (orientation !== 0 && $(obj).hasClass('is_active')) && $('.appbar').addClass('is_visible');
+                                    (orientation !== 0 && !$(obj).hasClass('is_active')) && $('.appbar').removeClass('is_visible');
                                 }
                             }
 						}

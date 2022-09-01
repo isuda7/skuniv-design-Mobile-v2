@@ -59,12 +59,12 @@
 					}
 				}
 			}
+			// var swiperBanners = new Swiper(".swiper_banners .swiper-container", swierParam);
 			var swiperCards = new Swiper(".swiper_cards .swiper-container", swierParam);
 			var swiperPlaylists = new Swiper(".swiper_playlists .swiper-container", swierParam);
 			var swiperFeeds = new Swiper(".swiper_feeds .swiper-container", swierParam);
-		})
+		});
 	</script>
-
 </head>
 <body>
 <div class="main_wrapper">
@@ -93,7 +93,7 @@
 				<div class="list_sec learnings">
 					<div class="sec_head">
 						<h2 class="blind"><strong>학습과정</strong></h2>
-						<button class="btn view_all">전체 이력보기</button>
+						<button class="btn view_all">전체 학습 이력 보기</button>
 					</div>
 					<div class="sec_body">
 						<!-- Custom Swiper Area -->
@@ -109,10 +109,12 @@
 													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
 												</a>
 												<div class="card_body">
-													<p class="sub_txt">카테고리명</p>
-													<p class="title">
-														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
-													</p>
+													<div class="title_area">
+														<p class="sub_txt">카테고리명</p>
+														<p class="title">
+															<strong>큐브제목이 들어갑니다.</strong>
+														</p>
+													</div>
 													<div class="btn_area">
 														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
 														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
@@ -135,10 +137,12 @@
 													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
 												</a>
 												<div class="card_body">
-													<p class="sub_txt">카테고리명</p>
-													<p class="title">
-														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
-													</p>
+													<div class="title_area">
+														<p class="sub_txt">카테고리명</p>
+														<p class="title">
+															<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
+														</p>
+													</div>
 													<div class="btn_area">
 														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
 														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
@@ -160,10 +164,12 @@
 													<div class="thumb" style="background-image:url('http://placeimg.com/640/480/nature')"></div>
 												</a>
 												<div class="card_body">
-													<p class="sub_txt">카테고리명</p>
-													<p class="title">
-														<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
-													</p>
+													<div class="title_area">
+														<p class="sub_txt">카테고리명</p>
+														<p class="title">
+															<strong>큐브제목이 들어갑니다. 최대두줄까지들어갑니다. 최대 두줄까지 들어갑니다.</strong>
+														</p>
+													</div>
 													<div class="btn_area">
 														<button type="button" class="btn ico play"><span class="blind">플레이</span></button>
 														<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
@@ -185,6 +191,122 @@
 					</div>
 				</div>
 				<!-- //학습과정 -->
+
+				<!-- Foundation Skill -->
+				<div class="list_sec cards">
+					<div class="sec_head">
+						<h2 class="tit"><strong>Foundation Skill</strong></h2>
+						<button class="btn view_all">전체보기</button>
+					</div>
+					<div class="sec_body">
+						<!-- Custom Swiper Area -->
+						<div class="ui_swiper swiper_cards">
+							<!-- Swiper Component -->
+							<div class="swiper swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- card_cube -->
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜카드명이 세줄로 들어간답니다라디리다라뚜</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<i class="ico learning_status learned"><span class="blind">학습상태(완료)</span></i>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+										<!-- // card_cube -->
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+													<button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>Designing Customer Experience in the AI/DT EraDesigning Customer Experience in the AI/DT Era</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<i class="ico learning_status learning"><span class="blind">학습상태(진행중)</span></i>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 들어가는 3줄짜리</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<i class="ico learning_status"><span class="blind">학습상태(진행전)</span></i>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="card_cube">
+											<div class="card_inner">
+												<div class="card_thumb">
+													<a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-01.png')" alt=""></a>
+													<button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+												</div>
+												<a href="javascript:void(0)" class="card_body">
+													<p class="sub_txt">카테고리명</p>
+													<p class="title"><strong>카드명이 세줄로 들어간답니다</strong></p>
+												</a>
+											</div>
+											<div class="card_foot">
+												<span class="rate_count">4.8</span>
+												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //Swiper Component -->
+						</div>
+						<!-- // Custom Swiper Area -->
+					</div>
+				</div>
+				<!-- // 찜한과정 -->
 
 				<!-- 찜한과정 -->
 				<div class="list_sec cards">
@@ -213,6 +335,7 @@
 											</div>
 											<div class="card_foot">
 												<span class="rate_count">4.8</span>
+												<i class="ico learning_status learned"><span class="blind">학습상태(완료)</span></i>
 												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
 											</div>
 										</div>
@@ -232,6 +355,7 @@
 											</div>
 											<div class="card_foot">
 												<span class="rate_count">4.8</span>
+												<i class="ico learning_status learning"><span class="blind">학습상태(진행중)</span></i>
 												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
 											</div>
 										</div>
@@ -250,6 +374,7 @@
 											</div>
 											<div class="card_foot">
 												<span class="rate_count">4.8</span>
+												<i class="ico learning_status"><span class="blind">학습상태(진행전)</span></i>
 												<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
 											</div>
 										</div>
@@ -311,33 +436,7 @@
 								<div class="card_item">
 									<div class="card_thumb">
 										<div class="badge_box md">
-											<div class="badge_inner">
-												<span class="badge_logo">
-													<img src="../../assets/img/img_badge_logo_01.png" alt="" />
-												</span>
-												<span class="badge_channel">
-													<img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-												</span>
-												<span class="badge_score">
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#395088"/>
-														</g>
-													</svg>
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#395088"/>
-														</g>
-													</svg>
-												</span>
-												<span class="badge_thumb">
-													<img src="../../assets/img/img_badge_bg_01.svg" alt="" />
-												</span>
-											</div>
+											<script>badgeSample.init()</script>
 										</div>
 									</div>
 									<a href="javascript:void(0)" class="card_body">
@@ -349,33 +448,7 @@
 								<div class="card_item">
 									<div class="card_thumb">
 										<div class="badge_box md">
-											<div class="badge_inner">
-												<span class="badge_logo">
-													<img src="../../assets/img/img_badge_logo_01.png" alt="" />
-												</span>
-												<span class="badge_channel">
-													<img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-												</span>
-												<span class="badge_score">
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#fba82d"/>
-														</g>
-													</svg>
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#fba82d"/>
-														</g>
-													</svg>
-												</span>
-												<span class="badge_thumb">
-													<img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-												</span>
-											</div>
+											<script>badgeSample.init()</script>
 										</div>
 									</div>
 									<a href="javascript:void(0)" class="card_body">
@@ -387,33 +460,7 @@
 								<div class="card_item">
 									<div class="card_thumb">
 										<div class="badge_box md">
-											<div class="badge_inner">
-												<span class="badge_logo">
-													<img src="../../assets/img/img_badge_logo_01.png" alt="" />
-												</span>
-												<span class="badge_channel">
-													<img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-												</span>
-												<span class="badge_score">
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#56c6c2"/>
-														</g>
-													</svg>
-													<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none" fill-rule="evenodd">
-															<path d="M0 0h8v8H0z"/>
-															<path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-															fill="#56c6c2"/>
-														</g>
-													</svg>
-												</span>
-												<span class="badge_thumb">
-													<img src="../../assets/img/img_badge_bg_05.svg" alt="" />
-												</span>
-											</div>
+											<script>badgeSample.init()</script>
 										</div>
 									</div>
 									<a href="javascript:void(0)" class="card_body">
@@ -464,7 +511,7 @@
 												<span class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt="">
 													<div class="avata_name">
 														<span class="avata"><img src="../../assets/img/icons_80_ic_default_profile.png" alt="Profile Avata"></span>
-														<strong class="name">Timothee Hal Chalamet</strong>
+														<strong class="name">Timothee Hal</strong>
 													</div>
 												</span>
 												<div class="card_body">
@@ -551,6 +598,15 @@
 									</div>
 									<div class="value">
 										<em class="txt">3</em>
+									</div>
+								</a>
+								<a href="javascript:void(0)" class="item skill">
+									<div class="label">
+										<i class="ico"></i>
+										<strong class="txt">Foundation Skill</strong>
+									</div>
+									<div class="value">
+										<em class="txt">4</em>
 									</div>
 								</a>
 							</div>
@@ -708,6 +764,10 @@
 		</div>
 	</main>
 	<!-- // Container -->
+
+	<button type="button" class="btn ico top" onClick="window.scrollTo(0,0)">
+		<span class="blind">Scroll to top</span>
+	</button>
 
 	<!-- Footer -->
 	<footer class="footer">

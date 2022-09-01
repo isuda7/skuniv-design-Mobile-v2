@@ -10,7 +10,7 @@
     height:100vh;
     .splash_logo {
         width:14.4rem;
-        height:4.4rem;
+        height:auto;
     }
     .splash_loading {
         position:absolute;
@@ -35,11 +35,12 @@
 ///////////////////////////////////////////////////
 // Login Components
 ///////////////////////////////////////////////////
-// 다국어
-.login_langeage {
+// s: 다국어
+.login_language {
     position: absolute;
     top:calc(1.8rem + var(--safeTop));
     right:2rem;
+    z-index: 2;
     .btn.language {
         height:24px;
         padding:0;
@@ -67,12 +68,14 @@
         }
     }
 }
+// e: 다국어
 
 // 폼제목
 .login_tit {
     margin-bottom:1.6rem;
 }
-// 로그인폼
+
+// s: 로그인폼
 .login_form {
     input.basic {
         height:4.8rem;
@@ -106,7 +109,9 @@
         }
     }
 }
-// 비밀번호 초기화폼
+// e: 로그인폼
+
+// s: 비밀번호 초기화폼
 .pwclear_form {
     & + .pwclear_form {
         margin-top:4rem;
@@ -131,7 +136,9 @@
         }
     }
 }
-// 비밀번호 재설정폼
+// e: 비밀번호 초기화폼
+
+// s: 비밀번호 재설정폼
 .pwreset_form {
     .form_row + .form_row {
         margin-top:2rem;
@@ -159,6 +166,9 @@
         }
     }
 }
+// e: 비밀번호 재설정폼
+
+// s: 도움말
 .help_floating {
     position: absolute;
     left:0;
@@ -167,13 +177,34 @@
     text-align: center;
     display:flex;
     justify-content: center;
+    .tooltip_body {
+        width:26rem !important;
+    }
 }
+@media screen and (max-height:580px) {
+    .help_floating {
+        position: static;
+    }
+}
+// e: 도움말
 
 ///////////////////////////////////////////////////
 // Login Page
 ///////////////////////////////////////////////////
 .login_container {
+    &::before {
+        content:'';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: var(--safeTop);
+        background-color: #fff;
+    }
     .content_body {
+        position: relative;
         padding-top:11.8rem;
         .login_header {
             margin-bottom:5rem;

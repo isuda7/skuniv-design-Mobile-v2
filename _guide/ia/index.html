@@ -93,7 +93,9 @@
 					<a href="./guide.html" class="ui button">Guide</a>
 				</nav>
 				<nav class="g_menu">
+					<a href="#IndexLatest" class="btn basic primary">배포예정</a>
 					<a href="#IndexCommon">공통</a>
+					<a href="#IndexAppdownload">앱설치</a>
 					<a href="#IndexLogin">로그인</a>
 					<a href="#IndexOnboard">온보딩</a>
 					<a href="#IndexMyHome">MyHome</a>
@@ -103,6 +105,7 @@
 					<a href="#IndexMore">더보기</a>
 					<a href="#IndexSearch">알림/검색</a>
 					<a href="#IndexLearning">학습과정</a>
+					<a href="#IndexEvent">이벤트</a>
 				</nav>
 			</div>
 
@@ -123,13 +126,31 @@
 						<th style="text-align:center">경로</th>
 						<th style="text-align:center">작업자</th>
 						<th style="text-align:center">수정일</th>
-						<th style="text-align:center">상세내용</th>
+						<th style="text-align:center">배포일정: 상세내용</th>
 					</tr>
 				</thead>
-				<!-- 로그인 -->
+				<!-- Latest -->
+				<tbody id="IndexLatest">
+					<script>
+						$("#IndexLatest").load("pages/00_IndexLatest.html", function () {
+							linkReplace()
+						});
+					</script>
+				</tbody>
+
+				<!-- Common -->
 				<tbody id="IndexCommon">
 					<script>
 						$("#IndexCommon").load("pages/00_IndexCommon.html", function () {
+							linkReplace()
+						});
+					</script>
+				</tbody>
+
+				<!-- Appdownload -->
+				<tbody id="IndexAppdownload">
+					<script>
+						$("#IndexAppdownload").load("pages/10_IndexAppDownload.html", function () {
 							linkReplace()
 						});
 					</script>
@@ -211,6 +232,15 @@
 				<tbody id="IndexLearning">
 					<script>
 						$("#IndexLearning").load("pages/09_IndexLearning.html", function () {
+							linkReplace()
+						});
+					</script>
+				</tbody>
+
+				<!-- 이벤트 -->
+				<tbody id="IndexEvent">
+					<script>
+						$("#IndexEvent").load("pages/11_IndexEvent.html", function () {
 							linkReplace()
 						});
 					</script>

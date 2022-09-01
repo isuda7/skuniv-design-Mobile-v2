@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <!-- Guide IA -->
+    <link href="../assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+
+        <section class="g_sec">
+            <h2 class="g_h2">Loader</h2>
+            <h3 class="g_h3">Default</h3>
+            <div class="g_preview">
+                <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩중" />
+            </div>
+            <h3 class="g_h3">Search</h3>
+            <div class="g_preview">
+                <div class="g_desc">
+                    <p>자동으로 늘어난다.</p>
+                    <p>예시: <a href="../../html/Search/SearchLoading.html" class="g_link">검색페이지</a></p>
+                </div>
+                <div style="display:flex; flex-direction: column;position:relative; height:200px; background-color:#ddd;">
+                    <div class="loader_search">
+                        <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩중" />
+                    </div>
+                </div>
+            </div>
+            <h3 class="g_h3">Section</h3>
+            <div class="g_preview">
+                <div class="g_desc">
+                    <p>높이값은 해당 컨텐츠에서 지정한다.</p>
+                    <p>예시: <a href="../../html/Myhome/indexLoading.html" class="g_link">마이홈 메인</a></p>
+                </div>
+                <div style="background-color:#ddd;height:200px;">
+                    <div class="loader_section">
+                        <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩중" />
+                    </div>
+                </div>
+            </div>
+            <h3 class="g_h3">Page</h3>
+            <div class="g_preview">
+                <div class="g_desc">
+                    <p>페이지 전체를 덮는다. (body에 is_dimmed 추가)</p>
+                    <p>예시: <a href="../../html/Myhome/indexLoading2.html" class="g_link">마이홈 메인</a></p>
+                </div>
+                <button type="button" class="btn basic" onclick="pageSearch('#loaderPage')">페이지 검색중</button>
+                <!-- 활성화시 is_active is_visible 추가 -->
+                <div class="loader_page" id="loaderPage">
+                    <img src="../../assets/img/icons_32_ic_loading_secondary.svg" alt="로딩중" />
+                </div>
+            </div>
+
+            <h2 class="g_h2">Skeleton</h2>
+            <h3 class="g_h3">Learning</h3>
+            <div class="g_preview out_sec">
+                <!-- Skeleton Component -->
+                <div class="sklt_list type_learning">
+                    <div class="sklt_list_inner">
+                        <div class="sklt_slide">
+                            <!-- card_learning sk -->
+                            <div class="card_learning">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <span class="sklt_full"></span>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_learning sk -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- card_learning sk -->
+                            <div class="card_learning">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <span class="sklt_full"></span>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_learning sk -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- card_learning sk -->
+                            <div class="card_learning">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <span class="sklt_full"></span>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_learning sk -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //Skeleton Component -->
+            </div>
+
+            <h3 class="g_h3">Card</h3>
+            <div class="g_preview out_sec">
+                <!-- Skeleton Component -->
+                <div class="sklt_list type_card">
+                    <div class="sklt_list_inner">
+                        <div class="sklt_slide">
+                            <!-- card_cube -->
+                            <div class="card_cube">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <div class="sklt_full"></div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_cube -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- card_cube -->
+                            <div class="card_cube">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <div class="sklt_full"></div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_cube -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- card_cube -->
+                            <div class="card_cube">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <div class="sklt_full"></div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_cube -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- card_cube -->
+                            <div class="card_cube">
+                                <div class="card_inner">
+                                    <div class="card_thumb">
+                                        <div class="sklt_full"></div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                        <span class="sklt_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // card_cube -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //Skeleton Component -->
+            </div>
+
+            <h3 class="g_h3">Playlist</h3>
+            <div class="g_preview out_sec">
+                <!-- Skeleton Component -->
+                <div class="sklt_list type_pl">
+                    <div class="sklt_list_inner">
+                        <div class="sklt_slide">
+                            <!-- playlist -->
+                            <div class="card_playlist_main">
+                                <div class="card_inner">
+                                    <div class="thumb sklt_full">
+                                        <div class="avata_name">
+                                            <span class="avata sklt_round"></span>
+                                            <span class="name">
+                                                <span class="sklt_line skinny"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line line"></span>
+                                        <span class="sklt_line line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //playlist -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- playlist -->
+                            <div class="card_playlist_main">
+                                <div class="card_inner">
+                                    <div class="thumb sklt_full">
+                                        <div class="avata_name">
+                                            <span class="avata sklt_round"></span>
+                                            <span class="name">
+                                                <span class="sklt_line skinny"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line line"></span>
+                                        <span class="sklt_line line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //playlist -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- playlist -->
+                            <div class="card_playlist_main">
+                                <div class="card_inner">
+                                    <div class="thumb sklt_full">
+                                        <div class="avata_name">
+                                            <span class="avata sklt_round"></span>
+                                            <span class="name">
+                                                <span class="sklt_line skinny"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line line"></span>
+                                        <span class="sklt_line line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //playlist -->
+                        </div>
+                        <div class="sklt_slide">
+                            <!-- playlist -->
+                            <div class="card_playlist_main">
+                                <div class="card_inner">
+                                    <div class="thumb sklt_full">
+                                        <div class="avata_name">
+                                            <span class="avata sklt_round"></span>
+                                            <span class="name">
+                                                <span class="sklt_line skinny"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card_body">
+                                        <span class="sklt_line skinny"></span>
+                                        <span class="sklt_line line"></span>
+                                        <span class="sklt_line line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //playlist -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //Skeleton Component -->
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+
+</html>

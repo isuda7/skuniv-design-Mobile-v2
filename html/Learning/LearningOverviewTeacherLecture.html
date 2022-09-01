@@ -12,16 +12,23 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
-        function learningThumb(){
-            // 타이틀 라인수만큼 스타일 구분하기
-            var TitleEl = document.querySelector(".overay_area .title");
-            var TitleHeight = parseInt(getComputedStyle(TitleEl).height);
-            var TitleLineHeight = parseInt(getComputedStyle(TitleEl).lineHeight);
-            var Remain = TitleHeight / TitleLineHeight;
-            TitleEl.classList.add("line"+Remain);
-        }
-    </script>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		})
+	</script>
 </head>
 <body>
 <div class="sub_wrapper">
@@ -30,7 +37,7 @@
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">강사 Introduce</strong></h1>
+                <h1 class="transition"><strong>Jonathan Fernandes</strong></h1>
             </div>
         </div>
     </header>
@@ -45,7 +52,7 @@
                         <span class="avata"><img src="../../assets/img/icons_80_ic_default_profile.png" alt="Profile Avata"></span>
                     </div>
                     <div class="teacher_body">
-                        <div class="title">Jonathan Fernandes<span class="label style1 blind">대표</span></div>
+                        <div class="title appbar_title">Jonathan Fernandes<span class="label style1 blind">대표</span></div>
                         <div class="sub_txt">소프트웨어 개발 기업사외강사</div>
                     </div>
                 </div>
@@ -70,74 +77,104 @@
                     </div>
                 </div>
                 <!-- 강의 -->
-                <div class="g_preview out_sec">
-					<div class="board_cube_cube">
-						<div class="board_cube type1">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-                                    <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
-									<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">AI</p>
-									<p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지들어가요.</strong></p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<span class="rate_count">4.8</span>
-								<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-							</div>
-						</div>
-                        <div class="board_cube type1">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-                                    <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-									<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">Leadership</p>
-									<p class="title"><strong>Digital Transformation의 중심: Digital Platform</strong></p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<span class="rate_count">4.8</span>
-								<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-							</div>
-						</div>
-                        <div class="board_cube type1">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-                                    <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
-									<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">BM Design & Storytelling</p>
-									<p class="title"><strong>Customer Measure & Analytics기본</strong></p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<span class="rate_count">4.8</span>
-								<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-							</div>
-						</div>
-                        <div class="board_cube type1">
-							<a href="javascript:void(0)" class="item_body">
-								<div class="item_thumb">
-                                    <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
-									<span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
-								</div>
-								<div class="item_title">
-									<p class="sub_txt">미래반도체</p>
-									<p class="title"><strong>[AI Biz Insight] 딥러닝을 활용한 Film Defect 자동 완성 유형</strong></p>
-								</div>
-							</a>
-							<div class="item_foot">
-								<span class="rate_count">4.8</span>
-								<button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="board_cube_list out_sec">
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">AI</p>
+                                <p class="title"><strong>[AI Biz Insight] RPA를 활용한 SK텔레콤의 업무 효율화 사례 두 줄 까지들어가요.</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">Leadership</p>
+                                <p class="title"><strong>Digital Transformation의 중심: Digital Platform</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">BM Design & Storytelling</p>
+                                <p class="title"><strong>Customer Measure & Analytics기본</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">미래반도체</p>
+                                <p class="title"><strong>[AI Biz Insight] 딥러닝을 활용한 Film Defect 자동 완성 유형</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">미래반도체</p>
+                                <p class="title"><strong>[AI Biz Insight] 딥러닝을 활용한 Film Defect 자동 완성 유형</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="board_cube type1">
+                        <a href="javascript:void(0)" class="item_body">
+                            <div class="item_thumb">
+                                <button type="button" class="btn ico ribon"><span class="blind">찜하기</span></button>
+                                <span class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></span>
+                            </div>
+                            <div class="item_title">
+                                <p class="sub_txt">미래반도체</p>
+                                <p class="title"><strong>[AI Biz Insight] 딥러닝을 활용한 Film Defect 자동 완성 유형</strong></p>
+                            </div>
+                        </a>
+                        <div class="item_foot">
+                            <span class="rate_count">4.8</span>
+                            <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                </div>
                 <!-- //강의 -->
             </div>
             <!-- // 강사 상세 탭 -->

@@ -7,11 +7,11 @@
 // Gaps
 $GapSideBase: 2.0rem;
 $GapGridBase: 0.8rem;
+
 // Sizes
 $HeightAppBar: 5.2rem;
 $HeightAppBarHor: 6rem;
 $HeightAppNav: 6.0rem;
-
 $RadiusLarge: 8px;
 $RadiusSmall: 4px;
 
@@ -30,6 +30,7 @@ $ColorSecondaryDark: #329f9c;
 $ColorSecondaryOpacity: rgba(0, 191, 174, 0.2);
 
 // Color Items (Category)
+$ColorCateDefault: #bbb;
 $ColorCateAi: #9f3fc5;
 $ColorCateDt: #613fc6;
 $ColorCateHappinesst: #ff9600;
@@ -42,10 +43,10 @@ $ColorCateSemicond: #4b6bcc;
 $ColorCateGreen: #009abd;
 $ColorCateBM: #bd38a5;
 $ColorCateSkacademy: #ea6957;
+$ColorCateCom: #f47725;
 $ColorCateSkoper: #be2f35;
 $ColorCateLife: #a8c669;
 $ColorCateInno: #4b5690;
-$ColorCateCom: #f47725;
 
 // Color Items (학습방법)
 $ColorCateMysuni: #ff664d;
@@ -122,6 +123,10 @@ $FormBasicDisable: #E3E4E5;
 	font-size:1.4rem;
 	line-height: 2.2rem;
 }
+@mixin FontBody15 {
+	font-size:1.5rem;
+	line-height: 2.3rem;
+}
 @mixin FontBody16 {
 	font-size:1.6rem;
 	line-height: 2.4rem;
@@ -133,12 +138,17 @@ $FormBasicDisable: #E3E4E5;
 }
 @mixin FontTitle13 {
 	font-size:1.3rem;
-	line-height: 1.9rem;
+	line-height: 1.7rem;
 	font-weight: 700;
 }
 @mixin FontTitle14 {
 	font-size:1.4rem;
 	line-height: 1.8rem;
+	font-weight: 700;
+}
+@mixin FontTitle15 {
+	font-size:1.5rem;
+	line-height: 1.9rem;
 	font-weight: 700;
 }
 @mixin FontTitle16 {
@@ -330,7 +340,7 @@ $FormBasicDisable: #E3E4E5;
     z-index: 1000;
     width:100%;
     height:100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     touch-action: none;
 }
 

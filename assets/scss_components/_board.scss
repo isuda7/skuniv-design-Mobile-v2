@@ -3,7 +3,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height:4.8rem;
+	flex-wrap: wrap;
+	min-height:4.8rem;
 	padding-top:0.8rem;
 	.board_count {
 		display: flex;
@@ -22,19 +23,22 @@
 	.board_util {
 		display: flex;
 		align-items: center;
+		margin-right:-1rem;
+		margin-left:auto;
+		.btn.ico,
 		.btn.text {
-			padding:0;
+			padding:0.8rem 1rem !important; // 커뮤니티에 pad_l0 pad_r0 들어가있어서 important 처리
 		}
 		.btn.ico {
 			& + .btn.ico {
-				margin-left:1.6rem;
+				margin-left:-0.4rem;
 			}
 			&::before {
 				width:2rem;
 				height:2rem;
 			}
 			&.filter::before {
-				background-image: url('../img/icons_20_ic_filter_black.svg');
+				background-image: url('../img/icons_20_ic_filter_black.png');
 			}
 			&.remove::before {
 				background-image: url('../img/icons_20_ic_delete_black.svg');
@@ -43,20 +47,17 @@
 				background-image: url('../img/icons_20_ic_playlistgh_black.svg');
 			}
 		}
-		&.has_split {
-			.split {
-				display:block;
-				width:1px;
-				height:1.2rem;
-				background-color:#e3e4e5;
-				margin:0 1rem;
-			}
-			.btn.text {
-				padding:0;
-			}
-			.btn.ico + .btn.ico {
-				margin-left:0;
-			}
+		.checkbox.basic + .split {
+			margin-left: 1rem;
+		}
+		.split {
+			position: relative;
+			display:block;
+			top:1px;
+			width:1px;
+			height:1.2rem;
+			background-color:#e3e4e5;
+			// margin:0 1rem;
 		}
 	}
 	&.gap_reset {
@@ -68,7 +69,7 @@
 
 .board_cube {
 	@include BoardItem;
-	padding: 1.6rem 2rem;
+	padding: 0.8rem 2rem; // 최윤홍RF 요청사항 22-07-27
 	border-bottom: 1px solid #F2F3F5;
 	.item_thumb {
 		width: 10rem;
@@ -80,7 +81,7 @@
 				display:block;
 				width:100%;
 				height:100%;
-				background-color: rgba(0,0,0,0.5);
+				background-color: rgba(0,0,0,0.1);
 			}
 		}
 		.ribon {
@@ -105,6 +106,8 @@
 	}
 	.item_title {
 		.sub_txt {
+			font-size:1.2rem; // 최윤홍RF 요청사항 22-07-27
+			line-height: 2.2rem;
 			&+.title {
 				margin-top: 0.2rem;
 			}
@@ -116,7 +119,7 @@
 		}
 	}
 	.item_foot {
-		margin-top: 1.3rem;
+		margin-top: 0.8rem; // 최윤홍RF 요청사항 22-07-27
 		.left_area,
 		.right_area {
 			display: flex;
@@ -127,8 +130,9 @@
 	// 학습 Type1 (생략)
 	&.type1 {
 		.item_foot {
-			.rate_count {
-				color:#999999;
+			.ico.learning_status {
+				margin-left: 1.2rem;
+				margin-right: auto;
 			}
 		}
 	}
@@ -158,7 +162,6 @@
 				position: absolute;
 				right: 2rem;
 				top: 1.6rem;
-
 			}
 		}
 	}
@@ -259,7 +262,7 @@
 // 커뮤니티
 .board_community {
 	@include BoardItem;
-	padding: 1.6rem 0;
+	padding: 1.6rem 0 1.6rem 0;
 	border-bottom: 1px solid #F2F3F5;
 	&_list {
 		// Case 좌우패딩 초기화
@@ -286,29 +289,42 @@
 		width: 5.2rem;
 		height: 5.2rem;
 		margin-right: 1.2rem;
+		border-radius: 50%;
+		overflow: hidden;
 	}
 	.item_title {
 		width: calc(100% - 6.4rem);
 		flex: none;
 		padding-right: 3.6rem;
 		.sub_txt {
+			@include FontBody12; // 최윤홍RF 요청사항 22-07-27
 			&+.title {
 				margin-top: 0.2rem;
 			}
 		}
 		.title {
-			font-size: 1.6rem;
-			line-height: 2rem;
+			@include FontTitle15; // 최윤홍RF 요청사항 22-07-27
 			font-weight: 700;
 			color: #000;
 			@include Ellipsis2;
+			.ico.new {
+				position: relative;
+				top:-0.1rem;
+			}
 		}
 	}
 	.item_foot {
 		display: block;
-		margin-top: 1.6rem;
+		margin-top: 0.8rem; // 최윤홍RF 요청사항 22-07-27
+		margin-bottom: 0.5rem;
 		@include FontBody14;
 		color: $ColorSubTxt;
+		.desc {
+			@include Ellipsis3;
+			a {
+				display:contents;
+			}
+		}
 		.desc + .info_area {
 			margin-top: 1.2rem;
 		}
@@ -495,7 +511,7 @@
 					color: $ColorPrimary;
 				}
 				&.complete {
-					color:$ColorSubTxt;
+					// color:$ColorSubTxt;  22-05-11 진한회색으로
 				}
 			}
 			.split {
@@ -594,7 +610,9 @@
 		.item_title {
 			margin-bottom: 1.6rem;
 			.sub_txt {
-				color: #000;
+				// 최윤홍RF 요청사항 22-07-27
+				@include FontBody12;
+				color: $ColorSecondary;
 				&+.title {
 					margin-top: 0.4rem;
 				}
@@ -647,7 +665,8 @@
 			word-break: break-all;
 			a {
 				text-decoration: underline;
-				color: #38b1ad;
+				color: #06c; // 최윤홍RF 요청사항 22-07-27
+				display:contents;
 			}
 		}
 		.txt + .item_info {
@@ -683,7 +702,7 @@
 					margin-left:0.8rem;
 					margin-right:2rem;
 					flex:none;
-					color:#a4a6aa;
+					color:#b9b9b9;
 				}
 			}
 			> .right {
@@ -735,7 +754,7 @@
 		width:100%;
 		height:4.8rem;
 		align-items: center;
-		padding:0 1.6rem;
+		padding:0 2.1rem; // 최윤홍RF 요청사항 22-07-27
 		border-top:1px solid #f2f3f5;
 		> .left {
 			display:flex;
@@ -762,6 +781,7 @@
 		}
 		.btn.like {
 			color:$ColorSubTxt;
+			padding-right: 0;
 		}
 		.btn.like::before {
 			content:'';
@@ -803,11 +823,22 @@
 		.item_title {
 			.label.style3 {
 				position: relative;
-				top:-0.2rem;
+				top:-0.1rem;
+				margin-right:0.4rem;
+				vertical-align: middle;
+			}
+			.ico.lock {
+				display:inline-flex;
+				top:-0.1rem;
+				width:1.6rem;
+				height:1.6rem;
+				margin-right:0.4rem;
+				vertical-align: middle;
+				background-image: url('../img/icons_16_ic_lock_black.svg');
 			}
 			.ico.new {
-				margin-left:0.2rem;
-				top:-0.2rem;
+				margin-right:0.4rem;
+				top:-0.1rem;
 			}
 			.sub_txt {
 				color: #a4a6aa;
@@ -815,15 +846,15 @@
 					margin-top: 0.4rem;
 				}
 			}
-			.ico.new,
-			.label.style3 {
+			> .ico,
+			> .label.style3 {
 				& + .title {
-					margin-top:0.6rem;
+					margin-top:0.1rem; // 최윤홍RF 요청사항 22-07-27
 				}
 			}
 			.title {
 				@include Ellipsis2;
-				@include FontBody16;
+				@include FontBody15; // 최윤홍RF 요청사항 22-07-27
 				color: #000;
 			}
 		}
@@ -855,10 +886,10 @@
 			.time {
 				display:flex;
 				align-items: center;
-				margin-left:0.4rem;
+				margin-left:1.0rem; // 최윤홍RF 요청사항 22-07-27
 				margin-right:2rem;
 				flex:none;
-				color:#a4a6aa;
+				color:#b9b9b9; // 최윤홍RF 요청사항 22-07-27
 			}
 		}
 		> .right {

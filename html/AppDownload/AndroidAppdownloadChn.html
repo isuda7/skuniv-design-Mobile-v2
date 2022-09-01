@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+	<script>
+		$(function(){
+			var swiperAppParam = {
+				loop : false,
+				pagination : {
+					el : ".dl_bullets",
+					type : 'bullets',
+					clickable : true
+				}
+
+			}
+			var swiperApp = new Swiper(".swiper_download .swiper-container", swiperAppParam);
+		});
+	</script>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Container -->
+		<main role="main" class="container download_container">
+			<div class="content_body download_page">
+                <div class="login_language">
+                    <button type="button" class="btn language">中文(简体)</button>
+                </div>
+				<div class="download_content">
+					<!-- swiper area -->
+					<div class="swiper_download">
+						<div class="swiper swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="logo_area">
+												<h1><a href="/"><img src="../../assets/img/img_img_m_logo.svg" alt="MY SUNI" /></a></h1>
+											</div>
+											<div class="tit"><strong>应用下载指南</strong></div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_1.png" class="dl_img" alt="써니 앱 업데이트 안내"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													<strong>mySUNI移动应用程序改版啦。</strong><br/>
+													<span>下载最新版本后，<br/>立即体验更加方便的学习方式吧！</span>
+												</p>
+												<p><em>滑动屏幕查看下载指南信息。</em></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 01</span></div>
+											<div class="tit">
+												<p><strong>进入操作系统设置​​</strong></p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_2_chn.png" class="dl_img" alt="OS 설정 들어가기"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													选择下载按钮后， 如果出现安装阻止警告窗口， <br/>请返回<strong>“设置”</strong>。​
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 02</span></div>
+											<div class="tit">
+												<p>在锁定屏幕和安全性上<br/>检查<strong>来自未知来源的应用程序</strong></p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_3_chn.png" class="dl_img" alt="출처를 알수 없는 앱 체크하기"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													转到<strong>设置</strong>中的<strong> “锁定屏幕和安全性”</strong>， 然后选中<strong>“来自未知来源的应用程序”</strong> 进行安装。
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 03</span></div>
+											<div class="tit">
+												<p><strong>下载</strong></p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_4.png" class="dl_img" alt="다운로드하기"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													​如果您已阅读所有说明，<br/>
+													请选择<strong class="primary">“应用程序下载”</strong>。
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination dl_bullets">
+						</div>
+					</div>
+					<!-- //swiper area -->
+				</div>
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic pill2 secondary">应用程序下载</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

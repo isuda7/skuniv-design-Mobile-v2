@@ -29,10 +29,7 @@
         left:50%;
         transform: translateX(-50%);
     }
-    &.center .tooltip_body {
-        left:50%;
-        transform: translateX(-50%);
-    }
+
     // Transition
     .tooltip_body {
         opacity: 0;
@@ -134,10 +131,21 @@
             margin-right:0.4rem;
             background: url('../img/icons_20_ic_information_grey_05.svg') no-repeat center center / 100% auto;
         }
+        &.ico::before {
+            margin-right:0;
+        }
     }
+    .btn.info {
+        &::before{
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url('../img/icons_20_ic_information_grey_05.svg');
+        }
+    }
+
     .tooltip_body {
-        width:26rem;
-        margin:1rem;
+        width:24rem;
+        margin:1rem 0;
         padding:1.6rem;
         border-radius: $RadiusSmall;
         background-color: #44464a;
@@ -145,7 +153,7 @@
         color:#fff;
         text-align: left;
         @include FontBody12;
-        .help_list {
+        ul {
             li {
                 position: relative;
                 padding-left:1rem;
@@ -170,17 +178,48 @@
             content:'';
             display: block;
             position: absolute;
-            background: no-repeat center center / 100% auto;
-        }
-    }
-
-    &.center.top {
-        .tooltip_body::after {
-            top:100%;
-            left:calc(50% - 0.7rem);
             width:0.8rem;
             height:0.8rem;
+            background: no-repeat center center / 100% auto;
             background-image: url('../img/icons_8_ic_balloon_tail.svg');
+        }
+    }
+    &.top {
+        .tooltip_body::after {
+            top:100%;
+        }
+    }
+    &.bottom {
+        .tooltip_body::after {
+            bottom:100%;
+            transform: scaleY(-1);
+        }
+    }
+    &.center {
+        .tooltip_body::after {
+            left:calc(50% - 0.4rem);
+        }
+    }
+    &.left {
+        .tooltip_body {
+            margin-right:-2rem;
+            &::after {
+                right:2.6rem;
+            }
+        }
+        .info.ico + .tooltip_body::after {
+            right:2.4rem;
+        }
+    }
+    &.right {
+        .tooltip_body {
+            margin-left:-2rem;
+            &::after {
+                left:2.6rem;
+            }
+        }
+        .info.ico + .tooltip_body::after {
+            left:2.4rem;
         }
     }
 }
@@ -211,8 +250,56 @@
         background-image: url('../img/icons_24_ic_information_grey_05.svg');
     }
 }
+
 //style bubble tooltip_body
 .tooltip.bubble {
+    &.bottom {
+        .tooltip_body{
+            margin-bottom:0;
+            margin-top : 1rem;
+            &::before{
+                top: -.8rem;
+                left: .1rem;
+                border-bottom: 1.4rem solid #fff;
+                border-left: .7rem solid transparent;
+                border-right: .7rem solid transparent;
+            }
+        }
+    }
+    &.top {
+        .tooltip_body{
+            margin-top : 0;
+            margin-bottom: 1rem;
+            &::before{
+                bottom: -.8rem;
+                right: .1rem;
+                border-top: 1.4rem solid #fff;
+                border-left: .7rem solid transparent;
+                border-right: .7rem solid transparent;
+            }
+        }
+    }
+    &.right {
+        .tooltip_body{
+            right: auto;
+            left: -.5rem;
+            &::before{
+                right:auto;
+                left: .6rem;
+            }
+        }
+    }
+    &.left {
+        .tooltip_body{
+            right: auto;
+            right: -.5rem;
+            &::before{
+                left:auto;
+                right: .6rem;
+            }
+        }
+    }
+
     .tooltip_body{
         padding: $FormBasicPadding;
         border-radius: $FormBasicRadius;
@@ -224,7 +311,8 @@
             background-color: #44464a;
             color: #fff;
             &::before{
-                border-bottom-color: #44464a;
+                border-top-color: #44464a !important;
+                border-bottom-color: #44464a !important;
             }
         }
         &::before{
@@ -232,12 +320,7 @@
             display: block;
             width: 0;
             height: 0;
-            border-bottom: 1.4rem solid #fff;
-            border-left: .7rem solid transparent;
-            border-right: .7rem solid transparent;
             position: absolute;
-            top: -.8rem;
-            left: .1rem;
             border-radius: .1rem;
         }
         li{

@@ -1,0 +1,233 @@
+///////////////////////////////////////////////////
+// Foundation Skill
+///////////////////////////////////////////////////
+
+// Skill 신청하기
+.skill_apply_wrap {
+    .skill_apply_sec {
+        position: relative;
+        img.bg {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .skill_apply_sec:last-child {
+        background: url('../img/skill/img_event_mo_02_bg.png') repeat-y 0 0 / 100% auto;
+    }
+    .skill_apply_sec:last-child::after {
+        content:'';
+        display: block;
+        height: calc((100vw/360)*170);
+        background: url('../img/skill/img_event_mo_02_btm.png') repeat-y 0 0 / 100% auto;
+    }
+    .skill_apply_form {
+        width: 100%;
+        padding:0 calc((100vw/360)*36);
+        .form_items {
+            .item + .item{
+                margin-top: calc((100vw/360)*14);
+            }
+            .checkbox.skill {
+                display: block;
+                min-height: calc((100vw/360)*24);
+                min-width: calc((100vw/360)*24);
+                >label {
+                    position: relative;
+                    display: block;
+                    font-size: calc((100vw/360)*14);
+                    line-height: calc((100vw/360)*22);
+                    &::before {
+                        content:'';
+                        display: block;
+                        width: calc((100vw/360)*24);
+                        height: calc((100vw/360)*24);
+                        background: url('../../assets/img/skill/chk_fs_on.png') no-repeat 0 0 / 100% auto;
+                        background-image: url('../../assets/img/skill/chk_fs_off.png');
+                    }
+                    > span {
+                        display: block;
+                        padding-left: calc((100vw/360)*30);
+                    }
+                }
+                >input:checked+label::before {
+                    background-image: url('../../assets/img/skill/chk_fs_on.png');
+                }
+            }
+            .item_input {
+                margin-top: calc((100vw/360)*6);
+                padding-left: calc((100vw/360)*30);
+                textarea {
+                    width: 100%;
+                    height: calc((100vw/360)*100);
+                    border:1px solid #bbb;
+                    border-radius: $RadiusSmall;
+                    padding: calc((100vw/360)*10) calc((100vw/360)*12);
+                }
+                textarea::placeholder {
+                    color: #bbb;
+                }
+            }
+        }
+        .form_action {
+            margin-top: calc((100vw/360)*30);
+            text-align: center;
+            .btn_submit {
+                width: calc((100vw/360)*160);
+                height: calc((100vw/360)*52);
+                border-radius: 30px;
+                background-color: #37448e;
+                color: #fff;
+                font-weight: 700;
+                font-size: calc((100vw/360)*16);
+                line-height: calc((100vw/360)*24);
+            }
+        }
+    }
+}
+
+// My Foundation Skill
+.board_skill {
+    position: relative;
+    margin-top:0.8rem;
+    padding-left: 6.2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 3rem;
+    &:last-child {
+        border-bottom: 0;
+        margin-bottom: 2rem;
+        padding-bottom: 0;
+    }
+    & + .board_skill {
+        margin-top:3rem;
+    }
+    .item_thumb {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5.2rem;
+        height: 5.2rem;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #eeeeee;
+        .ico {
+            width: 100%;
+            height: 100%;
+            &.n1 {
+                background-image: url('../img/skill/icon_52_ic_fs_01.svg');
+            }
+            &.n2 {
+                background-image: url('../img/skill/icon_52_ic_fs_02.svg');
+            }
+            &.n3 {
+                background-image: url('../img/skill/icon_52_ic_fs_03.svg');
+            }
+            &.n4 {
+                background-image: url('../img/skill/icon_52_ic_fs_04.svg');
+            }
+        }
+    }
+    .item_title {
+        .title {
+            @include FontTitle14;
+        }
+        .sub_txt {
+            margin-top:0.4rem;
+            @include FontBody14;
+        }
+    }
+    .item_cubes {
+        margin-top: 2rem;
+        .item_cube {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            & + .item_cube {
+                margin-top: 1.4rem;
+            }
+            .learning_status {
+                position: relative;
+                top:1px;
+                flex:none;
+                margin-right: 1rem;
+            }
+            .learning_txt {
+                padding-right: 0.8rem;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                @include Ellipsis1;
+            }
+            &::after {
+                content:'';
+                position: relative;
+                top:1px;
+                display: block;
+                flex:none;
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-left: auto;
+                background: url('../img/icons_12_ic_chervron_right_black.svg') no-repeat 0 0 / 100% auto;
+            }
+        }
+        .item_cube_group {
+            border-bottom: 1px solid #666666;
+            .acco_title {
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                padding: 1.4rem 0;
+                border-top: 1px solid #666666;
+                &::after {
+                    top: calc(50% - 0.6rem);
+                }
+                &:first-child {
+                    border-top: none;
+                }
+                &.is_active {
+                    border-bottom: none;
+                    &::after {
+                        top: calc(50% - 0.3rem);
+                    }
+                }
+                .label {
+                    flex: none;
+                    margin-right: 0.6rem;
+                }
+            }
+            .acco_title {
+                padding-right: 2rem;
+                .tit {
+                    @include Ellipsis1;
+                    @include FontTitle14;
+                }
+                &::after {
+                    right: 0;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    background: url('../img/icons_12_ic_chervron_down_black.svg') no-repeat 0 0 / 100% auto;
+                }
+            }
+            .acco_content {
+                padding:0.6rem 0 2rem;
+            }
+        }
+        .acco_desc {
+            display: flex;
+            align-items: flex-start;
+            margin-top:1.3rem;
+            .label {
+                margin-right: 0.6rem;
+            }
+            .txt {
+                font-size: 1.2rem;
+                line-height: 2rem;
+                color:#4c4c4c;
+            }
+        }
+    }
+}

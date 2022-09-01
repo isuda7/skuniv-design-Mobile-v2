@@ -35,6 +35,7 @@
                 margin-left:1.6rem;
             }
             &::before {
+                flex:none;
                 width:2.4rem;
                 height:2.4rem;
             }
@@ -70,6 +71,7 @@
         flex:1 1 auto;
         overflow-x: hidden;
         overflow-y: auto;
+        scroll-behavior: smooth;
         > .sticky {
             position: sticky;
             top:0;
@@ -137,6 +139,16 @@
     > .modal_bottomsheet {
         transform: translateY(110%);
         @include ModalTransition;
+        // 협업테스트 버튼사이즈 축소
+        .modal_header {
+            .btn.ico {
+                &::before {
+                    width:2rem;
+                    height:2rem;
+                }
+            }
+        }
+
     }
     &.is_visible {
         visibility: visible;
@@ -209,8 +221,15 @@
     padding:2rem $GapSideBase 0;
     margin:auto;
     border-radius:$RadiusLarge;
-
+    overflow: visible;
+    .checkbox_alert {
+        position: absolute;
+        right: 0.4rem;
+        bottom: calc(100% + 1rem);
+        color: #fff;
+    }
     .modal_header {
+        position: relative;
         padding:0 !important;
         margin-bottom:8px;
         border-bottom:0;
@@ -225,7 +244,7 @@
         .msg {
             color:#44464A;
             letter-spacing: -0.2px;
-
+            white-space: pre-line;
         }
     }
     .modal_footer {
@@ -383,6 +402,9 @@
             @include FontBody12;
             color:$ColorPrimary;
             text-align: right;
+            .btn.text {
+                padding: 0;
+            }
         }
         .heading2 {
             margin-bottom:1.2rem;
@@ -731,11 +753,9 @@
     }
 }
 
-///////////////////////////////////////////////////
-// Toast
-///////////////////////////////////////////////////
-// Default
+// s: Toast
 .toast {
+    // Default
     position:fixed;
     left:$GapSideBase;
     right:$GapSideBase;
@@ -763,10 +783,8 @@
             color:$ColorPrimaryLight;
         }
     }
-}
 
-// Interaction
-.toast {
+    // Interaction
     visibility: hidden;
     opacity: 0;
     transform: translateY(20%);
@@ -780,32 +798,41 @@
     }
 }
 
-// Has Floating
-.sub_wrapper.has_floating {
-    .toast {
-        bottom:calc(9.2rem + var(--safeBottom));
+// Has Positioning
+.sub_wrapper {
+    &.has_floating {
+        .toast {
+            bottom:calc(9.2rem + var(--safeBottom));
+        }
+    }
+    &.has_comment {
+        .toast {
+            bottom:calc(8rem + var(--safeBottom));
+        }
+    }
+    &.has_floating.has_comment {
+        .toast {
+            bottom:calc(9.2rem + 8rem + var(--safeBottom));
+        }
     }
 }
-.sub_wrapper.has_comment {
-    .toast {
-        bottom:calc(8rem + var(--safeBottom));
-    }
-}
+// e: Toast
 
-
-// Persistent Popup
+// s: Persistent Popup
 .popup_persistent {
     position: fixed;
-    top:calc(20.2rem + var(--safeTop));
+    top:calc(5.2rem + var(--safeTop));
     left:0;
     bottom:0;
     padding-bottom: var(--safeBottom);
     width:100%;
     z-index: 800;
+    border-radius: 1.6rem;
     display:flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $ColorTabPenelGrey;
+    box-shadow:0px -1.2rem 1.7rem rgba(0, 0, 0, 0.02), 0 -0.5rem 2.2rem rgba(0, 0, 0, 0.04), 0 -0.7rem 0.8rem rgba(0, 0, 0, 0.06);
     flex:0 1 auto;
     .popup_head {
         position: relative;
@@ -849,7 +876,6 @@
         padding-bottom:calc(6rem + var(--safeBottom));
     }
 }
-
 // Interaction
 .popup_persistent {
     visibility: hidden;
@@ -874,3 +900,4 @@
         }
     }
 }
+// e: Persistent Popup

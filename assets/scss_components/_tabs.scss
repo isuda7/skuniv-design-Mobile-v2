@@ -170,24 +170,8 @@
 			}
 		}
 	}
-}
-
-.tab.style3 {
-	.tab_list {
-		margin: -0.4rem;
-		.tab_item {
-			flex:none;
-			width: auto;
-			height: inherit;
-			border: 1px solid #ccc;
-			padding: 1rem 1.6rem;
-			border-radius: 3rem;
-			margin: 0.4rem;
-
-			&.is_active {
-				border-color: $ColorPrimary;
-			}
-		}
+	.tab.has_scroll .tab_next .btn.ico.next {
+		background-image: linear-gradient(to left, #000 50%, rgba(0,0,0,0) 100%);
 	}
 }
 

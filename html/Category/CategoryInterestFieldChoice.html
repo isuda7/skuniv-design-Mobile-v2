@@ -65,30 +65,30 @@
 				<button type="button" class="btn ico close"><span class="blind">닫기</span></button>
                 <h3 class="modal_tit">채널 편집</h3>
             </div>
-            <!-- 관심채널 펼쳐짐 is_dimmed 추가  -->
-            <div class="modal_content is_dimmed">
-				<div class="sticky">
-					<div class="tab style2 has_scroll">
-						<div class="tab_list">
-							<div class="tab_inner">
-								<button type="button" class="tab_item is_active" data-id="tabPanel1" onclick="tabSpyScroll(this)">AI</button>
-								<button type="button" class="tab_item" data-id="tabPanel2" onclick="tabSpyScroll(this)">DT</button>
-								<button type="button" class="tab_item" data-id="tabPanel3" onclick="tabSpyScroll(this)">SV ESG</button>
-								<button type="button" class="tab_item" data-id="tabPanel4" onclick="tabSpyScroll(this)">Global</button>
-								<button type="button" class="tab_item" data-id="tabPanel5" onclick="tabSpyScroll(this)">Leadership</button>
-								<button type="button" class="tab_item" data-id="tabPanel6" onclick="tabSpyScroll(this)">Management</button>
-								<button type="button" class="tab_item" data-id="tabPanel7" onclick="tabSpyScroll(this)">미래반도체</button>
-								<button type="button" class="tab_item" data-id="tabPanel8" onclick="tabSpyScroll(this)">Green</button>
-								<button type="button" class="tab_item" data-id="tabPanel9" onclick="tabSpyScroll(this)">BM Design &amp; Storytelling</button>
-								<button type="button" class="tab_item" data-id="tabPanel10" onclick="tabSpyScroll(this)">SK아카데미</button>
-								<button type="button" class="tab_item" data-id="tabPanel11" onclick="tabSpyScroll(this)">SK경영</button>
-							</div>
-						</div>
-						<div class="tab_next">
-							<button type="button" class="btn ico next"><span class="blind">다음</span></button>
+			<div class="sticky">
+				<div class="tab style2 has_scroll">
+					<div class="tab_list">
+						<div class="tab_inner">
+							<button type="button" class="tab_item is_active" data-id="tabPanel1" onclick="tabSpyScroll(this)">AI</button>
+							<button type="button" class="tab_item" data-id="tabPanel2" onclick="tabSpyScroll(this)">DT</button>
+							<button type="button" class="tab_item" data-id="tabPanel3" onclick="tabSpyScroll(this)">SV ESG</button>
+							<button type="button" class="tab_item" data-id="tabPanel4" onclick="tabSpyScroll(this)">Global</button>
+							<button type="button" class="tab_item" data-id="tabPanel5" onclick="tabSpyScroll(this)">Leadership</button>
+							<button type="button" class="tab_item" data-id="tabPanel6" onclick="tabSpyScroll(this)">Management</button>
+							<button type="button" class="tab_item" data-id="tabPanel7" onclick="tabSpyScroll(this)">미래반도체</button>
+							<button type="button" class="tab_item" data-id="tabPanel8" onclick="tabSpyScroll(this)">Green</button>
+							<button type="button" class="tab_item" data-id="tabPanel9" onclick="tabSpyScroll(this)">BM Design &amp; Storytelling</button>
+							<button type="button" class="tab_item" data-id="tabPanel10" onclick="tabSpyScroll(this)">SK아카데미</button>
+							<button type="button" class="tab_item" data-id="tabPanel11" onclick="tabSpyScroll(this)">SK경영</button>
 						</div>
 					</div>
+					<div class="tab_next">
+						<button type="button" class="btn ico next"><span class="blind">다음</span></button>
+					</div>
 				</div>
+			</div>
+            <!-- 관심채널 펼쳐짐 is_dimmed 추가  -->
+            <div class="modal_content is_dimmed">
 				<!-- AI Tabpanel -->
 				<div class="tab_panel" id="tabPanel1">
 					<div class="favorit_sec">
@@ -315,7 +315,9 @@
                         <div class="acco favorit_acco">
                             <!-- 관심채널 펼쳐짐 is_active -->
                             <div class="acco_title is_active">
-                                <em class="count">24</em>&nbsp;개 선택
+								<div class="label_count">
+									<em class="count">24</em>&nbsp;개 선택
+								</div>
                                 <button type="button" class="btn unchecked">전체선택 해제</button>
 								<button type="button" class="btn expand"><span class="blind">펼치기/접기</span></button>
                             </div>

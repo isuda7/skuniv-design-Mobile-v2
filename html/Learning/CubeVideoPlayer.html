@@ -19,7 +19,7 @@
 	</style>
 </head>
 <body>
-<div class="sub_wrapper theme_dark gap_none">
+<div class="sub_wrapper theme_dark has_player has_full_landscape">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
@@ -40,35 +40,35 @@
     <main role="main" class="container learning_container">
         <div class="content_head">
             <!-- 학습영상 -->
-            <div class="cube_player_sec" id="playerSec">
+            <div class="cube_player_sec full_landscape" id="playerSec">
                 <script>
 					$('#playerSec').load('../Common/Player.html', function(){
 						$('#playerSec').children().find('.btn.full').addClass('is_active');
 					});
 				</script>
             </div>
-            <div class="cube_player_sec" id="playerSec1">
+            <div class="cube_player_sec full_landscape" id="playerSec1">
                 <script>
 					$('#playerSec1').load('../Common/Player.html', function(){
 						$('#playerSec1').children().addClass('is_visible is_active').find('.btn.full').addClass('is_active');
 					});
 				</script>
             </div>
-            <div class="cube_player_sec" id="playerSec2">
+            <div class="cube_player_sec full_landscape" id="playerSec2">
                 <script>
 					$('#playerSec2').load('../Common/Player.html', function(){
 						$('#playerSec2').children().addClass('is_backward is_visible is_active').find('.btn.full').addClass('is_active');
 					});
 				</script>
             </div>
-            <div class="cube_player_sec" id="playerSec3">
+            <div class="cube_player_sec full_landscape" id="playerSec3">
                 <script>
 					$('#playerSec3').load('../Common/Player.html', function(){
 						$('#playerSec3').children().addClass('is_forward is_visible is_active').find('.btn.full').addClass('is_active');
 					});
 				</script>
             </div>
-            <div class="cube_player_sec" id="playerSec4">
+            <div class="cube_player_sec full_landscape" id="playerSec4">
                 <script>
 					$('#playerSec4').load('../Common/Player.html', function(){
 						$('#playerSec4').children().addClass('is_timeline is_visible is_active');

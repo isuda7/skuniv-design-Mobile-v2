@@ -93,6 +93,7 @@ select {-webkit-tap-highlight-color:transparent;}
 -------------------------------------------------------------------*/
 /* Default */
 :root {
+	--safeRightScript: 0px;
 	--safeTop: 0px;
 	--safeBottom: 0px;
 	--safeBottomHalf: 0px;
@@ -102,7 +103,13 @@ select {-webkit-tap-highlight-color:transparent;}
 	:root {
 		--safeTop: constant(safe-area-inset-top);
 		--safeBottom: constant(safe-area-inset-bottom);
-		--safeBottomHalf: constant(safe-area-inset-bottom);
+		--safeBottomHalf: calc(constant(safe-area-inset-bottom)/2);
+	}
+}
+@supports (--safeRightScript: constant(safe-area-inset-right)) {
+	:root {
+		// 풀화면 스크립트 팝업 전용
+		--safeRightScript: 2rem;
 	}
 }
 /* iOS 11.2 이상 */
@@ -110,6 +117,12 @@ select {-webkit-tap-highlight-color:transparent;}
 	:root {
 		--safeTop: env(safe-area-inset-top);
 		--safeBottom: env(safe-area-inset-bottom);
-		--safeBottomHalf: 18px;
+		--safeBottomHalf: calc(env(safe-area-inset-bottom)/2);
+	}
+}
+@supports (--safeRightScript: env(safe-area-inset-right)) {
+	:root {
+		// 풀화면 스크립트 팝업 전용
+		--safeRightScript: 2rem;
 	}
 }

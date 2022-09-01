@@ -1,0 +1,53 @@
+                    <!-- Cube Video Player
+                        .cube_player.is_visible : player_overwrap visible
+                        .cube_player.is_active : player_overwrap active
+
+                        재생/정지: 기본숨김, is_visible 보기
+                    -->
+                    <div class="cube_player is_active is_visible">
+                        <!-- Overwrap Controls -->
+                        <div class="player_overwrap">
+                            <!-- 재생/정지는 판옵토 버튼사용함 (퍼블은 시연용으로 제공) -->
+                            <div class="player_controls">
+                                <button type="button" class="btn ico start is_visible"><span class="blind">재생</span></button>
+                                <button type="button" class="btn ico pause"><span class="blind">정지</span></button>
+                            </div>
+                            <div class="play_utils">
+                                <div class="close_area">
+                                    <button type="button" class="btn ico close"><span class="blind">닫기</span></button>
+                                </div>
+                                <div class="option_area">
+                                    <button type="button" class="btn ico full"><span class="blind">전체보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player_thumb">
+                            <!-- 플레이어 영상영역 -->
+                            <span class="thumb" style="background-image: url('../../assets/img/demo/placeimg_640_360_animals.jpg');"></span>
+                            <!-- // 플레이어 영상영역 -->
+                        </div>
+                        <div class="player_timeline">
+                            <input type="range" class="timeline_range" value="25" min="0" max="100" />
+                        </div>
+                    </div>
+                    <!-- // Cube Player -->
+
+                    <script>
+                        // Range
+                        function PlayerTimeline($this){
+                            // Timeline Range
+                            var val = $this.val();
+                            $this.css(
+                                'background',
+                                'linear-gradient(to right, #ff664d 0%, #ff664d '+ val +'%, rgba(164, 166, 170, 0.5) ' + val + '%, rgba(164, 166, 170, 0.5) 100%)'
+                            );
+                            $('.timeline_thumb').css('left', val+'%');
+                        }
+
+                        $(function(){
+                            $('.timeline_range').on('input', function(){
+                                PlayerTimeline($(this));
+                            });
+                            PlayerTimeline($('.timeline_range'));
+                        })
+                    </script>

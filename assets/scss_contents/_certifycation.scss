@@ -34,7 +34,8 @@
                         font-weight: 700;
                     }
                     &.primary {
-                        color:$ColorPrimary;
+                        // color:$ColorPrimary;
+						color: #A4A6AA; // 최윤홍RF 요청사항 22-07-27
                     }
                 }
             }
@@ -77,6 +78,7 @@
     }
     .info_area {
         display:flex;
+        flex-wrap: wrap;
         align-items: center;
         margin-top:0.8rem;
         > p {
@@ -154,3 +156,8 @@
     }
 }
 // e: 연관 Badge
+
+// s: 러닝패스
+.learningPass_page {
+    padding-bottom: 4rem !important;
+}

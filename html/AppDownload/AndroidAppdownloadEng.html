@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+	<script>
+		$(function(){
+			var swiperAppParam = {
+				loop : false,
+				pagination : {
+					el : ".dl_bullets",
+					type : 'bullets',
+					clickable : true
+				}
+
+			}
+			var swiperApp = new Swiper(".swiper_download .swiper-container", swiperAppParam);
+		});
+	</script>
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Container -->
+		<main role="main" class="container download_container">
+			<div class="content_body download_page">
+                <div class="login_language">
+                    <button type="button" class="btn language">English</button>
+                </div>
+				<div class="download_content">
+					<!-- swiper area -->
+					<div class="swiper_download">
+						<div class="swiper swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="logo_area">
+												<h1><a href="/"><img src="../../assets/img/img_img_m_logo.svg" alt="MY SUNI" /></a></h1>
+											</div>
+											<div class="tit"><strong>Notice on App Download</strong></div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_1.png" class="dl_img" alt="Notice on App Download"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													<strong>The mySUNI mobile app has been updated.</strong><br/>
+													<span>Download the latest version<br/>and enjoy an easier learning experience!</span>
+												</p>
+												<p><em>Swipe the screen to check the download guide information.</em></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 01</span></div>
+											<div class="tit">
+												<p><strong>OS settings</strong></p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_2_eng.png" class="dl_img" alt="OS settings"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													After selecting the download button, if an installation blocking warning window appears, please return to <strong>'Settings'</strong>.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 02</span></div>
+											<div class="tit">
+												<p>Check for apps from <strong>unknown sources</strong> on the lock screen and security​</p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_3_eng.png" class="dl_img" alt="Check for apps from unknown sources"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>Go to <strong>'Lock screen and security'</strong> in settings and check <strong>'Apps from unknown sources'</strong> to install.​
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="dl_wrap">
+										<div class="dl_title">
+											<div class="step_tit"><span>STEP 03</span></div>
+											<div class="tit">
+												<p><strong>Download</strong></p>
+											</div>
+										</div>
+										<div class="dl_contents">
+											<div class="dl_image">
+												<span class="img_wrap">
+													<img src="../../assets/img/appdownload/img_4.png" class="dl_img" alt="Download"/>
+												</span>
+											</div>
+											<div class="dl_desc">
+												<p>
+													​If you have read all the instructions,<br/>please select <strong class="primary">'App Download'</strong>.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination dl_bullets">
+						</div>
+					</div>
+					<!-- //swiper area -->
+				</div>
+				<div class="page_floating">
+					<div class="page_action">
+						<button type="button" class="btn basic pill2 secondary">App Download</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

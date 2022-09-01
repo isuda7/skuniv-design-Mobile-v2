@@ -94,44 +94,51 @@
 			padding-right: $GapSideBase;
 		}
 	}
-	.btn.ico.top {
-		visibility: hidden;
-		position: fixed;
-		right:2rem;
-		bottom:2rem;
-		z-index: 200;
-		opacity: 0;
-		pointer-events: none;
-	}
-	&.has_favorit {
-		.btn.ico.top {
-			bottom:16.4rem;
-		}
-	}
-	&.has_comment {
-		.btn.ico.top {
-			bottom:8rem;
-		}
-	}
-	&.has_floating {
-		.btn.ico.top {
-			bottom:9.2rem;
-		}
-	}
-	&.has_expand {
-		.btn.ico.top {
-			bottom:9.6rem;
-		}
-	}
-	&.has_appnav {
-		.btn.ico.top {
-			bottom:$HeightAppNav + 2rem;
-		}
-	}
 	&.gap_none {
 		.container {
 			padding-top:0;
 		}
+	}
+}
+.submain_wrapper {
+	.container {
+		padding-top:0;
+	}
+}
+
+// Top Floating
+.btn.ico.top {
+	visibility: hidden;
+	position: fixed;
+	right:2rem;
+	bottom:2rem;
+	z-index: 200;
+	opacity: 0;
+	pointer-events: none;
+}
+.has_favorit {
+	.btn.ico.top {
+		bottom:calc(16.4rem + 2rem + var(--safeBottom));
+	}
+}
+.has_comment {
+	.btn.ico.top {
+		bottom:calc(6rem + 2rem + var(--safeBottom));
+	}
+}
+.has_floating {
+	.btn.ico.top {
+		bottom:calc(9.2rem + var(--safeBottomHalf));
+	}
+}
+.has_expand {
+	.btn.ico.top {
+		bottom:9.6rem;
+	}
+}
+.has_appnav {
+	.btn.ico.top {
+		bottom:calc(6rem + 2rem + var(--safeBottom));
 	}
 }
 .is_scrolled {
@@ -139,12 +146,6 @@
 		visibility: visible;
 		opacity: 1;
 		pointer-events: auto;
-	}
-}
-
-.submain_wrapper {
-	.container {
-		padding-top:0;
 	}
 }
 

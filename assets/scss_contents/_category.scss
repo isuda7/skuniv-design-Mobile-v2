@@ -16,6 +16,7 @@
             justify-content: space-between;
             align-items: center;
             .btn.text {
+                font-size: 1.2rem;
                 padding:0;
             }
             .count {
@@ -25,11 +26,22 @@
     }
     &_empty {
         padding:4rem 2rem 5rem 2rem;
+        .no_data .sub_txt {
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
     }
     padding-top:2.4rem;
     padding-bottom:2.8rem;
     .chip_action_group {
+        max-height: 12.6rem;
+        overflow: hidden;
         position: relative;
+    }
+    &.is_expanded {
+        .chip_action_group {
+            max-height: none;
+        }
     }
 }
 // e: 관심채널
@@ -146,8 +158,18 @@
         padding:1.8rem 0;
         border-bottom:1px solid #f2f3f5;
         @include FontBody16;
-        .count {
-            color:#a4a6aa;
+        .title {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            padding-right: 1rem;
+            .tit {
+                @include Ellipsis1;
+            }
+            .count {
+                flex:none;
+                color:#a4a6aa;
+            }
         }
     }
 }
@@ -172,7 +194,7 @@
         padding:1.2rem 2.4rem 1.2rem 0;
         line-height: 1.8rem;
         color:#000000;
-        &::after { 
+        &::after {
             content:'';
             position: absolute;
             right:0;

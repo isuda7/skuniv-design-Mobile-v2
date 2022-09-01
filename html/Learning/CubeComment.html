@@ -12,23 +12,32 @@
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/ui.common.js"></script>
     <title>mySUNI Design Mobile V2</title>
-    <script>
-        $(function(){
-            // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
-        });
-    </script>
+	<script>
+		$(function(){
+			$(window).on('scroll resize', function(){
+				var $appbar = $('.appbar');
+				var $appbarTitle = $('.appbar_title');
+				var appbarTitleShow = $appbarTitle.offset().top + ($appbarTitle.outerHeight()/2) - $appbar.outerHeight();
+				var scrollTop = $(window).scrollTop();
+
+				// appbar_title이 appbar밑으로 절반이상 사라질때
+				if (scrollTop > appbarTitleShow) {
+					$appbar.addClass('is_transition');
+				} else {
+					$appbar.removeClass('is_transition');
+				}
+			})
+		});
+	</script>
 </head>
 <body>
-<div class="sub_wrapper theme_dark has_sticky has_comment gap_none">
+<div class="sub_wrapper theme_dark has_player has_full_landscape">
 	<!-- Header -->
     <header class="header">
         <div class="appbar basic">
             <div class="appbar_left">
                 <button type="button" class="btn ico back"><span class="blind">뒤로</span></button>
-                <h1><strong class="blind">학습과정</strong></h1>
+                <h1 class="transition"><strong>[ Management College ] _ 직무 Essential 과정의 Community</strong></h1>
             </div>
             <div class="appbar_right">
                 <button type="button" class="btn ico cubelist"><span class="blind">큐브리스트</span></button>
@@ -41,7 +50,7 @@
     <main role="main" class="container learning_container">
         <div class="content_head">
             <!-- 학습영상 -->
-            <div class="cube_player_sec" id="playerSec">
+            <div class="cube_player_sec full_landscape" id="playerSec">
                 <script>$('#playerSec').load('../Common/Player.html');</script>
             </div>
             <!-- //학습영상 -->
@@ -51,7 +60,7 @@
             <div class="learning_subject">
                 <div class="title_area">
                     <span class="label style1 primary">학습중</span>
-                    <h1 class="title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
+                    <h1 class="title appbar_title"><strong>기준 없는 협업, 어떻게 성장하는 협업 구심점을 만들까?</strong></h1>
                 </div>
                 <div class="info_area">
                     <span class="label video">Video</span>

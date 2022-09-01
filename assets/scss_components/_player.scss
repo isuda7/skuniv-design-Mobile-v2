@@ -1,7 +1,7 @@
 // Default
 .cube_player {
     position: relative;
-    height:20.2rem;
+    height:calc((100vw/7)*4); // 22-06-30 learning_thumb 과 높이 맞춤(가변처리 불가이슈)
     background-color: #000;
     color:#fff;
     transition: width 0.2s ease;
@@ -24,6 +24,9 @@
         z-index: 10;
         .thumb {
             background-size:auto 100%;
+        }
+        iframe {
+            height: 100%;
         }
     }
     .player_timeline {
@@ -220,6 +223,7 @@
         width:100%;
         height:100%;
         overflow: hidden;
+        display:none;
         .btn.dubble_backward,
         .btn.dubble_forward {
             display:flex;
@@ -290,7 +294,7 @@
     right:0;
     bottom:0;
     z-index:50;
-    padding:5.2rem 2rem 2rem 2rem;
+    padding:2rem 2rem 2rem 2rem;
     background-color: rgba(0, 0, 0, 0.8);
     .player_box {
         > .title {
@@ -302,6 +306,7 @@
             position: absolute;
             bottom:2rem;
             right:2rem;
+            z-index: 10;
             @include FontBody13;
             height:3.2rem;
             padding:0.5rem 1.2rem;
@@ -341,6 +346,22 @@
         display:block;
     }
 }
+
+//Quiz일때 전체화면 버튼 가리기
+.player_quiz_overey {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: transparent;
+    &.is_visible {
+        display:block;
+    }
+}
+
 
 // 전체화면모드 이거나 가로모드인 경우
 @mixin PlayerFullscreen {
@@ -434,14 +455,85 @@
     @include PlayerFullscreen;
 }
 
+// Pip Player
+.cube_player_pip {
+    display: none;
+    .cube_player {
+        width:30.4rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        height:calc((30rem/7)*4);
+        box-shadow: 0 0 2rem 0 rgba(0,0,0,0.2);
+        .player_db_controls {
+            display:none;
+        }
+        .player_overwrap {
+            height:0 !important;
+            overflow: visible;
+            .player_controls {
+                width: auto;
+                height: auto;
+                .btn.pause::before {
+                    width:2.4rem;
+                    height:2.4rem;
+                }
+                .btn.start::before {
+                    width:2.4rem;
+                    height:2.4rem;
+                }
+            }
+            .play_utils {
+                position: absolute;
+                bottom: auto;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                padding: 0.6rem;
+                .option_area {
+                    margin:0;
+                }
+                .btn.ico {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    border-radius: 50%;
+                    background-color: rgba(0,0,0,0.2);
+                    &::before {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
+                    &.close {
+                        &::before {
+                            background-image: url("../img/icons_24_ic_close_white.svg");
+                        }
+                    }
+                }
+            }
+        }
+        .player_timeline {
+            .timeline_range {
+                &::-webkit-slider-thumb {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
 @media all and (orientation: portrait) {
     .cube_player_pip {
         position:fixed;
         right:2rem;
-        bottom:4rem;
-        width:16rem;
-        height:9rem;
-        z-index: 90;
+        bottom:calc(4rem + var(--safeBottom));
+        z-index: 400 !important;
+        display: block;
+    }
+    .has_floating {
+        & ~ .cube_player_pip,
+        .cube_player_pip {
+            bottom:calc(9.6rem - var(--safeBottomHalf));
+        }
     }
 }
 @media all and (orientation: landscape) {
@@ -478,39 +570,6 @@
     }
 }
 
-// Mini Player
-.cube_player.is_miniplayer {
-    width:16rem;
-    height:9rem;
-    .player_db_controls {
-        display:none;
-    }
-    .player_overwrap {
-        .player_controls {
-            .btn.backward {
-                display:none;
-            }
-            .btn.forward {
-                display:none;
-            }
-            .btn.pause::before {
-                width:2.4rem;
-                height:2.4rem;
-            }
-            .btn.start::before {
-                width:2.4rem;
-                height:2.4rem;
-            }
-        }
-        .play_utils {
-            display:none;
-        }
-    }
-    .player_timeline {
-        display:none;
-    }
-}
-
 //오디오 페이지 플레이어 영상 영역 크기 조정
 .audio_player_sec {
     .cube_player {
@@ -524,6 +583,50 @@
         .btn.ico.pip,
         .btn.ico.full {
             display:none;
+        }
+    }
+}
+
+// 다음 학습 이어하기
+.player_continue {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.7rem;
+    z-index: 80;
+    &.is_visible {
+        display: block;
+    }
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 6rem;
+        padding:1rem;
+        overflow: hidden;
+        border-radius: $RadiusSmall;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+    }
+    .btn.continue_tit {
+        padding:1rem;
+        font-size: 1.4rem;
+        .ico.play {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 0.6rem;
+            background-image: url('../img/icons_24_ic_continue_white.svg');
+        }
+    }
+    .btn.continue_close {
+        width: 3.6rem;
+        height: 3.6rem;
+        &::before {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url('../img/icons_16_ic_close_white.svg');
         }
     }
 }

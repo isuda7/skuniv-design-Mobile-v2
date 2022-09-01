@@ -10,11 +10,10 @@
     margin-left: -$GapSideBase;
     margin-right: -$GapSideBase;
     .list_sec {
-        // sec_body 는 로딩중일때 깨지지 않도록 높ㅇ
         // UI 높이 확인용 (그림자 가려지므로 사용안함)
-        .sec_body {
-            min-height:18rem;
-        }
+        // .sec_body {
+        //     overflow: hidden;
+        // }
         &+.list_sec {
             margin-top: 3.2rem;
         }
@@ -25,6 +24,7 @@
                 overflow: hidden;
                 display: flex;
                 align-items: center;
+                padding-right:1rem;
                 color:#000;
                 @include FontTitle16;
                 > strong{
@@ -36,6 +36,7 @@
                     white-space: nowrap;
                 }
                 .count {
+                    flex:none;
                     margin-left:0.4rem;
                     color:$ColorPrimary;
                 }
@@ -43,10 +44,10 @@
             .btn{
                 padding:0;
                 color: #75777b;
-                @include FontBody14;
+                @include FontBody12; // 최윤홍RF 요청사항 22-07-27
                 &.view_all{
                     padding-right: 1.2rem;
-                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .6rem;
+                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .4rem;
                 }
             }
         }
@@ -64,8 +65,45 @@
                 margin:2rem 0 0 0;
             }
         }
-        .loader_section {
-            height: 18rem;
+
+        // Event Banner
+        &.banners {
+            padding: 0 $GapSideBase;
+            .image_wrap {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                height: calc((100vw - 4rem)/4); //비율변경
+                overflow: hidden;
+                border-radius: $RadiusLarge;
+                @include Shadow3;
+                img {
+                    max-width: none;
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+        }
+
+        // Loader Height
+        &.learnings .loader_section {
+            height: 24.2rem;
+        }
+        &.cards .loader_section {
+            height: 23rem;
+        }
+        &.badges .loader_section {
+            height: 36.9rem;
+        }
+        &.playlists .loader_section {
+            height: 22.5rem;
+        }
+        &.mydata .loader_section {
+            height: 18.2rem;
+        }
+        &.feeds .loader_section {
+            height: 22rem;
         }
     }
 
@@ -85,23 +123,28 @@
             display:flex;
             width:100%;
             height: 12rem;
-            padding:2.2rem 0;
+            overflow: auto;
+            padding:1.8rem 0;
             @include Shadow3;
             background-color: #fff;
             border-radius: $RadiusLarge;
             .item {
                 display: flex;
                 flex-direction: column;
-                flex:1 1 auto;
-                width:100%;
+                flex:none;
+                width: 25%;
+                min-width:12rem;
                 height:100%;
                 padding:0 1.2rem 0 1.5rem;
+                word-break: keep-all;
+                word-wrap: break-word;
                 & + .item {
                     border-left:1px solid #f2f3f5;
                 }
                 .label {
                     display:block;
                     color: #a4a6aa;
+                    line-height: 1.8rem;
                 }
                 .value {
                     margin-top:auto;
@@ -123,6 +166,9 @@
                 }
                 &.badge .ico {
                     background-image: url('../img/icons_16_ic_badge_grey_04.svg');
+                }
+                &.skill .ico {
+                    background-image: url('../img/icons_16_ic_skill_grey_04.svg');
                 }
             }
         }
@@ -280,6 +326,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex:none;
     width:100%;
     padding:2.4rem 1rem 2rem 1rem;
     .avata_area {
@@ -454,7 +501,7 @@
 .modal_badgeCert {
     .cert_sec {
         margin-top:2rem;
-        text-align: center;
+        text-align: left;
         .heading2 {
             line-height: 2.2rem;
         }
@@ -480,6 +527,9 @@
 .myLearning_sec {
     padding-top:2rem;
     padding-bottom:2rem;
+    &:last-child {
+        padding-bottom: 0;
+    }
     .sec_head {
         display:flex;
         justify-content: space-between;
@@ -517,6 +567,8 @@
         flex:none;
         margin:0 -0.4rem;
         .item {
+            display: flex;
+            flex-direction: column;
             flex:none;
             width: 14rem;
             height: 12rem;
@@ -528,12 +580,13 @@
             .label {
                 display:block;
                 color: #a4a6aa;
+                line-height: 1.8rem;
             }
             .value {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top:2.2rem;
+                margin-top:auto;
                 @include FontTitle18;
                 &::after {
                     content:'';
@@ -557,6 +610,10 @@
             }
             &.badge .ico {
                 background-image: url('../img/icons_16_ic_badge_grey_04.svg');
+            }
+            // 22-09-16 Foundation Skill 추가
+            &.skill .ico {
+                background-image: url('../img/icons_16_ic_skill_grey_04.svg');
             }
         }
     }
@@ -649,7 +706,6 @@
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                width:2.4rem;
                 height:2.4rem;
                 margin:0 auto;
                 border-radius: 50%;
@@ -657,6 +713,7 @@
                 &.today {
                     background: rgba(255, 102, 77, 0.2);
                     color:$ColorPrimary;
+                    width:2.4rem;
                 }
             }
             .time {
@@ -715,6 +772,7 @@
         margin-top:2rem;
     }
     .title {
+        margin: 0 -1rem;
         text-align: center;
         @include FontTitle16;
         font-weight: 400;
@@ -759,6 +817,8 @@
                         text-align: center;
                         @include FontBody12;
                         color:$ColorSubTxt;
+                        word-break: keep-all;
+                        word-wrap: break-word;
                     }
                     .value {
                         position: absolute;
@@ -786,6 +846,7 @@
                 .graph_cell {
                     display:table-cell;
                     height:3rem;
+                    background-color: $ColorCateDefault;
                     transition: width 0.3s 0.2s ease;
                     // Category
                     &.ai {background-color: $ColorCateAi;}
@@ -800,6 +861,10 @@
                     &.green {background-color: $ColorCateGreen;}
                     &.bm {background-color: $ColorCateBM;}
                     &.skacademy {background-color: $ColorCateSkacademy;}
+                    &.com {background-color: $ColorCateCom;}
+                    &.skoper {background-color: $ColorCateSkoper;}
+                    &.life {background-color: $ColorCateLife;}
+                    &.inno {background-color: $ColorCateInno;}
 
                     // Biz
                     &.mysuni {background-color: $ColorCateMysuni;}
@@ -833,7 +898,9 @@
                         text-align: center;
                         line-height:calc(2rem - 2px);
                         border:1px solid transparent;
+                        color: $ColorCateDefault;
                         background-color: #fff;
+                        border-color:$ColorCateDefault;
                     }
                     &:nth-child(1) .tit::before {content:'1';}
                     &:nth-child(2) .tit::before {content:'2';}
@@ -847,6 +914,11 @@
                     &:nth-child(10) .tit::before {content:'10';}
                     &:nth-child(11) .tit::before {content:'11';}
                     &:nth-child(12) .tit::before {content:'12';}
+                    &:nth-child(13) .tit::before {content:'13';}
+                    &:nth-child(14) .tit::before {content:'14';}
+                    &:nth-child(15) .tit::before {content:'15';}
+                    &:nth-child(16) .tit::before {content:'16';}
+                    &:nth-child(17) .tit::before {content:'17';}
 
                     // Category
                     &.ai .tit::before {color: $ColorCateAi; border-color:$ColorCateAi;}
@@ -861,6 +933,10 @@
                     &.green .tit::before {color: $ColorCateGreen; border-color:$ColorCateGreen;}
                     &.bm .tit::before {color: $ColorCateBM; border-color:$ColorCateBM;}
                     &.skacademy .tit::before {color: $ColorCateSkacademy; border-color:$ColorCateSkacademy;}
+                    &.com .tit::before {color: $ColorCateCom; border-color:$ColorCateCom;}
+                    &.skoper .tit::before {color: $ColorCateSkoper; border-color:$ColorCateSkoper;}
+                    &.life .tit::before {color: $ColorCateLife; border-color:$ColorCateLife;}
+                    &.inno .tit::before {color: $ColorCateInno; border-color:$ColorCateInno;}
 
                     // Biz
                     &.mysuni .tit::before {color: $ColorCateMysuni; border-color:$ColorCateMysuni;}
@@ -893,11 +969,14 @@
                 display:table-cell;
                 vertical-align: middle;
                 padding:0.8rem 0;
+
             }
             .form_tit {
                 width:100%;
                 @include FontBody16;
                 color: #000;
+                word-break: keep-all;
+                word-wrap: break-word;
             }
             .form_input {
                 input.basic {
@@ -921,6 +1000,7 @@
             }
         }
     }
+    // 알리미 설정(사용안함)
     .setTarget_form2 {
         margin-top:2.4rem;
         padding-top:0.8rem;
@@ -1006,18 +1086,23 @@
             display:flex;
             align-items: center;
             flex: 0 1 auto;
+            overflow: hidden;
             .username {
                 display:flex;
                 align-items: center;
+                overflow: hidden;
                 .avata {
                     width:2rem;
                     height:2rem;
                     margin-right:0.4rem;
+                    flex : none;
                 }
                 .name {
                     @include FontBody13;
                     word-break: keep-all;
                     word-wrap: break-word;
+                    flex: 0 1 auto;
+                    @include Ellipsis1;
                 }
             }
             .split {
@@ -1026,12 +1111,15 @@
                 height:1rem;
                 margin:0 0.8rem;
                 background-color: #e3e4e5;
+                flex:none;
             }
             .date {
                 @include FontBody13;
+                margin-right: .6rem;
                 color:#a4a6aa;
                 word-break: keep-all;
                 word-wrap: break-word;
+                flex: none;
             }
         }
         .right {
@@ -1092,6 +1180,7 @@
                 height:2.4rem;
                 margin-right:0.4rem;
                 background: no-repeat center center / 100% auto;
+                flex: none;
             }
             &.recom::before {
                 background-image:url('../img/icons_24_ic_recommend_black.svg');
@@ -1223,3 +1312,175 @@
     }
 }
 // e: 마이홈 가이드
+
+// s: skeleton ui
+
+$base-color: #ddd;
+$shine-color: #e8e8e8;
+$animation-duration: 1.7s;
+$avatar-offset: 52 + 12;
+
+@mixin background-gradient{
+    background-image: linear-gradient(90deg, $base-color 0px, $shine-color 40px, $base-color 80px) ;
+    background-size: 600px
+}
+
+@keyframes shine-first{
+    0% {background-position: -100px}
+    40%, 100% {background-position: 200px};
+}
+@keyframes shine-second{
+    0% {background-position: -100px + $avatar-offset}
+    40%, 100% {background-position: 200px + $avatar-offset}
+}
+
+@keyframes skl-color-gradient {
+    0% { background-color: rgba(187, 187, 187, 0.3);}
+    50% { background-color: rgba(187, 187, 187, 0.7);}
+    100% { background-color: rgba(187, 187, 187, 0.3);}
+}
+.sklt_full {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #bbb;
+}
+.sklt_line {
+    display: block;
+    width: 100%;
+    height : 1.6rem;
+    border-radius: 8px;
+    background-color: #ddd;
+    @include background-gradient;
+    animation: shine-first $animation-duration infinite linear;
+    //animation : skl-color-gradient $animation-duration infinite ease-in-out;
+    &.skinny {
+        width : 5rem;
+        height : 1.4rem;
+        margin-top: .4rem;
+        & + .sklt_line {
+            margin-top: .8rem;
+        }
+        & + .skinny {
+            margin-top: .4rem
+        }
+    }
+    & + .sklt_line {
+        margin-top: .6rem
+    }
+}
+
+.sklt_round {
+    display: block;
+    width: 100%;
+    height : 100%;
+    border-radius: 50%;
+    background-color: #ddd;
+    @include background-gradient;
+    animation: shine-first $animation-duration infinite linear;
+    &.avata {
+        @include background-gradient;
+        animation: shine-second $animation-duration infinite linear;
+    }
+}
+
+.sklt_list {
+    width : 100%;
+    overflow: hidden;
+    .sklt_list_inner {
+        display: flex;
+        align-items: center;
+    }
+    &.type_learning {
+        .sklt_list_inner {
+            justify-content: center;
+        }
+        .sklt_slide {
+            transform: scale(.9);
+            &:nth-child(2n) {
+                transform: scale(1);
+            }
+        }
+        .card_learning{
+            .card_inner::after{ display: none;}
+        }
+        .card_body {
+            justify-content: flex-start;
+            padding: 3rem
+        }
+    }
+
+    &.type_card {
+        padding: 0 0 1.8rem 2rem;
+        margin-bottom : -1.8rem;
+        .sklt_slide {
+            margin: 0 .8rem 0 0;
+        }
+    }
+
+    &.type_pl {
+        padding: 0 0 0 2rem;
+        .card_playlist_main {
+            margin: 0 .8rem 0 0;
+            .thumb.sklt_full {
+                display: flex;
+                .skinny {
+                    width: 100%;
+                }
+                .sklt_round {
+                    @include background-gradient;
+                    animation: shine-first $animation-duration infinite linear;
+                }
+            }
+            .card_body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .sklt_line.line {
+                    margin-top: .4rem
+                }
+            }
+        }
+    }
+
+    &.type_feed {
+        padding: 0 0 1.8rem 2rem;
+        .sklt_slide {
+            margin: 0 .8rem 0 0;
+        }
+        .user_area {
+            .sklt_line {
+                margin-top:0
+            }
+        }
+    }
+
+}
+.card_badge_group_list {
+    .card_item {
+        .sklt_line.skinny + .sklt_line {
+            margin-top: .5rem
+        }
+        .card_thumb {
+            .sklt_round {
+                @include background-gradient;
+                animation: shine-second $animation-duration infinite linear;
+            }
+        }
+    }
+}
+.myData_status {
+    .status_list .item .sklt_round {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-bottom: .4rem
+    }
+    .status_note {
+        .sklt_line + .sklt_line {
+            margin-left: auto;
+        }
+    }
+}
+// e: skeleton ui
+// e: skeleton ui

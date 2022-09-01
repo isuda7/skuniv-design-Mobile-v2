@@ -15,10 +15,19 @@
     <script>
         $(function(){
             // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
+            // var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            // $('.container').css({'padding-top': breakStickyPos+'rem'});
+            // $('.sticky').css({'top': breakStickyPos+'rem'});
         });
+
+		function photoViewerOpen(id, _this) {
+			$(id).show().find('.img').attr({'src':$(_this).find('img').attr('src')});
+			$('body').addClass('is_dimmed');
+		}
+		function photoViewerClose(id) {
+			$(id).hide().find('.img').attr({'src':''});
+			$('body').removeClass('is_dimmed');
+		}
     </script>
 </head>
 <body>
@@ -76,10 +85,15 @@
 					<div class="post_body">
 						<div class="post_main">
 							<div class="post_txt">
+								<!-- 22-08-17 댓글이미지 확대보기 -->
+								<div class="add_img">
+									<button type="button" class="btn btn_view" onclick="photoViewerOpen('#photoViewer', this)">
+										<img src="../../assets/img/demo/nature_1200_200.jfif" alt="">
+										<span class="blind">이미지 크게보기</span>
+									</button>
+								</div>
 								<!-- CSS 중간말줄임 표현불가 -->
-								<p class="txt">
-									최대7줄까지 보입니다. 최대7줄까지 보입니다.
-								</p>
+								<p class="txt">최대7줄까지 보입니다. 최대7줄까지 보입니다.</p>
 								<!-- 7줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
 							</div>
 							<div class="post_btn">
@@ -109,10 +123,14 @@
 					<div class="post_body">
 						<div class="post_main">
 							<div class="post_txt">
+								<div class="add_img">
+									<button type="button" class="btn btn_view" onclick="photoViewerOpen('#photoViewer', this)">
+										<img src="../../assets/img/demo/nature_200_1200.jfif" alt="">
+										<span class="blind">이미지 크게보기</span>
+									</button>
+								</div>
 								<!-- CSS 중간말줄임 표현불가 -->
-								<p class="txt">
-									최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다 최대7줄....
-								</p>
+								<p class="txt">최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다 최대7줄....</p>
 								<button type="button" class="btn more">더 보기</button>
 							</div>
 							<div class="post_btn">
@@ -202,6 +220,17 @@
 			</div>
 			<!-- // Comment Floating -->
         </div>
+
+		<!-- 이미지 크게보기 -->
+		<!-- body 클래스에 is_dimmed 추가되어야 합니다. -->
+		<!-- 22-08-17 이미지 크게보기 닫기 추가 -->
+		<div class="photo_viewer" id="photoViewer" style="display: none">
+			<button type="button" class="btn ico close" onclick="photoViewerClose('#photoViewer')"><span class="blind">닫기</span></button>
+			<!-- 이미지 클릭시 원본으로 표시 -->
+			<img src="" alt="" class="img" onclick="$(this).toggleClass('is_original')"/>
+		</div>
+		<!-- //이미지 크게보기 -->
+
     </main>
     <!-- // Container -->
 

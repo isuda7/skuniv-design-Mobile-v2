@@ -16,6 +16,13 @@
     <!-- Guide IA -->
     <link href="../assets/css/guide.css" rel="stylesheet" />
     <title>mySUNI Design Mobile V2</title>
+    <style>
+        .g_preview.left.top {display:flex; justify-content: flex-start; align-items: flex-start; text-align: left; }
+        .g_preview.left.bottom {display:flex; justify-content: flex-start; align-items: flex-end; text-align: left; }
+        .g_preview.right.top {display:flex; justify-content: flex-end; align-items: flex-start; text-align: left; }
+        .g_preview.right.bottom {display:flex; justify-content: flex-end; align-items: flex-end; text-align: left; }
+        .g_preview.center.top {display:flex; justify-content: center; align-items: flex-end; text-align: left; }
+    </style>
 </head>
 
 <body>
@@ -30,30 +37,51 @@
             <p class="g_info">is_visible, is_active (Modal과 동일)</p>
             <p class="g_info">ui.common.js (tooltip 참고)</p>
             <h3 class="g_h3">Basic</h3>
-            <div class="g_preview theme_dark">
+            <div class="g_preview left top">
                 <div class="tooltip basic right bottom">
-                    <button type="button" class="btn basic primary">tooltip</button>
+                    <button type="button" class="btn basic primary">Right Bottom</button>
                     <div class="tooltip_body">
                         <button type="button" class="btn edit">수정</button>
                         <button type="button" class="btn remove">삭제</button>
                     </div>
                 </div>
-
-                <br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br>
             </div>
-            <div class="g_preview theme_dark align_r">
+            <div class="g_preview right top">
                 <div class="tooltip basic left bottom">
-                    <button type="button" class="btn basic primary">tooltip</button>
+                    <button type="button" class="btn basic primary">Left Bottom</button>
                     <div class="tooltip_body">
                         <button type="button" class="btn edit">수정</button>
                         <button type="button" class="btn remove">삭제</button>
                     </div>
                 </div>
-
-                <br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br>
             </div>
-            <div class="g_preview theme_dark align_r">
-                <div class="tooltip bubble left bottom">
+            <div class="g_preview left bottom">
+                <div class="tooltip basic right top">
+                    <button type="button" class="btn basic primary">Right Top</button>
+                    <div class="tooltip_body">
+                        <button type="button" class="btn pin">Pin 고정/해제</button>
+                        <button type="button" class="btn edit">수정</button>
+                        <button type="button" class="btn remove">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <div class="g_preview right bottom">
+                <br><br><br><br><br>
+                <div class="tooltip basic left top">
+                    <button type="button" class="btn basic primary">Left Top</button>
+                    <div class="tooltip_body">
+                        <button type="button" class="btn pin">Pin 고정/해제</button>
+                        <button type="button" class="btn edit">수정</button>
+                        <button type="button" class="btn remove">삭제</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="g_h3">Desc</h3>
+            <div class="g_preview left top">
+                <div class="tooltip desc right bottom">
                     <button type="button" class="btn ico info"><span class="blind">tooltip</span></button>
                     <div class="tooltip_body theme_dark">
                         <ul>
@@ -62,7 +90,54 @@
                         </ul>
                     </div>
                 </div>
-                <br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br>
+            </div>
+            <div class="g_preview right top">
+                <div class="tooltip desc left bottom">
+                    <button type="button" class="btn ico info"><span class="blind">tooltip</span></button>
+                    <div class="tooltip_body theme_dark">
+                        <ul>
+                            <li>학습시간으로 인정되는 교육시간을 입력해주세요.</li>
+                            <li>승인자에 의해 교육시간은 변경 될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br><br><br><br>
+            </div>
+            <div class="g_preview left bottom">
+                <div class="tooltip desc right top">
+                    <button type="button" class="btn ico info"><span class="blind">tooltip</span></button>
+                    <div class="tooltip_body theme_dark">
+                        <ul>
+                            <li>학습시간으로 인정되는 교육시간을 입력해주세요.</li>
+                            <li>승인자에 의해 교육시간은 변경 될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="g_preview right bottom">
+                <br><br><br><br><br>
+                <div class="tooltip desc left top">
+                    <button type="button" class="btn ico info"><span class="blind">tooltip</span></button>
+                    <div class="tooltip_body theme_dark">
+                        <ul>
+                            <li>학습시간으로 인정되는 교육시간을 입력해주세요.</li>
+                            <li>승인자에 의해 교육시간은 변경 될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="g_preview center top">
+                <div class="tooltip desc center top">
+                    <button type="button" class="btn ico info"><span class="blind">tooltip</span></button>
+                    <div class="tooltip_body theme_dark">
+                        <ul>
+                            <li>학습시간으로 인정되는 교육시간을 입력해주세요.</li>
+                            <li>승인자에 의해 교육시간은 변경 될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br><br><br><br>
             </div>
         </section>
     </div>

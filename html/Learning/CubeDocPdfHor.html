@@ -63,8 +63,19 @@
             <!-- documentviewer -->
             <div class="doc_viewer full_landscape">
                 <div class="doc_area">
-                    <div class="doc_wrap flex_area centered">
-                        <img src="../../assets/img/demo/document-temp-a4.png" alt="temp img" style="height : calc(100vh - 4.6rem)"/>
+                    <div class="doc_wrap">
+                        <div class="react-pdf__Document">
+                            <div class="react-pdf__Page" data-page-number="6" style="position: relative;">
+                                <canvas class="react-pdf__Page__canvas" dir="ltr" width="3840" height="2160" style="display: block; user-select: none; width: 1920px; height: 1080px; background-color: yellow;"></canvas>
+                                <div class="react-pdf__Page__textContent"
+                                    style="position: absolute; top: 50%; left: 50%; width: 1920px; height: 1080px; color: transparent; transform: translate(-50%, -50%) rotate(0deg); pointer-events: none;">
+                                    <span
+                                        style="height: 1em; font-family: g_d2_f2304R, sans-serif; font-size: 80px; position: absolute; top: 459.148px; left: 98px; transform-origin: left bottom; white-space: pre; pointer-events: all; transform: scaleX(1.06357);">End
+                                        of Document.
+                                    </span></div>
+                                <div class="react-pdf__Page__annotations annotationLayer"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- 22-06-08 문서, 전체/축소보기 버튼 추가 -->
                     <div class="doc_util">

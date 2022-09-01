@@ -148,6 +148,16 @@
     }
 }
 
+.g_table {
+    width:100%;
+    border:1px solid #eee;
+    margin-bottom: 1rem;
+    td {
+        padding:1rem;
+        font-size:1.2rem;
+    }
+}
+
 // 사용자정의 가이드 스타일
 .g_cont .ui.accordion.g_accordion .title:not(.ui) {
     padding:0;

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="../../favicon.ico" />
+    <!-- Guide Common -->
+    <link href="../../assets/css/index.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/ui.common.js"></script>
+    <!-- Guide IA -->
+    <link href="../assets/css/guide.css" rel="stylesheet" />
+    <title>mySUNI Design Mobile V2</title>
+    <script>
+        // Alert
+        function ModalAlertOpen(id){
+            $(id).addClass("is_visible is_active");
+            $("body").addClass("is_dimmed");
+        }
+        function ModalAlertClose(id){
+            $(id).removeClass("is_active").on('transitionend', function(){
+                if (!$(id).hasClass('is_active')) {
+                    $(id).removeClass("is_visible");
+                    $("body").removeClass("is_dimmed");
+                }
+            })
+        }
+
+        // BottomSheet
+        function ModalBSOpen(id){
+            $(id).addClass("is_visible is_active");
+            $("body").addClass("is_dimmed");
+        }
+        function ModalBSClose(id){
+            $(id).removeClass("is_active").on('transitionend', function(){
+                if (!$(id).hasClass('is_active')) {
+                    $(id).removeClass("is_visible");
+                    $("body").removeClass("is_dimmed");
+                }
+            })
+        }
+
+        // ModalFPOpen
+        function ModalFPOpen(id){
+            $(id).addClass("is_visible");
+            $("body").addClass("is_dimmed");
+        }
+        function ModalFPClose(id){
+            $(id).removeClass("is_visible");
+            $("body").removeClass("is_dimmed");
+        }
+
+        // ToastOpen
+        function ToastOpen(id){
+            $(id).addClass("is_visible is_active");
+            setTimeout(function(){ ToastClose(id) }, 3000);
+        }
+        function ToastClose(id){
+            $(id).removeClass("is_active").on('transitionend', function(){
+                !$(id).hasClass('is_active') && $(id).removeClass("is_visible");
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div class="g_wrap">
+        <header>
+            <h1>Publishing Guide</h1>
+        </header>
+        <div class="g_cont">
+            <section class="g_sec">
+                <h2 class="g_h2">Modal Alert/Confirm</h2>
+                <div class="g_preview">
+                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalAlert')">Open Alert</button>
+                    <button type="button" class="btn basic primary" onclick="ModalAlertOpen('#ModalConfirm')">Open Confirm</button>
+                </div>
+                <h2 class="g_h2">Modal Bottomsheet</h2>
+                <div class="g_preview">
+                    <button type="button" class="btn basic primary" onclick="ModalBSOpen('#ModalButtomSheet')">Open ButtomSheet</button>
+                </div>
+                <h2 class="g_h2">Modal Fullpopup</h2>
+                <div class="g_preview">
+                    <button type="button" class="btn basic primary" onclick="ModalFPOpen('#ModalFullpopup')">Open Fullpopup</button>
+                </div>
+                <h3 class="g_h3">Toast Popup</h3>
+                <div class="g_preview">
+                    <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast1')">Toast 1</button>
+                    <button type="button" class="btn basic primary" onclick="ToastOpen('#Toast2')">Toast 2</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal Alert -->
+    <div class="modal_wrap" id="ModalAlert">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">삭제</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">삭제하시겠습니까?<br />두줄로 들어갑니다.</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalAlert')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Alert -->
+
+    <!-- Modal Confirm -->
+    <div class="modal_wrap" id="ModalConfirm">
+        <div class="modal modal_alert">
+            <div class="modal_header">
+                <h3 class="modal_title">삭제확인</h3>
+            </div>
+            <div class="modal_content">
+                <p class="msg">삭제하시겠습니까?<br />두줄로 들어갑니다.</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn text" onclick="ModalAlertClose('#ModalConfirm')">취소</button>
+                <button type="button" class="btn text primary" onclick="ModalAlertClose('#ModalConfirm')">확인</button>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Confirm -->
+
+    <!-- Modal Bottomsheet -->
+    <div class="modal_wrap" id="ModalButtomSheet">
+        <div class="modal modal_bottomsheet">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalBSClose('#ModalButtomSheet')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalButtomSheet</h3>
+            </div>
+            <div class="modal_content">
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+				<div style="height:25rem; background-color: #ddd;"></div>
+				<div style="height:25rem; background-color: #ccc;"></div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal Bottomsheet -->
+
+    <!-- Modal FullPopup -->
+    <div class="modal_wrap" id="ModalFullpopup">
+        <div class="modal modal_fullpopup">
+            <div class="modal_header">
+                <button type="button" class="btn ico close" onclick="ModalFPClose('#ModalFullpopup')"><span class="blind">닫기</span></button>
+                <h3 class="modal_tit">ModalFullpopup</h3>
+            </div>
+            <div class="modal_content">
+                <div class="modal_sticky">
+                    <div class="tab style2">
+                        <div class="tab_list">
+                            <button type="button" class="tab_item is_active">Tab 1</button>
+                            <button type="button" class="tab_item">Tab 2</button>
+                            <button type="button" class="tab_item">Tab 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_panel">
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                    <div style="height:25rem; background-color: #ddd;"></div>
+                    <div style="height:25rem; background-color: #ccc;"></div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="page_action">
+                    <button type="button" class="btn basic">Default</button>
+                    <button type="button" class="btn basic primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        <div class="dimmer" aria-hidden="true"></div>
+    </div>
+    <!-- // Modal FullPopup -->
+
+    <!-- Toast -->
+    <div id="Toast1" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+        <div class="toast_btn">
+            <button type="button" class="btn text primary">더 보기</button>
+        </div>
+    </div>
+    <!-- // Toast -->
+
+    <!-- Toast -->
+    <div id="Toast2" class="toast">
+        <p class="toast_txt">찜한과정에 추가되었습니다.</p>
+    </div>
+    <!-- // Toast -->
+
+</body>
+
+</html>

@@ -200,7 +200,7 @@
 		bottom:0;
 		width:100%;
 		z-index: 100;
-		padding-bottom:calc(1.3rem + var(--safeBottom));
+		padding-bottom:calc(2rem + var(--safeBottom));
 		background: none;
 	}
 }
@@ -431,7 +431,7 @@
 
 // s: 관심분야 플로팅
 .favorit_floating {
-	height:14.4rem;
+	height:14rem;
 	.favorit_body {
 		display: flex;
 		flex-direction: column;
@@ -439,6 +439,7 @@
 		left:0;
 		bottom:0;
 		width:100%;
+		min-height: 14rem; // favorit_floating과 최소높이값 맞추기
 		max-height:calc(100% - 5.2rem - var(--safeTop));
 		background-color: #fff;
 		box-shadow:0px -0.4rem 0.5rem rgba(0, 0, 0, 0.02), 0 -0.1rem 1rem rgba(0, 0, 0, 0.04), 0 -0.2rem 0.4rem rgba(0, 0, 0, 0.06);
@@ -478,10 +479,11 @@
 			}
 			.btn.expand {
 				position: absolute;
-				left:0;
+				z-index: 9;
+				right:0.8rem;
 				top:0;
-				width:100%;
-				height:100%;
+				width:4rem;
+				height:4rem;
 				background-color: transparent;
 			}
 			&::after {
@@ -489,6 +491,7 @@
 				position: absolute;
 				right:2rem;
 				top:calc(50% - 0.8rem);
+				z-index: 0;
 				display:block;
 				width:1.6rem;
 				height:1.6rem;

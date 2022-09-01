@@ -98,14 +98,17 @@
 		flex: 1 1 auto;
 		padding: 1rem;
 		.sub_txt {
+			// 최윤홍RF 요청사항 22-07-27
 			@include Ellipsis1;
-			& + .title {
-				margin-top: 0.4rem;
-			}
+			font-size:1.2rem;
+			line-height: 2.2rem;
+			// & + .title {
+			// 	margin-top: 0.4rem;
+			// }
 		}
 		.title {
 			height: 6rem;
-			font-size: 1.6rem;
+			font-size: 1.5rem;
 			line-height: 2rem;
 			color: #000;
 			@include Ellipsis3;
@@ -121,6 +124,10 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 1rem 1rem 1rem;
+		.ico.learning_status {
+			margin-left: 1.2rem;
+			margin-right: auto;
+		}
 	}
 }
 
@@ -294,20 +301,21 @@
 	.card_foot {
 		position: relative;
 		z-index: 10;
-		@include FontBody14;
+		font-size:1.3rem;
+		line-height: 2rem;
 		.total_count{
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			padding-left: 2.2rem;
-			background:url('../img/icons_16_ic_course_white.svg') no-repeat 0 .4rem;
+			background:url('../img/icons_16_ic_course_white.svg') no-repeat 0 .3rem;
 		}
 		.total_time{
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			padding-left: 2.2rem;
-			background:url('../img/icons_16_ic_time_white.svg') no-repeat 0 .4rem;
+			background:url('../img/icons_16_ic_time_white.svg') no-repeat 0 .3rem;
 		}
 	}
 }
@@ -322,7 +330,8 @@
 		justify-content: center;
 		padding: 1.6rem;
 		border-radius: $RadiusLarge;
-		height:13.8rem;
+		max-height: 13.8rem;
+		min-height: 11rem; // 22-07-04 가변처리, 최소높이 조절 적용
 		background-color: #fff;
 		@include Shadow2;
 	}
@@ -370,6 +379,12 @@
 		margin-top: 1.2rem;
 		width:100%;
 		@include FontBody13;
+		> div:first-child {
+			display: flex;
+			align-items: center;
+			flex:0 1 auto;
+			overflow: hidden;
+		}
 		.profile {
 			display: flex;
 			align-items: center;
@@ -453,7 +468,7 @@
 	}
 	.card_body {
 		flex: 1 1 auto;
-		margin-top: 0.4rem;
+		margin-top: 1.2rem; // 최윤홍RF 요청사항 22-07-27
 		.label {
 			display:block;
 			margin-bottom:0.4rem;
@@ -473,9 +488,9 @@
 		}
 		.title {
 			text-align: center;
-			font-size: 1.6rem;
-			line-height: 2rem;
+			@include FontTitle15; // 최윤홍RF 요청사항 22-07-27
 			@include Ellipsis2;
+			font-weight: 400;
 		}
 	}
 	.card_foot {
@@ -486,23 +501,29 @@
 		height: 15.6rem;
 		border-radius: 50%;
 		.avata_name {
+			display:flex;
+			flex-direction: column;
+			justify-content: flex-start;
 			position: relative;
 			z-index: 10;
-			padding: 0 2rem;
+			height: 9.2rem;
+			padding: 0 2.4rem;
+			margin-top: 1rem;
 			.avata {
 				display: block;
-				margin: auto;
+				margin: 0 auto;
 				width: 4.8rem;
 				height: 4.8rem;
 			}
 			.name {
-				margin-top: 0.8rem;
+				margin-top: auto;
 				font-size: 1.2rem;
 				line-height: 1.8rem;
 				color: #fff;
 				text-align: center;
 				@include Ellipsis2;
-				height: 36px;
+				min-height:2.6rem;
+				max-height:3.6rem;
 			}
 		}
 		&::after {
@@ -707,6 +728,7 @@
 			a {
 				text-decoration: underline;
 				color: #38b1ad;
+				display:contents;
 			}
 		}
 		.txt + .item_info {
@@ -814,6 +836,7 @@
 		}
 		.btn.like {
 			color:$ColorSubTxt;
+			padding-right: 0;
 		}
 		.btn.like::before {
 			content:'';
@@ -903,8 +926,12 @@
 			@include Ellipsis2;
 		}
 		.para {
+			height: 4.4rem;
 			@include FontBody14;
 			@include Ellipsis2;
+			a {
+				display: contents;
+			}
 		}
 	}
 	.card_foot {
@@ -1032,6 +1059,10 @@
 		color: $ColorSubTxt;
 		overflow: hidden;
 		width:100%;
+		.desc {
+			word-break: keep-all;
+			word-wrap: break-word;
+		}
 		.desc + .info_area {
 			margin-top: 1.2rem;
 		}
@@ -1045,6 +1076,7 @@
 				content:'';
 				position: relative;
 				top:1px;
+				flex: none;
 				display:flex;
 				width:1.6rem;
 				height:1.6rem;
@@ -1194,6 +1226,10 @@
 				margin-top:1.6rem;
 			}
 		}
+		.title_area {
+			width: 100%;
+			text-align: center;
+		}
 		.sub_txt {
 			color: inherit;
 			@include Ellipsis1;
@@ -1205,6 +1241,7 @@
 			@include FontTitle16;
 			@include Ellipsis2;
 			line-height: 2.4rem;
+			text-align: center;
 		}
 		.btn_area {
 			margin-top:3.4rem;

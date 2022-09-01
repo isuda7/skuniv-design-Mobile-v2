@@ -79,6 +79,19 @@
     }
 }
 
+.label.style4 {
+    min-width:2.9rem;
+    height:2rem;
+    padding:0 0.6rem;
+    background: #fff;
+    border:1px solid #666;
+    border-radius: $RadiusSmall;
+    @include FontBody12;
+    font-weight:400;
+    color:$ColorSubTxt;
+}
+
+
 // Contents
 .label.date {
     padding:0;

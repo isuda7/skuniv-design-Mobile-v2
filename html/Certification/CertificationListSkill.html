@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="../../favicon.ico" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/ui.common.js"></script>
+	<title>mySUNI Design Mobile V2</title>
+	<script>
+		$(function(){
+            $(window).scroll(function(){
+				var scrollTop = $(window).scrollTop();
+
+                // Spyscroll 이벤트
+                $('.tab_item').each(function(){
+                    var $this = $(this);
+                    var $tabPanel = $('#' + $this.data('id'));
+                    var breakPoint = $tabPanel.offset().top - 100 - 50; //상단공간 100 + 정확한 지점까지 50픽셀 근접하면
+                    if (scrollTop > breakPoint) {
+                        $this.addClass('is_active').siblings().removeClass('is_active');
+                    }
+                })
+			})
+		})
+
+        function tabSpyScroll(obj){
+            $(obj).addClass('is_active').siblings().removeClass('is_active');
+
+            var id = '#'+$(obj).data('id');
+            var scrGap = 100;
+            var scrTop = $(id).offset().top - scrGap;
+            $(window).scrollTop(scrTop);
+        }
+	</script>
+
+</head>
+
+<body>
+	<div class="sub_wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="appbar basic">
+				<div class="appbar_left">
+					<!--button type="button" class="btn ico back"><span class="blind">뒤로</span></button-->
+					<h1><strong>전체과정</strong></h1>
+				</div>
+				<div class="appbar_right">
+					<button type="button" class="btn ico alim is_active"><span class="blind">알림</span></button>
+					<button type="button" class="btn ico srch"><span class="blind">검색</span></button>
+				</div>
+			</div>
+			</header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container certification_container index_page">
+			<div class="content_body">
+                <div class="category_tab_sec">
+                    <div class="tab style1">
+                        <div class="tab_list feed_tab">
+                            <a href="javascript:(0)" class="tab_item ">Category</a>
+                            <a href="javascript:(0)" class="tab_item is_active">Certification</a>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- 전체과정 탭 -->
+				<div class="out_sec sticky gap_tab">
+					<div class="tab style2 small_tab has_scroll">
+						<div class="tab_list">
+                            <div class="tab_inner">
+                                <button type="button" class="tab_item">전체</button>
+                                <button type="button" class="tab_item is_active">Foundation Skill</button>
+                                <button type="button" class="tab_item">AI/DT</button>
+                                <button type="button" class="tab_item">공통직무</button>
+                                <button type="button" class="tab_item">미래 Biz</button>
+                                <button type="button" class="tab_item">행복경영</button>
+                                <button type="button" class="tab_item">BM Design</button>
+                                <button type="button" class="tab_item">SKI계열 AI/DT</button>
+                            </div>
+						</div>
+                        <div class="tab_next">
+                            <button type="button" class="btn ico next"><span class="blind">다음</span></button>
+                        </div>
+					</div>
+				</div>
+				<!-- //전체과정 탭 -->
+
+                <!-- 공통직무 -->
+                <div class="tab_panel">
+                    <div class="board_toolbar">
+                        <div class="board_count">
+                            <span class="total">총</span>
+                            <em class="count">20</em>
+                            <span class="unit">개</span>
+                        </div>
+                        <div class="board_util">
+                            <button type="button" class="btn ico filter"><span class="blind">필터</span></button>
+                        </div>
+                    </div>
+
+                    <div class="cert_list">
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R) Citizen Data Scientist (R)</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                    <p class="state_info primary"><span>도전중 <em>5</em>/5</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                    <p class="state_info"><span>획득</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R) Citizen Data Scientist (R)</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                    <p class="state_info primary"><span>도전중 <em>5</em>/5</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                    <p class="state_info"><span>획득</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="item_body">
+                                <div class="item_badge">
+                                    <!-- FE공통: 배지아이콘 공통 참조 -->
+                                    <div class="badge_box md">
+                                        <script>badgeSample.init()</script>
+                                    </div>
+                                </div>
+                                <div class="item_title">
+                                    <p class="title">Citizen Data Scientist (R)</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //공통직무 -->
+			</div>
+		</main>
+		<!-- // Container -->
+        <!-- to top -->
+        <button type="button" class="btn ico top" onclick="window.scrollTo(0,0)"><span class="blind">Scroll to top</span></button>
+		<!-- // to top -->
+		<!-- Footer -->
+		<footer class="footer">
+			<nav class="appnav">
+				<a href="/Mobile/Category/" class="item item_category is_active">전체과정</a>
+				<a href="/Mobile/Recom/" class="item item_recom">추천</a>
+				<a href="/Mobile/Myhome/" class="item item_myhome"><span>마이홈</span></a>
+				<a href="/Mobile/Cummunity/" class="item item_comunity">커뮤니티</a>
+				<a href="/Mobile/More/" class="item item_more">더보기</a>
+			</nav>
+		</footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<div class="sub_wrapper has_appnav has_sticky">
+	<div class="sub_wrapper">
 		<!-- Header -->
 		<header class="header">
 			<div class="appbar basic">
@@ -42,6 +42,74 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<div class="content_body">
+
+                <!-- Card List -->
+                <h2 class="heading2">학습상태 별 카드</h2>
+                <div class="card_cube_slide">
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+                                <button class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리 명</p>
+                                <p class="title"><strong>학습진행중인경우의 카드입니다. 여기는 코스명입니다. 학습진행중일때의 카드입니다. 학습진행중일때 아래의 ico이 달라집니다. 학습진행중임니다 학습진해애앵주우웅</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">2.3</span>
+                            <!-- 22-07-27 학습진행상태 추가
+                                <i class="ico learning_status"><span class="blind">학습진행상태(학습전)</span></i> 기본
+                                <i class="ico learning_status learning"><span class="blind">학습진행상태(학습중)</span></i>
+                                <i class="ico learning_status learned"><span class="blind">학습진행상태(완료)</span></i>
+                            -->
+                            <i class="ico learning_status learning"><span class="blind">학습진행상태(진행중)</span></i>
+                            <!-- // 22-07-27 학습진행상태 추가 -->
+                            <button class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+                                <button class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리 명</p>
+                                <p class="title"><strong>학습 완료인 카드입니다. 여기에는 코스명이 들어갑니다.</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">2.3</span>
+                            <!-- 22-07-27 학습진행상태 추가 -->
+                            <i class="ico learning_status learned"><span class="blind">학습진행상태(완료)</span></i>
+                            <!-- // 22-07-27 학습진행상태 추가 -->
+                            <button class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                    <div class="card_cube">
+                        <div class="card_inner">
+                            <div class="card_thumb">
+                                <a href="javascript:void(0)" class="thumb" style="background-image:url('../../assets/img/demo/thumb-02.png')" alt=""></a>
+                                <button class="btn ico ribon is_active"><span class="blind">찜하기</span></button>
+                            </div>
+                            <a href="javascript:void(0)" class="card_body">
+                                <p class="sub_txt">카테고리 명</p>
+                                <p class="title"><strong>학습진행전의 모습입니다.</strong></p>
+                            </a>
+                        </div>
+                        <div class="card_foot">
+                            <span class="rate_count">2.3</span>
+                            <!-- 22-07-27 학습진행상태 추가 -->
+                            <i class="ico learning_status"><span class="blind">학습진행상태(진행전)</span></i>
+                            <!-- // 22-07-27 학습진행상태 추가 -->
+                            <button class="btn ico learning"><span class="blind">학습목록</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Card List -->
+
                 <h2 class="heading2">Playlist Basic</h2>
 				<!-- Card List -->
                 <div class="card_playlist_list">
@@ -57,9 +125,11 @@
                                 </p>
                             </div>
                             <div class="card_foot">
-                                <div class="profile">
-                                    <span class="avata"><img src="../../assets/img/icons_80_ic_default_profile.png" alt="Profile Avata"></span>
-                                    <p class="name">일이삼</p>
+                                <div>
+                                    <div class="profile">
+                                        <span class="avata"><img src="../../assets/img/icons_80_ic_default_profile.png" alt="Profile Avata"></span>
+                                        <p class="name">일이삼</p>
+                                    </div>
                                 </div>
                                 <div class="count">
                                     <em>총 99+개</em>
@@ -222,7 +292,7 @@
                 </div>
                 <!-- // Card List -->
 
-                <h2 class="heading2">수강신청/찜한과정</h2>
+                <h2 class="heading2">학습카드</h2>
 				<!-- Card List -->
                 <div class="card_cube_slide">
                     <div class="card_cube">
@@ -240,6 +310,7 @@
                         </div>
                         <div class="card_foot">
                             <span class="rate_count">4.8</span>
+                            <i class="ico learning_status"><span class="blind">학습상태(진행전)</span></i>
                             <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
                         </div>
                     </div>
@@ -256,6 +327,7 @@
                         </div>
                         <div class="card_foot">
                             <span class="rate_count">4.8</span>
+                            <i class="ico learning_status"><span class="blind">학습상태(진행전)</span></i>
                             <button type="button" class="btn ico learning"><span class="blind">학습목록</span></button>
                         </div>
                     </div>
@@ -284,35 +356,9 @@
                     <div class="card_badge_group">
                         <div class="card_item">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box md">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box md">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="title"><strong>Citizen Data Scientist (No-Code)</strong></p>
@@ -321,35 +367,9 @@
                         </div>
                         <div class="card_item">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box md">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box md">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -359,35 +379,9 @@
                         </div>
                         <div class="card_item">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box md">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box md">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -844,35 +838,9 @@
                     <div class="card_badge">
                         <div class="card_inner">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box xl">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box xl">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -884,35 +852,9 @@
                     <div class="card_badge">
                         <div class="card_inner">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box xl">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box xl">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -930,35 +872,9 @@
                     <div class="card_badge">
                         <div class="card_inner">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box xl">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box xl">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -973,35 +889,9 @@
                     <div class="card_badge">
                         <div class="card_inner">
                             <div class="card_thumb">
-                                <a href="javascript:void(0)" class="badge_box xl">
-                                    <div class="badge_inner">
-                                        <span class="badge_logo">
-                                            <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                        </span>
-                                        <span class="badge_channel">
-                                            <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                        </span>
-                                        <span class="badge_score">
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                            <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fill-rule="evenodd">
-                                                    <path d="M0 0h8v8H0z"/>
-                                                    <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                                    fill="#fba82d"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="badge_thumb">
-                                            <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                        </span>
-                                    </div>
-                                </a>
+                                <div class="badge_box xl">
+                                    <script>badgeSample.init()</script>
+                                </div>
                             </div>
                             <a href="javascript:void(0)" class="card_body">
                                 <p class="sub_txt">카테고리명</p>
@@ -1038,122 +928,26 @@
                         <strong>우리 회사에서<br/>인기있는 뱃지에 도전해보세요.</strong>
                     </p>
                     <div class="empty_primary">
+                        <!-- BadgeBox -->
                         <div class="badge_box xs">
-                            <div class="badge_inner">
-                                <span class="badge_logo">
-                                    <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                </span>
-                                <span class="badge_channel">
-                                    <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                </span>
-                                <span class="badge_score">
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span class="badge_thumb">
-                                    <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                </span>
-                            </div>
+                            <script>badgeSample.init()</script>
                         </div>
+                        <!-- //BadgeBox -->
+                        <!-- BadgeBox -->
                         <div class="badge_box xs">
-                            <div class="badge_inner">
-                                <span class="badge_logo">
-                                    <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                </span>
-                                <span class="badge_channel">
-                                    <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                </span>
-                                <span class="badge_score">
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span class="badge_thumb">
-                                    <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                </span>
-                            </div>
+                            <script>badgeSample.init()</script>
                         </div>
+                        <!-- //BadgeBox -->
+                        <!-- BadgeBox -->
                         <div class="badge_box xs">
-                            <div class="badge_inner">
-                                <span class="badge_logo">
-                                    <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                </span>
-                                <span class="badge_channel">
-                                    <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                </span>
-                                <span class="badge_score">
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span class="badge_thumb">
-                                    <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                </span>
-                            </div>
+                            <script>badgeSample.init()</script>
                         </div>
+                        <!-- //BadgeBox -->
+                        <!-- BadgeBox -->
                         <div class="badge_box xs">
-                            <div class="badge_inner">
-                                <span class="badge_logo">
-                                    <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                </span>
-                                <span class="badge_channel">
-                                    <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                </span>
-                                <span class="badge_score">
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span class="badge_thumb">
-                                    <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                </span>
-                            </div>
+                            <script>badgeSample.init()</script>
                         </div>
+                        <!-- //BadgeBox -->
                     </div>
                 </div>
                 <!-- //Card Empty -->

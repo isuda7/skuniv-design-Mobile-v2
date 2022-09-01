@@ -3,7 +3,7 @@
 	position: relative;
 	z-index:300;
 	width: 100%;
-	height:calc(6rem + var(--safeBottom));
+	height:6rem;
 }
 .appnav {
 	position: fixed;
@@ -23,8 +23,8 @@
 		justify-content: flex-end;
 		align-items: center;
 		flex:1 1 auto;
-		width:100%;
-		height:$HeightAppNav;
+		width:20%;
+		height:5.9rem;
 		padding-bottom:0.8rem;
 		color:#A4A6AA;
 		font-size:1rem;
@@ -65,6 +65,9 @@
 			}
 		}
 	}
+	.item_recom {
+		white-space: nowrap;
+	}
 	// Images
 	.item_category::before {background-image: url('../img/icons_24_ic_category_off_on.svg');}
 	.item_recom::before {background-image: url('../img/icons_24_ic_recommend_off_on.svg');}
@@ -80,8 +83,8 @@
 	.is_active.item_more::before {background-position-y:bottom;}
 
 	// Disabled
-	.is_disabled.item_comunity {color:#cbcdcf; pointer-events: none;}
-	.is_disabled.item_comunity::before {opacity: 0.3;}
+	.is_disabled {color:#cbcdcf; pointer-events: none;}
+	.is_disabled::before {opacity: 0.3;}
 
 	// new badge
 	.is_new.item::after{

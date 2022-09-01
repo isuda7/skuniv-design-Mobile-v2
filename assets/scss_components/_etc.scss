@@ -76,15 +76,15 @@
 	width:4rem;
 	height:4rem;
 	border-radius: 50%;
-	background: url('../img/icons_40_ic_guage_00.svg') no-repeat center center / 100% auto;
+	background: url('../img/icons_40_ic_guage_00.png') no-repeat center center / 100% auto;
 	@for $i from 0 to 9 {
 		&.per#{$i*5}{
-			background-image: url("../img/icons_40_ic_guage_0#{$i}.svg");
+			background-image: url("../img/icons_40_ic_guage_0#{$i}.png");
 		}
 	}
 	@for $j from 10 to 21 {
 		&.per#{$j*5}{
-			background-image: url("../img/icons_40_ic_guage_#{$j}.svg");
+			background-image: url("../img/icons_40_ic_guage_#{$j}.png");
 		}
 	}
 }

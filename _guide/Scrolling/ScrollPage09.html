@@ -23,9 +23,9 @@
         }
         $(function(){
             // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
+            // var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            // $('.container').css({'padding-top': breakStickyPos+'rem'});
+            // $('.sticky').css({'top': breakStickyPos+'rem'});
         })
     </script>
 </head>
@@ -52,6 +52,7 @@
         <div class="content_head theme_dark">
             <!-- 학습과정 썸네일 -->
             <div class="learning_thumb">
+                <div class="thumb" aria-hidden="true" style="background-image:url('../../assets/img/demo/thumb-01.png')"></div>
                 <div class="overay_area">
                     <div class="overay_inner">
                         <div class="title_area">
@@ -69,42 +70,18 @@
                     </div>
                 </div>
             </div>
-            <script>learningThumb() // 타이틀 라인수만큼 스타일 구분하기</script>
+            <script>// 가변처리 안함 learningThumb() // 타이틀 라인수만큼 스타일 구분하기</script>
             <!-- // 학습과정 썸네일 -->
 
             <!-- 학습과정 관련배지 -->
             <div class="learning_badge">
                 <a href="javascript:void(0)" class="badge_body">
                     <div class="badge_thumb">
+                        <!-- BadgeBox -->
                         <div class="badge_box xs">
-                            <div class="badge_inner">
-                                <span class="badge_logo">
-                                    <img src="../../assets/img/img_badge_logo_01.png" alt="" />
-                                </span>
-                                <span class="badge_channel">
-                                    <img src="../../assets/img/img_badge_chanel_01.svg" alt="" />
-                                </span>
-                                <span class="badge_score">
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                    <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="M0 0h8v8H0z"/>
-                                            <path d="m4.359.727.724 1.466a.4.4 0 0 0 .3.22l1.62.234a.4.4 0 0 1 .22.683L6.054 4.47a.4.4 0 0 0-.115.354l.276 1.612a.4.4 0 0 1-.58.422l-1.448-.761a.4.4 0 0 0-.372 0l-1.448.76a.4.4 0 0 1-.58-.42l.276-1.613a.4.4 0 0 0-.115-.354L.777 3.33a.4.4 0 0 1 .22-.683l1.62-.235a.4.4 0 0 0 .3-.219L3.641.727a.4.4 0 0 1 .718 0z"
-                                            fill="#fba82d"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span class="badge_thumb">
-                                    <img src="../../assets/img/img_badge_bg_02.svg" alt="" />
-                                </span>
-                            </div>
+                            <script>badgeSample.init()</script>
                         </div>
+                        <!-- //BadgeBox -->
                     </div>
                     <div class="badge_title">
                         <div class="sub_txt">획득 가능 뱃지</div>

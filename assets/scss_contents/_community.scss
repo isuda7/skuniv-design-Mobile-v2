@@ -151,6 +151,8 @@
 		width: 5.2rem;
 		height: 5.2rem;
 		margin-right: 1.2rem;
+        border-radius: 50%;
+        overflow: hidden;
 	}
     .item_title {
 		width: calc(100% - 6.4rem);
@@ -172,26 +174,34 @@
             display: flex;
             align-items: center;
             width:100%;
-            &::before {
-				content:'';
-				position: relative;
-				top:1px;
-                flex:none;
-				display:flex;
-				width:1.6rem;
-				height:1.6rem;
-				margin:0 0.4rem 0 0;
-				background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
-			}
-            .username {
-                @include Ellipsis1;
-                flex: 0 1 auto;
+            > div:first-child {
+                display: flex;
+                align-items: center;
+                flex:0 1 auto;
+                overflow: hidden;
+                &::before {
+                    content:'';
+                    position: relative;
+                    top:1px;
+                    flex:none;
+                    display:flex;
+                    width:1.6rem;
+                    height:1.6rem;
+                    margin:0 0.4rem 0 0;
+                    background:url('../img/icons_16_ic_boss_yellow.svg') no-repeat center center / 100% auto;
+                }
+                .username {
+                    @include Ellipsis1;
+                    flex: 0 1 auto;
+                }
             }
             .btn.text.arw_link {
                 padding:0;
                 &::before {
                     content: "";
                     display: block;
+                    position: relative;
+                    top:1px;
                     width: 1px;
                     height: 1rem;
                     margin-right: 0.8rem;
@@ -230,7 +240,7 @@
 
 // 커뮤니티 목록
 .community_list_wrap {
-    margin-top:1rem;
+    // margin-top:1rem;
     .board_community_list {
         .btn_more {
             display: flex;
@@ -347,11 +357,11 @@
     padding-bottom:4rem;
 }
 
-// 모달 컨펌 패스워드
-.modal_confirmpassword {
+// 커뮤니티 진입 패스워드
+.community_pswd {
+    width: 100%;
     .notice {
         width:100%;
-        margin-bottom:3rem;
         color:#75777b;
         text-align: center;
         .ico {
@@ -363,6 +373,31 @@
         .msg {
             color:#000;
             @include FontBody16;
+        }
+    }
+    .psswd_input_area {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        .input_group {
+            width: 100%;
+            input {
+                height: 4.8rem;
+            }
+            .clear {
+                top: .4rem;
+            }
+        }
+        .btn.basic {
+            width: 100%;
+            margin-top: 2rem;
+            padding:1.6rem 2rem;
+        }
+        .btn.text {
+            margin-top: 2rem;
         }
     }
 }
@@ -617,10 +652,10 @@
             .btn{
                 padding:0;
                 color: #75777b;
-                @include FontBody14;
+                @include FontBody12; // 최윤홍RF 요청사항 22-07-27
                 &.view_all{
                     padding-right: 1.2rem;
-                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .6rem;
+                    background:url('../img/icons_12_ic_chervron_right_grey_06.svg') no-repeat 100% .4rem;
                 }
             }
         }
@@ -672,6 +707,15 @@
                     position: relative;
                     top:-0.2rem;
                 }
+                .ico.lock {
+                    display:inline-flex;
+                    top:-0.2rem;
+                    margin-right:0.2rem;
+                    vertical-align: middle;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-image: url('../img/icons_16_ic_lock_black.svg');
+                    }
                 .ico.new {
                     top:-0.2rem;
                 }
@@ -735,11 +779,18 @@
                 .label.style3 {
                     position:relative;
                     top:-0.2rem;
+                    margin-right:0.2rem;
                 }
                 .ico.new {
                     top:-0.2rem;
                     vertical-align: middle;
-                    margin-left:0.2rem;
+                    margin-right:0.2rem;
+                }
+                .ico.lock {
+                    display: inline-flex;
+                    top:-0.2rem;
+                    vertical-align: middle;
+                    margin-right:0.2rem;
                 }
             }
             .title_ico {
@@ -801,8 +852,12 @@
             }
         }
         .board_dt_content {
+            // 게시물 에디터영역 수정
+            overflow-y: visible;
+            padding: 0;
+            padding-bottom: 3.2rem;
             > .link_wrap {
-                margin-bottom:2.7rem;
+                // margin-bottom:2.7rem;
                 .link_url {
                     & + .link_url {
                         margin-top:0.8rem;
@@ -817,7 +872,7 @@
             }
         }
         .board_dt_foot {
-            margin-top:3.2rem;
+            // margin-top:3.2rem;
             display: flex;
             align-items: center;
             padding: 1.3rem 2rem;
@@ -851,6 +906,9 @@
     }
     .board_toolbar.survey {
         @include FontBody16;
+        .board_util {
+            margin-right: 0.4rem;
+        }
         .board_count {
             color:#000;
             .count {
@@ -1066,6 +1124,10 @@
                 margin-left:0.8rem;
             }
         }
+        //글 작성란 border 삭제
+        .ql-container.ql-snow {
+            border : 0;
+        }
 
     }
     // 툴바공통
@@ -1101,6 +1163,7 @@
             &.e_link::before{
                 background-image: url("../img/icons_20_ic_clip_off_on.svg");
             }
+            &.e_align::before,
             &.e_align.left::before{
                 background-image: url("../img/icons_20_ic_text_align_left.svg");
             }
@@ -1130,7 +1193,7 @@
             display: block;
             width:1px;
             height:1.2rem;
-            margin:0 0 0 2rem;
+            margin-left:auto;
             background-color: #cbcdcf;
         }
         .btn.select {

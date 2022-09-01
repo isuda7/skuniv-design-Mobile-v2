@@ -15,9 +15,9 @@
     <script>
         $(function(){
             // 스티키 레이아웃 설정
-            var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
-            $('.container').css({'padding-top': breakStickyPos+'rem'});
-            $('.sticky').css({'top': breakStickyPos+'rem'});
+            // var breakStickyPos = ($('.content_head').outerHeight() * 0.1).toFixed(1);
+            // $('.container').css({'padding-top': breakStickyPos+'rem'});
+            // $('.sticky').css({'top': breakStickyPos+'rem'});
         });
     </script>
 </head>
@@ -78,10 +78,15 @@
 					<div class="post_body">
 						<div class="post_main">
 							<div class="post_txt">
+								<!-- 22-08-17 댓글이미지 확대보기 -->
+								<div class="add_img">
+									<button type="button" class="btn btn_view" onclick="$('#photoViewer').show()">
+										<img src="http://placeimg.com/160/160/nature" alt="">
+										<span class="blind">이미지 크게보기</span>
+									</button>
+								</div>
 								<!-- CSS 중간말줄임 표현불가 -->
-								<p class="txt">
-									최대7줄까지 보입니다. 최대7줄까지 보입니다.
-								</p>
+								<p class="txt">최대7줄까지 보입니다. 최대7줄까지 보입니다.</p>
 								<!-- 7줄 미만일때 필요없음 <button type="button" class="btn more">더 보기</button> -->
 							</div>
 							<div class="post_btn">
@@ -111,13 +116,8 @@
 					<div class="post_body">
 						<div class="post_main">
 							<div class="post_txt">
-								<div class="add_img">
-									<img src="http://placeimg.com/640/480/nature" alt="" class="img">
-								</div>
 								<!-- CSS 중간말줄임 표현불가 -->
-								<p class="txt">
-									최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다 최대7줄....
-								</p>
+								<p class="txt">최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다. 최대7줄까지 보입니다 최대7줄까지 보입니다 최대7줄....</p>
 								<button type="button" class="btn more">더 보기</button>
 							</div>
 							<div class="post_btn">
